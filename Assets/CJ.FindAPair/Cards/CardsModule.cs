@@ -1,4 +1,5 @@
-﻿using CJ.FindAPair.Cards.Systems;
+﻿using CJ.FindAPair.Cards.Config;
+using CJ.FindAPair.Cards.Systems;
 using Zenject;
 
 namespace CJ.FindAPair.Cards
@@ -7,6 +8,8 @@ namespace CJ.FindAPair.Cards
     {
         public override void InstallBindings()
         {
+            Container.Bind<LevelConfigGroup>().FromScriptableObjectResource("LevelConfigGroup").AsSingle();
+
             Container.Bind<CreateCardSystem>().AsSingle();
 
             Container.BindInterfacesAndSelfTo<CardsSystemsExecutor>().AsSingle().NonLazy();

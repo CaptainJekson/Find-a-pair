@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2bfc6c3f2c8d04e8f18382dfa88e44, type: 3}
+  m_Name: LevelConfigGroup
+  m_EditorClassIdentifier: 
+  CardPrefab: {fileID: 4643357979197672806, guid: c6a0d74fa045c554e847379269ca5c94,
+    type: 3}
+  LevelConfigs:
+  - {fileID: 11400000, guid: efd3b90ee4a766241a335731e7dafeb1, type: 2}
