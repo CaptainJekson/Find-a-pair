@@ -8,12 +8,14 @@ namespace CJ.FindAPair.Cards
     class CardsSystemsExecutor : ITickable, IDisposable
     {
         private readonly EcsSystems _systems;
-        public CardsSystemsExecutor(EcsWorld world, CreateCardSystem createCardSystem)
+        public CardsSystemsExecutor(EcsWorld world, CreateCardSystem createCardSystem, 
+            CardOpeningSystem cardOpeningSystem)
         {
             _systems = new EcsSystems(world, "PlayerSystems");
 
             _systems
-                .Add(createCardSystem);
+                .Add(createCardSystem)
+                .Add(cardOpeningSystem);
 
             _systems.Init();
 

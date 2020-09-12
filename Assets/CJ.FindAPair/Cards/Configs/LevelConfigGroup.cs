@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace CJ.FindAPair.Cards.Config
+namespace CJ.FindAPair.Cards.Configs
 {
     [CreateAssetMenu(fileName = "LevelConfigGroup", menuName = "Configs/LevelConfigGroup")]
     public class LevelConfigGroup : ScriptableObject

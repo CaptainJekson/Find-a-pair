@@ -1,4 +1,4 @@
-﻿using CJ.FindAPair.Cards.Config;
+﻿using CJ.FindAPair.Cards.Configs;
 using CJ.FindAPair.Cards.Systems;
 using Zenject;
 
@@ -11,6 +11,7 @@ namespace CJ.FindAPair.Cards
             Container.Bind<LevelConfigGroup>().FromScriptableObjectResource("LevelConfigGroup").AsSingle();
 
             Container.Bind<CreateCardSystem>().AsSingle();
+            Container.Bind<CardOpeningSystem>().AsSingle();
 
             Container.BindInterfacesAndSelfTo<CardsSystemsExecutor>().AsSingle().NonLazy();
         }
