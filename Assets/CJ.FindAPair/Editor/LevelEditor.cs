@@ -22,7 +22,7 @@ public class LevelEditor : EditorWindow
 
         GUILayout.Label("Array width/height", EditorStyles.boldLabel);
         _width = EditorGUILayout.IntField("Width", _width);
-        _height = EditorGUILayout.IntField("Width", _height);
+        _height = EditorGUILayout.IntField("Height", _height);
 
         if (_width != _fieldsArray.GetLength(0) || _height != _fieldsArray.GetLength(1))
         {

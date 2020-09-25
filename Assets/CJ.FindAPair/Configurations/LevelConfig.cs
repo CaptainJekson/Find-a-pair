@@ -1,17 +1,29 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "Level", menuName = "Levels")]
 public class LevelConfig : ScriptableObject
 {
-    private bool[,] _fieldsArray;
-    private int _levelNumber;
+    [SerializeField] private int _levelNumber;
 
-    public bool[,] FieldArray => _fieldsArray;
-    public int LevelNumber => _levelNumber;
+    [SerializeField] private int _width;
+    [SerializeField] private int _height;
+    [SerializeField] private List<bool> _item = new List<bool>();
+
 
     public void SetLevel(bool[,] fieldsArray, int levelNumber)
     {
-        _fieldsArray = fieldsArray;
+        _width = fieldsArray.GetLength(0);
+        _height = fieldsArray.GetLength(1);
+
+        for (int i = 0; i < _width; i++)
+        {
+            for (int j = 0; j < _height; j++)
+            {
+                _item.Add(fieldsArray[i, j]);
+            }
+        }
+
         _levelNumber = levelNumber;
     }
 
