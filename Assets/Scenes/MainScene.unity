@@ -158,21 +158,28 @@ MonoBehaviour:
   - {fileID: 486956164}
   _installerPrefabs: []
   _autoRun: 1
+  <Initialized>k__BackingField: 0
   OnPreInstall:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnPostInstall:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnPreResolve:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnPostResolve:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   _parentNewObjectsUnderSceneContext: 0
   _contractNames: []
   _parentContractNames: []
+  _hasInstalled: 0
+  _hasResolved: 0
 --- !u!114 &486956164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +288,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &971404576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971404578}
+  - component: {fileID: 971404577}
+  m_Layer: 0
+  m_Name: LevelCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &971404577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971404576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464492c455641554f82028de6b7fa01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelConfig: {fileID: 11400000, guid: 35a2310eec2883843a131a3b1549d954, type: 2}
+--- !u!4 &971404578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971404576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4514723, y: 0.074906364, z: 654.6192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061359112
 GameObject:

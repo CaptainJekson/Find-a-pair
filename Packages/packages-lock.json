@@ -1,19 +1,5 @@
 {
   "dependencies": {
-    "com.leopotam.ecs": {
-      "version": "https://github.com/Leopotam/ecs.git#classes-based",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "98267cd08e552a62695e835c84333e6eeb964b63"
-    },
-    "com.leopotam.ecs-unityintegration": {
-      "version": "https://github.com/Leopotam/ecs-unityintegration.git#classes-based",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "80a86e5bfa7d2e62266054f2ae62245dbbded863"
-    },
     "com.unity.ads": {
       "version": "3.4.7",
       "depth": 0,

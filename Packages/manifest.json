@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "com.leopotam.ecs": "https://github.com/Leopotam/ecs.git#classes-based",
-    "com.leopotam.ecs-unityintegration": "https://github.com/Leopotam/ecs-unityintegration.git#classes-based",
     "com.unity.ads": "3.4.7",
     "com.unity.collab-proxy": "1.3.8",
     "com.unity.ide.rider": "1.2.1",
