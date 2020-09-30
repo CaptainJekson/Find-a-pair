@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class LevelEditor : EditorWindow
 {
-    private bool[,] _fieldsArray = new bool[0, 0];
+    private bool[,] _levelMatrix = new bool[0, 0];
 
     private int _width = 1;
     private int _height = 1;
-    private int _levelNumber = 1;
+    private int _level = 1;
 
     [MenuItem("Find a pair/Level Editor")]
     private static void ShowWindow()
@@ -18,15 +18,15 @@ public class LevelEditor : EditorWindow
     private void OnGUI()
     {
         GUILayout.Label("LEVEL NUMBER", EditorStyles.boldLabel);
-        _levelNumber = EditorGUILayout.IntField("Level Number", _levelNumber);
+        _level = EditorGUILayout.IntField("Level Number", _level);
 
         GUILayout.Label("Array width/height", EditorStyles.boldLabel);
         _width = EditorGUILayout.IntField("Width", _width);
         _height = EditorGUILayout.IntField("Height", _height);
 
-        if (_width != _fieldsArray.GetLength(0) || _height != _fieldsArray.GetLength(1))
+        if (_width != _levelMatrix.GetLength(0) || _height != _levelMatrix.GetLength(1))
         {
-            _fieldsArray = new bool[_width, _height];
+            _levelMatrix = new bool[_width, _height];
         }
 
         ChangeArrayWidthAndHeight();
@@ -34,9 +34,9 @@ public class LevelEditor : EditorWindow
         if (GUILayout.Button("Create"))
         {
             var asset = ScriptableObject.CreateInstance<LevelConfig>();
-            asset.SetLevel(_fieldsArray, _levelNumber);
+            asset.SetLevel(_levelMatrix, _level);
 
-            AssetDatabase.CreateAsset(asset, $"Assets/CJ.FindAPair/Resources/Levels/Level {_levelNumber}.asset");
+            AssetDatabase.CreateAsset(asset, $"Assets/CJ.FindAPair/Resources/Levels/Level {_level}.asset");
             AssetDatabase.SaveAssets();
 
             EditorUtility.FocusProjectWindow();
@@ -53,7 +53,7 @@ public class LevelEditor : EditorWindow
 
             for (int i = 0; i < _width; i++)
             {
-                _fieldsArray[i, j] = EditorGUILayout.Toggle(_fieldsArray[i, j]);
+                _levelMatrix[i, j] = EditorGUILayout.Toggle(_levelMatrix[i, j]);
             }
 
             EditorGUILayout.EndHorizontal();

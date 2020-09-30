@@ -4,27 +4,30 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Level", menuName = "Levels")]
 public class LevelConfig : ScriptableObject
 {
-    [SerializeField] private int _levelNumber;
+    [SerializeField] private int _level;
 
     [SerializeField] private int _width;
     [SerializeField] private int _height;
-    [SerializeField] private List<bool> _item = new List<bool>();
+    [SerializeField] private List<bool> _levelField = new List<bool>();
 
+    public List<bool> LevelField => _levelField;
+    public int Width => _width;
+    public int Height => _height;
 
-    public void SetLevel(bool[,] fieldsArray, int levelNumber)
+    public void SetLevel(bool[,] _levelMatrix, int level)
     {
-        _width = fieldsArray.GetLength(0);
-        _height = fieldsArray.GetLength(1);
+        _width = _levelMatrix.GetLength(0);
+        _height = _levelMatrix.GetLength(1);
 
         for (int i = 0; i < _width; i++)
         {
             for (int j = 0; j < _height; j++)
             {
-                _item.Add(fieldsArray[i, j]);
+                _levelField.Add(_levelMatrix[i, j]);
             }
         }
 
-        _levelNumber = levelNumber;
+        _level = level;
     }
 
 }
