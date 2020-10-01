@@ -43,6 +43,27 @@ public class LevelEditor : EditorWindow
 
             Selection.activeObject = asset;
         }
+
+        if (GUILayout.Button("All true"))
+        {
+            WriteToAllMatrix(true);
+        }
+        
+        if (GUILayout.Button("All false"))
+        {
+            WriteToAllMatrix(false);
+        }
+    }
+
+    private void WriteToAllMatrix(bool value)
+    {
+        for (var i = 0; i < _levelMatrix.GetLength(0); i++)
+        {
+            for (var j = 0; j < _levelMatrix.GetLength(1); j++)
+            {
+                _levelMatrix[i, j] = value;
+            }
+        }
     }
 
     private void ChangeArrayWidthAndHeight()
@@ -51,7 +72,7 @@ public class LevelEditor : EditorWindow
         {
             EditorGUILayout.BeginHorizontal();
 
-            for (int i = 0; i < _width; i++)
+            for (var i = 0; i < _width; i++)
             {
                 _levelMatrix[i, j] = EditorGUILayout.Toggle(_levelMatrix[i, j]);
             }

@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Rushana\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Rushana\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Find-a-pair.1241230065.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Rushana\Desktop\MyProjectUnity\Find-a-pair" t="IncludeRecursive">
+    <e p="C:\ProjectsUnity\Find-a-pair" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CJ.FindAPair" t="Include">
+          <e p="Configurations" t="Include">
+            <e p="LevelConfig.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="LevelEditor.cs" t="Include" />
+          </e>
+          <e p="Game" t="Include">
+            <e p="LevelCreator.cs" t="Include" />
+          </e>
+        </e>
+      </e>
       <e p="Find-a-pair.sln" t="IncludeFlat" />
-      <e p="Zenject-Editor.csproj" t="IncludeRecursive" />
-      <e p="Zenject.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\Евгений Скворцов\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Евгений Скворцов\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.-580021972.00" t="ExcludeRecursive" />
   </component>
 </project>

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _level: 1
   _width: 5
-  _height: 3
-  _levelField: 010001000100010001000100010001
+  _height: 5
+  _levelField: 01000000010001000100000001000000010001000100000001
