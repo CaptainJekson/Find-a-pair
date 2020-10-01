@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelConfig: {fileID: 11400000, guid: 35ebeb2b42132994798386adde5014e5, type: 2}
-  _card: {fileID: 8401909985352512615, guid: e57e93cd12ea1634b8e60506ebf0b6fe, type: 3}
+  _card: {fileID: 2489292875129692149, guid: b5c77450e1a498946a4791d448c19b56, type: 3}
 --- !u!4 &439716660
 Transform:
   m_ObjectHideFlags: 0

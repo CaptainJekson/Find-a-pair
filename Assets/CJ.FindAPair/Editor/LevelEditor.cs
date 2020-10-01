@@ -68,7 +68,7 @@ public class LevelEditor : EditorWindow
 
     private void ChangeArrayWidthAndHeight()
     {
-        for (int j = 0; j < _height; j++)
+        for (var j = 0; j < _height; j++)
         {
             EditorGUILayout.BeginHorizontal();
 

@@ -26,13 +26,13 @@ public class LevelCreator : MonoBehaviour
                 if (levelField[indexLevelField] == true)
                     Instantiate(_card, _testStartPosition, Quaternion.identity);
                 
-                _testStartPosition.y += 0.2f; //TODO Test
+                _testStartPosition.y += 0.5f; //TODO Test
 
                 indexLevelField++;
             }
 
             _testStartPosition.y = 0.0f;
-            _testStartPosition.x += 0.2f; //TODO Test
+            _testStartPosition.x += 0.5f; //TODO Test
         }
     }
 }
