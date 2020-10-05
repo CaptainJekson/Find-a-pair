@@ -1,38 +1,52 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(GridLayoutGroup))]
 public class LevelCreator : MonoBehaviour
 {
     [SerializeField] private LevelConfig _levelConfig;
-    [SerializeField] private Transform _card;
-    
-    private Vector2 _testStartPosition;    //TODO Test
+    [SerializeField] private Card _card;
+
+    private GridLayoutGroup _gridLayoutGroup;
 
     private void Awake()
     {
-        CreateLevel(_card, _levelConfig.LevelField, _levelConfig.Width, _levelConfig.Height);
-        
-        _testStartPosition = Vector2.zero;
+        _gridLayoutGroup = GetComponent<GridLayoutGroup>();
+        _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+        _gridLayoutGroup.constraintCount = _levelConfig.Height;
+
+        CreateLevel();
     }
 
-    private void CreateLevel(Transform card, List<bool> levelField, int width, int height)
+    private void CreateLevel()
     {
-        var indexLevelField = 0;
-
-        for (var i = 0; i < width; i++)
+        ChangeCellSize();
+        
+        foreach (var item in _levelConfig.LevelField)
         {
-            for (var j = 0; j < height; j++)
+            var newCard = Instantiate(_card, transform.position, Quaternion.identity);
+
+            newCard.transform.SetParent(transform, false);
+
+            if (item == false)
             {
-                if (levelField[indexLevelField] == true)
-                    Instantiate(_card, _testStartPosition, Quaternion.identity);
-                
-                _testStartPosition.y += 0.5f; //TODO Test
-
-                indexLevelField++;
+                newCard.IsEmpty = true;
+                newCard.GetComponent<Image>().enabled = false;
+                newCard.GetComponent<Button>().interactable = false;
             }
+        }
+    }
 
-            _testStartPosition.y = 0.0f;
-            _testStartPosition.x += 0.5f; //TODO Test
+    private void ChangeCellSize()    //TODO
+    {
+        var reducer = _levelConfig.Height > _levelConfig.Width ? _levelConfig.Height : _levelConfig.Width;
+        var numberOfReductions = reducer / 2; //TODO
+
+        for (var i = 0; i < numberOfReductions - 1; i++)
+        {
+            Debug.Log(numberOfReductions);
+            
+            _gridLayoutGroup.cellSize *= 0.5f;
         }
     }
 }
