@@ -9,6 +9,9 @@
           <e p="Card" t="Include">
             <e p="Card.cs" t="Include" />
           </e>
+          <e p="Card Table" t="Include">
+            <e p="UIFlexibleGridController.cs" t="Include" />
+          </e>
           <e p="Configurations" t="Include">
             <e p="LevelConfig.cs" t="Include" />
           </e>

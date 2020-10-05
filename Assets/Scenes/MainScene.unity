@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 809726040}
   - component: {fileID: 809726039}
   - component: {fileID: 809726038}
+  - component: {fileID: 809726041}
   - component: {fileID: 809726037}
   m_Layer: 5
   m_Name: Card Table
@@ -240,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464492c455641554f82028de6b7fa01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelConfig: {fileID: 11400000, guid: a42d45838f43c66469c0f673a845de68, type: 2}
+  _levelConfig: {fileID: 11400000, guid: 84b41e11a5f654f4d91955963290fb23, type: 2}
   _card: {fileID: 1736737689898989670, guid: b5c77450e1a498946a4791d448c19b56, type: 3}
 --- !u!114 &809726038
 MonoBehaviour:
@@ -304,6 +305,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809726035}
   m_CullTransparentMesh: 0
+--- !u!114 &809726041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809726035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76760e075abcb524d8d1ae56fe4ba5b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleOnlyOnStartup: 1
+  keepAspectRatio: 0
+  keepSpacingZero: 0
 --- !u!1 &1039552153
 GameObject:
   m_ObjectHideFlags: 0

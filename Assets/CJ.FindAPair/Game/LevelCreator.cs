@@ -20,7 +20,7 @@ public class LevelCreator : MonoBehaviour
 
     private void CreateLevel()
     {
-        ChangeCellSize();
+        //ChangeCellSize();
         
         foreach (var item in _levelConfig.LevelField)
         {
