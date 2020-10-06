@@ -1,28 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(GridLayoutGroup))]
 public class LevelCreator : MonoBehaviour
 {
-    [SerializeField] private LevelConfig _levelConfig;
+    [SerializeField] private Level _level;
     [SerializeField] private Card _card;
 
+    public float ReductionRatio => _level.ReductionRatio;
     private GridLayoutGroup _gridLayoutGroup;
 
     private void Awake()
     {
         _gridLayoutGroup = GetComponent<GridLayoutGroup>();
         _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        _gridLayoutGroup.constraintCount = _levelConfig.Height;
-
+        _gridLayoutGroup.constraintCount = _level.LevelConfig.Height;
+        
         CreateLevel();
     }
 
     private void CreateLevel()
     {
-        //ChangeCellSize();
-        
-        foreach (var item in _levelConfig.LevelField)
+        foreach (var item in _level.LevelConfig.LevelField)
         {
             var newCard = Instantiate(_card, transform.position, Quaternion.identity);
 
@@ -36,17 +36,11 @@ public class LevelCreator : MonoBehaviour
             }
         }
     }
+}
 
-    private void ChangeCellSize()    //TODO
-    {
-        var reducer = _levelConfig.Height > _levelConfig.Width ? _levelConfig.Height : _levelConfig.Width;
-        var numberOfReductions = reducer / 2; //TODO
-
-        for (var i = 0; i < numberOfReductions - 1; i++)
-        {
-            Debug.Log(numberOfReductions);
-            
-            _gridLayoutGroup.cellSize *= 0.5f;
-        }
-    }
+[Serializable]
+public class Level
+{
+    public LevelConfig LevelConfig;
+    [Range(0.0f, 1.0f)] public float ReductionRatio;
 }

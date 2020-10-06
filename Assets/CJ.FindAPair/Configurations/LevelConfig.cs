@@ -19,9 +19,9 @@ public class LevelConfig : ScriptableObject
         _width = _levelMatrix.GetLength(0);
         _height = _levelMatrix.GetLength(1);
 
-        for (int i = 0; i < _width; i++)
+        for (var i = 0; i < _width; i++)
         {
-            for (int j = 0; j < _height; j++)
+            for (var j = 0; j < _height; j++)
             {
                 _levelField.Add(_levelMatrix[i, j]);
             }
@@ -29,5 +29,4 @@ public class LevelConfig : ScriptableObject
 
         _level = level;
     }
-
 }

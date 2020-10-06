@@ -227,7 +227,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 35}
-  m_SizeDelta: {x: 0, y: -570}
+  m_SizeDelta: {x: -100, y: -570}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809726037
 MonoBehaviour:
@@ -241,7 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464492c455641554f82028de6b7fa01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelConfig: {fileID: 11400000, guid: 84b41e11a5f654f4d91955963290fb23, type: 2}
+  _level:
+    LevelConfig: {fileID: 11400000, guid: 9a04f03e672504d4c962dbdee1874377, type: 2}
+    ReductionRatio: 1
   _card: {fileID: 1736737689898989670, guid: b5c77450e1a498946a4791d448c19b56, type: 3}
 --- !u!114 &809726038
 MonoBehaviour:
@@ -280,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -317,9 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76760e075abcb524d8d1ae56fe4ba5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleOnlyOnStartup: 1
-  keepAspectRatio: 0
-  keepSpacingZero: 0
 --- !u!1 &1039552153
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +415,7 @@ GameObject:
   - component: {fileID: 1142371991}
   - component: {fileID: 1142371990}
   m_Layer: 5
-  m_Name: Master Canvas
+  m_Name: Game Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

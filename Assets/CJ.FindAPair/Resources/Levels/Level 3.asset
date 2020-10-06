@@ -15,4 +15,4 @@ MonoBehaviour:
   _level: 3
   _width: 4
   _height: 4
-  _levelField: 01010101010000010100000101010101
+  _levelField: 01010101010101010101010101010101
