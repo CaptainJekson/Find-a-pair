@@ -2,15 +2,21 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace CJ.FindAPair.Editor
+namespace CJ.FindAPair.CustomEditor
 {
     public class LevelEditor : EditorWindow
     {
         private bool[,] _levelMatrix = new bool[0, 0];
 
-        private int _width = 1;
-        private int _height = 1;
-        private int _level = 1;
+        private int _level = 0;
+        private int _width = 0;
+        private int _height = 0;
+
+        private QuantityOfCardOfPair _quantityOfCardOfPair;
+        private int _tries = 0;
+        private int _time = 0;
+        private bool _isBomb = false;
+        private int _quantityPairOfBombs = 0;
 
         [MenuItem("Find a pair/Level Editor")]
         private static void ShowWindow()
@@ -21,11 +27,22 @@ namespace CJ.FindAPair.Editor
         private void OnGUI()
         {
             GUILayout.Label("LEVEL NUMBER", EditorStyles.boldLabel);
-            _level = EditorGUILayout.IntField("Level Number", _level);
+            _level = EditorGUILayout.IntField("Level number", _level);
 
-            GUILayout.Label("Array width/height", EditorStyles.boldLabel);
+            GUILayout.Label("Game field - width/height", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Width", _width);
             _height = EditorGUILayout.IntField("Height", _height);
+
+            GUILayout.Label("Level conditions", EditorStyles.boldLabel);
+            _quantityOfCardOfPair = (QuantityOfCardOfPair)EditorGUILayout.EnumPopup(new GUIContent("Quantity of card of pair"), _quantityOfCardOfPair);
+            _tries = EditorGUILayout.IntField("Tries", _width);
+            _time = EditorGUILayout.IntField("Time", _time);
+            _isBomb = EditorGUILayout.Toggle("With bombs", _isBomb);
+
+            if(_isBomb)
+            {
+                _quantityPairOfBombs = EditorGUILayout.IntField("Quantity pair of bombs", _quantityPairOfBombs);
+            }
 
             if (_width != _levelMatrix.GetLength(0) || _height != _levelMatrix.GetLength(1))
             {
@@ -36,8 +53,9 @@ namespace CJ.FindAPair.Editor
 
             if (GUILayout.Button("Create"))
             {
-                var asset = ScriptableObject.CreateInstance<LevelConfig>();
-                asset.SetLevel(_levelMatrix, _level);
+                var asset = ScriptableObject.CreateInstance<LevelConfig>();             
+                asset.SetSizeLevel(_levelMatrix, _level);
+                asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfBombs);
 
                 AssetDatabase.CreateAsset(asset, $"Assets/CJ.FindAPair/Resources/Levels/Level {_level}.asset");
                 AssetDatabase.SaveAssets();
@@ -83,7 +101,6 @@ namespace CJ.FindAPair.Editor
                 EditorGUILayout.EndHorizontal();
             }
         }
-
     }
 }
 
