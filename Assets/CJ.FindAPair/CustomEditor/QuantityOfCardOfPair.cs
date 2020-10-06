@@ -2,8 +2,8 @@
 {
     public enum QuantityOfCardOfPair
     {
-        TwoCards,
-        ThreeCards,
-        FourCards
+        TwoCards = 2,
+        ThreeCards = 3,
+        FourCards = 4
     }
 }
