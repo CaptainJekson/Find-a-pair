@@ -15,7 +15,7 @@ public class LevelCreator : MonoBehaviour
     {
         _gridLayoutGroup = GetComponent<GridLayoutGroup>();
         _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        _gridLayoutGroup.constraintCount = _level.LevelConfig.Height;
+        _gridLayoutGroup.constraintCount = _level.LevelConfig.Width;
         
         CreateLevel();
     }

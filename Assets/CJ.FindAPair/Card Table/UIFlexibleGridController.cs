@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 [RequireComponent(typeof(RectTransform), typeof(GridLayoutGroup),
-        typeof(LevelCreator))]
+    typeof(LevelCreator))]
 public class UIFlexibleGridController : MonoBehaviour
 {
     private RectTransform _rectTransform;
