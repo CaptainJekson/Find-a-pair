@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace CJ.FindAPair.CardTable
@@ -21,21 +22,39 @@ namespace CJ.FindAPair.CardTable
             CreateLevel();
         }
 
-        private void CreateLevel()
+        private void CreateLevel()  //TODO Refactor
         {
-            foreach (var item in _level.LevelConfig.LevelField)
+            var cards = new List<Card>();
+
+            for (var i = 0; i < _level.LevelConfig.LevelField.Count; i++)
             {
                 var newCard = Instantiate(_card, transform.position, Quaternion.identity);
 
                 newCard.transform.SetParent(transform, false);
 
-                if (item == false)
+                if (_level.LevelConfig.LevelField[i] == false)
                 {
-                    newCard.IsEmpty = true;
-                    newCard.GetComponent<Image>().enabled = false;
-                    newCard.GetComponent<Button>().interactable = false;
+                    DisableCard(newCard);
+                }
+                else
+                {
+                    cards.Add(newCard);
                 }
             }
+
+            for (int i = 0; i < cards.Count / 2; i++)   //TODO только для двойной пары
+            {
+                cards[i].NumberPair = i + 1;
+                cards[cards.Count - i - 1].NumberPair = i + 1;
+            }
+        }
+
+        private void DisableCard(Card card)
+        {
+            card.IsEmpty = true;
+            card.GetComponent<Image>().enabled = false;
+            card.GetComponent<Button>().interactable = false;
+            card.NumberPair = 0;
         }
     }
 }
