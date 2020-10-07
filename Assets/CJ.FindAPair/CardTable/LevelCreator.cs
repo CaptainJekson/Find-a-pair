@@ -10,6 +10,8 @@ namespace CJ.FindAPair.CardTable
         [SerializeField] private Level _level;
         [SerializeField] private Card _card;
 
+        private List<Card> _cards;
+
         public float ReductionRatio => _level.ReductionRatio;
         private GridLayoutGroup _gridLayoutGroup;
 
@@ -19,13 +21,14 @@ namespace CJ.FindAPair.CardTable
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
             _gridLayoutGroup.constraintCount = _level.LevelConfig.Width;
 
+            _cards = new List<Card>();
+
             CreateLevel();
+            CardNumbering();
         }
 
         private void CreateLevel()  //TODO Refactor
         {
-            var cards = new List<Card>();
-
             for (var i = 0; i < _level.LevelConfig.LevelField.Count; i++)
             {
                 var newCard = Instantiate(_card, transform.position, Quaternion.identity);
@@ -38,15 +41,43 @@ namespace CJ.FindAPair.CardTable
                 }
                 else
                 {
-                    cards.Add(newCard);
+                    _cards.Add(newCard);
                 }
             }
+        }
 
-            for (int i = 0; i < cards.Count / 2; i++)   //TODO только для двойной пары
+        private void CardNumbering()
+        {
+            var numberCard = 1;
+            var counter = (int)_level.LevelConfig.QuantityOfCardOfPair;
+
+            for (int i = 0; i < _cards.Count; i++)       
             {
-                cards[i].NumberPair = i + 1;
-                cards[cards.Count - i - 1].NumberPair = i + 1;
+                if(counter > 0)
+                {
+                    _cards[i].NumberPair = numberCard;
+                    --counter;
+                }
+                else
+                {
+                    counter = (int)_level.LevelConfig.QuantityOfCardOfPair;
+                    ++numberCard;
+                    --i;
+                }
             }
+        }
+
+        private List<Card> ShuffleCard(List<Card> cards)    //TODO
+        {
+            for (int i = cards.Count - 1; i > 0; i--)
+            {
+                int j = Random.Range(0, i);
+                Card temp = cards[i];
+                cards[i] = cards[j];
+                cards[j] = temp;
+            }
+
+            return cards;
         }
 
         private void DisableCard(Card card)
