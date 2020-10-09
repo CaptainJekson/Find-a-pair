@@ -1,6 +1,8 @@
 ﻿using CJ.FindAPair.Configuration;
-using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR 
+using UnityEditor;
+#endif
 
 namespace CJ.FindAPair.CustomEditor
 {
@@ -55,7 +57,7 @@ namespace CJ.FindAPair.CustomEditor
 
             if (GUILayout.Button("Создать"))
             {
-                if(LevelValidation(ref _errorMessage))
+                if (LevelValidation(ref _errorMessage))
                 {
                     CreateLevel();
                 }
@@ -124,7 +126,7 @@ namespace CJ.FindAPair.CustomEditor
 
             foreach (var item in _levelMatrix)
             {
-                if(item)
+                if (item)
                 {
                     quantityCard++;
                 }

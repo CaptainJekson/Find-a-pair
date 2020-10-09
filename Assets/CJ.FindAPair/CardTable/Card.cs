@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using System.Collections;
 
 namespace CJ.FindAPair.CardTable
 {
@@ -17,9 +19,13 @@ namespace CJ.FindAPair.CardTable
         public Image Shirt { get => _shirt; set => _shirt = value; }
         public Image Face { get => _face; set => _face = value; }
 
+        public event UnityAction СardOpens;
+        public event UnityAction CardClosed;
+
         private void Awake()
         {
             IsEmpty = false;
+            _button.onClick.AddListener(Show);
         }
 
         private void Start()
@@ -30,16 +36,18 @@ namespace CJ.FindAPair.CardTable
             {
                 MakeEmpty();
             }
+
+            StartCoroutine(DelayHide());
         }
 
         private void Show()
         {
-
+            СardOpens?.Invoke();
         }
 
         private void Hide()
         {
-
+            CardClosed?.Invoke();
         }
 
         private void MakeEmpty()
@@ -47,6 +55,13 @@ namespace CJ.FindAPair.CardTable
             _shirt.enabled = false;
             _face.enabled = false;
             _text.enabled = false;
+        }
+
+        private IEnumerator DelayHide()
+        {
+            yield return new WaitForSeconds(2.0f);  //TODO
+
+            Hide();
         }
     }
 }

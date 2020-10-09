@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8787977812679780967}
   - component: {fileID: 2761754078368519441}
   - component: {fileID: 1736737689898989670}
+  - component: {fileID: 6885422749708483522}
   - component: {fileID: 8248766030524142251}
   m_Layer: 5
   m_Name: Card
@@ -229,6 +230,18 @@ MonoBehaviour:
   _button: {fileID: 2151763731933515601}
   _shirt: {fileID: 551391827904571850}
   _face: {fileID: 6495849856346397754}
+--- !u!114 &6885422749708483522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2834504944677608073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098a39275bf6a2e47bbbb2686d193324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &8248766030524142251
 Animator:
   serializedVersion: 3
