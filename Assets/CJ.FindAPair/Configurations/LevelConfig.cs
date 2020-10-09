@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR 
 using CJ.FindAPair.CustomEditor;
-using System.ComponentModel;
-using Unity.Collections;
+#endif
 
 namespace CJ.FindAPair.Configuration
 {

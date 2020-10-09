@@ -1,4 +1,4 @@
-﻿namespace CJ.FindAPair.CustomEditor
+﻿namespace CJ.FindAPair.Configuration
 {
     public enum QuantityOfCardOfPair
     {
