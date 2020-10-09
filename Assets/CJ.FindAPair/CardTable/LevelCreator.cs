@@ -25,12 +25,17 @@ namespace CJ.FindAPair.CardTable
             _cards = new List<Card>();
 
             CreateLevel();
+        }
+
+        private void CreateLevel()
+        {
+            PlaceCards();
             CardNumbering();
             AddBombs();
             ShuffleNumberCard();
         }
 
-        private void CreateLevel()
+        private void PlaceCards()
         {
             for (var i = 0; i < _level.LevelConfig.LevelField.Count; i++)
             {
