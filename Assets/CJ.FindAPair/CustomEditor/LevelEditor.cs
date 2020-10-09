@@ -150,6 +150,12 @@ namespace CJ.FindAPair.CustomEditor
                         errorMessage = "[Error: Кол-во карт должно быть более 8 и делится на 4 без остатка]";
                     }
                     break;
+                default:
+                    {
+                        isValid = false;
+                        errorMessage = "[Error: Выберите кол-во карт в паре]";
+                    }
+                    break;
             }
 
 

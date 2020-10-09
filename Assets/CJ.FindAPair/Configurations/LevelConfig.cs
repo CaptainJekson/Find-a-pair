@@ -23,8 +23,10 @@ namespace CJ.FindAPair.Configuration
         public List<bool> LevelField => _levelField;
         public int Width => _width;
         public int Height => _height;
-
         public QuantityOfCardOfPair QuantityOfCardOfPair => _quantityOfCardOfPair;
+        public int Tries => _tries;
+        public int Time => _time;
+        public int QuantityPairOfBombs => _quantityPairOfBombs;
 
         public void SetSizeLevel(bool[,] _levelMatrix, int level)
         {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Assets.CJ.FindAPair.Constants;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,9 +26,11 @@ namespace CJ.FindAPair.CardTable
 
             CreateLevel();
             CardNumbering();
+            AddBombs();
+            ShuffleNumberCard();
         }
 
-        private void CreateLevel()  //TODO Refactor
+        private void CreateLevel()
         {
             for (var i = 0; i < _level.LevelConfig.LevelField.Count; i++)
             {
@@ -51,9 +54,9 @@ namespace CJ.FindAPair.CardTable
             var numberCard = 1;
             var counter = (int)_level.LevelConfig.QuantityOfCardOfPair;
 
-            for (int i = 0; i < _cards.Count; i++)       
+            for (int i = 0; i < _cards.Count; i++)
             {
-                if(counter > 0)
+                if (counter > 0)
                 {
                     _cards[i].NumberPair = numberCard;
                     --counter;
@@ -67,24 +70,31 @@ namespace CJ.FindAPair.CardTable
             }
         }
 
-        private List<Card> ShuffleCard(List<Card> cards)    //TODO
+        private void ShuffleNumberCard()
         {
-            for (int i = cards.Count - 1; i > 0; i--)
+            for (int i = _cards.Count - 1; i > 0; i--)
             {
                 int j = Random.Range(0, i);
-                Card temp = cards[i];
-                cards[i] = cards[j];
-                cards[j] = temp;
+                int temp = _cards[i].NumberPair;
+                _cards[i].NumberPair = _cards[j].NumberPair;
+                _cards[j].NumberPair = temp;
             }
+        }
 
-            return cards;
+        private void AddBombs()
+        {
+            var quantityBomb = _level.LevelConfig.QuantityPairOfBombs * (int)_level.LevelConfig.QuantityOfCardOfPair;
+
+            for (int i = 0; i < quantityBomb; i++)
+            {
+                _cards[_cards.Count - 1 - i].NumberPair = Constants.NumberBomb;
+            }
         }
 
         private void DisableCard(Card card)
         {
             card.IsEmpty = true;
             card.GetComponent<Image>().enabled = false;
-            card.GetComponent<Button>().interactable = false;
             card.NumberPair = 0;
         }
     }
