@@ -44,31 +44,28 @@ public class CardComparator : MonoBehaviour
 
     private void ToCompare(Card card)
     {
-        var quantityOfCardOfPair = (int)_levelCreator.LevelConfig.QuantityOfCardOfPair; 
-        
+        var quantityOfCardOfPair = (int)_levelCreator.LevelConfig.QuantityOfCardOfPair;
+
         _comparisonCards.Add(card);
 
-        if (_comparisonCards.Count >= 2)
+        for (int i = 0; i < _comparisonCards.Count - 1; i++)
         {
-            for (int i = 0; i < _comparisonCards.Count - 1; i++)
-            {
-                var isCardEqual = _comparisonCards[i].NumberPair 
-                    == _comparisonCards[_comparisonCards.Count - 1].NumberPair;
+            var isCardEqual = _comparisonCards[i].NumberPair 
+                == _comparisonCards[_comparisonCards.Count - 1].NumberPair;
 
-                if (isCardEqual)
+            if (isCardEqual)
+            {
+                if (_comparisonCards.Count >= quantityOfCardOfPair && isCardEqual)
                 {
-                    if(_comparisonCards.Count >= quantityOfCardOfPair && isCardEqual)
-                    {
-                        СardsMatched?.Invoke();
-                        _comparisonCards.Clear();
-                    }
-                }
-                else
-                {
-                    СardsNotMatched?.Invoke();
-                    HideCards();
+                    СardsMatched?.Invoke();
                     _comparisonCards.Clear();
                 }
+            }
+            else
+            {
+                СardsNotMatched?.Invoke();
+                HideCards();
+                _comparisonCards.Clear();
             }
         }
     }
