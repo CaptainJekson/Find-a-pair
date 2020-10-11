@@ -6,7 +6,7 @@ using CJ.FindAPair.CustomEditor;
 
 namespace CJ.FindAPair.Configuration
 {
-    [CreateAssetMenu(fileName = "Level", menuName = "Levels")]
+    [CreateAssetMenu(fileName = "Level", menuName = "Find a pair/Level")]
     public class LevelConfig : ScriptableObject
     {
         [SerializeField] private int _level;

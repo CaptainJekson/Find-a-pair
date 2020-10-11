@@ -1,4 +1,5 @@
 ﻿using Assets.CJ.FindAPair.Constants;
+using CJ.FindAPair.Configuration;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,9 +13,12 @@ namespace CJ.FindAPair.CardTable
         [SerializeField] private Card _card;
 
         private List<Card> _cards;
+        private GridLayoutGroup _gridLayoutGroup;
 
         public float ReductionRatio => _level.ReductionRatio;
-        private GridLayoutGroup _gridLayoutGroup;
+        public LevelConfig LevelConfig => _level.LevelConfig;
+
+        public List<Card> Cards => _cards;
 
         private void Awake()
         {

@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cafe412e329c2a24a82c73fd8dafd1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSettingsConfig: {fileID: 11400000, guid: 9aa473812d596da46837be4bf3c8aa00, type: 2}
   _text: {fileID: 1099544109}
   _button: {fileID: 2151763731933515601}
   _shirt: {fileID: 551391827904571850}
@@ -242,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098a39275bf6a2e47bbbb2686d193324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameSettingConfig: {fileID: 11400000, guid: 9aa473812d596da46837be4bf3c8aa00, type: 2}
 --- !u!95 &8248766030524142251
 Animator:
   serializedVersion: 3

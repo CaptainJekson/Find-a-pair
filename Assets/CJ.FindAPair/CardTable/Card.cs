@@ -3,12 +3,14 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
+using CJ.FindAPair.Configuration;
 
 namespace CJ.FindAPair.CardTable
 {
     public class Card : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _text; //TODO ТЕСТ
+        [SerializeField] private GameSettingsConfig gameSettingsConfig;
+        [SerializeField] private TextMeshProUGUI _text; 
         [SerializeField] private Button _button;
         [SerializeField] private Image _shirt;
         [SerializeField] private Image _face;
@@ -25,6 +27,7 @@ namespace CJ.FindAPair.CardTable
         private void Awake()
         {
             IsEmpty = false;
+            IsShow = false;
             _button.onClick.AddListener(Show);
         }
 
@@ -37,17 +40,24 @@ namespace CJ.FindAPair.CardTable
                 MakeEmpty();
             }
 
-            StartCoroutine(DelayHide());
+            StartCoroutine(DelayStartHide());
         }
 
-        private void Show()
+        public void DelayHide()
         {
-            СardOpens?.Invoke();
+            StartCoroutine(DelayHide(0.7f));
         }
 
         private void Hide()
         {
+            IsShow = false;
             CardClosed?.Invoke();
+        }
+
+        private void Show()
+        {
+            IsShow = true;
+            СardOpens?.Invoke();
         }
 
         private void MakeEmpty()
@@ -57,9 +67,15 @@ namespace CJ.FindAPair.CardTable
             _text.enabled = false;
         }
 
-        private IEnumerator DelayHide()
+        private IEnumerator DelayHide(float time)
         {
-            yield return new WaitForSeconds(2.0f);  //TODO
+            yield return new WaitForSeconds(time);
+            Hide();
+        }
+
+        private IEnumerator DelayStartHide()
+        {
+            yield return new WaitForSeconds(gameSettingsConfig.StartTimeShow);
 
             Hide();
         }

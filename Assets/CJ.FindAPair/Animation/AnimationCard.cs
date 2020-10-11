@@ -1,9 +1,12 @@
 ﻿using CJ.FindAPair.CardTable;
+using CJ.FindAPair.Configuration;
 using UnityEngine;
 
 [RequireComponent(typeof(Card)), RequireComponent(typeof(Animator))]
 public class AnimationCard : MonoBehaviour
 {
+    [SerializeField] private GameSettingsConfig _gameSettingConfig;
+
     private Card _card;
     private Animator _animator;
 
@@ -11,6 +14,7 @@ public class AnimationCard : MonoBehaviour
     {
         _card = GetComponent<Card>();
         _animator = GetComponent<Animator>();
+        _animator.speed = _gameSettingConfig.AnimationSpeedCard;
     }
 
     private void OnEnable()
