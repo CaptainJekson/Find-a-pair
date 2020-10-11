@@ -9,7 +9,7 @@ namespace CJ.FindAPair.CardTable
 {
     public class Card : MonoBehaviour
     {
-        [SerializeField] private GameSettingsConfig gameSettingsConfig;
+        [SerializeField] private GameSettingsConfig _gameSettingsConfig;
         [SerializeField] private TextMeshProUGUI _text; 
         [SerializeField] private Button _button;
         [SerializeField] private Image _shirt;
@@ -45,7 +45,7 @@ namespace CJ.FindAPair.CardTable
 
         public void DelayHide()
         {
-            StartCoroutine(DelayHide(0.7f));
+            StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
 
         private void Hide()
@@ -75,7 +75,7 @@ namespace CJ.FindAPair.CardTable
 
         private IEnumerator DelayStartHide()
         {
-            yield return new WaitForSeconds(gameSettingsConfig.StartTimeShow);
+            yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
 
             Hide();
         }

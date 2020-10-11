@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level:
-    LevelConfig: {fileID: 11400000, guid: e1a97b501e8a079468389b8a6cdfa05d, type: 2}
+    LevelConfig: {fileID: 11400000, guid: 4b8e29ea7d03e2a4fa259cab5aee7e1d, type: 2}
     ReductionRatio: 0.9
   _card: {fileID: 1736737689898989670, guid: b5c77450e1a498946a4791d448c19b56, type: 3}
 --- !u!114 &809726038
