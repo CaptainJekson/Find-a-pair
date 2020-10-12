@@ -37,14 +37,14 @@ namespace CJ.FindAPair.Game
             _life = _levelCreator.LevelConfig.Tries;
             _time = _levelCreator.LevelConfig.Time;
             _score = 0;
-
-            _lifeText.SetValue(_life.ToString());
-            _timeText.SetValue(TimeConverer(_time));
-            _scoreText.SetValue(_score.ToString());
         }
 
         private void Start()
         {
+            _lifeText.SetValue(_life.ToString());
+            _timeText.SetValue(TimeConverer(_time));
+            _scoreText.SetValue(_score.ToString());
+
             _timerCoroutine = TimerTick();
 
             StartCoroutine(_timerCoroutine);
