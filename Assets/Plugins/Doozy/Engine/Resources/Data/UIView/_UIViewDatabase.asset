@@ -15,20 +15,6 @@ MonoBehaviour:
   DatabaseType: 2
   CategoryNames:
   - Custom
-  - Bank
   - General
-  - Interface
-  - Inventory
-  - Missions
-  - Quests
-  - Store
-  - Popups
   Categories:
-  - {fileID: 11400000, guid: 89438d75e7271d0458fc6be0d5e4d8cb, type: 2}
   - {fileID: 11400000, guid: 1f3f62ca13812ee4a8923f6d1310e512, type: 2}
-  - {fileID: 11400000, guid: 7f40a1fdabb746145b04b60ac4d6a324, type: 2}
-  - {fileID: 11400000, guid: 484b8cff9e935d24b9a7c33bfa7b2e86, type: 2}
-  - {fileID: 11400000, guid: 108fb5a4b130bbd4e9e104e837bc110a, type: 2}
-  - {fileID: 11400000, guid: 35830b19854ea48adbed358f0180ce12, type: 2}
-  - {fileID: 11400000, guid: c0617bad4a7744833bd68e3ed847f56d, type: 2}
-  - {fileID: 11400000, guid: 682627d6438a78c4ba281bb1650d2cc0, type: 2}

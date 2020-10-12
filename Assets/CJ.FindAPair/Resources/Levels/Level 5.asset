@@ -16,7 +16,7 @@ MonoBehaviour:
   _width: 5
   _height: 3
   _quantityOfCardOfPair: 2
-  _tries: 5
-  _time: 0
+  _tries: 15
+  _time: 10
   _quantityPairOfBombs: 0
   _levelField: 010101010101010001010101010101

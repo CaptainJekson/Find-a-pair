@@ -15,22 +15,6 @@ MonoBehaviour:
   DatabaseType: 0
   CategoryNames:
   - Custom
-  - Bank
   - General
-  - Inventory
-  - Missions
-  - Navigation
-  - Quests
-  - '[Popup] Pause'
-  - Popup battle result
-  - '[Popup] Game settings'
   Categories:
-  - {fileID: 11400000, guid: d78d72c612de04e4c8278b2e05db67b7, type: 2}
   - {fileID: 11400000, guid: f224da423bf437e4fbf44b3f6392b7d0, type: 2}
-  - {fileID: 11400000, guid: 23ab0e7849ffa284eb53f748e51672ea, type: 2}
-  - {fileID: 11400000, guid: 6e15836850f1e1843a5ac2828a9a639e, type: 2}
-  - {fileID: 11400000, guid: 9e41cd2533f8d2840809d6b1e5d1368e, type: 2}
-  - {fileID: 11400000, guid: 2d3f3bb94099a43068cb7f04aa9558f0, type: 2}
-  - {fileID: 11400000, guid: 4fe94f8e6a4d0a844ab6f81dac2ef620, type: 2}
-  - {fileID: 11400000, guid: d73444c9cc81ffe42b67d1aa107b2eea, type: 2}
-  - {fileID: 11400000, guid: e76a7b6c1398c0446919c28e163eeff8, type: 2}
