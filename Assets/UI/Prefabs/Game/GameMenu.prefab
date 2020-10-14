@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6145821782298012123}
   - component: {fileID: 7311214851530043335}
   m_Layer: 0
-  m_Name: Restart Button (1)
+  m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,8 +140,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 1
-  ButtonCategory: General
-  ButtonName: Back
+  ButtonCategory: LevelUI
+  ButtonName: Continue Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -2842,6 +2842,7 @@ GameObject:
   - component: {fileID: 8669773451339593107}
   - component: {fileID: 8669773451339593106}
   - component: {fileID: 8669773451339593109}
+  - component: {fileID: 9009861852096690472}
   m_Layer: 0
   m_Name: Exit Button
   m_TagString: Untagged
@@ -2968,8 +2969,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 1
-  ButtonCategory: General
-  ButtonName: Unnamed
+  ButtonCategory: LevelUI
+  ButtonName: Exit Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -5242,6 +5243,19 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 1
   TextLabel: {fileID: 0}
+--- !u!114 &9009861852096690472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669773451339593111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13c65739332c1e43a4316ddff4c35f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isPause: 0
 --- !u!1 &8669773451678928999
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f42f06ff6cc543ea942180e019f0fc8d, type: 3}
-  m_Name: UIButton_LevelUI
+  m_Name: UIButton_Mainmenu
   m_EditorClassIdentifier: 
-  CategoryName: LevelUI
+  CategoryName: Main menu
   DatabaseType: 0
   Names:
-  - Pause Menu Button
-  - Continue Button
-  - Restart Button
-  - Exit Button
+  - Start game Button
+  - Level Slot Button

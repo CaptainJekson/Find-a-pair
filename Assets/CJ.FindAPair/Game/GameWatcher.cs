@@ -48,20 +48,20 @@ namespace CJ.FindAPair.Game
             _scoreText.SetValue(_score.ToString());
 
             _timerCoroutine = TimerTick();
-
-            StartCoroutine(_timerCoroutine);
         }
 
         private void OnEnable()
         {
             _cardComparator.СardsMatched += AddPoint;
             _cardComparator.СardsNotMatched += RemoveLife;
+            _levelCreator.OnLevelCreated += StartTimer;
         }
 
         private void OnDisable()
         {
             _cardComparator.СardsMatched -= AddPoint;
             _cardComparator.СardsNotMatched -= RemoveLife;
+            _levelCreator.OnLevelCreated -= StartTimer;
         }
 
         private void AddPoint()
@@ -87,17 +87,17 @@ namespace CJ.FindAPair.Game
             }
         }
 
-        private void СauseVictory() //TODO
+        private void СauseVictory()
         {
-            StopCoroutine(_timerCoroutine);
+            StopTimer();
 
             UIView.ShowView("General", "BlockPanel");
             UIView.ShowView("GameResult", "Victory");
         }
 
-        private void СauseDefeat()  //TODO
+        private void СauseDefeat()
         {
-            StopCoroutine(_timerCoroutine);
+            StopTimer();
 
             UIView.ShowView("General", "BlockPanel");
             UIView.ShowView("GameResult", "Defeat");
@@ -108,6 +108,16 @@ namespace CJ.FindAPair.Game
             TimeSpan time = TimeSpan.FromSeconds(secondTime);
 
             return time.ToString(@"mm\:ss");
+        }
+
+        private void StartTimer()
+        {
+            StartCoroutine(_timerCoroutine);
+        }
+
+        private void StopTimer()
+        {
+            StopCoroutine(_timerCoroutine);
         }
 
         private IEnumerator TimerTick()

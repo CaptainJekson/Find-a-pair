@@ -2,6 +2,7 @@
 using CJ.FindAPair.Configuration;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace CJ.FindAPair.CardTable
@@ -17,8 +18,9 @@ namespace CJ.FindAPair.CardTable
 
         public float ReductionRatio => _level.ReductionRatio;
         public LevelConfig LevelConfig => _level.LevelConfig;
-
         public List<Card> Cards => _cards;
+
+        public event UnityAction OnLevelCreated;  
 
         private void Awake()
         {
@@ -26,17 +28,17 @@ namespace CJ.FindAPair.CardTable
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
             _gridLayoutGroup.constraintCount = _level.LevelConfig.Width;
 
-            _cards = new List<Card>();
-
-            CreateLevel();
+            _cards = new List<Card>();           
         }
 
-        private void CreateLevel()
+        public void CreateLevel()
         {
             PlaceCards();
             CardNumbering();
             AddBombs();
             ShuffleNumberCard();
+
+            OnLevelCreated?.Invoke();
         }
 
         private void PlaceCards()
