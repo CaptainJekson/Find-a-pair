@@ -1,6 +1,8 @@
 ﻿using CJ.FindAPair.CardTable;
 using CJ.FindAPair.Configuration;
 using CJ.FindAPair.UI;
+using Doozy.Engine.UI;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -88,18 +90,24 @@ namespace CJ.FindAPair.Game
         private void СauseVictory() //TODO
         {
             StopCoroutine(_timerCoroutine);
-            Debug.Log("Вы затащили!!!!");
+
+            UIView.ShowView("General", "BlockPanel");
+            UIView.ShowView("GameResult", "Victory");
         }
 
         private void СauseDefeat()  //TODO
         {
             StopCoroutine(_timerCoroutine);
-            Debug.Log("Вы просрали!!!!");
+
+            UIView.ShowView("General", "BlockPanel");
+            UIView.ShowView("GameResult", "Defeat");
         }
 
-        private string TimeConverer(int secondTime) //TODO
+        private string TimeConverer(int secondTime) 
         {
-            return secondTime.ToString();
+            TimeSpan time = TimeSpan.FromSeconds(secondTime);
+
+            return time.ToString(@"mm\:ss");
         }
 
         private IEnumerator TimerTick()

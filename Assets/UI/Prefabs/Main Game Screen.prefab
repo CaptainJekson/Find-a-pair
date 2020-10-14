@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.37200928, y: 0}
+  m_AnchoredPosition: {x: -59.944, y: 0}
   m_SizeDelta: {x: 307.9441, y: 170}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8820511760333763147
@@ -188,7 +188,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 183.47, y: 0.000022888184}
-  m_SizeDelta: {x: 124.47748, y: 120.00008}
+  m_SizeDelta: {x: 111.07236, y: 120.00008}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8820511760680212121
 CanvasRenderer:
@@ -245,12 +245,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 105
+  m_fontSize: 65
   m_fontSizeBase: 105
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 105
+  m_fontSizeMax: 65
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -414,7 +414,7 @@ MonoBehaviour:
   AutoHideAfterShow: 0
   AutoHideAfterShowDelay: 3
   AutoSelectButtonAfterShow: 0
-  BehaviorAtStart: 2
+  BehaviorAtStart: 1
   CustomStartAnchoredPosition: {x: 0, y: 0, z: 0}
   DeselectAnyButtonSelectedOnHide: 0
   DeselectAnyButtonSelectedOnShow: 0
@@ -833,8 +833,8 @@ MonoBehaviour:
   UpdateHideProgressorOnShow: 0
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
-  ViewCategory: General
-  ViewName: Unnamed
+  ViewCategory: LevelUI
+  ViewName: Game interface
 --- !u!222 &8820511760853676327
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -886,6 +886,7 @@ GameObject:
   - component: {fileID: 8820511760863708798}
   - component: {fileID: 8820511760863708797}
   - component: {fileID: 8820511760863708796}
+  - component: {fileID: 7216583014005019370}
   m_Layer: 0
   m_Name: Menu Button
   m_TagString: Untagged
@@ -907,11 +908,11 @@ RectTransform:
   m_Father: {fileID: 8820511760853676325}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -170}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &8820511760863708799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1011,8 +1012,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 1
-  ButtonCategory: General
-  ButtonName: Unnamed
+  ButtonCategory: LevelUI
+  ButtonName: Pause Menu Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -3285,6 +3286,19 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 1
   TextLabel: {fileID: 0}
+--- !u!114 &7216583014005019370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820511760863708794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13c65739332c1e43a4316ddff4c35f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isPause: 1
 --- !u!1 &8820511760976503500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,11 +3333,11 @@ RectTransform:
   m_Father: {fileID: 8820511760853676325}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 248, y: 0}
   m_SizeDelta: {x: 307.9441, y: 170}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8820511760976503503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3456,9 +3470,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 65
-  m_fontSizeBase: 105
+  m_fontSizeBase: 65
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 65
   m_fontStyle: 0

@@ -16,5 +16,7 @@ MonoBehaviour:
   CategoryNames:
   - Custom
   - General
+  - LevelUI
   Categories:
   - {fileID: 11400000, guid: f224da423bf437e4fbf44b3f6392b7d0, type: 2}
+  - {fileID: 11400000, guid: 83334320c5a92734daafdcec35618db4, type: 2}
