@@ -21,24 +21,27 @@ public class CardComparator : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(DelaySubscription(0.1f));
+        _levelCreator.OnLevelCreated += SubscriptionCards;
     }
 
     private void OnDisable()
     {
-        foreach (var card in _levelCreator.Cards)
-        {
-            card.СardOpens -= () => ToCompare(card);
-        }
+        _levelCreator.OnLevelCreated -= UnsubscriptionCards;
     }
 
-    private IEnumerator DelaySubscription(float time)
+    private void SubscriptionCards()
     {
-        yield return new WaitForSeconds(time);
-
         foreach (var card in _levelCreator.Cards)
         {
             card.СardOpens += () => ToCompare(card);
+        }
+    }
+
+    private void UnsubscriptionCards()
+    {
+        foreach (var card in _levelCreator.Cards)
+        {
+            card.СardOpens -= () => ToCompare(card);
         }
     }
 

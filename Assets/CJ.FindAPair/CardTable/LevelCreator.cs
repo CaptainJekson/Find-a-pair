@@ -10,9 +10,9 @@ namespace CJ.FindAPair.CardTable
     [RequireComponent(typeof(GridLayoutGroup))]
     public class LevelCreator : MonoBehaviour
     {
-        [SerializeField] private Level _level;
         [SerializeField] private Card _card;
 
+        private Level _level;
         private List<Card> _cards;
         private GridLayoutGroup _gridLayoutGroup;
 
@@ -26,13 +26,15 @@ namespace CJ.FindAPair.CardTable
         {
             _gridLayoutGroup = GetComponent<GridLayoutGroup>();
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _gridLayoutGroup.constraintCount = _level.LevelConfig.Width;
 
             _cards = new List<Card>();           
         }
 
-        public void CreateLevel()
+        public void CreateLevel(Level level)
         {
+            _level = level;
+            _gridLayoutGroup.constraintCount = _level.LevelConfig.Width;
+
             PlaceCards();
             CardNumbering();
             AddBombs();

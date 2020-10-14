@@ -10,24 +10,27 @@ namespace CJ.FindAPair.CardTable
         private GridLayoutGroup _gridLayoutGroup;
         private LevelCreator _levelCreator;
 
-        void Start()
+        private void Awake()
         {
             _rectTransform = GetComponent<RectTransform>();
             _gridLayoutGroup = GetComponent<GridLayoutGroup>();
             _levelCreator = GetComponent<LevelCreator>();
-
-            UpdateCellSizes();
         }
 
-        private void Update()
+        private void OnEnable()
         {
-            UpdateCellSizes();
+            _levelCreator.OnLevelCreated += UpdateCellSizes;
+        }
+
+        private void OnDisable()
+        {
+            _levelCreator.OnLevelCreated -= UpdateCellSizes;
         }
 
         private void UpdateCellSizes()
         {
-            var width = (_rectTransform.rect.width / _gridLayoutGroup.constraintCount) * _levelCreator.ReductionRatio;
-            var height = (_rectTransform.rect.height / _gridLayoutGroup.constraintCount) * _levelCreator.ReductionRatio;
+            float width = (_rectTransform.rect.width / _gridLayoutGroup.constraintCount) * _levelCreator.ReductionRatio;
+            float height = (_rectTransform.rect.height / _gridLayoutGroup.constraintCount) * _levelCreator.ReductionRatio;
 
             _gridLayoutGroup.cellSize = new Vector2(width, height);
         }

@@ -227,8 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelCreator: {fileID: 809726037}
   _level:
-    LevelConfig: {fileID: 0}
-    ReductionRatio: 0
+    LevelConfig: {fileID: 11400000, guid: e1a97b501e8a079468389b8a6cdfa05d, type: 2}
+    ReductionRatio: 0.8
 --- !u!1 &798178377
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,9 +384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464492c455641554f82028de6b7fa01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _level:
-    LevelConfig: {fileID: 0}
-    ReductionRatio: 0
   _card: {fileID: 1736737689898989670, guid: b5c77450e1a498946a4791d448c19b56, type: 3}
 --- !u!114 &809726038
 MonoBehaviour:

@@ -25,6 +25,6 @@ public class UILevelSlot : MonoBehaviour
 
     private void CreateLevel()
     {
-        _levelCreator.CreateLevel();
+        _levelCreator.CreateLevel(_level);
     }
 }

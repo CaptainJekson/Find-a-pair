@@ -32,36 +32,20 @@ namespace CJ.FindAPair.Game
         {
             _levelCreator = GetComponent<LevelCreator>();
             _cardComparator = GetComponent<CardComparator>();
-
-            _quantityOfPairs = _levelCreator.LevelConfig.LevelField.Count / 
-                (int)_levelCreator.LevelConfig.QuantityOfCardOfPair;
-
-            _life = _levelCreator.LevelConfig.Tries;
-            _time = _levelCreator.LevelConfig.Time;
-            _score = 0;
-        }
-
-        private void Start()
-        {
-            _lifeText.SetValue(_life.ToString());
-            _timeText.SetValue(TimeConverer(_time));
-            _scoreText.SetValue(_score.ToString());
-
-            _timerCoroutine = TimerTick();
         }
 
         private void OnEnable()
         {
             _cardComparator.СardsMatched += AddPoint;
             _cardComparator.СardsNotMatched += RemoveLife;
-            _levelCreator.OnLevelCreated += StartTimer;
+            _levelCreator.OnLevelCreated += StartTimer; //TODO Rename Method
         }
 
         private void OnDisable()
         {
             _cardComparator.СardsMatched -= AddPoint;
             _cardComparator.СardsNotMatched -= RemoveLife;
-            _levelCreator.OnLevelCreated -= StartTimer;
+            _levelCreator.OnLevelCreated -= StartTimer; //TODO Rename Method
         }
 
         private void AddPoint()
@@ -110,8 +94,21 @@ namespace CJ.FindAPair.Game
             return time.ToString(@"mm\:ss");
         }
 
-        private void StartTimer()
+        private void StartTimer()   //TODO Rename
         {
+            _quantityOfPairs = _levelCreator.LevelConfig.LevelField.Count /
+                (int)_levelCreator.LevelConfig.QuantityOfCardOfPair;
+
+            _life = _levelCreator.LevelConfig.Tries;
+            _time = _levelCreator.LevelConfig.Time;
+            _score = 0;
+
+            _lifeText.SetValue(_life.ToString());
+            _timeText.SetValue(TimeConverer(_time));
+            _scoreText.SetValue(_score.ToString());
+
+            _timerCoroutine = TimerTick();
+
             StartCoroutine(_timerCoroutine);
         }
 
