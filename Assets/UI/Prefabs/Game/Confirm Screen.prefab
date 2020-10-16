@@ -2938,7 +2938,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CJ.FindAPair.CardTable.LevelCreator, Assembly-CSharp
-        m_MethodName: RestartLevel
+        m_MethodName: ClearLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2967,7 +2967,7 @@ MonoBehaviour:
   StartAlpha: 1
   AllowMultipleClicks: 1
   ButtonCategory: LevelUI
-  ButtonName: Yes restart confirm Button
+  ButtonName: Yes exit confirm Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -5813,7 +5813,7 @@ MonoBehaviour:
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
   ViewCategory: LevelUI
-  ViewName: Confirm restart Screen
+  ViewName: Confirm exit Screen
 --- !u!1 &8669773453010102016
 GameObject:
   m_ObjectHideFlags: 0
