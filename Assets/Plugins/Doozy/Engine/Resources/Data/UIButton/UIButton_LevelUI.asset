@@ -19,3 +19,5 @@ MonoBehaviour:
   - Continue Button
   - Restart Button
   - Exit Button
+  - Yes restart confirm Button
+  - Yes exit confirm Button

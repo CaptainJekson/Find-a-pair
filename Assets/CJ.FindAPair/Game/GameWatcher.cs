@@ -38,14 +38,18 @@ namespace CJ.FindAPair.Game
         {
             _cardComparator.СardsMatched += AddPoint;
             _cardComparator.СardsNotMatched += RemoveLife;
-            _levelCreator.OnLevelCreated += StartTimer; //TODO Rename Method
+            _levelCreator.OnLevelCreated += InitTimer;
+            _levelCreator.OnLevelDeleted += ResetTimer;
+            _levelCreator.OnLevelDeleted += ResetCounts;
         }
 
         private void OnDisable()
         {
             _cardComparator.СardsMatched -= AddPoint;
             _cardComparator.СardsNotMatched -= RemoveLife;
-            _levelCreator.OnLevelCreated -= StartTimer; //TODO Rename Method
+            _levelCreator.OnLevelCreated -= InitTimer;
+            _levelCreator.OnLevelDeleted -= ResetTimer;
+            _levelCreator.OnLevelDeleted -= ResetCounts;
         }
 
         private void AddPoint()
@@ -54,9 +58,9 @@ namespace CJ.FindAPair.Game
             _quantityOfMatchedPairs++;
             _scoreText.SetValue(_score.ToString());
 
-            if(_quantityOfMatchedPairs >= _quantityOfPairs)
+            if (_quantityOfMatchedPairs >= _quantityOfPairs)
             {
-                СauseVictory();
+                InitiateVictory();
             }
         }
 
@@ -65,21 +69,23 @@ namespace CJ.FindAPair.Game
             _life--;
             _lifeText.SetValue(_life.ToString());
 
-            if(_life <= 0)
+            if (_life <= 0)
             {
-                СauseDefeat();
+                InitiateDefeat();
             }
         }
 
-        private void СauseVictory()
+        private void InitiateVictory() //TODO Rename
         {
             StopTimer();
 
             UIView.ShowView("General", "BlockPanel");
             UIView.ShowView("GameResult", "Victory");
+
+            //TODO Add Reward
         }
 
-        private void СauseDefeat()
+        private void InitiateDefeat() //TODO Rename
         {
             StopTimer();
 
@@ -87,14 +93,14 @@ namespace CJ.FindAPair.Game
             UIView.ShowView("GameResult", "Defeat");
         }
 
-        private string TimeConverer(int secondTime) 
+        private string TimeConverer(int secondTime)
         {
             TimeSpan time = TimeSpan.FromSeconds(secondTime);
 
             return time.ToString(@"mm\:ss");
         }
 
-        private void StartTimer()   //TODO Rename
+        private void InitTimer()   //TODO Rename
         {
             _quantityOfPairs = _levelCreator.LevelConfig.LevelField.Count /
                 (int)_levelCreator.LevelConfig.QuantityOfCardOfPair;
@@ -107,8 +113,12 @@ namespace CJ.FindAPair.Game
             _timeText.SetValue(TimeConverer(_time));
             _scoreText.SetValue(_score.ToString());
 
-            _timerCoroutine = TimerTick();
+            StartTimer();
+        }
 
+        private void StartTimer()
+        {
+            _timerCoroutine = TimerTick();
             StartCoroutine(_timerCoroutine);
         }
 
@@ -117,11 +127,27 @@ namespace CJ.FindAPair.Game
             StopCoroutine(_timerCoroutine);
         }
 
+        private void ResetTimer()
+        {
+            StopCoroutine(_timerCoroutine);
+            _timerCoroutine = null;
+            _timeText.SetValue(TimeConverer(0));
+        }
+
+        private void ResetCounts()
+        {
+            _quantityOfMatchedPairs = 0;
+            _quantityOfPairs = 0;
+            _life = 0;
+            _time = 0;
+            _score = 0;
+        }
+
         private IEnumerator TimerTick()
         {
             yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
 
-            while(true)
+            while (true)
             {
                 _time--;
                 _timeText.SetValue(TimeConverer(_time));
@@ -130,7 +156,7 @@ namespace CJ.FindAPair.Game
 
                 if (_time <= 1)
                 {
-                    СauseDefeat();
+                    InitiateDefeat();
                 }
             }
         }

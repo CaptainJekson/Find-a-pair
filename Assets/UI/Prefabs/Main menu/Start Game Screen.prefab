@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6868161628120994752}
   - component: {fileID: 6868161628120994753}
   - component: {fileID: 6627942576467119486}
+  - component: {fileID: 532271120}
   m_Layer: 5
   m_Name: Start Game Button
   m_TagString: Untagged
@@ -139,8 +140,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 1
-  ButtonCategory: General
-  ButtonName: Unnamed
+  ButtonCategory: Main menu
+  ButtonName: Start game Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -2413,6 +2414,22 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 0
   TextLabel: {fileID: 0}
+--- !u!114 &532271120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868161628120994759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779d8ba8fb3aa1b40889ac264501e619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelCreator: {fileID: 0}
+  _level:
+    LevelConfig: {fileID: 11400000, guid: e1a97b501e8a079468389b8a6cdfa05d, type: 2}
+    ReductionRatio: 0.8
 --- !u!1 &6868161628910846415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,7 +2580,7 @@ MonoBehaviour:
   AutoHideAfterShow: 0
   AutoHideAfterShowDelay: 3
   AutoSelectButtonAfterShow: 0
-  BehaviorAtStart: 0
+  BehaviorAtStart: 1
   CustomStartAnchoredPosition: {x: 0, y: 0, z: 0}
   DeselectAnyButtonSelectedOnHide: 0
   DeselectAnyButtonSelectedOnShow: 0

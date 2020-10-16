@@ -14,20 +14,23 @@ namespace CJ.FindAPair.CardTable
 
         private Level _level;
         private List<Card> _cards;
+        private List<Card> _disableCards;
         private GridLayoutGroup _gridLayoutGroup;
 
         public float ReductionRatio => _level.ReductionRatio;
         public LevelConfig LevelConfig => _level.LevelConfig;
         public List<Card> Cards => _cards;
 
-        public event UnityAction OnLevelCreated;  
+        public event UnityAction OnLevelCreated;
+        public event UnityAction OnLevelDeleted;
 
         private void Awake()
         {
             _gridLayoutGroup = GetComponent<GridLayoutGroup>();
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
 
-            _cards = new List<Card>();           
+            _cards = new List<Card>();
+            _disableCards = new List<Card>();
         }
 
         public void CreateLevel(Level level)
@@ -43,6 +46,30 @@ namespace CJ.FindAPair.CardTable
             OnLevelCreated?.Invoke();
         }
 
+        public void ClearLevel()
+        {
+            foreach (var card in _cards)
+            {
+                Destroy(card.gameObject);       
+            }
+
+            foreach (var card in _disableCards)
+            {
+                Destroy(card.gameObject);
+            }
+
+            _cards.Clear();
+            _disableCards.Clear();
+
+            OnLevelDeleted?.Invoke();
+        }
+
+        public void RestartLevel()
+        {
+            ClearLevel();
+            CreateLevel(_level);
+        }
+
         private void PlaceCards()
         {
             for (var i = 0; i < _level.LevelConfig.LevelField.Count; i++)
@@ -54,6 +81,7 @@ namespace CJ.FindAPair.CardTable
                 if (_level.LevelConfig.LevelField[i] == false)
                 {
                     DisableCard(newCard);
+                    _disableCards.Add(newCard);
                 }
                 else
                 {
