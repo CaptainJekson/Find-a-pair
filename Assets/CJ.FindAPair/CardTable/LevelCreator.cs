@@ -12,13 +12,13 @@ namespace CJ.FindAPair.CardTable
     {
         [SerializeField] private Card _card;
 
-        private Level _level;
+        private LevelConfig _level;
         private List<Card> _cards;
         private List<Card> _disableCards;
         private GridLayoutGroup _gridLayoutGroup;
 
-        public float Scale => _level.LevelConfig.Scale;
-        public LevelConfig LevelConfig => _level.LevelConfig;
+        public float Scale => _level.Scale;
+        public LevelConfig LevelConfig => _level;
         public List<Card> Cards => _cards;
 
         public event UnityAction OnLevelCreated;
@@ -33,10 +33,10 @@ namespace CJ.FindAPair.CardTable
             _disableCards = new List<Card>();
         }
 
-        public void CreateLevel(Level level)
+        public void CreateLevel(LevelConfig level)
         {
             _level = level;
-            _gridLayoutGroup.constraintCount = _level.LevelConfig.Width;
+            _gridLayoutGroup.constraintCount = _level.Width;
 
             PlaceCards();
             CardNumbering();
@@ -72,13 +72,13 @@ namespace CJ.FindAPair.CardTable
 
         private void PlaceCards()
         {
-            for (var i = 0; i < _level.LevelConfig.LevelField.Count; i++)
+            for (var i = 0; i < _level.LevelField.Count; i++)
             {
                 var newCard = Instantiate(_card, transform.position, Quaternion.identity);
 
                 newCard.transform.SetParent(transform, false);
 
-                if (_level.LevelConfig.LevelField[i] == false)
+                if (_level.LevelField[i] == false)
                 {
                     DisableCard(newCard);
                     _disableCards.Add(newCard);
@@ -93,7 +93,7 @@ namespace CJ.FindAPair.CardTable
         private void CardNumbering()
         {
             var numberCard = 1;
-            var counter = (int)_level.LevelConfig.QuantityOfCardOfPair;
+            var counter = (int)_level.QuantityOfCardOfPair;
 
             for (int i = 0; i < _cards.Count; i++)
             {
@@ -104,7 +104,7 @@ namespace CJ.FindAPair.CardTable
                 }
                 else
                 {
-                    counter = (int)_level.LevelConfig.QuantityOfCardOfPair;
+                    counter = (int)_level.QuantityOfCardOfPair;
                     ++numberCard;
                     --i;
                 }
@@ -124,7 +124,7 @@ namespace CJ.FindAPair.CardTable
 
         private void AddBombs()
         {
-            var quantityBomb = _level.LevelConfig.QuantityPairOfBombs * (int)_level.LevelConfig.QuantityOfCardOfPair;
+            var quantityBomb = _level.QuantityPairOfBombs * (int)_level.QuantityOfCardOfPair;
 
             for (int i = 0; i < quantityBomb; i++)
             {

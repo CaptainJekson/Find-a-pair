@@ -74,8 +74,7 @@ namespace CJ.FindAPair.UI
         {
             for (int i = 0; i < _slots.Count; i++)
             {
-                _slots[i].Level.LevelConfig = _levelConfigCollection.Levels[i];
-                _slots[i].Level.ReductionRatio = 0.9f;
+                _slots[i].Level = _levelConfigCollection.Levels[i];
                 _slots[i].LevelCreator = _levelCreator;
                 _slots[i].SetLevelNumberText(i + 1);
             }
