@@ -17,7 +17,7 @@ namespace CJ.FindAPair.CardTable
         private List<Card> _disableCards;
         private GridLayoutGroup _gridLayoutGroup;
 
-        public float ReductionRatio => _level.ReductionRatio;
+        public float Scale => _level.LevelConfig.Scale;
         public LevelConfig LevelConfig => _level.LevelConfig;
         public List<Card> Cards => _cards;
 

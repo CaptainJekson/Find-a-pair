@@ -16,5 +16,5 @@ MonoBehaviour:
   DatabaseType: 2
   Names:
   - Main start Screen
-  - Levels Screen
+  - Levels Selected Screen
   - Level Info Screen

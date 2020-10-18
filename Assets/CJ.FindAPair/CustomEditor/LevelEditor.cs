@@ -3,6 +3,7 @@
 using CJ.FindAPair.Configuration;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.SocialPlatforms;
 
 namespace CJ.FindAPair.CustomEditor
 {
@@ -13,6 +14,7 @@ namespace CJ.FindAPair.CustomEditor
         private int _level = 0;
         private int _width = 0;
         private int _height = 0;
+        private float _scale = 0;
 
         private QuantityOfCardOfPair _quantityOfCardOfPair;
         private int _tries = 0;
@@ -36,10 +38,11 @@ namespace CJ.FindAPair.CustomEditor
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Ширина", _width);
             _height = EditorGUILayout.IntField("Длина", _height);
+            _scale = EditorGUILayout.Slider("Масштаб",_scale, 0.0f, 1.0f);
 
             GUILayout.Label("Условия уровня", EditorStyles.boldLabel);
             _quantityOfCardOfPair = (QuantityOfCardOfPair)EditorGUILayout.EnumPopup(new GUIContent("Количество карт в паре"), _quantityOfCardOfPair);
-            _tries = EditorGUILayout.IntField("Попытки", _width);
+            _tries = EditorGUILayout.IntField("Попытки", _tries);
             _time = EditorGUILayout.IntField("Время", _time);
             _isBomb = EditorGUILayout.Toggle("Уровень с бомбами", _isBomb);
 
@@ -81,7 +84,7 @@ namespace CJ.FindAPair.CustomEditor
         private void CreateLevel()
         {
             var asset = ScriptableObject.CreateInstance<LevelConfig>();
-            asset.SetSizeLevel(_levelMatrix, _level);
+            asset.SetSizeLevel(_levelMatrix, _level, _scale);
             asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfBombs);
 
             AssetDatabase.CreateAsset(asset, $"Assets/CJ.FindAPair/Resources/Levels/Level {_level}.asset");
@@ -169,6 +172,7 @@ namespace CJ.FindAPair.CustomEditor
 
             return isValid;
         }
+
     }
 }
 

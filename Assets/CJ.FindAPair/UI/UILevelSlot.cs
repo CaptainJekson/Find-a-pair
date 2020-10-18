@@ -1,21 +1,21 @@
 ﻿using CJ.FindAPair.CardTable;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace CJ.FindAPair.UI
 {
     [RequireComponent(typeof(Button))]
     public class UILevelSlot : MonoBehaviour
     {
-        [SerializeField] private LevelCreator _levelCreator;
-
-        //TODO Будет использоватся для конфига уровня. Будет передаватся из списка конфигов уровня
         [SerializeField] private Level _level;
+        [SerializeField] private LevelCreator _levelCreator;
+        [SerializeField] private TextMeshProUGUI _levelNumber;
 
         private Button _button;
 
-        //TODO Будет использоватся для конфига уровня. Будет передаватся из списка конфигов уровня
         public Level Level { get => _level; set => _level = value; }
+        public LevelCreator LevelCreator { get => _levelCreator; set => _levelCreator = value; }
 
         private void Awake()
         {
@@ -23,9 +23,14 @@ namespace CJ.FindAPair.UI
             _button.onClick.AddListener(CreateLevel);
         }
 
+        public void SetLevelNumberText(int numblerLevel)
+        {
+            _levelNumber.text = numblerLevel.ToString();
+        }
+
         private void CreateLevel()
         {
-            _levelCreator.CreateLevel(_level);
+            LevelCreator.CreateLevel(Level);
         }
     }
 }

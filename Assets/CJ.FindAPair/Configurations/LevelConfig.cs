@@ -12,6 +12,7 @@ namespace CJ.FindAPair.Configuration
         [SerializeField] private int _level;
         [SerializeField] private int _width;
         [SerializeField] private int _height;
+        [SerializeField][Range(0.0f, 1.0f)] private float _scale;
 
         [SerializeField] private QuantityOfCardOfPair _quantityOfCardOfPair;
         [SerializeField] private int _tries = 1;
@@ -23,15 +24,17 @@ namespace CJ.FindAPair.Configuration
         public List<bool> LevelField => _levelField;
         public int Width => _width;
         public int Height => _height;
+        public float Scale => _scale;
         public QuantityOfCardOfPair QuantityOfCardOfPair => _quantityOfCardOfPair;
         public int Tries => _tries;
         public int Time => _time;
         public int QuantityPairOfBombs => _quantityPairOfBombs;
 
-        public void SetSizeLevel(bool[,] _levelMatrix, int level)
+        public void SetSizeLevel(bool[,] _levelMatrix, int level, float scale)
         {
             _width = _levelMatrix.GetLength(0);
             _height = _levelMatrix.GetLength(1);
+            _scale = scale;
 
             for (var i = 0; i < _width; i++)
             {
