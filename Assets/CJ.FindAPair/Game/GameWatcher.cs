@@ -52,13 +52,6 @@ namespace CJ.FindAPair.Game
             _levelCreator.OnLevelDeleted -= ResetCounts;
         }
 
-        private void Update()
-        {
-            Debug.Log("Количество карт на поле -  " + _levelCreator.Cards.Count);
-            Debug.Log("Карт в паре -  " + (int)_levelCreator.LevelConfig.QuantityOfCardOfPair);
-            Debug.Log("Количество пар - " + _quantityOfPairs);
-        }
-
         private void AddPoint()
         {
             _score++;
