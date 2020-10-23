@@ -93,7 +93,7 @@ namespace CJ.FindAPair.Game
             UIView.ShowView("GameResult", "Defeat");
         }
 
-        private string TimeConverer(int secondTime)
+        private string TimeConverer(int secondTime)  //TODO повторяется в UIPreviewLevel
         {
             TimeSpan time = TimeSpan.FromSeconds(secondTime);
 

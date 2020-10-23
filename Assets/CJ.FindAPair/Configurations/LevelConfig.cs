@@ -22,6 +22,7 @@ namespace CJ.FindAPair.Configuration
         [SerializeField] private List<bool> _levelField = new List<bool>();
 
         public List<bool> LevelField => _levelField;
+        public int LevelNumber => _level;
         public int Width => _width;
         public int Height => _height;
         public float Scale => _scale;

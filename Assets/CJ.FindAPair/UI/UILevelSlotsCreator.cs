@@ -9,6 +9,7 @@ namespace CJ.FindAPair.UI
     {        
         [SerializeField] private LevelConfigCollection _levelConfigCollection;
         [SerializeField] private LevelCreator _levelCreator;
+        [SerializeField] private UIPreviewLevel _uIPreviewLevel;
         [SerializeField] private UILevelPage _uILevelPage;
         [SerializeField] private UILevelSlot _uILevelSlot;
         [SerializeField] private int _slotsPerPage;
@@ -76,6 +77,7 @@ namespace CJ.FindAPair.UI
             {
                 _slots[i].Level = _levelConfigCollection.Levels[i];
                 _slots[i].LevelCreator = _levelCreator;
+                _slots[i].UIPreviewLevel = _uIPreviewLevel;
                 _slots[i].SetLevelNumberText(i + 1);
             }
         }

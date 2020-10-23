@@ -14,7 +14,7 @@ namespace CJ.FindAPair.CustomEditor
         private int _level = 0;
         private int _width = 0;
         private int _height = 0;
-        private float _scale = 0;
+        private float _scale = 0.9f;
 
         private QuantityOfCardOfPair _quantityOfCardOfPair;
         private int _tries = 0;

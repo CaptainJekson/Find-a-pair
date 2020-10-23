@@ -108,6 +108,7 @@ MonoBehaviour:
   _levelConfigCollection: {fileID: 11400000, guid: 63b8f245f98d1fe4397b74c11f33d9c1,
     type: 2}
   _levelCreator: {fileID: 0}
+  _uIPreviewLevel: {fileID: 0}
   _uILevelPage: {fileID: 2160282075512660979, guid: 698e950611ba2db4880d8ef5c7227008,
     type: 3}
   _uILevelSlot: {fileID: 8609039419217076483, guid: 502fa15592d16b84aaa2c2494e908be7,

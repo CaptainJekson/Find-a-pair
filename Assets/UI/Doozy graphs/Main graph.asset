@@ -296,7 +296,7 @@ MonoBehaviour:
     m_id: 66b1b6ed-1491-4dcf-bd4c-6b80582cb995
     m_nodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
     m_socketName: OutputSocket_0
-    m_value: '{"ButtonCategory":"Main menu","ButtonName":"Level Slot Button","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_value: '{"ButtonCategory":"Main menu","ButtonName":"Level Play Button","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_connectionMode: 0
@@ -350,9 +350,15 @@ MonoBehaviour:
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
+  - Category: General
+    InstantAction: 0
+    Name: BlockPanel
   - Category: Main menu
     InstantAction: 0
     Name: Levels Selected Screen
+  - Category: Main menu
+    InstantAction: 0
+    Name: Preview level screen
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +385,7 @@ MonoBehaviour:
   m_version: 1
   m_description: 
   m_id: b9aac61b-67c3-4c22-99b1-ee85de879569
-  m_lastModified: 132475302701790366
+  m_lastModified: 132479652003427703
 --- !u!114 &3347512993201127694
 MonoBehaviour:
   m_ObjectHideFlags: 1

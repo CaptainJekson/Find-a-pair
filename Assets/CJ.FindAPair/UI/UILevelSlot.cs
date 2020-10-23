@@ -3,35 +3,40 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using CJ.FindAPair.Configuration;
+using Doozy.Engine.UI;
 
 namespace CJ.FindAPair.UI
 {
     [RequireComponent(typeof(Button))]
     public class UILevelSlot : MonoBehaviour
     {
-        [SerializeField] private LevelConfig _level;
-        [SerializeField] private LevelCreator _levelCreator;
-        [SerializeField] private TextMeshProUGUI _levelNumber;
+        [SerializeField] private TextMeshProUGUI _levelNumberText;
 
+        private LevelConfig _level;
+        private LevelCreator _levelCreator;
+        private UIPreviewLevel _uIPreviewLevel;
         private Button _button;
 
         public LevelConfig Level { get => _level; set => _level = value; }
         public LevelCreator LevelCreator { get => _levelCreator; set => _levelCreator = value; }
+        public UIPreviewLevel UIPreviewLevel { get => _uIPreviewLevel; set => _uIPreviewLevel = value; }
 
         private void Awake()
         {
             _button = GetComponent<Button>();
-            _button.onClick.AddListener(CreateLevel);
+            _button.onClick.AddListener(OpenPreviewScreen);
         }
 
         public void SetLevelNumberText(int numblerLevel)
         {
-            _levelNumber.text = numblerLevel.ToString();
+            _levelNumberText.text = numblerLevel.ToString();
         }
 
-        private void CreateLevel()
+        private void OpenPreviewScreen()
         {
-            LevelCreator.CreateLevel(Level);
+            _uIPreviewLevel.SetDataLevel(this);
+            UIView.ShowView("Main menu", "Preview level screen");
+            UIView.ShowView("General", "BlockPanel");
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using Doozy.Engine.Nody.Models;
-using Doozy.Engine.UI;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Doozy.Engine.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
