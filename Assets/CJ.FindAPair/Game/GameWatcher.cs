@@ -107,8 +107,6 @@ namespace CJ.FindAPair.Game
             _quantityOfPairs = (_levelCreator.Cards.Count / (int)_levelCreator.LevelConfig.QuantityOfCardOfPair)
                              - _levelCreator.LevelConfig.QuantityPairOfBombs;
 
-            Debug.Log(_quantityOfPairs);
-
             _life = _levelCreator.LevelConfig.Tries;
             _time = _levelCreator.LevelConfig.Time;
             _score = 0;
