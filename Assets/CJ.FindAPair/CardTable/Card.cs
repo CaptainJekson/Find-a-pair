@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 using CJ.FindAPair.Configuration;
+using Assets.CJ.FindAPair.Constants;
 
 namespace CJ.FindAPair.CardTable
 {
@@ -45,7 +46,10 @@ namespace CJ.FindAPair.CardTable
 
         public void DelayHide()
         {
-            StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
+            if(NumberPair != Constants.NumberBomb)
+            {
+                StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
+            }
         }
 
         private void Hide()

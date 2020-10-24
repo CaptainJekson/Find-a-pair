@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Level 3
   m_EditorClassIdentifier: 
   _level: 3
-  _width: 6
-  _height: 6
+  _width: 4
+  _height: 3
   _scale: 0.9
   _quantityOfCardOfPair: 2
-  _tries: 20
-  _time: 180
+  _tries: 14
+  _time: 250
   _quantityPairOfBombs: 0
-  _levelField: 000001010000000001010000010101010101010101010101000001010000000001010000
+  _levelField: 010101000101000101010101

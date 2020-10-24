@@ -104,7 +104,10 @@ namespace CJ.FindAPair.Game
 
         private void InitTimer()   //TODO Rename
         {
-            _quantityOfPairs = _levelCreator.Cards.Count / (int)_levelCreator.LevelConfig.QuantityOfCardOfPair;
+            _quantityOfPairs = (_levelCreator.Cards.Count / (int)_levelCreator.LevelConfig.QuantityOfCardOfPair)
+                             - _levelCreator.LevelConfig.QuantityPairOfBombs;
+
+            Debug.Log(_quantityOfPairs);
 
             _life = _levelCreator.LevelConfig.Tries;
             _time = _levelCreator.LevelConfig.Time;
