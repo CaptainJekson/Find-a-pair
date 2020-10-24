@@ -9,12 +9,12 @@ namespace CJ.FindAPair.UI
     {
         [SerializeField] private Button _startLevelButton;
         [SerializeField] private TextMeshProUGUI _levelNumberText;
-        [SerializeField] private TextMeshProUGUI _quantityOfCardOfPair;
-        [SerializeField] private TextMeshProUGUI _triesText;
-        [SerializeField] private TextMeshProUGUI _time;
-        [SerializeField] private Image _bombIcon; 
+        [SerializeField] private TextMeshProUGUI _quantityOfCardOfPairText;
+        [SerializeField] private TextMeshProUGUI _quantityCardsText;
+        [SerializeField] private Image _bombIcon;
 
         private UILevelSlot _uILevelSlot;
+        private int _quantityCards = 0;
 
         private void OnEnable()
         {
@@ -30,16 +30,28 @@ namespace CJ.FindAPair.UI
         {
             _uILevelSlot = uILevelSlot;
 
+            InitQuantityCards();
             SetDataView();
+            _quantityCards = 0;
         }
 
         public void SetDataView()
         {
             _levelNumberText.text = _uILevelSlot.Level.LevelNumber.ToString();
-            _quantityOfCardOfPair.text = ((int)_uILevelSlot.Level.QuantityOfCardOfPair).ToString();
-            _triesText.text = _uILevelSlot.Level.Tries.ToString();
-            _time.text = TimeConverer(_uILevelSlot.Level.Time);
+            _quantityOfCardOfPairText.text = ((int)_uILevelSlot.Level.QuantityOfCardOfPair).ToString();
+            _quantityCardsText.text = _quantityCards.ToString();
             _bombIcon.gameObject.SetActive(_uILevelSlot.Level.QuantityPairOfBombs > 0);
+        }
+
+        private void InitQuantityCards()
+        {
+            foreach (var fieldElement in _uILevelSlot.Level.LevelField)
+            {
+                if (fieldElement == true)
+                {
+                    ++_quantityCards;
+                }
+            }
         }
 
         private string TimeConverer(int secondTime) //TODO повторяется в GameWatcher

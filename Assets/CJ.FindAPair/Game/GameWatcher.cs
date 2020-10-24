@@ -38,6 +38,7 @@ namespace CJ.FindAPair.Game
         {
             _cardComparator.СardsMatched += AddPoint;
             _cardComparator.СardsNotMatched += RemoveLife;
+            _cardComparator.OpenCardBomb += InitiateDefeat;
             _levelCreator.OnLevelCreated += InitTimer;
             _levelCreator.OnLevelDeleted += ResetTimer;
             _levelCreator.OnLevelDeleted += ResetCounts;
@@ -47,6 +48,7 @@ namespace CJ.FindAPair.Game
         {
             _cardComparator.СardsMatched -= AddPoint;
             _cardComparator.СardsNotMatched -= RemoveLife;
+            _cardComparator.OpenCardBomb -= InitiateDefeat;
             _levelCreator.OnLevelCreated -= InitTimer;
             _levelCreator.OnLevelDeleted -= ResetTimer;
             _levelCreator.OnLevelDeleted -= ResetCounts;

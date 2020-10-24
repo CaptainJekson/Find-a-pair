@@ -1,5 +1,4 @@
 ﻿using CJ.FindAPair.CardTable;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +11,7 @@ public class CardComparator : MonoBehaviour
 
     public event UnityAction СardsMatched;
     public event UnityAction СardsNotMatched;
+    public event UnityAction OpenCardBomb;
 
     private void Awake()
     {
@@ -47,6 +47,11 @@ public class CardComparator : MonoBehaviour
 
     private void ToCompare(Card card)
     {
+        if (card.NumberPair == 888)
+        {
+            OpenCardBomb?.Invoke();
+        }
+
         var quantityOfCardOfPair = (int)_levelCreator.LevelConfig.QuantityOfCardOfPair;
 
         _comparisonCards.Add(card);

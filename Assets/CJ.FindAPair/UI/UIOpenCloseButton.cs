@@ -15,10 +15,10 @@ namespace CJ.FindAPair.UI
         private void Awake()
         {
             _button = GetComponent<Button>();
-            _button.onClick.AddListener(ButtonCLickHandler);
+            _button.onClick.AddListener(ButtonClickHandler);
         }
 
-        private void ButtonCLickHandler()
+        private void ButtonClickHandler()
         {
             if(_isHide)
             {
