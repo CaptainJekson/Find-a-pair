@@ -1,6 +1,6 @@
-﻿using Assets.CJ.FindAPair.Constants;
-using CJ.FindAPair.Configuration;
+﻿using CJ.FindAPair.Configuration;
 using System.Collections.Generic;
+using CJ.FindAPair.Constants;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -50,17 +50,17 @@ namespace CJ.FindAPair.CardTable
         {
             foreach (var card in _cards)
             {
-                Destroy(card.gameObject);       
+                Destroy(card.gameObject);
             }
-
+            
             foreach (var card in _disableCards)
             {
                 Destroy(card.gameObject);
             }
-
+            
             _cards.Clear();
             _disableCards.Clear();
-
+            
             OnLevelDeleted?.Invoke();
         }
 
@@ -72,13 +72,13 @@ namespace CJ.FindAPair.CardTable
 
         private void PlaceCards()
         {
-            for (var i = 0; i < _level.LevelField.Count; i++)
+            foreach (var cell in _level.LevelField)
             {
                 var newCard = Instantiate(_card, transform.position, Quaternion.identity);
 
                 newCard.transform.SetParent(transform, false);
 
-                if (_level.LevelField[i] == false)
+                if (cell == false)
                 {
                     DisableCard(newCard);
                     _disableCards.Add(newCard);
@@ -93,9 +93,9 @@ namespace CJ.FindAPair.CardTable
         private void CardNumbering()
         {
             var numberCard = 1;
-            var counter = (int)_level.QuantityOfCardOfPair;
+            var counter = (int) _level.QuantityOfCardOfPair;
 
-            for (int i = 0; i < _cards.Count; i++)
+            for (var i = 0; i < _cards.Count; i++)
             {
                 if (counter > 0)
                 {
@@ -104,7 +104,7 @@ namespace CJ.FindAPair.CardTable
                 }
                 else
                 {
-                    counter = (int)_level.QuantityOfCardOfPair;
+                    counter = (int) _level.QuantityOfCardOfPair;
                     ++numberCard;
                     --i;
                 }
@@ -113,10 +113,10 @@ namespace CJ.FindAPair.CardTable
 
         private void ShuffleNumberCard()
         {
-            for (int i = _cards.Count - 1; i > 0; i--)
+            for (var i = _cards.Count - 1; i > 0; i--)
             {
-                int j = Random.Range(0, i);
-                int temp = _cards[i].NumberPair;
+                var j = Random.Range(0, i);
+                var temp = _cards[i].NumberPair;
                 _cards[i].NumberPair = _cards[j].NumberPair;
                 _cards[j].NumberPair = temp;
             }
@@ -124,11 +124,11 @@ namespace CJ.FindAPair.CardTable
 
         private void AddBombs()
         {
-            var quantityBomb = _level.QuantityPairOfBombs * (int)_level.QuantityOfCardOfPair;
+            var quantityBomb = _level.QuantityPairOfBombs * (int) _level.QuantityOfCardOfPair;
 
-            for (int i = 0; i < quantityBomb; i++)
+            for (var i = 0; i < quantityBomb; i++)
             {
-                _cards[_cards.Count - 1 - i].NumberPair = Constants.NumberBomb;
+                _cards[_cards.Count - 1 - i].NumberPair = ConstantsCard.NUMBER_BOMB;
             }
         }
 
@@ -140,4 +140,3 @@ namespace CJ.FindAPair.CardTable
         }
     }
 }
-

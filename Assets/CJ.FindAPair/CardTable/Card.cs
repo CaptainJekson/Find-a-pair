@@ -4,14 +4,14 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 using CJ.FindAPair.Configuration;
-using Assets.CJ.FindAPair.Constants;
+using CJ.FindAPair.Constants;
 
 namespace CJ.FindAPair.CardTable
 {
     public class Card : MonoBehaviour
     {
         [SerializeField] private GameSettingsConfig _gameSettingsConfig;
-        [SerializeField] private TextMeshProUGUI _text; 
+        [SerializeField] private TextMeshProUGUI _text;
         [SerializeField] private Button _button;
         [SerializeField] private Image _shirt;
         [SerializeField] private Image _face;
@@ -19,8 +19,18 @@ namespace CJ.FindAPair.CardTable
         public bool IsEmpty { get; set; }
         public bool IsShow { get; set; }
         public int NumberPair { get; set; }
-        public Image Shirt { get => _shirt; set => _shirt = value; }
-        public Image Face { get => _face; set => _face = value; }
+
+        public Image Shirt
+        {
+            get => _shirt;
+            set => _shirt = value;
+        }
+
+        public Image Face
+        {
+            get => _face;
+            set => _face = value;
+        }
 
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
@@ -46,10 +56,7 @@ namespace CJ.FindAPair.CardTable
 
         public void DelayHide()
         {
-            if(NumberPair != Constants.NumberBomb)
-            {
-                StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
-            }
+            StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
 
         private void Hide()
@@ -80,9 +87,7 @@ namespace CJ.FindAPair.CardTable
         private IEnumerator DelayStartHide()
         {
             yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
-
             Hide();
         }
     }
 }
-

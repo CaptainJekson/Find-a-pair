@@ -2,40 +2,43 @@
 using CJ.FindAPair.Configuration;
 using UnityEngine;
 
-[RequireComponent(typeof(Card)), RequireComponent(typeof(Animator))]
-public class AnimationCard : MonoBehaviour
+namespace CJ.FindAPair.Animation
 {
-    [SerializeField] private GameSettingsConfig _gameSettingConfig;
-
-    private Card _card;
-    private Animator _animator;
-
-    private void Awake()
+    [RequireComponent(typeof(Card)), RequireComponent(typeof(Animator))]
+    public class AnimationCard : MonoBehaviour
     {
-        _card = GetComponent<Card>();
-        _animator = GetComponent<Animator>();
-        _animator.speed = _gameSettingConfig.AnimationSpeedCard;
-    }
+        [SerializeField] private GameSettingsConfig _gameSettingConfig;
 
-    private void OnEnable()
-    {
-        _card.СardOpens += PlayShowAnimation;
-        _card.CardClosed += PlayHideAnimation;
-    }
+        private Card _card;
+        private Animator _animator;
 
-    private void OnDisable()
-    {
-        _card.СardOpens -= PlayShowAnimation;
-        _card.CardClosed -= PlayHideAnimation;
-    }
+        private void Awake()
+        {
+            _card = GetComponent<Card>();
+            _animator = GetComponent<Animator>();
+            _animator.speed = _gameSettingConfig.AnimationSpeedCard;
+        }
 
-    private void PlayShowAnimation()
-    {
-        _animator.SetBool("IsHide", false);
-    }
+        private void OnEnable()
+        {
+            _card.СardOpens += PlayShowAnimation;
+            _card.CardClosed += PlayHideAnimation;
+        }
 
-    private void PlayHideAnimation()
-    {
-        _animator.SetBool("IsHide", true);
+        private void OnDisable()
+        {
+            _card.СardOpens -= PlayShowAnimation;
+            _card.CardClosed -= PlayHideAnimation;
+        }
+
+        private void PlayShowAnimation()
+        {
+            _animator.SetBool("IsHide", false);
+        }
+
+        private void PlayHideAnimation()
+        {
+            _animator.SetBool("IsHide", true);
+        }
     }
 }

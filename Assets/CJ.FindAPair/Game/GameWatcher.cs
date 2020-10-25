@@ -97,7 +97,7 @@ namespace CJ.FindAPair.Game
 
         private string TimeConverer(int secondTime)  //TODO повторяется в UIPreviewLevel
         {
-            TimeSpan time = TimeSpan.FromSeconds(secondTime);
+            var time = TimeSpan.FromSeconds(secondTime);
 
             return time.ToString(@"mm\:ss");
         }
