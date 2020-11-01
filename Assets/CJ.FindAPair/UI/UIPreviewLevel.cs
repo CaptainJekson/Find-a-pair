@@ -54,7 +54,7 @@ namespace CJ.FindAPair.UI
             }
         }
 
-        private string TimeConverer(int secondTime) //TODO повторяется в GameWatcher
+        private string TimeConverter(int secondTime) //TODO повторяется в GameWatcher
         {
             TimeSpan time = TimeSpan.FromSeconds(secondTime);
 
