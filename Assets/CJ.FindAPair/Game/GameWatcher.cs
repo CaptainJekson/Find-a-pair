@@ -77,7 +77,7 @@ namespace CJ.FindAPair.Game
             }
         }
 
-        private void InitiateVictory() //TODO Rename
+        private void InitiateVictory()
         {
             StopTimer();
 
@@ -87,7 +87,7 @@ namespace CJ.FindAPair.Game
             //TODO Add Reward
         }
 
-        private void InitiateDefeat() //TODO Rename
+        private void InitiateDefeat()
         {
             StopTimer();
 
