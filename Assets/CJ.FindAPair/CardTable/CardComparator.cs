@@ -10,8 +10,8 @@ namespace CJ.FindAPair.CardTable
         private LevelCreator _levelCreator;
         private List<Card> _comparisonCards;
 
-        public event UnityAction СardsMatched;
-        public event UnityAction СardsNotMatched;
+        public event UnityAction CardsMatched;
+        public event UnityAction CardsNotMatched;
         public event UnityAction OpenCardBomb;
 
         private void Awake()
@@ -75,13 +75,13 @@ namespace CJ.FindAPair.CardTable
                 {
                     if (_comparisonCards.Count >= quantityOfCardOfPair && isCardEqual)
                     {
-                        СardsMatched?.Invoke();
+                        CardsMatched?.Invoke();
                         _comparisonCards.Clear();
                     }
                 }
                 else
                 {
-                    СardsNotMatched?.Invoke();
+                    CardsNotMatched?.Invoke();
                     HideCards();
                     _comparisonCards.Clear();
                 }

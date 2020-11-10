@@ -15,3 +15,6 @@ MonoBehaviour:
   _startTimeShow: 3
   _animationSpeedCard: 2.5
   _delayTimeHide: 0.7
+  _pointsTwoCards: 1
+  _pointsThreeCards: 3
+  _pointsFourCards: 5

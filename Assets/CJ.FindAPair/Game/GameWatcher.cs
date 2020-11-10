@@ -12,6 +12,7 @@ namespace CJ.FindAPair.Game
     public class GameWatcher : MonoBehaviour
     {
         [SerializeField] private GameSettingsConfig _gameSettingsConfig;
+        [SerializeField] private GameSaver _gameSaver;
         [SerializeField] private UIValue _lifeText;
         [SerializeField] private UIValue _timeText;
         [SerializeField] private UIValue _scoreText;
@@ -22,6 +23,7 @@ namespace CJ.FindAPair.Game
         private int _life;
         private int _time;
         private int _score;
+        private int _comboCounter;
 
         private int _quantityOfPairs;
         private int _quantityOfMatchedPairs;
@@ -36,33 +38,77 @@ namespace CJ.FindAPair.Game
 
         private void OnEnable()
         {
-            _cardComparator.СardsMatched += AddPoint;
-            _cardComparator.СardsNotMatched += RemoveLife;
+            _cardComparator.CardsMatched += AddScore;
+            _cardComparator.CardsMatched += IncreaseComboСounter;
+            _cardComparator.CardsNotMatched += RemoveLife;
+            _cardComparator.CardsNotMatched += ResetCombo;
             _cardComparator.OpenCardBomb += InitiateDefeat;
             _levelCreator.OnLevelCreated += InitTimer;
+            _levelCreator.OnLevelCreated += ResetCombo;
+            _levelCreator.OnLevelDeleted += ResetCombo;
             _levelCreator.OnLevelDeleted += ResetTimer;
             _levelCreator.OnLevelDeleted += ResetCounts;
         }
 
         private void OnDisable()
         {
-            _cardComparator.СardsMatched -= AddPoint;
-            _cardComparator.СardsNotMatched -= RemoveLife;
+            _cardComparator.CardsMatched -= AddScore;
+            _cardComparator.CardsMatched -= IncreaseComboСounter;
+            _cardComparator.CardsNotMatched -= RemoveLife;
+            _cardComparator.CardsNotMatched -= ResetCombo;
             _cardComparator.OpenCardBomb -= InitiateDefeat;
             _levelCreator.OnLevelCreated -= InitTimer;
+            _levelCreator.OnLevelCreated -= ResetCombo;
+            _levelCreator.OnLevelDeleted -= ResetCombo;
             _levelCreator.OnLevelDeleted -= ResetTimer;
             _levelCreator.OnLevelDeleted -= ResetCounts;
         }
 
-        private void AddPoint()
+        private void AddScore()
         {
-            _score++;
+            AccrueScore();
             _quantityOfMatchedPairs++;
             _scoreText.SetValue(_score.ToString());
 
             if (_quantityOfMatchedPairs >= _quantityOfPairs)
             {
                 InitiateVictory();
+            }
+        }
+
+        private void AccrueScore()
+        {
+            switch (_levelCreator.LevelConfig.QuantityOfCardOfPair)
+            {
+                case QuantityOfCardOfPair.TwoCards:
+                    _score += _gameSettingsConfig.PointsTwoCards;
+                    break;
+                case QuantityOfCardOfPair.ThreeCards:
+                    _score += _gameSettingsConfig.PointsThreeCards;
+                    break;
+                case QuantityOfCardOfPair.FourCards:
+                    _score += _gameSettingsConfig.PointsFourCards;
+                    break;
+            }
+
+            if (_comboCounter > 0)
+            {
+                _score *= _comboCounter;
+            }
+        }
+        
+        private void ResetCombo()
+        {
+            _comboCounter = 0;
+        }
+
+        private void IncreaseComboСounter()
+        {
+            _comboCounter++;
+
+            if (_comboCounter > 1)
+            {
+                Debug.LogError($"COMBO: x{_comboCounter}"); //TODO DEBUG 
             }
         }
 
@@ -84,7 +130,7 @@ namespace CJ.FindAPair.Game
             UIView.ShowView("General", "BlockPanel");
             UIView.ShowView("GameResult", "Victory");
 
-            //TODO Add Reward
+            _gameSaver.SaveInt(SaveTypeInt.Score, _score);
         }
 
         private void InitiateDefeat()

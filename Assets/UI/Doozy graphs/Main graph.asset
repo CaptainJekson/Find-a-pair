@@ -97,6 +97,9 @@ MonoBehaviour:
   - Category: Main menu
     InstantAction: 0
     Name: Main start Screen
+  - Category: Main menu
+    InstantAction: 0
+    Name: Player resources Screen
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
@@ -359,6 +362,9 @@ MonoBehaviour:
   - Category: Main menu
     InstantAction: 0
     Name: Preview level screen
+  - Category: Main menu
+    InstantAction: 0
+    Name: Player resources Screen
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
