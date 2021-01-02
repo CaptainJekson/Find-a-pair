@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CJ.FindAPair.Constants;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,7 +13,7 @@ namespace CJ.FindAPair.CardTable
 
         public event UnityAction CardsMatched;
         public event UnityAction CardsNotMatched;
-        public event UnityAction OpenCardBomb;
+        public event UnityAction<Card> SpecialCardOpened;
 
         private void Awake()
         {
@@ -57,14 +58,15 @@ namespace CJ.FindAPair.CardTable
 
         private void ToCompare(Card card)
         {
-            if (card.NumberPair == 888)
+            if (card.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {
-                OpenCardBomb?.Invoke();
+                SpecialCardOpened?.Invoke(card);
             }
 
             var quantityOfCardOfPair = (int) _levelCreator.LevelConfig.QuantityOfCardOfPair;
 
-            _comparisonCards.Add(card);
+            if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
+                _comparisonCards.Add(card);
 
             for (var i = 0; i < _comparisonCards.Count - 1; i++)
             {
@@ -73,19 +75,33 @@ namespace CJ.FindAPair.CardTable
 
                 if (isCardEqual)
                 {
-                    if (_comparisonCards.Count >= quantityOfCardOfPair && isCardEqual)
-                    {
-                        CardsMatched?.Invoke();
-                        _comparisonCards.Clear();
-                    }
+                    if (_comparisonCards.Count < quantityOfCardOfPair)
+                        continue;
+
+                    OnCardsMatched();
                 }
                 else
                 {
-                    CardsNotMatched?.Invoke();
-                    HideCards();
-                    _comparisonCards.Clear();
+                    OnCardsNotMatched();
                 }
             }
+        }
+        
+        private void OnCardsMatched()
+        {
+            CardsMatched?.Invoke();
+
+            foreach (var card in _comparisonCards)
+                card.IsMatched = true;
+
+            _comparisonCards.Clear();
+        }
+        
+        private void OnCardsNotMatched()
+        {
+            CardsNotMatched?.Invoke();
+            HideCards();
+            _comparisonCards.Clear();
         }
 
         private void HideCards()

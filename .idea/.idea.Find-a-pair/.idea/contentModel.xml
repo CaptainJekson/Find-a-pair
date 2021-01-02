@@ -16,6 +16,7 @@
             <e p="Card.cs" t="Include" />
             <e p="CardComparator.cs" t="Include" />
             <e p="LevelCreator.cs" t="Include" />
+            <e p="SpecialCardHandler.cs" t="Include" />
             <e p="UIFlexibleGridController.cs" t="Include" />
           </e>
           <e p="Configurations" t="Include">

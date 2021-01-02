@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab36fc551cd8c44ea955eea752e6b58, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  _level: 1
-  _width: 2
-  _height: 3
-  _scale: 0.7
+  _level: 0
+  _width: 4
+  _height: 5
+  _scale: 0.8
   _quantityOfCardOfPair: 2
-  _tries: 15
-  _time: 300
+  _tries: 60
+  _time: 600
+  _quantityPairOfFortune: 2
+  _quantityPairOfEntanglement: 0
+  _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 010101010101
+  _levelField: 0101010101010101010101010101010101010101

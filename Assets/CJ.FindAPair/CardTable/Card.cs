@@ -18,6 +18,7 @@ namespace CJ.FindAPair.CardTable
 
         public bool IsEmpty { get; set; }
         public bool IsShow { get; set; }
+        public bool IsMatched { get; set; }
         public int NumberPair { get; set; }
 
         public Image Shirt
@@ -53,22 +54,23 @@ namespace CJ.FindAPair.CardTable
 
             StartCoroutine(DelayStartHide());
         }
-
-        public void DelayHide()
-        {
-            StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
-        }
-
-        private void Hide()
-        {
-            IsShow = false;
-            CardClosed?.Invoke();
-        }
-
-        private void Show()
+        
+        public void Show()
         {
             IsShow = true;
             СardOpens?.Invoke();
+        }
+
+        public void Hide()
+        {
+            IsShow = false;
+            IsMatched = false;
+            CardClosed?.Invoke();
+        }
+        
+        public void DelayHide()
+        {
+            StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
 
         private void MakeEmpty()

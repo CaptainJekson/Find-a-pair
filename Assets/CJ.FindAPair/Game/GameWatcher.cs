@@ -42,7 +42,6 @@ namespace CJ.FindAPair.Game
             _cardComparator.CardsMatched += IncreaseComboСounter;
             _cardComparator.CardsNotMatched += RemoveLife;
             _cardComparator.CardsNotMatched += ResetCombo;
-            _cardComparator.OpenCardBomb += InitiateDefeat;
             _levelCreator.OnLevelCreated += InitTimer;
             _levelCreator.OnLevelCreated += ResetCombo;
             _levelCreator.OnLevelDeleted += ResetCombo;
@@ -56,12 +55,19 @@ namespace CJ.FindAPair.Game
             _cardComparator.CardsMatched -= IncreaseComboСounter;
             _cardComparator.CardsNotMatched -= RemoveLife;
             _cardComparator.CardsNotMatched -= ResetCombo;
-            _cardComparator.OpenCardBomb -= InitiateDefeat;
             _levelCreator.OnLevelCreated -= InitTimer;
             _levelCreator.OnLevelCreated -= ResetCombo;
             _levelCreator.OnLevelDeleted -= ResetCombo;
             _levelCreator.OnLevelDeleted -= ResetTimer;
             _levelCreator.OnLevelDeleted -= ResetCounts;
+        }
+        
+        public void InitiateDefeat()
+        {
+            StopTimer();
+
+            UIView.ShowView("General", "BlockPanel");
+            UIView.ShowView("GameResult", "Defeat");
         }
 
         private void AddScore()
@@ -105,11 +111,6 @@ namespace CJ.FindAPair.Game
         private void IncreaseComboСounter()
         {
             _comboCounter++;
-
-            if (_comboCounter > 1)
-            {
-                Debug.LogError($"COMBO: x{_comboCounter}"); //TODO DEBUG 
-            }
         }
 
         private void RemoveLife()
@@ -133,14 +134,6 @@ namespace CJ.FindAPair.Game
             _gameSaver.SaveInt(SaveTypeInt.Score, _score);
         }
 
-        private void InitiateDefeat()
-        {
-            StopTimer();
-
-            UIView.ShowView("General", "BlockPanel");
-            UIView.ShowView("GameResult", "Defeat");
-        }
-
         private string TimeConverer(int secondTime)  //TODO повторяется в UIPreviewLevel
         {
             var time = TimeSpan.FromSeconds(secondTime);
@@ -151,7 +144,7 @@ namespace CJ.FindAPair.Game
         private void InitTimer()   //TODO Rename
         {
             _quantityOfPairs = (_levelCreator.Cards.Count / (int)_levelCreator.LevelConfig.QuantityOfCardOfPair)
-                             - _levelCreator.LevelConfig.QuantityPairOfBombs;
+                             - _levelCreator.LevelConfig.QuantityPairOfSpecialCard;
 
             _life = _levelCreator.LevelConfig.Tries;
             _time = _levelCreator.LevelConfig.Time;

@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR 
+﻿#if UNITY_EDITOR
 
 using CJ.FindAPair.Configuration;
 using UnityEngine;
@@ -19,8 +19,16 @@ namespace CJ.FindAPair.CustomEditor
         private QuantityOfCardOfPair _quantityOfCardOfPair;
         private int _tries = 0;
         private int _time = 0;
+        private bool _isFortune = false;
+        private bool _isEntanglement = false;
+        private bool _isReset = false;
         private bool _isBomb = false;
+
+        private int _quantityPairOfFortune = 0;
+        private int _quantityPairOfEntanglement = 0;
+        private int _quantityPairOfReset = 0;
         private int _quantityPairOfBombs = 0;
+
 
         private string _errorMessage;
 
@@ -38,14 +46,35 @@ namespace CJ.FindAPair.CustomEditor
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Ширина", _width);
             _height = EditorGUILayout.IntField("Длина", _height);
-            _scale = EditorGUILayout.Slider("Масштаб",_scale, 0.0f, 1.0f);
+            _scale = EditorGUILayout.Slider("Масштаб", _scale, 0.0f, 1.0f);
 
             GUILayout.Label("Условия уровня", EditorStyles.boldLabel);
-            _quantityOfCardOfPair = (QuantityOfCardOfPair)EditorGUILayout.EnumPopup(new GUIContent("Количество карт в паре"), _quantityOfCardOfPair);
+            _quantityOfCardOfPair =
+                (QuantityOfCardOfPair) EditorGUILayout.EnumPopup(new GUIContent("Количество карт в паре"),
+                    _quantityOfCardOfPair);
             _tries = EditorGUILayout.IntField("Попытки", _tries);
             _time = EditorGUILayout.IntField("Время", _time);
-            _isBomb = EditorGUILayout.Toggle("Уровень с бомбами", _isBomb);
 
+            _isFortune = EditorGUILayout.Toggle("Карты удачи", _isFortune);
+            if (_isFortune)
+            {
+                _quantityPairOfFortune = EditorGUILayout.IntField("Количесво пар удачи", _quantityPairOfFortune);
+            }
+
+            _isEntanglement = EditorGUILayout.Toggle("Карты запутывания", _isEntanglement);
+            if (_isEntanglement)
+            {
+                _quantityPairOfEntanglement = EditorGUILayout.IntField("Количесво пар запутывания",
+                    _quantityPairOfEntanglement);
+            }
+
+            _isReset = EditorGUILayout.Toggle("Карты сброса", _isReset);
+            if (_isReset)
+            {
+                _quantityPairOfReset = EditorGUILayout.IntField("Количесво пар сброса", _quantityPairOfReset);
+            }
+
+            _isBomb = EditorGUILayout.Toggle("Карты бомбы", _isBomb);
             if (_isBomb)
             {
                 _quantityPairOfBombs = EditorGUILayout.IntField("Количесво пар с бомбами", _quantityPairOfBombs);
@@ -85,7 +114,8 @@ namespace CJ.FindAPair.CustomEditor
         {
             var asset = ScriptableObject.CreateInstance<LevelConfig>();
             asset.SetSizeLevel(_levelMatrix, _level, _scale);
-            asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfBombs);
+            asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfFortune,
+                _quantityPairOfEntanglement, _quantityPairOfReset, _quantityPairOfBombs);
 
             AssetDatabase.CreateAsset(asset, $"Assets/CJ.FindAPair/Resources/Levels/Level {_level}.asset");
             AssetDatabase.SaveAssets();
@@ -125,7 +155,8 @@ namespace CJ.FindAPair.CustomEditor
         {
             var isValid = false;
             var quantityCard = 0;
-            var quantityBomb = _quantityPairOfBombs * (int)_quantityOfCardOfPair;
+            var quantitySpecialCard = (_quantityPairOfFortune + _quantityPairOfEntanglement +
+                                       _quantityPairOfReset + _quantityPairOfBombs)  * (int) _quantityOfCardOfPair;
 
             foreach (var item in _levelMatrix)
             {
@@ -138,41 +169,40 @@ namespace CJ.FindAPair.CustomEditor
             switch (_quantityOfCardOfPair)
             {
                 case QuantityOfCardOfPair.TwoCards:
-                    {
-                        isValid = quantityCard >= 4 && quantityCard % 2 == 0;
-                        errorMessage = "[Error: Кол-во карт должно быть более 4 и делится на 2 без остатка]";
-                    }
+                {
+                    isValid = quantityCard >= 4 && quantityCard % 2 == 0;
+                    errorMessage = "[Error: Кол-во карт должно быть более 4 и делится на 2 без остатка]";
+                }
                     break;
                 case QuantityOfCardOfPair.ThreeCards:
-                    {
-                        isValid = quantityCard >= 6 && quantityCard % 3 == 0;
-                        errorMessage = "[Error: Кол-во карт должно быть более 6 и делится на 3 без остатка]";
-                    }
+                {
+                    isValid = quantityCard >= 6 && quantityCard % 3 == 0;
+                    errorMessage = "[Error: Кол-во карт должно быть более 6 и делится на 3 без остатка]";
+                }
                     break;
                 case QuantityOfCardOfPair.FourCards:
-                    {
-                        isValid = quantityCard >= 8 && quantityCard % 4 == 0;
-                        errorMessage = "[Error: Кол-во карт должно быть более 8 и делится на 4 без остатка]";
-                    }
+                {
+                    isValid = quantityCard >= 8 && quantityCard % 4 == 0;
+                    errorMessage = "[Error: Кол-во карт должно быть более 8 и делится на 4 без остатка]";
+                }
                     break;
                 default:
-                    {
-                        isValid = false;
-                        errorMessage = "[Error: Выберите кол-во карт в паре]";
-                    }
+                {
+                    isValid = false;
+                    errorMessage = "[Error: Выберите кол-во карт в паре]";
+                }
                     break;
             }
 
 
-            if (quantityBomb >= quantityCard)
+            if (quantitySpecialCard >= quantityCard)
             {
                 isValid = false;
-                errorMessage = "[Error: Кол-во бомб не должно равнятся кол-ву карт]";
+                errorMessage = "[Error: Кол-во специальных карт не должно равнятся кол-ву обычных карт]";
             }
 
             return isValid;
         }
-
     }
 }
 

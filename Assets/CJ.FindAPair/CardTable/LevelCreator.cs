@@ -40,7 +40,7 @@ namespace CJ.FindAPair.CardTable
 
             PlaceCards();
             CardNumbering();
-            AddBombs();
+            AddAllSpecialCards();
             ShuffleNumberCard();
 
             OnLevelCreated?.Invoke();
@@ -122,13 +122,21 @@ namespace CJ.FindAPair.CardTable
             }
         }
 
-        private void AddBombs()
+        private void AddAllSpecialCards()
         {
-            var quantityBomb = _level.QuantityPairOfBombs * (int) _level.QuantityOfCardOfPair;
+            AddSpecialCards(_level.QuantityPairOfFortune, ConstantsCard.NUMBER_FORTUNE);
+            AddSpecialCards(_level.QuantityPairOfEntanglement, ConstantsCard.NUMBER_ENTANGLEMENT);
+            AddSpecialCards(_level.QuantityPairOfReset, ConstantsCard.NUMBER_RESET);
+            AddSpecialCards(_level.QuantityPairOfBombs, ConstantsCard.NUMBER_BOMB);
+        }
+        
+        private void AddSpecialCards(int quantityPairOfSpecial, int number)
+        {
+            var quantitySpecialCards = quantityPairOfSpecial * (int) _level.QuantityOfCardOfPair;
 
-            for (var i = 0; i < quantityBomb; i++)
+            for (var i = 0; i < quantitySpecialCards; i++)
             {
-                _cards[_cards.Count - 1 - i].NumberPair = ConstantsCard.NUMBER_BOMB;
+                _cards[_cards.Count - 1 - i].NumberPair = number;
             }
         }
 

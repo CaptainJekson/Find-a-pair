@@ -17,6 +17,9 @@ namespace CJ.FindAPair.Configuration
         [SerializeField] private QuantityOfCardOfPair _quantityOfCardOfPair;
         [SerializeField] private int _tries = 1;
         [SerializeField] private int _time = 1;
+        [SerializeField] private int _quantityPairOfFortune = 0;
+        [SerializeField] private int _quantityPairOfEntanglement = 0;
+        [SerializeField] private int _quantityPairOfReset = 0;
         [SerializeField] private int _quantityPairOfBombs = 0;
 
         [SerializeField] private List<bool> _levelField = new List<bool>();
@@ -29,7 +32,13 @@ namespace CJ.FindAPair.Configuration
         public QuantityOfCardOfPair QuantityOfCardOfPair => _quantityOfCardOfPair;
         public int Tries => _tries;
         public int Time => _time;
+        public int QuantityPairOfFortune => _quantityPairOfFortune;
+        public int QuantityPairOfEntanglement => _quantityPairOfEntanglement;
+        public int QuantityPairOfReset => _quantityPairOfReset;
         public int QuantityPairOfBombs => _quantityPairOfBombs;
+
+        public int QuantityPairOfSpecialCard => _quantityPairOfFortune + _quantityPairOfEntanglement +
+                                                _quantityPairOfReset + _quantityPairOfBombs;
 
         public void SetSizeLevel(bool[,] _levelMatrix, int level, float scale)
         {
@@ -48,11 +57,16 @@ namespace CJ.FindAPair.Configuration
             _level = level;
         }
         
-        public void SetConditionsLevel(QuantityOfCardOfPair quantityOfCardOfPair, int tries, int time, int quantityPairOfBombs)
+        public void SetConditionsLevel(QuantityOfCardOfPair quantityOfCardOfPair, int tries, int time, 
+            int quantityPairOfFortune, int quantityPairOfEntanglement, int quantityPairOfReset,
+            int quantityPairOfBombs)
         {
             _quantityOfCardOfPair = quantityOfCardOfPair;
             _tries = tries;
             _time = time;
+            _quantityPairOfFortune = quantityPairOfFortune;
+            _quantityPairOfEntanglement = quantityPairOfEntanglement;
+            _quantityPairOfReset = quantityPairOfReset;
             _quantityPairOfBombs = quantityPairOfBombs;
         }
     }

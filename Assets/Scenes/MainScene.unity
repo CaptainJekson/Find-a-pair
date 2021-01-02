@@ -5862,6 +5862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7603121475095352633, guid: f5e3d0c12af594f4988f91a2d10d64b1,
         type: 3}
+      propertyPath: _gameSaver
+      value: 
+      objectReference: {fileID: 2044082101}
+    - target: {fileID: 7603121475095352633, guid: f5e3d0c12af594f4988f91a2d10d64b1,
+        type: 3}
       propertyPath: _lifeText
       value: 
       objectReference: {fileID: 1353204242}
@@ -5875,11 +5880,6 @@ PrefabInstance:
       propertyPath: _scoreText
       value: 
       objectReference: {fileID: 2555237}
-    - target: {fileID: 7603121475095352633, guid: f5e3d0c12af594f4988f91a2d10d64b1,
-        type: 3}
-      propertyPath: _gameSaver
-      value: 
-      objectReference: {fileID: 2044082101}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5e3d0c12af594f4988f91a2d10d64b1, type: 3}
 --- !u!114 &7936612976907218454
