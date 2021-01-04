@@ -23,7 +23,7 @@ namespace CJ.FindAPair.Game
         private int _life;
         private int _time;
         private int _score;
-        private int _comboCounter;
+        private int _accruedScore;
 
         private int _quantityOfPairs;
         private int _quantityOfMatchedPairs;
@@ -39,12 +39,8 @@ namespace CJ.FindAPair.Game
         private void OnEnable()
         {
             _cardComparator.CardsMatched += AddScore;
-            _cardComparator.CardsMatched += IncreaseComboСounter;
             _cardComparator.CardsNotMatched += RemoveLife;
-            _cardComparator.CardsNotMatched += ResetCombo;
             _levelCreator.OnLevelCreated += InitTimer;
-            _levelCreator.OnLevelCreated += ResetCombo;
-            _levelCreator.OnLevelDeleted += ResetCombo;
             _levelCreator.OnLevelDeleted += ResetTimer;
             _levelCreator.OnLevelDeleted += ResetCounts;
         }
@@ -52,12 +48,8 @@ namespace CJ.FindAPair.Game
         private void OnDisable()
         {
             _cardComparator.CardsMatched -= AddScore;
-            _cardComparator.CardsMatched -= IncreaseComboСounter;
             _cardComparator.CardsNotMatched -= RemoveLife;
-            _cardComparator.CardsNotMatched -= ResetCombo;
             _levelCreator.OnLevelCreated -= InitTimer;
-            _levelCreator.OnLevelCreated -= ResetCombo;
-            _levelCreator.OnLevelDeleted -= ResetCombo;
             _levelCreator.OnLevelDeleted -= ResetTimer;
             _levelCreator.OnLevelDeleted -= ResetCounts;
         }
@@ -70,9 +62,15 @@ namespace CJ.FindAPair.Game
             UIView.ShowView("GameResult", "Defeat");
         }
 
+        public void RemoveQuantityOfMatchedPairs()
+        {
+            RemoveLife();
+            RemoveScore();
+        }
+
         private void AddScore()
         {
-            AccrueScore();
+            _accruedScore = AccrueScore();
             _quantityOfMatchedPairs++;
             _scoreText.SetValue(_score.ToString());
 
@@ -82,40 +80,40 @@ namespace CJ.FindAPair.Game
             }
         }
 
-        private void AccrueScore()
+        private void RemoveScore()
+        {
+            if (_score > 0)
+            {
+                _quantityOfMatchedPairs--;
+                _score -= _accruedScore;
+            }
+            
+            _scoreText.SetValue(_score.ToString());
+        }
+        
+        private int AccrueScore()
         {
             switch (_levelCreator.LevelConfig.QuantityOfCardOfPair)
             {
                 case QuantityOfCardOfPair.TwoCards:
                     _score += _gameSettingsConfig.PointsTwoCards;
-                    break;
+                    return _gameSettingsConfig.PointsTwoCards;
                 case QuantityOfCardOfPair.ThreeCards:
                     _score += _gameSettingsConfig.PointsThreeCards;
-                    break;
+                    return _gameSettingsConfig.PointsThreeCards;
                 case QuantityOfCardOfPair.FourCards:
                     _score += _gameSettingsConfig.PointsFourCards;
-                    break;
+                    return _gameSettingsConfig.PointsFourCards;
             }
 
-            if (_comboCounter > 0)
-            {
-                _score *= _comboCounter;
-            }
+            return 0;
         }
         
-        private void ResetCombo()
-        {
-            _comboCounter = 0;
-        }
-
-        private void IncreaseComboСounter()
-        {
-            _comboCounter++;
-        }
-
         private void RemoveLife()
         {
-            _life--;
+            if(_life > 0)
+                _life--;
+            
             _lifeText.SetValue(_life.ToString());
 
             if (_life <= 0)

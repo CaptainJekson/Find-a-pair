@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bab36fc551cd8c44ea955eea752e6b58, type: 3}
-  m_Name: Level 1
+  m_Name: Level 2
   m_EditorClassIdentifier: 
-  _level: 1
-  _width: 4
-  _height: 5
-  _scale: 0.6
-  _quantityOfCardOfPair: 2
-  _tries: 60
+  _level: 2
+  _width: 6
+  _height: 2
+  _scale: 0.7
+  _quantityOfCardOfPair: 3
+  _tries: 50
   _time: 600
-  _quantityPairOfFortune: 2
+  _quantityPairOfFortune: 1
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 0101010101010101010101010101010101010101
+  _levelField: 010101010101010101010101

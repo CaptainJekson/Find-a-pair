@@ -1,20 +1,29 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Game;
+using CJ.FindAPair.Game.SpecialCards;
 using UnityEngine;
 
 namespace CJ.FindAPair.CardTable
 {
-    [RequireComponent(typeof(GameWatcher), typeof(CardComparator))]
+    [RequireComponent(typeof(GameWatcher), typeof(CardComparator), 
+        typeof(LevelCreator))]
     public class SpecialCardHandler : MonoBehaviour
     {
+        [SerializeField] private List<SpecialCard> _handlers;
+        
         private GameWatcher _gameWatcher;
         private CardComparator _cardComparator;
+        private LevelCreator _levelCreator;
+
+        private SpecialCard _specialCard;
 
         private void Awake()
         {
             _gameWatcher = GetComponent<GameWatcher>();
             _cardComparator = GetComponent<CardComparator>();
+            _levelCreator = GetComponent<LevelCreator>();
         }
 
         private void OnEnable()
@@ -32,81 +41,29 @@ namespace CJ.FindAPair.CardTable
             switch (card.NumberPair)
             {
                 case ConstantsCard.NUMBER_FORTUNE:
-                    OpenFortuneCard(card);
+                    _specialCard = GetSpecialCard<FortuneCard>();
                     break;
                 case ConstantsCard.NUMBER_ENTANGLEMENT:
-                    OpenEntanglementCard();
+                    _specialCard = GetSpecialCard<EntanglementCard>();
                     break;
                 case ConstantsCard.NUMBER_RESET:
-                    OpenResetCard();
+                    _specialCard = GetSpecialCard<ResetCard>();
                     break;
                 case ConstantsCard.NUMBER_BOMB:
-                    OpenBombCard();
+                    _specialCard = GetSpecialCard<BombCard>();
                     break;
             }
+
+            if (_specialCard == null) return;
+            _specialCard.Init(_gameWatcher, _cardComparator, _levelCreator);
+            _specialCard.OpenSpecialCard(card);
         }
 
-        private void OpenFortuneCard(Card fortuneCard) //TODO Отрефакторить
+        private SpecialCard GetSpecialCard<T>() where T : SpecialCard
         {
-            var randomChance = Random.Range(0, 2);
-            var allCards = FindObjectsOfType<Card>();
-
-            var randomCard = allCards[Random.Range(0, allCards.Length)];
-
-            if (randomChance > 0) //TODO Открытие пары карт (работает)
-            {
-                while (randomCard.IsMatched || randomCard.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
-                {
-                    randomCard = allCards[Random.Range(0, allCards.Length)];
-                }
-
-                foreach (var card in allCards)
-                {
-                    if (card.NumberPair != randomCard.NumberPair) 
-                        continue;
-                    
-                    card.Show();
-                }
-            }
-            else //TODO Закрытие пары карт (забрать попытку, забрать очки, уменьшить кол-во угаданных пар)
-            {
-                var quantityMatchedCards = allCards.Count(card => card.IsMatched);
-
-                if (quantityMatchedCards > 0)
-                {
-                    while (!randomCard.IsMatched || randomCard.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
-                    {
-                        randomCard = allCards[Random.Range(0, allCards.Length)];
-                    }
-
-                    foreach (var card in allCards)
-                    {
-                        if (card.NumberPair != randomCard.NumberPair) 
-                            continue;
-                    
-                        card.Hide();
-                    }
-                }
-                else //TODO Если закрывать нечего, значит мы проиграли
-                {
-                    _gameWatcher.InitiateDefeat();
-                }
-            }
-
-            fortuneCard.DelayHide();          
-        }
-        
-        private void OpenEntanglementCard() //TODO Реализовать 
-        {
-        }
-
-        private void OpenResetCard() //TODO Реализовать 
-        {
-        }
-
-        private void OpenBombCard()
-        {
-            _gameWatcher.InitiateDefeat();
+            foreach (var handler in _handlers.OfType<T>())
+                _specialCard = handler;
+            return _specialCard;
         }
     }
 }

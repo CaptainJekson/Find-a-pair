@@ -29,8 +29,8 @@ namespace CJ.FindAPair.CardTable
 
         private void UpdateCellSizes()
         {
-            float width = (_rectTransform.rect.width / _gridLayoutGroup.constraintCount) * _levelCreator.Scale;
-            float height = (_rectTransform.rect.height / _gridLayoutGroup.constraintCount) * _levelCreator.Scale;
+            var width = (_rectTransform.rect.width / _gridLayoutGroup.constraintCount) * _levelCreator.Scale;
+            var height = (_rectTransform.rect.height / _gridLayoutGroup.constraintCount) * _levelCreator.Scale;
 
             _gridLayoutGroup.cellSize = new Vector2(width, height);
         }
