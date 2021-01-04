@@ -7,7 +7,7 @@ namespace CJ.FindAPair.Game.SpecialCards
 {
     public class FortuneCard : SpecialCard
     {
-        public override void OpenSpecialCard(Card card)
+        public override void OpenSpecialCard(Card specialCard)
         {
             var randomChance = Random.Range(0, 2);
             var allCards = _levelCreator.Cards;
@@ -19,7 +19,7 @@ namespace CJ.FindAPair.Game.SpecialCards
             else
                 ClosingPairCards(randomCard);
 
-            card.DelayHide();
+            specialCard.DelayHide();
         }
         
         private void OpeningPairCards(Card randomCard)

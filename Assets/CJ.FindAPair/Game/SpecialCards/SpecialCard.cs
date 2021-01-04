@@ -16,6 +16,6 @@ namespace CJ.FindAPair.Game.SpecialCards
             _levelCreator = levelCreator;
         }
         
-        public abstract void OpenSpecialCard(Card card);
+        public abstract void OpenSpecialCard(Card specialCard);
     }
 }

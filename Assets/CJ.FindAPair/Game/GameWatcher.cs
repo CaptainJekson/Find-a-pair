@@ -68,6 +68,12 @@ namespace CJ.FindAPair.Game
             RemoveScore();
         }
 
+        public void ResetScore()
+        {
+            _score = 0;
+            _scoreText.SetValue(_score.ToString());
+        }
+
         private void AddScore()
         {
             _accruedScore = AccrueScore();
