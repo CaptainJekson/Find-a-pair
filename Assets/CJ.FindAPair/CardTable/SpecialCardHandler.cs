@@ -55,7 +55,7 @@ namespace CJ.FindAPair.CardTable
             }
 
             if (_specialCard == null) return;
-            _specialCard.Init(_gameWatcher, _cardComparator, _levelCreator);
+            _specialCard.Init(_gameWatcher, _levelCreator);
             _specialCard.OpenSpecialCard(card);
         }
 

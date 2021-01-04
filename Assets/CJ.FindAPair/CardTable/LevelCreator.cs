@@ -63,6 +63,12 @@ namespace CJ.FindAPair.CardTable
             
             OnLevelDeleted?.Invoke();
         }
+        
+        public void RestartLevel()
+        {
+            ClearLevel();
+            CreateLevel(_level);
+        }
 
         private void PlaceCards()
         {

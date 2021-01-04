@@ -45,7 +45,7 @@ namespace CJ.FindAPair.CardTable
 
         private void Start()
         {
-            _text.text = NumberPair.ToString();
+            SetNumberText();
 
             if (IsEmpty)
             {
@@ -53,6 +53,11 @@ namespace CJ.FindAPair.CardTable
             }
 
             StartCoroutine(DelayStartHide());
+        }
+
+        public void SetNumberText()
+        {
+            _text.SetText(NumberPair.ToString());
         }
         
         public void Show()
