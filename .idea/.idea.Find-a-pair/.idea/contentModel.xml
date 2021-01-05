@@ -38,6 +38,13 @@
             <e p="SaveTypeDateTime.cs" t="Include" />
             <e p="SaveTypeInt.cs" t="Include" />
             <e p="SaveTypeString.cs" t="Include" />
+            <e p="SpecialCards" t="Include">
+              <e p="BombCard.cs" t="Include" />
+              <e p="EntanglementCard.cs" t="Include" />
+              <e p="FortuneCard.cs" t="Include" />
+              <e p="ResetCard.cs" t="Include" />
+              <e p="SpecialCard.cs" t="Include" />
+            </e>
           </e>
           <e p="UI" t="Include">
             <e p="UIGoToNodeButton.cs" t="Include" />

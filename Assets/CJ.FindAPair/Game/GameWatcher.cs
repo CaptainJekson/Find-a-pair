@@ -4,6 +4,7 @@ using CJ.FindAPair.UI;
 using Doozy.Engine.UI;
 using System;
 using System.Collections;
+using CJ.FindAPair.Animation;
 using UnityEngine;
 
 namespace CJ.FindAPair.Game
@@ -23,6 +24,7 @@ namespace CJ.FindAPair.Game
         private int _life;
         private int _time;
         private int _score;
+        private int _comboCounter;
         private int _accruedScore;
 
         private int _quantityOfPairs;
@@ -78,11 +80,33 @@ namespace CJ.FindAPair.Game
         {
             _accruedScore = AccrueScore();
             _quantityOfMatchedPairs++;
+            
+            AddComboScore();
+            
             _scoreText.SetValue(_score.ToString());
+            
+            _comboCounter++;
 
             if (_quantityOfMatchedPairs >= _quantityOfPairs)
             {
                 InitiateVictory();
+            }
+        }
+
+        private void AddComboScore()
+        {
+            if (_comboCounter < 1) 
+                return;
+            
+            var scoreCombo = _gameSettingsConfig.ScoreCombo.Count > _comboCounter ? 
+                _gameSettingsConfig.ScoreCombo[_comboCounter - 1] : 
+                _gameSettingsConfig.ScoreCombo[_gameSettingsConfig.ScoreCombo.Count - 1];
+
+            _score += scoreCombo;
+
+            foreach (var card in _cardComparator.ComparisonCards)
+            {
+                card.GetComponent<AnimationCard>().PlayCombo(scoreCombo);
             }
         }
 
@@ -117,6 +141,8 @@ namespace CJ.FindAPair.Game
         
         private void RemoveLife()
         {
+            _comboCounter = 0;
+            
             if(_life > 0)
                 _life--;
             
@@ -186,6 +212,7 @@ namespace CJ.FindAPair.Game
             _life = 0;
             _time = 0;
             _score = 0;
+            _comboCounter = 0;
         }
 
         private IEnumerator TimerTick()

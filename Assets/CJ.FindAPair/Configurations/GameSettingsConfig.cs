@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 
 namespace CJ.FindAPair.Configuration
@@ -13,11 +14,14 @@ namespace CJ.FindAPair.Configuration
         [SerializeField] private int _pointsThreeCards;
         [SerializeField] private int _pointsFourCards;
 
+        [SerializeField] private List<int> _scoreCombo;
+
         public float AnimationSpeedCard => _animationSpeedCard;
         public float StartTimeShow => _startTimeShow;
         public float DelayTimeHide => _delayTimeHide;
         public int PointsTwoCards => _pointsTwoCards;
         public int PointsThreeCards => _pointsThreeCards;
         public int PointsFourCards => _pointsFourCards;
+        public List<int> ScoreCombo => _scoreCombo;
     }
 }

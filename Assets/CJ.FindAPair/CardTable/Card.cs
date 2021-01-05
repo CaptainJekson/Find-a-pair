@@ -21,16 +21,16 @@ namespace CJ.FindAPair.CardTable
         public bool IsMatched { get; set; }
         public int NumberPair { get; set; }
 
-        public Image Shirt
+        public Sprite Shirt
         {
-            get => _shirt;
-            set => _shirt = value;
+            get => _shirt.sprite;
+            set => _shirt.sprite = value;
         }
 
-        public Image Face
+        public Sprite Face
         {
-            get => _face;
-            set => _face = value;
+            get => _face.sprite;
+            set => _face.sprite = value;
         }
 
         public event UnityAction СardOpens;
@@ -77,6 +77,8 @@ namespace CJ.FindAPair.CardTable
         {
             StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
+
+
 
         private void MakeEmpty()
         {

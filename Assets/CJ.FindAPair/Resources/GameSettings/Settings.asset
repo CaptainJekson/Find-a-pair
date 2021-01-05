@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e868af9c8d0e8c4da5ebb1e30127913, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  _startTimeShow: 3
+  _startTimeShow: 5
   _animationSpeedCard: 2.5
   _delayTimeHide: 0.7
   _pointsTwoCards: 1
   _pointsThreeCards: 3
   _pointsFourCards: 5
+  _scoreCombo: 020000000400000006000000

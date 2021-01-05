@@ -11,6 +11,8 @@ namespace CJ.FindAPair.CardTable
         private LevelCreator _levelCreator;
         private List<Card> _comparisonCards;
 
+        public List<Card> ComparisonCards => _comparisonCards;
+
         public event UnityAction CardsMatched;
         public event UnityAction CardsNotMatched;
         public event UnityAction<Card> SpecialCardOpened;
