@@ -18,6 +18,11 @@ namespace CJ.FindAPair.UI
             _text = GetComponent<TextMeshProUGUI>();
         }
 
+        private void Start()
+        {
+            _text.SetText(_gameSaver.LoadInt(_saveTypeInt).ToString());
+        }
+
         private void OnEnable()
         {
             _gameSaver.OnSaved += SetText;

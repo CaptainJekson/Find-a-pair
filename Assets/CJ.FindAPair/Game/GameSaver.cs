@@ -17,7 +17,7 @@ namespace CJ.FindAPair.Game
             _save = new Save();
 
 #if UNITY_ANDROID && !UNITY_EDITOR
-            path = Path.Combine(Application.persistentDataPath, "Save.json");
+            _path = Path.Combine(Application.persistentDataPath, "Save.json");
 #else
             _path = Path.Combine(Application.dataPath, "Save.json");
 #endif

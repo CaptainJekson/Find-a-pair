@@ -20,18 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/CardComparator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/CardComparator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/GameSettingsConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/GameSettingsConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/GameSettings/Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/GameSettings/Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Save.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Save.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +76,6 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UICoin.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
@@ -98,6 +88,8 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" />
         <option value="$PROJECT_DIR$/Assets/Save.json" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" />
       </list>
     </option>
   </component>
@@ -152,7 +144,7 @@
       <workItem from="1605036584937" duration="10611000" />
       <workItem from="1609615662464" duration="12438000" />
       <workItem from="1609628272315" duration="3422000" />
-      <workItem from="1609875968391" duration="9496000" />
+      <workItem from="1609875968391" duration="10923000" />
     </task>
     <servers />
   </component>
@@ -197,9 +189,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="326" y="0" width="714" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609621710104" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609885464327">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609885606203">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609885464327" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609885606203" />
   </component>
 </project>
