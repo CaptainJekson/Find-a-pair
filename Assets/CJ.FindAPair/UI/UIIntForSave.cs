@@ -2,15 +2,15 @@
 using CJ.FindAPair.Game;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 namespace CJ.FindAPair.UI
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class UIIntForSave : MonoBehaviour
     {
-        [SerializeField] private SaveTypeInt _saveTypeInt;
-        [SerializeField] private GameSaver _gameSaver;
-        
+        [SerializeField] private PlayerResourcesType playerResourcesType;
+
         private TextMeshProUGUI _text;
 
         private void Awake()
@@ -20,22 +20,22 @@ namespace CJ.FindAPair.UI
 
         private void Start()
         {
-            _text.SetText(_gameSaver.LoadInt(_saveTypeInt).ToString());
+            _text.SetText(GameSaver.LoadResources(playerResourcesType).ToString());
         }
 
         private void OnEnable()
         {
-            _gameSaver.OnSaved += SetText;
+            GameSaver.OnSaved += SetText;
         }
 
         private void OnDisable()
         {
-            _gameSaver.OnSaved += SetText;
+            GameSaver.OnSaved += SetText;
         }
 
         private void SetText()
         {
-            _text.text = _gameSaver.LoadInt(_saveTypeInt).ToString();
+            _text.text = GameSaver.LoadResources(playerResourcesType).ToString();
         }
     }
 }

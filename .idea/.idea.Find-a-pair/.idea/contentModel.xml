@@ -13,6 +13,7 @@
             <e p="AnimationCard.cs" t="Include" />
           </e>
           <e p="CardTable" t="Include">
+            <e p="BoosterHandler.cs" t="Include" />
             <e p="Card.cs" t="Include" />
             <e p="CardComparator.cs" t="Include" />
             <e p="LevelCreator.cs" t="Include" />
@@ -32,11 +33,18 @@
             <e p="LevelEditor.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
+            <e p="Booster" t="Include">
+              <e p="Booster.cs" t="Include" />
+              <e p="BoosterType.cs" t="Include" />
+              <e p="ElectroshockBooster.cs" t="Include" />
+              <e p="MagicEyeBooster.cs" t="Include" />
+              <e p="SapperBooster.cs" t="Include" />
+            </e>
             <e p="GameSaver.cs" t="Include" />
             <e p="GameWatcher.cs" t="Include" />
+            <e p="PlayerResourcesType.cs" t="Include" />
             <e p="Save.cs" t="Include" />
             <e p="SaveTypeDateTime.cs" t="Include" />
-            <e p="SaveTypeInt.cs" t="Include" />
             <e p="SaveTypeString.cs" t="Include" />
             <e p="SpecialCards" t="Include">
               <e p="BombCard.cs" t="Include" />
@@ -47,6 +55,7 @@
             </e>
           </e>
           <e p="UI" t="Include">
+            <e p="UIBooster.cs" t="Include" />
             <e p="UIGoToNodeButton.cs" t="Include" />
             <e p="UIIntForSave.cs" t="Include" />
             <e p="UILevelPage.cs" t="Include" />

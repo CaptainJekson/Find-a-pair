@@ -13,7 +13,6 @@ namespace CJ.FindAPair.Game
     public class GameWatcher : MonoBehaviour
     {
         [SerializeField] private GameSettingsConfig _gameSettingsConfig;
-        [SerializeField] private GameSaver _gameSaver;
         [SerializeField] private UIValue _lifeText;
         [SerializeField] private UIValue _timeText;
         [SerializeField] private UIValue _scoreText;
@@ -34,6 +33,8 @@ namespace CJ.FindAPair.Game
 
         private void Awake()
         {
+            GameSaver.Init();
+            
             _levelCreator = GetComponent<LevelCreator>();
             _cardComparator = GetComponent<CardComparator>();
         }
@@ -161,7 +162,7 @@ namespace CJ.FindAPair.Game
             UIView.ShowView("General", "BlockPanel");
             UIView.ShowView("GameResult", "Victory");
 
-            _gameSaver.SaveInt(SaveTypeInt.Score, _score);
+            GameSaver.SaveResources(PlayerResourcesType.Gold, _score);
         }
 
         private string TimeConverer(int secondTime)  //TODO повторяется в UIPreviewLevel

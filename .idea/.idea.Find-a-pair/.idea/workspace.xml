@@ -20,10 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Save.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Save.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +46,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/SpecialCardHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/MagicEyeBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UINextLevelButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIValue.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,6 +54,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Scripts/Coroutiner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPivotFidex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/BoosterHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/Booster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPreviewLevel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,15 +66,21 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/QuantityOfCardOfPair.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/PlayerResourcesType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/EntanglementCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/LevelCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/BoosterType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/SpecialCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Save.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/ElectroshockBooster.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -74,7 +94,6 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/ISaveble.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeString.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UICoin.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" />
@@ -83,13 +102,24 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/SpecialCardHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/GameSettingsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/BoosterType.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBoosterButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/MagicEyeBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/CardComparator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Save.json" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/SapperBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/ElectroshockBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/PlayerResourcesType.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/BoosterHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/Booster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Save.json" />
       </list>
     </option>
   </component>
@@ -104,7 +134,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Diff &amp; Merge" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.C#" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -144,7 +174,8 @@
       <workItem from="1605036584937" duration="10611000" />
       <workItem from="1609615662464" duration="12438000" />
       <workItem from="1609628272315" duration="3422000" />
-      <workItem from="1609875968391" duration="10923000" />
+      <workItem from="1609875968391" duration="11449000" />
+      <workItem from="1610220268659" duration="11838000" />
     </task>
     <servers />
   </component>
@@ -173,25 +204,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="65" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1605039330657" />
-    <state x="284" y="0" key="SettingsEditor" timestamp="1605047558571">
+    <state x="314" y="0" key="SettingsEditor" timestamp="1610222899676">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="284" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605047558571" />
+    <state x="314" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610222899676" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1609881832039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1609881832039" />
-    <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog" timestamp="1609879111534">
+    <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog" timestamp="1610230369359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1609879111534" />
+    <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1610230369359" />
     <state x="326" y="0" width="714" height="728" key="find.popup" timestamp="1609621710104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="326" y="0" width="714" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609621710104" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609885606203">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610233597163">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609885606203" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610233597163" />
   </component>
 </project>

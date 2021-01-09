@@ -10,9 +10,7 @@ namespace CJ.FindAPair.Game.SpecialCards
         public override void OpenSpecialCard(Card specialCard)
         {
             var randomChance = Random.Range(0, 2);
-            var allCards = _levelCreator.Cards;
-
-            var randomCard = allCards[Random.Range(0, allCards.Count)];
+            var randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
 
             if (randomChance > 0)
                 OpeningPairCards(randomCard);
@@ -48,7 +46,7 @@ namespace CJ.FindAPair.Game.SpecialCards
             }
         }
         
-        private Card GetRandomCard(Card randomCard, bool isMatched)
+        private Card GetRandomCard(Card randomCard, bool isMatched) //TODO Repeting MagicEyeBooster
         {
             while (!(isMatched ^ randomCard.IsMatched) || randomCard.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {

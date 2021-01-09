@@ -35,12 +35,14 @@ namespace CJ.FindAPair.CardTable
 
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
+        public event UnityAction CardOpensForAnimation;
+        public event UnityAction CardClosedForAnimation;
 
         private void Awake()
         {
             IsEmpty = false;
             IsShow = false;
-            _button.onClick.AddListener(Show);
+            _button.onClick.AddListener(() => Show());
         }
 
         private void Start()
@@ -60,16 +62,22 @@ namespace CJ.FindAPair.CardTable
             _text.SetText(NumberPair.ToString());
         }
         
-        public void Show()
+        public void Show(bool isNotEventCall = false)
         {
             IsShow = true;
+            CardOpensForAnimation?.Invoke();
+            
+            if(isNotEventCall) return;
             СardOpens?.Invoke();
         }
 
-        public void Hide()
+        public void Hide(bool isNotEventCall = false)
         {
             IsShow = false;
             IsMatched = false;
+            CardClosedForAnimation?.Invoke();
+            
+            if(isNotEventCall) return;
             CardClosed?.Invoke();
         }
         
@@ -77,8 +85,6 @@ namespace CJ.FindAPair.CardTable
         {
             StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
-
-
 
         private void MakeEmpty()
         {

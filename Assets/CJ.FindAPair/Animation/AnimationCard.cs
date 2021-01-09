@@ -15,6 +15,9 @@ namespace CJ.FindAPair.Animation
         [SerializeField] private Transform _pointEndCombo;
         
         [SerializeField] private ParticleSystem _comboEffect;
+        [SerializeField] private ParticleSystem _magicEyeEffect;
+        [SerializeField] private ParticleSystem _electroshockEffect;
+        [SerializeField] private ParticleSystem _sapperEffect;
 
         [Header("Dotween settings")] 
         [SerializeField] private float _durationComboText;
@@ -39,14 +42,29 @@ namespace CJ.FindAPair.Animation
 
         private void OnEnable()
         {
-            _card.СardOpens += PlayShowAnimation;
-            _card.CardClosed += PlayHideAnimation;
+            _card.CardOpensForAnimation += PlayShowAnimation;
+            _card.CardClosedForAnimation += PlayHideAnimation;
         }
 
         private void OnDisable()
         {
-            _card.СardOpens -= PlayShowAnimation;
-            _card.CardClosed -= PlayHideAnimation;
+            _card.CardOpensForAnimation -= PlayShowAnimation;
+            _card.CardClosedForAnimation -= PlayHideAnimation;
+        }
+
+        public void PlayMagicEye()
+        {
+            _magicEyeEffect.Play();
+        }
+        
+        public void PlayElectroshock()
+        {
+            _electroshockEffect.Play();
+        }
+        
+        public void PlaySapper()
+        {
+            _sapperEffect.Play();
         }
         
         public void PlayCombo(int scoreCombo)
@@ -77,6 +95,9 @@ namespace CJ.FindAPair.Animation
             var newScale = gameObject.GetComponent<RectTransform>().sizeDelta.x / _startSizeCard;
             
             _comboEffect.transform.localScale = Vector3.one * newScale; 
+            _magicEyeEffect.transform.localScale = Vector3.one * newScale; 
+            _electroshockEffect.transform.localScale = Vector3.one * newScale; 
+            _sapperEffect.transform.localScale = Vector3.one * newScale; 
         }
     }
 }

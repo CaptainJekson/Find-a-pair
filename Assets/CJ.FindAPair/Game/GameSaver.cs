@@ -1,18 +1,19 @@
 ﻿using System;
 using System.IO;
+using CJ.FindAPair.Game.Booster;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace CJ.FindAPair.Game
 {
-    public class GameSaver : MonoBehaviour
+    public static class GameSaver
     {
-        private Save _save;
-        private string _path;
+        private static Save _save;
+        private static string _path;
 
-        public event UnityAction OnSaved;
+        public static event UnityAction OnSaved;
 
-        private void Awake()
+        public static void Init()
         {
             _save = new Save();
 
@@ -29,24 +30,15 @@ namespace CJ.FindAPair.Game
             OnSaved?.Invoke();
         }
 
-        public void SaveInt(SaveTypeInt saveTypeInt, int value)
+        public static void SaveResources(PlayerResourcesType playerResourcesType, int value)
         {
-            switch (saveTypeInt)
+            switch (playerResourcesType)
             {
-                case SaveTypeInt.Score:
-                    _save.Score += value;
+                case PlayerResourcesType.Gold:
+                    _save.Gold += value;
                     break;
-                case SaveTypeInt.Energy:
+                case PlayerResourcesType.Energy:
                     _save.Energy += value;
-                    break;
-                case SaveTypeInt.MagicEye:
-                    _save.MagicEye += value;
-                    break;
-                case SaveTypeInt.Electroshock:
-                    _save.Electroshock += value;
-                    break;
-                case SaveTypeInt.Sapper:
-                    _save.Sapper += value;
                     break;
                 default:
                     throw new Exception("save type not selected");
@@ -57,32 +49,61 @@ namespace CJ.FindAPair.Game
             OnSaved?.Invoke();
         }
         
-        public int LoadInt(SaveTypeInt saveTypeInt)
+        public static int LoadResources(PlayerResourcesType playerResourcesType)
         {
-            switch (saveTypeInt)
+            switch (playerResourcesType)
             {
-                case SaveTypeInt.Score:
-                    return _save.Score;
-                case SaveTypeInt.Energy:
+                case PlayerResourcesType.Gold:
+                    return _save.Gold;
+                case PlayerResourcesType.Energy:
                     return _save.Energy;
-                case SaveTypeInt.MagicEye:
+                default:
+                    throw new Exception("load type not selected");
+            }
+        }
+        
+        public static void SaveBooster(BoosterType boosterType, int value)
+        {
+            switch (boosterType)
+            {
+                case BoosterType.MagicEye:
+                    _save.MagicEye += value;
+                    break;
+                case BoosterType.Electroshock:
+                    _save.Electroshock += value;
+                    break;
+                case BoosterType.Sapper:
+                    _save.Sapper += value;
+                    break;
+                default:
+                    throw new Exception("load type not selected");
+            }
+            
+            File.WriteAllText(_path, JsonUtility.ToJson(_save));
+            
+            OnSaved?.Invoke();
+        }
+
+        public static int LoadBooster(BoosterType boosterType)
+        {
+            switch (boosterType)
+            {
+                case BoosterType.MagicEye:
                     return _save.MagicEye;
-                case SaveTypeInt.Electroshock:
+                case BoosterType.Electroshock:
                     return _save.Electroshock;
-                case SaveTypeInt.Sapper:
+                case BoosterType.Sapper:
                     return _save.Sapper;
                 default:
                     throw new Exception("load type not selected");
             }
-
-            return 0;
         }
 
-        public void SaveString(SaveTypeString saveTypeString)
+        public static void SaveString(SaveTypeString saveTypeString)
         {
         }
 
-        public void SaveDateTime(SaveTypeDateTime saveTypeDateTime)
+        public static void SaveDateTime(SaveTypeDateTime saveTypeDateTime)
         {
         }
     }
