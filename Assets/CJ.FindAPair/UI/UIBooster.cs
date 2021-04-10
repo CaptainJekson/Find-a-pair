@@ -1,4 +1,5 @@
-﻿using CJ.FindAPair.Game;
+﻿using System;
+using CJ.FindAPair.Game;
 using CJ.FindAPair.Game.Booster;
 using TMPro;
 using UnityEngine;
@@ -22,6 +23,16 @@ namespace CJ.FindAPair.UI
             _button = GetComponent<Button>();
             _button.onClick.AddListener(OnClickButton);
             SetInfo();
+        }
+
+        private void OnEnable()
+        {
+            GameSaver.OnSaved += SetInfo;
+        }
+
+        private void OnDisable()
+        {
+            GameSaver.OnSaved -= SetInfo;
         }
 
         private void OnClickButton()

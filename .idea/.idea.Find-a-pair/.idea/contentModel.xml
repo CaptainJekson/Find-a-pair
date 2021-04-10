@@ -39,6 +39,7 @@
               <e p="ElectroshockBooster.cs" t="Include" />
               <e p="MagicEyeBooster.cs" t="Include" />
               <e p="SapperBooster.cs" t="Include" />
+              <e p="TestBooster.cs" t="Include" />
             </e>
             <e p="GameSaver.cs" t="Include" />
             <e p="GameWatcher.cs" t="Include" />

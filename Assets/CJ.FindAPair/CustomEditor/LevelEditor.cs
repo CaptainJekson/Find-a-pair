@@ -1,5 +1,7 @@
 ﻿#if UNITY_EDITOR
 
+using System;
+using System.Collections.Generic;
 using CJ.FindAPair.Configuration;
 using UnityEngine;
 using UnityEditor;
@@ -9,6 +11,8 @@ namespace CJ.FindAPair.CustomEditor
 {
     public class LevelEditor : EditorWindow
     {
+        private LevelConfig _levelConfig;
+
         private bool[,] _levelMatrix = new bool[0, 0];
 
         private int _level = 0;
@@ -41,6 +45,13 @@ namespace CJ.FindAPair.CustomEditor
         private void OnGUI()
         {
             GUILayout.Label("РЕДАКТОР УРОВНЯ", EditorStyles.boldLabel);
+            _levelConfig = EditorGUILayout.ObjectField(_levelConfig, typeof(LevelConfig), true)
+                as LevelConfig;
+            if (GUILayout.Button("Прочитать файл уровня"))
+            {
+                ReadLevelConfig();
+            }
+
             _level = EditorGUILayout.IntField("Номер уровня", _level);
 
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
@@ -87,7 +98,7 @@ namespace CJ.FindAPair.CustomEditor
 
             ChangeArrayWidthAndHeight();
 
-            if (GUILayout.Button("Создать"))
+            if (GUILayout.Button("Создать/перезаписать"))
             {
                 if (LevelValidation(ref _errorMessage))
                 {
@@ -107,6 +118,50 @@ namespace CJ.FindAPair.CustomEditor
             if (GUILayout.Button("Снять все"))
             {
                 WriteToAllMatrix(false);
+            }
+        }
+
+        private void ReadLevelConfig()
+        {
+            if (_levelConfig == null)
+            {
+                Debug.LogError("[Error: Выберите файл с уровнем]");
+                return;
+            }
+
+            _level = _levelConfig.LevelNumber;
+            _scale = _levelConfig.Scale;
+            _quantityOfCardOfPair = _levelConfig.QuantityOfCardOfPair;
+            _tries = _levelConfig.Tries;
+            _time = _levelConfig.Time;
+            _isFortune = _levelConfig.QuantityPairOfFortune > 0;
+            _quantityPairOfFortune = _levelConfig.QuantityPairOfFortune;
+            _isEntanglement = _levelConfig.QuantityPairOfEntanglement > 0;
+            _quantityPairOfEntanglement = _levelConfig.QuantityPairOfEntanglement;
+            _isReset = _levelConfig.QuantityPairOfReset > 0;
+            _quantityPairOfReset = _levelConfig.QuantityPairOfReset;
+            _isBomb = _levelConfig.QuantityPairOfBombs > 0;
+            _quantityPairOfBombs = _levelConfig.QuantityPairOfBombs;
+
+            _width = _levelConfig.Width;
+            _height = _levelConfig.Height;
+
+            _levelMatrix = new bool[_width,_height];
+            var array = _levelConfig.LevelField;
+            var countWidth = 0;
+            var countHeight = 0;
+
+            for (var i = 0; i < array.Count; i++)
+            {
+                if (countHeight >= _height)
+                {
+                    countHeight = 0;
+                    countWidth++;
+                }
+
+                _levelMatrix[countWidth, countHeight] = array[i];
+
+                countHeight++;
             }
         }
 
@@ -156,7 +211,7 @@ namespace CJ.FindAPair.CustomEditor
             var isValid = false;
             var quantityCard = 0;
             var quantitySpecialCard = (_quantityPairOfFortune + _quantityPairOfEntanglement +
-                                       _quantityPairOfReset + _quantityPairOfBombs)  * (int) _quantityOfCardOfPair;
+                                       _quantityPairOfReset + _quantityPairOfBombs) * (int) _quantityOfCardOfPair;
 
             foreach (var item in _levelMatrix)
             {

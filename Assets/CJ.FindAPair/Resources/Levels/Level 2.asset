@@ -18,7 +18,7 @@ MonoBehaviour:
   _scale: 1
   _quantityOfCardOfPair: 2
   _tries: 15
-  _time: 110
+  _time: 130
   _quantityPairOfFortune: 0
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0

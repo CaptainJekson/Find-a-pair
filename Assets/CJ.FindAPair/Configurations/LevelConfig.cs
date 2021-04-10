@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR 
 using CJ.FindAPair.CustomEditor;
@@ -40,17 +41,17 @@ namespace CJ.FindAPair.Configuration
         public int QuantityPairOfSpecialCard => _quantityPairOfFortune + _quantityPairOfEntanglement +
                                                 _quantityPairOfReset + _quantityPairOfBombs;
 
-        public void SetSizeLevel(bool[,] _levelMatrix, int level, float scale)
+        public void SetSizeLevel(bool[,] levelMatrix, int level, float scale)
         {
-            _width = _levelMatrix.GetLength(0);
-            _height = _levelMatrix.GetLength(1);
+            _width = levelMatrix.GetLength(0);
+            _height = levelMatrix.GetLength(1);
             _scale = scale;
 
             for (var i = 0; i < _width; i++)
             {
                 for (var j = 0; j < _height; j++)
                 {
-                    _levelField.Add(_levelMatrix[i, j]);
+                    _levelField.Add(levelMatrix[i, j]);
                 }
             }
 

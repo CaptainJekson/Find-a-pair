@@ -23,18 +23,27 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Internal/ProcessorsSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Internal/ProcessorsSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Save.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Save.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +56,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/SpecialCardHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/MagicEyeBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/TestBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UINextLevelButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIValue.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +69,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPreviewLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/Prefabs/Game/Booster Panel Screen.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/GameSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIGoToNodeButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -79,6 +90,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Save.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/ResetCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/ElectroshockBooster.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -96,8 +108,6 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UICoin.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeInt.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/LevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/SpecialCardHandler.cs" />
@@ -116,10 +126,13 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/BoosterHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/Booster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Save.json" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/TestBooster.cs" />
       </list>
     </option>
   </component>
@@ -130,6 +143,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3498452" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3003096" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -143,10 +158,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3432">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="3432" />
       <method v="2" />
     </configuration>
   </component>
@@ -176,6 +191,7 @@
       <workItem from="1609628272315" duration="3422000" />
       <workItem from="1609875968391" duration="11449000" />
       <workItem from="1610220268659" duration="11838000" />
+      <workItem from="1618081561049" duration="9972000" />
     </task>
     <servers />
   </component>
@@ -200,10 +216,70 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="65" key="RiderGenerateDialog" timestamp="1605039330657">
+    <state width="1323" height="101" key="GridCell.Tab.0.bottom" timestamp="1618087590786">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="65" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1605039330657" />
+    <state width="1323" height="101" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
+    <state width="1323" height="101" key="GridCell.Tab.0.center" timestamp="1618087590786">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
+    <state width="1323" height="101" key="GridCell.Tab.0.left" timestamp="1618087590785">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590785" />
+    <state width="1323" height="101" key="GridCell.Tab.0.right" timestamp="1618087590786">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
+    <state width="1323" height="101" key="GridCell.Tab.1.bottom" timestamp="1618087590786">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
+    <state width="1323" height="101" key="GridCell.Tab.1.center" timestamp="1618087590786">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
+    <state width="1323" height="101" key="GridCell.Tab.1.left" timestamp="1618087590786">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
+    <state width="1323" height="101" key="GridCell.Tab.1.right" timestamp="1618087590786">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
+    <state width="1323" height="101" key="GridCell.Tab.2.bottom" timestamp="1618087590787">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
+    <state width="1323" height="101" key="GridCell.Tab.2.center" timestamp="1618087590787">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
+    <state width="1323" height="101" key="GridCell.Tab.2.left" timestamp="1618087590787">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
+    <state width="1323" height="101" key="GridCell.Tab.2.right" timestamp="1618087590787">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
+    <state width="1323" height="101" key="GridCell.Tab.3.bottom" timestamp="1618087590788">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590788" />
+    <state width="1323" height="101" key="GridCell.Tab.3.center" timestamp="1618087590787">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
+    <state width="1323" height="101" key="GridCell.Tab.3.left" timestamp="1618087590787">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
+    <state width="1323" height="101" key="GridCell.Tab.3.right" timestamp="1618087590788">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="101" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590788" />
     <state x="314" y="0" key="SettingsEditor" timestamp="1610222899676">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -220,9 +296,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="326" y="0" width="714" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609621710104" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610233597163">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618089537442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610233597163" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618089537442" />
   </component>
 </project>
