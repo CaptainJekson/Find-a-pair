@@ -59,6 +59,7 @@
             <e p="UIBooster.cs" t="Include" />
             <e p="UIGoToNodeButton.cs" t="Include" />
             <e p="UIIntForSave.cs" t="Include" />
+            <e p="UILevelInfo.cs" t="Include" />
             <e p="UILevelPage.cs" t="Include" />
             <e p="UILevelSlot.cs" t="Include" />
             <e p="UILevelSlotsCreator.cs" t="Include" />

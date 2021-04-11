@@ -20,30 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 1.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 2.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 3.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 4.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Internal/ProcessorsSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Internal/ProcessorsSettings.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Save.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Save.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Game/Game Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/Game/Game Menu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Game/Game Result Screen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/Game/Game Result Screen.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,44 +41,54 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/SpecialCardHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/MagicEyeBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/TestBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UINextLevelButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIValue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Scripts/Coroutiner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPivotFidex.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/BoosterHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelPage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/Booster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPreviewLevel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UI/Prefabs/Game/Booster Panel Screen.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelSlotsCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/GameSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIOpenCloseButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIGoToNodeButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeString.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/QuantityOfCardOfPair.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/LevelCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/UIFlexibleGridController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Save.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///UIBooster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/ElectroshockBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 9.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/MagicEyeBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 5.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/Prefabs/Game/Booster Panel Screen.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeString.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/PlayerResourcesType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/EntanglementCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/LevelCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/BoosterType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/SpecialCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Save.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/ResetCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/ElectroshockBooster.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -131,8 +127,11 @@
         <option value="$PROJECT_DIR$/Assets/Save.json" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/TestBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPause.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs" />
       </list>
     </option>
   </component>
@@ -158,10 +157,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3432">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3432" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -292,10 +291,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1610230369359" />
-    <state x="326" y="0" width="714" height="728" key="find.popup" timestamp="1609621710104">
+    <state x="319" y="0" width="809" height="728" key="find.popup" timestamp="1618169711117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="326" y="0" width="714" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609621710104" />
+    <state x="319" y="0" width="809" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1618169711117" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618089537442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

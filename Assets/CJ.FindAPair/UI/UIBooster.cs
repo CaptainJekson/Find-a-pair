@@ -43,9 +43,8 @@ namespace CJ.FindAPair.UI
 
         private void SetInfo()
         {
-            if (GameSaver.LoadBooster(_boosterType) <= 0)
-                _button.interactable = false;
-            
+            _button.interactable = GameSaver.LoadBooster(_boosterType) > 0;
+
             _countText.SetText(GameSaver.LoadBooster(_boosterType).ToString());
         }
     }
