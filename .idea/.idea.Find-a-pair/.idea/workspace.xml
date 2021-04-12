@@ -26,10 +26,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Collections/LevelCollection.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 13.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 13.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 13.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 13.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 14.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 14.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 14.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 14.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BoosterHandlers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BoosterHandlers.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Save.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Save.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +95,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/ResetCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///UILevelInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -125,12 +133,12 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Save.json" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/TestBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPause.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
       </list>
     </option>
   </component>
@@ -191,6 +199,14 @@
       <workItem from="1610220268659" duration="11838000" />
       <workItem from="1618081561049" duration="9972000" />
     </task>
+    <task id="LOCAL-00001" summary="level info">
+      <created>1618257547347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618257547347</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +228,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="level info" />
+    <option name="LAST_COMMIT_MESSAGE" value="level info" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1323" height="101" key="GridCell.Tab.0.bottom" timestamp="1618087590786">
@@ -294,13 +312,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1610230369359" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1618257559316">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618257559316" />
     <state x="319" y="0" width="809" height="728" key="find.popup" timestamp="1618169711117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="319" y="0" width="809" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1618169711117" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618256954391">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618258330459">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618256954391" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618258330459" />
   </component>
 </project>

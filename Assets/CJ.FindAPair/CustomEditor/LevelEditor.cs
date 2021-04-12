@@ -33,7 +33,7 @@ namespace CJ.FindAPair.CustomEditor
         private int _quantityPairOfReset = 0;
         private int _quantityPairOfBombs = 0;
 
-
+        private int _quantityCards;
         private string _errorMessage;
 
         [MenuItem("Find a pair/Level Editor")]

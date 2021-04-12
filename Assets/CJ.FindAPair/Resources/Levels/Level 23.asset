@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bab36fc551cd8c44ea955eea752e6b58, type: 3}
-  m_Name: Level 14
+  m_Name: Level 23
   m_EditorClassIdentifier: 
-  _level: 14
-  _width: 5
+  _level: 23
+  _width: 6
   _height: 6
   _scale: 0.9
   _quantityOfCardOfPair: 2
-  _tries: 16
-  _time: 120
-  _quantityPairOfFortune: 1
+  _tries: 14
+  _time: 130
+  _quantityPairOfFortune: 0
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 010101010101010001010001010101010101010001010001010101010101
+  _levelField: 010100000101010100000101000001010000000001010000010100000101010100000101

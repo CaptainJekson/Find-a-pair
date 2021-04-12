@@ -17,10 +17,10 @@ MonoBehaviour:
   _height: 6
   _scale: 0.9
   _quantityOfCardOfPair: 2
-  _tries: 16
-  _time: 120
+  _tries: 15
+  _time: 180
   _quantityPairOfFortune: 1
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 010101010101010001010001010101010101010001010001010101010101
+  _levelField: 010100000101010001010001010100000101010001010001010100000101

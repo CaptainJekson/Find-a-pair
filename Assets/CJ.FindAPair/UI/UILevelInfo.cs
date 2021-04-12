@@ -22,7 +22,6 @@ namespace CJ.FindAPair.UI
 
         private void SetData()
         {
-            Debug.LogError("ASDAD");
             _levelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
         }
     }
