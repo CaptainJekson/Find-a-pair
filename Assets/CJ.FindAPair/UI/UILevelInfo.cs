@@ -1,4 +1,5 @@
-﻿using CJ.FindAPair.CardTable;
+﻿using System;
+using CJ.FindAPair.CardTable;
 using TMPro;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace CJ.FindAPair.UI
     public class UILevelInfo : MonoBehaviour
     {
         [SerializeField] private LevelCreator _levelCreator;
-        [SerializeField] private TextMeshProUGUI _currentLevelText;
+        [SerializeField] private TextMeshProUGUI _levelText;
 
         private void Awake()
         {
@@ -21,7 +22,8 @@ namespace CJ.FindAPair.UI
 
         private void SetData()
         {
-            _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
+            Debug.LogError("ASDAD");
+            _levelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
         }
     }
 }

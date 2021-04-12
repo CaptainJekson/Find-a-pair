@@ -5110,7 +5110,7 @@ GameObject:
   - component: {fileID: 8669773452464732138}
   - component: {fileID: 8669773452464732141}
   - component: {fileID: 8669773452464732140}
-  - component: {fileID: 1564881074062124241}
+  - component: {fileID: 1850355941787711501}
   m_Layer: 0
   m_Name: Game Result Screen
   m_TagString: Untagged
@@ -5671,7 +5671,7 @@ MonoBehaviour:
   UseCustomStartAnchoredPosition: 1
   ViewCategory: GameResult
   ViewName: Defeat
---- !u!114 &1564881074062124241
+--- !u!114 &1850355941787711501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5680,11 +5680,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8669773452464732142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5547304b6e34ecf90ae458820eb243c, type: 3}
+  m_Script: {fileID: 11500000, guid: bb076f6f6df5468895127d2fbee1d3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _levelCreator: {fileID: 0}
-  _currentLevelText: {fileID: 570512878906789692}
+  _levelText: {fileID: 570512878906789692}
 --- !u!1 &8669773453010102016
 GameObject:
   m_ObjectHideFlags: 0
