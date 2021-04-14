@@ -2,6 +2,7 @@
 using CJ.FindAPair.Configuration;
 using CJ.FindAPair.Configurations;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,13 @@ namespace CJ.FindAPair.UI
         }
 
         private void ButtonClickHandler()
+        {
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(1.0f);
+            sequence.AppendCallback(CreateNextLevel);
+        }
+
+        private void CreateNextLevel()
         {
             LevelConfig nextLevel;
             var currentLevelNumber = _levelCreator.LevelConfig.LevelNumber;
