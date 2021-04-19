@@ -25,7 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="" />
+    <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,11 +54,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPivotFidex.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Basic.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Prefabs/Game/Booster Panel Screen.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPreviewLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelSlotsCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Levels/Level 36.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIOpenCloseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIGoToNodeButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SaveTypeDateTime.cs" root0="FORCE_HIGHLIGHTING" />
@@ -196,6 +198,8 @@
       <workItem from="1609875968391" duration="11449000" />
       <workItem from="1610220268659" duration="11838000" />
       <workItem from="1618081561049" duration="9972000" />
+      <workItem from="1618386863125" duration="286000" />
+      <workItem from="1618813385599" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -211,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618383131173</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding levels 5">
+      <created>1618387129184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618387129184</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +258,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="level info" />
     <MESSAGE value="Adding levels 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding levels 4" />
+    <MESSAGE value="Adding levels 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding levels 5" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1323" height="101" key="GridCell.Tab.0.bottom" timestamp="1618087590786">
@@ -332,11 +344,11 @@
     </state>
     <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1610230369359" />
     <state x="129" y="131" width="1662" height="778" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618381693185" />
-    <state x="387" y="137" key="Vcs.Push.Dialog.v2" timestamp="1618383139481">
+    <state x="387" y="137" key="Vcs.Push.Dialog.v2" timestamp="1618387143178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618257559316" />
-    <state x="387" y="137" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1618383139481" />
+    <state x="387" y="137" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1618387143178" />
     <state x="319" y="0" width="809" height="728" key="find.popup" timestamp="1618169711117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
