@@ -1,15 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using CJ.FindAPair.Constants;
-using CJ.FindAPair.CoreGames;
-using CJ.FindAPair.Game;
 using CJ.FindAPair.Game.SpecialCards;
 using UnityEngine;
+using Zenject;
 
-namespace CJ.FindAPair.CardTable
+namespace CJ.FindAPair.CoreGames.SpecialCards
 {
-    [RequireComponent(typeof(GameWatcher), typeof(CardComparator), 
-        typeof(LevelCreator))]
     public class SpecialCardHandler : MonoBehaviour
     {
         [SerializeField] private List<SpecialCard> _handlers;
@@ -20,11 +17,12 @@ namespace CJ.FindAPair.CardTable
 
         private SpecialCard _specialCard;
 
-        private void Awake()
+        [Inject]
+        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher, CardComparator cardComparator)
         {
-            _gameWatcher = GetComponent<GameWatcher>();
-            _cardComparator = GetComponent<CardComparator>();
-            _levelCreator = GetComponent<LevelCreator>();
+            _levelCreator = levelCreator;
+            _gameWatcher = gameWatcher;
+            _cardComparator = cardComparator;
         }
 
         private void OnEnable()

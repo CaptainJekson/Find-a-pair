@@ -2,6 +2,7 @@
 using CJ.FindAPair.Animation;
 using CJ.FindAPair.CardTable;
 using CJ.FindAPair.Constants;
+using CJ.FindAPair.CoreGames;
 using UnityEngine;
 
 namespace CJ.FindAPair.Game.Booster

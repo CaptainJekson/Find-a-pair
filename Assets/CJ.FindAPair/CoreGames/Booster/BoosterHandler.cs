@@ -6,11 +6,10 @@ using CJ.FindAPair.Game;
 using CJ.FindAPair.Game.Booster;
 using CJ.FindAPair.UI;
 using UnityEngine;
+using Zenject;
 
 namespace CJ.FindAPair.CardTable
 {
-    [RequireComponent(typeof(GameWatcher), typeof(CardComparator), 
-        typeof(LevelCreator))]
     public class BoosterHandler : MonoBehaviour
     {
         [SerializeField] private List<Booster> _handlers;
@@ -19,14 +18,14 @@ namespace CJ.FindAPair.CardTable
         private GameWatcher _gameWatcher;
         private CardComparator _cardComparator;
         private LevelCreator _levelCreator;
-
         private Booster _booster;
 
-        private void Awake()
+        [Inject]
+        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher, CardComparator cardComparator)
         {
-            _gameWatcher = GetComponent<GameWatcher>();
-            _cardComparator = GetComponent<CardComparator>();
-            _levelCreator = GetComponent<LevelCreator>();
+            _levelCreator = levelCreator;
+            _gameWatcher = gameWatcher;
+            _cardComparator = cardComparator;
         }
 
         private void OnEnable()

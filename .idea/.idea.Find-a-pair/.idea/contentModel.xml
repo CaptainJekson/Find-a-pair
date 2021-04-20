@@ -10,7 +10,15 @@
       <e p="Assets" t="Include">
         <e p="CJ.FindAPair" t="Include">
           <e p="CoreGames" t="Include">
-            <e p="CameraInCanvas.cs" t="Include" />
+            <e p="Booster" t="Include">
+              <e p="Booster.cs" t="Include" />
+              <e p="BoosterHandler.cs" t="Include" />
+              <e p="BoosterType.cs" t="Include" />
+              <e p="ElectroshockBooster.cs" t="Include" />
+              <e p="MagicEyeBooster.cs" t="Include" />
+              <e p="SapperBooster.cs" t="Include" />
+              <e p="TestBooster.cs" t="Include" />
+            </e>
             <e p="Card.cs" t="Include" />
             <e p="CardComparator.cs" t="Include" />
             <e p="Configs" t="Include">
@@ -18,7 +26,6 @@
               <e p="LevelConfig.cs" t="Include" />
               <e p="LevelConfigCollection.cs" t="Include" />
             </e>
-            <e p="GameCamera.cs" t="Include" />
             <e p="GameWatcher.cs" t="Include" />
             <e p="Installer" t="Include">
               <e p="CoreGameCreator.cs" t="Include" />
@@ -26,6 +33,17 @@
             </e>
             <e p="LevelCreator.cs" t="Include" />
             <e p="QuantityOfCardOfPair.cs" t="Include" />
+            <e p="SpecialCards" t="Include">
+              <e p="BombCard.cs" t="Include" />
+              <e p="EntanglementCard.cs" t="Include" />
+              <e p="FortuneCard.cs" t="Include" />
+              <e p="ResetCard.cs" t="Include" />
+              <e p="SpecialCard.cs" t="Include" />
+              <e p="SpecialCardHandler.cs" t="Include" />
+            </e>
+            <e p="TEST" t="Include">
+              <e p="CreateLevelTEST.cs" t="Include" />
+            </e>
             <e p="UIFlexibleGridController.cs" t="Include" />
           </e>
           <e p="Service" t="Include">
@@ -44,10 +62,6 @@
           <e p="Animation" t="Include">
             <e p="AnimationCard.cs" t="Include" />
           </e>
-          <e p="CardTable" t="Include">
-            <e p="BoosterHandler.cs" t="Include" />
-            <e p="SpecialCardHandler.cs" t="Include" />
-          </e>
           <e p="Constants" t="Include">
             <e p="ConstantsCard.cs" t="Include" />
           </e>
@@ -55,26 +69,11 @@
             <e p="LevelEditor.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
-            <e p="Booster" t="Include">
-              <e p="Booster.cs" t="Include" />
-              <e p="BoosterType.cs" t="Include" />
-              <e p="ElectroshockBooster.cs" t="Include" />
-              <e p="MagicEyeBooster.cs" t="Include" />
-              <e p="SapperBooster.cs" t="Include" />
-              <e p="TestBooster.cs" t="Include" />
-            </e>
             <e p="GameSaver.cs" t="Include" />
             <e p="PlayerResourcesType.cs" t="Include" />
             <e p="Save.cs" t="Include" />
             <e p="SaveTypeDateTime.cs" t="Include" />
             <e p="SaveTypeString.cs" t="Include" />
-            <e p="SpecialCards" t="Include">
-              <e p="BombCard.cs" t="Include" />
-              <e p="EntanglementCard.cs" t="Include" />
-              <e p="FortuneCard.cs" t="Include" />
-              <e p="ResetCard.cs" t="Include" />
-              <e p="SpecialCard.cs" t="Include" />
-            </e>
           </e>
           <e p="UI" t="Include">
             <e p="UIBooster.cs" t="Include" />

@@ -9,7 +9,7 @@ using UnityEngine;
 namespace CJ.FindAPair.Configurations
 {
     [CreateAssetMenu(fileName = "LevelCollection", menuName = "Find a pair/LevelCollection")]
-    class LevelConfigCollection : ScriptableObject
+    public class LevelConfigCollection : ScriptableObject
     {
         [SerializeField] private List<LevelConfig> _levels;
 

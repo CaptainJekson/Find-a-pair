@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using CJ.FindAPair.CardTable;
 using CJ.FindAPair.Constants;
+using CJ.FindAPair.CoreGames;
 
 namespace CJ.FindAPair.Game.SpecialCards
 {

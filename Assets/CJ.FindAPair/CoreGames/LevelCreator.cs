@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using CJ.FindAPair.CardTable;
 using CJ.FindAPair.Configuration;
 using CJ.FindAPair.Constants;
 using UnityEngine;
@@ -11,7 +10,6 @@ namespace CJ.FindAPair.CoreGames
     public class LevelCreator : MonoBehaviour
     {
         [SerializeField] private Card _card;
-        [SerializeField] private Transform _tableParent;
 
         private LevelConfig _level;
         private List<Card> _cards;
@@ -27,7 +25,7 @@ namespace CJ.FindAPair.CoreGames
 
         private void Awake()
         {
-            _gridLayoutGroup = _tableParent.GetComponent<GridLayoutGroup>();
+            _gridLayoutGroup = GetComponent<GridLayoutGroup>();
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
 
             _cards = new List<Card>();
@@ -37,6 +35,7 @@ namespace CJ.FindAPair.CoreGames
         public void CreateLevel(LevelConfig level)
         {
             _level = level;
+
             _gridLayoutGroup.constraintCount = _level.Width;
 
             PlaceCards();
@@ -75,9 +74,7 @@ namespace CJ.FindAPair.CoreGames
         {
             foreach (var cell in _level.LevelField)
             {
-                var newCard = Instantiate(_card, _tableParent);
-
-                newCard.transform.SetParent(transform, false);
+                var newCard = Instantiate(_card, transform);
 
                 if (cell == false)
                 {

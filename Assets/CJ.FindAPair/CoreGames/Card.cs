@@ -1,12 +1,11 @@
-﻿using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-using UnityEngine.Events;
-using System.Collections;
+﻿using System.Collections;
 using CJ.FindAPair.Configuration;
-using CJ.FindAPair.Constants;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
-namespace CJ.FindAPair.CardTable
+namespace CJ.FindAPair.CoreGames
 {
     public class Card : MonoBehaviour
     {
