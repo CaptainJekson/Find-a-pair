@@ -1,7 +1,7 @@
 ﻿using System.Collections;
-using CJ.FindAPair.CardTable;
-using CJ.FindAPair.Configuration;
 using CJ.FindAPair.CoreGames;
+using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CoreGames.Configs;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;

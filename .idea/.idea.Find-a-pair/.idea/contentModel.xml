@@ -1,72 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.62146842.00" t="ExcludeRecursive" />
-    <e p="D:\UnityProject\Find-a-pair" t="IncludeRecursive">
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.-1508878433.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Evgeniy\Desktop\UnityProjects\Find-a-pair" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CJ.FindAPair" t="Include">
-          <e p="CoreGames" t="Include">
-            <e p="Booster" t="Include">
-              <e p="Booster.cs" t="Include" />
-              <e p="BoosterHandler.cs" t="Include" />
-              <e p="BoosterType.cs" t="Include" />
-              <e p="ElectroshockBooster.cs" t="Include" />
-              <e p="MagicEyeBooster.cs" t="Include" />
-              <e p="SapperBooster.cs" t="Include" />
-              <e p="TestBooster.cs" t="Include" />
-            </e>
-            <e p="Card.cs" t="Include" />
-            <e p="CardComparator.cs" t="Include" />
-            <e p="Configs" t="Include">
-              <e p="GameSettingsConfig.cs" t="Include" />
-              <e p="LevelConfig.cs" t="Include" />
-              <e p="LevelConfigCollection.cs" t="Include" />
-            </e>
-            <e p="GameWatcher.cs" t="Include" />
-            <e p="Installer" t="Include">
-              <e p="CoreGameCreator.cs" t="Include" />
-              <e p="CoreGameInstaller.cs" t="Include" />
-            </e>
-            <e p="LevelCreator.cs" t="Include" />
-            <e p="QuantityOfCardOfPair.cs" t="Include" />
-            <e p="SpecialCards" t="Include">
-              <e p="BombCard.cs" t="Include" />
-              <e p="EntanglementCard.cs" t="Include" />
-              <e p="FortuneCard.cs" t="Include" />
-              <e p="ResetCard.cs" t="Include" />
-              <e p="SpecialCard.cs" t="Include" />
-              <e p="SpecialCardHandler.cs" t="Include" />
-            </e>
-            <e p="TEST" t="Include">
-              <e p="CreateLevelTEST.cs" t="Include" />
-            </e>
-            <e p="UIFlexibleGridController.cs" t="Include" />
-          </e>
-          <e p="Service" t="Include">
-            <e p="Installer" t="Include">
-              <e p="ServiceInstaller.cs" t="Include" />
-            </e>
-          </e>
-          <e p="StartupInstaller.cs" t="Include" />
-          <e p="UI" t="Include">
-            <e p="Installer" t="Include">
-              <e p="UIInstaller.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="OldScripts" t="Include">
-          <e p="Animation" t="Include">
-            <e p="AnimationCard.cs" t="Include" />
-          </e>
           <e p="Constants" t="Include">
             <e p="ConstantsCard.cs" t="Include" />
           </e>
           <e p="CustomEditor" t="Include">
             <e p="LevelEditor.cs" t="Include" />
+          </e>
+          <e p="Modules" t="Include">
+            <e p="CoreGames" t="Include">
+              <e p="Booster" t="Include">
+                <e p="Booster.cs" t="Include" />
+                <e p="BoosterHandler.cs" t="Include" />
+                <e p="BoosterType.cs" t="Include" />
+                <e p="ElectroshockBooster.cs" t="Include" />
+                <e p="MagicEyeBooster.cs" t="Include" />
+                <e p="SapperBooster.cs" t="Include" />
+                <e p="TestBooster.cs" t="Include" />
+              </e>
+              <e p="Card.cs" t="Include" />
+              <e p="CardComparator.cs" t="Include" />
+              <e p="Configs" t="Include">
+                <e p="GameSettingsConfig.cs" t="Include" />
+                <e p="LevelConfig.cs" t="Include" />
+                <e p="LevelConfigCollection.cs" t="Include" />
+              </e>
+              <e p="GameWatcher.cs" t="Include" />
+              <e p="Installer" t="Include">
+                <e p="CoreGameCreator.cs" t="Include" />
+                <e p="CoreGameInstaller.cs" t="Include" />
+              </e>
+              <e p="LevelBackground.cs" t="Include" />
+              <e p="LevelCreator.cs" t="Include" />
+              <e p="QuantityOfCardOfPair.cs" t="Include" />
+              <e p="SpecialCards" t="Include">
+                <e p="BombCard.cs" t="Include" />
+                <e p="EntanglementCard.cs" t="Include" />
+                <e p="FortuneCard.cs" t="Include" />
+                <e p="ResetCard.cs" t="Include" />
+                <e p="SpecialCard.cs" t="Include" />
+                <e p="SpecialCardHandler.cs" t="Include" />
+              </e>
+              <e p="TEST" t="Include">
+                <e p="CreateLevelTEST.cs" t="Include" />
+              </e>
+              <e p="UIFlexibleGridController.cs" t="Include" />
+            </e>
+            <e p="Service" t="Include">
+              <e p="Installer" t="Include">
+                <e p="ServiceInstaller.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UI" t="Include">
+              <e p="Installer" t="Include">
+                <e p="UIInstaller.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="StartupInstaller.cs" t="Include" />
+        </e>
+        <e p="OldScripts" t="Include">
+          <e p="Animation" t="Include">
+            <e p="AnimationCard.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
             <e p="GameSaver.cs" t="Include" />

@@ -1,6 +1,6 @@
 ﻿using System;
 using CJ.FindAPair.Game;
-using CJ.FindAPair.Game.Booster;
+using CJ.FindAPair.Modules.CoreGames.Booster;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;

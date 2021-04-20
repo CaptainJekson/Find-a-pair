@@ -1,6 +1,6 @@
 ﻿using System;
-using CJ.FindAPair.CardTable;
 using CJ.FindAPair.CoreGames;
+using CJ.FindAPair.Modules.CoreGames;
 using TMPro;
 using UnityEngine;
 

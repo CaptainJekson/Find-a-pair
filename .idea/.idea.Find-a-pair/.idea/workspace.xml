@@ -26,59 +26,100 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/TEST.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/TEST/CreateLevelTEST.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/TEST/CreateLevelTEST.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelBackground.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelBackground.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/CameraInCanvas.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/CameraInCanvas.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfigCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfigCollection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/GameCamera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/GameCamera.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/LevelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/LevelCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/Booster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/Booster.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/ElectroshockBooster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/ElectroshockBooster.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/MagicEyeBooster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/MagicEyeBooster.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/SapperBooster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/SapperBooster.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/TestBooster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/TestBooster.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Card.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Card.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/CardComparator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/CardComparator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/GameSettingsConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/GameSettingsConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfigCollection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfigCollection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/GameWatcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/GameWatcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/LevelCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/LevelCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/QuantityOfCardOfPair.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/QuantityOfCardOfPair.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/BombCard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/BombCard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/EntanglementCard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/EntanglementCard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/FortuneCard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/FortuneCard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/ResetCard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/ResetCard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCardHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCardHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/TEST.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/TEST/CreateLevelTEST.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/TEST/CreateLevelTEST.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/UIFlexibleGridController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/UIFlexibleGridController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Service.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Service/Installer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Service/Installer/ServiceInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Service/Installer/ServiceInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/Installer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/Installer/UIInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/Installer/UIInstaller.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Animation/AnimationCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OldScripts/Animation/AnimationCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CardTable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CardTable/BoosterHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CardTable/BoosterHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CardTable/SpecialCardHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCardHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CardTable/SpecialCardHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCardHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/Booster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/Booster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/Booster.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/Booster.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/BoosterType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/BoosterType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/ElectroshockBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/ElectroshockBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/ElectroshockBooster.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/ElectroshockBooster.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/MagicEyeBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/MagicEyeBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/MagicEyeBooster.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/MagicEyeBooster.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/SapperBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/SapperBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/SapperBooster.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/SapperBooster.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/TestBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/TestBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/Booster/TestBooster.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/TestBooster.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/BombCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/BombCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/BombCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/BombCard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/EntanglementCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/EntanglementCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/EntanglementCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/EntanglementCard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/FortuneCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/FortuneCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/FortuneCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/FortuneCard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/ResetCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/ResetCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/ResetCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/ResetCard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/SpecialCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/SpecialCards/SpecialCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Themes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Constants.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Constants/ConstantsCard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Constants/ConstantsCard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CustomEditor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CustomEditor/LevelEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/CustomEditor/LevelEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/Game/GameSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OldScripts/Game/GameSaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/UI/UIBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OldScripts/UI/UIBooster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/UI/UILevelInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OldScripts/UI/UILevelInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/UI/UILevelSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OldScripts/UI/UILevelSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/UI/UILevelSlotsCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OldScripts/UI/UILevelSlotsCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldScripts/UI/UINextLevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OldScripts/UI/UINextLevelButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Background.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Background.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BoosterHandlers.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BoosterHandlers.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpecialCardHandlers.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpecialCardHandlers.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/CoreGames/CardTable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CoreGames/CardTable.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CoreGames/CardTableCanvas.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CoreGames/CardTableCanvas.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CoreGames/MainCamera.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CoreGames/MainCamera.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoreGames.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,81 +135,55 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/UI/Installer/UIInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/UI/UIPreviewLevel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/BombCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Save.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/EntanglementCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/FortuneCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/GameSaver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/GameWatcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/ResetCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/TEST/CreateLevelTEST.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/PlayerResourcesType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/Save.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/SaveTypeDateTime.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Card.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/LevelCreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Animation.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCardHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/QuantityOfCardOfPair.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Scripts/Coroutiner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/UIFlexibleGridController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Service/Installer/ServiceInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/UI/UIBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UI/Prefabs/Game/Booster Panel Screen.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/CustomEditor/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/GameSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/SpaceShip/Textures/1K_Body-TXTR.jpg.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/QuantityOfCardOfPair.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/UI/UILevelSlot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/Booster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OldScripts/UI/UINextLevelButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/ElectroshockBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/MagicEyeBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/UIFlexibleGridController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/UI/UILevelSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/Booster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/UI/UIBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/SpaceShip/Textures/1K_Body-TXTR.jpg.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/ElectroshockBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagicEyeBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/TestBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Animation.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/BombCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/EntanglementCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/ResetCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/Prefabs/Game/Booster Panel Screen.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelBackground.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/SaveTypeDateTime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/Save.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/PlayerResourcesType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/Game/GameSaver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Save.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OldScripts/UI/UIPreviewLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/SpecialCardHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/GameSettingsConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/BoosterType.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBoosterButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/SpecialCards/FortuneCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/MagicEyeBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/CardComparator.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/Card.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/AnimationCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/SapperBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/ElectroshockBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/PlayerResourcesType.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Save.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIIntForSave.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CardTable/BoosterHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/Booster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameWatcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/GameSaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Save.json" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Configurations/LevelConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Game/Booster/TestBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPause.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UIPauseButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UILevelInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/UI/UINextLevelButton.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Service/Installer/ServiceInstaller.cs" />
@@ -177,7 +192,6 @@
         <option value="$PROJECT_DIR$/Assets/OldScripts/CardTable/CardComparator.cs" />
         <option value="$PROJECT_DIR$/Assets/OldScripts/CardTable/UIFlexibleGridController.cs" />
         <option value="$PROJECT_DIR$/Assets/OldScripts/CardTable/LevelCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/CardComparator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/GameWatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/QuantityOfCardOfPair.cs" />
@@ -185,7 +199,6 @@
         <option value="$PROJECT_DIR$/Assets/OldScripts/CustomEditor/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/GameCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Card.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/SpecialCards/SpecialCardHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Configs/LevelConfigCollection.cs" />
@@ -194,6 +207,34 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/LevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Installer/CoreGameCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CoreGames/Booster/BoosterHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/Booster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterType.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/ElectroshockBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagicEyeBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfigCollection.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/BombCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/EntanglementCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/ResetCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/QuantityOfCardOfPair.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/UIFlexibleGridController.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" />
       </list>
     </option>
   </component>
@@ -262,6 +303,7 @@
       <workItem from="1618386863125" duration="286000" />
       <workItem from="1618813385599" duration="5650000" />
       <workItem from="1618899022292" duration="5413000" />
+      <workItem from="1618945649259" duration="2259000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -426,10 +468,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="665" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618814115644" />
-    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1618902239691">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618945963946">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618258330459" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618945963946" />
     <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618902239691" />
   </component>
 </project>

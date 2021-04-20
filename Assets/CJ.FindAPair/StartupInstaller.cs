@@ -1,14 +1,17 @@
-using CJ.FindAPair.CoreGames.Installer;
-using CJ.FindAPair.Service.Installer;
-using CJ.FindAPair.UI.Installer;
+using CJ.FindAPair.Modules.CoreGames.Installer;
+using CJ.FindAPair.Modules.Service.Installer;
+using CJ.FindAPair.Modules.UI.Installer;
 using Zenject;
 
-public class StartupInstaller : MonoInstaller
+namespace CJ.FindAPair
 {
-    public override void InstallBindings()
+    public class StartupInstaller : MonoInstaller
     {
-        CoreGameInstaller.Install(Container);
-        ServiceInstaller.Install(Container);
-        UIInstaller.Install(Container);
+        public override void InstallBindings()
+        {
+            ServiceInstaller.Install(Container);
+            CoreGameInstaller.Install(Container);
+            UIInstaller.Install(Container);
+        }
     }
 }

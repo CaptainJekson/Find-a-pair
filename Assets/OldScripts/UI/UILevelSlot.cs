@@ -1,9 +1,9 @@
-﻿using CJ.FindAPair.CardTable;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using CJ.FindAPair.Configuration;
 using CJ.FindAPair.CoreGames;
+using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CoreGames.Configs;
 using Doozy.Engine.UI;
 
 namespace CJ.FindAPair.UI

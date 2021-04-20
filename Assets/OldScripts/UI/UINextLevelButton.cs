@@ -1,8 +1,7 @@
-﻿using CJ.FindAPair.CardTable;
-using CJ.FindAPair.Configuration;
-using CJ.FindAPair.Configurations;
-using System.Linq;
+﻿using System.Linq;
 using CJ.FindAPair.CoreGames;
+using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CoreGames.Configs;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;

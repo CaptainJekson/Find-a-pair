@@ -1,7 +1,7 @@
-﻿using CJ.FindAPair.CardTable;
-using CJ.FindAPair.Configurations;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CJ.FindAPair.CoreGames;
+using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CoreGames.Configs;
 using UnityEngine;
 
 namespace CJ.FindAPair.UI
