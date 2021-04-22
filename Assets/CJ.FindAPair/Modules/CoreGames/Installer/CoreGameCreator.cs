@@ -1,4 +1,5 @@
-﻿using CJ.FindAPair.Modules.CoreGames.Booster;
+﻿using CJ.FindAPair.CoreGames.TEST;
+using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using UnityEngine;
 using Zenject;
@@ -15,27 +16,26 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
         private BoosterHandler _boosterHandler;
         private SpecialCardHandler _specialCardHandler;
         private LevelBackground _levelBackground;
-       // private CreateLevelTEST _createLevelTest;
+        private CreateLevelTEST _createLevelTest;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher,
             CardComparator cardComparator, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,
             LevelBackground levelBackground
-            /*,CreateLevelTEST createLevelTest*/)
+            ,CreateLevelTEST createLevelTest)
         {
-            _levelCreator = levelCreator;
-            SetCanvasPosition(_levelCreator.transform);
             _levelBackground = levelBackground;
             SetCanvasPosition(_levelBackground.transform);
+            _levelCreator = levelCreator;
+            SetCanvasPosition(_levelCreator.transform);
             _gameWatcher = gameWatcher;
             _gameWatcher.transform.SetParent(transform);
             _cardComparator = cardComparator;
-            _cardComparator.transform.SetParent(transform);
             _boosterHandler = boosterHandler;
             _boosterHandler.transform.SetParent(transform);
             _specialCardHandler = specialCardHandler;
             _specialCardHandler.transform.SetParent(transform);
-            //_createLevelTest = createLevelTest;
+            _createLevelTest = createLevelTest;
         }
 
         private void SetCanvasPosition(Transform transform)

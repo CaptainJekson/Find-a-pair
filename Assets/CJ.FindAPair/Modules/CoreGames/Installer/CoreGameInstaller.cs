@@ -1,3 +1,4 @@
+using CJ.FindAPair.CoreGames.TEST;
 using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
@@ -21,7 +22,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             Container.Bind<BoosterHandler>().FromComponentInNewPrefabResource("CoreGames/BoosterHandler").AsSingle();
             Container.Bind<SpecialCardHandler>().FromComponentInNewPrefabResource("CoreGames/SpecialCardHandler")
                 .AsSingle();
-            //Container.Bind<CreateLevelTEST>().AsSingle(); // TODO Test
+            Container.Bind<CreateLevelTEST>().AsSingle(); // TODO Test
         }
     }
 }

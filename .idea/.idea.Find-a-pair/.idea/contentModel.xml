@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.-1508878433.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Evgeniy\Desktop\UnityProjects\Find-a-pair" t="IncludeRecursive">
+    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.62146842.00" t="ExcludeRecursive" />
+    <e p="D:\UnityProject\Find-a-pair" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -17,6 +17,7 @@
           </e>
           <e p="Modules" t="Include">
             <e p="CoreGames" t="Include">
+              <e p="AnimationCard.cs" t="Include" />
               <e p="Booster" t="Include">
                 <e p="Booster.cs" t="Include" />
                 <e p="BoosterHandler.cs" t="Include" />
@@ -66,33 +67,6 @@
             </e>
           </e>
           <e p="StartupInstaller.cs" t="Include" />
-        </e>
-        <e p="OldScripts" t="Include">
-          <e p="Animation" t="Include">
-            <e p="AnimationCard.cs" t="Include" />
-          </e>
-          <e p="Game" t="Include">
-            <e p="GameSaver.cs" t="Include" />
-            <e p="PlayerResourcesType.cs" t="Include" />
-            <e p="Save.cs" t="Include" />
-            <e p="SaveTypeDateTime.cs" t="Include" />
-            <e p="SaveTypeString.cs" t="Include" />
-          </e>
-          <e p="UI" t="Include">
-            <e p="UIBooster.cs" t="Include" />
-            <e p="UIGoToNodeButton.cs" t="Include" />
-            <e p="UIIntForSave.cs" t="Include" />
-            <e p="UILevelInfo.cs" t="Include" />
-            <e p="UILevelPage.cs" t="Include" />
-            <e p="UILevelSlot.cs" t="Include" />
-            <e p="UILevelSlotsCreator.cs" t="Include" />
-            <e p="UINextLevelButton.cs" t="Include" />
-            <e p="UIOpenCloseButton.cs" t="Include" />
-            <e p="UIPauseButton.cs" t="Include" />
-            <e p="UIPivotFidex.cs" t="Include" />
-            <e p="UIPreviewLevel.cs" t="Include" />
-            <e p="UIValue.cs" t="Include" />
-          </e>
         </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
@@ -843,6 +817,37 @@
                 <e p="SimpleScrollSnap.cs" t="Include" />
                 <e p="TransitionEffect.cs" t="Include" />
               </e>
+            </e>
+          </e>
+          <e p="TextMesh Pro" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="LiberationSans - OFL.txt" t="Include" />
+            </e>
+            <e p="Resources" t="Include">
+              <e p="LineBreaking Following Characters.txt" t="Include" />
+              <e p="LineBreaking Leading Characters.txt" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF SSD.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Mobile.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="EmojiOne Attribution.txt" t="Include" />
             </e>
           </e>
           <e p="Zenject" t="Include">
@@ -1756,35 +1761,13 @@
             <e p="Version.txt" t="Include" />
           </e>
         </e>
-        <e p="TextMesh Pro" t="Include">
-          <e p="Fonts" t="Include">
-            <e p="LiberationSans - OFL.txt" t="Include" />
-          </e>
-          <e p="Resources" t="Include">
-            <e p="LineBreaking Following Characters.txt" t="Include" />
-            <e p="LineBreaking Leading Characters.txt" t="Include" />
-          </e>
-          <e p="Shaders" t="Include">
-            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
-            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
-            <e p="TMP_Bitmap.shader" t="Include" />
-            <e p="TMP_SDF Overlay.shader" t="Include" />
-            <e p="TMP_SDF SSD.shader" t="Include" />
-            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
-            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
-            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
-            <e p="TMP_SDF-Mobile.shader" t="Include" />
-            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
-            <e p="TMP_SDF-Surface.shader" t="Include" />
-            <e p="TMP_SDF.shader" t="Include" />
-            <e p="TMP_Sprite.shader" t="Include" />
-            <e p="TMPro.cginc" t="Include" />
-            <e p="TMPro_Mobile.cginc" t="Include" />
-            <e p="TMPro_Properties.cginc" t="Include" />
-            <e p="TMPro_Surface.cginc" t="Include" />
-          </e>
-          <e p="Sprites" t="Include">
-            <e p="EmojiOne Attribution.txt" t="Include" />
+        <e p="W----OldScripts" t="Include">
+          <e p="Saver" t="Include">
+            <e p="GameSaver.cs" t="Include" />
+            <e p="PlayerResourcesType.cs" t="Include" />
+            <e p="Save.cs" t="Include" />
+            <e p="SaveTypeDateTime.cs" t="Include" />
+            <e p="SaveTypeString.cs" t="Include" />
           </e>
         </e>
       </e>
