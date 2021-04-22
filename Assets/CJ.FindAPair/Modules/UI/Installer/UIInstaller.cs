@@ -6,7 +6,7 @@ namespace CJ.FindAPair.Modules.UI.Installer
     {
         public override void InstallBindings()
         {
-            
+            Container.Bind<UISceneLoader>().AsSingle();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using CJ.FindAPair.CoreGames;
-using CJ.FindAPair.Game;
+﻿using CJ.FindAPair.Game;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames.Booster

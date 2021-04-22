@@ -1,5 +1,4 @@
-﻿using CJ.FindAPair.CoreGames;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 {

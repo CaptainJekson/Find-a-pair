@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using CJ.FindAPair.CoreGames;
 using UnityEngine;
 #if UNITY_EDITOR
 

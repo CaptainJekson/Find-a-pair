@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using CJ.FindAPair.Constants;
-using CJ.FindAPair.CoreGames;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames.SpecialCards

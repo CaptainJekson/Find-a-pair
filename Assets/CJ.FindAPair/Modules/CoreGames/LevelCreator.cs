@@ -27,7 +27,6 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _gridLayoutGroup = GetComponent<GridLayoutGroup>();
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-
             _cards = new List<Card>();
             _disableCards = new List<Card>();
         }

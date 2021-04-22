@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.62146842.00" t="ExcludeRecursive" />
-    <e p="D:\UnityProject\Find-a-pair" t="IncludeRecursive">
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.-1508878433.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Evgeniy\Desktop\UnityProjects\Find-a-pair" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -36,7 +36,7 @@
               </e>
               <e p="GameWatcher.cs" t="Include" />
               <e p="Installer" t="Include">
-                <e p="CoreGameCreator.cs" t="Include" />
+                <e p="AllGameInstaller.cs" t="Include" />
                 <e p="CoreGameInstaller.cs" t="Include" />
               </e>
               <e p="LevelBackground.cs" t="Include" />
@@ -63,6 +63,7 @@
             <e p="UI" t="Include">
               <e p="Installer" t="Include">
                 <e p="UIInstaller.cs" t="Include" />
+                <e p="UISceneLoader.cs" t="Include" />
               </e>
             </e>
           </e>

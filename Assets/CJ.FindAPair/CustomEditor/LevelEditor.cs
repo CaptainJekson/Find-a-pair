@@ -1,6 +1,4 @@
 ﻿#if UNITY_EDITOR
-
-using CJ.FindAPair.CoreGames;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using UnityEditor;

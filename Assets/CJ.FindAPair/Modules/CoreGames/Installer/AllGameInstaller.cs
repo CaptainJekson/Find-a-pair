@@ -1,28 +1,34 @@
-﻿using CJ.FindAPair.CoreGames.TEST;
-using CJ.FindAPair.Modules.CoreGames.Booster;
+﻿using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
+using CJ.FindAPair.Modules.CoreGames.TEST;
+using CJ.FindAPair.Modules.UI.Installer;
 using UnityEngine;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames.Installer
 {
-    public class CoreGameCreator : MonoBehaviour
+    public class AllGameInstaller : MonoBehaviour
     {
-        [SerializeField] private Transform _tableCanvas;
+        private UISceneLoader _uiSceneLoader;
         
+        [SerializeField] private Transform _tableCanvas;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
         private CardComparator _cardComparator;
         private BoosterHandler _boosterHandler;
         private SpecialCardHandler _specialCardHandler;
         private LevelBackground _levelBackground;
-        private CreateLevelTEST _createLevelTest;
-
+        
         [Inject]
-        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher,
+        public void ConstructUI(UISceneLoader uiSceneLoader)
+        {
+            _uiSceneLoader = uiSceneLoader;
+        }
+        
+        [Inject]
+        public void ConstructCoreGame(LevelCreator levelCreator, GameWatcher gameWatcher,
             CardComparator cardComparator, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,
-            LevelBackground levelBackground
-            ,CreateLevelTEST createLevelTest)
+            LevelBackground levelBackground)
         {
             _levelBackground = levelBackground;
             SetCanvasPosition(_levelBackground.transform);
@@ -35,7 +41,6 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             _boosterHandler.transform.SetParent(transform);
             _specialCardHandler = specialCardHandler;
             _specialCardHandler.transform.SetParent(transform);
-            _createLevelTest = createLevelTest;
         }
 
         private void SetCanvasPosition(Transform transform)

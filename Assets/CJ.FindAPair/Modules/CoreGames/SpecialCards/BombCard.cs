@@ -1,6 +1,4 @@
-﻿using CJ.FindAPair.CoreGames;
-
-namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
+﻿namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 {
     public class BombCard : SpecialCard
     {

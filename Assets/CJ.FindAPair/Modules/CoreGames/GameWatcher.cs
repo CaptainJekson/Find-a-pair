@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using CJ.FindAPair.Animation;
-using CJ.FindAPair.CoreGames;
 using CJ.FindAPair.Game;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using Doozy.Engine.UI;
@@ -39,11 +38,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
             _gameSettingsConfig = gameSettingsConfig;
-        }
-
-        private void Awake()
-        {
-            //GameSaver.Init();
         }
 
         private void OnEnable()

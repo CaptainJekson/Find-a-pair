@@ -1,8 +1,6 @@
-﻿using CJ.FindAPair.Modules.CoreGames;
-using CJ.FindAPair.Modules.CoreGames.Configs;
-using UnityEngine;
+﻿using CJ.FindAPair.Modules.CoreGames.Configs;
 
-namespace CJ.FindAPair.CoreGames.TEST
+namespace CJ.FindAPair.Modules.CoreGames.TEST
 {
     public class CreateLevelTEST
     {

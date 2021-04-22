@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using CJ.FindAPair.Constants;
-using CJ.FindAPair.CoreGames;
 using UnityEngine;
 using UnityEngine.Events;
-using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
-    public class CardComparator : MonoBehaviour
+    public class CardComparator
     {
         private LevelCreator _levelCreator;
         private List<Card> _comparisonCards;
@@ -17,26 +15,15 @@ namespace CJ.FindAPair.Modules.CoreGames
         public event UnityAction CardsMatched;
         public event UnityAction CardsNotMatched;
         public event UnityAction<Card> SpecialCardOpened;
-
-        [Inject]
-        public void Construct(LevelCreator levelCreator)
+        
+        public CardComparator(LevelCreator levelCreator)
         {
             _levelCreator = levelCreator;
             _comparisonCards = new List<Card>();
-        }
-
-        private void OnEnable()
-        {
             _levelCreator.OnLevelCreated += SubscriptionCards;
             _levelCreator.OnLevelDeleted += UnsubscriptionCards;
         }
-
-        private void OnDisable()
-        {
-            _levelCreator.OnLevelCreated -= SubscriptionCards;
-            _levelCreator.OnLevelDeleted -= UnsubscriptionCards;
-        }
-
+        
         private void SubscriptionCards()
         {
             foreach (var card in _levelCreator.Cards)
