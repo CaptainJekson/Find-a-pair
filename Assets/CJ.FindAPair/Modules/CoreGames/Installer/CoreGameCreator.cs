@@ -7,10 +7,8 @@ using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames.Installer
 {
-    public class AllGameInstaller : MonoBehaviour
+    public class CoreGameCreator : MonoBehaviour
     {
-        private UISceneLoader _uiSceneLoader;
-        
         [SerializeField] private Transform _tableCanvas;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
@@ -18,13 +16,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
         private BoosterHandler _boosterHandler;
         private SpecialCardHandler _specialCardHandler;
         private LevelBackground _levelBackground;
-        
-        [Inject]
-        public void ConstructUI(UISceneLoader uiSceneLoader)
-        {
-            _uiSceneLoader = uiSceneLoader;
-        }
-        
+
         [Inject]
         public void ConstructCoreGame(LevelCreator levelCreator, GameWatcher gameWatcher,
             CardComparator cardComparator, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,

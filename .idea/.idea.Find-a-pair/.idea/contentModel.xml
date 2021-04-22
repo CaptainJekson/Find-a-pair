@@ -36,7 +36,7 @@
               </e>
               <e p="GameWatcher.cs" t="Include" />
               <e p="Installer" t="Include">
-                <e p="AllGameInstaller.cs" t="Include" />
+                <e p="CoreGameCreator.cs" t="Include" />
                 <e p="CoreGameInstaller.cs" t="Include" />
               </e>
               <e p="LevelBackground.cs" t="Include" />
@@ -62,6 +62,7 @@
             </e>
             <e p="UI" t="Include">
               <e p="Installer" t="Include">
+                <e p="UICreator.cs" t="Include" />
                 <e p="UIInstaller.cs" t="Include" />
                 <e p="UISceneLoader.cs" t="Include" />
               </e>

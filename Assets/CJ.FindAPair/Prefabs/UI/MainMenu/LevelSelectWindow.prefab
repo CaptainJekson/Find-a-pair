@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 5180204895896041350}
   - component: {fileID: 5180204895896041351}
   m_Layer: 5
-  m_Name: Level Select Screen
+  m_Name: LevelSelectScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
