@@ -461,8 +461,10 @@ GameObject:
   - component: {fileID: 5180204895896041349}
   - component: {fileID: 5180204895896041350}
   - component: {fileID: 5180204895896041351}
+  - component: {fileID: -290162150082994920}
+  - component: {fileID: -1838013588390815443}
   m_Layer: 5
-  m_Name: LevelSelectScreen
+  m_Name: LevelSelectWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,6 +1022,38 @@ MonoBehaviour:
   UseCustomStartAnchoredPosition: 1
   ViewCategory: Main menu
   ViewName: Levels Selected Screen
+--- !u!114 &-290162150082994920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779859137823798348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95849d0a6ae262459439b682c194de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _previewLevelWindow: {fileID: -4392360467139477755, guid: a2031965edac5ca4aa69a8cfe09f6046,
+    type: 3}
+  _levelPagePanel: {fileID: -3921471478271628185, guid: 698e950611ba2db4880d8ef5c7227008,
+    type: 3}
+  _levelSlot: {fileID: -3499163463701570061, guid: 502fa15592d16b84aaa2c2494e908be7,
+    type: 3}
+  _slotsPerPage: 16
+--- !u!114 &-1838013588390815443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779859137823798348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a02054ef2699498e6bd4234fd7995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _containerSource: 2
 --- !u!1 &3143542758708510850
 GameObject:
   m_ObjectHideFlags: 0

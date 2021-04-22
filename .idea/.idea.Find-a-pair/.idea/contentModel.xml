@@ -1771,6 +1771,21 @@
             <e p="SaveTypeDateTime.cs" t="Include" />
             <e p="SaveTypeString.cs" t="Include" />
           </e>
+          <e p="UI" t="Include">
+            <e p="LevelPagePanel.cs" t="Include" />
+            <e p="LevelSelectWindow.cs" t="Include" />
+            <e p="LevelSlot.cs" t="Include" />
+            <e p="PreviewLevelWindow.cs" t="Include" />
+            <e p="UIBooster.cs" t="Include" />
+            <e p="UIGoToNodeButton.cs" t="Include" />
+            <e p="UIIntForSave.cs" t="Include" />
+            <e p="UILevelInfo.cs" t="Include" />
+            <e p="UINextLevelButton.cs" t="Include" />
+            <e p="UIOpenCloseButton.cs" t="Include" />
+            <e p="UIPauseButton.cs" t="Include" />
+            <e p="UIPivotFidex.cs" t="Include" />
+            <e p="UIValue.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Find-a-pair.sln" t="IncludeFlat" />

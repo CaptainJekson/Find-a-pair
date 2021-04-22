@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using CJ.FindAPair.UI;
+using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Installer
 {

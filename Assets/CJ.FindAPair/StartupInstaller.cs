@@ -9,7 +9,7 @@ namespace CJ.FindAPair
     {
         public override void InstallBindings()
         {
-            ServiceInstaller.Install(Container);
+            //ServiceInstaller.Install(Container);
             UIInstaller.Install(Container);
             CoreGameInstaller.Install(Container);
         }
