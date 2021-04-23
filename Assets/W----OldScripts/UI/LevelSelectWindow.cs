@@ -6,11 +6,12 @@ using Zenject;
 
 namespace CJ.FindAPair.UI
 {
-    public class LevelSelectWindow : MonoBehaviour
+    public class LevelSelectWindow : Window
     {
         [SerializeField] private PreviewLevelWindow _previewLevelWindow;
         [SerializeField] private LevelPagePanel _levelPagePanel;
         [SerializeField] private LevelSlot _levelSlot;
+        [SerializeField] private Transform _contentPosition;
         [SerializeField] private int _slotsPerPage;
         
         private LevelConfigCollection _levelConfigCollection;
@@ -24,7 +25,6 @@ namespace CJ.FindAPair.UI
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator)
         {
-            Debug.LogError("Construct LevelSelectWindow");
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
             
@@ -49,7 +49,7 @@ namespace CJ.FindAPair.UI
             for (int i = 0; i < _requiredQuantityPages; i++)
             {
                 var newPage = Instantiate(_levelPagePanel, transform.position, Quaternion.identity);
-                newPage.transform.SetParent(transform, false);
+                newPage.transform.SetParent(_contentPosition, false);
                 _pages.Add(newPage);
             }
         }
