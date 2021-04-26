@@ -219,21 +219,15 @@ MonoBehaviour:
   m_name: Confirm exit
   m_notes: 
   m_onEnterShowViews:
-  - Category: General
-    InstantAction: 0
-    Name: BlockPanel
   - Category: LevelUI
     InstantAction: 0
-    Name: Confirm exit Screen
+    Name: Confirm Exit Window
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
-  - Category: General
-    InstantAction: 0
-    Name: BlockPanel
   - Category: LevelUI
     InstantAction: 0
-    Name: Confirm exit Screen
+    Name: Confirm Exit Window
 --- !u!114 &-1483790678511949648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -875,21 +869,15 @@ MonoBehaviour:
   m_name: Confirm restart
   m_notes: 
   m_onEnterShowViews:
-  - Category: General
-    InstantAction: 0
-    Name: BlockPanel
   - Category: LevelUI
     InstantAction: 0
-    Name: Confirm restart Screen
+    Name: Confirm Restart Window
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
-  - Category: General
-    InstantAction: 0
-    Name: BlockPanel
   - Category: LevelUI
     InstantAction: 0
-    Name: Confirm restart Screen
+    Name: Confirm Restart Window
 --- !u!114 &7941881221464781127
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1043,18 +1031,12 @@ MonoBehaviour:
   m_name: Pause menu
   m_notes: 
   m_onEnterShowViews:
-  - Category: General
-    InstantAction: 0
-    Name: BlockPanel
   - Category: LevelUI
     InstantAction: 0
     Name: Pause Menu Screen
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
-  - Category: General
-    InstantAction: 0
-    Name: BlockPanel
   - Category: LevelUI
     InstantAction: 0
     Name: Pause Menu Screen

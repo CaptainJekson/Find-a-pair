@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using CJ.FindAPair.Animation;
 using CJ.FindAPair.Game;
 using CJ.FindAPair.Modules.CoreGames.Configs;
-using Doozy.Engine.UI;
 using UnityEngine;
+using UnityEngine.Events;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
     public class GameWatcher : MonoBehaviour
     {
-       
-        //[SerializeField] private UIValue _lifeText;
-        //[SerializeField] private UIValue _timeText;
-        //[SerializeField] private UIValue _scoreText;
-        
         private GameSettingsConfig _gameSettingsConfig;
         private LevelCreator _levelCreator;
         private CardComparator _cardComparator;
@@ -30,6 +24,13 @@ namespace CJ.FindAPair.Modules.CoreGames
         private int _quantityOfMatchedPairs;
 
         private IEnumerator _timerCoroutine;
+
+        public event UnityAction<int> ScoreСhanged;
+        public event UnityAction<int> LifeСhanged;
+        public event UnityAction<int> TimeСhanged;
+        public event UnityAction ThereWasAVictory;
+        public event UnityAction ThereWasADefeat;
+        
 
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
@@ -62,8 +63,10 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             StopTimer();
 
-            UIView.ShowView("General", "BlockPanel");
-            UIView.ShowView("GameResult", "Defeat");
+            //UIView.ShowView("General", "BlockPanel");
+            //UIView.ShowView("GameResult", "Defeat");
+            
+            ThereWasADefeat?.Invoke();
         }
 
         public void RemoveQuantityOfMatchedPairs()
@@ -75,7 +78,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         public void ResetScore()
         {
             _score = 0;
-            //_scoreText.SetValue(_score.ToString());
+            ScoreСhanged?.Invoke(_score);
         }
 
         private void AddScore()
@@ -85,7 +88,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             
             AddComboScore();
             
-            //_scoreText.SetValue(_score.ToString());
+            ScoreСhanged?.Invoke(_score);
             
             _comboCounter++;
 
@@ -120,7 +123,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 _score -= _accruedScore;
             }
             
-            //_scoreText.SetValue(_score.ToString());
+            ScoreСhanged?.Invoke(_score);
         }
         
         private int AccrueScore()
@@ -148,7 +151,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             if(_life > 0)
                 _life--;
             
-            //_lifeText.SetValue(_life.ToString());
+            LifeСhanged?.Invoke(_life);
 
             if (_life <= 0)
             {
@@ -160,17 +163,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             StopTimer();
 
-            UIView.ShowView("General", "BlockPanel");
-            UIView.ShowView("GameResult", "Victory");
+            //UIView.ShowView("General", "BlockPanel");
+            //UIView.ShowView("GameResult", "Victory");
+            
+            ThereWasAVictory?.Invoke();
 
             GameSaver.SaveResources(PlayerResourcesType.Gold, _score);
-        }
-
-        private string TimeConverer(int secondTime)  //TODO повторяется в UIPreviewLevel
-        {
-            var time = TimeSpan.FromSeconds(secondTime);
-
-            return time.ToString(@"mm\:ss");
         }
 
         private void InitTimer()   //TODO Rename
@@ -182,9 +180,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             _time = _levelCreator.LevelConfig.Time;
             _score = 0;
 
-            //_lifeText.SetValue(_life.ToString());
-            //_timeText.SetValue(TimeConverer(_time));
-            //_scoreText.SetValue(_score.ToString());
+            LifeСhanged?.Invoke(_life);
+            TimeСhanged?.Invoke(_time);
+            ScoreСhanged?.Invoke(_score);
 
             StartTimer();
         }
@@ -204,7 +202,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             StopCoroutine(_timerCoroutine);
             _timerCoroutine = null;
-            //_timeText.SetValue(TimeConverer(0));
+            TimeСhanged?.Invoke(0);
         }
 
         private void ResetCounts()
@@ -224,7 +222,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             while (true)
             {
                 _time--;
-                //_timeText.SetValue(TimeConverer(_time));
+                
+                TimeСhanged?.Invoke(_time);
 
                 yield return new WaitForSeconds(1.0f);
 

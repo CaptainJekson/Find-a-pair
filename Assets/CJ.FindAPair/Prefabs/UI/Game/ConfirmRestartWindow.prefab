@@ -2957,7 +2957,7 @@ MonoBehaviour:
   StartAlpha: 1
   AllowMultipleClicks: 1
   ButtonCategory: LevelUI
-  ButtonName: Yes exit confirm Button
+  ButtonName: Yes restart confirm Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -5245,8 +5245,9 @@ GameObject:
   - component: {fileID: 8669773452464732138}
   - component: {fileID: 8669773452464732141}
   - component: {fileID: 8669773452464732140}
+  - component: {fileID: 2459213781630333528}
   m_Layer: 0
-  m_Name: ConfirmWindow
+  m_Name: ConfirmRestartWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5803,7 +5804,21 @@ MonoBehaviour:
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
   ViewCategory: LevelUI
-  ViewName: Confirm exit Screen
+  ViewName: Pause Menu Screen
+--- !u!114 &2459213781630333528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669773452464732142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917af8c413bff264a876f2b4981ca2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeButton: {fileID: 0}
+  _restartButton: {fileID: 8669773451678928994}
 --- !u!1 &8669773453010102016
 GameObject:
   m_ObjectHideFlags: 0
