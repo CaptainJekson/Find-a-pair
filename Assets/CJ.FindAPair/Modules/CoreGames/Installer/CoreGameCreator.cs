@@ -1,5 +1,6 @@
 ﻿using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
+using CJ.FindAPair.Modules.UI.Installer;
 using UnityEngine;
 using Zenject;
 

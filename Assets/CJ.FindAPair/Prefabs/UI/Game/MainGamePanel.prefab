@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 8820511760853676327}
   - component: {fileID: 8820511760853676326}
   m_Layer: 0
-  m_Name: Main Game Screen
+  m_Name: MainGamePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

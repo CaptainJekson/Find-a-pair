@@ -482,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 8669773452464732142, guid: 0741b20010cec5244bc44aac699ccfac,
         type: 3}
       propertyPath: m_Name
-      value: Defeat Screen
+      value: DefeatWindow
       objectReference: {fileID: 0}
     - target: {fileID: 8669773452464732143, guid: 0741b20010cec5244bc44aac699ccfac,
         type: 3}

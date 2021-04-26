@@ -5246,7 +5246,7 @@ GameObject:
   - component: {fileID: 8669773452464732141}
   - component: {fileID: 8669773452464732140}
   m_Layer: 0
-  m_Name: Confirm Screen
+  m_Name: ConfirmWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

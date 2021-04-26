@@ -1,13 +1,15 @@
 ﻿using System.Linq;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.UI.Installer;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Windows
 {
-    public class PreviewLevelWindow : MonoBehaviour
+    public class PreviewLevelWindow : Window
     {
         [SerializeField] private Button _startLevelButton;
         [SerializeField] private TextMeshProUGUI _levelNumberText;
@@ -18,14 +20,28 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private int _quantityCards = 0;
         private LevelCreator _levelCreator;
         private LevelConfig _levelConfig;
+        private UIRoot _uiRoot;
 
-        private void Awake()
+        [Inject]
+        private void Construct(UIRoot uiRoot)
+        {
+            _uiRoot = uiRoot;
+        }
+        
+        protected override void Init()
         {
             _startLevelButton.onClick.AddListener(OnStartLevelButtonClick);
+        }
+        
+        protected override void OnCloseButtonClick()
+        {
+            _uiRoot.CloseWindow<MainMenuBlockWindow>();
+            base.OnCloseButtonClick();
         }
 
         public void SetData(LevelConfig levelConfig, LevelCreator levelCreator)
         {
+            _quantityCards = 0;
             _levelCreator = levelCreator;
             _levelConfig = levelConfig;
             

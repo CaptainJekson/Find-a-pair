@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 9194926584345563391}
   - component: {fileID: 26337520567464192}
   m_Layer: 0
-  m_Name: Booster Panel Screen
+  m_Name: BoosterPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

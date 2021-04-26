@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7758105152922928977}
   - component: {fileID: 7143542583684741693}
   m_Layer: 5
-  m_Name: Loading Screen
+  m_Name: LoadingPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

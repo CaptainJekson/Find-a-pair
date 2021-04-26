@@ -17,4 +17,5 @@ MonoBehaviour:
   Names:
   - Unnamed
   - Loading screen
-  - BlockPanel
+  - MainMenuBlockWindow
+  - GameBlockWindow

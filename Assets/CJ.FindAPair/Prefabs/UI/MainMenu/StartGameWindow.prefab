@@ -2430,7 +2430,7 @@ GameObject:
   - component: {fileID: 1083441669}
   - component: {fileID: 1083441668}
   m_Layer: 5
-  m_Name: Start Game Screen
+  m_Name: StartGameWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

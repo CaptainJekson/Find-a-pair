@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CJ.FindAPair.UI
+namespace CJ.FindAPair.Modules.UI.Slots
 {
     class LevelPagePanel : MonoBehaviour
     {

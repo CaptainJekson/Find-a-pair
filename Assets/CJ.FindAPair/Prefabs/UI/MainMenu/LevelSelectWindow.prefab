@@ -1048,8 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b95849d0a6ae262459439b682c194de9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _previewLevelWindow: {fileID: -4392360467139477755, guid: a2031965edac5ca4aa69a8cfe09f6046,
-    type: 3}
+  _closeButton: {fileID: 0}
   _levelPagePanel: {fileID: -3921471478271628185, guid: 698e950611ba2db4880d8ef5c7227008,
     type: 3}
   _levelSlot: {fileID: -3499163463701570061, guid: 502fa15592d16b84aaa2c2494e908be7,

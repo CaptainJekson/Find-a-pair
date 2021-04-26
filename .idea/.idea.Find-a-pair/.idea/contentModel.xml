@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.62146842.00" t="ExcludeRecursive" />
-    <e p="D:\UnityProject\Find-a-pair" t="IncludeRecursive">
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.-1508878433.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Evgeniy\Desktop\UnityProjects\Find-a-pair" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -50,9 +50,6 @@
                 <e p="SpecialCard.cs" t="Include" />
                 <e p="SpecialCardHandler.cs" t="Include" />
               </e>
-              <e p="TEST" t="Include">
-                <e p="CreateLevelTEST.cs" t="Include" />
-              </e>
               <e p="UIFlexibleGridController.cs" t="Include" />
             </e>
             <e p="Service" t="Include">
@@ -67,6 +64,7 @@
                 <e p="UIRoot.cs" t="Include" />
               </e>
               <e p="Slots" t="Include">
+                <e p="LevelPagePanel.cs" t="Include" />
                 <e p="LevelSlot.cs" t="Include" />
               </e>
               <e p="Windows" t="Include">
@@ -74,13 +72,14 @@
                   <e p="Window.cs" t="Include" />
                 </e>
                 <e p="LevelSelectWindow.cs" t="Include" />
+                <e p="MainMenuBlockWindow.cs" t="Include" />
+                <e p="PlayerResourcesWindow.cs" t="Include" />
                 <e p="PreviewLevelWindow.cs" t="Include" />
               </e>
             </e>
           </e>
           <e p="StartupInstaller.cs" t="Include" />
           <e p="Utility" t="Include">
-            <e p="OpenCloseButton.cs" t="Include" />
             <e p="PivotFixedRectTransform.cs" t="Include" />
             <e p="RectTransformExtensions.cs" t="Include" />
           </e>
@@ -1787,7 +1786,6 @@
             <e p="SaveTypeString.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="LevelPagePanel.cs" t="Include" />
             <e p="UIBooster.cs" t="Include" />
             <e p="UIGoToNodeButton.cs" t="Include" />
             <e p="UIIntForSave.cs" t="Include" />
