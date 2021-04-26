@@ -278,32 +278,6 @@ MonoBehaviour:
   m_outputSockets:
   - m_connectionMode: 0
     m_connections:
-    - m_inputConnectionPoint: {x: -2, y: 4}
-      m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 71f66daa-780a-4ec5-a10c-54e484b64cc1
-      m_inputNodeId: 88b4fd0c-6af4-47d0-8e9a-571542abe925
-      m_inputSocketId: 15b50ce7-46d6-4ad3-b8b7-ecd6cf08d612
-      m_outputNodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
-      m_outputSocketId: 66b1b6ed-1491-4dcf-bd4c-6b80582cb995
-    m_connectionPoints:
-    - {x: -2, y: 4}
-    - {x: 202, y: 4}
-    m_direction: 1
-    m_canBeDeleted: 1
-    m_canBeReordered: 1
-    m_curveModifier: 0
-    m_height: 24
-    m_width: 216
-    m_x: 0
-    m_y: 62
-    m_id: 66b1b6ed-1491-4dcf-bd4c-6b80582cb995
-    m_nodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
-    m_socketName: OutputSocket_0
-    m_value: '{"ButtonCategory":"Main menu","ButtonName":"Level Play Button","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
-    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  - m_connectionMode: 0
-    m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
       m_id: 8f7d7e54-8b0e-4a97-8c40-b46cbe8bcfc0
@@ -321,7 +295,7 @@ MonoBehaviour:
     m_height: 24
     m_width: 216
     m_x: 0
-    m_y: 86
+    m_y: 62
     m_id: 6cc1a567-6495-4823-9b77-abfb6a7b3cff
     m_nodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
     m_socketName: OutputSocket_1
@@ -329,7 +303,14 @@ MonoBehaviour:
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_connectionMode: 0
-    m_connections: []
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 5098f37c-9026-4b23-8588-50e432dca618
+      m_inputNodeId: 88b4fd0c-6af4-47d0-8e9a-571542abe925
+      m_inputSocketId: 15b50ce7-46d6-4ad3-b8b7-ecd6cf08d612
+      m_outputNodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
+      m_outputSocketId: 4dca1812-4a84-4628-94b2-b62eced85ee3
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -340,11 +321,11 @@ MonoBehaviour:
     m_height: 24
     m_width: 216
     m_x: 0
-    m_y: 110
+    m_y: 86
     m_id: 4dca1812-4a84-4628-94b2-b62eced85ee3
     m_nodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
     m_socketName: OutputSocket_2
-    m_value: '{"ButtonCategory":"Main menu","ButtonName":"Level Slot Button","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_value: '{"ButtonCategory":"Main menu","ButtonName":"Level Play Button","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_nodeType: 4
@@ -355,10 +336,10 @@ MonoBehaviour:
   m_useFixedUpdate: 0
   m_useLateUpdate: 0
   m_useUpdate: 0
-  m_height: 176
+  m_height: 152
   m_width: 216
-  m_x: 348
-  m_y: -96
+  m_x: 372
+  m_y: -120
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: b9aac61b-67c3-4c22-99b1-ee85de879569
@@ -410,7 +391,7 @@ MonoBehaviour:
   m_version: 1
   m_description: 
   m_id: b9aac61b-67c3-4c22-99b1-ee85de879569
-  m_lastModified: 132638934919963393
+  m_lastModified: 132639147643772306
 --- !u!114 &1825851665624866009
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -704,11 +685,11 @@ MonoBehaviour:
       m_outputSocketId: 082a5505-b75c-4275-97df-3abd631cb487
     - m_inputConnectionPoint: {x: -2, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 71f66daa-780a-4ec5-a10c-54e484b64cc1
+      m_id: 5098f37c-9026-4b23-8588-50e432dca618
       m_inputNodeId: 88b4fd0c-6af4-47d0-8e9a-571542abe925
       m_inputSocketId: 15b50ce7-46d6-4ad3-b8b7-ecd6cf08d612
       m_outputNodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
-      m_outputSocketId: 66b1b6ed-1491-4dcf-bd4c-6b80582cb995
+      m_outputSocketId: 4dca1812-4a84-4628-94b2-b62eced85ee3
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}

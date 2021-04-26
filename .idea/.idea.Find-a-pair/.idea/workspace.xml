@@ -26,35 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/RectTransformExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/RectTransformExtensions.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelSelectWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelSelectWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/PlayerResourcesPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/PlayerResourcesPanel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/PreviewLevelWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/PreviewLevelWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Template.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Template/LevelSlot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Template/LevelSlot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Template/PageLevelPanel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Template/PageLevelPanel.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/Doozy graphs/Main graph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/Doozy graphs/Main graph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/UIRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/UIRoot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/Data/UIButton/UIButton_Mainmenu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/Data/UIButton/UIButton_Mainmenu.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Resources/DoozySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/LevelSelectWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelSelectWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/LevelSelectWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelSelectWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/LevelSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/LevelSlot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelSlot.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/PreviewLevelWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/PreviewLevelWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/UIOpenCloseButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/OpenCloseButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/UIOpenCloseButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/OpenCloseButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/UIPivotFidex.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/W----OldScripts/UI/UIPivotFidex.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +123,6 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/ResetCard.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/AllGameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" />
@@ -176,6 +153,7 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/OpenCloseButton.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" />
       </list>
     </option>
@@ -208,10 +186,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="27108">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="27108" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -249,6 +227,7 @@
       <workItem from="1619118804940" duration="4897000" />
       <workItem from="1619182411721" duration="3735000" />
       <workItem from="1619417116977" duration="5915000" />
+      <workItem from="1619440466853" duration="1199000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>

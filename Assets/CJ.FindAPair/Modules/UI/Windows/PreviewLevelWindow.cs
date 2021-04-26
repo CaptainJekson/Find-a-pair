@@ -19,14 +19,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelCreator _levelCreator;
         private LevelConfig _levelConfig;
 
-        private void OnEnable()
+        private void Awake()
         {
-            _startLevelButton.onClick.AddListener(StartLevel);
-        }
-
-        private void OnDisable()
-        {
-            _startLevelButton.onClick.RemoveListener(StartLevel);
+            _startLevelButton.onClick.AddListener(OnStartLevelButtonClick);
         }
 
         public void SetData(LevelConfig levelConfig, LevelCreator levelCreator)
@@ -44,14 +39,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void ShowInfo()
         {
-            Debug.LogError( _levelConfig.LevelNumber.ToString());
             _levelNumberText.SetText(_levelConfig.LevelNumber.ToString());
             _quantityOfCardOfPairText.text = ((int) _levelConfig.QuantityOfCardOfPair).ToString();
             _quantityCardsText.text = _quantityCards.ToString();
             _bombIcon.gameObject.SetActive(_levelConfig.QuantityPairOfBombs > 0);
         }
 
-        private void StartLevel()
+        private void OnStartLevelButtonClick()
         {
             _levelCreator.CreateLevel(_levelConfig);
         }
