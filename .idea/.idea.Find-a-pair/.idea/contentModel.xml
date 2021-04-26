@@ -66,14 +66,24 @@
                 <e p="UIInstaller.cs" t="Include" />
                 <e p="UIRoot.cs" t="Include" />
               </e>
+              <e p="Slots" t="Include">
+                <e p="LevelSlot.cs" t="Include" />
+              </e>
               <e p="Windows" t="Include">
                 <e p="Base" t="Include">
                   <e p="Window.cs" t="Include" />
                 </e>
+                <e p="LevelSelectWindow.cs" t="Include" />
+                <e p="PreviewLevelWindow.cs" t="Include" />
               </e>
             </e>
           </e>
           <e p="StartupInstaller.cs" t="Include" />
+          <e p="Utility" t="Include">
+            <e p="OpenCloseButton.cs" t="Include" />
+            <e p="PivotFixedRectTransform.cs" t="Include" />
+            <e p="RectTransformExtensions.cs" t="Include" />
+          </e>
         </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
@@ -1778,17 +1788,12 @@
           </e>
           <e p="UI" t="Include">
             <e p="LevelPagePanel.cs" t="Include" />
-            <e p="LevelSelectWindow.cs" t="Include" />
-            <e p="LevelSlot.cs" t="Include" />
-            <e p="PreviewLevelWindow.cs" t="Include" />
             <e p="UIBooster.cs" t="Include" />
             <e p="UIGoToNodeButton.cs" t="Include" />
             <e p="UIIntForSave.cs" t="Include" />
             <e p="UILevelInfo.cs" t="Include" />
             <e p="UINextLevelButton.cs" t="Include" />
-            <e p="UIOpenCloseButton.cs" t="Include" />
             <e p="UIPauseButton.cs" t="Include" />
-            <e p="UIPivotFidex.cs" t="Include" />
             <e p="UIValue.cs" t="Include" />
           </e>
         </e>

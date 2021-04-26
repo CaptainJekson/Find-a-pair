@@ -2711,6 +2711,7 @@ GameObject:
   - component: {fileID: 767887499148988778}
   - component: {fileID: 1233719914698773928}
   - component: {fileID: 1854637246608317091}
+  - component: {fileID: 3038502293056850848}
   m_Layer: 5
   m_Name: Close Button
   m_TagString: Untagged
@@ -2819,6 +2820,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3038502293056850848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4186448569379949719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4feef2957319b3d4993cd9510929c005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uIView: {fileID: 8755335565035464012}
+  _isHide: 1
 --- !u!1 &4904807373869684676
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,7 +4083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startLevelButton: {fileID: 3826751054275678976}
   _levelNumberText: {fileID: 1290541902383301969}
-  _quantityOfCardOfPairText: {fileID: 6995657017543691640}
+  _quantityOfCardOfPairText: {fileID: 5284376282229156103}
   _quantityCardsText: {fileID: 5284376282229156103}
   _bombIcon: {fileID: 5012747895463094498}
 --- !u!1 &9047485697619940610

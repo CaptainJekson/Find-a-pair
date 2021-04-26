@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CJ.FindAPair.UI
+namespace CJ.FindAPair.Utility
 {
     [RequireComponent(typeof(Button))]
-    public class UIOpenCloseButton : MonoBehaviour
+    public class OpenCloseButton : MonoBehaviour
     {
         [SerializeField] private UIView _uIView;
         [SerializeField] private bool _isHide;

@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.UI;
 using UnityEngine;
 using Zenject;
 
-namespace CJ.FindAPair.UI
+namespace CJ.FindAPair.Modules.UI.Windows
 {
     public class LevelSelectWindow : Window
     {
@@ -43,10 +45,10 @@ namespace CJ.FindAPair.UI
 
         private void CreatePages()
         {
-            int quantityPages = _levelConfigCollection.Levels.Count / _slotsPerPage;
+            var quantityPages = _levelConfigCollection.Levels.Count / _slotsPerPage;
             _requiredQuantityPages = IsNotEven ? ++quantityPages : quantityPages;
 
-            for (int i = 0; i < _requiredQuantityPages; i++)
+            for (var i = 0; i < _requiredQuantityPages; i++)
             {
                 var newPage = Instantiate(_levelPagePanel, transform.position, Quaternion.identity);
                 newPage.transform.SetParent(_contentPosition, false);
@@ -56,9 +58,9 @@ namespace CJ.FindAPair.UI
 
         private void CreateSlots()
         {
-            for (int i = 0; i < (IsNotEven ? _pages.Count - 1 : _pages.Count) ; i++)
+            for (var i = 0; i < (IsNotEven ? _pages.Count - 1 : _pages.Count) ; i++)
             {
-                for (int j = 0; j < _slotsPerPage; j++)
+                for (var j = 0; j < _slotsPerPage; j++)
                 {
                     var newSlot = Instantiate(_levelSlot, transform.position, Quaternion.identity);
                     newSlot.transform.SetParent(_pages[i].transform, false);
@@ -68,7 +70,7 @@ namespace CJ.FindAPair.UI
 
             if (IsNotEven)
             {
-                for (int i = 0; i < _levelConfigCollection.Levels.Count % _slotsPerPage; i++)
+                for (var i = 0; i < _levelConfigCollection.Levels.Count % _slotsPerPage; i++)
                 {
                     var newSlot = Instantiate(_levelSlot, transform.position, Quaternion.identity);
                     newSlot.transform.SetParent(_pages[_pages.Count - 1].transform, false);
@@ -79,12 +81,9 @@ namespace CJ.FindAPair.UI
 
         private void SetLevelData()
         {
-            for (int i = 0; i < _slots.Count; i++)
+            for (var i = 0; i < _slots.Count; i++)
             {
-                _slots[i].Level = _levelConfigCollection.Levels[i];
-                _slots[i].LevelCreator = _levelCreator;
-                _slots[i].PreviewLevelWindow = _previewLevelWindow;
-                _slots[i].SetLevelNumberText(i + 1);
+                _slots[i].SetData(_levelConfigCollection.Levels[i], _levelCreator, _previewLevelWindow);
             }
         }
     }

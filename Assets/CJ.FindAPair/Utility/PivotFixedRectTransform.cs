@@ -1,11 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace CJ.FindAPair.UI
+namespace CJ.FindAPair.Utility
 {
     [RequireComponent(typeof(RectTransform))]
-    public class UIPivotFidex : MonoBehaviour
+    public class PivotFixedRectTransform : MonoBehaviour
     {
         [SerializeField] private float _pivotValueX;
         [SerializeField] private float _pivotValueY;
