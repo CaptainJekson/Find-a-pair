@@ -355,9 +355,6 @@ MonoBehaviour:
     Name: Levels Selected Screen
   - Category: Main menu
     InstantAction: 0
-    Name: Player resources Window
-  - Category: Main menu
-    InstantAction: 0
     Name: Preview level screen
 --- !u!114 &11400000
 MonoBehaviour:
@@ -750,7 +747,10 @@ MonoBehaviour:
   - Category: LevelUI
     InstantAction: 0
     Name: Game interface
-  m_onEnterHideViews: []
+  m_onEnterHideViews:
+  - Category: Main menu
+    InstantAction: 0
+    Name: Player resources Window
   m_onExitShowViews: []
   m_onExitHideViews:
   - Category: LevelUI

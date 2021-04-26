@@ -49,12 +49,12 @@ MonoBehaviour:
   - IsRootTab: 1
     Graph: {fileID: 11400000, guid: ef664ccc95aa26540a7bfdda914ba294, type: 2}
     SubGraphNode: {fileID: 0}
-    Zoom: 1
-    PanOffset: {x: 855.5, y: 266.5}
+    Zoom: 1.4
+    PanOffset: {x: 271.15265, y: 230.15614}
     SelectedNodes: []
     DeletedNodes: []
   CurrentView: 1
-  CurrentPanOffset: {x: 855.5, y: 263.5}
+  CurrentPanOffset: {x: 855.5, y: 260.5}
   DefaultPanOffset: {x: 0, y: 0}
   IsDirty: 0
   SaveCurrentGraphWithControlS: 1
