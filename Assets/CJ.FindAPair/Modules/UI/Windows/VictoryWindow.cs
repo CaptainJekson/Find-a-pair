@@ -12,7 +12,7 @@ public class VictoryWindow : Window //TODO реализовать кнопки �
         _levelCreator = levelCreator;
         _gameWatcher = gameWatcher;
     }
-    
+
     protected override void Init()
     {
         _gameWatcher.ThereWasAVictory += Open;

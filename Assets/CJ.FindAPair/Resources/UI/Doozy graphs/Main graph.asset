@@ -225,6 +225,9 @@ MonoBehaviour:
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
+  - Category: General
+    InstantAction: 0
+    Name: GameBlockWindow
   - Category: LevelUI
     InstantAction: 0
     Name: Confirm Exit Window
@@ -751,6 +754,9 @@ MonoBehaviour:
   - Category: Main menu
     InstantAction: 0
     Name: Player resources Window
+  - Category: General
+    InstantAction: 0
+    Name: GameBlockWindow
   m_onExitShowViews: []
   m_onExitHideViews:
   - Category: LevelUI
@@ -875,6 +881,9 @@ MonoBehaviour:
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
+  - Category: General
+    InstantAction: 0
+    Name: GameBlockWindow
   - Category: LevelUI
     InstantAction: 0
     Name: Confirm Restart Window
@@ -1031,6 +1040,9 @@ MonoBehaviour:
   m_name: Pause menu
   m_notes: 
   m_onEnterShowViews:
+  - Category: General
+    InstantAction: 0
+    Name: GameBlockWindow
   - Category: LevelUI
     InstantAction: 0
     Name: Pause Menu Screen

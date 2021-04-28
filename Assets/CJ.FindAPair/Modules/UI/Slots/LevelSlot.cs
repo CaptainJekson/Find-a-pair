@@ -39,7 +39,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             _previewLevelWindow.SetData(_levelConfig, _levelCreator);
             _previewLevelWindow.Open();
-            _uiRoot.OpenWindow<MainMenuBlockWindow>();
+            _uiRoot.OpenWindow<BlockWindow>();
         }
     }
 }

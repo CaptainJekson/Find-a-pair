@@ -20,22 +20,27 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private int _quantityCards = 0;
         private LevelCreator _levelCreator;
         private LevelConfig _levelConfig;
-        private UIRoot _uiRoot;
+        private BlockWindow _blockWindow;
 
         [Inject]
         private void Construct(UIRoot uiRoot)
         {
-            _uiRoot = uiRoot;
+            _blockWindow = uiRoot.GetWindow<BlockWindow>();
         }
         
         protected override void Init()
         {
             _startLevelButton.onClick.AddListener(OnStartLevelButtonClick);
         }
-        
+
+        protected override void OnOpen()
+        {
+            _blockWindow.SetOpenWindow(this);
+        }
+
         protected override void OnCloseButtonClick()
         {
-            _uiRoot.CloseWindow<MainMenuBlockWindow>();
+            _blockWindow.Close();
             base.OnCloseButtonClick();
         }
 
