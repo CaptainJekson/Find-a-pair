@@ -62,10 +62,6 @@ namespace CJ.FindAPair.Modules.CoreGames
         public void InitiateDefeat()
         {
             StopTimer();
-
-            //UIView.ShowView("General", "BlockPanel");
-            //UIView.ShowView("GameResult", "Defeat");
-            
             ThereWasADefeat?.Invoke();
         }
 
@@ -163,9 +159,6 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             StopTimer();
 
-            //UIView.ShowView("General", "BlockPanel");
-            //UIView.ShowView("GameResult", "Victory");
-            
             ThereWasAVictory?.Invoke();
 
             GameSaver.SaveResources(PlayerResourcesType.Gold, _score);
