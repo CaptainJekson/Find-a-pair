@@ -17,7 +17,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
                 card.GetComponent<AnimationCard>().PlayMagicEye();
         }
         
-        private Card GetRandomCard(Card randomCard, bool isMatched) //TODO Repeting FortuneCard
+        private Card GetRandomCard(Card randomCard, bool isMatched)
         {
             while (!(isMatched ^ randomCard.IsMatched) || randomCard.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {

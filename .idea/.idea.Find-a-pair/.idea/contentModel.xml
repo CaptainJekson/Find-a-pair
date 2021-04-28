@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Yuri\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.62146842.00" t="ExcludeRecursive" />
-    <e p="D:\UnityProject\Find-a-pair" t="IncludeRecursive">
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.-1508878433.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Evgeniy\Desktop\UnityProjects\Find-a-pair" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -64,6 +64,7 @@
                 <e p="UIRoot.cs" t="Include" />
               </e>
               <e p="Slots" t="Include">
+                <e p="BoosterButton.cs" t="Include" />
                 <e p="LevelPagePanel.cs" t="Include" />
                 <e p="LevelSlot.cs" t="Include" />
               </e>
@@ -72,6 +73,7 @@
                   <e p="Window.cs" t="Include" />
                 </e>
                 <e p="BlockWindow.cs" t="Include" />
+                <e p="BoosterInterfaceWindow.cs" t="Include" />
                 <e p="ConfirmExitWindow.cs" t="Include" />
                 <e p="ConfirmRestartWindow.cs" t="Include" />
                 <e p="DefeatWindow.cs" t="Include" />
@@ -1790,15 +1792,6 @@
             <e p="Save.cs" t="Include" />
             <e p="SaveTypeDateTime.cs" t="Include" />
             <e p="SaveTypeString.cs" t="Include" />
-          </e>
-          <e p="UI" t="Include">
-            <e p="UIBooster.cs" t="Include" />
-            <e p="UIGoToNodeButton.cs" t="Include" />
-            <e p="UIIntForSave.cs" t="Include" />
-            <e p="UILevelInfo.cs" t="Include" />
-            <e p="UINextLevelButton.cs" t="Include" />
-            <e p="UIPauseButton.cs" t="Include" />
-            <e p="UIValue.cs" t="Include" />
           </e>
         </e>
       </e>

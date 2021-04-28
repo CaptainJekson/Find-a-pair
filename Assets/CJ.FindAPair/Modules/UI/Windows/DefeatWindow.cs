@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class DefeatWindow : Window //TODO реализовать кнопку выход
+public class DefeatWindow : Window
 {
     [SerializeField] private Button _restartButton;
     [SerializeField] private Button _exitButton;
+    [SerializeField] private Button _adsButton;
     [SerializeField] private TextMeshProUGUI _currentLevelText;
-    
+
     private LevelCreator _levelCreator;
     private GameWatcher _gameWatcher;
-    
+
     [Inject]
     public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher)
     {
@@ -24,7 +25,8 @@ public class DefeatWindow : Window //TODO реализовать кнопку в
     {
         _gameWatcher.ThereWasADefeat += Open;
         _restartButton.onClick.AddListener(OnRestartButtonClick);
-        _restartButton.onClick.AddListener(OnExitButtonClick);
+        _exitButton.onClick.AddListener(OnExitButtonClick);
+        _adsButton.onClick.AddListener(OnAdsButtonClick);
     }
 
     protected override void OnOpen()
@@ -40,6 +42,11 @@ public class DefeatWindow : Window //TODO реализовать кнопку в
 
     private void OnExitButtonClick()
     {
-        //TODO подумать как можно выйти в главное меню не перезагружая сцену
+        _levelCreator.ClearLevel();
+        Close();
+    }
+
+    private void OnAdsButtonClick()
+    {
     }
 }

@@ -283,6 +283,7 @@ MonoBehaviour:
   _closeButton: {fileID: 0}
   _restartButton: {fileID: 3727723654241072773}
   _exitButton: {fileID: 3727723654436754293}
+  _adsButton: {fileID: 3727723653735178545}
   _currentLevelText: {fileID: 5476499863203293659}
 --- !u!1 &7382842989549050571
 GameObject:
@@ -454,6 +455,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669773451339593109, guid: 0741b20010cec5244bc44aac699ccfac,
+        type: 3}
+      propertyPath: ButtonName
+      value: Exit Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669773451339593109, guid: 0741b20010cec5244bc44aac699ccfac,
+        type: 3}
+      propertyPath: ButtonCategory
+      value: LevelUI
       objectReference: {fileID: 0}
     - target: {fileID: 8669773451339593111, guid: 0741b20010cec5244bc44aac699ccfac,
         type: 3}
@@ -646,6 +657,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5470380328083482343}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3727723653735178545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8669773453316294614, guid: 0741b20010cec5244bc44aac699ccfac,
+    type: 3}
+  m_PrefabInstance: {fileID: 5470380328083482343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3727723654436754291 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8669773451339593108, guid: 0741b20010cec5244bc44aac699ccfac,

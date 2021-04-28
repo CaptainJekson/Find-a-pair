@@ -22,8 +22,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             _gameWatcher = gameWatcher;
             _cardComparator = cardComparator;
         }
-
-        //TODO Подписывать кнопку соответствующего бустера
+        
         public void BoosterActivationHandler(BoosterType boosterType)
         {
             switch (boosterType)
@@ -44,7 +43,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             if (_booster == null) return;
             _booster.Init(_gameWatcher, _levelCreator);
             _booster.ActivateBooster();
-            _booster.DecreaseCount(boosterType);
+            //_booster.DecreaseCount(boosterType);
         }
         
         private Booster GetBooster<T>() where T : Booster

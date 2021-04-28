@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 5613997836981005220}
   - component: {fileID: 1860170950646962949}
   - component: {fileID: 3771812189930601303}
+  - component: {fileID: 1314080714033025397}
   m_Layer: 0
   m_Name: SapperButton
   m_TagString: Untagged
@@ -255,6 +256,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1314080714033025397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701937368203749809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d474e0f8df1f46778de322f8d528c638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boosterType: 2
+  _countText: {fileID: 2736369212369322962}
 --- !u!1 &4323204327615043781
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +416,7 @@ GameObject:
   - component: {fileID: 8744665632267395458}
   - component: {fileID: 6938899788731472535}
   - component: {fileID: 3242428183470399020}
+  - component: {fileID: 3259735754833825655}
   m_Layer: 0
   m_Name: MagicEyeButton
   m_TagString: Untagged
@@ -510,6 +526,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3259735754833825655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656210122985904334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d474e0f8df1f46778de322f8d528c638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boosterType: 0
+  _countText: {fileID: 3804826703615063430}
 --- !u!1 &6762996880371688206
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +552,7 @@ GameObject:
   - component: {fileID: 3747577541244611894}
   - component: {fileID: 7592301242924224008}
   - component: {fileID: 1182348981685040964}
+  - component: {fileID: 227651536808389078}
   m_Layer: 0
   m_Name: ElectroshockButton
   m_TagString: Untagged
@@ -631,6 +662,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &227651536808389078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762996880371688206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d474e0f8df1f46778de322f8d528c638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boosterType: 1
+  _countText: {fileID: 6653167063721330131}
 --- !u!1 &7247381117785781225
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,8 +691,9 @@ GameObject:
   - component: {fileID: 1676219575122593703}
   - component: {fileID: 9194926584345563391}
   - component: {fileID: 26337520567464192}
+  - component: {fileID: 1665975692747844127}
   m_Layer: 0
-  m_Name: BoosterPanel
+  m_Name: BoosterInterfaceWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1200,6 +1246,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1665975692747844127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247381117785781225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae23e27441c4d3db8510bad8944f1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeButton: {fileID: 0}
+  _boosterButtons:
+  - {fileID: 3259735754833825655}
+  - {fileID: 227651536808389078}
+  - {fileID: 1314080714033025397}
 --- !u!1 &9110708636762156107
 GameObject:
   m_ObjectHideFlags: 0
