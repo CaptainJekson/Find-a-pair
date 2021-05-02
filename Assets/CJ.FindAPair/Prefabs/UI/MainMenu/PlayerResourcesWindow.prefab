@@ -1006,3 +1006,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 0}
+  _goldValueText: {fileID: 3624138990820828250}

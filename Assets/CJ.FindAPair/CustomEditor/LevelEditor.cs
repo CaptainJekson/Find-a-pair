@@ -4,7 +4,7 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using UnityEditor;
 using UnityEngine;
 
-namespace OldScripts.CustomEditor
+namespace CJ.FindAPair.CustomEditor
 {
     public class LevelEditor : EditorWindow
     {

@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using CI.QuickSave;
 using CJ.FindAPair.Animation;
-using CJ.FindAPair.Game;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.Service.Save;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -13,6 +15,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private GameSettingsConfig _gameSettingsConfig;
         private LevelCreator _levelCreator;
         private CardComparator _cardComparator;
+        private GameSaver _gameSaver;
 
         private int _life;
         private int _time;
@@ -34,11 +37,12 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
-            GameSettingsConfig gameSettingsConfig)
+            GameSettingsConfig gameSettingsConfig, GameSaver gameSaver)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
             _gameSettingsConfig = gameSettingsConfig;
+            _gameSaver = gameSaver;
         }
 
         private void OnEnable()
@@ -158,10 +162,9 @@ namespace CJ.FindAPair.Modules.CoreGames
         private void InitiateVictory()
         {
             StopTimer();
-
+            
+            _gameSaver.AddPlayerCoin(_score);
             ThereWasAVictory?.Invoke();
-
-            GameSaver.SaveResources(PlayerResourcesType.Gold, _score);
         }
 
         private void InitTimer()   //TODO Rename
@@ -228,4 +231,3 @@ namespace CJ.FindAPair.Modules.CoreGames
         }
     }
 }
-

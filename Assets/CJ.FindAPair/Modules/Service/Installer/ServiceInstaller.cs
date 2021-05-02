@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using CJ.FindAPair.Modules.Service.Save;
+using Zenject;
 
 namespace CJ.FindAPair.Modules.Service.Installer
 {
@@ -6,7 +7,7 @@ namespace CJ.FindAPair.Modules.Service.Installer
     {
         public override void InstallBindings()
         {
-            
+            Container.Bind<GameSaver>().AsSingle();
         }
     }
 }

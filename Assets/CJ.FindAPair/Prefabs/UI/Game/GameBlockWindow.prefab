@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 3962321484711945439}
   - component: {fileID: 3962321484711945438}
   - component: {fileID: 3962321484711945437}
-  - component: {fileID: 4820623638379476804}
   - component: {fileID: 5212287388693063570}
   - component: {fileID: 3596166620432439298}
+  - component: {fileID: -9157358471433661755}
   m_Layer: 0
   m_Name: GameBlockWindow
   m_TagString: Untagged
@@ -573,19 +573,6 @@ MonoBehaviour:
   UseCustomStartAnchoredPosition: 1
   ViewCategory: General
   ViewName: MainMenuBlockWindow
---- !u!114 &4820623638379476804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962321484711945433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 402d35da6783d69498759753ca9b285f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _closeButton: {fileID: 0}
 --- !u!114 &5212287388693063570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2922,3 +2909,17 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 0
   TextLabel: {fileID: 0}
+--- !u!114 &-9157358471433661755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3962321484711945433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1babc8c2a7163534eb7b01eb32dd0599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeButton: {fileID: 0}
+  _goldValueText: {fileID: 0}

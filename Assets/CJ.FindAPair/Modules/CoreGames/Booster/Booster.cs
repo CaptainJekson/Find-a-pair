@@ -1,5 +1,4 @@
-﻿using CJ.FindAPair.Game;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames.Booster
 {
@@ -16,7 +15,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
 
         public void DecreaseCount(BoosterType boosterType)
         {
-            GameSaver.SaveBooster(boosterType, -1);
+            //GameSaver.SaveBooster(boosterType, -1);
         }
         
         public abstract void ActivateBooster();
