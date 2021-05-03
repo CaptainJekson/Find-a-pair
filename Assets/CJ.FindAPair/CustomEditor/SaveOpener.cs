@@ -16,7 +16,7 @@ namespace CJ.FindAPair.CustomEditor
         {
             if (GUILayout.Button("Open save data"))
             {
-                System.Diagnostics.Process.Start(Application.persistentDataPath + "/QuickSave");
+                System.Diagnostics.Process.Start(Application.persistentDataPath);
             }
         }
     }

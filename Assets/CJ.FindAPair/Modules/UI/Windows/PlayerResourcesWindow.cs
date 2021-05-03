@@ -8,7 +8,7 @@ public class PlayerResourcesWindow : Window
     [SerializeField] private TextMeshProUGUI _goldValueText;
 
     private GameSaver _gameSaver;
-    
+
     [Inject]
     public void Construct(GameSaver gameSaver)
     {
@@ -17,6 +17,7 @@ public class PlayerResourcesWindow : Window
 
     protected override void OnOpen()
     {
-        //_goldValueText.SetText(_gameSaver.Reader.Read<Player>("Player").Coin.ToString());
+        if(_goldValueText != null)
+            _goldValueText.SetText(_gameSaver.ReadNumberValue(SaveKeys.Coins).ToString());
     }
 }

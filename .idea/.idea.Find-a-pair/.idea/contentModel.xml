@@ -58,9 +58,8 @@
                 <e p="ServiceInstaller.cs" t="Include" />
               </e>
               <e p="Save" t="Include">
-                <e p="Boosters.cs" t="Include" />
                 <e p="GameSaver.cs" t="Include" />
-                <e p="Player.cs" t="Include" />
+                <e p="SaveKeys.cs" t="Include" />
               </e>
             </e>
             <e p="UI" t="Include">
@@ -878,6 +877,15 @@
             </e>
             <e p="Sprites" t="Include">
               <e p="EmojiOne Attribution.txt" t="Include" />
+            </e>
+          </e>
+          <e p="TigerForge" t="Include">
+            <e p="EasyFileSave" t="Include">
+              <e p="Demo" t="Include">
+                <e p="Demo.cs" t="Include" />
+              </e>
+              <e p="EasyFileSave.cs" t="Include" />
+              <e p="EasyFileSaveExtension.cs" t="Include" />
             </e>
           </e>
           <e p="Zenject" t="Include">

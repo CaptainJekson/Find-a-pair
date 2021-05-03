@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using CJ.FindAPair.Animation;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Save;
@@ -161,8 +160,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private void InitiateVictory()
         {
             StopTimer();
-            
-            //_gameSaver.AddPlayerCoin(_score);
+            _gameSaver.IncreaseNumberValue(_score, SaveKeys.Coins);
             ThereWasAVictory?.Invoke();
         }
 
