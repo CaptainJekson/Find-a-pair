@@ -2,7 +2,6 @@
 using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.Service.Save;
 using CJ.FindAPair.Modules.UI.Slots;
-using TMPro;
 using UnityEngine;
 using Zenject;
 

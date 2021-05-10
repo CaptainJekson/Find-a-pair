@@ -26,22 +26,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/SaveKeys.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/SaveKeys.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/SaveOpener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/SaveOpener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/TestBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/TestBooster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Boosters.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Boosters.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/GameSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/GameSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PlayerResourcesWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PlayerResourcesWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/BoosterInterfaceWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/BoosterInterfaceWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameBlockWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameBlockWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/Doozy graphs/Main graph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/Doozy graphs/Main graph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/UIRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/UIRoot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,8 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/PivotFixedRectTransform.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/RectTransformExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/W----OldScripts/UI/LevelSelectWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/W----OldScripts/UI/PreviewLevelWindow.cs" />
@@ -169,13 +160,15 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Storages/Storage.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Storages/CoinStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Storages/BoosterStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/GameSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/TestBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PlayerResourcesWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/SaveKeys.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PlayerResourcesWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" />
       </list>
     </option>
   </component>
@@ -252,7 +245,8 @@
       <workItem from="1619461704533" duration="13837000" />
       <workItem from="1619637287067" duration="3712000" />
       <workItem from="1619981547452" duration="12548000" />
-      <workItem from="1620069211452" duration="8135000" />
+      <workItem from="1620069211452" duration="8739000" />
+      <workItem from="1620675640664" duration="4076000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -443,10 +437,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="665" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618814115644" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1620076562200">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1620677998047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1620076562200" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1620677998047" />
     <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619624152663" />
   </component>
 </project>

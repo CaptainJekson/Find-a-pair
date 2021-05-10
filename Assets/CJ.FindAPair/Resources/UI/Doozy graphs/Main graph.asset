@@ -792,12 +792,12 @@ MonoBehaviour:
     Name: Player resources Window
   m_onExitShowViews: []
   m_onExitHideViews:
-  - Category: LevelUI
-    InstantAction: 0
-    Name: Game interface
   - Category: General
     InstantAction: 0
     Name: GameBlockWindow
+  - Category: LevelUI
+    InstantAction: 0
+    Name: Game interface
 --- !u!114 &6073624404685217863
 MonoBehaviour:
   m_ObjectHideFlags: 1

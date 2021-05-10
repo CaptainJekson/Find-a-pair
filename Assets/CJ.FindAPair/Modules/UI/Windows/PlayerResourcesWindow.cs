@@ -17,7 +17,6 @@ public class PlayerResourcesWindow : Window
 
     protected override void OnOpen()
     {
-        if(_goldValueText != null)
-            _goldValueText.SetText(_gameSaver.ReadNumberValue(SaveKeys.Coins).ToString());
+        _goldValueText.SetText(_gameSaver.ReadNumberValue(SaveKeys.Coins).ToString());
     }
 }

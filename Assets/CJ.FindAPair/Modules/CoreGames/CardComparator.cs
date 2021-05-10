@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using CJ.FindAPair.Constants;
-using UnityEngine;
 using UnityEngine.Events;
 
 namespace CJ.FindAPair.Modules.CoreGames

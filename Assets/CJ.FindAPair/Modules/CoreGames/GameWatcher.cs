@@ -47,7 +47,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _cardComparator.CardsMatched += AddScore;
             _cardComparator.CardsNotMatched += RemoveLife;
-            _levelCreator.OnLevelCreated += InitTimer;
+            _levelCreator.OnLevelCreated += StartTheGame;
             _levelCreator.OnLevelDeleted += ResetTimer;
             _levelCreator.OnLevelDeleted += ResetCounts;
         }
@@ -56,7 +56,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _cardComparator.CardsMatched -= AddScore;
             _cardComparator.CardsNotMatched -= RemoveLife;
-            _levelCreator.OnLevelCreated -= InitTimer;
+            _levelCreator.OnLevelCreated -= StartTheGame;
             _levelCreator.OnLevelDeleted -= ResetTimer;
             _levelCreator.OnLevelDeleted -= ResetCounts;
         }
@@ -164,7 +164,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             ThereWasAVictory?.Invoke();
         }
 
-        private void InitTimer()   //TODO Rename
+        private void StartTheGame()
         {
             _quantityOfPairs = (_levelCreator.Cards.Count / (int)_levelCreator.LevelConfig.QuantityOfCardOfPair)
                              - _levelCreator.LevelConfig.QuantityPairOfSpecialCard;
