@@ -7,7 +7,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
     public class GameSettingsConfig : ScriptableObject
     {
         [SerializeField] [Range (1, 10)] private float _startTimeShow;
-        [SerializeField] [Range(1, 7)] private float _animationSpeedCard;
+        [SerializeField] [Range(0.1f, 3.0f)] private float _animationSpeedCard;
         [SerializeField] [Range(0.1f , 3.0f)] private float _delayTimeHide;
         [SerializeField] private int _pointsTwoCards;
         [SerializeField] private int _pointsThreeCards;

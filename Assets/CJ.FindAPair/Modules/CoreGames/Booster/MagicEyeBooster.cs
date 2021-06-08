@@ -13,11 +13,11 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
 
             randomCard = GetRandomCard(randomCard, true);
 
-            foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
-                card.GetComponent<AnimationCardOld>().PlayMagicEye();
+            //foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
+                //card.GetComponent<AnimationCardOld>().PlayMagicEye();
         }
         
-        private CardOld GetRandomCard(CardOld randomCardOld, bool isMatched)
+        private Card GetRandomCard(Card randomCardOld, bool isMatched)
         {
             while (!(isMatched ^ randomCardOld.IsMatched) || randomCardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {

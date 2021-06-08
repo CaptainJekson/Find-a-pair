@@ -109,7 +109,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             foreach (var card in _cardComparator.ComparisonCards)
             {
-                card.GetComponent<AnimationCardOld>().PlayCombo(scoreCombo);
+                //card.GetComponent<AnimationCardOld>().PlayCombo(scoreCombo);
             }
         }
 

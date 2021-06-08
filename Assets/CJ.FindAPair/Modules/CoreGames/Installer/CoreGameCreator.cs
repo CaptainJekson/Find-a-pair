@@ -26,7 +26,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             _levelBackground = levelBackground;
             SetCanvasPosition(_levelBackground.transform);
             _levelCreator = levelCreator;
-            SetCanvasPosition(_levelCreator.transform);
+            _levelCreator.transform.SetParent(transform);
             _gameWatcher = gameWatcher;
             _gameWatcher.transform.SetParent(transform);
             _rayCaster = rayCaster;

@@ -9,33 +9,33 @@ namespace CJ.FindAPair.Modules.CoreGames
 {
     public class LevelCreator : MonoBehaviour
     {
-        [SerializeField] private CardOld cardOld;
+        [SerializeField] private Card card;
 
         private LevelConfig _level;
-        private List<CardOld> _cards;
-        private List<CardOld> _disableCards;
-        private GridLayoutGroup _gridLayoutGroup;
+        private List<Card> _cards;
+        private List<Card> _disableCards;
+        //private GridLayoutGroup _gridLayoutGroup;
 
         public float Scale => _level.Scale;
         public LevelConfig LevelConfig => _level;
-        public List<CardOld> Cards => _cards;
+        public List<Card> Cards => _cards;
 
         public event UnityAction OnLevelCreated;
         public event UnityAction OnLevelDeleted;
 
         private void Awake()
         {
-            _gridLayoutGroup = GetComponent<GridLayoutGroup>();
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _cards = new List<CardOld>();
-            _disableCards = new List<CardOld>();
+            //_gridLayoutGroup = GetComponent<GridLayoutGroup>();
+            //_gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+            _cards = new List<Card>();
+            _disableCards = new List<Card>();
         }
 
         public void CreateLevel(LevelConfig level)
         {
             _level = level;
 
-            _gridLayoutGroup.constraintCount = _level.Width;
+            //_gridLayoutGroup.constraintCount = _level.Width;
 
             PlaceCards();
             CardNumbering();
@@ -73,7 +73,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             foreach (var cell in _level.LevelField)
             {
-                var newCard = Instantiate(cardOld, transform);
+                var newCard = Instantiate(card, transform);
 
                 if (cell == false)
                 {
@@ -137,7 +137,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
-        private void DisableCard(CardOld cardOld)
+        private void DisableCard(Card cardOld)
         {
             cardOld.IsEmpty = true;
             cardOld.GetComponent<Image>().enabled = false;

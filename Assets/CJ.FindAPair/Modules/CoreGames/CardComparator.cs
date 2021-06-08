@@ -7,18 +7,18 @@ namespace CJ.FindAPair.Modules.CoreGames
     public class CardComparator
     {
         private LevelCreator _levelCreator;
-        private List<CardOld> _comparisonCards;
+        private List<Card> _comparisonCards;
 
-        public List<CardOld> ComparisonCards => _comparisonCards;
+        public List<Card> ComparisonCards => _comparisonCards;
 
         public event UnityAction CardsMatched;
         public event UnityAction CardsNotMatched;
-        public event UnityAction<CardOld> SpecialCardOpened;
+        public event UnityAction<Card> SpecialCardOpened;
         
         public CardComparator(LevelCreator levelCreator)
         {
             _levelCreator = levelCreator;
-            _comparisonCards = new List<CardOld>();
+            _comparisonCards = new List<Card>();
             _levelCreator.OnLevelCreated += SubscriptionCards;
             _levelCreator.OnLevelDeleted += UnsubscriptionCards;
         }
@@ -41,12 +41,12 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
-        private UnityAction AddCardCompare(CardOld cardOld)
+        private UnityAction AddCardCompare(Card cardOld)
         {
             return () => ToCompare(cardOld);
         }
 
-        private void ToCompare(CardOld cardOld)
+        private void ToCompare(Card cardOld)
         {
             if (cardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {

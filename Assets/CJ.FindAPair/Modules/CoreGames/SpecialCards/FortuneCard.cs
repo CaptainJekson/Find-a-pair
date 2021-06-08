@@ -6,7 +6,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 {
     public class FortuneCard : SpecialCard
     {
-        public override void OpenSpecialCard(CardOld specialCardOld)
+        public override void OpenSpecialCard(Card specialCardOld)
         {
             var randomChance = Random.Range(0, 2);
             var randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
@@ -19,7 +19,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             specialCardOld.DelayHide();
         }
         
-        private void OpeningPairCards(CardOld randomCardOld)
+        private void OpeningPairCards(Card randomCardOld)
         {
             randomCardOld = GetRandomCard(randomCardOld, true);
 
@@ -27,7 +27,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
                 card.Show();
         }
 
-        private void ClosingPairCards(CardOld randomCardOld)
+        private void ClosingPairCards(Card randomCardOld)
         {
             var quantityMatchedCards = _levelCreator.Cards.Count(card => card.IsMatched);
             _gameWatcher.RemoveQuantityOfMatchedPairs();
@@ -45,7 +45,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             }
         }
         
-        private CardOld GetRandomCard(CardOld randomCardOld, bool isMatched) //TODO Repeting MagicEyeBooster
+        private Card GetRandomCard(Card randomCardOld, bool isMatched) //TODO Repeting MagicEyeBooster
         {
             while (!(isMatched ^ randomCardOld.IsMatched) || randomCardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {

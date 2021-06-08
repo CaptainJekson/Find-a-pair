@@ -13,6 +13,6 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             _levelCreator = levelCreator;
         }
         
-        public abstract void OpenSpecialCard(CardOld specialCardOld);
+        public abstract void OpenSpecialCard(Card specialCardOld);
     }
 }

@@ -34,7 +34,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             _cardComparator.SpecialCardOpened -= SpecialCardOpeningHandler;
         }
 
-        private void SpecialCardOpeningHandler(CardOld cardOld)
+        private void SpecialCardOpeningHandler(Card cardOld)
         {
             switch (cardOld.NumberPair)
             {

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 36e381847995aa84a935cfa8bf3f86ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a58c7cbd7a74c947864cf0f7b2352db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   _textNumber: {fileID: 233194601440798271}
   _shirtSprite: {fileID: 21300000, guid: 36e381847995aa84a935cfa8bf3f86ff, type: 3}
   _faceSprite: {fileID: 21300000, guid: 3a58c7cbd7a74c947864cf0f7b2352db, type: 3}
+  _easeAnimationCard: 0
 --- !u!65 &8743230869140019518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -232,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5877698717197550837
 RectTransform:
   m_ObjectHideFlags: 0

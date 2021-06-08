@@ -7,21 +7,21 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 {
     public class EntanglementCard : SpecialCard
     {
-        public override void OpenSpecialCard(CardOld specialCardOld)
+        public override void OpenSpecialCard(Card specialCardOld)
         {
             var cards = GetNotMatchedCards();
             ShuffleNumberCard(cards);
             specialCardOld.DelayHide();
         }
 
-        private List<CardOld> GetNotMatchedCards()
+        private List<Card> GetNotMatchedCards()
         {
             var allCards = _levelCreator.Cards;
 
             return allCards.Where(card => !card.IsMatched && card.NumberPair < ConstantsCard.NUMBER_SPECIAL).ToList();
         }
         
-        private void ShuffleNumberCard(List<CardOld> cards)
+        private void ShuffleNumberCard(List<Card> cards)
         {
             for (var i = cards.Count - 1; i > 0; i--)
             {
