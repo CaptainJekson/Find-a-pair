@@ -7,18 +7,18 @@ namespace CJ.FindAPair.Modules.CoreGames
     public class CardComparator
     {
         private LevelCreator _levelCreator;
-        private List<Card> _comparisonCards;
+        private List<CardOld> _comparisonCards;
 
-        public List<Card> ComparisonCards => _comparisonCards;
+        public List<CardOld> ComparisonCards => _comparisonCards;
 
         public event UnityAction CardsMatched;
         public event UnityAction CardsNotMatched;
-        public event UnityAction<Card> SpecialCardOpened;
+        public event UnityAction<CardOld> SpecialCardOpened;
         
         public CardComparator(LevelCreator levelCreator)
         {
             _levelCreator = levelCreator;
-            _comparisonCards = new List<Card>();
+            _comparisonCards = new List<CardOld>();
             _levelCreator.OnLevelCreated += SubscriptionCards;
             _levelCreator.OnLevelDeleted += UnsubscriptionCards;
         }
@@ -41,22 +41,22 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
-        private UnityAction AddCardCompare(Card card)
+        private UnityAction AddCardCompare(CardOld cardOld)
         {
-            return () => ToCompare(card);
+            return () => ToCompare(cardOld);
         }
 
-        private void ToCompare(Card card)
+        private void ToCompare(CardOld cardOld)
         {
-            if (card.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
+            if (cardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {
-                SpecialCardOpened?.Invoke(card);
+                SpecialCardOpened?.Invoke(cardOld);
             }
 
             var quantityOfCardOfPair = (int) _levelCreator.LevelConfig.QuantityOfCardOfPair;
 
-            if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
-                _comparisonCards.Add(card);
+            if (cardOld.NumberPair < ConstantsCard.NUMBER_SPECIAL)
+                _comparisonCards.Add(cardOld);
 
             for (var i = 0; i < _comparisonCards.Count - 1; i++)
             {

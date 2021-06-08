@@ -1,48 +1,40 @@
 ﻿using System.Collections;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
+    [RequireComponent(typeof(SpriteRenderer)), RequireComponent(typeof(BoxCollider))]
     public class Card : MonoBehaviour
     {
         [SerializeField] private GameSettingsConfig _gameSettingsConfig;
-        [SerializeField] private TextMeshProUGUI _text;
-        [SerializeField] private Button _button;
-        [SerializeField] private Image _shirt;
-        [SerializeField] private Image _face;
+        [SerializeField] private TextMeshProUGUI _textNumber;
+        [SerializeField] private Sprite _shirtSprite;
+        [SerializeField] private Sprite _faceSprite;
+        [SerializeField] private Ease _easeAnimationCard;
 
+        private SpriteRenderer _spriteRenderer;
+        private BoxCollider _collider;
+        
         public bool IsEmpty { get; set; }
         public bool IsShow { get; set; }
         public bool IsMatched { get; set; }
         public int NumberPair { get; set; }
-
-        public Sprite Shirt
-        {
-            get => _shirt.sprite;
-            set => _shirt.sprite = value;
-        }
-
-        public Sprite Face
-        {
-            get => _face.sprite;
-            set => _face.sprite = value;
-        }
-
+        
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
-        public event UnityAction CardOpensForAnimation;
-        public event UnityAction CardClosedForAnimation;
 
         private void Awake()
         {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _collider = GetComponent<BoxCollider>();
             IsEmpty = false;
             IsShow = false;
-            _button.onClick.AddListener(() => Show());
         }
+        
 
         private void Start()
         {
@@ -55,27 +47,27 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             StartCoroutine(DelayStartHide());
         }
-
+        
         public void SetNumberText()
         {
-            _text.SetText(NumberPair.ToString());
+            _textNumber.SetText(NumberPair.ToString());
         }
-        
+
         public void Show(bool isNotEventCall = false)
         {
-            IsShow = true;
-            CardOpensForAnimation?.Invoke();
+            PlayAnimation(true);
             
+            IsShow = true;
             if(isNotEventCall) return;
             СardOpens?.Invoke();
         }
-
+        
         public void Hide(bool isNotEventCall = false)
         {
+            PlayAnimation(false);
+            
             IsShow = false;
             IsMatched = false;
-            CardClosedForAnimation?.Invoke();
-            
             if(isNotEventCall) return;
             CardClosed?.Invoke();
         }
@@ -84,12 +76,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
-
+        
         private void MakeEmpty()
         {
-            _shirt.enabled = false;
-            _face.enabled = false;
-            _text.enabled = false;
+            _spriteRenderer.enabled = false;
+            _collider.enabled = false;
+            _textNumber.enabled = false;
         }
 
         private IEnumerator DelayHide(float time)
@@ -97,11 +89,32 @@ namespace CJ.FindAPair.Modules.CoreGames
             yield return new WaitForSeconds(time);
             Hide();
         }
-
+        
         private IEnumerator DelayStartHide()
         {
             yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
             Hide();
+        }
+
+        private void PlayAnimation(bool isShow)
+        {
+            var sequence = DOTween.Sequence();
+
+            if(isShow)
+                sequence.AppendCallback(() => _collider.enabled = false);
+            
+            sequence.Append(transform.DORotate(new Vector3(0, 90, 0),
+                _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
+            sequence.AppendCallback(() =>
+            {
+                _textNumber.gameObject.SetActive(isShow);
+                _spriteRenderer.sprite = isShow ? _faceSprite : _shirtSprite;
+            });
+            sequence.Append(transform.DORotate(new Vector3(0, 0, 0),
+                _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
+            
+            if(!isShow)
+                sequence.AppendCallback(() => _collider.enabled = true);
         }
     }
 }

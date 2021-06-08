@@ -11,6 +11,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
         [SerializeField] private Transform _tableCanvas;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
+        private RayCaster _rayCaster;
         private CardComparator _cardComparator;
         private BoosterHandler _boosterHandler;
         private SpecialCardHandler _specialCardHandler;
@@ -18,7 +19,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
         private UIRoot _uiRoot;
 
         [Inject]
-        public void ConstructCoreGame(LevelCreator levelCreator, GameWatcher gameWatcher,
+        public void ConstructCoreGame(LevelCreator levelCreator, GameWatcher gameWatcher, RayCaster rayCaster,
             CardComparator cardComparator, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,
             LevelBackground levelBackground, UIRoot uiRoot)
         {
@@ -28,6 +29,8 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             SetCanvasPosition(_levelCreator.transform);
             _gameWatcher = gameWatcher;
             _gameWatcher.transform.SetParent(transform);
+            _rayCaster = rayCaster;
+            _rayCaster.transform.SetParent(transform);
             _cardComparator = cardComparator;
             _boosterHandler = boosterHandler;
             _boosterHandler.transform.SetParent(transform);

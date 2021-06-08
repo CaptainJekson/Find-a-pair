@@ -18,7 +18,7 @@
           </e>
           <e p="Modules" t="Include">
             <e p="CoreGames" t="Include">
-              <e p="AnimationCard.cs" t="Include" />
+              <e p="AnimationCardOld.cs" t="Include" />
               <e p="Booster" t="Include">
                 <e p="Booster.cs" t="Include" />
                 <e p="BoosterHandler.cs" t="Include" />
@@ -30,6 +30,7 @@
               </e>
               <e p="Card.cs" t="Include" />
               <e p="CardComparator.cs" t="Include" />
+              <e p="CardOld.cs" t="Include" />
               <e p="Configs" t="Include">
                 <e p="GameSettingsConfig.cs" t="Include" />
                 <e p="LevelConfig.cs" t="Include" />
@@ -43,6 +44,7 @@
               <e p="LevelBackground.cs" t="Include" />
               <e p="LevelCreator.cs" t="Include" />
               <e p="QuantityOfCardOfPair.cs" t="Include" />
+              <e p="Raycaster.cs" t="Include" />
               <e p="SpecialCards" t="Include">
                 <e p="BombCard.cs" t="Include" />
                 <e p="EntanglementCard.cs" t="Include" />

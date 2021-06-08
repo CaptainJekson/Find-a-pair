@@ -14,17 +14,17 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             randomCard = GetRandomCard(randomCard, true);
 
             foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
-                card.GetComponent<AnimationCard>().PlayMagicEye();
+                card.GetComponent<AnimationCardOld>().PlayMagicEye();
         }
         
-        private Card GetRandomCard(Card randomCard, bool isMatched)
+        private CardOld GetRandomCard(CardOld randomCardOld, bool isMatched)
         {
-            while (!(isMatched ^ randomCard.IsMatched) || randomCard.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
+            while (!(isMatched ^ randomCardOld.IsMatched) || randomCardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {
-                randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
+                randomCardOld = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
             }
 
-            return randomCard;
+            return randomCardOld;
         }
     }
 }

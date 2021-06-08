@@ -7,8 +7,8 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Animation
 {
-    [RequireComponent(typeof(Card)), RequireComponent(typeof(Animator))]
-    public class AnimationCard : MonoBehaviour
+    [RequireComponent(typeof(CardOld)), RequireComponent(typeof(Animator))]
+    public class AnimationCardOld : MonoBehaviour
     {
         [SerializeField] private GameSettingsConfig _gameSettingConfig;
         [SerializeField] private TextMeshProUGUI _comboValueText;
@@ -23,13 +23,13 @@ namespace CJ.FindAPair.Animation
         [SerializeField] private float _durationComboText;
         [SerializeField] private Ease _easeComboText;
         
-        private Card _card;
+        private CardOld _cardOld;
         private Animator _animator;
         private float _startSizeCard;
 
         private void Awake()
         {
-            _card = GetComponent<Card>();
+            _cardOld = GetComponent<CardOld>();
             _animator = GetComponent<Animator>();
             _animator.speed = _gameSettingConfig.AnimationSpeedCard;
         }
@@ -42,14 +42,14 @@ namespace CJ.FindAPair.Animation
 
         private void OnEnable()
         {
-            _card.CardOpensForAnimation += PlayShowAnimation;
-            _card.CardClosedForAnimation += PlayHideAnimation;
+            _cardOld.CardOpensForAnimation += PlayShowAnimation;
+            _cardOld.CardClosedForAnimation += PlayHideAnimation;
         }
 
         private void OnDisable()
         {
-            _card.CardOpensForAnimation -= PlayShowAnimation;
-            _card.CardClosedForAnimation -= PlayHideAnimation;
+            _cardOld.CardOpensForAnimation -= PlayShowAnimation;
+            _cardOld.CardClosedForAnimation -= PlayHideAnimation;
         }
 
         public void PlayMagicEye()

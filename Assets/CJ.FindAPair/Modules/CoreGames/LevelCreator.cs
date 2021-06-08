@@ -9,16 +9,16 @@ namespace CJ.FindAPair.Modules.CoreGames
 {
     public class LevelCreator : MonoBehaviour
     {
-        [SerializeField] private Card _card;
+        [SerializeField] private CardOld cardOld;
 
         private LevelConfig _level;
-        private List<Card> _cards;
-        private List<Card> _disableCards;
+        private List<CardOld> _cards;
+        private List<CardOld> _disableCards;
         private GridLayoutGroup _gridLayoutGroup;
 
         public float Scale => _level.Scale;
         public LevelConfig LevelConfig => _level;
-        public List<Card> Cards => _cards;
+        public List<CardOld> Cards => _cards;
 
         public event UnityAction OnLevelCreated;
         public event UnityAction OnLevelDeleted;
@@ -27,8 +27,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _gridLayoutGroup = GetComponent<GridLayoutGroup>();
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _cards = new List<Card>();
-            _disableCards = new List<Card>();
+            _cards = new List<CardOld>();
+            _disableCards = new List<CardOld>();
         }
 
         public void CreateLevel(LevelConfig level)
@@ -73,7 +73,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             foreach (var cell in _level.LevelField)
             {
-                var newCard = Instantiate(_card, transform);
+                var newCard = Instantiate(cardOld, transform);
 
                 if (cell == false)
                 {
@@ -137,11 +137,11 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
-        private void DisableCard(Card card)
+        private void DisableCard(CardOld cardOld)
         {
-            card.IsEmpty = true;
-            card.GetComponent<Image>().enabled = false;
-            card.NumberPair = 0;
+            cardOld.IsEmpty = true;
+            cardOld.GetComponent<Image>().enabled = false;
+            cardOld.NumberPair = 0;
         }
     }
 }

@@ -6,7 +6,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 {
     public class FortuneCard : SpecialCard
     {
-        public override void OpenSpecialCard(Card specialCard)
+        public override void OpenSpecialCard(CardOld specialCardOld)
         {
             var randomChance = Random.Range(0, 2);
             var randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
@@ -16,27 +16,27 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             else
                 ClosingPairCards(randomCard);
 
-            specialCard.DelayHide();
+            specialCardOld.DelayHide();
         }
         
-        private void OpeningPairCards(Card randomCard)
+        private void OpeningPairCards(CardOld randomCardOld)
         {
-            randomCard = GetRandomCard(randomCard, true);
+            randomCardOld = GetRandomCard(randomCardOld, true);
 
-            foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
+            foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCardOld.NumberPair))
                 card.Show();
         }
 
-        private void ClosingPairCards(Card randomCard)
+        private void ClosingPairCards(CardOld randomCardOld)
         {
             var quantityMatchedCards = _levelCreator.Cards.Count(card => card.IsMatched);
             _gameWatcher.RemoveQuantityOfMatchedPairs();
 
             if (quantityMatchedCards > 0)
             {
-                randomCard = GetRandomCard(randomCard, false);
+                randomCardOld = GetRandomCard(randomCardOld, false);
 
-                foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
+                foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCardOld.NumberPair))
                     card.Hide();
             }
             else
@@ -45,14 +45,14 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             }
         }
         
-        private Card GetRandomCard(Card randomCard, bool isMatched) //TODO Repeting MagicEyeBooster
+        private CardOld GetRandomCard(CardOld randomCardOld, bool isMatched) //TODO Repeting MagicEyeBooster
         {
-            while (!(isMatched ^ randomCard.IsMatched) || randomCard.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
+            while (!(isMatched ^ randomCardOld.IsMatched) || randomCardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {
-                randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
+                randomCardOld = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
             }
 
-            return randomCard;
+            return randomCardOld;
         }
     }
 }

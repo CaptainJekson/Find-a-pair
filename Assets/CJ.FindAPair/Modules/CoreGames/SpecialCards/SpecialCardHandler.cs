@@ -34,9 +34,9 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             _cardComparator.SpecialCardOpened -= SpecialCardOpeningHandler;
         }
 
-        private void SpecialCardOpeningHandler(Card card)
+        private void SpecialCardOpeningHandler(CardOld cardOld)
         {
-            switch (card.NumberPair)
+            switch (cardOld.NumberPair)
             {
                 case ConstantsCard.NUMBER_FORTUNE:
                     _specialCard = GetSpecialCard<FortuneCard>();
@@ -54,7 +54,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 
             if (_specialCard == null) return;
             _specialCard.Init(_gameWatcher, _levelCreator);
-            _specialCard.OpenSpecialCard(card);
+            _specialCard.OpenSpecialCard(cardOld);
         }
 
         private SpecialCard GetSpecialCard<T>() where T : SpecialCard

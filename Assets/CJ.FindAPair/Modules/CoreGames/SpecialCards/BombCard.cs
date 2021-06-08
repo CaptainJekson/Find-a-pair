@@ -2,7 +2,7 @@
 {
     public class BombCard : SpecialCard
     {
-        public override void OpenSpecialCard(Card specialCard)
+        public override void OpenSpecialCard(CardOld specialCardOld)
         {
             _gameWatcher.InitiateDefeat();
         }

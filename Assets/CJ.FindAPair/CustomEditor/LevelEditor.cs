@@ -168,8 +168,8 @@ namespace CJ.FindAPair.CustomEditor
             asset.SetSizeLevel(_levelMatrix, _level, _scale);
             asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfFortune,
                 _quantityPairOfEntanglement, _quantityPairOfReset, _quantityPairOfBombs);
-
-            AssetDatabase.CreateAsset(asset, $"Assets/CJ.FindAPair/Resources/Levels/Level {_level}.asset");
+            
+            AssetDatabase.CreateAsset(asset,$"Assets/CJ.FindAPair/Resources/Configs/Levels/Level {_level}.asset");
             AssetDatabase.SaveAssets();
 
             EditorUtility.FocusProjectWindow();
