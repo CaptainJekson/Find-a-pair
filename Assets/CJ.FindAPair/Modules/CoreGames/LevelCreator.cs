@@ -8,10 +8,12 @@ using UnityEngine.UI;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
+    [RequireComponent(typeof(CardsPlacer))]
     public class LevelCreator : MonoBehaviour
     {
         [SerializeField] private Card card;
 
+        private CardsPlacer _cardsPlacer;
         private LevelConfig _level;
         private List<Card> _cards;
         private List<Card> _disableCards;
@@ -25,6 +27,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void Awake()
         {
+            _cardsPlacer = GetComponent<CardsPlacer>();
             _cards = new List<Card>();
             _disableCards = new List<Card>();
         }
@@ -64,33 +67,13 @@ namespace CJ.FindAPair.Modules.CoreGames
             CreateLevel(_level);
         }
 
-        private void PlaceCards() //TODO dev, потом выделить в отдельный класс
+        private void PlaceCards()
         {
-            var startPosition = new Vector2(-1.3f, 2.5f); //Надо тоже как то высчитать в зависимости от ширины(width) и длины(height)
-            var placePosition = startPosition;
-            var heightBreakCounter = 0;
-            var widthBreakCounter = 0;
+            var cards = _cardsPlacer.PlaceCards(_level, card);
 
-            var offsetX = new Vector2(1.1f, 0); // Высчитать в зависимости от масштаба
-            var offsetY = new Vector2(0, -1.1f);// Масштаб вычислить в зависимости от ширины(width) и длины(height)
-            
-            foreach (var isFilledCell in _level.LevelField)
+            foreach (var card in cards)
             {
-                var newCard = Instantiate(card, placePosition, Quaternion.identity, transform);
-                newCard.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
-                
-                placePosition += offsetY;
-                heightBreakCounter++;
-
-                if (heightBreakCounter >= _level.Height)
-                {
-                    widthBreakCounter++;
-                    placePosition = startPosition;
-                    placePosition += offsetX * widthBreakCounter;
-                    heightBreakCounter = 0;
-                }
-                
-                AddCreatedCardToList(isFilledCell, newCard);
+                AddCreatedCardToList(card.Value, card.Key);
             }
         }
 
