@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Settings
   m_EditorClassIdentifier: 
   _startTimeShow: 5
-  _animationSpeedCard: 0.5
+  _animationSpeedCard: 0.8
   _delayTimeHide: 0.7
   _pointsTwoCards: 1
   _pointsThreeCards: 3

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Utility;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -14,7 +15,6 @@ namespace CJ.FindAPair.Modules.CoreGames
         private LevelConfig _level;
         private List<Card> _cards;
         private List<Card> _disableCards;
-        //private GridLayoutGroup _gridLayoutGroup;
 
         public float Scale => _level.Scale;
         public LevelConfig LevelConfig => _level;
@@ -25,8 +25,6 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void Awake()
         {
-            //_gridLayoutGroup = GetComponent<GridLayoutGroup>();
-            //_gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
             _cards = new List<Card>();
             _disableCards = new List<Card>();
         }
@@ -34,9 +32,6 @@ namespace CJ.FindAPair.Modules.CoreGames
         public void CreateLevel(LevelConfig level)
         {
             _level = level;
-
-            //_gridLayoutGroup.constraintCount = _level.Width;
-
             PlaceCards();
             CardNumbering();
             AddAllSpecialCards();
@@ -69,21 +64,46 @@ namespace CJ.FindAPair.Modules.CoreGames
             CreateLevel(_level);
         }
 
-        private void PlaceCards()
+        private void PlaceCards() //TODO dev, потом выделить в отдельный класс
         {
-            foreach (var cell in _level.LevelField)
-            {
-                var newCard = Instantiate(card, transform);
+            var startPosition = new Vector2(-1.3f, 2.5f); //Надо тоже как то высчитать в зависимости от ширины(width) и длины(height)
+            var placePosition = startPosition;
+            var heightBreakCounter = 0;
+            var widthBreakCounter = 0;
 
-                if (cell == false)
+            var offsetX = new Vector2(1.1f, 0); // Высчитать в зависимости от масштаба
+            var offsetY = new Vector2(0, -1.1f);// Масштаб вычислить в зависимости от ширины(width) и длины(height)
+            
+            foreach (var isFilledCell in _level.LevelField)
+            {
+                var newCard = Instantiate(card, placePosition, Quaternion.identity, transform);
+                newCard.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+                
+                placePosition += offsetY;
+                heightBreakCounter++;
+
+                if (heightBreakCounter >= _level.Height)
                 {
-                    DisableCard(newCard);
-                    _disableCards.Add(newCard);
+                    widthBreakCounter++;
+                    placePosition = startPosition;
+                    placePosition += offsetX * widthBreakCounter;
+                    heightBreakCounter = 0;
                 }
-                else
-                {
-                    _cards.Add(newCard);
-                }
+                
+                AddCreatedCardToList(isFilledCell, newCard);
+            }
+        }
+
+        private void AddCreatedCardToList(bool isFilledCell, Card newCard)
+        {
+            if (isFilledCell == false)
+            {
+                DisableCard(newCard);
+                _disableCards.Add(newCard);
+            }
+            else
+            {
+                _cards.Add(newCard);
             }
         }
 
@@ -137,11 +157,11 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
-        private void DisableCard(Card cardOld)
+        private void DisableCard(Card card)
         {
-            cardOld.IsEmpty = true;
-            cardOld.GetComponent<Image>().enabled = false;
-            cardOld.NumberPair = 0;
+            card.IsEmpty = true;
+            card.MakeEmpty();
+            card.NumberPair = 0;
         }
     }
 }

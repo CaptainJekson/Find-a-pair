@@ -14,7 +14,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             Container.Bind<LevelConfigCollection>().FromScriptableObjectResource("Configs/Collections/LevelCollection")
                 .AsSingle();
             
-            Container.Bind<LevelCreator>().FromComponentInNewPrefabResource("CoreGames/CardTable").AsSingle();
+            Container.Bind<LevelCreator>().FromComponentInNewPrefabResource("CoreGames/LevelCreator").AsSingle();
             Container.Bind<LevelBackground>().FromComponentInNewPrefabResource("CoreGames/LevelBackground").AsSingle();
             Container.Bind<GameWatcher>().FromComponentInNewPrefabResource("CoreGames/GameWatcher").AsSingle();
             Container.Bind<RayCaster>().FromComponentInNewPrefabResource("CoreGames/RayCaster").AsSingle();

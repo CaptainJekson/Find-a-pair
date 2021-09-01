@@ -28,27 +28,12 @@
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCardOld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCardOld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/ElectroshockBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/ElectroshockBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagicEyeBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagicEyeBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardOld.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardOld.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/BombCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/BombCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/EntanglementCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/EntanglementCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/ResetCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/ResetCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Card.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Configs/GameSettings/Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Configs/GameSettings/Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/CoreGames/CardTable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/CoreGames/CardTable.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/CoreGames/CardTable.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/CoreGames/CardTable.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +83,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/ElectroshockBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/SceneManagement/ActiveSceneChangedEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagicEyeBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelSelectWindow.cs" root0="FORCE_HIGHLIGHTING" />
@@ -134,8 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BlockWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/DefeatWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/VictoryWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/W----OldScripts/UI/UIBooster.cs" />
@@ -164,11 +148,8 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Raycaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/RayCaster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/AnimationCard.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardOld.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCardOld.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" />
@@ -182,9 +163,14 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/ElectroshockBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagicEyeBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/RayCaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/ArrayMatrixExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
       </list>
     </option>
   </component>
@@ -264,7 +250,8 @@
       <workItem from="1620069211452" duration="8739000" />
       <workItem from="1620675640664" duration="4076000" />
       <workItem from="1623177472558" duration="4853000" />
-      <workItem from="1623183068002" duration="4965000" />
+      <workItem from="1623183068002" duration="5211000" />
+      <workItem from="1630522633454" duration="6823000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -335,130 +322,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Install zenject" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620071613352">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1630529530138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1620071613352" />
-    <state width="1877" height="374" key="GridCell.Tab.0.bottom" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
-    <state width="1877" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.0.center" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
-    <state width="1877" height="374" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.0.left" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590785" />
-    <state width="1877" height="374" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.0.right" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
-    <state width="1877" height="374" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.1.bottom" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
-    <state width="1877" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.1.center" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
-    <state width="1877" height="374" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.1.left" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
-    <state width="1877" height="374" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.1.right" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590786" />
-    <state width="1877" height="374" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.2.bottom" timestamp="1619423123304">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
-    <state width="1877" height="374" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123304" />
-    <state width="1877" height="374" key="GridCell.Tab.2.center" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
-    <state width="1877" height="374" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.2.left" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
-    <state width="1877" height="374" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.2.right" timestamp="1619423123303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
-    <state width="1877" height="374" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123303" />
-    <state width="1877" height="374" key="GridCell.Tab.3.bottom" timestamp="1619423123304">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618087590788" />
-    <state width="1877" height="374" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123304" />
-    <state width="1877" height="374" key="GridCell.Tab.3.center" timestamp="1619423123304">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
-    <state width="1877" height="374" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123304" />
-    <state width="1877" height="374" key="GridCell.Tab.3.left" timestamp="1619423123304">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1618087590787" />
-    <state width="1877" height="374" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123304" />
-    <state width="1877" height="374" key="GridCell.Tab.3.right" timestamp="1619423123304">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="101" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1618087590788" />
-    <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619423123304" />
-    <state x="824" y="244" key="RiderGenerateDialog" timestamp="1618818144356">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="824" y="244" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618818144356" />
-    <state x="618" y="106" key="RollbackChangesDialog" timestamp="1618898877796">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="74" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618256922619" />
-    <state x="618" y="106" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618898877796" />
-    <state x="92" y="92" width="1183" height="545" maximized="true" key="VCS.FileHistoryDialog" timestamp="1620074062357">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="92" y="92" width="1183" height="545" maximized="true" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1620074062357" />
-    <state x="129" y="131" width="1662" height="778" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619417852670" />
-    <state x="387" y="137" key="Vcs.Push.Dialog.v2" timestamp="1618814424684">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618257559316" />
-    <state x="387" y="137" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1618814424684" />
-    <state x="286" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619468984529">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="286" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1619468984529" />
-    <state x="776" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1618814383997">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="776" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618814383997" />
-    <state x="319" y="0" width="809" height="728" key="find.popup" timestamp="1619638467589">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="319" y="0" width="809" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1619638467589" />
-    <state x="448" y="37" width="1138" height="1003" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619184135913" />
-    <state x="665" y="308" key="git4idea.merge.GitPullDialog" timestamp="1618814115644">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="665" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618814115644" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1623188035429">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1623188035429" />
-    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619624152663" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1630529530138" />
   </component>
 </project>

@@ -55,6 +55,9 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         public void Show(bool isNotEventCall = false)
         {
+            if(IsEmpty)
+                return;
+            
             PlayAnimation(true);
             
             IsShow = true;
@@ -64,6 +67,9 @@ namespace CJ.FindAPair.Modules.CoreGames
         
         public void Hide(bool isNotEventCall = false)
         {
+            if(IsEmpty)
+                return;
+            
             PlayAnimation(false);
             
             IsShow = false;
@@ -77,7 +83,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
         
-        private void MakeEmpty()
+        public void MakeEmpty()
         {
             _spriteRenderer.enabled = false;
             _collider.enabled = false;

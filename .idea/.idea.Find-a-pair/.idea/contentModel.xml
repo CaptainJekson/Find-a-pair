@@ -30,6 +30,7 @@
               </e>
               <e p="Card.cs" t="Include" />
               <e p="CardComparator.cs" t="Include" />
+              <e p="CardsPlacer.cs" t="Include" />
               <e p="Configs" t="Include">
                 <e p="GameSettingsConfig.cs" t="Include" />
                 <e p="LevelConfig.cs" t="Include" />
