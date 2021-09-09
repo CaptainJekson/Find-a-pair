@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames.Configs;
-using CJ.FindAPair.Utility;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
+using Zenject;
+using Random = UnityEngine.Random;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
@@ -24,10 +25,11 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         public event UnityAction OnLevelCreated;
         public event UnityAction OnLevelDeleted;
-
-        private void Awake()
+        
+        [Inject]
+        public void Construct(CardsPlacer cardsPlacer)
         {
-            _cardsPlacer = GetComponent<CardsPlacer>();
+            _cardsPlacer = cardsPlacer;
             _cards = new List<Card>();
             _disableCards = new List<Card>();
         }
@@ -69,7 +71,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void PlaceCards()
         {
-            var cards = _cardsPlacer.PlaceCards(_level, card);
+            var cards = _cardsPlacer.PlaceCards(_level, card, transform);
 
             foreach (var card in cards)
             {

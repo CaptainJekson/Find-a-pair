@@ -26,7 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardsConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardsConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Configs/Levels/Level 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Configs/Levels/Level 0.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +58,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCardOld.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,6 +74,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BlockWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardsConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,8 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/DefeatWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/VictoryWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/W----OldScripts/UI/UIBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/W----OldScripts/UI/UILevelInfo.cs" />
@@ -157,11 +164,13 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/RayCaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/ArrayMatrixExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardsConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" />
       </list>
     </option>
@@ -244,6 +253,7 @@
       <workItem from="1623177472558" duration="4853000" />
       <workItem from="1623183068002" duration="5211000" />
       <workItem from="1630522633454" duration="9308000" />
+      <workItem from="1631216610726" duration="6884000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -314,9 +324,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Install zenject" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1630531682114">
+    <state x="488" y="37" key="RiderGenerateDialog" timestamp="1631223218870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1630531682114" />
+    <state x="488" y="37" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1631223218870" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1631220395663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1631220395663" />
   </component>
 </project>

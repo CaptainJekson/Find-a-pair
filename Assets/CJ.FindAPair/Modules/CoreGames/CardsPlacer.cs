@@ -1,49 +1,51 @@
-using System;
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
-    public class CardsPlacer : MonoBehaviour
+    public class CardsPlacer
     {
-        private Dictionary<Card, bool> _cards;
+        private PlaceCardsConfig _placeCardsConfig;
 
-        private void Awake()
+        public CardsPlacer(PlaceCardsConfig placeCardsConfig)
         {
-            _cards = new Dictionary<Card, bool>();
+            _placeCardsConfig = placeCardsConfig;
         }
 
-        public Dictionary<Card, bool> PlaceCards(LevelConfig level, Card cardPrefab) //TODO dev
+        public Dictionary<Card, bool> PlaceCards(LevelConfig level, Card cardPrefab, Transform parentTransform) //TODO dev
         {
-            var startPosition = new Vector2(-1.3f, 2.5f); //Надо тоже как то высчитать в зависимости от ширины(width) и длины(height)
+            var cards = new Dictionary<Card, bool>();
+            var startPosition = _placeCardsConfig.GetStartPosition(level.Width, level.Height);
             var placePosition = startPosition;
             var heightBreakCounter = 0;
             var widthBreakCounter = 0;
 
-            var offsetX = new Vector2(1.1f, 0); // Высчитать в зависимости от масштаба
-            var offsetY = new Vector2(0, -1.1f);// Масштаб вычислить в зависимости от ширины(width) и длины(height)
+            var scale = _placeCardsConfig.GetScale(level.Width, level.Height);
+
+            var offsetPositionX = new Vector2((scale * 2 + scale * _placeCardsConfig.OffsetFactorX), 0); 
+            var offsetPositionY = new Vector2(0, (-scale * 2 + scale * -_placeCardsConfig.OffsetFactorY));
             
             foreach (var isFilledCell in level.LevelField)
             {
-                var newCard = Instantiate(cardPrefab, placePosition, Quaternion.identity, transform);
-                newCard.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+                var newCard = Object.Instantiate(cardPrefab, placePosition, Quaternion.identity, parentTransform);
+                newCard.transform.localScale = Vector3.one * scale;  
                 
-                placePosition += offsetY;
+                placePosition += offsetPositionY;
                 heightBreakCounter++;
 
                 if (heightBreakCounter >= level.Height)
                 {
                     widthBreakCounter++;
                     placePosition = startPosition;
-                    placePosition += offsetX * widthBreakCounter;
+                    placePosition += offsetPositionX * widthBreakCounter;
                     heightBreakCounter = 0;
                 }
                 
-                _cards.Add(newCard, isFilledCell);
+                cards.Add(newCard, isFilledCell);
             }
 
-            return _cards;
+            return cards;
         }
     }
 }

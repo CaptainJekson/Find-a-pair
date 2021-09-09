@@ -11,10 +11,13 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
         {
             Container.Bind<GameSettingsConfig>().FromScriptableObjectResource("Configs/GameSettings/Settings")
                 .AsSingle();
+            Container.Bind<PlaceCardsConfig>().FromScriptableObjectResource("Configs/GameSettings/PlaceCardsConfig")
+                .AsSingle();
             Container.Bind<LevelConfigCollection>().FromScriptableObjectResource("Configs/Collections/LevelCollection")
                 .AsSingle();
             
             Container.Bind<LevelCreator>().FromComponentInNewPrefabResource("CoreGames/LevelCreator").AsSingle();
+            Container.Bind<CardsPlacer>().AsSingle();
             Container.Bind<LevelBackground>().FromComponentInNewPrefabResource("CoreGames/LevelBackground").AsSingle();
             Container.Bind<GameWatcher>().FromComponentInNewPrefabResource("CoreGames/GameWatcher").AsSingle();
             Container.Bind<RayCaster>().FromComponentInNewPrefabResource("CoreGames/RayCaster").AsSingle();

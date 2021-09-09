@@ -35,6 +35,7 @@
                 <e p="GameSettingsConfig.cs" t="Include" />
                 <e p="LevelConfig.cs" t="Include" />
                 <e p="LevelConfigCollection.cs" t="Include" />
+                <e p="PlaceCardsConfig.cs" t="Include" />
               </e>
               <e p="GameWatcher.cs" t="Include" />
               <e p="Installer" t="Include">
