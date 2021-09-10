@@ -15,7 +15,7 @@ namespace CJ.FindAPair.CustomEditor
         private int _level = 0;
         private int _width = 0;
         private int _height = 0;
-        private float _scale = 0.9f;
+        private float _heightOffset = 0.9f;
 
         private QuantityOfCardOfPair _quantityOfCardOfPair;
         private int _tries = 0;
@@ -54,7 +54,7 @@ namespace CJ.FindAPair.CustomEditor
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Ширина", _width);
             _height = EditorGUILayout.IntField("Длина", _height);
-            _scale = EditorGUILayout.Slider("Масштаб", _scale, 0.0f, 1.0f);
+            _heightOffset = EditorGUILayout.Slider("Масштаб", _heightOffset, 0.0f, 1.0f);
 
             GUILayout.Label("Условия уровня", EditorStyles.boldLabel);
             _quantityOfCardOfPair =
@@ -127,7 +127,7 @@ namespace CJ.FindAPair.CustomEditor
             }
 
             _level = _levelConfig.LevelNumber;
-            _scale = _levelConfig.Scale;
+            _heightOffset = _levelConfig.HeightOffset;
             _quantityOfCardOfPair = _levelConfig.QuantityOfCardOfPair;
             _tries = _levelConfig.Tries;
             _time = _levelConfig.Time;
@@ -165,7 +165,7 @@ namespace CJ.FindAPair.CustomEditor
         private void CreateLevel()
         {
             var asset = ScriptableObject.CreateInstance<LevelConfig>();
-            asset.SetSizeLevel(_levelMatrix, _level, _scale);
+            asset.SetSizeLevel(_levelMatrix, _level, _heightOffset);
             asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfFortune,
                 _quantityPairOfEntanglement, _quantityPairOfReset, _quantityPairOfBombs);
             

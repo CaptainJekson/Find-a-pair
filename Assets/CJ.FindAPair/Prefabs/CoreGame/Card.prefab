@@ -100,7 +100,7 @@ MonoBehaviour:
   _gameSettingsConfig: {fileID: 11400000, guid: 9aa473812d596da46837be4bf3c8aa00,
     type: 2}
   _textNumber: {fileID: 233194601440798271}
-  _shirtSprite: {fileID: 21300000, guid: 36e381847995aa84a935cfa8bf3f86ff, type: 3}
+  _shirtSprite: {fileID: 21300000, guid: b0ad13e950c06ee409e655bf18ace1b1, type: 3}
   _faceSprite: {fileID: 21300000, guid: 3a58c7cbd7a74c947864cf0f7b2352db, type: 3}
   _easeAnimationCard: 0
 --- !u!65 &8743230869140019518

@@ -33,4 +33,18 @@ MonoBehaviour:
   - AllowableWidth: 7
     StartPositionX: -1.95
     Scale: 0.3
-  _placeHeightSetting: []
+  _placeHeightSetting:
+  - AllowableHeight: 2
+    StartPositionY: 1
+  - AllowableHeight: 3
+    StartPositionY: 2
+  - AllowableHeight: 4
+    StartPositionY: 2.7
+  - AllowableHeight: 5
+    StartPositionY: 3.3
+  - AllowableHeight: 6
+    StartPositionY: 2.8
+  - AllowableHeight: 7
+    StartPositionY: 2.3
+  - AllowableHeight: 8
+    StartPositionY: 1

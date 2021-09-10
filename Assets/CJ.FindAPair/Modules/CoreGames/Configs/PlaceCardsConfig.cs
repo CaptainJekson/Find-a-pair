@@ -27,20 +27,33 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
                 }
             }
             
-            return 1.0f;
+            return _placeWidthSettings[_placeWidthSettings.Count - 1].Scale;
         }
 
-        public Vector2 GetStartPosition(int width, int height)
+        public Vector2 GetStartPosition(int width, int height, float heightOffset)
         {
+            var startPositionX = 0.0f;
+            var startPositionY = 0.0f; 
+            
             foreach (var widthSetting in _placeWidthSettings)
             {
                 if (width <= widthSetting.AllowableWidth)
                 {
-                    return new Vector2(widthSetting.StartPositionX, 3.0f);
+                    startPositionX = widthSetting.StartPositionX;
+                    break;
+                }
+            }
+
+            foreach (var heightSetting in _placeHeightSetting)
+            {
+                if (height <= heightSetting.AllowableHeight)
+                {
+                    startPositionY = heightSetting.StartPositionY;
+                    break;
                 }
             }
             
-            return new Vector2(-1.5f, 3.0f);
+            return new Vector2(startPositionX, startPositionY + heightOffset);
         }
     }
 

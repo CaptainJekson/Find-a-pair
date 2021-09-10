@@ -12,7 +12,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         [SerializeField] private int _level;
         [SerializeField] private int _width;
         [SerializeField] private int _height;
-        [SerializeField][Range(0.0f, 1.0f)] private float _scale;
+        [SerializeField] private float _heightOffset;
 
         [SerializeField] private QuantityOfCardOfPair _quantityOfCardOfPair;
         [SerializeField] private int _tries = 1;
@@ -28,7 +28,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         public int LevelNumber => _level;
         public int Width => _width;
         public int Height => _height;
-        public float Scale => _scale;
+        public float HeightOffset => _heightOffset;
         public QuantityOfCardOfPair QuantityOfCardOfPair => _quantityOfCardOfPair;
         public int Tries => _tries;
         public int Time => _time;
@@ -40,11 +40,11 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         public int QuantityPairOfSpecialCard => _quantityPairOfFortune + _quantityPairOfEntanglement +
                                                 _quantityPairOfReset + _quantityPairOfBombs;
 
-        public void SetSizeLevel(bool[,] levelMatrix, int level, float scale)
+        public void SetSizeLevel(bool[,] levelMatrix, int level, float heightOffset)
         {
             _width = levelMatrix.GetLength(0);
             _height = levelMatrix.GetLength(1);
-            _scale = scale;
+            _heightOffset = heightOffset;
 
             for (var i = 0; i < _width; i++)
             {

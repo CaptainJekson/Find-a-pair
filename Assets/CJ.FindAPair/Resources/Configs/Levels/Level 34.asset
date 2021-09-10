@@ -15,7 +15,7 @@ MonoBehaviour:
   _level: 34
   _width: 4
   _height: 4
-  _scale: 0.9
+  _heightOffset: -1
   _quantityOfCardOfPair: 2
   _tries: 7
   _time: 60

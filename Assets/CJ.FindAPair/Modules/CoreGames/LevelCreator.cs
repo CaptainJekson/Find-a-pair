@@ -19,7 +19,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private List<Card> _cards;
         private List<Card> _disableCards;
 
-        public float Scale => _level.Scale;
+        public float Scale => _level.HeightOffset;
         public LevelConfig LevelConfig => _level;
         public List<Card> Cards => _cards;
 
