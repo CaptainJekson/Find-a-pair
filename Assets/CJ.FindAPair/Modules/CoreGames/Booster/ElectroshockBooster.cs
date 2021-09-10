@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Linq;
-using CJ.FindAPair.Animation;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames.Booster
 {
-    public class ElectroshockBooster : Modules.CoreGames.Booster.Booster
+    public class ElectroshockBooster : Booster
     {
         [SerializeField][Range(1.0f, 7.0f)] private float _timeShow;
         

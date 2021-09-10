@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Level 0
   m_EditorClassIdentifier: 
   _level: 0
-  _width: 4
+  _width: 7
   _height: 7
-  _heightOffset: 1
+  _heightOffset: -0.5
   _quantityOfCardOfPair: 2
   _tries: 500
   _time: 900
@@ -23,4 +23,4 @@ MonoBehaviour:
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 01010101010101010101010101010101010101010101010101010101
+  _levelField: 01010101010101010101010101010101010101010101010100010101010101010101010101010101010101010101010101

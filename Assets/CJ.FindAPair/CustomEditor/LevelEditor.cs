@@ -15,7 +15,7 @@ namespace CJ.FindAPair.CustomEditor
         private int _level = 0;
         private int _width = 0;
         private int _height = 0;
-        private float _heightOffset = 0.9f;
+        private float _heightOffset = 0.0f;
 
         private QuantityOfCardOfPair _quantityOfCardOfPair;
         private int _tries = 0;
@@ -54,7 +54,7 @@ namespace CJ.FindAPair.CustomEditor
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Ширина", _width);
             _height = EditorGUILayout.IntField("Длина", _height);
-            _heightOffset = EditorGUILayout.Slider("Масштаб", _heightOffset, 0.0f, 1.0f);
+            _heightOffset = EditorGUILayout.FloatField("Сдвиг по высоте", _heightOffset);
 
             GUILayout.Label("Условия уровня", EditorStyles.boldLabel);
             _quantityOfCardOfPair =
