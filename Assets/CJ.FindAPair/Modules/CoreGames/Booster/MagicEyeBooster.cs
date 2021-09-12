@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames.Booster
 {
-    public class MagicEyeBooster : Modules.CoreGames.Booster.Booster
+    public class MagicEyeBooster : Booster
     {
         public override void ActivateBooster()
         {
@@ -13,8 +13,8 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
 
             randomCard = GetRandomCard(randomCard, true);
 
-            //foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
-                //card.GetComponent<AnimationCardOld>().PlayMagicEye();
+            foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
+                card.GetComponent<CardEffector>().PlayMagicEye();
         }
         
         private Card GetRandomCard(Card randomCardOld, bool isMatched)

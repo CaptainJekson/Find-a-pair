@@ -4,19 +4,19 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
-    [RequireComponent(typeof(SpriteRenderer)), RequireComponent(typeof(BoxCollider))]
+    [RequireComponent(typeof(BoxCollider))]
     public class Card : MonoBehaviour
     {
         [SerializeField] private GameSettingsConfig _gameSettingsConfig;
         [SerializeField] private TextMeshProUGUI _textNumber;
         [SerializeField] private Sprite _shirtSprite;
         [SerializeField] private Sprite _faceSprite;
+        [SerializeField] private SpriteRenderer _visualSprite;
         [SerializeField] private Ease _easeAnimationCard;
-
-        private SpriteRenderer _spriteRenderer;
         private BoxCollider _collider;
         
         public bool IsEmpty { get; set; }
@@ -29,8 +29,8 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void Awake()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
             _collider = GetComponent<BoxCollider>();
+            _collider.enabled = false;
             IsEmpty = false;
             IsShow = false;
         }
@@ -85,7 +85,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         
         public void MakeEmpty()
         {
-            _spriteRenderer.enabled = false;
+            _visualSprite.enabled = false;
             _collider.enabled = false;
             _textNumber.enabled = false;
         }
@@ -109,14 +109,14 @@ namespace CJ.FindAPair.Modules.CoreGames
             if(isShow)
                 sequence.AppendCallback(() => _collider.enabled = false);
             
-            sequence.Append(transform.DORotate(new Vector3(0, 90, 0),
+            sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 90, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             sequence.AppendCallback(() =>
             {
                 _textNumber.gameObject.SetActive(isShow);
-                _spriteRenderer.sprite = isShow ? _faceSprite : _shirtSprite;
+                _visualSprite.sprite = isShow ? _faceSprite : _shirtSprite;
             });
-            sequence.Append(transform.DORotate(new Vector3(0, 0, 0),
+            sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 0, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             
             if(!isShow)

@@ -13,7 +13,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             foreach (var card in _levelCreator.Cards.Where(card => !card.IsMatched))
             {
                 card.Show(true);
-                //card.GetComponent<AnimationCardOld>().PlayElectroshock();
+                card.GetComponent<CardEffector>().PlayElectroshock();
             }
             
             StartCoroutine(DelayHideCards());

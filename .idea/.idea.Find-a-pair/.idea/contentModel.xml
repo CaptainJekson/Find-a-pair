@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Evgeniy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.-1508878433.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Evgeniy\Desktop\UnityProjects\Find-a-pair" t="IncludeRecursive">
+    <e p="C:\UnityProjects\Find-a-pair" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -30,6 +28,7 @@
               </e>
               <e p="Card.cs" t="Include" />
               <e p="CardComparator.cs" t="Include" />
+              <e p="CardEffector.cs" t="Include" />
               <e p="CardsPlacer.cs" t="Include" />
               <e p="Configs" t="Include">
                 <e p="GameSettingsConfig.cs" t="Include" />
@@ -1719,5 +1718,7 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Find-a-pair.1579248352.00" t="ExcludeRecursive" />
   </component>
 </project>

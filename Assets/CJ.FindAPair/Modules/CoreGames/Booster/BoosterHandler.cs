@@ -10,16 +10,14 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
     {
         [SerializeField] private List<Booster> _handlers;
         
-        private GameWatcher _gameWatcher;
         private CardComparator _cardComparator;
         private LevelCreator _levelCreator;
         private Booster _booster;
 
         [Inject]
-        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher, CardComparator cardComparator)
+        public void Construct(LevelCreator levelCreator, CardComparator cardComparator)
         {
             _levelCreator = levelCreator;
-            _gameWatcher = gameWatcher;
             _cardComparator = cardComparator;
         }
         
@@ -41,7 +39,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             }
             
             if (_booster == null) return;
-            _booster.Init(_gameWatcher, _levelCreator);
+            _booster.Init(_levelCreator);
             _booster.ActivateBooster();
             //_booster.DecreaseCount(boosterType);
         }

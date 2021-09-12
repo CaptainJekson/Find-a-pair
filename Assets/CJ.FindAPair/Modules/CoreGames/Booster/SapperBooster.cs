@@ -4,7 +4,7 @@ using CJ.FindAPair.Constants;
 
 namespace CJ.FindAPair.Modules.CoreGames.Booster
 {
-    public class SapperBooster : Modules.CoreGames.Booster.Booster
+    public class SapperBooster : Booster
     {
         public override void ActivateBooster()
         {
@@ -13,7 +13,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             {
                 card.Show(true);
                 card.IsMatched = true;
-                //tcard.GetComponent<AnimationCardOld>().PlaySapper();
+                card.GetComponent<CardEffector>().PlaySapper();
             }
         }
     }
