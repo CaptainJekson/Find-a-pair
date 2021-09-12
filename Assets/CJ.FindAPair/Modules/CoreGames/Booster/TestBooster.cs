@@ -28,8 +28,8 @@ public class TestBooster : MonoBehaviour
     private void AddBoosters()
     {
         _gameSaver.IncreaseNumberValue(1, SaveKeys.Sapper);
-        _gameSaver.IncreaseNumberValue(1, SaveKeys.MagicEye);
-        _gameSaver.IncreaseNumberValue(1, SaveKeys.Electroshock);
+        _gameSaver.IncreaseNumberValue(1, SaveKeys.Detector);
+        _gameSaver.IncreaseNumberValue(1, SaveKeys.Magnet);
 
         _uiRoot.GetWindow<BoosterInterfaceWindow>().RefreshButtons();
     }

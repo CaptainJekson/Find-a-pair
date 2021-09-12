@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3994434424565560090}
   - component: {fileID: 1679429539066894424}
   m_Layer: 0
-  m_Name: ElectroshockHandler
+  m_Name: MagnetHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,6 @@ MonoBehaviour:
   - {fileID: 1679429539066894424}
   - {fileID: 8050290434884321443}
   - {fileID: 7485442522633957923}
-  _boosterButtons: []
 --- !u!1 &8677624188890829718
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +148,7 @@ GameObject:
   - component: {fileID: 441583974177653497}
   - component: {fileID: 8050290434884321443}
   m_Layer: 0
-  m_Name: MagicEyeBoosterHandler
+  m_Name: DetectorBoosterHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

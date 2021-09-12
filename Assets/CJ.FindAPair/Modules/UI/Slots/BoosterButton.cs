@@ -52,11 +52,11 @@ namespace CJ.FindAPair.Modules.UI.Slots
             switch (_boosterType)
             {
                 case BoosterType.Electroshock:
-                    return SaveKeys.Electroshock;
+                    return SaveKeys.Magnet;
                 case BoosterType.Sapper:
                     return SaveKeys.Sapper;
                 case BoosterType.MagicEye:
-                    return SaveKeys.MagicEye;
+                    return SaveKeys.Detector;
             }
 
             return null;

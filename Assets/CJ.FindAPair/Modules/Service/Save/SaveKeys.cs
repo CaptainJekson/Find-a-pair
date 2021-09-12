@@ -12,8 +12,8 @@
         
         #region Boosters
         
-        public const string Electroshock = "Electroshock";
-        public const string MagicEye = "MagicEye";
+        public const string Magnet = "Magnet";
+        public const string Detector = "Detector";
         public const string Sapper = "Sapper";
         
         #endregion

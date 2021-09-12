@@ -21,8 +21,8 @@
                 <e p="Booster.cs" t="Include" />
                 <e p="BoosterHandler.cs" t="Include" />
                 <e p="BoosterType.cs" t="Include" />
-                <e p="ElectroshockBooster.cs" t="Include" />
-                <e p="MagicEyeBooster.cs" t="Include" />
+                <e p="DetectorBooster.cs" t="Include" />
+                <e p="MagnetBooster.cs" t="Include" />
                 <e p="SapperBooster.cs" t="Include" />
                 <e p="TestBooster.cs" t="Include" />
               </e>
@@ -97,6 +97,24 @@
           <e p="Utility" t="Include">
             <e p="PivotFixedRectTransform.cs" t="Include" />
             <e p="RectTransformExtensions.cs" t="Include" />
+          </e>
+        </e>
+        <e p="GUI PRO Kit - Casual Game" t="Include">
+          <e p="Extensions" t="Include">
+            <e p="UIParticle" t="Include">
+              <e p="hidden particle.shader" t="Include" />
+              <e p="UIParticleSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="ResourcesData" t="Include">
+            <e p="Shader &amp; Materials" t="Include">
+              <e p="MobileAdditive.shader" t="Include" />
+              <e p="UIAdditive.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Panel.cs" t="Include" />
+            <e p="PanelControl.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

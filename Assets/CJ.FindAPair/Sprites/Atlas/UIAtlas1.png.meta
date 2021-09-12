@@ -1,0 +1,900 @@
+fileFormatVersion: 2
+guid: a91b6fe9c9585de47b8ce70184a158b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 44380576602181391
+    second: life_icon
+  - first:
+      213: -4070609506910601610
+    second: energy_icon
+  - first:
+      213: -8151869705160971435
+    second: time_icon
+  - first:
+      213: -562990675615157976
+    second: coin_item
+  - first:
+      213: -7906907746935474831
+    second: magnet_icon
+  - first:
+      213: 1862054974416179196
+    second: detecor_icon
+  - first:
+      213: 4082670251224968337
+    second: sapper_icon
+  - first:
+      213: -3031825299222972524
+    second: window_background
+  - first:
+      213: 4867279510161363550
+    second: blue_button
+  - first:
+      213: -2787114123076120459
+    second: red_button
+  - first:
+      213: 2651127236917439156
+    second: setting_icon
+  - first:
+      213: -8588925273215358296
+    second: exit_icon
+  - first:
+      213: -622372571845993770
+    second: prev_button
+  - first:
+      213: -448612467495032114
+    second: next_button
+  - first:
+      213: -8582650549889329543
+    second: next_icon
+  - first:
+      213: -3852785769450730293
+    second: restart_icon
+  - first:
+      213: 8413610138815727524
+    second: close_button
+  - first:
+      213: 5940932064952353230
+    second: ad_icon
+  - first:
+      213: -2395938580465421326
+    second: blue_back_button
+  - first:
+      213: -1374994693497126367
+    second: darkblue_back_button
+  - first:
+      213: -5295083702988173411
+    second: green_back_button
+  - first:
+      213: -504023202286620100
+    second: yellow_back_button
+  - first:
+      213: -7827313326684788800
+    second: bluegray_back_button
+  - first:
+      213: 415424013442168455
+    second: gray_back_button
+  - first:
+      213: -3319613803580146398
+    second: white_back_button
+  - first:
+      213: -3445834097451383426
+    second: red_back_button
+  - first:
+      213: -3307594800429379420
+    second: orange_back_button
+  - first:
+      213: -2428051108841450818
+    second: purple_back_button
+  - first:
+      213: -4554011191416669322
+    second: red_title
+  - first:
+      213: -8618885251602509700
+    second: green_title
+  - first:
+      213: -8747347231971038211
+    second: purple_title
+  - first:
+      213: -243302471136669803
+    second: level_title
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: life_icon
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1745
+        width: 451
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fcc4736ebad9000800000000000000
+      internalID: 44380576602181391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy_icon
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1722
+        width: 327
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ef341783a4287c0800000000000000
+      internalID: -4070609506910601610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: time_icon
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1643
+        width: 428
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bac9091bdbede80800000000000000
+      internalID: -8151869705160971435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_item
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 1747
+        width: 380
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821f910a6fadf28f0800000000000000
+      internalID: -562990675615157976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magnet_icon
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1151
+        width: 431
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1757028fb45054290800000000000000
+      internalID: -7906907746935474831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: detecor_icon
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1130
+        width: 460
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff4356322957d910800000000000000
+      internalID: 1862054974416179196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapper_icon
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1087
+        width: 464
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ca15b66fe88a830800000000000000
+      internalID: 4082670251224968337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: window_background
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 888
+        width: 1141
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 50, y: 50, z: 50, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497b5c224facce5d0800000000000000
+      internalID: -3031825299222972524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_button
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 804
+        width: 168
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5294b13dec0c8340800000000000000
+      internalID: 4867279510161363550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_button
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 803
+        width: 168
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570d299c87e2259d0800000000000000
+      internalID: -2787114123076120459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: setting_icon
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 962
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baa3dafc22bac420800000000000000
+      internalID: 2651127236917439156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exit_icon
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 964
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaaf9758f10ec880800000000000000
+      internalID: -8588925273215358296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prev_button
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 813
+        width: 149
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da5c218173ec57f0800000000000000
+      internalID: -622372571845993770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: next_button
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 809
+        width: 149
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecaa521765536c9f0800000000000000
+      internalID: -448612467495032114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: next_icon
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 854
+        width: 53
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97619863ccc44e880800000000000000
+      internalID: -8582650549889329543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: restart_icon
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 844
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc853071c7288ac0800000000000000
+      internalID: -3852785769450730293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: close_button
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 841
+        width: 115
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a78cb218d523c470800000000000000
+      internalID: 8413610138815727524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ad_icon
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 644
+        width: 76
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec186369c3e627250800000000000000
+      internalID: 5940932064952353230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_back_button
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 280
+        width: 381
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f374b72e8aefbed0800000000000000
+      internalID: -2395938580465421326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkblue_back_button
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 280
+        width: 382
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1228e0e7c990bece0800000000000000
+      internalID: -1374994693497126367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_back_button
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 280
+        width: 381
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f0e6b3d651486b0800000000000000
+      internalID: -5295083702988173411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_back_button
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 280
+        width: 381
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32b62561995109f0800000000000000
+      internalID: -504023202286620100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluegray_back_button
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 280
+        width: 382
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7a541100ccf5390800000000000000
+      internalID: -7827313326684788800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gray_back_button
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 109
+        width: 381
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786336070f1e3c500800000000000000
+      internalID: 415424013442168455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_back_button
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 109
+        width: 382
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d3f1e65dc5ee1d0800000000000000
+      internalID: -3319613803580146398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_back_button
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 109
+        width: 381
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e754b7a2520fd20d0800000000000000
+      internalID: -3445834097451383426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_back_button
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 109
+        width: 381
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a05a7bad001912d0800000000000000
+      internalID: -3307594800429379420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_back_button
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 109
+        width: 382
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 40, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb213018164dd4ed0800000000000000
+      internalID: -2428051108841450818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_title
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 1869
+        width: 828
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 60}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bb47813f6ecc0c0800000000000000
+      internalID: -4554011191416669322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_title
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 1593
+        width: 828
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 60}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70116a4781936880800000000000000
+      internalID: -8618885251602509700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_title
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 542
+        width: 828
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 60}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbae57b90e2b9680800000000000000
+      internalID: -8747347231971038211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_title
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 562
+        width: 1042
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f8cea01bd9f9cf0800000000000000
+      internalID: -243302471136669803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

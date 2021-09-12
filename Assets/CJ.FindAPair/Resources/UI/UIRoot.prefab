@@ -80,6 +80,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 192785114419143939}
     m_Modifications:
+    - target: {fileID: 1294746583862080483, guid: 5151d678773cb39439b4a7581f5c2bc9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3727723653387178248, guid: 5151d678773cb39439b4a7581f5c2bc9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -123,7 +128,7 @@ PrefabInstance:
     - target: {fileID: 3727723653387178248, guid: 5151d678773cb39439b4a7581f5c2bc9,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1020
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 3727723653387178248, guid: 5151d678773cb39439b4a7581f5c2bc9,
         type: 3}
@@ -190,6 +195,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefeatWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 3727723653387178249, guid: 5151d678773cb39439b4a7581f5c2bc9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3727723653915476454, guid: 5151d678773cb39439b4a7581f5c2bc9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 584.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423855809332811028, guid: 5151d678773cb39439b4a7581f5c2bc9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 232.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5151d678773cb39439b4a7581f5c2bc9, type: 3}
 --- !u!224 &3690803925896632561 stripped
@@ -226,6 +246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ConfirmRestartWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669773452464732142, guid: e16db115a4df2644898ac4ae31ed428e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8669773452464732143, guid: e16db115a4df2644898ac4ae31ed428e,
         type: 3}
@@ -351,6 +376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainMenuBlockWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962321484711945433, guid: 36b937e503e627e4d852ecae7c0f55d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3962321484711945434, guid: 36b937e503e627e4d852ecae7c0f55d5,
         type: 3}
@@ -493,6 +523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ConfirmExitWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669773452464732142, guid: ec4f6a8018006c140bcd36eb77ca914f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8669773452464732143, guid: ec4f6a8018006c140bcd36eb77ca914f,
         type: 3}
@@ -736,6 +771,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartGameWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 6868161628910846415, guid: bfe819ada7774064d92c20f022ca9afd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfe819ada7774064d92c20f022ca9afd, type: 3}
 --- !u!224 &7604863228429888316 stripped
@@ -755,6 +795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameBlockWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962321484711945433, guid: 97d7acc707a4d3f4aa3f1d835cfbdc6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3962321484711945434, guid: 97d7acc707a4d3f4aa3f1d835cfbdc6d,
         type: 3}
@@ -885,6 +930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameInterfaceWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820511760853676324, guid: c0f83a9dee9439445a955acf1eb8c822,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8820511760853676325, guid: c0f83a9dee9439445a955acf1eb8c822,
         type: 3}
@@ -1022,6 +1072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameMenuWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669773452464732142, guid: 925df6e64bea6da42b747f7751cc9cb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8669773452464732143, guid: 925df6e64bea6da42b747f7751cc9cb2,
         type: 3}
@@ -1198,7 +1253,7 @@ PrefabInstance:
     - target: {fileID: 5900495140738236742, guid: 31416873033d13544bd98a0a82a11a95,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1020
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 5900495140738236742, guid: 31416873033d13544bd98a0a82a11a95,
         type: 3}
@@ -1265,6 +1320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VictoryWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 8335759185875968941, guid: 31416873033d13544bd98a0a82a11a95,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31416873033d13544bd98a0a82a11a95, type: 3}
 --- !u!224 &406946000549827691 stripped
@@ -1296,6 +1356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LoadingPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616670779314726909, guid: 8c1e94c8200fcaa4298fb776a925f1e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3616670779314726910, guid: 8c1e94c8200fcaa4298fb776a925f1e4,
         type: 3}
@@ -1527,6 +1592,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PreviewLevelWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 7927641698303102240, guid: a2031965edac5ca4aa69a8cfe09f6046,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2031965edac5ca4aa69a8cfe09f6046, type: 3}
 --- !u!224 &6300830060501490347 stripped
@@ -1659,10 +1729,95 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1380974561690306600, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380974561690306600, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380974561690306600, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 466.19727
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380974561690306600, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384909244300917191, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384909244300917191, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384909244300917191, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 93.239456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384909244300917191, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327605873170715286, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327605873170715286, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327605873170715286, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 652.6762
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327605873170715286, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 7247381117785781225, guid: 073b6955ab372db439ceda390ee033e0,
         type: 3}
       propertyPath: m_Name
       value: BoosterInterfaceWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247381117785781225, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994655860292612005, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994655860292612005, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994655860292612005, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 279.71838
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994655860292612005, guid: 073b6955ab372db439ceda390ee033e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 073b6955ab372db439ceda390ee033e0, type: 3}
@@ -1801,6 +1956,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerResourcesWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 5335300494613566309, guid: e684208b464449e43b80d1abee834943,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e684208b464449e43b80d1abee834943, type: 3}
 --- !u!224 &5324044378816124445 stripped
@@ -1830,12 +1990,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 358811199, guid: 7977bd1c2fbc28e45abc1be562dde268, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1779859137823798348, guid: 7977bd1c2fbc28e45abc1be562dde268,
         type: 3}
       propertyPath: m_Name
       value: LevelSelectWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1779859137823798348, guid: 7977bd1c2fbc28e45abc1be562dde268,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1779859137823798349, guid: 7977bd1c2fbc28e45abc1be562dde268,
         type: 3}
