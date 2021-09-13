@@ -98,6 +98,12 @@ TextureImporter:
   - first:
       213: -243302471136669803
     second: level_title
+  - first:
+      213: -4458344327416777533
+    second: background_substrate
+  - first:
+      213: -3224640124830193917
+    second: UIAtlas1_33
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -319,7 +325,7 @@ TextureImporter:
       name: detecor_icon
       rect:
         serializedVersion: 2
-        x: 547
+        x: 544
         y: 1130
         width: 460
         height: 435
@@ -845,7 +851,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2099
-        y: 542
+        y: 540
         width: 828
         height: 244
       alignment: 0
@@ -866,7 +872,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 956
-        y: 562
+        y: 560
         width: 1042
         height: 162
       alignment: 0
@@ -878,6 +884,48 @@ TextureImporter:
       bones: []
       spriteID: 59f8cea01bd9f9cf0800000000000000
       internalID: -243302471136669803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_substrate
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 359
+        width: 331
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 20, y: 30, z: 20, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4f1fd9477c022c0800000000000000
+      internalID: -4458344327416777533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas1_33
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 205
+        width: 292
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307660f24e6cf33d0800000000000000
+      internalID: -3224640124830193917
       vertices: []
       indices: 
       edges: []
