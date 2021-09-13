@@ -571,7 +571,7 @@ MonoBehaviour:
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
   ViewCategory: General
-  ViewName: MainMenuBlockWindow
+  ViewName: GameBlockWindow
 --- !u!114 &5212287388693063570
 MonoBehaviour:
   m_ObjectHideFlags: 0

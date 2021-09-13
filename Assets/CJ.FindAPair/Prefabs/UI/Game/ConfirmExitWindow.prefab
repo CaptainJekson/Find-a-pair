@@ -544,7 +544,7 @@ MonoBehaviour:
   StartAlpha: 1
   AllowMultipleClicks: 1
   ButtonCategory: LevelUI
-  ButtonName: Yes restart confirm Button
+  ButtonName: Yes exit confirm Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -3016,7 +3016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4458344327416777533, guid: a91b6fe9c9585de47b8ce70184a158b6,
+  m_Sprite: {fileID: -6622604961613908458, guid: a91b6fe9c9585de47b8ce70184a158b6,
     type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3026,7 +3026,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.8
+  m_PixelsPerUnitMultiplier: 1.55
 --- !u!1 &8669773452464732142
 GameObject:
   m_ObjectHideFlags: 0

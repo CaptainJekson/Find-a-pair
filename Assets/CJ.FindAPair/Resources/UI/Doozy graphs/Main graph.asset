@@ -177,7 +177,7 @@ MonoBehaviour:
   - m_connectionMode: 0
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
-      m_outputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
       m_id: e916e39c-8191-432a-bea1-041212d61cb7
       m_inputNodeId: db525590-9945-4969-b7c8-8f7920fc3f90
       m_inputSocketId: 16d41893-f4fe-4924-830b-cc04a52a78e0
@@ -250,11 +250,11 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: -2, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 8fe56288-e82a-41a2-bed7-2f88cd8ff79a
+      m_id: 554e47f2-b1d3-4c8e-a04d-d5886edd0d39
       m_inputNodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
       m_inputSocketId: ea59202c-2614-4a42-9c36-556053f868cf
-      m_outputNodeId: e9471c25-488e-4b04-b5ef-52c43781f0f3
-      m_outputSocketId: 33d24be4-454c-4ded-8e96-1982e682532a
+      m_outputNodeId: db525590-9945-4969-b7c8-8f7920fc3f90
+      m_outputSocketId: 3f305583-05e1-4645-87d2-303f0ee5c41b
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -274,14 +274,7 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_outputSockets:
   - m_connectionMode: 0
-    m_connections:
-    - m_inputConnectionPoint: {x: 202, y: 4}
-      m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: 8f7d7e54-8b0e-4a97-8c40-b46cbe8bcfc0
-      m_inputNodeId: e9471c25-488e-4b04-b5ef-52c43781f0f3
-      m_inputSocketId: 9067993d-fcc5-40bd-89f8-8401a4c513a2
-      m_outputNodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
-      m_outputSocketId: 6cc1a567-6495-4823-9b77-abfb6a7b3cff
+    m_connections: []
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -347,6 +340,9 @@ MonoBehaviour:
   - Category: Main menu
     InstantAction: 0
     Name: Levels Selected Screen
+  - Category: Main menu
+    InstantAction: 0
+    Name: Player resources Window
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
@@ -359,6 +355,9 @@ MonoBehaviour:
   - Category: Main menu
     InstantAction: 0
     Name: Preview level screen
+  - Category: Main menu
+    InstantAction: 0
+    Name: Player resources Window
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,14 +377,13 @@ MonoBehaviour:
   - {fileID: 5008959715296327603}
   - {fileID: 5507028336546184553}
   - {fileID: 7941881221464781127}
-  - {fileID: -5170627015898378183}
   - {fileID: 6073624404685217863}
   - {fileID: -1483790678511949648}
   m_isSubGraph: 0
   m_version: 1
   m_description: 
   m_id: b9aac61b-67c3-4c22-99b1-ee85de879569
-  m_lastModified: 132641137803321764
+  m_lastModified: 132760027871568156
 --- !u!114 &1825851665624866009
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -568,7 +566,7 @@ MonoBehaviour:
       m_outputNodeId: 8acaf730-7785-4861-959c-20d4a0ea508a
       m_outputSocketId: 40758ced-a29c-452b-adac-0cbef1120c92
     - m_inputConnectionPoint: {x: 202, y: 4}
-      m_outputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
       m_id: e916e39c-8191-432a-bea1-041212d61cb7
       m_inputNodeId: db525590-9945-4969-b7c8-8f7920fc3f90
       m_inputSocketId: 16d41893-f4fe-4924-830b-cc04a52a78e0
@@ -603,9 +601,9 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: -2, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 1ad3010a-362e-4f38-a622-80a35b4eaecc
-      m_inputNodeId: e9471c25-488e-4b04-b5ef-52c43781f0f3
-      m_inputSocketId: 9067993d-fcc5-40bd-89f8-8401a4c513a2
+      m_id: 554e47f2-b1d3-4c8e-a04d-d5886edd0d39
+      m_inputNodeId: e6e21c32-3c1d-4f5d-a738-cdbb16198360
+      m_inputSocketId: ea59202c-2614-4a42-9c36-556053f868cf
       m_outputNodeId: db525590-9945-4969-b7c8-8f7920fc3f90
       m_outputSocketId: 3f305583-05e1-4645-87d2-303f0ee5c41b
     m_connectionPoints:
@@ -635,8 +633,8 @@ MonoBehaviour:
   m_useUpdate: 1
   m_height: 128
   m_width: 216
-  m_x: -156
-  m_y: -48
+  m_x: 12
+  m_y: -96
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: b9aac61b-67c3-4c22-99b1-ee85de879569
