@@ -27,23 +27,20 @@
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/BoosterInterfaceWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/BoosterInterfaceWindow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/ConfirmExitWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/ConfirmExitWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/DefeatWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/DefeatWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameBlockWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameBlockWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/ConfirmRestartWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/ConfirmRestartWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameInterfaceWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameInterfaceWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameMenuWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameMenuWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/VictoryWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/VictoryWindow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelSelectWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelSelectWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LoadingPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LoadingPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/MainMenuBlockWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/MainMenuBlockWindow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/PreviewLevelWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/PreviewLevelWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/StartGameWindow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/StartGameWindow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Slots/LevelSlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Slots/LevelSlot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Slots/PageLevelPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Slots/PageLevelPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/Doozy graphs/Main graph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/Doozy graphs/Main graph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/UIRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/UI/UIRoot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/CoreGames/LevelBackground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/CoreGames/LevelBackground.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Atlas/UIAtlas1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Atlas/UIAtlas1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Atlas/UIAtlas1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Atlas/UIAtlas1.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PSD/UIAtlas1.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PSD/UIAtlas1.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +263,7 @@
       <workItem from="1631216610726" duration="8513000" />
       <workItem from="1631255694851" duration="4831000" />
       <workItem from="1631472690134" duration="6420000" />
-      <workItem from="1631527178655" duration="1846000" />
+      <workItem from="1631527178655" duration="3045000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -345,10 +342,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="589" y="199" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1631473318224" />
-    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1631479062962">
+    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1631535966054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1631261275506" />
-    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631479062962" />
+    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631535966054" />
   </component>
 </project>

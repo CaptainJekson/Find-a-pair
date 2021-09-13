@@ -116,6 +116,12 @@ TextureImporter:
   - first:
       213: -6622604961613908458
     second: frame_window
+  - first:
+      213: -1204904572586965048
+    second: shop_icon
+  - first:
+      213: 795612847325984952
+    second: menu_button
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -233,7 +239,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 1745
+        y: 1784
         width: 451
         height: 393
       alignment: 0
@@ -253,10 +259,10 @@ TextureImporter:
       name: energy_icon
       rect:
         serializedVersion: 2
-        x: 547
-        y: 1722
-        width: 327
-        height: 418
+        x: 548
+        y: 1759
+        width: 326
+        height: 419
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,9 +281,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1009
-        y: 1643
-        width: 428
-        height: 500
+        y: 1680
+        width: 429
+        height: 502
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,9 +302,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1587
-        y: 1747
-        width: 380
-        height: 394
+        y: 1784
+        width: 382
+        height: 396
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,8 +322,8 @@ TextureImporter:
       name: magnet_icon
       rect:
         serializedVersion: 2
-        x: 30
-        y: 1151
+        x: 31
+        y: 1189
         width: 431
         height: 450
       alignment: 0
@@ -337,10 +343,10 @@ TextureImporter:
       name: detecor_icon
       rect:
         serializedVersion: 2
-        x: 547
-        y: 1130
+        x: 548
+        y: 1168
         width: 460
-        height: 435
+        height: 437
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +364,10 @@ TextureImporter:
       name: sapper_icon
       rect:
         serializedVersion: 2
-        x: 1126
-        y: 1087
-        width: 464
-        height: 514
+        x: 1124
+        y: 1125
+        width: 466
+        height: 513
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -380,7 +386,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1760
-        y: 888
+        y: 925
         width: 1141
         height: 683
       alignment: 0
@@ -400,10 +406,10 @@ TextureImporter:
       name: blue_button
       rect:
         serializedVersion: 2
-        x: 80
-        y: 804
-        width: 168
-        height: 203
+        x: 78
+        y: 842
+        width: 170
+        height: 204
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,9 +427,9 @@ TextureImporter:
       name: red_button
       rect:
         serializedVersion: 2
-        x: 303
-        y: 803
-        width: 168
+        x: 302
+        y: 841
+        width: 170
         height: 203
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -443,9 +449,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 572
-        y: 962
+        y: 1000
         width: 79
-        height: 83
+        height: 82
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +469,10 @@ TextureImporter:
       name: exit_icon
       rect:
         serializedVersion: 2
-        x: 715
-        y: 964
-        width: 91
-        height: 75
+        x: 714
+        y: 1000
+        width: 93
+        height: 77
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,9 +490,9 @@ TextureImporter:
       name: prev_button
       rect:
         serializedVersion: 2
-        x: 1148
-        y: 813
-        width: 149
+        x: 1147
+        y: 851
+        width: 151
         height: 158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -505,9 +511,9 @@ TextureImporter:
       name: next_button
       rect:
         serializedVersion: 2
-        x: 1337
-        y: 809
-        width: 149
+        x: 1336
+        y: 848
+        width: 151
         height: 157
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -527,9 +533,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 591
-        y: 854
+        y: 891
         width: 53
-        height: 74
+        height: 76
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +553,10 @@ TextureImporter:
       name: restart_icon
       rect:
         serializedVersion: 2
-        x: 720
-        y: 844
-        width: 68
-        height: 83
+        x: 719
+        y: 883
+        width: 70
+        height: 82
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -569,9 +575,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 942
-        y: 841
-        width: 115
-        height: 117
+        y: 879
+        width: 116
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,10 +595,10 @@ TextureImporter:
       name: ad_icon
       rect:
         serializedVersion: 2
-        x: 673
-        y: 644
-        width: 76
-        height: 81
+        x: 672
+        y: 681
+        width: 77
+        height: 82
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +616,10 @@ TextureImporter:
       name: blue_back_button
       rect:
         serializedVersion: 2
-        x: 150
-        y: 280
-        width: 381
-        height: 158
+        x: 148
+        y: 317
+        width: 384
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 10, y: 40, z: 30, w: 30}
@@ -632,9 +638,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 562
-        y: 280
+        y: 317
         width: 382
-        height: 158
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 10, y: 40, z: 30, w: 30}
@@ -653,9 +659,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 975
-        y: 280
-        width: 381
-        height: 158
+        y: 317
+        width: 382
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 10, y: 40, z: 30, w: 30}
@@ -673,10 +679,10 @@ TextureImporter:
       name: yellow_back_button
       rect:
         serializedVersion: 2
-        x: 1389
-        y: 280
-        width: 381
-        height: 158
+        x: 1387
+        y: 317
+        width: 384
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 10, y: 40, z: 30, w: 30}
@@ -695,9 +701,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1801
-        y: 280
+        y: 317
         width: 382
-        height: 158
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 10, y: 40, z: 30, w: 30}
@@ -715,9 +721,9 @@ TextureImporter:
       name: gray_back_button
       rect:
         serializedVersion: 2
-        x: 150
-        y: 109
-        width: 381
+        x: 148
+        y: 147
+        width: 384
         height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -737,7 +743,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 562
-        y: 109
+        y: 147
         width: 382
         height: 159
       alignment: 0
@@ -758,8 +764,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 975
-        y: 109
-        width: 381
+        y: 147
+        width: 382
         height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -778,9 +784,9 @@ TextureImporter:
       name: orange_back_button
       rect:
         serializedVersion: 2
-        x: 1389
-        y: 109
-        width: 381
+        x: 1387
+        y: 147
+        width: 384
         height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -800,7 +806,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1801
-        y: 109
+        y: 147
         width: 382
         height: 159
       alignment: 0
@@ -821,9 +827,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2099
-        y: 1869
+        y: 1907
         width: 828
-        height: 244
+        height: 245
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 60}
@@ -842,9 +848,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2099
-        y: 1593
+        y: 1630
         width: 828
-        height: 244
+        height: 245
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 60}
@@ -863,9 +869,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2099
-        y: 540
+        y: 578
         width: 828
-        height: 244
+        height: 245
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 60}
@@ -884,9 +890,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 956
-        y: 560
-        width: 1042
-        height: 162
+        y: 599
+        width: 1043
+        height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -904,10 +910,10 @@ TextureImporter:
       name: background_substrate
       rect:
         serializedVersion: 2
-        x: 2362
-        y: 359
-        width: 331
-        height: 87
+        x: 2361
+        y: 396
+        width: 332
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 20, y: 30, z: 20, w: 20}
@@ -926,7 +932,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2381
-        y: 205
+        y: 243
         width: 292
         height: 89
       alignment: 0
@@ -947,9 +953,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 53
-        y: 499
+        y: 536
         width: 221
-        height: 261
+        height: 262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -967,10 +973,10 @@ TextureImporter:
       name: level_disable_button
       rect:
         serializedVersion: 2
-        x: 346
-        y: 499
-        width: 224
-        height: 266
+        x: 344
+        y: 536
+        width: 226
+        height: 268
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -989,8 +995,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 791
-        y: 471
-        width: 120
+        y: 509
+        width: 119
         height: 183
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1010,8 +1016,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2775
-        y: 12
-        width: 197
+        y: 50
+        width: 198
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1022,6 +1028,48 @@ TextureImporter:
       bones: []
       spriteID: 616734f10e7c714a0800000000000000
       internalID: -6622604961613908458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shop_icon
+      rect:
+        serializedVersion: 2
+        x: 3115
+        y: 1710
+        width: 417
+        height: 424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7c5b2dca1574fe0800000000000000
+      internalID: -1204904572586965048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_button
+      rect:
+        serializedVersion: 2
+        x: 3008
+        y: 1137
+        width: 530
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b83a975ba59a0b00800000000000000
+      internalID: 795612847325984952
       vertices: []
       indices: 
       edges: []

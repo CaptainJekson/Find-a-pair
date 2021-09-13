@@ -24,7 +24,6 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             LevelBackground levelBackground, UIRoot uiRoot)
         {
             _levelBackground = levelBackground;
-            SetCanvasPosition(_levelBackground.transform);
             _levelCreator = levelCreator;
             _levelCreator.transform.SetParent(transform);
             _gameWatcher = gameWatcher;

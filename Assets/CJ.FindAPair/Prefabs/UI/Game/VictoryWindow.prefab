@@ -76,6 +76,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2556376691626627240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900495140738236743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7072e71d4601a8d41807517243f6e2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeButton: {fileID: 0}
+  _restartButton: {fileID: 5900495139380782795}
+  _exitButton: {fileID: 5900495139585901371}
+  _nextLevelButton: {fileID: 5900495139752456575}
+  _currentLevelText: {fileID: 3339738415672129941}
 --- !u!1 &4172405995552724451
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 12}
+  m_AnchoredPosition: {x: 13, y: 6}
   m_SizeDelta: {x: 121.1107, y: 131.666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2885244863409370181
@@ -152,23 +169,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2556376691626627240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900495140738236743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7072e71d4601a8d41807517243f6e2c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _closeButton: {fileID: 0}
-  _restartButton: {fileID: 5900495139380782795}
-  _exitButton: {fileID: 5900495139585901371}
-  _nextLevelButton: {fileID: 5900495139752456575}
-  _currentLevelText: {fileID: 3339738415672129941}
 --- !u!1 &8255346383827318211
 GameObject:
   m_ObjectHideFlags: 0
