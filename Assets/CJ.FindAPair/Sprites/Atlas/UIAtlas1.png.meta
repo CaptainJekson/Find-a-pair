@@ -122,6 +122,15 @@ TextureImporter:
   - first:
       213: 795612847325984952
     second: menu_button
+  - first:
+      213: 2558635691807485595
+    second: UIAtlas1_40
+  - first:
+      213: -8919740968320988737
+    second: UIAtlas1_41
+  - first:
+      213: -4818847665507049659
+    second: item_counter_background
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1057,12 +1066,12 @@ TextureImporter:
       name: menu_button
       rect:
         serializedVersion: 2
-        x: 3008
-        y: 1137
-        width: 530
-        height: 423
+        x: 3028
+        y: 1170
+        width: 494
+        height: 366
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1070,6 +1079,27 @@ TextureImporter:
       bones: []
       spriteID: 8b83a975ba59a0b00800000000000000
       internalID: 795612847325984952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_counter_background
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 969
+        width: 467
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f5bbe5493002db0800000000000000
+      internalID: -4818847665507049659
       vertices: []
       indices: 
       edges: []
