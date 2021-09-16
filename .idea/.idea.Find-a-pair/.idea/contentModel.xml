@@ -13,6 +13,7 @@
           <e p="CustomEditor" t="Include">
             <e p="LevelEditor.cs" t="Include" />
             <e p="SaveOpener.cs" t="Include" />
+            <e p="ThemeEditor.cs" t="Include" />
           </e>
           <e p="Modules" t="Include">
             <e p="CoreGames" t="Include">
@@ -55,7 +56,16 @@
               </e>
               <e p="UIFlexibleGridController.cs" t="Include" />
             </e>
+            <e p="Meta" t="Include">
+              <e p="Configs" t="Include">
+                <e p="ThemeConfig.cs" t="Include" />
+              </e>
+              <e p="Installer" t="Include">
+                <e p="MetaGameInstaller.cs" t="Include" />
+              </e>
+            </e>
             <e p="Service" t="Include">
+              <e p="CurrencyType.cs" t="Include" />
               <e p="Installer" t="Include">
                 <e p="ServiceInstaller.cs" t="Include" />
               </e>

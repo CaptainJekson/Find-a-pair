@@ -1,4 +1,5 @@
 using CJ.FindAPair.Modules.CoreGames.Installer;
+using CJ.FindAPair.Modules.Meta.Installer;
 using CJ.FindAPair.Modules.Service.Installer;
 using CJ.FindAPair.Modules.UI.Installer;
 using Zenject;
@@ -12,6 +13,7 @@ namespace CJ.FindAPair
             ServiceInstaller.Install(Container);
             UIInstaller.Install(Container);
             CoreGameInstaller.Install(Container);
+            MetaGameInstaller.Install(Container);
         }
     }
 }

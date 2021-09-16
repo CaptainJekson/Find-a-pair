@@ -36,7 +36,7 @@ namespace CJ.FindAPair.CustomEditor
         [MenuItem("Find a pair/Level Editor")]
         private static void ShowWindow()
         {
-            EditorWindow.GetWindow(typeof(LevelEditor));
+            GetWindow(typeof(LevelEditor));
         }
 
         private void OnGUI()
@@ -164,7 +164,7 @@ namespace CJ.FindAPair.CustomEditor
 
         private void CreateLevel()
         {
-            var asset = ScriptableObject.CreateInstance<LevelConfig>();
+            var asset = CreateInstance<LevelConfig>();
             asset.SetSizeLevel(_levelMatrix, _level, _heightOffset);
             asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfFortune,
                 _quantityPairOfEntanglement, _quantityPairOfReset, _quantityPairOfBombs);
