@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using DG.Tweening;
 using TMPro;
@@ -9,10 +10,9 @@ using UnityEngine.Serialization;
 namespace CJ.FindAPair.Modules.CoreGames
 {
     [RequireComponent(typeof(BoxCollider))]
-    public class Card : MonoBehaviour
+    public class Card : MonoBehaviour, IComparable
     {
         [SerializeField] private GameSettingsConfig _gameSettingsConfig;
-        [SerializeField] private TextMeshProUGUI _textNumber;
         [SerializeField] private Sprite _shirtSprite;
         [SerializeField] private Sprite _faceSprite;
         [SerializeField] private SpriteRenderer _visualSprite;
@@ -38,19 +38,12 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void Start()
         {
-            SetNumberText();
-
             if (IsEmpty)
             {
                 MakeEmpty();
             }
 
             StartCoroutine(DelayStartHide());
-        }
-        
-        public void SetNumberText()
-        {
-            _textNumber.SetText(NumberPair.ToString());
         }
 
         public void Show(bool isNotEventCall = false)
@@ -87,7 +80,27 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _visualSprite.enabled = false;
             _collider.enabled = false;
-            _textNumber.enabled = false;
+        }
+
+        public void SetFace(Sprite face)
+        {
+            _faceSprite = face;
+            _visualSprite.sprite = _faceSprite;
+        }
+
+        public void SetShirt(Sprite shirt)
+        {
+            _shirtSprite = shirt;
+        }
+        
+        public int CompareTo(object obj)
+        {
+            var card = obj as Card;
+
+            if (card != null) 
+                return NumberPair.CompareTo(card.NumberPair);
+            
+            throw new Exception("Unable to compare objects");
         }
 
         private IEnumerator DelayHide(float time)
@@ -111,11 +124,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 90, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
-            sequence.AppendCallback(() =>
-            {
-                _textNumber.gameObject.SetActive(isShow);
-                _visualSprite.sprite = isShow ? _faceSprite : _shirtSprite;
-            });
+            sequence.AppendCallback(() => _visualSprite.sprite = isShow ? _faceSprite : _shirtSprite);
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 0, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             

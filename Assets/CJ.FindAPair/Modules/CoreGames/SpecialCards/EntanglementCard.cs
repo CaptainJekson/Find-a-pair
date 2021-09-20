@@ -30,11 +30,6 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
                 cards[i].NumberPair = cards[j].NumberPair;
                 cards[j].NumberPair = temp;
             }
-            
-            foreach (var card in cards)
-            {
-                card.SetNumberText();
-            }
         }
     }
 }

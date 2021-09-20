@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using UnityEngine;
@@ -9,7 +8,6 @@ using Random = UnityEngine.Random;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
-    [RequireComponent(typeof(CardsPlacer))]
     public class LevelCreator : MonoBehaviour
     {
         [SerializeField] private Card card;

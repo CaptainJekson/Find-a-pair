@@ -131,6 +131,9 @@ TextureImporter:
   - first:
       213: -4818847665507049659
     second: item_counter_background
+  - first:
+      213: 8556885369637325254
+    second: theme_icon
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1067,9 +1070,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3028
-        y: 1170
+        y: 1162
         width: 494
-        height: 366
+        height: 374
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1100,6 +1103,27 @@ TextureImporter:
       bones: []
       spriteID: 54f5bbe5493002db0800000000000000
       internalID: -4818847665507049659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_icon
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 670
+        width: 137
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c948f848e920c670800000000000000
+      internalID: 8556885369637325254
       vertices: []
       indices: 
       edges: []

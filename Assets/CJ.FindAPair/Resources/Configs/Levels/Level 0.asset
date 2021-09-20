@@ -16,7 +16,7 @@ MonoBehaviour:
   _width: 4
   _height: 7
   _heightOffset: 1
-  _quantityOfCardOfPair: 2
+  _quantityOfCardOfPair: 3
   _tries: 500
   _time: 900
   _quantityPairOfFortune: 0

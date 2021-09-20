@@ -29,5 +29,12 @@
         public const string Language = "Language";
 
         #endregion
+        
+        #region Settings
+
+        public const string SelectedTheme = "SelectedTheme";
+        public const string OpenedThemes = "OpenedThemes";
+
+        #endregion
     }
 }

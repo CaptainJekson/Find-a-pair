@@ -1,4 +1,8 @@
-﻿using TigerForge;
+﻿using System;
+using System.Collections.Generic;
+using TigerForge;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CJ.FindAPair.Modules.Service.Save
 {
@@ -54,5 +58,37 @@ namespace CJ.FindAPair.Modules.Service.Save
             var saveDataFile = new EasyFileSave(_saveFileName);
             return saveDataFile.Load(_password) ? saveDataFile.GetInt(keyValue) : 0;
         }
+        
+        public string ReadStringValue(string keyValue)
+        {
+            var saveDataFile = new EasyFileSave(_saveFileName);
+            return saveDataFile.Load(_password) ? saveDataFile.GetString(keyValue) : null;
+        }
+        
+        public void WriteStringValue(string keyValue, string value)
+        {
+            var saveDataFile = new EasyFileSave(_saveFileName);
+            saveDataFile.Add(keyValue, value);
+            saveDataFile.Save(_password);
+            saveDataFile.Dispose();
+        }
+
+        public void WriteToStringArray(string keyValue, StringList stringList) //TODO использовать когда темы можно будет покупать
+        {
+            var saveDataFile = new EasyFileSave(_saveFileName);
+            saveDataFile.AddSerialized(keyValue, stringList);
+        }
+        
+        public void ReadToStringArray(string keyValue, StringList stringList) //TODO использовать когда темы можно будет покупать
+        {
+            var saveDataFile = new EasyFileSave(_saveFileName);
+            saveDataFile.AddSerialized(keyValue, stringList);
+        }
+    }
+
+    [Serializable]
+    public class StringList
+    {
+        public string[] strings;
     }
 }

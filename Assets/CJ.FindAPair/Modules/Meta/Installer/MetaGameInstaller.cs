@@ -1,4 +1,6 @@
-﻿using Zenject;
+﻿using CJ.FindAPair.Modules.Meta.Configs;
+using CJ.FindAPair.Modules.Meta.Themes;
+using Zenject;
 
 namespace CJ.FindAPair.Modules.Meta.Installer
 {
@@ -6,7 +8,10 @@ namespace CJ.FindAPair.Modules.Meta.Installer
     {
         public override void InstallBindings()
         {
+            Container.Bind<ThemeConfigCollection>().FromScriptableObjectResource("Configs/Collections/ThemeCollection")
+                .AsSingle();
             
+            Container.Bind<ThemesSelector>().AsSingle();
         }
     }
 }

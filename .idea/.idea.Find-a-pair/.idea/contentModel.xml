@@ -59,9 +59,14 @@
             <e p="Meta" t="Include">
               <e p="Configs" t="Include">
                 <e p="ThemeConfig.cs" t="Include" />
+                <e p="ThemeConfigCollection.cs" t="Include" />
               </e>
               <e p="Installer" t="Include">
+                <e p="MetaGameCreator.cs" t="Include" />
                 <e p="MetaGameInstaller.cs" t="Include" />
+              </e>
+              <e p="Themes" t="Include">
+                <e p="ThemesSelector.cs" t="Include" />
               </e>
             </e>
             <e p="Service" t="Include">
@@ -99,6 +104,7 @@
                 <e p="LevelSelectWindow.cs" t="Include" />
                 <e p="PlayerResourcesWindow.cs" t="Include" />
                 <e p="PreviewLevelWindow.cs" t="Include" />
+                <e p="ThemeWindow.cs" t="Include" />
                 <e p="VictoryWindow.cs" t="Include" />
               </e>
             </e>

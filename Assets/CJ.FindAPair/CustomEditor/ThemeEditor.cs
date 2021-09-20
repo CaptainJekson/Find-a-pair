@@ -58,7 +58,7 @@ namespace CJ.FindAPair.CustomEditor
                 
                 for (var j = 0; j < 3; j++)
                 {
-                    _facesSprites[index] = EditorGUILayout.ObjectField($"Лицо карты {index + 1}:",
+                    _facesSprites[index] = EditorGUILayout.ObjectField($"Лицо пары {index + 1}:",
                         _facesSprites[index], typeof(Sprite), true) as Sprite;
                     index++;
                 }

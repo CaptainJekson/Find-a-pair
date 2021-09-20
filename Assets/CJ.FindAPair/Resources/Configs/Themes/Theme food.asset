@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2570365bb7344ee680d3ca9e8fee78cc, type: 3}
+  m_Name: Theme food
+  m_EditorClassIdentifier: 
+  _id: food
+  _name: '@FoodName'
+  _description: '@FoodDescription'
+  _currencyType: 0
+  _price: 1500
+  _shirtSprite: {fileID: 8165587077686769274, guid: 9af3659e5513cf64abd32a89c9325fb6,
+    type: 3}
+  _facesSprites:
+  - {fileID: 552051692666995298, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: -4389878558776720963, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 8764666903157631187, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: -415559437495880817, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: -4848874477519419613, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: -2800905226229312477, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 440042845987837695, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 2477797853656070402, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 3365541431180373568, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 6731395929958223517, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: -4104111667616515072, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 4014218267244176204, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 5755510049117667242, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 1376930778098939476, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  - {fileID: 5225171064637652687, guid: 9af3659e5513cf64abd32a89c9325fb6, type: 3}
+  _backGroundSprite: {fileID: 21300000, guid: 93aef8a1fac5fb04883975f4fa238d21, type: 3}
+  _music: {fileID: 8300000, guid: 4e2fe3af2af7140449e656c975026220, type: 3}
