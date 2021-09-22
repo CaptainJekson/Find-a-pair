@@ -16,11 +16,11 @@ MonoBehaviour:
   _width: 4
   _height: 7
   _heightOffset: 1
-  _quantityOfCardOfPair: 3
+  _quantityOfCardOfPair: 2
   _tries: 500
   _time: 900
   _quantityPairOfFortune: 0
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 01010101010101010100000101010101000001010101010101010101
+  _levelField: 01010101010101010101010101010101010101010101010101010101
