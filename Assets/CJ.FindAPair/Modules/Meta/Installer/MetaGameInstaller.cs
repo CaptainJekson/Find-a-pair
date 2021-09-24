@@ -11,6 +11,9 @@ namespace CJ.FindAPair.Modules.Meta.Installer
             Container.Bind<ThemeConfigCollection>().FromScriptableObjectResource("Configs/Collections/ThemeCollection")
                 .AsSingle();
             
+            Container.Bind<SpecialCardImageConfig>().FromScriptableObjectResource("Configs/Themes/SpecialCardImageConfig")
+                .AsSingle();
+            
             Container.Bind<ThemesSelector>().AsSingle();
         }
     }

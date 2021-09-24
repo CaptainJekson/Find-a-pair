@@ -16,6 +16,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         [SerializeField] private Sprite _shirtSprite;
         [SerializeField] private Sprite _faceSprite;
         [SerializeField] private SpriteRenderer _visualSprite;
+        [SerializeField] private SpriteRenderer _specialCardSprite;
         [SerializeField] private Ease _easeAnimationCard;
         private BoxCollider _collider;
         
@@ -88,6 +89,11 @@ namespace CJ.FindAPair.Modules.CoreGames
             _visualSprite.sprite = _faceSprite;
         }
 
+        public void SetSpecialIcon(Sprite specialIcon)
+        {
+            _specialCardSprite.sprite = specialIcon;
+        }
+
         public void SetShirt(Sprite shirt)
         {
             _shirtSprite = shirt;
@@ -124,7 +130,11 @@ namespace CJ.FindAPair.Modules.CoreGames
             
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 90, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
-            sequence.AppendCallback(() => _visualSprite.sprite = isShow ? _faceSprite : _shirtSprite);
+            sequence.AppendCallback(() =>
+            {
+                _specialCardSprite.enabled = isShow;
+                _visualSprite.sprite = isShow ? _faceSprite : _shirtSprite;
+            });
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 0, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             

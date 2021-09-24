@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607e66c0872178e4b9a5b58b5daa4d20, type: 3}
+  m_Name: SpecialCardImageConfig
+  m_EditorClassIdentifier: 
+  _fortuneSprite: {fileID: 5940932064952353230, guid: a91b6fe9c9585de47b8ce70184a158b6,
+    type: 3}
+  _entanglementSprite: {fileID: 8413610138815727524, guid: a91b6fe9c9585de47b8ce70184a158b6,
+    type: 3}
+  _resetSprite: {fileID: -3852785769450730293, guid: a91b6fe9c9585de47b8ce70184a158b6,
+    type: 3}
+  _bombSprite: {fileID: 2651127236917439156, guid: a91b6fe9c9585de47b8ce70184a158b6,
+    type: 3}
