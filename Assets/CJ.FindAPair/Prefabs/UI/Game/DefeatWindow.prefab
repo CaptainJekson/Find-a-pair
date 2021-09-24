@@ -1670,6 +1670,11 @@ MonoBehaviour:
   _exitButton: {fileID: 8173577354354482673}
   _adsButton: {fileID: 8173577353378344885}
   _currentLevelText: {fileID: 1068908068412778335}
+  _defeatNotificationText: {fileID: 5126115504803749636}
+  _timeIsOverMessage: 1
+  _livesAreOverMessage: 2
+  _bombDetonatedMessage: 3
+  _fortuneCardRealisedMessage: 4
 --- !u!1 &8173577353378344904
 GameObject:
   m_ObjectHideFlags: 0
