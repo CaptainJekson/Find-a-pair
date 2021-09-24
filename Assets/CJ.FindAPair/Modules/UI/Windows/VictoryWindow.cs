@@ -43,6 +43,7 @@ public class VictoryWindow : Window
     {
         _levelCreator.RestartLevel();
         Close();
+        Debug.LogError("OnRestartButtonClick");
     }
 
     private void OnExitButtonClick()
