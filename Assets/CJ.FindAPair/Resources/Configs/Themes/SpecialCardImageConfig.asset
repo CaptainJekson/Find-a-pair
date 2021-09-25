@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607e66c0872178e4b9a5b58b5daa4d20, type: 3}
   m_Name: SpecialCardImageConfig
   m_EditorClassIdentifier: 
-  _fortuneSprite: {fileID: 5940932064952353230, guid: a91b6fe9c9585de47b8ce70184a158b6,
+  _fortuneSprite: {fileID: -5903858935013960977, guid: f46680ed657f4ef438d29e85262df627,
     type: 3}
-  _entanglementSprite: {fileID: 8413610138815727524, guid: a91b6fe9c9585de47b8ce70184a158b6,
+  _entanglementSprite: {fileID: -8330082576549598707, guid: f46680ed657f4ef438d29e85262df627,
     type: 3}
-  _resetSprite: {fileID: -3852785769450730293, guid: a91b6fe9c9585de47b8ce70184a158b6,
+  _resetSprite: {fileID: 7183359779147643809, guid: f46680ed657f4ef438d29e85262df627,
     type: 3}
-  _bombSprite: {fileID: 2651127236917439156, guid: a91b6fe9c9585de47b8ce70184a158b6,
+  _bombSprite: {fileID: 8713838411705241547, guid: f46680ed657f4ef438d29e85262df627,
     type: 3}

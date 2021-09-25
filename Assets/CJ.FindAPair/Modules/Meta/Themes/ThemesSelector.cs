@@ -69,13 +69,16 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             
             foreach (var card in _sortedCards)
             {
-                card.SetFace(_selectedThemeConfig.FacesSprites[index]);
-                
-                if (card.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
+                if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
                 {
+                    card.SetFace(_selectedThemeConfig.FacesSprites[index]);
+                }
+                else
+                {
+                    card.SetFace(_selectedThemeConfig.FacesSprites[_selectedThemeConfig.FacesSprites.Count - 1]);
                     card.SetSpecialIcon(GetFaceSpecialCard(card.NumberPair));
                 }
-                
+
                 pairCounter++;
 
                 if (pairCounter >= _quantityOfCardOfPair)
