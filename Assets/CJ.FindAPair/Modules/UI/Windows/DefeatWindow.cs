@@ -1,3 +1,4 @@
+using System;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using TMPro;
@@ -5,95 +6,87 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class DefeatWindow : Window
+namespace CJ.FindAPair.Modules.UI.Windows
 {
-    [SerializeField] private Button _restartButton;
-    [SerializeField] private Button _exitButton;
-    [SerializeField] private Button _adsButton;
-    [SerializeField] private TextMeshProUGUI _currentLevelText;
-    [SerializeField] private TextMeshProUGUI _defeatNotificationText;
-    [SerializeField] private string _timeIsOverMessage;
-    [SerializeField] private string _livesAreOverMessage;
-    [SerializeField] private string _bombDetonatedMessage;
-    [SerializeField] private string _fortuneCardRealisedMessage;
-
-    private LevelCreator _levelCreator;
-    private GameWatcher _gameWatcher;
-    private BombCard _bombCard;
-    private FortuneCard _fortuneCard;
-    private string _currentMessage;
-
-    [Inject]
-    public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher,
-        BombCard bombCard, FortuneCard fortuneCard)
+    public class DefeatWindow : Window
     {
-        _levelCreator = levelCreator;
-        _gameWatcher = gameWatcher;
-        _bombCard = bombCard;
-        _fortuneCard = fortuneCard;
-    }
+        [SerializeField] private Button _restartButton;
+        [SerializeField] private Button _exitButton;
+        [SerializeField] private Button _adsButton;
+        [SerializeField] private TextMeshProUGUI _currentLevelText;
+        [SerializeField] private TextMeshProUGUI _defeatNotificationText;
+        [SerializeField] private string _timeIsOverMessage;
+        [SerializeField] private string _livesAreOverMessage;
+        [SerializeField] private string _bombDetonatedMessage;
+        [SerializeField] private string _fortuneCardRealisedMessage;
 
-    protected override void Init()
-    {
-        _gameWatcher.ThereWasADefeat += Open;
+        private LevelCreator _levelCreator;
+        private GameWatcher _gameWatcher;
+        private BombCard _bombCard;
+        private FortuneCard _fortuneCard;
 
-        _restartButton.onClick.AddListener(OnRestartButtonClick);
-        _exitButton.onClick.AddListener(OnExitButtonClick);
-        _adsButton.onClick.AddListener(OnAdsButtonClick);
-    }
+        [Inject]
+        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher,
+            SpecialCardHandler specialCardHandler)
+        {
+            _levelCreator = levelCreator;
+            _gameWatcher = gameWatcher;
+            _bombCard = specialCardHandler.GetComponentInChildren<BombCard>();
+            _fortuneCard = specialCardHandler.GetComponentInChildren<FortuneCard>();
+        }
 
-    protected override void OnOpen()
-    {
-        _gameWatcher.TimeIsOut += TimeIsOver;
-        _gameWatcher.LivesIsOut += LivesAreOver;
-        _bombCard.BombDetonate += BombDetonated;
-        _fortuneCard.CardRealised += FortuneCardRealised;
+        protected override void Init()
+        {
+            _gameWatcher.TimeIsOut += TimeIsOver;
+            _gameWatcher.LivesIsOut += LivesAreOver;
+            _bombCard.BombDetonate += BombDetonated;
+            _fortuneCard.CardRealised += FortuneCardRealised;
+            _gameWatcher.ThereWasADefeat += Open;
 
-        _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
-        _defeatNotificationText.SetText(_currentMessage);
-    }
+            _restartButton.onClick.AddListener(OnRestartButtonClick);
+            _exitButton.onClick.AddListener(OnExitButtonClick);
+            _adsButton.onClick.AddListener(OnAdsButtonClick);
+        }
 
-    protected override void OnClose()
-    {
-        _gameWatcher.TimeIsOut -= TimeIsOver;
-        _gameWatcher.LivesIsOut -= LivesAreOver;
-        _bombCard.BombDetonate -= BombDetonated;
-        _fortuneCard.CardRealised -= FortuneCardRealised;
-    }
+        protected override void OnOpen()
+        {
+            _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
+        }
 
-    private void OnRestartButtonClick()
-    {
-        _levelCreator.RestartLevel();
-        Close();
-    }
+        private void OnRestartButtonClick()
+        {
+            _levelCreator.RestartLevel();
+            Close();
+        }
 
-    private void OnExitButtonClick()
-    {
-        _levelCreator.ClearLevel();
-        Close();
-    }
+        private void OnExitButtonClick()
+        {
+            _levelCreator.ClearLevel();
+            Close();
+        }
 
-    private void OnAdsButtonClick()
-    {
-    }
+        private void OnAdsButtonClick()
+        {
+        }
 
-    private void TimeIsOver()
-    {
-        _currentMessage = _timeIsOverMessage;
-    }
+        private void TimeIsOver()
+        {
+            _defeatNotificationText.SetText(_timeIsOverMessage);
+        }
 
-    private void LivesAreOver()
-    {
-        _currentMessage = _livesAreOverMessage;
-    }
+        private void LivesAreOver()
+        {
+            _defeatNotificationText.SetText(_livesAreOverMessage);
+        }
 
-    private void BombDetonated()
-    {
-        _currentMessage = _bombDetonatedMessage;
-    }
+        private void BombDetonated()
+        {
+            _defeatNotificationText.SetText(_bombDetonatedMessage);
+        }
 
-    private void FortuneCardRealised()
-    {
-        _currentMessage = _fortuneCardRealisedMessage;
+        private void FortuneCardRealised()
+        {
+            _defeatNotificationText.SetText(_fortuneCardRealisedMessage);
+        }
     }
 }
