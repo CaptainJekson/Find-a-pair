@@ -15,10 +15,10 @@ MonoBehaviour:
   _level: 3
   _width: 3
   _height: 4
-  _scale: 0.6
+  _heightOffset: 0
   _quantityOfCardOfPair: 2
-  _tries: 20
-  _time: 160
+  _tries: 10
+  _time: 70
   _quantityPairOfFortune: 0
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0

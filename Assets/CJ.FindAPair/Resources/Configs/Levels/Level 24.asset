@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Level 24
   m_EditorClassIdentifier: 
   _level: 24
-  _width: 6
-  _height: 6
-  _heightOffset: -1
+  _width: 4
+  _height: 7
+  _heightOffset: 1.2
   _quantityOfCardOfPair: 2
-  _tries: 10
-  _time: 80
+  _tries: 8
+  _time: 35
   _quantityPairOfFortune: 0
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 000001010000000001010000010101010101010101010101000001010000000001010000
+  _levelField: 00000101010000010100010001010101000100010100000101010000

@@ -15,12 +15,12 @@ MonoBehaviour:
   _level: 5
   _width: 3
   _height: 4
-  _scale: 0.6
+  _heightOffset: 0
   _quantityOfCardOfPair: 2
-  _tries: 10
-  _time: 90
+  _tries: 7
+  _time: 40
   _quantityPairOfFortune: 0
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 010000010101010101000001
+  _levelField: 010101010001010001010101

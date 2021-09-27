@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   _level: 1
-  _width: 3
-  _height: 2
-  _scale: 1
+  _width: 2
+  _height: 3
+  _heightOffset: 0
   _quantityOfCardOfPair: 2
   _tries: 15
   _time: 120
