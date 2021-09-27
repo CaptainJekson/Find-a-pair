@@ -1,11 +1,14 @@
 ﻿using System.Linq;
 using CJ.FindAPair.Constants;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 {
     public class FortuneCard : SpecialCard
     {
+        public event UnityAction CardRealised;
+        
         public override void OpenSpecialCard(Card specialCardOld)
         {
             var randomChance = Random.Range(0, 2);
@@ -42,6 +45,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             else
             {
                 _gameWatcher.InitiateDefeat();
+                CardRealised?.Invoke();
             }
         }
         

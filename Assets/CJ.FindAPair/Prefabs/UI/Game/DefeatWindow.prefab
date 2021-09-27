@@ -141,7 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: bomb detonation
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb633160ff1582348ba1d48d563ac423, type: 2}
   m_sharedMaterial: {fileID: -6635393379152445730, guid: bb633160ff1582348ba1d48d563ac423,
@@ -1670,6 +1670,11 @@ MonoBehaviour:
   _exitButton: {fileID: 8173577354354482673}
   _adsButton: {fileID: 8173577353378344885}
   _currentLevelText: {fileID: 1068908068412778335}
+  _defeatNotificationText: {fileID: 5126115504803749636}
+  _timeIsOverMessage: time is up
+  _livesAreOverMessage: lives are over
+  _bombDetonatedMessage: bomb detonation
+  _fortuneCardRealisedMessage: bad luck
 --- !u!1 &8173577353378344904
 GameObject:
   m_ObjectHideFlags: 0

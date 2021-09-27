@@ -31,7 +31,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         public event UnityAction<int> TimeСhanged;
         public event UnityAction ThereWasAVictory;
         public event UnityAction ThereWasADefeat;
-        
+        public event UnityAction LivesIsOut;
+        public event UnityAction TimeIsOut;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
@@ -154,6 +155,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (_life <= 0)
             {
                 InitiateDefeat();
+                LivesIsOut?.Invoke();
             }
         }
 
@@ -223,6 +225,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 if (_time <= 1)
                 {
                     InitiateDefeat();
+                    TimeIsOut?.Invoke();
                 }
             }
         }
