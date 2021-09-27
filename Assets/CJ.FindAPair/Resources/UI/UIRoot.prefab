@@ -1111,6 +1111,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 192785114419143939}
     m_Modifications:
+    - target: {fileID: 1849803244704027491, guid: 237541be144eda44ab393e766fcd6fde,
+        type: 3}
+      propertyPath: _timeIsOverMessage
+      value: time is up
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849803244704027491, guid: 237541be144eda44ab393e766fcd6fde,
+        type: 3}
+      propertyPath: _livesAreOverMessage
+      value: lives are over
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849803244704027491, guid: 237541be144eda44ab393e766fcd6fde,
+        type: 3}
+      propertyPath: _bombDetonatedMessage
+      value: bomb detonation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849803244704027491, guid: 237541be144eda44ab393e766fcd6fde,
+        type: 3}
+      propertyPath: _fortuneCardRealisedMessage
+      value: bad luck
+      objectReference: {fileID: 0}
     - target: {fileID: 5990408238590344551, guid: 237541be144eda44ab393e766fcd6fde,
         type: 3}
       propertyPath: m_RootOrder
