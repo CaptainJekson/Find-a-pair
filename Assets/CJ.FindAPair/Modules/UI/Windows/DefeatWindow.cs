@@ -1,6 +1,7 @@
-using System;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
+using CJ.FindAPair.Modules.Service.Ads;
+using CJ.FindAPair.Modules.Service.Ads.Configs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _restartButton;
         [SerializeField] private Button _exitButton;
         [SerializeField] private Button _adsButton;
+        [SerializeField] private Image _loadingAdsBlocker;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _defeatNotificationText;
         [SerializeField] private string _timeIsOverMessage;
@@ -24,13 +26,17 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private GameWatcher _gameWatcher;
         private BombCard _bombCard;
         private FortuneCard _fortuneCard;
+        private IAdsDriver _adsDriver;
+        private UnityAdsConfig _unityAdsConfig;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher,
-            SpecialCardHandler specialCardHandler)
+            SpecialCardHandler specialCardHandler, IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
         {
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
+            _adsDriver = adsDriver;
+            _unityAdsConfig = unityAdsConfig;
             _bombCard = specialCardHandler.GetComponentInChildren<BombCard>();
             _fortuneCard = specialCardHandler.GetComponentInChildren<FortuneCard>();
         }
@@ -42,6 +48,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _bombCard.BombDetonate += BombDetonated;
             _fortuneCard.CardRealised += FortuneCardRealised;
             _gameWatcher.ThereWasADefeat += Open;
+            _adsDriver.AdsIsReady += UnLockAdsBlocker;
 
             _restartButton.onClick.AddListener(OnRestartButtonClick);
             _exitButton.onClick.AddListener(OnExitButtonClick);
@@ -67,6 +74,17 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void OnAdsButtonClick()
         {
+            _gameWatcher.ContinueGameWithAdsInEnd();
+            _loadingAdsBlocker.gameObject.SetActive(true);
+            Close();
+        }
+
+        private void UnLockAdsBlocker(string placementId)
+        {
+            if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
+            {
+                _loadingAdsBlocker.gameObject.SetActive(false);
+            }
         }
 
         private void TimeIsOver()

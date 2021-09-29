@@ -1,7 +1,10 @@
-﻿using System.Collections;
-using CJ.FindAPair.Animation;
+﻿using System;
+using System.Collections;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.Service.Ads;
+using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.Service.Save;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -14,6 +17,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         private LevelCreator _levelCreator;
         private CardComparator _cardComparator;
         private GameSaver _gameSaver;
+        private IAdsDriver _adsDriver;
+        private UnityAdsConfig _unityAdsConfig;
 
         private int _life;
         private int _time;
@@ -25,6 +30,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private int _quantityOfMatchedPairs;
 
         private IEnumerator _timerCoroutine;
+        private Action _showAdsAction;
 
         public event UnityAction<int> ScoreСhanged;
         public event UnityAction<int> LifeСhanged;
@@ -36,12 +42,15 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
-            GameSettingsConfig gameSettingsConfig, GameSaver gameSaver)
+            GameSettingsConfig gameSettingsConfig, GameSaver gameSaver, IAdsDriver adsDriver,
+            UnityAdsConfig unityAdsConfig)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
             _gameSettingsConfig = gameSettingsConfig;
             _gameSaver = gameSaver;
+            _adsDriver = adsDriver;
+            _unityAdsConfig = unityAdsConfig;
         }
 
         private void OnEnable()
@@ -51,6 +60,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelCreator.OnLevelCreated += StartTheGame;
             _levelCreator.OnLevelDeleted += ResetTimer;
             _levelCreator.OnLevelDeleted += ResetCounts;
+            _adsDriver.AdsIsSkipped += InitiateDefeatAtSkipAds;
+            _adsDriver.AdsIsFailed += InitiateDefeatAtSkipAds;
         }
 
         private void OnDisable()
@@ -60,11 +71,15 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelCreator.OnLevelCreated -= StartTheGame;
             _levelCreator.OnLevelDeleted -= ResetTimer;
             _levelCreator.OnLevelDeleted -= ResetCounts;
+            _adsDriver.AdsIsSkipped -= InitiateDefeatAtSkipAds;
+            _adsDriver.AdsIsFailed -= InitiateDefeatAtSkipAds;
         }
         
         public void InitiateDefeat()
         {
             StopTimer();
+            _showAdsAction?.Invoke();
+            _showAdsAction = null;
             ThereWasADefeat?.Invoke();
         }
 
@@ -78,6 +93,20 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _score = 0;
             ScoreСhanged?.Invoke(_score);
+        }
+
+        public void ContinueGameWithAdsInEnd()
+        {
+            _life += _gameSettingsConfig.AdditionalLife;
+            _time += _gameSettingsConfig.AdditionalTimeInSecond;
+            LifeСhanged?.Invoke(_life);   
+            TimeСhanged?.Invoke(_time);
+            StartTimer();
+            
+            _showAdsAction = () =>
+            {
+                _adsDriver.ShowAds(_unityAdsConfig.PlacementRewardedVideoId);
+            };
         }
 
         private void AddScore()
@@ -159,9 +188,19 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
+        private void InitiateDefeatAtSkipAds(string placementId)
+        {
+            if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
+            {
+                InitiateDefeat();
+            }
+        }
+
         private void InitiateVictory()
         {
             StopTimer();
+            _showAdsAction?.Invoke();
+            _showAdsAction = null;
             _gameSaver.IncreaseNumberValue(_score, SaveKeys.Coins);
             ThereWasAVictory?.Invoke();
         }
@@ -179,7 +218,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             TimeСhanged?.Invoke(_time);
             ScoreСhanged?.Invoke(_score);
 
-            StartTimer();
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(_gameSettingsConfig.StartTimeShow);
+            sequence.AppendCallback(StartTimer);
         }
 
         private void StartTimer()
@@ -212,8 +253,6 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private IEnumerator TimerTick()
         {
-            yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
-
             while (true)
             {
                 _time--;

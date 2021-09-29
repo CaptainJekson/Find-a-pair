@@ -18,4 +18,7 @@ MonoBehaviour:
   _pointsTwoCards: 1
   _pointsThreeCards: 3
   _pointsFourCards: 5
+  _additionalTimeInSecond: 30
+  _additionalLife: 5
+  _delayAdsContinueGameInSecond: 300
   _scoreCombo: 020000000400000006000000
