@@ -10,6 +10,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
     public class LevelConfig : ScriptableObject
     {
         [SerializeField] private int _level;
+        [SerializeField] private bool _isHard;
         [SerializeField] private int _width;
         [SerializeField] private int _height;
         [SerializeField] private float _heightOffset;
@@ -26,6 +27,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
 
         public List<bool> LevelField => _levelField;
         public int LevelNumber => _level;
+        public bool IsHard => _isHard;
         public int Width => _width;
         public int Height => _height;
         public float HeightOffset => _heightOffset;
@@ -57,11 +59,12 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
             _level = level;
         }
         
-        public void SetConditionsLevel(QuantityOfCardOfPair quantityOfCardOfPair, int tries, int time, 
+        public void SetConditionsLevel(QuantityOfCardOfPair quantityOfCardOfPair, bool isHard, int tries, int time, 
             int quantityPairOfFortune, int quantityPairOfEntanglement, int quantityPairOfReset,
             int quantityPairOfBombs)
         {
             _quantityOfCardOfPair = quantityOfCardOfPair;
+            _isHard = isHard;
             _tries = tries;
             _time = time;
             _quantityPairOfFortune = quantityPairOfFortune;

@@ -13,6 +13,7 @@ namespace CJ.FindAPair.CustomEditor
         private bool[,] _levelMatrix = new bool[0, 0];
 
         private int _level = 0;
+        private bool _isHard;
         private int _width = 0;
         private int _height = 0;
         private float _heightOffset = 0.0f;
@@ -50,6 +51,7 @@ namespace CJ.FindAPair.CustomEditor
             }
 
             _level = EditorGUILayout.IntField("Номер уровня", _level);
+            _isHard = EditorGUILayout.Toggle("Сложный уровень", _isHard);
 
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Ширина", _width);
@@ -127,6 +129,7 @@ namespace CJ.FindAPair.CustomEditor
             }
 
             _level = _levelConfig.LevelNumber;
+            _isHard = _levelConfig.IsHard;
             _heightOffset = _levelConfig.HeightOffset;
             _quantityOfCardOfPair = _levelConfig.QuantityOfCardOfPair;
             _tries = _levelConfig.Tries;
@@ -166,7 +169,7 @@ namespace CJ.FindAPair.CustomEditor
         {
             var asset = CreateInstance<LevelConfig>();
             asset.SetSizeLevel(_levelMatrix, _level, _heightOffset);
-            asset.SetConditionsLevel(_quantityOfCardOfPair, _tries, _time, _quantityPairOfFortune,
+            asset.SetConditionsLevel(_quantityOfCardOfPair, _isHard, _tries, _time, _quantityPairOfFortune,
                 _quantityPairOfEntanglement, _quantityPairOfReset, _quantityPairOfBombs);
             
             AssetDatabase.CreateAsset(asset,$"Assets/CJ.FindAPair/Resources/Configs/Levels/Level {_level}.asset");
