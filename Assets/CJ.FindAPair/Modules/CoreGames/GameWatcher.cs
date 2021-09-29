@@ -62,8 +62,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelCreator.OnLevelDeleted += ResetCounts;
             _adsDriver.AdsIsSkipped += InitiateDefeatAtSkipAds;
             _adsDriver.AdsIsFailed += InitiateDefeatAtSkipAds;
+            _adsDriver.AdsIsComplete += AddCoolDownAdsTime;
         }
-
+        
         private void OnDisable()
         {
             _cardComparator.CardsMatched -= AddScore;
@@ -73,6 +74,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelCreator.OnLevelDeleted -= ResetCounts;
             _adsDriver.AdsIsSkipped -= InitiateDefeatAtSkipAds;
             _adsDriver.AdsIsFailed -= InitiateDefeatAtSkipAds;
+            _adsDriver.AdsIsComplete -= AddCoolDownAdsTime;
         }
         
         public void InitiateDefeat()
@@ -188,14 +190,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
-        private void InitiateDefeatAtSkipAds(string placementId)
-        {
-            if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
-            {
-                InitiateDefeat();
-            }
-        }
-
         private void InitiateVictory()
         {
             StopTimer();
@@ -204,7 +198,23 @@ namespace CJ.FindAPair.Modules.CoreGames
             _gameSaver.IncreaseNumberValue(_score, SaveKeys.Coins);
             ThereWasAVictory?.Invoke();
         }
-
+        
+        private void InitiateDefeatAtSkipAds(string placementId)
+        {
+            if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
+            {
+                InitiateDefeat();
+            }
+        }
+        
+        private void AddCoolDownAdsTime(string placementId)
+        {
+            if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
+            {
+                
+            }
+        }
+        
         private void StartTheGame()
         {
             _quantityOfPairs = (_levelCreator.Cards.Count / (int)_levelCreator.LevelConfig.QuantityOfCardOfPair)

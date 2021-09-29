@@ -20,6 +20,8 @@
 
         #region DateTime
 
+        public const string EndTimeCooldownContinueGame = "EndTimeCooldownContinueGame";
+
         #endregion
         
         #region Settings

@@ -20,5 +20,5 @@ MonoBehaviour:
   _pointsFourCards: 5
   _additionalTimeInSecond: 30
   _additionalLife: 5
-  _delayAdsContinueGameInSecond: 300
+  _cooldownAdsContinueGameInSecond: 300
   _scoreCombo: 020000000400000006000000

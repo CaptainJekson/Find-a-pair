@@ -1,7 +1,9 @@
+using System;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
+using CJ.FindAPair.Modules.Service.Save;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +17,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _exitButton;
         [SerializeField] private Button _adsButton;
         [SerializeField] private Image _loadingAdsBlocker;
+        [SerializeField] private Image _timerPanel;
+        [SerializeField] private TextMeshProUGUI _timeText;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _defeatNotificationText;
         [SerializeField] private string _timeIsOverMessage;
@@ -26,14 +30,16 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private GameWatcher _gameWatcher;
         private BombCard _bombCard;
         private FortuneCard _fortuneCard;
+        private GameSaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
 
         [Inject]
-        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher,
-            SpecialCardHandler specialCardHandler, IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
+        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher, SpecialCardHandler specialCardHandler,
+            GameSaver gameSaver, IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
         {
             _levelCreator = levelCreator;
+            _gameSaver = gameSaver;
             _gameWatcher = gameWatcher;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;

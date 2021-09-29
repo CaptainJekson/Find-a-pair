@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CJ.FindAPair.Modules.CoreGames.Configs
 {
@@ -16,7 +17,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
 
         [SerializeField] private int _additionalTimeInSecond;
         [SerializeField] private int _additionalLife;
-        [SerializeField] private int _delayAdsContinueGameInSecond;
+        [SerializeField] private int _cooldownAdsContinueGameInSecond;
 
         [SerializeField] private List<int> _scoreCombo;
 
@@ -28,7 +29,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         public int PointsFourCards => _pointsFourCards;
         public int AdditionalTimeInSecond => _additionalTimeInSecond;
         public int AdditionalLife => _additionalLife;
-        public int DelayAdsContinueGameInSecond => _delayAdsContinueGameInSecond;
+        public int CooldownAdsContinueGameInSecond => _cooldownAdsContinueGameInSecond;
         public List<int> ScoreCombo => _scoreCombo;
     }
 }
