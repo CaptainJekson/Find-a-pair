@@ -1,9 +1,9 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
-using CJ.FindAPair.Modules.Service.Save;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,34 +17,55 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _exitButton;
         [SerializeField] private Button _adsButton;
         [SerializeField] private Image _loadingAdsBlocker;
-        [SerializeField] private Image _timerPanel;
+        [SerializeField] private Image _timerAdsBlocker;
         [SerializeField] private TextMeshProUGUI _timeText;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _defeatNotificationText;
+        
+        [Header("DEFEAT MESSAGES:")]
         [SerializeField] private string _timeIsOverMessage;
         [SerializeField] private string _livesAreOverMessage;
         [SerializeField] private string _bombDetonatedMessage;
         [SerializeField] private string _fortuneCardRealisedMessage;
 
         private LevelCreator _levelCreator;
+        private GameSettingsConfig _gameSettingsConfig;
         private GameWatcher _gameWatcher;
         private BombCard _bombCard;
         private FortuneCard _fortuneCard;
+        private ISaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
 
+        private DateTime _endCooldownForContinueGame = DateTime.Now;
+
         [Inject]
-        public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher, SpecialCardHandler specialCardHandler,
-            IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
+        public void Construct(LevelCreator levelCreator, GameSettingsConfig gameSettingsConfig, GameWatcher gameWatcher,
+            SpecialCardHandler specialCardHandler, ISaver gameSaver, IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
         {
             _levelCreator = levelCreator;
+            _gameSettingsConfig = gameSettingsConfig;
             _gameWatcher = gameWatcher;
+            _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
             _bombCard = specialCardHandler.GetComponentInChildren<BombCard>();
             _fortuneCard = specialCardHandler.GetComponentInChildren<FortuneCard>();
         }
 
+        private void Update()
+        {
+            if (_endCooldownForContinueGame > DateTime.Now)
+            {
+                _timerAdsBlocker.gameObject.SetActive(true);
+                ShowTickTime();
+            }
+            else
+            {
+                _timerAdsBlocker.gameObject.SetActive(false);
+            }
+        }
+        
         protected override void Init()
         {
             _gameWatcher.TimeIsOut += TimeIsOver;
@@ -52,7 +73,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _bombCard.BombDetonate += BombDetonated;
             _fortuneCard.CardRealised += FortuneCardRealised;
             _gameWatcher.ThereWasADefeat += Open;
-            _adsDriver.AdsIsReady += UnLockAdsBlocker;
+            _adsDriver.AdsIsReady += UnLockAdsLoadingBlocker;
+            _adsDriver.AdsIsComplete += LockAdsTimerBlocker;
 
             _restartButton.onClick.AddListener(OnRestartButtonClick);
             _exitButton.onClick.AddListener(OnExitButtonClick);
@@ -62,6 +84,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnOpen()
         {
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
+            
+            var gameData = _gameSaver.LoadData();
+
+            if (DateTime.TryParse(gameData.AdsData.EndCooldownForContinueGame, out var parseResult))
+            {
+                _endCooldownForContinueGame = parseResult;
+            }
         }
 
         private void OnRestartButtonClick()
@@ -83,13 +112,33 @@ namespace CJ.FindAPair.Modules.UI.Windows
             Close();
         }
 
-        private void UnLockAdsBlocker(string placementId)
+        private void UnLockAdsLoadingBlocker(string placementId)
         {
             if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
             {
                 _loadingAdsBlocker.gameObject.SetActive(false);
             }
         }
+        
+        private void LockAdsTimerBlocker(string placementId)
+        {
+            if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
+            {
+                var gameData = _gameSaver.LoadData();
+                var dateTimeNow = DateTime.Now;
+                _endCooldownForContinueGame = dateTimeNow
+                    .AddSeconds(_gameSettingsConfig.CooldownAdsContinueGameInSecond);
+                gameData.AdsData.EndCooldownForContinueGame = _endCooldownForContinueGame.ToString();
+                _gameSaver.SaveData(gameData);
+            }
+        }
+        
+        private void ShowTickTime()
+        {
+            var timeInterval = _endCooldownForContinueGame - DateTime.Now;
+            _timeText.text = timeInterval.ToString(@"mm\:ss");
+        }
+
 
         private void TimeIsOver()
         {

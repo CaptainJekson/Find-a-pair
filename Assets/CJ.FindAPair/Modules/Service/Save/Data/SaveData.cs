@@ -7,11 +7,13 @@ public class SaveData
     public int CurrentLevel;
     public ItemsData ItemsData;
     public ThemesData ThemesData;
+    public AdsData AdsData;
     
     public SaveData()
     {
         ItemsData = new ItemsData();
         ThemesData = new ThemesData();
+        AdsData = new AdsData();
     }
     
     public bool DecreaseDetectorBoosterIfPossible(int value)
@@ -71,5 +73,5 @@ public class ThemesData
 [Serializable]
 public class AdsData
 {
-    
+    public string EndCooldownForContinueGame;
 }

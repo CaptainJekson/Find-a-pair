@@ -3,7 +3,6 @@ using System.Collections;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
-using CJ.FindAPair.Modules.Service.Save;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -109,7 +108,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             {
                 _adsDriver.ShowAds(_unityAdsConfig.PlacementRewardedVideoId);
             };
-        }
+        }        
 
         private void AddScore()
         {

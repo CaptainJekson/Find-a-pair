@@ -102,12 +102,12 @@ GameObject:
   - component: {fileID: 2681870517793665894}
   - component: {fileID: 2340188272062698600}
   m_Layer: 0
-  m_Name: TimerPanel
+  m_Name: TimerBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8894657530451217550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &484425887648031895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1919,7 +1919,7 @@ MonoBehaviour:
   _exitButton: {fileID: 8173577354354482673}
   _adsButton: {fileID: 8173577353378344885}
   _loadingAdsBlocker: {fileID: 1591933410825520713}
-  _timerPanel: {fileID: 2340188272062698600}
+  _timerAdsBlocker: {fileID: 2340188272062698600}
   _timeText: {fileID: 2664557585377326430}
   _currentLevelText: {fileID: 1068908068412778335}
   _defeatNotificationText: {fileID: 5126115504803749636}
