@@ -16,11 +16,11 @@ namespace CJ.FindAPair.Modules.Meta.Themes
         private LevelCreator _levelCreator;
         private int _quantityOfCardOfPair;
         private List<Card> _sortedCards;
-        private GameSaver _gameSaver;
+        private ISaver _gameSaver;
 
         public ThemesSelector(ThemeConfigCollection themeConfigCollection, SpecialCardImageConfig specialCardImageConfig,
             LevelCreator levelCreator, LevelBackground
-            levelBackground, GameSaver gameSaver)
+            levelBackground, ISaver gameSaver)
         {
             _themeConfigCollection = themeConfigCollection;
             _specialCardImageConfig = specialCardImageConfig;
@@ -33,7 +33,10 @@ namespace CJ.FindAPair.Modules.Meta.Themes
 
         public void ChangeTheme(string themeId)
         {
-            _gameSaver.WriteStringValue(SaveKeys.SelectedTheme, themeId);
+            var saveData = _gameSaver.LoadData();
+            saveData.ThemesData.SelectedTheme = themeId;
+            _gameSaver.SaveData(saveData);
+            
             _selectedThemeConfig = _themeConfigCollection.GetThemeConfig(ReadSelectedTheme());
         }
         
@@ -91,11 +94,13 @@ namespace CJ.FindAPair.Modules.Meta.Themes
 
         private string ReadSelectedTheme()
         {
-            var themeId = _gameSaver.ReadStringValue(SaveKeys.SelectedTheme);
-
+            var saveData = _gameSaver.LoadData();
+            var themeId = saveData.ThemesData.SelectedTheme;
+            
             if (themeId == null)
             {
-                _gameSaver.WriteStringValue(SaveKeys.SelectedTheme, _themeConfigCollection.DefaultThemeId);
+                saveData.ThemesData.SelectedTheme = _themeConfigCollection.DefaultThemeId;
+                _gameSaver.SaveData(saveData);
                 return _themeConfigCollection.DefaultThemeId;
             }
 

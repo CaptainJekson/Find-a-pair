@@ -12,7 +12,7 @@ namespace CJ.FindAPair.Modules.Service.Installer
             Container.Bind<UnityAdsConfig>().FromScriptableObjectResource("Configs/Services/UnityAdsConfig")
                 .AsSingle();
             
-            Container.Bind<GameSaver>().AsSingle();
+            Container.Bind<ISaver>().To<JsonSaver>().AsSingle();
             Container.Bind<IAdsDriver>().To<UnityAdsDriver>().AsSingle();
         }
     }

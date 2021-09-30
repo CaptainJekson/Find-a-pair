@@ -9,11 +9,11 @@ using Zenject;
 public class TestBooster : MonoBehaviour
 {
     private Button _button;
-    private GameSaver _gameSaver;
+    private ISaver _gameSaver;
     private UIRoot _uiRoot;
 
     [Inject]
-    public void Construct(UIRoot uiRoot, GameSaver gameSaver)
+    public void Construct(UIRoot uiRoot, ISaver gameSaver)
     {
         _uiRoot = uiRoot;
         _gameSaver = gameSaver;
@@ -27,10 +27,13 @@ public class TestBooster : MonoBehaviour
 
     private void AddBoosters()
     {
-        _gameSaver.IncreaseNumberValue(1, SaveKeys.Sapper);
-        _gameSaver.IncreaseNumberValue(1, SaveKeys.Detector);
-        _gameSaver.IncreaseNumberValue(1, SaveKeys.Magnet);
-
+        var saveData = _gameSaver.LoadData();
+        saveData.ItemsData.DetectorBooster += 1;
+        saveData.ItemsData.MagnetBooster += 1;
+        saveData.ItemsData.SapperBooster += 1;
+        
+        _gameSaver.SaveData(saveData); 
+        
         _uiRoot.GetWindow<BoosterInterfaceWindow>().RefreshButtons();
     }
 }

@@ -2,8 +2,8 @@
 {
     public enum BoosterType
     {
-        MagicEye,
-        Electroshock,
+        Detector,
+        Magnet,
         Sapper
     }
 }

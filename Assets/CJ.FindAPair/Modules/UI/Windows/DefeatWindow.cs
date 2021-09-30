@@ -30,16 +30,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private GameWatcher _gameWatcher;
         private BombCard _bombCard;
         private FortuneCard _fortuneCard;
-        private GameSaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher, SpecialCardHandler specialCardHandler,
-            GameSaver gameSaver, IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
+            IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
         {
             _levelCreator = levelCreator;
-            _gameSaver = gameSaver;
             _gameWatcher = gameWatcher;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;

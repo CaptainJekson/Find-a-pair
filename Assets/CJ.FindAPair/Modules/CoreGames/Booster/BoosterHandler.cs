@@ -25,10 +25,10 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
         {
             switch (boosterType)
             {
-                case BoosterType.MagicEye:
+                case BoosterType.Detector:
                     _booster = GetBooster<DetectorBooster>();
                     break;
-                case BoosterType.Electroshock:
+                case BoosterType.Magnet:
                     _booster = GetBooster<MagnetBooster>();
                     break;
                 case BoosterType.Sapper:

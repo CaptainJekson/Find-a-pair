@@ -12,10 +12,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private List<BoosterButton> _boosterButtons;
 
         private BoosterHandler _boosterHandler;
-        private GameSaver _gameSaver;
+        private ISaver _gameSaver;
         
         [Inject]
-        public void Construct(BoosterHandler boosterHandler, GameSaver gameSaver)
+        public void Construct(BoosterHandler boosterHandler, ISaver gameSaver)
         {
             _boosterHandler = boosterHandler;
             _gameSaver = gameSaver;

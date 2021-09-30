@@ -16,7 +16,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private GameSettingsConfig _gameSettingsConfig;
         private LevelCreator _levelCreator;
         private CardComparator _cardComparator;
-        private GameSaver _gameSaver;
+        private ISaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
 
@@ -42,7 +42,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
-            GameSettingsConfig gameSettingsConfig, GameSaver gameSaver, IAdsDriver adsDriver,
+            GameSettingsConfig gameSettingsConfig, ISaver gameSaver, IAdsDriver adsDriver,
             UnityAdsConfig unityAdsConfig)
         {
             _levelCreator = levelCreator;
@@ -195,10 +195,19 @@ namespace CJ.FindAPair.Modules.CoreGames
             StopTimer();
             _showAdsAction?.Invoke();
             _showAdsAction = null;
-            _gameSaver.IncreaseNumberValue(_score, SaveKeys.Coins);
+            
+            SaveCoins();
+
             ThereWasAVictory?.Invoke();
         }
-        
+
+        private void SaveCoins()
+        {
+            var saveData = _gameSaver.LoadData();
+            saveData.ItemsData.Coins += _score;
+            _gameSaver.SaveData(saveData);
+        }
+
         private void InitiateDefeatAtSkipAds(string placementId)
         {
             if (placementId == _unityAdsConfig.PlacementRewardedVideoId)

@@ -11,20 +11,20 @@ namespace CJ.FindAPair.Modules.UI.Slots
     {
         [SerializeField] private BoosterType _boosterType;
         [SerializeField] private TextMeshProUGUI _countText;
-        
+
         private Button _button;
         private BoosterHandler _boosterHandler;
-        private GameSaver _gameSaver;
+        private ISaver _gameSaver;
 
         protected void Start()
         {
             _button = GetComponent<Button>();
             _button.onClick.AddListener(OnClickButton);
-            
+
             SetCounter();
         }
 
-        public void Init(BoosterHandler boosterHandler, GameSaver gameSaver)
+        public void Init(BoosterHandler boosterHandler, ISaver gameSaver)
         {
             _boosterHandler = boosterHandler;
             _gameSaver = gameSaver;
@@ -34,32 +34,44 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             _boosterHandler.BoosterActivationHandler(_boosterType);
 
-            if (_gameSaver.DecreaseNumberValueIfPossible(1, GetBoosterSaveKey()))
+            if (DecreaseBoosterIfPossible(1))
             {
                 SetCounter();
             }
         }
-        
+
         public void SetCounter()
         {
-            var boosterCount = _gameSaver.ReadNumberValue(GetBoosterSaveKey());
+            var boosterCount = GetBoosterSaveData();
             _countText.SetText(boosterCount.ToString());
             _button.interactable = boosterCount > 0;
         }
 
-        private string GetBoosterSaveKey()
+        private int GetBoosterSaveData()
         {
-            switch (_boosterType)
+            return _boosterType switch
             {
-                case BoosterType.Electroshock:
-                    return SaveKeys.Magnet;
-                case BoosterType.Sapper:
-                    return SaveKeys.Sapper;
-                case BoosterType.MagicEye:
-                    return SaveKeys.Detector;
-            }
+                BoosterType.Magnet => _gameSaver.LoadData().ItemsData.MagnetBooster,
+                BoosterType.Sapper => _gameSaver.LoadData().ItemsData.SapperBooster,
+                BoosterType.Detector => _gameSaver.LoadData().ItemsData.DetectorBooster,
+                _ => 0
+            };
+        }
 
-            return null;
+        private bool DecreaseBoosterIfPossible(int value)
+        {
+            var gameSave = _gameSaver.LoadData();
+
+            var result = _boosterType switch
+            {
+                BoosterType.Detector => gameSave.DecreaseDetectorBoosterIfPossible(value),
+                BoosterType.Magnet => gameSave.DecreaseMagnetBoosterIfPossible(value),
+                BoosterType.Sapper => gameSave.DecreaseSapperBoosterIfPossible(value),
+                _ => false
+            };
+
+            _gameSaver.SaveData(gameSave);
+            return result;
         }
     }
 }
