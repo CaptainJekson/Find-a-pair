@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Level 26
   m_EditorClassIdentifier: 
   _level: 26
+  _isHard: 0
   _width: 4
   _height: 7
-  _heightOffset: 1.2
+  _heightOffset: 0.9
   _quantityOfCardOfPair: 2
   _tries: 12
   _time: 120

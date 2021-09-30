@@ -16,7 +16,7 @@ MonoBehaviour:
   _isHard: 1
   _width: 4
   _height: 7
-  _heightOffset: 1.2
+  _heightOffset: 0.9
   _quantityOfCardOfPair: 2
   _tries: 7
   _time: 40
