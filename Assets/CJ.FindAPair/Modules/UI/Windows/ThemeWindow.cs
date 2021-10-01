@@ -8,6 +8,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 {
     public class ThemeWindow : Window
     {
+        [SerializeField] private Button _testGeometricFiguresButton;
         [SerializeField] private Button _testFoodButton;
         [SerializeField] private Button _testAnimalsButton;
         
@@ -23,6 +24,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void Init()
         {
+            _testGeometricFiguresButton.onClick.AddListener(() => _themesSelector.ChangeTheme("geometricFigures")); //TODO test
             _testFoodButton.onClick.AddListener(() => _themesSelector.ChangeTheme("food")); //TODO test
             _testAnimalsButton.onClick.AddListener(() => _themesSelector.ChangeTheme("animals")); //TODO test
         }
