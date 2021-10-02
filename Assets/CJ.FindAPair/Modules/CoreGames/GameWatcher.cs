@@ -50,6 +50,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
+            _timerCoroutine = TimerTick();
         }
 
         private void OnEnable()

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3962321484711945437}
   - component: {fileID: 5212287388693063570}
   - component: {fileID: 3596166620432439298}
+  - component: {fileID: 2073571487929107596}
   m_Layer: 0
   m_Name: GameBlockWindow
   m_TagString: Untagged
@@ -245,7 +246,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.5
+        Duration: 0.3
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
     InstantAnimation: 0
@@ -519,7 +520,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.5
+        Duration: 0.3
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
     InstantAnimation: 0
@@ -2908,3 +2909,16 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 0
   TextLabel: {fileID: 0}
+--- !u!114 &2073571487929107596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3962321484711945433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a16f0660424904bf92a74fd68123b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeButton: {fileID: 0}

@@ -4,6 +4,7 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
+using CJ.FindAPair.Modules.UI.Installer;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private string _bombDetonatedMessage;
         [SerializeField] private string _fortuneCardRealisedMessage;
 
+        private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
         private GameSettingsConfig _gameSettingsConfig;
         private GameWatcher _gameWatcher;
@@ -40,9 +42,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private DateTime _endCooldownForContinueGame = DateTime.Now;
 
         [Inject]
-        public void Construct(LevelCreator levelCreator, GameSettingsConfig gameSettingsConfig, GameWatcher gameWatcher,
-            SpecialCardHandler specialCardHandler, ISaver gameSaver, IAdsDriver adsDriver, UnityAdsConfig unityAdsConfig)
+        public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameSettingsConfig gameSettingsConfig,
+            GameWatcher gameWatcher, SpecialCardHandler specialCardHandler, ISaver gameSaver, IAdsDriver adsDriver, 
+            UnityAdsConfig unityAdsConfig)
         {
+            _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameSettingsConfig = gameSettingsConfig;
             _gameWatcher = gameWatcher;
@@ -83,6 +87,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
+            _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             
             var gameData = _gameSaver.LoadData();
@@ -91,6 +96,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 _endCooldownForContinueGame = parseResult;
             }
+        }
+
+        protected override void OnClose()
+        {
+            _uiRoot.CloseWindow<GameBlockWindow>();
         }
 
         private void OnRestartButtonClick()
