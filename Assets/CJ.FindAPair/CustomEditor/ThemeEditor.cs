@@ -10,14 +10,16 @@ namespace CJ.FindAPair.CustomEditor
     {
         private const int COUNT_FACES = 15;
         
-        private ThemeConfig _levelConfig;
+        private ThemeConfig _themeConfig;
         
         private string _id;
         private string _name;
         private string _description;
 
         private CurrencyType _currencyType;
+        private bool _isOpensLevel;
         private int _price;
+        private int _requiredLevel;
 
         private Sprite _shirtSprite;
         private Sprite[] _facesSprites = new Sprite[COUNT_FACES];
@@ -33,7 +35,7 @@ namespace CJ.FindAPair.CustomEditor
         private void OnGUI()
         {
             GUILayout.Label("РЕДАКТОР ТЕМЫ", EditorStyles.boldLabel);
-            _levelConfig = EditorGUILayout.ObjectField(_levelConfig, typeof(ThemeConfig), true)
+            _themeConfig = EditorGUILayout.ObjectField(_themeConfig, typeof(ThemeConfig), true)
                 as ThemeConfig;
             if (GUILayout.Button("Прочитать файл темы"))
             {
@@ -44,9 +46,19 @@ namespace CJ.FindAPair.CustomEditor
             _name = EditorGUILayout.TextField("Название темы", _name);
             _description = EditorGUILayout.TextField("Описание темы", _description);
             
-            _currencyType = (CurrencyType)EditorGUILayout.EnumPopup(new GUIContent("Тип валюты"),
+            _isOpensLevel = EditorGUILayout.Toggle("Открывается за уровень", _isOpensLevel);
+            
+            if (_isOpensLevel)
+            {
+                _requiredLevel = EditorGUILayout.IntField("Требуемый уровень", _requiredLevel);
+            }
+            else
+            {
+                _currencyType = (CurrencyType)EditorGUILayout.EnumPopup(new GUIContent("Тип валюты"),
                     _currencyType);
-            _price = EditorGUILayout.IntField("Стоимость", _price);
+                _price = EditorGUILayout.IntField("Стоимость", _price);
+            }
+            
             _shirtSprite = EditorGUILayout.ObjectField("Рубашка карты:",_shirtSprite, typeof(Sprite),
                 true) as Sprite;
 
@@ -82,7 +94,7 @@ namespace CJ.FindAPair.CustomEditor
         {
             var asset = CreateInstance<ThemeConfig>();
             asset.SetData(_id, _name, _description);
-            asset.SetPrice(_currencyType, _price);
+            asset.SetPrice(_isOpensLevel, _requiredLevel, _currencyType, _price);
             asset.SetSprites(_shirtSprite, _facesSprites, _backGroundSprite);
             asset.SetAudio(_music);
             
@@ -92,25 +104,27 @@ namespace CJ.FindAPair.CustomEditor
             Selection.activeObject = asset;
         }
 
-        private void ReadThemeConfig() //TODO реализовать 
+        private void ReadThemeConfig()
         {
-            if (_levelConfig == null)
+            if (_themeConfig == null)
             {
                 Debug.LogError("[Error: Выберите файл с темой]");
                 return;
             }
 
-            _id = _levelConfig.Id;
-            _name = _levelConfig.Name;
-            _description = _levelConfig.Description;
+            _id = _themeConfig.Id;
+            _name = _themeConfig.Name;
+            _description = _themeConfig.Description;
 
-            _currencyType = _levelConfig.CurrencyType;
-            _price = _levelConfig.Price;
+            _isOpensLevel = _themeConfig.IsOpensLevel;
+            _currencyType = _themeConfig.CurrencyType;
+            _price = _themeConfig.Price;
+            _requiredLevel = _themeConfig.RequiredLevel;
 
-            _shirtSprite = _levelConfig.ShirtSprite;
-            _facesSprites = _levelConfig.FacesSprites.ToArray();
-            _backGroundSprite = _levelConfig.BackGroundSprite;
-            _music = _levelConfig.Music;
+            _shirtSprite = _themeConfig.ShirtSprite;
+            _facesSprites = _themeConfig.FacesSprites.ToArray();
+            _backGroundSprite = _themeConfig.BackGroundSprite;
+            _music = _themeConfig.Music;
         }
     }
 }

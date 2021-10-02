@@ -16,7 +16,7 @@ MonoBehaviour:
   _name: '@AnimalsName'
   _description: '@AnimalsDescription'
   _currencyType: 0
-  _price: 2753
+  _price: 100
   _shirtSprite: {fileID: -3662938303249473930, guid: 9941e92c2722951489d67bc96887578f,
     type: 3}
   _facesSprites:

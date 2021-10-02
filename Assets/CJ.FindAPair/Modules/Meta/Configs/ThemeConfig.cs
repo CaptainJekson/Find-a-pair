@@ -12,7 +12,9 @@ namespace CJ.FindAPair.Modules.Meta.Configs
         [SerializeField] private string _name;
         [SerializeField] private string _description;
         [SerializeField] private CurrencyType _currencyType;
+        [SerializeField] private bool _isOpensLevel;
         [SerializeField] private int _price;
+        [SerializeField] private int _requiredLevel;
         [SerializeField] private Sprite _shirtSprite;
         [SerializeField] private List<Sprite> _facesSprites;
         [SerializeField] private Sprite _backGroundSprite;
@@ -22,7 +24,9 @@ namespace CJ.FindAPair.Modules.Meta.Configs
         public string Name => _name;
         public string Description => _description;
         public CurrencyType CurrencyType => _currencyType;
+        public bool IsOpensLevel => _isOpensLevel;
         public int Price => _price;
+        public int RequiredLevel => _requiredLevel;
         public Sprite ShirtSprite => _shirtSprite;
         public List<Sprite> FacesSprites => _facesSprites;
         public Sprite BackGroundSprite => _backGroundSprite;
@@ -35,8 +39,10 @@ namespace CJ.FindAPair.Modules.Meta.Configs
             _description = description;
         }
 
-        public void SetPrice(CurrencyType currencyType, int price)
+        public void SetPrice(bool isOpensLevel, int requiredLevel, CurrencyType currencyType, int price)
         {
+            _isOpensLevel = isOpensLevel;
+            _requiredLevel = requiredLevel;
             _currencyType = currencyType;
             _price = price;
         }

@@ -96,6 +96,12 @@ namespace CJ.FindAPair.Modules.Meta.Themes
         {
             var saveData = _gameSaver.LoadData();
             var themeId = saveData.ThemesData.SelectedTheme;
+
+            if (saveData.ThemesData.OpenedThemes.Count < 1)
+            {
+                saveData.ThemesData.OpenedThemes.Add(_themeConfigCollection.DefaultThemeId);
+                _gameSaver.SaveData(saveData);
+            }
             
             if (themeId == null)
             {

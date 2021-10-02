@@ -16,7 +16,9 @@ MonoBehaviour:
   _name: '@FoodName'
   _description: '@FoodDescription'
   _currencyType: 0
-  _price: 1500
+  _isOpensLevel: 1
+  _price: 80
+  _requiredLevel: 40
   _shirtSprite: {fileID: 8165587077686769274, guid: 9af3659e5513cf64abd32a89c9325fb6,
     type: 3}
   _facesSprites:
