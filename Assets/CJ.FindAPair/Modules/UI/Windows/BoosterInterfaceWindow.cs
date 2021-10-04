@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Booster;
-using CJ.FindAPair.Modules.Service.Save;
 using CJ.FindAPair.Modules.UI.Slots;
 using UnityEngine;
 using Zenject;
@@ -10,10 +9,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
     public class BoosterInterfaceWindow : Window
     {
         [SerializeField] private List<BoosterButton> _boosterButtons;
+        [SerializeField] private float _boosterCooldownTime;
 
         private BoosterHandler _boosterHandler;
         private ISaver _gameSaver;
-        
+
         [Inject]
         public void Construct(BoosterHandler boosterHandler, ISaver gameSaver)
         {
@@ -28,12 +28,22 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 boosterButton.SetCounter();
             }
         }
-        
+
         protected override void Init()
         {
             foreach (var boosterButton in _boosterButtons)
             {
                 boosterButton.Init(_boosterHandler, _gameSaver);
+            }
+        }
+
+        public void CooldownBoosters()
+        {
+            foreach (var boosterButton in _boosterButtons)
+            {
+                if (boosterButton.GetButtonBoosterType() == BoosterType.Detector ||
+                    boosterButton.GetButtonBoosterType() == BoosterType.Magnet)
+                    boosterButton.TryActivateCooldown(_boosterCooldownTime);
             }
         }
     }

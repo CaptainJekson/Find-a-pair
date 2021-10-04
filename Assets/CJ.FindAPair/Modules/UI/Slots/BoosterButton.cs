@@ -1,5 +1,5 @@
 ﻿using CJ.FindAPair.Modules.CoreGames.Booster;
-using CJ.FindAPair.Modules.Service.Save;
+using CJ.FindAPair.Modules.UI.Windows;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,12 +13,16 @@ namespace CJ.FindAPair.Modules.UI.Slots
         [SerializeField] private TextMeshProUGUI _countText;
 
         private Button _button;
+        private CooldownBar _cooldownBar;
         private BoosterHandler _boosterHandler;
+        private BoosterInterfaceWindow _boosterInterfaceWindow;
         private ISaver _gameSaver;
 
         protected void Start()
         {
             _button = GetComponent<Button>();
+            _cooldownBar = GetComponentInChildren<CooldownBar>();
+            _boosterInterfaceWindow = GetComponentInParent<BoosterInterfaceWindow>();
             _button.onClick.AddListener(OnClickButton);
 
             SetCounter();
@@ -37,6 +41,11 @@ namespace CJ.FindAPair.Modules.UI.Slots
             if (DecreaseBoosterIfPossible(1))
             {
                 SetCounter();
+
+                if (_boosterType == BoosterType.Detector || _boosterType == BoosterType.Magnet)
+                {
+                    _boosterInterfaceWindow.CooldownBoosters();
+                }
             }
         }
 
@@ -72,6 +81,29 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
             _gameSaver.SaveData(gameSave);
             return result;
+        }
+
+        public void TryActivateCooldown(float cooldownTime)
+        {
+            if (GetBoosterSaveData() > 0)
+            {
+                _button.interactable = false;
+                _cooldownBar.ActivateCooldownAnimation(cooldownTime, MakeButtonAvailable);
+            }
+            else if (GetBoosterSaveData() <= 0)
+            {
+                _button.interactable = false;
+            }
+        }
+
+        private void MakeButtonAvailable()
+        {
+            _button.interactable = true;
+        }
+
+        public BoosterType GetButtonBoosterType()
+        {
+            return _boosterType;
         }
     }
 }
