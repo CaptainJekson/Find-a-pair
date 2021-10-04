@@ -1692,6 +1692,7 @@ MonoBehaviour:
   - {fileID: 3259735754833825655}
   - {fileID: 227651536808389078}
   - {fileID: 1314080714033025397}
+  _boosterCooldownTime: 7
 --- !u!1 &8685779688572880265
 GameObject:
   m_ObjectHideFlags: 0
