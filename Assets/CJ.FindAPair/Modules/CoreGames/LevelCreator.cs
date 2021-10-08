@@ -23,7 +23,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         public event UnityAction OnLevelCreated;
         public event UnityAction OnLevelDeleted;
-        
+
         [Inject]
         public void Construct(CardsPlacer cardsPlacer)
         {
@@ -49,18 +49,18 @@ namespace CJ.FindAPair.Modules.CoreGames
             {
                 Destroy(card.gameObject);
             }
-            
+
             foreach (var card in _disableCards)
             {
                 Destroy(card.gameObject);
             }
-            
+
             _cards.Clear();
             _disableCards.Clear();
-            
+
             OnLevelDeleted?.Invoke();
         }
-        
+
         public void RestartLevel()
         {
             ClearLevel();
@@ -129,7 +129,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             AddSpecialCards(_level.QuantityPairOfReset, ConstantsCard.NUMBER_RESET);
             AddSpecialCards(_level.QuantityPairOfBombs, ConstantsCard.NUMBER_BOMB);
         }
-        
+
         private void AddSpecialCards(int quantityPairOfSpecial, int number)
         {
             var quantitySpecialCards = quantityPairOfSpecial * (int) _level.QuantityOfCardOfPair;
@@ -145,6 +145,22 @@ namespace CJ.FindAPair.Modules.CoreGames
             card.IsEmpty = true;
             card.MakeEmpty();
             card.NumberPair = 0;
+        }
+
+        public bool IsSpecialCardsOnLevel()
+        {
+            bool isTrue = false;
+
+            for (int i = 0; i < _cards.Count; i++)
+            {
+                if (_cards[i].NumberPair >= ConstantsCard.NUMBER_SPECIAL)
+                {
+                    isTrue = true;
+                    i = _cards.Count;
+                }
+            }
+
+            return isTrue;
         }
     }
 }

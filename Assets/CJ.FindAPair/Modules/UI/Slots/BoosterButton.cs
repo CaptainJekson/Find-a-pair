@@ -20,16 +20,21 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
         protected void Start()
         {
-            _button = GetComponent<Button>();
             _cooldownBar = GetComponentInChildren<CooldownBar>();
-            _boosterInterfaceWindow = GetComponentInParent<BoosterInterfaceWindow>();
+
             _button.onClick.AddListener(OnClickButton);
 
             SetCounter();
+
+            if (_boosterType == BoosterType.Sapper)
+                _boosterInterfaceWindow.TryDisableSapperButton();
         }
 
         public void Init(BoosterHandler boosterHandler, ISaver gameSaver)
         {
+            _button = GetComponent<Button>();
+            _boosterInterfaceWindow = GetComponentInParent<BoosterInterfaceWindow>();
+
             _boosterHandler = boosterHandler;
             _gameSaver = gameSaver;
         }
@@ -43,9 +48,9 @@ namespace CJ.FindAPair.Modules.UI.Slots
                 SetCounter();
 
                 if (_boosterType == BoosterType.Detector || _boosterType == BoosterType.Magnet)
-                {
                     _boosterInterfaceWindow.CooldownBoosters();
-                }
+                else if (_boosterType == BoosterType.Sapper)
+                    MakeButtonUnavailable();
             }
         }
 
@@ -53,6 +58,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             var boosterCount = GetBoosterSaveData();
             _countText.SetText(boosterCount.ToString());
+
             _button.interactable = boosterCount > 0;
         }
 
@@ -87,18 +93,23 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             if (GetBoosterSaveData() > 0)
             {
-                _button.interactable = false;
+                MakeButtonUnavailable();
                 _cooldownBar.ActivateCooldownAnimation(cooldownTime, MakeButtonAvailable);
             }
             else if (GetBoosterSaveData() <= 0)
             {
-                _button.interactable = false;
+                MakeButtonUnavailable();
             }
         }
 
-        private void MakeButtonAvailable()
+        public void MakeButtonAvailable()
         {
             _button.interactable = true;
+        }
+
+        public void MakeButtonUnavailable()
+        {
+            _button.interactable = false;
         }
 
         public BoosterType GetButtonBoosterType()

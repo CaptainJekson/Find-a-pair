@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using CJ.FindAPair.Animation;
 using CJ.FindAPair.Constants;
 
 namespace CJ.FindAPair.Modules.CoreGames.Booster

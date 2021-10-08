@@ -19,12 +19,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         [SerializeField] private SpriteRenderer _specialCardSprite;
         [SerializeField] private Ease _easeAnimationCard;
         private BoxCollider _collider;
-        
+
         public bool IsEmpty { get; set; }
         public bool IsShow { get; set; }
         public bool IsMatched { get; set; }
         public int NumberPair { get; set; }
-        
+
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
 
@@ -35,7 +35,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             IsEmpty = false;
             IsShow = false;
         }
-        
 
         private void Start()
         {
@@ -49,34 +48,34 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         public void Show(bool isNotEventCall = false)
         {
-            if(IsEmpty)
+            if (IsEmpty)
                 return;
-            
+
             PlayAnimation(true);
-            
+
             IsShow = true;
-            if(isNotEventCall) return;
+            if (isNotEventCall) return;
             СardOpens?.Invoke();
         }
-        
+
         public void Hide(bool isNotEventCall = false)
         {
-            if(IsEmpty)
+            if (IsEmpty)
                 return;
-            
+
             PlayAnimation(false);
-            
+
             IsShow = false;
             IsMatched = false;
-            if(isNotEventCall) return;
+            if (isNotEventCall) return;
             CardClosed?.Invoke();
         }
-        
+
         public void DelayHide()
         {
             StartCoroutine(DelayHide(_gameSettingsConfig.DelayTimeHide));
         }
-        
+
         public void MakeEmpty()
         {
             _visualSprite.enabled = false;
@@ -98,14 +97,14 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _shirtSprite = shirt;
         }
-        
+
         public int CompareTo(object obj)
         {
             var card = obj as Card;
 
-            if (card != null) 
+            if (card != null)
                 return NumberPair.CompareTo(card.NumberPair);
-            
+
             throw new Exception("Unable to compare objects");
         }
 
@@ -114,7 +113,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             yield return new WaitForSeconds(time);
             Hide();
         }
-        
+
         private IEnumerator DelayStartHide()
         {
             yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
@@ -125,9 +124,9 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             var sequence = DOTween.Sequence();
 
-            if(isShow)
+            if (isShow)
                 sequence.AppendCallback(() => _collider.enabled = false);
-            
+
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 90, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             sequence.AppendCallback(() =>
@@ -137,8 +136,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             });
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 0, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
-            
-            if(!isShow)
+
+            if (!isShow)
                 sequence.AppendCallback(() => _collider.enabled = true);
         }
     }

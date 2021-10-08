@@ -6,7 +6,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(UIView))]
 public abstract class Window : MonoBehaviour
 {
-    [SerializeField][CanBeNull][Tooltip("Can be null")]protected Button _closeButton;
+    [SerializeField] [CanBeNull] [Tooltip("Can be null")]
+    protected Button _closeButton;
 
     private UIView _uiView;
     private bool _isOpen;
@@ -14,7 +15,7 @@ public abstract class Window : MonoBehaviour
 
     private void Awake()
     {
-        if (_closeButton != null) 
+        if (_closeButton != null)
             _closeButton.onClick.AddListener(OnCloseButtonClick);
 
         _uiView = GetComponent<UIView>();
@@ -28,7 +29,7 @@ public abstract class Window : MonoBehaviour
             _isOpen = true;
             return;
         }
-        
+
         OnOpen();
     }
 
@@ -39,7 +40,7 @@ public abstract class Window : MonoBehaviour
             _isClose = true;
             return;
         }
-        
+
         OnClose();
     }
 
@@ -47,7 +48,7 @@ public abstract class Window : MonoBehaviour
     {
         UIView.ShowView(_uiView.ViewCategory, _uiView.ViewName);
     }
-    
+
     public void Close()
     {
         UIView.HideView(_uiView.ViewCategory, _uiView.ViewName);
@@ -55,17 +56,14 @@ public abstract class Window : MonoBehaviour
 
     protected virtual void Init()
     {
-        
     }
 
     protected virtual void OnOpen()
     {
-        
     }
 
     protected virtual void OnClose()
     {
-        
     }
 
     protected virtual void OnCloseButtonClick()
@@ -73,4 +71,3 @@ public abstract class Window : MonoBehaviour
         Close();
     }
 }
-
