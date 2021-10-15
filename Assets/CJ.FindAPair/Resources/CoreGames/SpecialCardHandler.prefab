@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f9c9d39c2d426d9a4d476b4e665184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cardsMoveSpeed: 0.5
+  _moveType: 1
 --- !u!1 &5579766394432564883
 GameObject:
   m_ObjectHideFlags: 0

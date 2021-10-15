@@ -2,10 +2,8 @@
 using System.Collections;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
@@ -139,6 +137,11 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             if (!isShow)
                 sequence.AppendCallback(() => _collider.enabled = true);
+        }
+
+        public void MoveCard(Vector3 destination, float moveSpeed, Ease moveType)
+        {
+            transform.DOMove(destination, moveSpeed).SetEase(moveType);
         }
     }
 }
