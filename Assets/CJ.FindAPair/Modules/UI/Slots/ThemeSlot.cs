@@ -1,5 +1,6 @@
 using System;
 using CJ.FindAPair.Modules.Meta.Configs;
+using CJ.FindAPair.Modules.Meta.Themes;
 using CJ.FindAPair.Modules.Service;
 using TMPro;
 using UnityEngine;
@@ -24,8 +25,12 @@ namespace CJ.FindAPair.Modules.UI.Slots
         [SerializeField] private Sprite _coinSprite;
         [SerializeField] private Sprite _diamondSprite;
 
-        public string ThemeId { get; private set; }
+        private ThemesSelector _themesSelector;
+        
         private Action _refreshThemeWindowAction;
+        private int _price;
+
+        public string ThemeId { get; private set; }
 
         private void Awake()
         {
@@ -33,14 +38,20 @@ namespace CJ.FindAPair.Modules.UI.Slots
             _selectButton.onClick.AddListener(ThemeSelect);
         }
 
-        public void SetData(ThemeConfig themeConfig, Action refreshThemeWindowAction = null)
+        public void Init(ThemesSelector themesSelector, Action refreshThemeWindowAction)
+        {
+            _themesSelector = themesSelector;
+            _refreshThemeWindowAction = refreshThemeWindowAction;
+        }
+
+        public void SetData(ThemeConfig themeConfig)
         {
             ThemeId = themeConfig.Id;
-            _refreshThemeWindowAction = refreshThemeWindowAction;
             _themeIcon.sprite = themeConfig.FacesSprites[0];
             _nameText.text = themeConfig.Name;
             _descriptionText.text = themeConfig.Description;
             _priceText.text = themeConfig.Price.ToString();
+            _price = themeConfig.Price;
 
             _currencyImage.sprite = themeConfig.CurrencyType switch
             {
@@ -69,12 +80,13 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
         private void ThemePurchase()
         {
-            _refreshThemeWindowAction.Invoke();
+            _refreshThemeWindowAction?.Invoke();
         }
 
         private void ThemeSelect()
         {
-            _refreshThemeWindowAction.Invoke();
+            _themesSelector.ChangeTheme(ThemeId);
+            _refreshThemeWindowAction?.Invoke();
         }
     }
 }

@@ -24,8 +24,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [Inject]
         private void Construct(UIRoot uiRoot, ThemesSelector themesSelector,
-            ThemeConfigCollection themeConfigCollection,
-            ISaver gameSaver)
+            ThemeConfigCollection themeConfigCollection, ISaver gameSaver)
         {
             _blockWindow = uiRoot.GetWindow<BlockWindow>();
             _themesSelector = themesSelector;
@@ -54,7 +53,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 var spawnedSlot = Instantiate(_themeSlotPrefab, _contentSlotParent);
                 _themeSlots.Add(spawnedSlot);
-                spawnedSlot.SetData(themeConfig, RefreshSlotData);
+                spawnedSlot.Init(_themesSelector, RefreshSlotData);
+                spawnedSlot.SetData(themeConfig);
             }
 
             RefreshSlotData();

@@ -1,6 +1,7 @@
 ﻿using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.Service.Save;
+using CJ.FindAPair.Modules.Service.Store;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.Service.Installer
@@ -14,6 +15,7 @@ namespace CJ.FindAPair.Modules.Service.Installer
             
             Container.Bind<ISaver>().To<JsonSaver>().AsSingle();
             Container.Bind<IAdsDriver>().To<UnityAdsDriver>().AsSingle();
+            Container.Bind<IStoreDriver>().To<StoreDriver>().AsSingle();
         }
     }
 }
