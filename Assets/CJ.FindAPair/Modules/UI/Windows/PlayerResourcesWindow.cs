@@ -1,24 +1,40 @@
-using CJ.FindAPair.Modules.Service.Save;
+using CJ.FindAPair.Modules.Service.Store;
 using TMPro;
 using UnityEngine;
 using Zenject;
 
-public class PlayerResourcesWindow : Window
+namespace CJ.FindAPair.Modules.UI.Windows
 {
-    [SerializeField] private TextMeshProUGUI _goldValueText;
-
-    private ISaver _gameSaver;
-
-    [Inject]
-    public void Construct(ISaver gameSaver)
+    public class PlayerResourcesWindow : Window //TODO сделано не унивирсально только для монет
     {
-        _gameSaver = gameSaver;
-    }
+        [SerializeField] private TextMeshProUGUI _goldValueText;
 
-    protected override void OnOpen()
-    {
-        var saveData = _gameSaver.LoadData();
-        
-        _goldValueText.SetText(saveData.ItemsData.Coins.ToString()); 
+        private ISaver _gameSaver;
+        private IStoreDriver _storeDriver;
+
+        [Inject]
+        public void Construct(ISaver gameSaver, IStoreDriver storeDriver)
+        {
+            _gameSaver = gameSaver;
+            _storeDriver = storeDriver;
+        }
+
+        protected override void OnOpen()
+        {
+            _storeDriver.PurchaseCompleted += RefreshGold;
+
+            RefreshGold();
+        }
+
+        protected override void OnClose()
+        {
+            _storeDriver.PurchaseCompleted -= RefreshGold;
+        }
+
+        private void RefreshGold()
+        {
+            var saveData = _gameSaver.LoadData();
+            _goldValueText.SetText(saveData.ItemsData.Coins.ToString()); 
+        }
     }
 }

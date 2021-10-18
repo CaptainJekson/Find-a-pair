@@ -39,6 +39,13 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             
             _selectedThemeConfig = _themeConfigCollection.GetThemeConfig(ReadSelectedTheme());
         }
+
+        public void AddOpenedTheme(string themeId)
+        {
+            var saveData = _gameSaver.LoadData();
+            saveData.ThemesData.OpenedThemes.Add(themeId);
+            _gameSaver.SaveData(saveData);
+        }
         
         private void InitTheme()
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace CJ.FindAPair.Modules.Service.Store
 {
@@ -14,18 +15,33 @@ namespace CJ.FindAPair.Modules.Service.Store
             _gameSaver = gameSaver;
         }
         
-        public void PurchaseIfPossible(CurrencyType currencyType, int value)
+        public bool CanPurchase(CurrencyType currencyType, int value)
+        {
+            var saveData = _gameSaver.LoadData();
+
+            return currencyType switch
+            {
+                CurrencyType.Coins => saveData.ItemsData.Coins >= value,
+                CurrencyType.Diamonds => saveData.ItemsData.Diamond >= value,
+                _ => false
+            };
+        }
+
+        public bool PurchaseIfPossible(CurrencyType currencyType, int value)
         {
             var resourceValue = GetResourceValue(currencyType);
             
             if (resourceValue < value)
             {
                 PurchaseFailed?.Invoke("[Not enough coins]");
+                Debug.LogError("[Not enough coins]");
+                return false;
             }
             else
             {
                 DecreaseResourceValue(currencyType, value);    
                 PurchaseCompleted?.Invoke();
+                return true;
             }  
         }
 
