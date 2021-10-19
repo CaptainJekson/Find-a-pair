@@ -284,7 +284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u043D\u0435 \u0440\u0435\u0430\u043B\u0438\u0437\u043E\u0432\u0430\u043D\u043E"
+  m_text: 8888
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75b7663ccf91cca49a18d5416e755c43, type: 2}
   m_sharedMaterial: {fileID: -6635393379152445730, guid: 75b7663ccf91cca49a18d5416e755c43,
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.05
+  m_fontSize: 55.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1487,7 +1487,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 0}
+  _durationCounter: 1
   _goldValueText: {fileID: 3624138990820828250}
+  _diamondValueText: {fileID: 3604253678635339675}
 --- !u!114 &1257197913736984558
 MonoBehaviour:
   m_ObjectHideFlags: 0

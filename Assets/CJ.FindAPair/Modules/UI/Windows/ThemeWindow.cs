@@ -72,6 +72,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             RefreshSelectedThemes();
             RefreshReceivedThemes();
+            RefreshStateSlots();
         }
 
         private void RefreshSelectedThemes()
