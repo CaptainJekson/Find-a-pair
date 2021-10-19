@@ -43,8 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f9c9d39c2d426d9a4d476b4e665184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boosterInterfaceWindow: {fileID: 1665975692747844127, guid: 073b6955ab372db439ceda390ee033e0,
+    type: 3}
   _cardsMoveSpeed: 0.5
-  _moveType: 1
+  _moveEase: 1
 --- !u!1 &5579766394432564883
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4662553c8f4848808662b413d5f22c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boosterInterfaceWindow: {fileID: 1665975692747844127, guid: 073b6955ab372db439ceda390ee033e0,
+    type: 3}
 --- !u!1 &7080875516147875532
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bdeba725c44fc494f6c7e63f5ae711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boosterInterfaceWindow: {fileID: 0}
 --- !u!1 &8735924911342907766
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,3 +231,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba131d6015048ffa25fb09cc8e7fadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boosterInterfaceWindow: {fileID: 0}

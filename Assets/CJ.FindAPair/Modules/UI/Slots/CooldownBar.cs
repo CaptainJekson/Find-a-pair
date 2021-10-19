@@ -4,12 +4,7 @@ using UnityEngine.UI;
 
 public class CooldownBar : MonoBehaviour
 {
-    private Image _image;
-
-    private void Start()
-    {
-        _image = GetComponent<Image>();
-    }
+    [SerializeField] private Image _image;
 
     public void ActivateCooldownAnimation(float cooldownTime, TweenCallback makeButtonAvailable)
     {

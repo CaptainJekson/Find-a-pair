@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.UI.Slots;
@@ -51,8 +53,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             foreach (var boosterButton in _boosterButtons)
             {
-                if (boosterButton.GetButtonBoosterType() == BoosterType.Detector ||
-                    boosterButton.GetButtonBoosterType() == BoosterType.Magnet)
+                if (!boosterButton.IsBoosterTypeSapper())
                     boosterButton.TryActivateCooldown(_boosterCooldownTime);
             }
         }
@@ -61,11 +62,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             foreach (var boosterButton in _boosterButtons)
             {
-                if (boosterButton.GetButtonBoosterType() == BoosterType.Sapper &&
-                    !_levelCreator.IsSpecialCardsOnLevel())
+                if (boosterButton.IsBoosterTypeSapper() && !_levelCreator.IsSpecialCardsOnLevel())
                     boosterButton.MakeButtonUnavailable();
-                else if (boosterButton.GetButtonBoosterType() == BoosterType.Sapper &&
-                         _levelCreator.IsSpecialCardsOnLevel())
+                else if (boosterButton.IsBoosterTypeSapper() && _levelCreator.IsSpecialCardsOnLevel())
                     boosterButton.MakeButtonAvailable();
             }
         }

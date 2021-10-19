@@ -8,11 +8,13 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
     public class EntanglementCard : SpecialCard
     {
         [SerializeField] private float _cardsMoveSpeed;
-        [SerializeField] private Ease _moveType;
+        [SerializeField] private Ease _moveEase;
 
         public override void OpenSpecialCard(Card specialCardOld)
         {
             ShuffleCards();
+            
+            specialCardOld.IsMatched = true;
         }
 
         private void ShuffleCards()
@@ -35,7 +37,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 
             for (int i = 0; i < _levelCreator.Cards.Count; i++)
             {
-                _levelCreator.Cards[i].MoveCard(cardsPositions[i], _cardsMoveSpeed, _moveType);
+                _levelCreator.Cards[i].Move(cardsPositions[i], _cardsMoveSpeed, _moveEase);
             }
         }
     }

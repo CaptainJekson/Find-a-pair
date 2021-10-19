@@ -139,9 +139,9 @@ namespace CJ.FindAPair.Modules.CoreGames
                 sequence.AppendCallback(() => _collider.enabled = true);
         }
 
-        public void MoveCard(Vector3 destination, float moveSpeed, Ease moveType)
+        public void Move(Vector3 destination, float moveSpeed, Ease moveEase)
         {
-            transform.DOMove(destination, moveSpeed).SetEase(moveType);
+            transform.DOMove(destination, moveSpeed).SetEase(moveEase);
         }
     }
 }

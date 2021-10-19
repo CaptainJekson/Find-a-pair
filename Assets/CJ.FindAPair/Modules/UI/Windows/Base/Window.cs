@@ -6,8 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(UIView))]
 public abstract class Window : MonoBehaviour
 {
-    [SerializeField] [CanBeNull] [Tooltip("Can be null")]
-    protected Button _closeButton;
+    [SerializeField] [CanBeNull] [Tooltip("Can be null")] protected Button _closeButton;
 
     private UIView _uiView;
     private bool _isOpen;

@@ -11,6 +11,8 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
                 card.Hide();
 
             _gameWatcher.ResetScore();
+            
+            specialCardOld.IsMatched = true;
         }
     }
 }

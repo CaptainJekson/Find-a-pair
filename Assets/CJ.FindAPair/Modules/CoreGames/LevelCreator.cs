@@ -149,18 +149,13 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         public bool IsSpecialCardsOnLevel()
         {
-            bool isTrue = false;
-
-            for (int i = 0; i < _cards.Count; i++)
+            foreach (var card in _cards)
             {
-                if (_cards[i].NumberPair >= ConstantsCard.NUMBER_SPECIAL)
-                {
-                    isTrue = true;
-                    i = _cards.Count;
-                }
+                if (card.NumberPair >= ConstantsCard.NUMBER_SPECIAL && !card.IsMatched)
+                    return true;
             }
 
-            return isTrue;
+            return false;
         }
     }
 }
