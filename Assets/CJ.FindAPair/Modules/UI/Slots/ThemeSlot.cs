@@ -3,6 +3,9 @@ using CJ.FindAPair.Modules.Meta.Configs;
 using CJ.FindAPair.Modules.Meta.Themes;
 using CJ.FindAPair.Modules.Service;
 using CJ.FindAPair.Modules.Service.Store;
+using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,6 +30,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
         [SerializeField] private Sprite _diamondSprite;
 
         private ThemesSelector _themesSelector;
+        private UIRoot _uiRoot;
         private IStoreDriver _storeDriver;
 
         private Action _refreshThemeWindowAction;
@@ -39,11 +43,15 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             _buyButton.onClick.AddListener(ThemePurchase);
             _selectButton.onClick.AddListener(ThemeSelect);
+            _randomChangeThemeToggle.onValueChanged.AddListener(RandomSelectTheme);
+            _randomChangeThemeToggle.isOn = false; //TODO 
         }
 
-        public void Init(ThemesSelector themesSelector, IStoreDriver storeDriver, Action refreshThemeWindowAction)
+        public void Init(ThemesSelector themesSelector, UIRoot uiRoot, IStoreDriver storeDriver,
+            Action refreshThemeWindowAction)
         {
             _themesSelector = themesSelector;
+            _uiRoot = uiRoot;
             _storeDriver = storeDriver;
             _refreshThemeWindowAction = refreshThemeWindowAction;
         }
@@ -91,6 +99,17 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
         private void ThemePurchase()
         {
+            var confirmWindow = _uiRoot.GetWindow<ConfirmPurchaseWindow>();
+            confirmWindow.SetData(_currencyType, _price, OnPurchase);
+            confirmWindow.Open();
+            
+            var blockWindow = _uiRoot.GetWindow<BlockWindow>();
+            blockWindow.Open();
+            blockWindow.SetOpenWindow(confirmWindow);
+        }
+
+        private void OnPurchase()
+        {
             if (_storeDriver.PurchaseIfPossible(_currencyType, _price))
             {
                 _themesSelector.AddOpenedTheme(ThemeId);
@@ -102,6 +121,16 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             _themesSelector.ChangeTheme(ThemeId);
             _refreshThemeWindowAction?.Invoke();
+        }
+        
+        private void RandomSelectTheme(bool isRandom) 
+        {
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(0.1f); //TODO костыль из за того что _themesSelector инициализируется позже
+            sequence.AppendCallback(() =>
+            {
+                _themesSelector.RandomSelectTheme(isRandom);
+            });
         }
     }
 }

@@ -46,6 +46,11 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             saveData.ThemesData.OpenedThemes.Add(themeId);
             _gameSaver.SaveData(saveData);
         }
+
+        public void RandomSelectTheme(bool isRandom)
+        {
+            //TODO реализовать рандомный выбор тем и сохранять состояние: рандомный выбор или нет
+        }
         
         private void InitTheme()
         {

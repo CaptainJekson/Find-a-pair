@@ -7,7 +7,7 @@ using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Windows
 {
-    public class PlayerResourcesWindow : Window //TODO сделано не унивирсально только для монет
+    public class PlayerResourcesWindow : Window
     {
         [SerializeField] private float _durationCounter;
         
