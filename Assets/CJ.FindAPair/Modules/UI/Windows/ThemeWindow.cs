@@ -45,7 +45,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            RefreshStateSlots();
+            RefreshSlotData();
         }
 
         protected override void OnCloseButtonClick()
@@ -56,6 +56,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void CreateThemeSlots()
         {
+            var saveData = _gameSaver.LoadData();
             _selectedThemeSlot = Instantiate(_themeSlotPrefab, _selectedSlotParent);
             _selectedThemeSlot.EnableChangeThemeToggle();
 
@@ -63,7 +64,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 var spawnedSlot = Instantiate(_themeSlotPrefab, _contentSlotParent);
                 _themeSlots.Add(spawnedSlot);
-                spawnedSlot.Init(_themesSelector, _uiRoot, _storeDriver, RefreshSlotData);
+                spawnedSlot.Init(_themesSelector, _uiRoot, _storeDriver, RefreshSlotData,
+                    saveData.SettingsData.IsRandomChangeTheme);
                 spawnedSlot.SetData(themeConfig);
             }
 
@@ -88,7 +90,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
             var selectedThemeConfig = _themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
                 .ThemesData.SelectedTheme);
-            _selectedThemeSlot.Init(_themesSelector,_uiRoot, _storeDriver, RefreshSlotData);
+            _selectedThemeSlot.Init(_themesSelector,_uiRoot, _storeDriver, RefreshSlotData,
+                saveData.SettingsData.IsRandomChangeTheme);
             _selectedThemeSlot.SetData(selectedThemeConfig);
         }
 

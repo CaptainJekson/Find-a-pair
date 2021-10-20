@@ -2,7 +2,6 @@
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.Meta.Configs;
-using CJ.FindAPair.Modules.Service.Save;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.Meta.Themes
@@ -19,8 +18,7 @@ namespace CJ.FindAPair.Modules.Meta.Themes
         private ISaver _gameSaver;
 
         public ThemesSelector(ThemeConfigCollection themeConfigCollection, SpecialCardImageConfig specialCardImageConfig,
-            LevelCreator levelCreator, LevelBackground
-            levelBackground, ISaver gameSaver)
+            LevelCreator levelCreator, LevelBackground levelBackground, ISaver gameSaver)
         {
             _themeConfigCollection = themeConfigCollection;
             _specialCardImageConfig = specialCardImageConfig;
@@ -49,16 +47,32 @@ namespace CJ.FindAPair.Modules.Meta.Themes
 
         public void RandomSelectTheme(bool isRandom)
         {
-            //TODO реализовать рандомный выбор тем и сохранять состояние: рандомный выбор или нет
+            var saveData = _gameSaver.LoadData();
+            saveData.SettingsData.IsRandomChangeTheme = isRandom;
+            _gameSaver.SaveData(saveData);
         }
-        
+
         private void InitTheme()
         {
+            var saveData = _gameSaver.LoadData();
+
+            if (saveData.SettingsData.IsRandomChangeTheme)
+                RandomChangeTheme();
+            
             _quantityOfCardOfPair = (int) _levelCreator.LevelConfig.QuantityOfCardOfPair;
             
             SortCards();
             SetBackground();
             SetCards();
+        }
+        
+        private void RandomChangeTheme()
+        {
+            var saveData = _gameSaver.LoadData();
+            var openedThemes = saveData.ThemesData.OpenedThemes;
+            var randomThemeId = openedThemes[Random.Range(0, openedThemes.Count)];
+
+            ChangeTheme(randomThemeId);
         }
 
         private void SortCards()

@@ -8,12 +8,14 @@ public class SaveData
     public ItemsData ItemsData;
     public ThemesData ThemesData;
     public AdsData AdsData;
+    public SettingsData SettingsData;
     
     public SaveData()
     {
         ItemsData = new ItemsData();
         ThemesData = new ThemesData();
         AdsData = new AdsData();
+        SettingsData = new SettingsData();
     }
     
     public bool DecreaseDetectorBoosterIfPossible(int value)
@@ -74,4 +76,10 @@ public class ThemesData
 public class AdsData
 {
     public string EndCooldownForContinueGame;
+}
+
+[Serializable]
+public class SettingsData
+{
+    public bool IsRandomChangeTheme;
 }
