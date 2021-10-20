@@ -23,9 +23,6 @@ namespace CJ.FindAPair.Modules.UI.Slots
             _button.onClick.AddListener(OnClickButton);
 
             SetCounter();
-
-            if (_boosterType == BoosterType.Sapper)
-                _boosterInterfaceWindow.TryDisableSapperButton();
         }
 
         public void Init(BoosterHandler boosterHandler, ISaver gameSaver)
@@ -46,8 +43,6 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
                 if (_boosterType == BoosterType.Detector || _boosterType == BoosterType.Magnet)
                     _boosterInterfaceWindow.CooldownBoosters();
-                else if (_boosterType == BoosterType.Sapper)
-                    _boosterInterfaceWindow.TryDisableSapperButton();
             }
         }
 
@@ -55,10 +50,14 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             var boosterCount = GetBoosterSaveData();
             _countText.SetText(boosterCount.ToString());
+            
             _button.interactable = boosterCount > 0;
+            
+            if (_boosterType == BoosterType.Sapper)
+                _boosterInterfaceWindow.TryDisableSapperButton();
         }
 
-        private int GetBoosterSaveData()
+        public int GetBoosterSaveData()
         {
             return _boosterType switch
             {
@@ -99,10 +98,6 @@ namespace CJ.FindAPair.Modules.UI.Slots
             {
                 MakeButtonUnavailable();
                 _cooldownBar.ActivateCooldownAnimation(cooldownTime, MakeButtonAvailable);
-            }
-            else if (GetBoosterSaveData() <= 0)
-            {
-                MakeButtonUnavailable();
             }
         }
 

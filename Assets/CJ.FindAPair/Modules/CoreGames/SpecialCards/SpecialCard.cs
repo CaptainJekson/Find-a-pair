@@ -7,7 +7,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
         protected GameWatcher _gameWatcher;
         protected LevelCreator _levelCreator;
         
-        public void Init(GameWatcher gameWatcher, LevelCreator levelCreator )
+        public void Init(GameWatcher gameWatcher, LevelCreator levelCreator)
         {
             _gameWatcher = gameWatcher;
             _levelCreator = levelCreator;

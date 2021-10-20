@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Booster;
+using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.UI.Slots;
 using UnityEngine;
 using Zenject;
@@ -16,19 +15,22 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private BoosterHandler _boosterHandler;
         private LevelCreator _levelCreator;
+        private SpecialCardHandler _specialCardHandler;
         private ISaver _gameSaver;
 
         [Inject]
-        public void Construct(BoosterHandler boosterHandler, ISaver gameSaver, LevelCreator levelCreator)
+        public void Construct(BoosterHandler boosterHandler, ISaver gameSaver, LevelCreator levelCreator, SpecialCardHandler specialCardHandler)
         {
             _boosterHandler = boosterHandler;
             _gameSaver = gameSaver;
             _levelCreator = levelCreator;
+            _specialCardHandler = specialCardHandler;
         }
 
         private void Start()
         {
             _levelCreator.OnLevelCreated += TryDisableSapperButton;
+            _specialCardHandler.SpecialCardOpened += TryDisableSapperButton;
         }
 
         public void RefreshButtons()
@@ -37,8 +39,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 boosterButton.SetCounter();
             }
-
-            TryDisableSapperButton();
         }
 
         protected override void Init()
@@ -64,7 +64,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 if (boosterButton.IsBoosterTypeSapper() && !_levelCreator.IsSpecialCardsOnLevel())
                     boosterButton.MakeButtonUnavailable();
-                else if (boosterButton.IsBoosterTypeSapper() && _levelCreator.IsSpecialCardsOnLevel())
+                else if (boosterButton.IsBoosterTypeSapper() && _levelCreator.IsSpecialCardsOnLevel() && boosterButton.GetBoosterSaveData() > 0)
                     boosterButton.MakeButtonAvailable();
             }
         }
