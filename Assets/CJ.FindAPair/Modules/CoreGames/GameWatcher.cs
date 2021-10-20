@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
@@ -10,7 +9,7 @@ using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
-    public class GameWatcher : MonoBehaviour
+    public class GameWatcher
     {
         private GameSettingsConfig _gameSettingsConfig;
         private LevelCreator _levelCreator;
@@ -28,16 +27,16 @@ namespace CJ.FindAPair.Modules.CoreGames
         private int _quantityOfPairs;
         private int _quantityOfMatchedPairs;
 
-        private IEnumerator _timerCoroutine;
+        private Sequence _timerSequence;
         private Action _showAdsAction;
 
-        public event UnityAction<int> ScoreСhanged;
-        public event UnityAction<int> LifeСhanged;
-        public event UnityAction<int> TimeСhanged;
-        public event UnityAction ThereWasAVictory;
-        public event UnityAction ThereWasADefeat;
-        public event UnityAction LivesIsOut;
-        public event UnityAction TimeIsOut;
+        public event Action<int> ScoreСhanged;
+        public event Action<int> LifeСhanged;
+        public event Action<int> TimeСhanged;
+        public event Action ThereWasAVictory;
+        public event Action ThereWasADefeat;
+        public event Action LivesIsOut;
+        public event Action TimeIsOut;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
@@ -50,10 +49,11 @@ namespace CJ.FindAPair.Modules.CoreGames
             _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
-            _timerCoroutine = TimerTick();
+            _timerSequence = DOTween.Sequence();
+            Subscribe();
         }
 
-        private void OnEnable()
+        private void Subscribe()
         {
             _cardComparator.CardsMatched += AddScore;
             _cardComparator.CardsNotMatched += RemoveLife;
@@ -63,18 +63,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             _adsDriver.AdsIsSkipped += InitiateDefeatAtSkipAds;
             _adsDriver.AdsIsFailed += InitiateDefeatAtSkipAds;
             _adsDriver.AdsIsComplete += AddCoolDownAdsTime;
-        }
-        
-        private void OnDisable()
-        {
-            _cardComparator.CardsMatched -= AddScore;
-            _cardComparator.CardsNotMatched -= RemoveLife;
-            _levelCreator.OnLevelCreated -= StartTheGame;
-            _levelCreator.OnLevelDeleted -= ResetTimer;
-            _levelCreator.OnLevelDeleted -= ResetCounts;
-            _adsDriver.AdsIsSkipped -= InitiateDefeatAtSkipAds;
-            _adsDriver.AdsIsFailed -= InitiateDefeatAtSkipAds;
-            _adsDriver.AdsIsComplete -= AddCoolDownAdsTime;
         }
         
         public void InitiateDefeat()
@@ -244,19 +232,19 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void StartTimer()
         {
-            _timerCoroutine = TimerTick();
-            StartCoroutine(_timerCoroutine);
+            if (_time <= 0) return;
+            _timerSequence = DOTween.Sequence();
+            TimerTick();
         }
 
         private void StopTimer()
         {
-            StopCoroutine(_timerCoroutine);
+            _timerSequence.Kill();
         }
 
         private void ResetTimer()
         {
-            StopCoroutine(_timerCoroutine);
-            _timerCoroutine = null;
+            _timerSequence.Kill();
             TimeСhanged?.Invoke(0);
         }
 
@@ -270,22 +258,21 @@ namespace CJ.FindAPair.Modules.CoreGames
             _comboCounter = 0;
         }
 
-        private IEnumerator TimerTick()
+        private void TimerTick()
         {
-            while (true)
-            {
-                _time--;
-                
+            _timerSequence.AppendInterval(1.0f);
+            _timerSequence.AppendCallback(() => _time--);
+            _timerSequence.AppendCallback(() =>
+            { 
                 TimeСhanged?.Invoke(_time);
-
-                yield return new WaitForSeconds(1.0f);
-
+                
                 if (_time <= 1)
                 {
                     InitiateDefeat();
                     TimeIsOut?.Invoke();
                 }
-            }
+            });
+            _timerSequence.SetLoops(-1, LoopType.Incremental);
         }
     }
 }
