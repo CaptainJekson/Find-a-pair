@@ -1,5 +1,6 @@
-﻿using CJ.FindAPair.Modules.CoreGames.Booster;
-using CJ.FindAPair.Modules.Service.Save;
+﻿using System.Diagnostics;
+using CJ.FindAPair.Modules.CoreGames.Booster;
+using CJ.FindAPair.Modules.UI.Windows;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,16 +10,20 @@ namespace CJ.FindAPair.Modules.UI.Slots
     [RequireComponent(typeof(Button))]
     public class BoosterButton : MonoBehaviour
     {
+        [SerializeField] private bool _canCooldown;
         [SerializeField] private BoosterType _boosterType;
         [SerializeField] private TextMeshProUGUI _countText;
+        [SerializeField] private BoosterInterfaceWindow _boosterInterfaceWindow;
+        [SerializeField] private CooldownBar _cooldownBar;
 
         private Button _button;
         private BoosterHandler _boosterHandler;
         private ISaver _gameSaver;
 
+        public bool CanCooldown => _canCooldown;
+
         protected void Start()
         {
-            _button = GetComponent<Button>();
             _button.onClick.AddListener(OnClickButton);
 
             SetCounter();
@@ -26,6 +31,8 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
         public void Init(BoosterHandler boosterHandler, ISaver gameSaver)
         {
+            _button = GetComponent<Button>();
+
             _boosterHandler = boosterHandler;
             _gameSaver = gameSaver;
         }
@@ -37,6 +44,9 @@ namespace CJ.FindAPair.Modules.UI.Slots
             if (DecreaseBoosterIfPossible(1))
             {
                 SetCounter();
+
+                if (_boosterType == BoosterType.Detector || _boosterType == BoosterType.Magnet)
+                    _boosterInterfaceWindow.CooldownBoosters();
             }
         }
 
@@ -44,10 +54,14 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             var boosterCount = GetBoosterSaveData();
             _countText.SetText(boosterCount.ToString());
+            
             _button.interactable = boosterCount > 0;
+            
+            if (_boosterType == BoosterType.Sapper)
+                _boosterInterfaceWindow.TryDisableSapperButton();
         }
 
-        private int GetBoosterSaveData()
+        public int GetBoosterSaveData()
         {
             return _boosterType switch
             {
@@ -72,6 +86,25 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
             _gameSaver.SaveData(gameSave);
             return result;
+        }
+
+        public void TryActivateCooldown(float cooldownTime)
+        {
+            if (GetBoosterSaveData() > 0)
+            {
+                MakeButtonUnavailable();
+                _cooldownBar.ActivateCooldownAnimation(cooldownTime, MakeButtonAvailable);
+            }
+        }
+        
+        public void MakeButtonAvailable()
+        {
+            _button.interactable = true;
+        }
+
+        public void MakeButtonUnavailable()
+        {
+            _button.interactable = false;
         }
     }
 }

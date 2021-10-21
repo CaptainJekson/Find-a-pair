@@ -9,8 +9,9 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
         {
             foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair < ConstantsCard.NUMBER_SPECIAL))
                 card.Hide();
-            
+
             _gameWatcher.ResetScore();
+            
             specialCardOld.DelayHide();
         }
     }

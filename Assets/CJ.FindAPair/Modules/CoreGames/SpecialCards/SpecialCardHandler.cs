@@ -2,6 +2,7 @@
 using System.Linq;
 using CJ.FindAPair.Constants;
 using UnityEngine;
+using UnityEngine.Events;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
@@ -13,8 +14,9 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
         private GameWatcher _gameWatcher;
         private CardComparator _cardComparator;
         private LevelCreator _levelCreator;
-
         private SpecialCard _specialCard;
+
+        public event UnityAction SpecialCardOpened;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, GameWatcher gameWatcher, CardComparator cardComparator)
@@ -55,6 +57,8 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             if (_specialCard == null) return;
             _specialCard.Init(_gameWatcher, _levelCreator);
             _specialCard.OpenSpecialCard(cardOld);
+            
+            SpecialCardOpened?.Invoke();
         }
 
         private SpecialCard GetSpecialCard<T>() where T : SpecialCard

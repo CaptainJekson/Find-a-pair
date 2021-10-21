@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f9c9d39c2d426d9a4d476b4e665184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cardsMoveSpeed: 0.5
+  _moveEase: 1
 --- !u!1 &5579766394432564883
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +140,8 @@ MonoBehaviour:
   - {fileID: 764850529118267923}
   - {fileID: 4415206528445552384}
   - {fileID: 2897994763618848165}
+  _boosterInterfaceWindow: {fileID: 1665975692747844127, guid: 073b6955ab372db439ceda390ee033e0,
+    type: 3}
 --- !u!1 &8677624188890829718
 GameObject:
   m_ObjectHideFlags: 0
