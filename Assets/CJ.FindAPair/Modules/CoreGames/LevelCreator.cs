@@ -147,6 +147,11 @@ namespace CJ.FindAPair.Modules.CoreGames
             card.NumberPair = 0;
         }
 
+        private void DealTheCards()
+        {
+            
+        }
+        
         public bool IsSpecialCardsOnLevel()
         {
             foreach (var card in _cards)
