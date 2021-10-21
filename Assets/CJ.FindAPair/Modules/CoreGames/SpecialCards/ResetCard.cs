@@ -12,7 +12,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 
             _gameWatcher.ResetScore();
             
-            specialCardOld.IsMatched = true;
+            specialCardOld.DelayHide();
         }
     }
 }

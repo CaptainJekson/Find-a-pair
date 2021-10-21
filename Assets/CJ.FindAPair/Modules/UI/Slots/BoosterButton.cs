@@ -1,4 +1,5 @@
-﻿using CJ.FindAPair.Modules.CoreGames.Booster;
+﻿using System.Diagnostics;
+using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.UI.Windows;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
     [RequireComponent(typeof(Button))]
     public class BoosterButton : MonoBehaviour
     {
+        [SerializeField] private bool _canCooldown;
         [SerializeField] private BoosterType _boosterType;
         [SerializeField] private TextMeshProUGUI _countText;
         [SerializeField] private BoosterInterfaceWindow _boosterInterfaceWindow;
@@ -17,6 +19,8 @@ namespace CJ.FindAPair.Modules.UI.Slots
         private Button _button;
         private BoosterHandler _boosterHandler;
         private ISaver _gameSaver;
+
+        public bool CanCooldown => _canCooldown;
 
         protected void Start()
         {
@@ -84,14 +88,6 @@ namespace CJ.FindAPair.Modules.UI.Slots
             return result;
         }
 
-        public bool IsBoosterTypeSapper()
-        {
-            if (_boosterType == BoosterType.Detector || _boosterType == BoosterType.Magnet)
-                return false;
-            
-            return true;
-        }
-        
         public void TryActivateCooldown(float cooldownTime)
         {
             if (GetBoosterSaveData() > 0)
@@ -100,7 +96,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
                 _cooldownBar.ActivateCooldownAnimation(cooldownTime, MakeButtonAvailable);
             }
         }
-
+        
         public void MakeButtonAvailable()
         {
             _button.interactable = true;

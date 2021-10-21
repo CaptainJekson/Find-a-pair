@@ -27,10 +27,16 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _specialCardHandler = specialCardHandler;
         }
 
-        private void Start()
+        protected override void OnOpen()
         {
-            _levelCreator.OnLevelCreated += TryDisableSapperButton;
+            TryDisableSapperButton();
+            
             _specialCardHandler.SpecialCardOpened += TryDisableSapperButton;
+        }
+
+        protected override void OnClose()
+        {
+            _specialCardHandler.SpecialCardOpened -= TryDisableSapperButton;
         }
 
         public void RefreshButtons()
@@ -53,7 +59,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             foreach (var boosterButton in _boosterButtons)
             {
-                if (!boosterButton.IsBoosterTypeSapper())
+                if (boosterButton.CanCooldown)
                     boosterButton.TryActivateCooldown(_boosterCooldownTime);
             }
         }
@@ -62,9 +68,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             foreach (var boosterButton in _boosterButtons)
             {
-                if (boosterButton.IsBoosterTypeSapper() && !_levelCreator.IsSpecialCardsOnLevel())
+                if (!boosterButton.CanCooldown && !_levelCreator.IsSpecialCardsOnLevel())
                     boosterButton.MakeButtonUnavailable();
-                else if (boosterButton.IsBoosterTypeSapper() && _levelCreator.IsSpecialCardsOnLevel() && boosterButton.GetBoosterSaveData() > 0)
+                else if (!boosterButton.CanCooldown && _levelCreator.IsSpecialCardsOnLevel() && boosterButton.GetBoosterSaveData() > 0)
                     boosterButton.MakeButtonAvailable();
             }
         }
