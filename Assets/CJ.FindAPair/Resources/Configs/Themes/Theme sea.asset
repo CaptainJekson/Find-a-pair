@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2570365bb7344ee680d3ca9e8fee78cc, type: 3}
+  m_Name: Theme sea
+  m_EditorClassIdentifier: 
+  _id: sea
+  _name: '@SeaName'
+  _description: '@SeaDescription'
+  _currencyType: 0
+  _isOpensLevel: 0
+  _price: 150
+  _requiredLevel: 40
+  _shirtSprite: {fileID: 7555673716858651755, guid: 65f79f58d604d9c458a7bb46ccd3ff10,
+    type: 3}
+  _facesSprites:
+  - {fileID: 2577136140242985382, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: 6057129391044089912, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -4790308748110433009, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -2931227505506435244, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -7672331779434587528, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: 8074785401566224582, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -3852151054510203821, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -1906332725909038756, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -4214095904637985439, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -6662003940626311532, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -7414967487514334148, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -1814586566303611463, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: 604943774958955252, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: 9054350862480712379, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  - {fileID: -8132015433262106197, guid: 65f79f58d604d9c458a7bb46ccd3ff10, type: 3}
+  _backGroundSprite: {fileID: 21300000, guid: f54249c8d8fa7714ea7072b2b40f3c89, type: 3}
+  _music: {fileID: 8300000, guid: 4e2fe3af2af7140449e656c975026220, type: 3}
