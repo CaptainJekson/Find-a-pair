@@ -53,3 +53,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 3292305092561980454, guid: 6045dccc39411eb44a3d7f1721752a85, type: 3}
+  _cardsDeckStartPosition: {x: 0, y: -7}
