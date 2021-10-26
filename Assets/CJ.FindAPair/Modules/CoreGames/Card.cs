@@ -40,8 +40,10 @@ namespace CJ.FindAPair.Modules.CoreGames
             {
                 MakeEmpty();
             }
-
-            StartCoroutine(DelayStartHide());
+            
+            PlayAnimation(false);
+            StartCoroutine(DelayStartShowing());
+            StartCoroutine(DelayHide(_gameSettingsConfig.StartTimeShow));
         }
 
         public void Show(bool isNotEventCall = false)
@@ -49,8 +51,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (IsEmpty)
                 return;
 
+            _collider.enabled = false;
             PlayAnimation(true);
-
+            
             IsShow = true;
             if (isNotEventCall) return;
             СardOpens?.Invoke();
@@ -61,8 +64,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (IsEmpty)
                 return;
 
+            _collider.enabled = true;
             PlayAnimation(false);
-
+            
             IsShow = false;
             IsMatched = false;
             if (isNotEventCall) return;
@@ -112,19 +116,16 @@ namespace CJ.FindAPair.Modules.CoreGames
             Hide();
         }
 
-        private IEnumerator DelayStartHide()
+        private IEnumerator DelayStartShowing()
         {
-            yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
-            Hide();
+            yield return new WaitForSeconds(2.5f);
+            PlayAnimation(true);
         }
 
         private void PlayAnimation(bool isShow)
         {
             var sequence = DOTween.Sequence();
-
-            if (isShow)
-                sequence.AppendCallback(() => _collider.enabled = false);
-
+            
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 90, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             sequence.AppendCallback(() =>
@@ -134,9 +135,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             });
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 0, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
-
-            if (!isShow)
-                sequence.AppendCallback(() => _collider.enabled = true);
         }
 
         public void Move(Vector3 destination, float moveSpeed, Ease moveEase)
