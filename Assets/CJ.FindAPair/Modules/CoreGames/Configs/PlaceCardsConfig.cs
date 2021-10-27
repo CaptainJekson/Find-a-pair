@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames.Configs
@@ -11,11 +12,20 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         [SerializeField] private float _offsetFactorY;
         [SerializeField] private List<PlaceWidthSetting> _placeWidthSettings;
         [SerializeField] private List<PlaceHeightSetting> _placeHeightSetting;
-
+        
+        [SerializeField] private float _cardDealSpeed;
+        [SerializeField] private float _timeBetweenDeals;
+        [SerializeField] private Ease _cardDealEase;
+        [SerializeField] private Vector2 _cardsDeckPosition;
+        
         public List<PlaceWidthSetting> PlaceWidthSettings => _placeWidthSettings;
         public List<PlaceHeightSetting> PlaceHeightSetting => _placeHeightSetting;
         public float OffsetFactorX => _offsetFactorX;
         public float OffsetFactorY => _offsetFactorY;
+        public float CardDealSpeed => _cardDealSpeed;
+        public float TimeBetweenDeals => _timeBetweenDeals;
+        public Ease CardDealEase => _cardDealEase;
+        public Vector2 CardsDeckPosition => _cardsDeckPosition;
 
         public float GetScale(int width, int height)
         {

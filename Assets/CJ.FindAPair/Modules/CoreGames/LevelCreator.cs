@@ -12,7 +12,6 @@ namespace CJ.FindAPair.Modules.CoreGames
     public class LevelCreator : MonoBehaviour
     {
         [SerializeField] private Card card;
-        [SerializeField] private Vector2 _cardsDeckStartPosition;
 
         private CardsPlacer _cardsPlacer;
         private LevelConfig _level;
@@ -42,7 +41,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             CardNumbering();
             AddAllSpecialCards();
             ShuffleNumberCard();
-            DealTheCards();
+            _cardsPlacer.DealCards(_cards);
 
             OnLevelCreated?.Invoke();
         }
@@ -151,31 +150,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             card.NumberPair = 0;
         }
 
-        private void DealTheCards()
-        {
-            List<Vector2> cardsPositions = new List<Vector2>();
-            
-            Sequence sequence = DOTween.Sequence();
-            
-            foreach (var card in _cards)
-            {
-                cardsPositions.Add(card.transform.position);
-                card.transform.position = _cardsDeckStartPosition;
-            }
-
-            int currentInteraction = 0;
-            
-            foreach (var card in _cards)
-            {
-                int i = currentInteraction;
-                
-                sequence.AppendInterval(0.1f);
-                sequence.AppendCallback(() => card.Move(cardsPositions[i], 0.25f, Ease.Linear));
-                
-                currentInteraction++;
-            }
-        }
-        
         public bool IsSpecialCardsOnLevel()
         {
             foreach (var card in _cards)

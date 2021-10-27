@@ -15,6 +15,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         [SerializeField] private Sprite _faceSprite;
         [SerializeField] private SpriteRenderer _visualSprite;
         [SerializeField] private SpriteRenderer _specialCardSprite;
+        [SerializeField] private float _delayStartShowingTime;
         [SerializeField] private Ease _easeAnimationCard;
         private BoxCollider _collider;
 
@@ -118,7 +119,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private IEnumerator DelayStartShowing()
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(_delayStartShowingTime);
             PlayAnimation(true);
         }
 

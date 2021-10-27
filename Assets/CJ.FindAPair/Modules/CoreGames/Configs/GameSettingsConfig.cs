@@ -7,7 +7,6 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
     [CreateAssetMenu(fileName = "Settings", menuName = "Find a pair/Settings")]
     public class GameSettingsConfig : ScriptableObject
     {
-
         [SerializeField] [Range (1, 10)] private float _startTimeShow;
         [SerializeField] [Range(0.1f, 3.0f)] private float _animationSpeedCard;
         [SerializeField] [Range(0.1f , 3.0f)] private float _delayTimeHide;

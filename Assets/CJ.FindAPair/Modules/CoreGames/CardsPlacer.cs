@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using DG.Tweening;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CoreGames
@@ -46,6 +47,31 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
 
             return cards;
+        }
+        
+        public void DealCards(List<Card> cards)
+        {
+            List<Vector2> cardsPositions = new List<Vector2>();
+            
+            Sequence sequence = DOTween.Sequence();
+            
+            foreach (var card in cards)
+            {
+                cardsPositions.Add(card.transform.position);
+                card.transform.position = _placeCardsConfig.CardsDeckPosition;
+            }
+
+            int currentInteraction = 0;
+            
+            foreach (var card in cards)
+            {
+                int i = currentInteraction;
+                
+                sequence.AppendInterval(_placeCardsConfig.TimeBetweenDeals);
+                sequence.AppendCallback(() => card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase));
+                
+                currentInteraction++;
+            }
         }
     }
 }
