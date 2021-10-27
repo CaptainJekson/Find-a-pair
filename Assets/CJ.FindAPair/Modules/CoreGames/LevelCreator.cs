@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.UI.Installer;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,6 +16,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private CardsPlacer _cardsPlacer;
         private LevelConfig _level;
+        private UIRoot _uiRoot;
         private List<Card> _cards;
         private List<Card> _disableCards;
 
@@ -26,9 +28,10 @@ namespace CJ.FindAPair.Modules.CoreGames
         public event UnityAction OnLevelDeleted;
 
         [Inject]
-        public void Construct(CardsPlacer cardsPlacer)
+        public void Construct(CardsPlacer cardsPlacer, UIRoot uiRoot)
         {
             _cardsPlacer = cardsPlacer;
+            _uiRoot = uiRoot;
             _cards = new List<Card>();
             _disableCards = new List<Card>();
         }
@@ -36,6 +39,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         public void CreateLevel(LevelConfig level)
         {
             _level = level;
+            _uiRoot.OpenWindow<FullBlockerWindow>();
             
             PlaceCards();
             CardNumbering();

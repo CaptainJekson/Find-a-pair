@@ -2,6 +2,7 @@
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
+using CJ.FindAPair.Modules.UI.Installer;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -29,6 +30,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private Sequence _timerSequence;
         private Action _showAdsAction;
+        private UIRoot _uiRoot;
 
         public event Action<int> ScoreСhanged;
         public event Action<int> LifeСhanged;
@@ -41,7 +43,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
             GameSettingsConfig gameSettingsConfig, ISaver gameSaver, IAdsDriver adsDriver,
-            UnityAdsConfig unityAdsConfig)
+            UnityAdsConfig unityAdsConfig, UIRoot uiRoot)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
@@ -49,7 +51,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
+            _uiRoot = uiRoot;
             _timerSequence = DOTween.Sequence();
+            
             Subscribe();
         }
 
@@ -227,6 +231,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             var sequence = DOTween.Sequence();
             sequence.AppendInterval(_gameSettingsConfig.StartTimeShow);
+            sequence.AppendCallback(() => _uiRoot.CloseWindow<FullBlockerWindow>());
             sequence.AppendCallback(StartTimer);
         }
 
