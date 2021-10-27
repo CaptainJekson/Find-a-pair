@@ -15,15 +15,15 @@ namespace CJ.FindAPair.Modules.CoreGames
         [SerializeField] private Sprite _faceSprite;
         [SerializeField] private SpriteRenderer _visualSprite;
         [SerializeField] private SpriteRenderer _specialCardSprite;
-        [SerializeField] private float _delayStartShowingTime;
         [SerializeField] private Ease _easeAnimationCard;
+
         private BoxCollider _collider;
 
         public bool IsEmpty { get; set; }
         public bool IsShow { get; set; }
         public bool IsMatched { get; set; }
         public int NumberPair { get; set; }
-
+        
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
 
@@ -43,7 +43,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
             
             PlayAnimation(false);
-            StartCoroutine(DelayStartShowing());
             StartCoroutine(DelayHide(_gameSettingsConfig.StartTimeShow));
         }
 
@@ -117,13 +116,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             Hide();
         }
 
-        private IEnumerator DelayStartShowing()
-        {
-            yield return new WaitForSeconds(_delayStartShowingTime);
-            PlayAnimation(true);
-        }
-
-        private void PlayAnimation(bool isShow)
+        public void PlayAnimation(bool isShow)
         {
             var sequence = DOTween.Sequence();
             

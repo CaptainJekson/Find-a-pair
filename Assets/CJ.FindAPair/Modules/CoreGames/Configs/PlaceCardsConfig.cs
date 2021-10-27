@@ -13,8 +13,9 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         [SerializeField] private List<PlaceWidthSetting> _placeWidthSettings;
         [SerializeField] private List<PlaceHeightSetting> _placeHeightSetting;
         
-        [SerializeField] private float _cardDealSpeed;
-        [SerializeField] private float _timeBetweenDeals;
+        [SerializeField] [Range(0f, 0.5f)] private float _cardDealSpeed;
+        [SerializeField] [Range(0f, 0.1f)] private float _timeBetweenDeals;
+        [SerializeField] [Range(0f, 1f)] private float _delayAfterCardsDealt;
         [SerializeField] private Ease _cardDealEase;
         [SerializeField] private Vector2 _cardsDeckPosition;
         
@@ -24,6 +25,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         public float OffsetFactorY => _offsetFactorY;
         public float CardDealSpeed => _cardDealSpeed;
         public float TimeBetweenDeals => _timeBetweenDeals;
+        public float DelayAfterCardsDealt => _delayAfterCardsDealt;
         public Ease CardDealEase => _cardDealEase;
         public Vector2 CardsDeckPosition => _cardsDeckPosition;
 

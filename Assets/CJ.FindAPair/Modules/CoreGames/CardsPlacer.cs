@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
@@ -55,22 +56,29 @@ namespace CJ.FindAPair.Modules.CoreGames
             
             Sequence sequence = DOTween.Sequence();
             
+            int interactionsCounter = 0;
+            
             foreach (var card in cards)
             {
                 cardsPositions.Add(card.transform.position);
                 card.transform.position = _placeCardsConfig.CardsDeckPosition;
             }
 
-            int currentInteraction = 0;
-            
             foreach (var card in cards)
             {
-                int i = currentInteraction;
+                int i = interactionsCounter;
                 
                 sequence.AppendInterval(_placeCardsConfig.TimeBetweenDeals);
                 sequence.AppendCallback(() => card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase));
                 
-                currentInteraction++;
+                interactionsCounter++;
+            }
+
+            sequence.AppendInterval(_placeCardsConfig.DelayAfterCardsDealt);
+
+            foreach (var card in cards)
+            {
+                sequence.AppendCallback(() => card.PlayAnimation(true));
             }
         }
     }
