@@ -48,3 +48,9 @@ MonoBehaviour:
     StartPositionY: 2.3
   - AllowableHeight: 8
     StartPositionY: 1
+  _cardDealSpeed: 0.25
+  _timeBetweenDeals: 0.1
+  _delayAfterCardsDealt: 1
+  _cardsShowingTime: 2
+  _cardDealEase: 1
+  _cardsDeckPosition: {x: 0, y: -7}

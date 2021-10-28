@@ -16,13 +16,14 @@ namespace CJ.FindAPair.Modules.CoreGames
         [SerializeField] private SpriteRenderer _visualSprite;
         [SerializeField] private SpriteRenderer _specialCardSprite;
         [SerializeField] private Ease _easeAnimationCard;
+
         private BoxCollider _collider;
 
         public bool IsEmpty { get; set; }
         public bool IsShow { get; set; }
         public bool IsMatched { get; set; }
         public int NumberPair { get; set; }
-
+        
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
 
@@ -40,8 +41,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             {
                 MakeEmpty();
             }
-
-            StartCoroutine(DelayStartHide());
+            
+            PlayAnimation(false);
         }
 
         public void Show(bool isNotEventCall = false)
@@ -49,8 +50,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (IsEmpty)
                 return;
 
+            _collider.enabled = false;
             PlayAnimation(true);
-
+            
             IsShow = true;
             if (isNotEventCall) return;
             СardOpens?.Invoke();
@@ -61,8 +63,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (IsEmpty)
                 return;
 
+            _collider.enabled = true;
             PlayAnimation(false);
-
+            
             IsShow = false;
             IsMatched = false;
             if (isNotEventCall) return;
@@ -112,19 +115,10 @@ namespace CJ.FindAPair.Modules.CoreGames
             Hide();
         }
 
-        private IEnumerator DelayStartHide()
-        {
-            yield return new WaitForSeconds(_gameSettingsConfig.StartTimeShow);
-            Hide();
-        }
-
-        private void PlayAnimation(bool isShow)
+        public void PlayAnimation(bool isShow)
         {
             var sequence = DOTween.Sequence();
-
-            if (isShow)
-                sequence.AppendCallback(() => _collider.enabled = false);
-
+            
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 90, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             sequence.AppendCallback(() =>
@@ -134,9 +128,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             });
             sequence.Append(_visualSprite.transform.DORotate(new Vector3(0, 0, 0),
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
-
-            if (!isShow)
-                sequence.AppendCallback(() => _collider.enabled = true);
         }
 
         public void Move(Vector3 destination, float moveSpeed, Ease moveEase)

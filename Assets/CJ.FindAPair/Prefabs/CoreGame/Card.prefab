@@ -4858,6 +4858,7 @@ MonoBehaviour:
   _faceSprite: {fileID: 21300000, guid: 3a58c7cbd7a74c947864cf0f7b2352db, type: 3}
   _visualSprite: {fileID: 5081686388729640764}
   _specialCardSprite: {fileID: 1433695958073882609}
+  _delayStartShowingTime: 3
   _easeAnimationCard: 0
 --- !u!114 &8155145369748042194
 MonoBehaviour:

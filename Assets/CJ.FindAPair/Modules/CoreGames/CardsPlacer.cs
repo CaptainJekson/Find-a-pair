@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
@@ -8,6 +10,8 @@ namespace CJ.FindAPair.Modules.CoreGames
     {
         private PlaceCardsConfig _placeCardsConfig;
 
+        public event UnityAction CardsDealt;
+        
         public CardsPlacer(PlaceCardsConfig placeCardsConfig)
         {
             _placeCardsConfig = placeCardsConfig;
@@ -46,6 +50,47 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
 
             return cards;
+        }
+        
+        public void DealCards(List<Card> cards)
+        {
+            List<Vector2> cardsPositions = new List<Vector2>();
+            
+            Sequence sequence = DOTween.Sequence();
+            
+            int interactionsCounter = 0;
+            
+            foreach (var card in cards)
+            {
+                cardsPositions.Add(card.transform.position);
+                card.transform.position = _placeCardsConfig.CardsDeckPosition;
+            }
+
+            foreach (var card in cards)
+            {
+                int i = interactionsCounter;
+                
+                sequence.AppendInterval(_placeCardsConfig.TimeBetweenDeals);
+                sequence.AppendCallback(() => card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase));
+                
+                interactionsCounter++;
+            }
+
+            sequence.AppendInterval(_placeCardsConfig.DelayAfterCardsDealt);
+
+            foreach (var card in cards)
+            {
+                sequence.AppendCallback(() => card.PlayAnimation(true));
+            }
+            
+            sequence.AppendInterval(_placeCardsConfig.CardsShowingTime);
+            
+            foreach (var card in cards)
+            {
+                sequence.AppendCallback(() => card.Hide());
+            }
+
+            sequence.AppendCallback(() => CardsDealt?.Invoke());
         }
     }
 }
