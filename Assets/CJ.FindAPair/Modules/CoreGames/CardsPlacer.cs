@@ -10,6 +10,8 @@ namespace CJ.FindAPair.Modules.CoreGames
     {
         private PlaceCardsConfig _placeCardsConfig;
 
+        public event UnityAction CardsDealt;
+        
         public CardsPlacer(PlaceCardsConfig placeCardsConfig)
         {
             _placeCardsConfig = placeCardsConfig;
@@ -80,6 +82,15 @@ namespace CJ.FindAPair.Modules.CoreGames
             {
                 sequence.AppendCallback(() => card.PlayAnimation(true));
             }
+            
+            sequence.AppendInterval(_placeCardsConfig.CardsShowingTime);
+            
+            foreach (var card in cards)
+            {
+                sequence.AppendCallback(() => card.Hide());
+            }
+
+            sequence.AppendCallback(() => CardsDealt?.Invoke());
         }
     }
 }

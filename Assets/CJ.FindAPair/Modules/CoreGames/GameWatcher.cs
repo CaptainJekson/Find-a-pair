@@ -15,6 +15,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private GameSettingsConfig _gameSettingsConfig;
         private LevelCreator _levelCreator;
         private CardComparator _cardComparator;
+        private CardsPlacer _cardsPlacer;
         private ISaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
@@ -43,11 +44,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
             GameSettingsConfig gameSettingsConfig, ISaver gameSaver, IAdsDriver adsDriver,
-            UnityAdsConfig unityAdsConfig, UIRoot uiRoot)
+            UnityAdsConfig unityAdsConfig, UIRoot uiRoot, CardsPlacer cardsPlacer)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
             _gameSettingsConfig = gameSettingsConfig;
+            _cardsPlacer = cardsPlacer;
             _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
@@ -61,7 +63,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _cardComparator.CardsMatched += AddScore;
             _cardComparator.CardsNotMatched += RemoveLife;
-            _levelCreator.OnLevelCreated += StartTheGame;
+            _cardsPlacer.CardsDealt += StartTheGame;
             _levelCreator.OnLevelDeleted += ResetTimer;
             _levelCreator.OnLevelDeleted += ResetCounts;
             _adsDriver.AdsIsSkipped += InitiateDefeatAtSkipAds;
@@ -230,7 +232,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             ScoreСhanged?.Invoke(_score);
 
             var sequence = DOTween.Sequence();
-            sequence.AppendInterval(_gameSettingsConfig.StartTimeShow);
             sequence.AppendCallback(() => _uiRoot.CloseWindow<FullBlockerWindow>());
             sequence.AppendCallback(StartTimer);
         }

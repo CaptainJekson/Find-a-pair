@@ -43,7 +43,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
             
             PlayAnimation(false);
-            StartCoroutine(DelayHide(_gameSettingsConfig.StartTimeShow));
         }
 
         public void Show(bool isNotEventCall = false)
