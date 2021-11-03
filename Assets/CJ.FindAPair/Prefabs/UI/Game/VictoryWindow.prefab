@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 3392196410495509978}
   - component: {fileID: 6960268849667195793}
   m_Layer: 0
-  m_Name: Title
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,9 +181,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7950237074924453597}
-  - {fileID: 2927482063716996141}
+  m_Children: []
   m_Father: {fileID: 2829586256886101579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -302,7 +300,7 @@ GameObject:
   - component: {fileID: 4447842681153739256}
   - component: {fileID: 5807012454696854776}
   m_Layer: 0
-  m_Name: EarnedCoinsFrame
+  m_Name: GottenCoinsFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,6 +318,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8401032751746841404}
+  - {fileID: 5178702060838365861}
   m_Father: {fileID: 2490897489594363272}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5261,6 +5260,7 @@ RectTransform:
   - {fileID: 2490897490454060495}
   - {fileID: 2490897488406376435}
   - {fileID: 2490897488736012803}
+  - {fileID: 8621421317269991264}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5816,6 +5816,25 @@ MonoBehaviour:
   _exitButton: {fileID: 2490897488406376437}
   _nextLevelButton: {fileID: 2490897490454060465}
   _currentLevelText: {fileID: 3335165958134467398}
+  _coinsValueText: {fileID: 8926446433802266571}
+  _coinImage: {fileID: 3655936817803315692}
+  _earnedCoinsContainer: {fileID: 8621421317269991264}
+  _coinStartPosition: {x: 132, y: 364, z: 0}
+  _coinsPathPointers:
+  - {x: 75, y: 325, z: 0}
+  - {x: 50, y: 250, z: 0}
+  - {x: 25, y: 175, z: 0}
+  - {x: 50, y: 125, z: 0}
+  - {x: 100, y: 65, z: 0}
+  - {x: 175, y: 125, z: 0}
+  - {x: 155, y: 200, z: 0}
+  - {x: 115, y: 215, z: 0}
+  - {x: 100, y: 190, z: 0}
+  _coinScaledSize: {x: 1.25, y: 1.25, z: 0}
+  _coinScaledTime: 0.075
+  _delayStartAnimation: 0.75
+  _intervalBetweenCoins: 0.1
+  _coinMoveSpeed: 3
 --- !u!1 &2490897490139544935
 GameObject:
   m_ObjectHideFlags: 0
@@ -8395,12 +8414,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8401032751746841404}
-  m_RootOrder: 1
+  m_Father: {fileID: 5178702060838365861}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75, y: -115}
+  m_AnchoredPosition: {x: -95, y: -5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5217792576840220265
@@ -8471,12 +8490,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8401032751746841404}
-  m_RootOrder: 0
+  m_Father: {fileID: 5178702060838365861}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 215, y: -155}
+  m_AnchoredPosition: {x: 195, y: -45}
   m_SizeDelta: {x: 450, y: 185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &286419556513028228
@@ -8804,6 +8823,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!1 &6406614719789810813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5178702060838365861}
+  m_Layer: 0
+  m_Name: GottenCoins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5178702060838365861
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6406614719789810813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2927482063716996141}
+  - {fileID: 7950237074924453597}
+  m_Father: {fileID: 2829586256886101579}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7772228149753644648
 GameObject:
   m_ObjectHideFlags: 0
@@ -9092,3 +9148,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8977975960985233827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8621421317269991264}
+  m_Layer: 0
+  m_Name: EarnedCoinsContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8621421317269991264
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977975960985233827}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2490897489594363272}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1000, y: 1000}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

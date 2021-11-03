@@ -33,6 +33,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         private Action _showAdsAction;
         private UIRoot _uiRoot;
 
+        public int Score => _score;
+        
         public event Action<int> ScoreСhanged;
         public event Action<int> LifeСhanged;
         public event Action<int> TimeСhanged;
@@ -279,6 +281,12 @@ namespace CJ.FindAPair.Modules.CoreGames
                 }
             });
             _timerSequence.SetLoops(-1, LoopType.Incremental);
+        }
+
+        public void DecreaseScore()
+        {
+            _score--;
+            ScoreСhanged?.Invoke(_score);
         }
     }
 }
