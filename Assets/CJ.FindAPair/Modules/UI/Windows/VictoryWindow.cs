@@ -22,8 +22,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         
         [SerializeField] private Image _coinImage;
         [SerializeField] private Transform _earnedCoinsContainer;
-        [SerializeField] private Vector3 _coinStartPosition;
-        [SerializeField] private Vector3[] _coinsPathPointers;
+        [SerializeField] private Transform _coinPathPointersContainer;
 
         [SerializeField] private Vector3 _coinScaledSize;
         [SerializeField] private float _coinScaledTime;
@@ -32,6 +31,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private float _coinMoveSpeed;
 
         private List<Image> _rewardCoins;
+        private Vector3[] _coinPathPointers;
         
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
@@ -111,13 +111,17 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void PlayRewardAnimation()
         {
             _rewardCoins = new List<Image>();
+            _coinPathPointers = new Vector3[_coinPathPointersContainer.childCount];
             _rewardAnimationSequence = DOTween.Sequence();
-            
+
             int scores = _gameWatcher.Score;
             int coins = _gameSaver.LoadData().ItemsData.Coins - scores;
 
             _coinsValueText.SetText(coins.ToString());
 
+            for (int i = 0; i < _coinPathPointersContainer.childCount; i++)
+                _coinPathPointers[i] = _coinPathPointersContainer.GetChild(i).transform.position;
+            
             for (int i = 0; i < scores; i++)
                 _rewardCoins.Add(Instantiate(_coinImage, _earnedCoinsContainer));
 
@@ -126,7 +130,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             for (int i = 0; i < scores; i++)
             {
                 _rewardAnimationSequence
-                    .Append(_rewardCoins[i].transform.DOMove(_coinStartPosition, 0))
+                    .Append(_rewardCoins[i].transform.DOMove(_coinPathPointersContainer.position, 0))
                     .AppendInterval(_coinScaledTime);
                 
                 _rewardAnimationSequence
@@ -154,7 +158,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             int gottenCoinsCount = coinsCount + 1;
 
             receivingSequence
-                .Append(_rewardCoins[currentCoinIndex].transform.DOPath(_coinsPathPointers, _coinMoveSpeed, PathType.CatmullRom))
+                .Append(_rewardCoins[currentCoinIndex].transform.DOPath(_coinPathPointers, _coinMoveSpeed, PathType.CatmullRom))
                 .AppendCallback(() => Destroy(_rewardCoins[currentCoinIndex].gameObject))
                 .AppendCallback(() => _coinsValueText.SetText(gottenCoinsCount.ToString()));
             
