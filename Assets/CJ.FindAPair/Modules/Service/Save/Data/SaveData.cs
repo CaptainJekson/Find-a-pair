@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
+    public int UserId;
     public int CurrentLevel;
     public ItemsData ItemsData;
     public ThemesData ThemesData;
