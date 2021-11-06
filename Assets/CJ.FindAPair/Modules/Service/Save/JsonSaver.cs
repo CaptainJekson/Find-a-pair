@@ -52,16 +52,14 @@ namespace CJ.FindAPair.Modules.Service.Save
             _serverConnector.UpdateSave(_jsonSaveData);
         }
 
-        private void OnCompleteCreateSave(string userId)
-        {
-            _saveData.UserId = Convert.ToInt32(userId);
-            _jsonSaveData = JsonUtility.ToJson(_saveData);
-            File.WriteAllText(_path, _jsonSaveData);
-            SaveData(_saveData);
-        }
-        
         private void LoadDataAtStartGame()
         {
+            if (_saveData.UserId == 0)
+            {
+                _serverConnector.CreateSave(_jsonSaveData, OnCompleteCreateSave);
+                return;
+            }
+            
             if (PlayerPrefs.GetString(PlayerPrefsKeys.IsSaveLocalMode) != "On")
             {
                 _serverConnector.LoadSave(_saveData.UserId, OnCompleteLoadSave, OnErrorLoadSave);
@@ -71,6 +69,14 @@ namespace CJ.FindAPair.Modules.Service.Save
                 SaveData(_saveData);
                 PlayerPrefs.SetString(PlayerPrefsKeys.IsSaveLocalMode, "Off");
             }
+        }
+        
+        private void OnCompleteCreateSave(string userId)
+        {
+            _saveData.UserId = Convert.ToInt32(userId);
+            _jsonSaveData = JsonUtility.ToJson(_saveData);
+            File.WriteAllText(_path, _jsonSaveData);
+            SaveData(_saveData);
         }
         
         private void OnCompleteLoadSave(string jsonSaveData)
