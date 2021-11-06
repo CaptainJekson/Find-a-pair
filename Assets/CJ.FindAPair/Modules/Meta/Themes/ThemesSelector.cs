@@ -2,6 +2,7 @@
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.Meta.Configs;
+using CJ.FindAPair.Utility;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.Meta.Themes
@@ -47,16 +48,14 @@ namespace CJ.FindAPair.Modules.Meta.Themes
 
         public void RandomSelectTheme(bool isRandom)
         {
-            var saveData = _gameSaver.LoadData();
-            saveData.SettingsData.IsRandomChangeTheme = isRandom;
-            _gameSaver.SaveData(saveData);
+            PlayerPrefs.SetString(PlayerPrefsKeys.IsRandomChangeTheme, isRandom ? "On" : "Off");
         }
 
         private void InitTheme()
-        {
-            var saveData = _gameSaver.LoadData();
+        {   
+            var isRandomChangeTheme = PlayerPrefs.GetString(PlayerPrefsKeys.IsRandomChangeTheme);
 
-            if (saveData.SettingsData.IsRandomChangeTheme)
+            if (isRandomChangeTheme == "On")
                 RandomChangeTheme();
             
             _quantityOfCardOfPair = (int) _levelCreator.LevelConfig.QuantityOfCardOfPair;
