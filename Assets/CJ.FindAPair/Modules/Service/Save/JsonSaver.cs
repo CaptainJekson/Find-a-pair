@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using CJ.FindAPair.Modules.Service.Server;
+using CJ.FindAPair.Utility;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.Service.Save
@@ -27,7 +28,7 @@ namespace CJ.FindAPair.Modules.Service.Save
             {
                 _jsonSaveData = File.ReadAllText(_path);
                 _saveData = JsonUtility.FromJson<SaveData>(_jsonSaveData);
-                _serverConnector.LoadSave(_saveData.UserId, OnCompleteLoadSave);
+                LoadDataAtStartGame();
             }
             else
             {
@@ -59,9 +60,27 @@ namespace CJ.FindAPair.Modules.Service.Save
             SaveData(_saveData);
         }
         
+        private void LoadDataAtStartGame()
+        {
+            if (PlayerPrefs.GetString(PlayerPrefsKeys.IsSaveLocalMode) != "On")
+            {
+                _serverConnector.LoadSave(_saveData.UserId, OnCompleteLoadSave, OnErrorLoadSave);
+            }
+            else
+            {
+                SaveData(_saveData);
+                PlayerPrefs.SetString(PlayerPrefsKeys.IsSaveLocalMode, "Off");
+            }
+        }
+        
         private void OnCompleteLoadSave(string jsonSaveData)
         {
             _saveData = JsonUtility.FromJson<SaveData>(jsonSaveData);
+        }
+
+        private void OnErrorLoadSave(string error)
+        {
+            PlayerPrefs.SetString(PlayerPrefsKeys.IsSaveLocalMode, "On");
         }
     }
 }

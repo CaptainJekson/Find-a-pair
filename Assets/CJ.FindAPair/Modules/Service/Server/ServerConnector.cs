@@ -10,6 +10,7 @@ namespace CJ.FindAPair.Modules.Service.Server
     {
         private ServerConfig _serverConfig;
         private Action<string> _completeAction;
+        private Action<string> _errorAction;
         
         [Inject]
         public void Construct(ServerConfig serverConfig)
@@ -37,9 +38,10 @@ namespace CJ.FindAPair.Modules.Service.Server
             StartCoroutine(Connect(form));
         }
 
-        public void LoadSave(int userId, Action<string> completeAction = null) //TODO Реализация на серве ещё не сделана
+        public void LoadSave(int userId, Action<string> completeAction = null, Action<string> errorAction = null)
         {
             _completeAction = completeAction;
+            _errorAction = errorAction;
             
             var form = new WWWForm();
             form.AddField("Command", "LoadSave");
@@ -56,6 +58,8 @@ namespace CJ.FindAPair.Modules.Service.Server
             yield return www;
             if (www.error != null)
             {
+                _errorAction?.Invoke(www.error);
+                _errorAction = null;
                 Debug.LogError("Error: " + www.error);
                 yield break;
             }

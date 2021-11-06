@@ -13,6 +13,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         
         [SerializeField] private TextMeshProUGUI _goldValueText;
         [SerializeField] private TextMeshProUGUI _diamondValueText;
+        [SerializeField] private TextMeshProUGUI _playerIdText; //TODO временно будет тут пока нет окна настроек
 
         private ISaver _gameSaver;
         private IStoreDriver _storeDriver;
@@ -47,6 +48,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
             _goldValueText.SetText(_coinValue.ToString());
             _diamondValueText.SetText(_diamondValue.ToString());
+            _playerIdText.SetText($"User Id: {saveData.UserId.ToString()}");
         }
         
         private void SmoothRefreshValues()
