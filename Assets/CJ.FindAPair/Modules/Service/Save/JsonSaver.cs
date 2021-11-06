@@ -59,9 +59,9 @@ namespace CJ.FindAPair.Modules.Service.Save
             SaveData(_saveData);
         }
         
-        private void OnCompleteLoadSave(string jsonSaveData) //TODO если на серве правильно сериализовать JSON то все должно работать
+        private void OnCompleteLoadSave(string jsonSaveData)
         {
-            //_saveData = JsonUtility.FromJson<SaveData>(jsonSaveData);
+            _saveData = JsonUtility.FromJson<SaveData>(jsonSaveData);
         }
     }
 }
