@@ -2,6 +2,7 @@
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.Service.Save;
 using CJ.FindAPair.Modules.Service.Server;
+using CJ.FindAPair.Modules.Service.Server.Configs;
 using CJ.FindAPair.Modules.Service.Store;
 using Zenject;
 
@@ -12,6 +13,9 @@ namespace CJ.FindAPair.Modules.Service.Installer
         public override void InstallBindings()
         {
             Container.Bind<UnityAdsConfig>().FromScriptableObjectResource("Configs/Services/UnityAdsConfig")
+                .AsSingle();
+            
+            Container.Bind<ServerConfig>().FromScriptableObjectResource("Configs/Services/ServerConfig")
                 .AsSingle();
      
             Container.Bind<ServerConnector>().FromComponentInNewPrefabResource("Services/ServerConnector").AsSingle();
