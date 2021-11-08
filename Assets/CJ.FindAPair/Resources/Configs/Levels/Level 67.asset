@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bab36fc551cd8c44ea955eea752e6b58, type: 3}
-  m_Name: Level 9
+  m_Name: Level 67
   m_EditorClassIdentifier: 
-  _level: 9
+  _level: 67
   _isHard: 0
   _width: 3
   _height: 5
   _heightOffset: -0.3
   _quantityOfCardOfPair: 2
-  _tries: 10
-  _time: 60
-  _quantityPairOfFortune: 0
+  _tries: 5
+  _time: 20
+  _quantityPairOfFortune: 1
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0

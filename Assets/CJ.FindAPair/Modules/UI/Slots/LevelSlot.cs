@@ -8,20 +8,23 @@ using UnityEngine.UI;
 
 namespace CJ.FindAPair.Modules.UI.Slots
 {
-    [RequireComponent(typeof(Button))]
+    [RequireComponent(typeof(Button),typeof(Image))]
     public class LevelSlot : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _levelNumberText;
+        [SerializeField] private Sprite _levelHardSprite;
 
         private LevelConfig _levelConfig;
         private LevelCreator _levelCreator;
         private PreviewLevelWindow _previewLevelWindow;
         private UIRoot _uiRoot;
         private Button _button;
+        private Image _mainImage;
 
         private void Awake()
         {
             _button = GetComponent<Button>();
+            _mainImage = GetComponent<Image>();
             _button.onClick.AddListener(OpenPreviewWindow);
         }
 
@@ -33,6 +36,9 @@ namespace CJ.FindAPair.Modules.UI.Slots
             _uiRoot = uiRoot;
 
             _levelNumberText.text = _levelConfig.LevelNumber.ToString();
+
+            if (_levelConfig.IsHard)
+                _mainImage.sprite = _levelHardSprite;
         }
 
         private void OpenPreviewWindow()

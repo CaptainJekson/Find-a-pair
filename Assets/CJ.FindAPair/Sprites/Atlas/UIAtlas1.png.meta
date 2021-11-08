@@ -146,6 +146,9 @@ TextureImporter:
   - first:
       213: 679555835893313791
     second: check_icon
+  - first:
+      213: -9033822325882794758
+    second: level_hard_button
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1082,9 +1085,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3027
-        y: 1170
+        y: 1162
         width: 496
-        height: 366
+        height: 374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1262,6 +1265,27 @@ TextureImporter:
       bones: []
       spriteID: ff0f67bae644e6900800000000000000
       internalID: 679555835893313791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_hard_button
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 298
+        width: 225
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc43c5357a61a280800000000000000
+      internalID: -9033822325882794758
       vertices: []
       indices: 
       edges: []

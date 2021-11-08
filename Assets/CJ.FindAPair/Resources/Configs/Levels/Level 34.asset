@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Level 34
   m_EditorClassIdentifier: 
   _level: 34
+  _isHard: 0
   _width: 3
   _height: 4
   _heightOffset: 0

@@ -348,3 +348,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelNumberText: {fileID: 5589182084594905161}
+  _levelHardSprite: {fileID: -9033822325882794758, guid: a91b6fe9c9585de47b8ce70184a158b6,
+    type: 3}
