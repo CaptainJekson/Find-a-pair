@@ -43,10 +43,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             CreatePages();
             SetSlots();
             SetLevelData();
-
-            var sequence = DOTween.Sequence(); //TODO костыль
-            sequence.AppendInterval(1.5f);
-            sequence.AppendCallback(() => _scrollbar.value = 0.0f);
+            
+            DOTween.To(()=> _scrollbar.value, x=> _scrollbar.value = x, 0.0f, 2.0f);
         }
 
         private void CreatePages()
