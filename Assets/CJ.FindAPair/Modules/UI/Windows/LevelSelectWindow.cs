@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Utility;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Windows
@@ -11,9 +15,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
     public class LevelSelectWindow : Window
     {
         [SerializeField] private LevelPagePanel _levelPagePanel;
-        [SerializeField] private LevelSlot _levelSlot;
-        [SerializeField] private Transform _contentPosition;
+        [SerializeField] private RectTransform _contentPosition;
         [SerializeField] private int _slotsPerPage;
+        [SerializeField] private Scrollbar _scrollbar;
         
         private LevelConfigCollection _levelConfigCollection;
         private LevelCreator _levelCreator;
@@ -37,8 +41,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void Init()
         {
             CreatePages();
-            CreateSlots();
+            SetSlots();
             SetLevelData();
+
+            var sequence = DOTween.Sequence(); //TODO костыль
+            sequence.AppendInterval(1.5f);
+            sequence.AppendCallback(() => _scrollbar.value = 0.0f);
         }
 
         private void CreatePages()
@@ -50,29 +58,26 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 var newPage = Instantiate(_levelPagePanel, transform.position, Quaternion.identity);
                 newPage.transform.SetParent(_contentPosition, false);
+                newPage.transform.SetAsFirstSibling();
                 _pages.Add(newPage);
             }
         }
 
-        private void CreateSlots()
+        private void SetSlots()
         {
             for (var i = 0; i < (IsNotEven ? _pages.Count - 1 : _pages.Count) ; i++)
             {
                 for (var j = 0; j < _slotsPerPage; j++)
                 {
-                    var newSlot = Instantiate(_levelSlot, transform.position, Quaternion.identity);
-                    newSlot.transform.SetParent(_pages[i].transform, false);
-                    _slots.Add(newSlot);
+                    _slots.Add(_pages[i].LevelSlots[j]);
                 }
             }
-
+            
             if (IsNotEven)
             {
                 for (var i = 0; i < _levelConfigCollection.Levels.Count % _slotsPerPage; i++)
                 {
-                    var newSlot = Instantiate(_levelSlot, transform.position, Quaternion.identity);
-                    newSlot.transform.SetParent(_pages[_pages.Count - 1].transform, false);
-                    _slots.Add(newSlot);
+                    _slots.Add(_pages[_pages.Count - 1].LevelSlots[i]);
                 }
             }
         }

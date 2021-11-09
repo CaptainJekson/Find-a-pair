@@ -30,6 +30,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
         public void SetData(LevelConfig levelConfig, LevelCreator levelCreator, UIRoot uiRoot)
         {
+            gameObject.SetActive(true);
             _levelConfig = levelConfig;
             _levelCreator = levelCreator;
             _previewLevelWindow = uiRoot.GetWindow<PreviewLevelWindow>();
