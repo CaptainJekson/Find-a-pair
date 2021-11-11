@@ -192,15 +192,16 @@ namespace CJ.FindAPair.Modules.CoreGames
             _showAdsAction?.Invoke();
             _showAdsAction = null;
             
-            SaveCoins();
+            SaveCoinsAndLevel();
 
             ThereWasAVictory?.Invoke();
         }
 
-        private void SaveCoins()
+        private void SaveCoinsAndLevel()
         {
             var saveData = _gameSaver.LoadData();
             saveData.ItemsData.Coins += _score;
+            saveData.CurrentLevel++;
             _gameSaver.SaveData(saveData);
         }
 

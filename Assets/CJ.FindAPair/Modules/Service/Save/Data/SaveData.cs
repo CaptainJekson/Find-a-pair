@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class SaveData
 {
     public int UserId;
-    public int CurrentLevel;
+    public int CurrentLevel = 1;
     public ItemsData ItemsData;
     public ThemesData ThemesData;
     public AdsData AdsData;

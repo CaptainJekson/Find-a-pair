@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: 2792298641273475217}
   - {fileID: 8048888598347312944}
   - {fileID: 1134403767929784201}
-  - {fileID: 884485972480652659}
+  - {fileID: 2223134477985313431}
   - {fileID: 7818539788375315356}
   - {fileID: 3620328490965080298}
   - {fileID: 1769977075009335450}
@@ -870,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 3050304020948139924, guid: 53735e868066a5a47bf903ce29e563d4,
         type: 3}
       propertyPath: m_Value
-      value: 0.000000068019894
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4156772626030509583, guid: 53735e868066a5a47bf903ce29e563d4,
         type: 3}
@@ -890,7 +890,7 @@ PrefabInstance:
     - target: {fileID: 7153592115974798536, guid: 53735e868066a5a47bf903ce29e563d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 448.65662
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53735e868066a5a47bf903ce29e563d4, type: 3}
@@ -2357,7 +2357,7 @@ PrefabInstance:
     - target: {fileID: 1779859137823798348, guid: 7977bd1c2fbc28e45abc1be562dde268,
         type: 3}
       propertyPath: m_Name
-      value: LevelSelectWindow
+      value: LevelMapWindow
       objectReference: {fileID: 0}
     - target: {fileID: 1779859137823798348, guid: 7977bd1c2fbc28e45abc1be562dde268,
         type: 3}
@@ -2469,11 +2469,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5968702833588100003, guid: 7977bd1c2fbc28e45abc1be562dde268,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968702833588100003, guid: 7977bd1c2fbc28e45abc1be562dde268,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7977bd1c2fbc28e45abc1be562dde268, type: 3}
---- !u!114 &884485972480652659 stripped
+--- !u!114 &2223134477985313431 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -290162150082994920, guid: 7977bd1c2fbc28e45abc1be562dde268,
+  m_CorrespondingSourceObject: {fileID: 7594574507632794364, guid: 7977bd1c2fbc28e45abc1be562dde268,
     type: 3}
   m_PrefabInstance: {fileID: 8628738838015797355}
   m_PrefabAsset: {fileID: 0}

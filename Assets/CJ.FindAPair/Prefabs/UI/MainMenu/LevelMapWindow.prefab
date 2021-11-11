@@ -50,10 +50,9 @@ GameObject:
   - component: {fileID: 5180204895896041349}
   - component: {fileID: 5180204895896041350}
   - component: {fileID: 5180204895896041351}
-  - component: {fileID: -290162150082994920}
-  - component: {fileID: 3584507321706388811}
+  - component: {fileID: 7594574507632794364}
   m_Layer: 5
-  m_Name: LevelSelectWindow
+  m_Name: LevelMapWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,7 +580,7 @@ MonoBehaviour:
   UseCustomStartAnchoredPosition: 1
   ViewCategory: Main menu
   ViewName: Levels Selected Screen
---- !u!114 &-290162150082994920
+--- !u!114 &7594574507632794364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -594,23 +593,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 0}
-  _levelPagePanel: {fileID: -3921471478271628185, guid: 698e950611ba2db4880d8ef5c7227008,
-    type: 3}
+  _levelLocations:
+  - {fileID: -3921471478271628185, guid: 698e950611ba2db4880d8ef5c7227008, type: 3}
+  - {fileID: -3921471478271628185, guid: 84906c749f07e8a43af5acc46447746d, type: 3}
+  - {fileID: -3921471478271628185, guid: 84906c749f07e8a43af5acc46447746d, type: 3}
+  - {fileID: -3921471478271628185, guid: f3c4ab3930be5bb4fb381ecfa3dd217f, type: 3}
+  - {fileID: -3921471478271628185, guid: f3c4ab3930be5bb4fb381ecfa3dd217f, type: 3}
+  - {fileID: -3921471478271628185, guid: c4cbe5c3e57b04c4aa6b5348f95712df, type: 3}
+  - {fileID: -3921471478271628185, guid: c4cbe5c3e57b04c4aa6b5348f95712df, type: 3}
   _contentPosition: {fileID: 5611243971525906306}
-  _slotsPerPage: 16
   _scrollbar: {fileID: 8297945838668019290}
---- !u!114 &3584507321706388811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779859137823798348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dbc6bc6bff7c0f449eb430f88dc49ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3082337007245679190
 GameObject:
   m_ObjectHideFlags: 0
