@@ -9,7 +9,6 @@ public class GameInterfaceWindow : Window
     [SerializeField] private TextMeshProUGUI _lifeValueText;
     [SerializeField] private TextMeshProUGUI _timeValueText;
     [SerializeField] private TextMeshProUGUI _scoreValueText;
-    [SerializeField] private RectTransform _coinTransferPoint;
 
     private GameWatcher _gameWatcher;
     private LevelCreator _levelCreator;
@@ -63,10 +62,5 @@ public class GameInterfaceWindow : Window
         var time = TimeSpan.FromSeconds(secondTime);
 
         return time.ToString(@"mm\:ss");
-    }
-
-    public Vector3 GetCoinPosition()
-    {
-        return _coinTransferPoint.position;
     }
 }

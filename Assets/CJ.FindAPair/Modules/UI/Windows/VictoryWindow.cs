@@ -1,10 +1,8 @@
-using System.Collections.Generic;
 using System.Linq;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using DG.Tweening;
-using Doozy.Engine.Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,33 +18,25 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _coinsValueText;
 
-        [SerializeField] private GameInterfaceWindow _gameInterfaceWindow;
-        [SerializeField] private GameObject _item;
-        [SerializeField] private Transform _clonesContainer;
-        [SerializeField] private float _delayStartAnimation;
-        [SerializeField] private float _intervalBetweenCoins;
-        [SerializeField] private float _coinSpeed;
-        [SerializeField] private Ease _transferEase;
+        [SerializeField] private float _delayStartCutScene;
+        [SerializeField] private float _coinsCountInterval;
 
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
         private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;
-        private Transferer _transferer;
-        private Sequence _rewardAnimationSequence;
-        private List<GameObject> _itemClones;
+        private Sequence _rewardCutSceneSequence;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            LevelConfigCollection levelConfigCollection, ISaver gameSaver, Transferer transferer)
+            LevelConfigCollection levelConfigCollection, ISaver gameSaver)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _levelConfigCollection = levelConfigCollection;
             _gameSaver = gameSaver;
-            _transferer = transferer;
         }
 
         protected override void Init()
@@ -59,15 +49,15 @@ namespace CJ.FindAPair.Modules.UI.Windows
     
         protected override void OnOpen()
         {
-            _levelCreator.OnLevelDeleted += StopRewardAnimation;
+            _levelCreator.OnLevelDeleted += StopRewardCutScene;
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
-            PlayRewardAnimation();
+            PlayRewardCutScene();
         }
 
         protected override void OnClose()
         {
-            _levelCreator.OnLevelDeleted -= StopRewardAnimation;
+            _levelCreator.OnLevelDeleted -= StopRewardCutScene;
             _uiRoot.CloseWindow<GameBlockWindow>();
         }
         
@@ -106,45 +96,32 @@ namespace CJ.FindAPair.Modules.UI.Windows
             Close();
         }
 
-        private void PlayRewardAnimation()
+        private void PlayRewardCutScene()
         {
-            _rewardAnimationSequence = DOTween.Sequence();
-            _itemClones = new List<GameObject>();
+            _rewardCutSceneSequence = DOTween.Sequence();
 
             int scores = _gameWatcher.Score;
             int coins = _gameSaver.LoadData().ItemsData.Coins - scores;
 
-            for (int i = 0; i < scores; i++)
-                _itemClones.Add(Instantiate(_item, _clonesContainer));
-            
             _coinsValueText.SetText(coins.ToString());
 
-            _rewardAnimationSequence.AppendInterval(_delayStartAnimation);
-
+            _rewardCutSceneSequence.AppendInterval(_delayStartCutScene);
+            
             for (int i = 0; i < scores; i++)
             {
-                int coinsValue = coins++;
-                int itemIndex = i;
-
-                _rewardAnimationSequence
+                int coinsValue = ++coins;
+                
+                _rewardCutSceneSequence
                     .AppendCallback(_gameWatcher.DecreaseScore)
-                    .AppendCallback(() => AnimateReceiving(itemIndex, coinsValue))
-                    .AppendInterval(_intervalBetweenCoins);
+                    .AppendCallback(() => _coinsValueText.SetText(coinsValue.ToString()))
+                    .AppendInterval(_coinsCountInterval);
             }
         }
 
-        private void AnimateReceiving(int itemIndex, int coinsValue)
+        private void StopRewardCutScene()
         {
-            int gottenCoinsCount = coinsValue + 1;
-                
-                _transferer.TransferItem(_itemClones[itemIndex], _gameInterfaceWindow.GetCoinPosition(), _item.transform.position, _coinSpeed, _transferEase)
-                    .AppendCallback(() => _coinsValueText.SetText(gottenCoinsCount.ToString()));
-        }
-
-        private void StopRewardAnimation()
-        {
+            _rewardCutSceneSequence.Kill();
             _gameWatcher.ResetScore();
-            _rewardAnimationSequence.Kill();
         }
     }
 }

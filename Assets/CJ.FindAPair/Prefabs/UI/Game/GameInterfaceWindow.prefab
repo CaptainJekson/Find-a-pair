@@ -944,7 +944,7 @@ MonoBehaviour:
   _lifeValueText: {fileID: 8820511760680212120}
   _timeValueText: {fileID: 8820511761034090145}
   _scoreValueText: {fileID: 8820511761492961771}
-  _coinTransferPoint: {fileID: 0}
+  _coinTransferPoint: {fileID: 8820511760538886915}
 --- !u!114 &181578812969115696
 MonoBehaviour:
   m_ObjectHideFlags: 0
