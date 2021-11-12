@@ -19,36 +19,34 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _coinsValueText;
-        
-        [SerializeField] private Image _coinImage;
-        [SerializeField] private Transform _earnedCoinsContainer;
-        [SerializeField] private Transform _coinPathPointersContainer;
 
-        [SerializeField] private Vector3 _coinScaledSize;
-        [SerializeField] private float _coinScaledTime;
+        [SerializeField] private GameInterfaceWindow _gameInterfaceWindow;
+        [SerializeField] private GameObject _item;
+        [SerializeField] private Transform _clonesContainer;
         [SerializeField] private float _delayStartAnimation;
         [SerializeField] private float _intervalBetweenCoins;
-        [SerializeField] private float _coinMoveSpeed;
+        [SerializeField] private float _coinSpeed;
+        [SerializeField] private Ease _transferEase;
 
-        private List<Image> _rewardCoins;
-        private Vector3[] _coinPathPointers;
-        
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
         private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;
+        private Transferer _transferer;
         private Sequence _rewardAnimationSequence;
+        private List<GameObject> _itemClones;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            LevelConfigCollection levelConfigCollection, ISaver gameSaver)
+            LevelConfigCollection levelConfigCollection, ISaver gameSaver, Transferer transferer)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _levelConfigCollection = levelConfigCollection;
             _gameSaver = gameSaver;
+            _transferer = transferer;
         }
 
         protected override void Init()
@@ -110,71 +108,43 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void PlayRewardAnimation()
         {
-            _rewardCoins = new List<Image>();
-            _coinPathPointers = new Vector3[_coinPathPointersContainer.childCount];
             _rewardAnimationSequence = DOTween.Sequence();
+            _itemClones = new List<GameObject>();
 
             int scores = _gameWatcher.Score;
             int coins = _gameSaver.LoadData().ItemsData.Coins - scores;
 
-            _coinsValueText.SetText(coins.ToString());
-
-            for (int i = 0; i < _coinPathPointersContainer.childCount; i++)
-                _coinPathPointers[i] = _coinPathPointersContainer.GetChild(i).transform.position;
-            
             for (int i = 0; i < scores; i++)
-                _rewardCoins.Add(Instantiate(_coinImage, _earnedCoinsContainer));
+                _itemClones.Add(Instantiate(_item, _clonesContainer));
+            
+            _coinsValueText.SetText(coins.ToString());
 
             _rewardAnimationSequence.AppendInterval(_delayStartAnimation);
 
             for (int i = 0; i < scores; i++)
             {
-                _rewardAnimationSequence
-                    .Append(_rewardCoins[i].transform.DOMove(_coinPathPointersContainer.position, 0))
-                    .AppendInterval(_coinScaledTime);
-                
+                int coinsValue = coins++;
+                int itemIndex = i;
+
                 _rewardAnimationSequence
                     .AppendCallback(_gameWatcher.DecreaseScore)
-                    .Append(_rewardCoins[i].transform.DOScale(_coinScaledSize, 0))
-                    .AppendInterval(_coinScaledTime)
-                    .Append(_rewardCoins[i].transform.DOScale(new Vector3(1, 1, 1), 0));
-            }
-
-            for (int i = 0; i < scores; i++)
-            {
-                int currentCoinIndex = i;
-                int coinsValue = coins++;
-
-                _rewardAnimationSequence
-                    .AppendCallback(() => AnimateCoinReceiving(currentCoinIndex, coinsValue))
+                    .AppendCallback(() => AnimateReceiving(itemIndex, coinsValue))
                     .AppendInterval(_intervalBetweenCoins);
             }
         }
 
-        private void AnimateCoinReceiving(int currentCoinIndex, int coinsCount)
+        private void AnimateReceiving(int itemIndex, int coinsValue)
         {
-            Sequence receivingSequence = DOTween.Sequence();
-
-            int gottenCoinsCount = coinsCount + 1;
-
-            receivingSequence
-                .Append(_rewardCoins[currentCoinIndex].transform.DOPath(_coinPathPointers, _coinMoveSpeed, PathType.CatmullRom))
-                .AppendCallback(() => Destroy(_rewardCoins[currentCoinIndex].gameObject))
-                .AppendCallback(() => _coinsValueText.SetText(gottenCoinsCount.ToString()));
-            
-            receivingSequence
-                .Append(_coinImage.transform.DOScale(_coinScaledSize, 0))
-                .AppendInterval(_coinScaledTime)
-                .Append(_coinImage.transform.DOScale(new Vector3(1, 1, 1), 0));
+            int gottenCoinsCount = coinsValue + 1;
+                
+                _transferer.TransferItem(_itemClones[itemIndex], _gameInterfaceWindow.GetCoinPosition(), _item.transform.position, _coinSpeed, _transferEase)
+                    .AppendCallback(() => _coinsValueText.SetText(gottenCoinsCount.ToString()));
         }
 
         private void StopRewardAnimation()
         {
-            DOTween.KillAll();
             _gameWatcher.ResetScore();
-
-            for (int i = 0; i < _earnedCoinsContainer.childCount; i++)
-                Destroy(_earnedCoinsContainer.GetChild(i).gameObject);
+            _rewardAnimationSequence.Kill();
         }
     }
 }
