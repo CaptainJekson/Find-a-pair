@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 59
   m_EditorClassIdentifier: 
   _level: 59
-  _isHard: 0
+  _isHard: 1
   _width: 4
   _height: 7
   _heightOffset: 0.9

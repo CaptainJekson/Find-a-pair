@@ -42,6 +42,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         public event Action ThereWasADefeat;
         public event Action LivesIsOut;
         public event Action TimeIsOut;
+        public event Action ConfirmShowAds;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
@@ -99,6 +100,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _time += _gameSettingsConfig.AdditionalTimeInSecond;
             LifeСhanged?.Invoke(_life);   
             TimeСhanged?.Invoke(_time);
+            ConfirmShowAds?.Invoke();
             StartTimer();
             
             _showAdsAction = () =>
@@ -192,15 +194,19 @@ namespace CJ.FindAPair.Modules.CoreGames
             _showAdsAction?.Invoke();
             _showAdsAction = null;
             
-            SaveCoins();
+            SaveProgress();
 
             ThereWasAVictory?.Invoke();
         }
 
-        private void SaveCoins()
+        private void SaveProgress()
         {
             var saveData = _gameSaver.LoadData();
             saveData.ItemsData.Coins += _score;
+            
+            if(saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
+                saveData.CurrentLevel++;
+            
             _gameSaver.SaveData(saveData);
         }
 

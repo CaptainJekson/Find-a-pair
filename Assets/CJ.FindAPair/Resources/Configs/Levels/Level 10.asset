@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Level 10
   m_EditorClassIdentifier: 
   _level: 10
+  _isHard: 0
   _width: 3
   _height: 5
-  _heightOffset: 0
+  _heightOffset: -0.3
   _quantityOfCardOfPair: 2
   _tries: 4
   _time: 30

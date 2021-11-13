@@ -4,6 +4,7 @@ using CJ.FindAPair.Modules.Meta.Themes;
 using CJ.FindAPair.Modules.Service.Store;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Utility;
 using UnityEngine;
 using Zenject;
 
@@ -62,10 +63,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
             foreach (var themeConfig in _themeConfigCollection.Themes)
             {
+                var isRandomChangeTheme = PlayerPrefs.GetString(PlayerPrefsKeys.IsRandomChangeTheme);
                 var spawnedSlot = Instantiate(_themeSlotPrefab, _contentSlotParent);
                 _themeSlots.Add(spawnedSlot);
                 spawnedSlot.Init(_themesSelector, _uiRoot, _storeDriver, RefreshSlotData,
-                    saveData.SettingsData.IsRandomChangeTheme);
+                    isRandomChangeTheme == "On");
                 spawnedSlot.SetData(themeConfig);
             }
 
@@ -88,10 +90,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 slot.gameObject.SetActive((slot.ThemeId == saveData.ThemesData.SelectedTheme) == false);
             }
 
+            var isRandomChangeTheme = PlayerPrefs.GetString(PlayerPrefsKeys.IsRandomChangeTheme);
             var selectedThemeConfig = _themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
                 .ThemesData.SelectedTheme);
             _selectedThemeSlot.Init(_themesSelector,_uiRoot, _storeDriver, RefreshSlotData,
-                saveData.SettingsData.IsRandomChangeTheme);
+                isRandomChangeTheme == "On");
             _selectedThemeSlot.SetData(selectedThemeConfig);
         }
 
