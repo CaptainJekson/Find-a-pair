@@ -2,6 +2,7 @@ using System.Linq;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Utility;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -17,16 +18,16 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _coinsValueText;
-
-        [SerializeField] private float _delayStartCutScene;
-        [SerializeField] private float _coinsCountInterval;
+        
+        [SerializeField] private float _addingPointsTime;
+        [SerializeField] private float _delayStartAddingPoints;
+        [SerializeField] private Ease _addingPointsEase;
 
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
         private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;
-        private Sequence _rewardCutSceneSequence;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
@@ -98,29 +99,25 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void PlayRewardCutScene()
         {
-            _rewardCutSceneSequence = DOTween.Sequence();
-
+            GameInterfaceWindow _gameInterfaceWindow = _uiRoot.GetWindow<GameInterfaceWindow>();
+            Sequence _rewardCutSceneSequence = DOTween.Sequence();
+            
             int scores = _gameWatcher.Score;
             int coins = _gameSaver.LoadData().ItemsData.Coins - scores;
-
+            
             _coinsValueText.SetText(coins.ToString());
 
-            _rewardCutSceneSequence.AppendInterval(_delayStartCutScene);
-            
-            for (int i = 0; i < scores; i++)
-            {
-                int coinsValue = ++coins;
-                
-                _rewardCutSceneSequence
-                    .AppendCallback(_gameWatcher.DecreaseScore)
-                    .AppendCallback(() => _coinsValueText.SetText(coinsValue.ToString()))
-                    .AppendInterval(_coinsCountInterval);
-            }
+            _rewardCutSceneSequence
+                .AppendInterval(_delayStartAddingPoints)
+                .AppendCallback(() => _gameInterfaceWindow.DecreaseScores(_addingPointsTime, scores, _addingPointsEase))
+                .AppendCallback(() =>
+                    _coinsValueText.ChangeOfNumericValueForText(coins, _gameSaver.LoadData().ItemsData.Coins,
+                        _addingPointsTime, _addingPointsEase));
         }
 
         private void StopRewardCutScene()
         {
-            _rewardCutSceneSequence.Kill();
+            DOTween.KillAll();
             _gameWatcher.ResetScore();
         }
     }
