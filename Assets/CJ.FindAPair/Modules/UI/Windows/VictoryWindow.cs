@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
@@ -18,9 +19,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _coinsValueText;
-        
-        [SerializeField] private float _addingPointsTime;
-        [SerializeField] private float _delayStartAddingPoints;
+
+        [SerializeField] private GameObject _coin;
+        [SerializeField] private Transform _clonesContainer;
+        [SerializeField] private float _coinMoveSpeed;
+        [SerializeField] private float _distanceBetweenCoins;
+        [SerializeField] private float _delayStartCutScene;
         [SerializeField] private Ease _addingPointsEase;
 
         private UIRoot _uiRoot;
@@ -28,16 +32,22 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private GameWatcher _gameWatcher;
         private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;
+        private Transferer _transferer;
+        private GameInterfaceWindow _gameInterfaceWindow;
+        private Sequence _rewardCutSceneSequence;
+        private List<GameObject> _coinClones;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            LevelConfigCollection levelConfigCollection, ISaver gameSaver)
+            LevelConfigCollection levelConfigCollection, ISaver gameSaver, Transferer transferer)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _levelConfigCollection = levelConfigCollection;
             _gameSaver = gameSaver;
+            _transferer = transferer;
+            _gameInterfaceWindow = _uiRoot.GetWindow<GameInterfaceWindow>();
         }
 
         protected override void Init()
@@ -99,26 +109,46 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void PlayRewardCutScene()
         {
-            GameInterfaceWindow _gameInterfaceWindow = _uiRoot.GetWindow<GameInterfaceWindow>();
-            Sequence _rewardCutSceneSequence = DOTween.Sequence();
+            _rewardCutSceneSequence = DOTween.Sequence();
+            _coinClones = new List<GameObject>();
             
             int scores = _gameWatcher.Score;
             int coins = _gameSaver.LoadData().ItemsData.Coins - scores;
-            
+
+            for (int i = 0; i < scores; i++)
+                _coinClones.Add(Instantiate(_coin, _clonesContainer));
+
             _coinsValueText.SetText(coins.ToString());
 
             _rewardCutSceneSequence
-                .AppendInterval(_delayStartAddingPoints)
-                .AppendCallback(() => _gameInterfaceWindow.DecreaseScores(_addingPointsTime, scores, _addingPointsEase))
-                .AppendCallback(() =>
-                    _coinsValueText.ChangeOfNumericValueForText(coins, _gameSaver.LoadData().ItemsData.Coins,
-                        _addingPointsTime, _addingPointsEase));
+                .AppendInterval(_delayStartCutScene);
+
+            for (int i = 0; i < scores; i++)
+            {
+                int coinsValue = ++coins;
+                int cloneIndex = i;
+                int decreasedScore = scores - i;
+
+                _rewardCutSceneSequence
+                    .AppendCallback(() => _gameInterfaceWindow.DecreaseScores(scores, --decreasedScore, 0, _addingPointsEase))
+                    .AppendCallback(() => TransferCoin(cloneIndex, coinsValue))
+                    .AppendInterval(_distanceBetweenCoins);
+            }
         }
 
+        private void TransferCoin(int cloneIndex, int coins)
+        {
+            _transferer.TransferItem(_coinClones[cloneIndex], _gameInterfaceWindow.GottenCoinsPosition, _coin.transform.position, _coinMoveSpeed)
+                .AppendCallback(() => _coinsValueText.SetText(coins.ToString()));
+        }
+        
         private void StopRewardCutScene()
         {
-            DOTween.KillAll();
+            _rewardCutSceneSequence.Kill();
             _gameWatcher.ResetScore();
+
+            for (int i = 0; i < _coinClones.Count; i++)
+                Destroy(_coinClones[i].gameObject);
         }
     }
 }

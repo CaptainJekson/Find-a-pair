@@ -16,8 +16,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [SerializeField] private TextMeshProUGUI _configAdsText;
 
+        [SerializeField] private Transform _gottenCoinsTransform;
+
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
+        
+        public Vector3 GottenCoinsPosition => _gottenCoinsTransform.transform.position;
 
         [Inject]
         public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator)
@@ -87,9 +91,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _configAdsText.gameObject.SetActive(false);
         }
 
-        public void DecreaseScores(float decreaseTime, int scores, Ease decreaseEase)
+        public void DecreaseScores(int scoreValue, int endScoreValue, float decreaseDuration, Ease decreaseEase)
         {
-            _scoreValueText.ChangeOfNumericValueForText(scores, 0, decreaseTime, decreaseEase);
+            _scoreValueText.ChangeOfNumericValueForText(scoreValue, endScoreValue, decreaseDuration, decreaseEase);
         }
     }
 }

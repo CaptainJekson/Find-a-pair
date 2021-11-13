@@ -5816,8 +5816,12 @@ MonoBehaviour:
   _nextLevelButton: {fileID: 2490897490454060465}
   _currentLevelText: {fileID: 3335165958134467398}
   _coinsValueText: {fileID: 8926446433802266571}
-  _addingPointsTime: 5
-  _delayStartAddingPoints: 1
+  _coin: {fileID: 2948108972907690273}
+  _clonesContainer: {fileID: 5178702060838365861}
+  _coinMoveSpeed: 1
+  _distanceBetweenCoins: 0.25
+  _delayStartCutScene: 0.75
+  _addingPointsEase: 0
 --- !u!1 &2490897490139544935
 GameObject:
   m_ObjectHideFlags: 0

@@ -288,11 +288,5 @@ namespace CJ.FindAPair.Modules.CoreGames
             });
             _timerSequence.SetLoops(-1, LoopType.Incremental);
         }
-
-        public void DecreaseScore()
-        {
-            _score--;
-            ScoreСhanged?.Invoke(_score);
-        }
     }
 }
