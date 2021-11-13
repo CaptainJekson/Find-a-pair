@@ -1,7 +1,6 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Utility;
-using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -91,9 +90,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _configAdsText.gameObject.SetActive(false);
         }
 
-        public void DecreaseScores(int scoreValue, int endScoreValue, float decreaseDuration, Ease decreaseEase)
+        public void DecreaseScores(int scoreValue, int endScoreValue, float decreaseDuration)
         {
-            _scoreValueText.ChangeOfNumericValueForText(scoreValue, endScoreValue, decreaseDuration, decreaseEase);
+            _scoreValueText.ChangeOfNumericValueForText(scoreValue, endScoreValue, decreaseDuration);
         }
     }
 }

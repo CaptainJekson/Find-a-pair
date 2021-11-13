@@ -20,12 +20,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _coinsValueText;
 
-        [SerializeField] private GameObject _coin;
-        [SerializeField] private Transform _clonesContainer;
+        [SerializeField] private ItemToTransfer _itemToTransfer;
+        [SerializeField] private Transform _coinsParentTransform;
         [SerializeField] private float _coinMoveSpeed;
         [SerializeField] private float _distanceBetweenCoins;
         [SerializeField] private float _delayStartCutScene;
-        [SerializeField] private Ease _addingPointsEase;
 
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
@@ -35,7 +34,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private Transferer _transferer;
         private GameInterfaceWindow _gameInterfaceWindow;
         private Sequence _rewardCutSceneSequence;
-        private List<GameObject> _coinClones;
+        private List<ItemToTransfer> _spawnedCoins;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
@@ -110,13 +109,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void PlayRewardCutScene()
         {
             _rewardCutSceneSequence = DOTween.Sequence();
-            _coinClones = new List<GameObject>();
+            _spawnedCoins = new List<ItemToTransfer>();
             
             int scores = _gameWatcher.Score;
             int coins = _gameSaver.LoadData().ItemsData.Coins - scores;
 
             for (int i = 0; i < scores; i++)
-                _coinClones.Add(Instantiate(_coin, _clonesContainer));
+                _spawnedCoins.Add(Instantiate(_itemToTransfer, _coinsParentTransform));
 
             _coinsValueText.SetText(coins.ToString());
 
@@ -130,7 +129,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 int decreasedScore = scores - i;
 
                 _rewardCutSceneSequence
-                    .AppendCallback(() => _gameInterfaceWindow.DecreaseScores(scores, --decreasedScore, 0, _addingPointsEase))
+                    .AppendCallback(() => _gameInterfaceWindow.DecreaseScores(scores, --decreasedScore, 0))
                     .AppendCallback(() => TransferCoin(cloneIndex, coinsValue))
                     .AppendInterval(_distanceBetweenCoins);
             }
@@ -138,7 +137,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void TransferCoin(int cloneIndex, int coins)
         {
-            _transferer.TransferItem(_coinClones[cloneIndex], _gameInterfaceWindow.GottenCoinsPosition, _coin.transform.position, _coinMoveSpeed)
+            Sequence transferSequence = DOTween.Sequence();
+
+            transferSequence
+                .AppendCallback(() => _transferer.TransferItem(_spawnedCoins[cloneIndex].transform,
+                    _gameInterfaceWindow.GottenCoinsPosition, _itemToTransfer.transform.position, _coinMoveSpeed))
+                .AppendInterval(_coinMoveSpeed)
                 .AppendCallback(() => _coinsValueText.SetText(coins.ToString()));
         }
         
@@ -147,8 +151,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _rewardCutSceneSequence.Kill();
             _gameWatcher.ResetScore();
 
-            for (int i = 0; i < _coinClones.Count; i++)
-                Destroy(_coinClones[i].gameObject);
+            for (int i = 0; i < _spawnedCoins.Count; i++)
+                Destroy(_spawnedCoins[i].gameObject);
         }
     }
 }
