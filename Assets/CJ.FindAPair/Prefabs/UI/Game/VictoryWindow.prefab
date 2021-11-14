@@ -5818,7 +5818,7 @@ MonoBehaviour:
   _coinsValueText: {fileID: 8926446433802266571}
   _itemToTransfer: {fileID: 4302059407066453273}
   _coinsParentTransform: {fileID: 5178702060838365861}
-  _coinMoveDuration: 1
+  _coinMoveDuration: 0.5
   _distanceBetweenCoins: 0.25
   _delayStartCutScene: 0.75
   _transferCoinEase: 12
