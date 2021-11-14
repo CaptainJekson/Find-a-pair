@@ -33,6 +33,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         private Action _showAdsAction;
         private UIRoot _uiRoot;
 
+        public int Score => _score;
+        
         public event Action<int> ScoreСhanged;
         public event Action<int> LifeСhanged;
         public event Action<int> TimeСhanged;

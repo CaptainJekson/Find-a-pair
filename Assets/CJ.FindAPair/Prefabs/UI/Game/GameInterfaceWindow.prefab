@@ -1081,6 +1081,7 @@ MonoBehaviour:
   _timeValueText: {fileID: 8820511761034090145}
   _scoreValueText: {fileID: 8820511761492961771}
   _configAdsText: {fileID: 3359735343399831578}
+  _gottenCoinsTransform: {fileID: 8820511760538886915}
 --- !u!114 &181578812969115696
 MonoBehaviour:
   m_ObjectHideFlags: 0

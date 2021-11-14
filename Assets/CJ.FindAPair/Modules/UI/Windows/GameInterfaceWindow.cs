@@ -1,5 +1,6 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Utility;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -14,8 +15,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [SerializeField] private TextMeshProUGUI _configAdsText;
 
+        [SerializeField] private Transform _gottenCoinsTransform;
+
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
+        
+        public Vector3 GottenCoinsPosition => _gottenCoinsTransform.transform.position;
 
         [Inject]
         public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator)
@@ -83,6 +88,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void HideConfigAdsText()
         {
             _configAdsText.gameObject.SetActive(false);
+        }
+
+        public void DecreaseScores(int scoreValue, int endScoreValue, float decreaseDuration)
+        {
+            _scoreValueText.ChangeOfNumericValueForText(scoreValue, endScoreValue, decreaseDuration);
         }
     }
 }
