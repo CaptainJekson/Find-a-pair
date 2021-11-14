@@ -5821,7 +5821,7 @@ MonoBehaviour:
   _coinMoveDuration: 1
   _distanceBetweenCoins: 0.25
   _delayStartCutScene: 0.75
-  _transferCoinEase: 1
+  _transferCoinEase: 12
 --- !u!1 &2490897490139544935
 GameObject:
   m_ObjectHideFlags: 0
