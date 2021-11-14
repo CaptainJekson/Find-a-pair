@@ -14,14 +14,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
     {
         [SerializeField] private List<LevelLocation> _levelLocations;
         [SerializeField] private RectTransform _contentPosition;
-        [SerializeField] private Scrollbar _scrollbar;
+        [SerializeField] private ScrollRect _scrollRect;
         
         private LevelConfigCollection _levelConfigCollection;
         private LevelCreator _levelCreator;
         private UIRoot _uiRoot;
         private LevelBackground _levelBackground;
         private ISaver _gameSaver;
-        private GameWatcher _gameWatcher;
         
         private List<LevelButton> _levelButtons;
 
@@ -36,26 +35,23 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _uiRoot = uiRoot;
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
-            _gameWatcher = gameWatcher;
             
             _spawnedLevelLocation = new List<LevelLocation>();
             _levelButtons = new List<LevelButton>();
         }
-        
+
         protected override void Init()
         {
             CreateLocations();
             SetLevelButtons();
             SetLevelData();
-
-            //_gameWatcher.ThereWasAVictory += RefreshLevelButtons;
-            DOTween.To(()=> _scrollbar.value, x=> _scrollbar.value = x, 0.0f, 2.0f);
         }
-        
+
         protected override void OnOpen()
         {
             RefreshLevelButtons();
             _levelBackground.gameObject.SetActive(false);
+            SetStartScrollPosition();
         }
 
         protected override void OnClose()
@@ -97,6 +93,36 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 _levelButtons[i].SetStateButton();
             }
+        }
+        
+        private void SetStartScrollPosition()
+        {
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(0.0f);
+            sequence.AppendCallback(()=>
+            {
+                _scrollRect.verticalNormalizedPosition = 0.0f;
+                MoveToCurrentLevel();
+            });
+        }
+
+        //TODO dev
+        private void PlayNextLevelCutScene()
+        {
+            
+        }
+
+        private void MoveToCurrentLevel(float duration = 0)
+        {
+            var currentLevel = _gameSaver.LoadData().CurrentLevel;
+            var levelIndex = currentLevel - 1;
+            var targetButton = _levelButtons[levelIndex].GetComponent<RectTransform>();
+            
+            Canvas.ForceUpdateCanvases();
+
+            var targetPosition = (Vector2) _scrollRect.transform.InverseTransformPoint(_contentPosition.position)
+                                 - (Vector2) _scrollRect.transform.InverseTransformPoint(targetButton.position);
+            _contentPosition.DOAnchorPos(targetPosition, duration);
         }
     }
 }
