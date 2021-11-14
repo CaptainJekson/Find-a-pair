@@ -22,9 +22,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [SerializeField] private ItemToTransfer _itemToTransfer;
         [SerializeField] private Transform _coinsParentTransform;
-        [SerializeField] private float _coinMoveSpeed;
+        [SerializeField] private float _coinMoveDuration;
         [SerializeField] private float _distanceBetweenCoins;
         [SerializeField] private float _delayStartCutScene;
+        [SerializeField] private Ease _transferCoinEase;
 
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
@@ -111,38 +112,38 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _rewardCutSceneSequence = DOTween.Sequence();
             _spawnedCoins = new List<ItemToTransfer>();
             
-            int scores = _gameWatcher.Score;
-            int coins = _gameSaver.LoadData().ItemsData.Coins - scores;
+            int rewardCoins = _gameWatcher.Score;
+            int currentCoins = _gameSaver.LoadData().ItemsData.Coins - rewardCoins;
 
-            for (int i = 0; i < scores; i++)
+            for (int i = 0; i < rewardCoins; i++)
                 _spawnedCoins.Add(Instantiate(_itemToTransfer, _coinsParentTransform));
 
-            _coinsValueText.SetText(coins.ToString());
+            _coinsValueText.SetText(currentCoins.ToString());
 
             _rewardCutSceneSequence
                 .AppendInterval(_delayStartCutScene);
 
-            for (int i = 0; i < scores; i++)
+            for (int i = 0; i < rewardCoins; i++)
             {
-                int coinsValue = ++coins;
-                int cloneIndex = i;
-                int decreasedScore = scores - i;
+                int coinsValue = ++currentCoins;
+                int iterationNumber = i;
+                int decreasedScoresValue = rewardCoins - i;
 
                 _rewardCutSceneSequence
-                    .AppendCallback(() => _gameInterfaceWindow.DecreaseScores(scores, --decreasedScore, 0))
-                    .AppendCallback(() => TransferCoin(cloneIndex, coinsValue))
+                    .AppendCallback(() => _gameInterfaceWindow.DecreaseScores(decreasedScoresValue, --decreasedScoresValue, 0))
+                    .AppendCallback(() => TransferCoin(iterationNumber, coinsValue))
                     .AppendInterval(_distanceBetweenCoins);
             }
         }
 
-        private void TransferCoin(int cloneIndex, int coins)
+        private void TransferCoin(int spawnedCoinNumber, int coins)
         {
             Sequence transferSequence = DOTween.Sequence();
 
             transferSequence
-                .AppendCallback(() => _transferer.TransferItem(_spawnedCoins[cloneIndex].transform,
-                    _gameInterfaceWindow.GottenCoinsPosition, _itemToTransfer.transform.position, _coinMoveSpeed))
-                .AppendInterval(_coinMoveSpeed)
+                .AppendCallback(() => _transferer.TransferItem(_spawnedCoins[spawnedCoinNumber].transform,
+                    _gameInterfaceWindow.GottenCoinsPosition, _itemToTransfer.transform.position, _coinMoveDuration, _transferCoinEase))
+                .AppendInterval(_coinMoveDuration)
                 .AppendCallback(() => _coinsValueText.SetText(coins.ToString()));
         }
         

@@ -5818,10 +5818,10 @@ MonoBehaviour:
   _coinsValueText: {fileID: 8926446433802266571}
   _itemToTransfer: {fileID: 4302059407066453273}
   _coinsParentTransform: {fileID: 5178702060838365861}
-  _coinMoveSpeed: 1
+  _coinMoveDuration: 1
   _distanceBetweenCoins: 0.25
   _delayStartCutScene: 0.75
-  _addingPointsEase: 0
+  _transferCoinEase: 1
 --- !u!1 &2490897490139544935
 GameObject:
   m_ObjectHideFlags: 0
