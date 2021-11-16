@@ -18,4 +18,5 @@ MonoBehaviour:
   - Start game Button
   - Level Play Button
   - Level Slot Button
-  - ThemeButton
+  - Theme Button
+  - Settings Button
