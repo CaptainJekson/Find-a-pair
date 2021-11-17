@@ -1312,7 +1312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 10.8}
+  m_AnchoredPosition: {x: 0, y: 6.8}
   m_SizeDelta: {x: 131.5873, y: 129.2181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7155104874516493076
@@ -3917,8 +3917,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -45, y: 32}
-  m_SizeDelta: {x: 230.9472, y: 248.6223}
+  m_AnchoredPosition: {x: -42, y: 44}
+  m_SizeDelta: {x: 216.5297, y: 216.9717}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &6558656089795022027
 CanvasRenderer:
@@ -3948,9 +3948,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4867279510161363550, guid: a91b6fe9c9585de47b8ce70184a158b6,
+  m_Sprite: {fileID: -1374994693497126367, guid: a91b6fe9c9585de47b8ce70184a158b6,
     type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4022,7 +4022,7 @@ MonoBehaviour:
   StartAlpha: 1
   AllowMultipleClicks: 1
   ButtonCategory: Main menu
-  ButtonName: Settings Button
+  ButtonName: Start game Button
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
