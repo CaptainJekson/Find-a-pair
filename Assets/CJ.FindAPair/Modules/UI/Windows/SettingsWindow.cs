@@ -21,13 +21,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void Init()
         {
-            _playerId = $"User Id: {_gameSaver.LoadData().UserId.ToString()}";
+            _playerId = $"{_gameSaver.LoadData().UserId.ToString()}";
         }
 
         protected override void OnOpen()
         {
             _copyPlayerIdButton.onClick.AddListener(CopyPlayerId);
-            _playerIdText.SetText(_playerId);
+            _playerIdText.SetText($"User Id: {_playerId}");
         }
 
         protected override void OnClose()
