@@ -277,6 +277,30 @@ MonoBehaviour:
       - "\u0441\u043B\u0443\u0447\u0430\u0439\u043D\u0430\u044F \u0441\u043C\u0435\u043D\u0430"
       Flags: 0000
       Languages_Touch: []
+    - Term: '@FlagSprite'
+      TermType: 5
+      Description: 
+      Languages:
+      - language_english
+      - language_russian
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@English'
+      TermType: 0
+      Description: 
+      Languages:
+      - English
+      - "\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0438\u0439"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@Russian'
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
@@ -298,7 +322,9 @@ MonoBehaviour:
     GoogleInEditorCheckFrequency: 2
     GoogleUpdateSynchronization: 1
     GoogleUpdateDelay: 0
-    Assets: []
+    Assets:
+    - {fileID: 1956863336705350749, guid: a91b6fe9c9585de47b8ce70184a158b6, type: 3}
+    - {fileID: -3290159333234212075, guid: a91b6fe9c9585de47b8ce70184a158b6, type: 3}
     Spreadsheet_LocalFileName: 
     Spreadsheet_LocalCSVSeparator: ','
     Spreadsheet_LocalCSVEncoding: utf-8
