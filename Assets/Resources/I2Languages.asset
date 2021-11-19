@@ -285,22 +285,6 @@ MonoBehaviour:
       - language_russian
       Flags: 0000
       Languages_Touch: []
-    - Term: '@English'
-      TermType: 0
-      Description: 
-      Languages:
-      - English
-      - "\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0438\u0439"
-      Flags: 0000
-      Languages_Touch: []
-    - Term: '@Russian'
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      Flags: 0000
-      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
