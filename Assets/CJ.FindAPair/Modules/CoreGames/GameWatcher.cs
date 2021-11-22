@@ -3,6 +3,7 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -203,9 +204,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             var saveData = _gameSaver.LoadData();
             saveData.ItemsData.Coins += _score;
-            
-            if(saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
+
+            if (saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
+            {
                 saveData.CurrentLevel++;
+                _uiRoot.GetWindow<LevelMapWindow>().StartCutSceneAtOpening = true;
+            }
             
             _gameSaver.SaveData(saveData);
         }

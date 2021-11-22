@@ -21,19 +21,23 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelCreator _levelCreator;
         private UIRoot _uiRoot;
         private LevelBackground _levelBackground;
+        private LevelMarker _levelMarker;
         private ISaver _gameSaver;
         
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
+        
+        public bool StartCutSceneAtOpening { get; set; }
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
-            LevelBackground levelBackground, ISaver gameSaver, GameWatcher gameWatcher)
+            LevelBackground levelBackground, ISaver gameSaver, GameWatcher gameWatcher, LevelMarker levelMarker)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
             _uiRoot = uiRoot;
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
+            _levelMarker = levelMarker;
             
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
@@ -47,6 +51,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnOpen()
         {
             RefreshLevelButtons();
+            
+            if(StartCutSceneAtOpening)
+                PlayNextLevelCutScene();
+            
             _levelBackground.gameObject.SetActive(false);
             SetStartScrollPosition();
         }
@@ -115,10 +123,27 @@ namespace CJ.FindAPair.Modules.UI.Windows
             });
         }
 
-        //TODO dev
         private void PlayNextLevelCutScene()
         {
+            StartCutSceneAtOpening = false;
+            var nextButton = GetCurrentLocationAndButton().Value;
+            nextButton.SetLockState();
+            _uiRoot.OpenWindow<FullBlockerWindow>();
+
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(0.5f);
+            sequence.AppendCallback(() => _levelMarker.MoveToNextLevelButton(OnExplosionOccurred, OnMoveComplete));
+
+            void OnExplosionOccurred()
+            {
+                nextButton.SetUnlockState();
+            }
             
+            void OnMoveComplete()
+            {
+                _uiRoot.CloseWindow<FullBlockerWindow>();
+                nextButton.OpenPreviewWindow();
+            }
         }
 
         private void MoveToCurrentLevel(float duration = 0)

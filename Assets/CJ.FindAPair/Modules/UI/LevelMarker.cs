@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
@@ -47,9 +48,13 @@ namespace CJ.FindAPair.Modules.UI
                 transform.Rotate(0,0, _speedSpeed);
         }
         
-        private void PlayMove(Transform target)
+        public void MoveToNextLevelButton(Action explosionOccurred = null, Action moveComplete = null)
         {
             _isRotate = false;
+            
+            var currentLevelLocationAndButton = _levelMapWindow.GetCurrentLocationAndButton();
+            var target = currentLevelLocationAndButton.Value.transform;
+            
             var sequence = DOTween.Sequence();
             sequence.AppendCallback(() =>
             {
@@ -63,6 +68,7 @@ namespace CJ.FindAPair.Modules.UI
             sequence.AppendCallback(() =>
             {
                 _explosionEffect.Play();
+                explosionOccurred?.Invoke();
                 
                 for (var i = 0; i < _trailEffects.Count; i++)
                 {
@@ -70,7 +76,12 @@ namespace CJ.FindAPair.Modules.UI
                 }
             });
             sequence.AppendInterval(_flyDurationFromCenter);
-            sequence.AppendCallback(() => _isRotate = true);
+            sequence.AppendCallback(() =>
+            {
+                _isRotate = true;
+                transform.SetParent(currentLevelLocationAndButton.Key.transform, true);
+                moveComplete?.Invoke();
+            });
         }
     }
 }

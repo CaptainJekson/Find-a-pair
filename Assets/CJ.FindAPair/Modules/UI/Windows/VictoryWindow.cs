@@ -15,7 +15,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
     public class VictoryWindow : Window
     {
         [SerializeField] private Button _restartButton;
-        [SerializeField] private Button _exitButton;
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _coinsValueText;
@@ -54,7 +53,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _gameWatcher.ThereWasAVictory += Open;
             _restartButton.onClick.AddListener(OnRestartButtonClick);
-            _exitButton.onClick.AddListener(OnExitButtonClick);
             _nextLevelButton.onClick.AddListener(OnNextLevelButtonClick);
         }
     
@@ -77,33 +75,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _levelCreator.RestartLevel();
             Close();
         }
-
-        private void OnExitButtonClick()
-        {
-            _levelCreator.ClearLevel();
-            Close();
-        }
+        
 
         private void OnNextLevelButtonClick()
         {
-            LevelConfig nextLevel;
-            var currentLevelNumber = _levelCreator.LevelConfig.LevelNumber;
-
-            ++currentLevelNumber;
-        
-            try
-            {
-                nextLevel = _levelConfigCollection.Levels.First(item => item.LevelNumber == 
-                                                                        currentLevelNumber);
-            }
-            catch
-            {
-                nextLevel = _levelConfigCollection.Levels.First(item => item.LevelNumber == 1);
-            }
-
             _levelCreator.ClearLevel();
-            _levelCreator.CreateLevel(nextLevel);
-        
             Close();
         }
 
