@@ -5,6 +5,7 @@ using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using I2.Loc;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,10 +25,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private TextMeshProUGUI _defeatNotificationText;
         
         [Header("DEFEAT MESSAGES:")]
-        [SerializeField] private string _timeIsOverMessage;
-        [SerializeField] private string _livesAreOverMessage;
-        [SerializeField] private string _bombDetonatedMessage;
-        [SerializeField] private string _fortuneCardRealisedMessage;
+        [SerializeField] private LocalizedString _timeIsOverMessage;
+        [SerializeField] private LocalizedString _livesAreOverMessage;
+        [SerializeField] private LocalizedString _bombDetonatedMessage;
+        [SerializeField] private LocalizedString _fortuneCardRealisedMessage;
 
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
