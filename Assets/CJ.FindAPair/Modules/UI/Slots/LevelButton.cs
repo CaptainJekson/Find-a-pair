@@ -25,6 +25,9 @@ namespace CJ.FindAPair.Modules.UI.Slots
         
         private Button _button;
         private Image _mainImage;
+        private int _levelNumber;
+
+        public int LevelNumber => _levelConfig.LevelNumber;
 
         private void Awake()
         {

@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
+using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 using UnityEngine;
+using Zenject;
 
 namespace CJ.FindAPair.Modules.UI
 {
@@ -10,13 +13,6 @@ namespace CJ.FindAPair.Modules.UI
         [SerializeField] private List<ParticleSystem> _trailEffects;
         [SerializeField] private Transform _centerPosition;
         [SerializeField] private List<Transform> _trailPositions;
-        
-        //TODO Test
-        [SerializeField] private Transform _testTarget;
-        [SerializeField] private Transform _testTarget1;
-        [SerializeField] private Transform _testTarget2;
-        [SerializeField] private Transform _testTarget3;
-        [SerializeField] private Transform _testTarget4;
 
         [Header("Animation settings")]
         [SerializeField] private float _speedSpeed;
@@ -25,24 +21,24 @@ namespace CJ.FindAPair.Modules.UI
         [SerializeField] private float _flyDurationFromCenter;
 
         private bool _isRotate;
+        private LevelMapWindow _levelMapWindow;
 
-        private void Awake()
+        [Inject]
+        public void Construct(UIRoot uiRoot)
         {
             _isRotate = true;
+            _levelMapWindow = uiRoot.GetWindow<LevelMapWindow>();
             
-            //TODO test
             var sequence = DOTween.Sequence();
-            sequence.AppendInterval(5.0f);
-            sequence.AppendCallback(() => PlayMove(_testTarget));
-            sequence.AppendInterval(5.0f);
-            sequence.AppendCallback(() => PlayMove(_testTarget1));
-            sequence.AppendInterval(5.0f);
-            sequence.AppendCallback(() => PlayMove(_testTarget2));
-            sequence.AppendInterval(5.0f);
-            sequence.AppendCallback(() => PlayMove(_testTarget3));
-            sequence.AppendInterval(5.0f);
-            sequence.AppendCallback(() => PlayMove(_testTarget4));
-            sequence.AppendInterval(5.0f);
+            sequence.AppendInterval(1.0f);
+            sequence.AppendCallback(Init);
+        }
+
+        private void Init()
+        {
+            var currentLocationAndButton = _levelMapWindow.GetCurrentLocationAndButton();
+            transform.SetParent(currentLocationAndButton.Key.transform, false);
+            transform.position = currentLocationAndButton.Value.transform.position;
         }
             
         private void Update()

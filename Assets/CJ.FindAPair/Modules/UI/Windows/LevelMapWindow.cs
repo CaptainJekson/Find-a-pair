@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
@@ -22,9 +23,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelBackground _levelBackground;
         private ISaver _gameSaver;
         
-        private List<LevelButton> _levelButtons;
-
-        private List<LevelLocation> _spawnedLevelLocation;
+        private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
@@ -36,14 +35,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
             
-            _spawnedLevelLocation = new List<LevelLocation>();
-            _levelButtons = new List<LevelButton>();
+            _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
 
         protected override void Init()
         {
             CreateLocations();
-            SetLevelButtons();
             SetLevelData();
         }
 
@@ -58,6 +55,22 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _levelBackground.gameObject.SetActive(true);
         }
+        
+        public KeyValuePair<LevelLocation, LevelButton> GetCurrentLocationAndButton()
+        {
+            var currentLevel = _gameSaver.LoadData().CurrentLevel;
+
+            foreach (var levelLocation in _levelLocationsWithLevelButtons)
+            {
+                foreach (var levelButton in levelLocation.Value)
+                {
+                    if(levelButton.LevelNumber == currentLevel)
+                        return new KeyValuePair<LevelLocation, LevelButton>(levelLocation.Key, levelButton);
+                }
+            }
+            
+            throw new Exception("[There is no button with this current level]");
+        }
 
         private void CreateLocations()
         {
@@ -66,32 +79,28 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 var spawnedLocation = Instantiate(location, _contentPosition);
                 spawnedLocation.transform.SetParent(_contentPosition, false);
                 spawnedLocation.transform.SetAsFirstSibling();
-                _spawnedLevelLocation.Add(spawnedLocation);
-            }
-        }
-
-        private void SetLevelButtons()
-        {
-            foreach (var location in _spawnedLevelLocation)
-            {
-                _levelButtons.AddRange(location.LevelButtons);
+                _levelLocationsWithLevelButtons.Add(spawnedLocation, spawnedLocation.LevelButtons);
             }
         }
 
         private void SetLevelData()
         {
+            var levelButtons = GetAllButtons();
+            
             for (var i = 0; i < _levelConfigCollection.Levels.Count; i++)
             {
-                _levelButtons[i].SetData(_levelConfigCollection.Levels[i], _levelCreator, _uiRoot, _gameSaver);
-                _levelButtons[i].SetStateButton();
+                levelButtons[i].SetData(_levelConfigCollection.Levels[i], _levelCreator, _uiRoot, _gameSaver);
+                levelButtons[i].SetStateButton();
             }
         }
 
         private void RefreshLevelButtons()
         {
+            var levelButtons = GetAllButtons();
+            
             for (var i = 0; i < _levelConfigCollection.Levels.Count; i++)
             {
-                _levelButtons[i].SetStateButton();
+                levelButtons[i].SetStateButton();
             }
         }
         
@@ -116,13 +125,26 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             var currentLevel = _gameSaver.LoadData().CurrentLevel;
             var levelIndex = currentLevel - 1;
-            var targetButton = _levelButtons[levelIndex].GetComponent<RectTransform>();
+            var levelButtons = GetAllButtons();
+            var targetButton = levelButtons[levelIndex].GetComponent<RectTransform>();
             
             Canvas.ForceUpdateCanvases();
 
             var targetPosition = (Vector2) _scrollRect.transform.InverseTransformPoint(_contentPosition.position)
                                  - (Vector2) _scrollRect.transform.InverseTransformPoint(targetButton.position);
             _contentPosition.DOAnchorPos(targetPosition, duration);
+        }
+        
+        private List<LevelButton> GetAllButtons()
+        {
+            var levelButtons = new List<LevelButton>();
+
+            foreach (var levelLocationWithLevelButtons in _levelLocationsWithLevelButtons)
+            {
+                levelButtons.AddRange(levelLocationWithLevelButtons.Value);
+            }
+
+            return levelButtons;
         }
     }
 }
