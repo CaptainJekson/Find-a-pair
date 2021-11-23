@@ -14722,7 +14722,7 @@ MonoBehaviour:
   - {fileID: 3329574801986816900}
   - {fileID: 2195272337909491683}
   - {fileID: 2430700673240339981}
-  _speedSpeed: 0.1
+  _rotateSpeed: 1
   _flyDurationToCenter: 1
   _flyDurationToTarget: 1
   _flyDurationFromCenter: 1

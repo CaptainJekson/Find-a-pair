@@ -16,7 +16,7 @@ namespace CJ.FindAPair.Modules.UI
         [SerializeField] private List<Transform> _trailPositions;
 
         [Header("Animation settings")]
-        [SerializeField] private float _speedSpeed;
+        [SerializeField] private float _rotateSpeed;
         [SerializeField] private float _flyDurationToCenter;
         [SerializeField] private float _flyDurationToTarget;
         [SerializeField] private float _flyDurationFromCenter;
@@ -45,7 +45,7 @@ namespace CJ.FindAPair.Modules.UI
         private void Update()
         {
             if(_isRotate)
-                transform.Rotate(0,0, _speedSpeed);
+                transform.Rotate(0,0, _rotateSpeed);
         }
         
         public void MoveToNextLevelButton(Action explosionOccurred = null, Action moveComplete = null)
