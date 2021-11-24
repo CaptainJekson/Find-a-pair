@@ -16,11 +16,12 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
         private SpecialCardHandler _specialCardHandler;
         private LevelBackground _levelBackground;
         private UIRoot _uiRoot;
+        private EnergyHandler _energyHandler;
 
         [Inject]
         public void ConstructCoreGame(LevelCreator levelCreator, RayCaster rayCaster, CardComparator cardComparator, 
             BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,LevelBackground levelBackground, 
-            UIRoot uiRoot)
+            UIRoot uiRoot, EnergyHandler energyHandler)
         {
             _levelBackground = levelBackground;
             _levelCreator = levelCreator;
@@ -32,6 +33,12 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             _boosterHandler.transform.SetParent(transform);
             _specialCardHandler = specialCardHandler;
             _specialCardHandler.transform.SetParent(transform);
+            _energyHandler = energyHandler;
+        }
+
+        private void OnApplicationQuit()
+        {
+            _energyHandler.DecreaseScore();
         }
 
         private void SetCanvasPosition(Transform transform)

@@ -54,9 +54,11 @@ public class ItemsData
     public int DetectorBooster;
     public int MagnetBooster;
     public int SapperBooster;
-    public int Energy;
     public int Coins;
     public int Diamond;
+    public int Energy;
+    public int MaxEnergyValue;
+    public List<string> EnergyCooldowEndTimePoints;
 }
 
 [Serializable]

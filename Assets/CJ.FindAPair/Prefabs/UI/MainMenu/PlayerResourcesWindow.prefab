@@ -1490,6 +1490,7 @@ MonoBehaviour:
   _durationCounter: 1
   _goldValueText: {fileID: 3624138990820828250}
   _diamondValueText: {fileID: 3604253678635339675}
+  _energyValueText: {fileID: 905112083388855853}
 --- !u!114 &1257197913736984558
 MonoBehaviour:
   m_ObjectHideFlags: 0

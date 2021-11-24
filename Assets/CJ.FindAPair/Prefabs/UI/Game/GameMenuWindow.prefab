@@ -2741,7 +2741,7 @@ MonoBehaviour:
     LoadSelectedPresetAtRuntime: 0
     PresetCategory: 
     PresetName: 
-  TargetLabel: 1
+  TargetLabel: 0
   TextLabel: {fileID: 0}
 --- !u!1 &2380123587285169143
 GameObject:
@@ -5695,7 +5695,7 @@ MonoBehaviour:
     LoadSelectedPresetAtRuntime: 0
     PresetCategory: 
     PresetName: 
-  TargetLabel: 1
+  TargetLabel: 0
   TextLabel: {fileID: 0}
 --- !u!1 &8669773451678928999
 GameObject:
@@ -8110,7 +8110,7 @@ MonoBehaviour:
     LoadSelectedPresetAtRuntime: 0
     PresetCategory: 
     PresetName: 
-  TargetLabel: 1
+  TargetLabel: 0
   TextLabel: {fileID: 0}
 --- !u!1 &8669773452464732142
 GameObject:
@@ -8704,6 +8704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 0}
   _currentLevelText: {fileID: 4180797975374626786}
+  _exitButton: {fileID: 8669773451339593106}
+  _restartButton: {fileID: 8669773451678928994}
 --- !u!1 &8669773453316294571
 GameObject:
   m_ObjectHideFlags: 0

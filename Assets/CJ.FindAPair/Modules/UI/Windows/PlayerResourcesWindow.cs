@@ -1,6 +1,5 @@
 using CJ.FindAPair.Modules.Service.Store;
 using CJ.FindAPair.Utility;
-using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -13,12 +12,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         
         [SerializeField] private TextMeshProUGUI _goldValueText;
         [SerializeField] private TextMeshProUGUI _diamondValueText;
+        [SerializeField] private TextMeshProUGUI _energyValueText;
 
         private ISaver _gameSaver;
         private IStoreDriver _storeDriver;
 
         private int _coinValue;
         private int _diamondValue;
+        private int _energyValue;
 
         [Inject]
         public void Construct(ISaver gameSaver, IStoreDriver storeDriver)
@@ -38,22 +39,27 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _storeDriver.PurchaseCompleted -= SmoothRefreshValues;
         }
-        
+
         private void SetValues()
         {
             var saveData = _gameSaver.LoadData();
+            
             _coinValue = saveData.ItemsData.Coins;
             _diamondValue = saveData.ItemsData.Diamond;
+            _energyValue = saveData.ItemsData.Energy;
 
             _goldValueText.SetText(_coinValue.ToString());
             _diamondValueText.SetText(_diamondValue.ToString());
+            _energyValueText.SetText(_energyValue.ToString());
         }
         
         private void SmoothRefreshValues()
         {
             var saveData = _gameSaver.LoadData();
+            
             var newCoinValue = saveData.ItemsData.Coins;
             var newDiamondValue = saveData.ItemsData.Diamond;
+            
             _goldValueText.ChangeOfNumericValueForText(_coinValue, newCoinValue, _durationCounter);
             _diamondValueText.ChangeOfNumericValueForText(_diamondValue, newDiamondValue, _durationCounter);
         }
