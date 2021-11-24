@@ -3,6 +3,7 @@ using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Utility;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Windows
@@ -12,9 +13,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private TextMeshProUGUI _lifeValueText;
         [SerializeField] private TextMeshProUGUI _timeValueText;
         [SerializeField] private TextMeshProUGUI _scoreValueText;
-
         [SerializeField] private TextMeshProUGUI _configAdsText;
-
+        [SerializeField] private Image _lockImage;
         [SerializeField] private Transform _gottenCoinsTransform;
 
         private GameWatcher _gameWatcher;
@@ -39,6 +39,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ThereWasADefeat += HideConfigAdsText;
             SetData();
             HideConfigAdsText();
+            
+            _lockImage.gameObject.SetActive(!_gameWatcher.IsIncomeLevel());
         }
 
         protected override void OnClose()

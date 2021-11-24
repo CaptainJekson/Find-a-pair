@@ -126,6 +126,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void PlayNextLevelCutScene()
         {
             StartCutSceneAtOpening = false;
+            
+            if(_gameSaver.LoadData().CurrentLevel >= _levelConfigCollection.Levels.Count + 1)
+                return;
+            
             var nextButton = GetCurrentLocationAndButton().Value;
             nextButton.SetLockState();
             _uiRoot.OpenWindow<FullBlockerWindow>();

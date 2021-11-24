@@ -14,6 +14,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
     {
         [SerializeField] private TextMeshProUGUI _levelNumberText;
         [SerializeField] private Image _lockIcon;
+        [SerializeField] private Image _coinIcon;
         [SerializeField] private Sprite _levelStandardSprite;
         [SerializeField] private Sprite _levelHardSprite;
         [SerializeField] private Sprite _levelLockSprite;
@@ -80,6 +81,8 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             var currentLevel = _gameSaver.LoadData().CurrentLevel;
 
+            SetIncomeLevel();
+
             if (currentLevel >= _levelConfig.LevelNumber || _levelConfig.LevelNumber == 1)
             {
                 _levelNumberText.text = _levelConfig.LevelNumber.ToString();
@@ -99,6 +102,19 @@ namespace CJ.FindAPair.Modules.UI.Slots
             _levelNumberText.gameObject.SetActive(isOpen);
             _lockIcon.gameObject.SetActive(!isOpen);
             _button.interactable = isOpen;
+        }
+
+        private void SetIncomeLevel()
+        {
+            var completedLevels = _gameSaver.LoadData().CompletedLevels;
+
+            foreach (var completedLevel in completedLevels)
+            {
+                if (completedLevel == _levelConfig.LevelNumber)
+                {
+                    _coinIcon.gameObject.SetActive(false);
+                }
+            }
         }
     }
 }

@@ -29,7 +29,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
-        private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;
         private Transferer _transferer;
         private GameInterfaceWindow _gameInterfaceWindow;
@@ -37,13 +36,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private List<ItemToTransfer> _spawnedCoins;
 
         [Inject]
-        public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            LevelConfigCollection levelConfigCollection, ISaver gameSaver, Transferer transferer)
+        public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher,ISaver gameSaver, 
+            Transferer transferer)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
-            _levelConfigCollection = levelConfigCollection;
             _gameSaver = gameSaver;
             _transferer = transferer;
             _gameInterfaceWindow = _uiRoot.GetWindow<GameInterfaceWindow>();
