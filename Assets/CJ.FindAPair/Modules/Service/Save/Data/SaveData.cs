@@ -6,12 +6,14 @@ public class SaveData
 {
     public int UserId;
     public int CurrentLevel = 1;
+    public List<int> CompletedLevels;
     public ItemsData ItemsData;
     public ThemesData ThemesData;
     public AdsData AdsData;
     
     public SaveData()
     {
+        CompletedLevels = new List<int>();
         ItemsData = new ItemsData();
         ThemesData = new ThemesData();
         AdsData = new AdsData();
