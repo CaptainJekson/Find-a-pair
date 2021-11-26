@@ -12,19 +12,19 @@ public class GameMenuWindow : Window
     [SerializeField] private Button _restartButton;
     
     private LevelCreator _levelCreator;
-    private EnergyHandler _energyHandler;
+    private EnergyCooldownHandler _energyCooldownHandler;
     
     [Inject]
-    public void Construct(LevelCreator levelCreator, EnergyHandler energyHandler)
+    public void Construct(LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler)
     {
         _levelCreator = levelCreator;
-        _energyHandler = energyHandler;
+        _energyCooldownHandler = energyCooldownHandler;
     }
 
     protected override void OnOpen()
     {
-        _exitButton.onClick.AddListener(_energyHandler.DecreaseScore);
-        _restartButton.onClick.AddListener(_energyHandler.DecreaseScore);
+        _exitButton.onClick.AddListener(_energyCooldownHandler.TryDecreaseScore);
+        _restartButton.onClick.AddListener(_energyCooldownHandler.TryDecreaseScore);
         
         Time.timeScale = 0.0f;
         _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
@@ -32,8 +32,8 @@ public class GameMenuWindow : Window
 
     protected override void OnClose()
     {
-        _exitButton.onClick.RemoveListener(_energyHandler.DecreaseScore);
-        _restartButton.onClick.RemoveListener(_energyHandler.DecreaseScore);
+        _exitButton.onClick.RemoveListener(_energyCooldownHandler.TryDecreaseScore);
+        _restartButton.onClick.RemoveListener(_energyCooldownHandler.TryDecreaseScore);
         
         Time.timeScale = 1.0f;
     }

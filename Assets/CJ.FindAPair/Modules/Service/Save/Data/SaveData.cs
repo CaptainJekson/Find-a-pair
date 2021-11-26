@@ -58,7 +58,14 @@ public class ItemsData
     public int Diamond;
     public int Energy;
     public int MaxEnergyValue;
-    public List<string> EnergyCooldowEndTimePoints;
+    public List<string> EnergyCooldowTimePoints;
+
+    public ItemsData()
+    {
+        MaxEnergyValue = 5;
+        Energy = MaxEnergyValue;
+        EnergyCooldowTimePoints = new List<string>();
+    }
 }
 
 [Serializable]

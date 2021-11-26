@@ -39,14 +39,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
-        private EnergyHandler _energyHandler;
+        private EnergyCooldownHandler _energyCooldownHandler;
 
         private DateTime _endCooldownForContinueGame = DateTime.Now;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameSettingsConfig gameSettingsConfig,
             GameWatcher gameWatcher, SpecialCardHandler specialCardHandler, ISaver gameSaver, IAdsDriver adsDriver, 
-            UnityAdsConfig unityAdsConfig, EnergyHandler energyHandler)
+            UnityAdsConfig unityAdsConfig, EnergyCooldownHandler energyCooldownHandler)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
@@ -57,7 +57,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _unityAdsConfig = unityAdsConfig;
             _bombCard = specialCardHandler.GetComponentInChildren<BombCard>();
             _fortuneCard = specialCardHandler.GetComponentInChildren<FortuneCard>();
-            _energyHandler = energyHandler;
+            _energyCooldownHandler = energyCooldownHandler;
         }
 
         private void Update()
@@ -100,7 +100,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 _endCooldownForContinueGame = parseResult;
             }
             
-            _energyHandler.DecreaseScore();
+            _energyCooldownHandler.TryDecreaseScore();
         }
 
         protected override void OnClose()

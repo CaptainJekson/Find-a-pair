@@ -75,8 +75,18 @@ namespace CJ.FindAPair.Modules.UI.Slots
 
         private void OpenPreviewWindow()
         {
-            _previewLevelWindow.SetData(_levelConfig, _levelCreator);
-            _previewLevelWindow.Open();
+            var saveData = _gameSaver.LoadData();
+
+            if (saveData.ItemsData.Energy <= 0)
+            {
+                _uiRoot.OpenWindow<EnergyBoostOfferWindow>();
+            }
+            else
+            {
+                _previewLevelWindow.SetData(_levelConfig, _levelCreator);
+                _previewLevelWindow.Open();
+            }
+            
             _uiRoot.OpenWindow<BlockWindow>();
         }
     }
