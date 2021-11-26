@@ -7,11 +7,14 @@ public class EnergyCooldownHandler
     private ISaver _gameSaver;
     private GameSettingsConfig _gameSettingsConfig;
 
+    private DateTime _cooldownTime;
+    
     [Inject]
     private void Construct(ISaver gameSaver, GameSettingsConfig gameSettingsConfig)
     {
         _gameSaver = gameSaver;
         _gameSettingsConfig = gameSettingsConfig;
+        _cooldownTime = new DateTime();
     }
 
     public void TryDecreaseScore()
@@ -22,21 +25,9 @@ public class EnergyCooldownHandler
         {
             saveData.ItemsData.Energy--;
 
-            if (saveData.ItemsData.EnergyCooldowTimePoints.Count <= 0)
-            {
-                saveData.ItemsData.EnergyCooldowTimePoints
-                    .Add(DateTime.Now.AddSeconds(_gameSettingsConfig.EnergyScoreCooldownInSeconds).ToString());
-            }
-            else
-            {
-                var lastPointTimeInterval = DateTime.Parse(_gameSaver.LoadData().ItemsData
-                    .EnergyCooldowTimePoints[saveData.ItemsData.EnergyCooldowTimePoints.Count - 1]) - DateTime.Now;
-                
-                saveData.ItemsData.EnergyCooldowTimePoints
-                    .Add(DateTime.Now.AddSeconds(_gameSettingsConfig.EnergyScoreCooldownInSeconds)
-                        .Add(lastPointTimeInterval).ToString());
-            }
-
+            saveData.ItemsData.EnergyCooldownTime = DateTime.Now
+                .AddSeconds(_gameSettingsConfig.EnergyScoreCooldownInSeconds).ToString();
+            
             _gameSaver.SaveData(saveData);
         }
     }
@@ -45,18 +36,18 @@ public class EnergyCooldownHandler
     {
         var saveData = _gameSaver.LoadData();
 
-        if (DateTime.Now >= DateTime.Parse(saveData.ItemsData.EnergyCooldowTimePoints[0]))
+        if (DateTime.Parse(saveData.ItemsData.EnergyCooldownTime) <= DateTime.Now)
         {
             saveData.ItemsData.Energy++;
-            saveData.ItemsData.EnergyCooldowTimePoints.RemoveAt(0);
-            
+
             _gameSaver.SaveData(saveData);
         }
     }
 
     public string ShowEnergyCooldownTimeInterval()
     {
-        return (DateTime.Parse(_gameSaver.LoadData().ItemsData.EnergyCooldowTimePoints[0]) - DateTime.Now)
-            .ToString(@"mm\:ss");
+        var saveData = _gameSaver.LoadData();
+        
+        return (DateTime.Parse(saveData.ItemsData.EnergyCooldownTime) - DateTime.Now).ToString(@"mm\:ss");
     }
 }

@@ -56,16 +56,8 @@ public class ItemsData
     public int SapperBooster;
     public int Coins;
     public int Diamond;
-    public int Energy;
-    public int MaxEnergyValue;
-    public List<string> EnergyCooldowTimePoints;
-
-    public ItemsData()
-    {
-        MaxEnergyValue = 5;
-        Energy = MaxEnergyValue;
-        EnergyCooldowTimePoints = new List<string>();
-    }
+    public int Energy = 5;
+    public string EnergyCooldownTime;
 }
 
 [Serializable]

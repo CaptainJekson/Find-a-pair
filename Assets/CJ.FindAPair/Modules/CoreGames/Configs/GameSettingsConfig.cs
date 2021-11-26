@@ -17,7 +17,8 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         [SerializeField] private int _additionalLife;
         [SerializeField] private int _cooldownAdsContinueGameInSecond;
         
-        [SerializeField] private int energyScoreCooldownInSeconds;
+        [SerializeField] private int _energyScoreCooldownInSeconds;
+        [SerializeField] private int _maxEnergyValue;
 
         [SerializeField] private List<int> _scoreCombo;
         
@@ -29,7 +30,8 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         public int AdditionalTimeInSecond => _additionalTimeInSecond;
         public int AdditionalLife => _additionalLife;
         public int CooldownAdsContinueGameInSecond => _cooldownAdsContinueGameInSecond;
-        public int EnergyScoreCooldownInSeconds => energyScoreCooldownInSeconds;
+        public int EnergyScoreCooldownInSeconds => _energyScoreCooldownInSeconds;
+        public int MaxEnergyValue => _maxEnergyValue;
         public List<int> ScoreCombo => _scoreCombo;
     }
 }

@@ -38,8 +38,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _levelCreator.RestartLevel();
             _energyCooldownHandler.TryDecreaseScore();
-            _uiRoot.OpenWindow<GameInterfaceWindow>();
-            Close();
         }
     }
 }

@@ -21,16 +21,19 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private IStoreDriver _storeDriver;
         private EnergyCooldownHandler _energyCooldownHandler;
+        private GameSettingsConfig _gameSettingsConfig;
 
         private int _coinValue;
         private int _diamondValue;
 
         [Inject]
-        public void Construct(ISaver gameSaver, IStoreDriver storeDriver, EnergyCooldownHandler energyCooldownHandler)
+        public void Construct(ISaver gameSaver, IStoreDriver storeDriver, EnergyCooldownHandler energyCooldownHandler, 
+            GameSettingsConfig gameSettingsConfig)
         {
             _gameSaver = gameSaver;
             _storeDriver = storeDriver;
             _energyCooldownHandler = energyCooldownHandler;
+            _gameSettingsConfig = gameSettingsConfig;
         }
 
         protected override void OnOpen()
@@ -76,12 +79,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             var saveData = _gameSaver.LoadData();
 
-            if (saveData.ItemsData.Energy < saveData.ItemsData.MaxEnergyValue)
+            if (saveData.ItemsData.Energy < _gameSettingsConfig.MaxEnergyValue)
             {
                 _energyCooldownTimerText.SetText(_energyCooldownHandler.ShowEnergyCooldownTimeInterval());
                 _energyCooldownHandler.TryIncreaseScore();
             }
-            else
+            else if(saveData.ItemsData.Energy >= _gameSettingsConfig.MaxEnergyValue)
             {
                 _energyCooldownTimerText.SetText("max");
             }
