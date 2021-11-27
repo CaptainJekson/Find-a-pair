@@ -21,7 +21,7 @@ public class GameMenuWindow : Window
 
     protected override void OnOpen()
     {
-        _exitButton.onClick.AddListener(_energyCooldownHandler.TryDecreaseScore);
+        _exitButton.onClick.AddListener(_energyCooldownHandler.DecreaseScore);
 
         Time.timeScale = 0.0f;
         _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
@@ -29,7 +29,7 @@ public class GameMenuWindow : Window
 
     protected override void OnClose()
     {
-        _exitButton.onClick.RemoveListener(_energyCooldownHandler.TryDecreaseScore);
+        _exitButton.onClick.RemoveListener(_energyCooldownHandler.DecreaseScore);
 
         Time.timeScale = 1.0f;
     }

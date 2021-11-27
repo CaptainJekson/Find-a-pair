@@ -100,7 +100,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 _endCooldownForContinueGame = parseResult;
             }
             
-            _energyCooldownHandler.TryDecreaseScore();
+            _energyCooldownHandler.DecreaseScore();
         }
 
         protected override void OnClose()

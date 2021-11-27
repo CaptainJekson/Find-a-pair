@@ -36,11 +36,6 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             _energyCooldownHandler = energyCooldownHandler;
         }
 
-        private void OnApplicationQuit()
-        {
-            _energyCooldownHandler.TryDecreaseScore();
-        }
-
         private void SetCanvasPosition(Transform transform)
         {
             transform.position = _tableCanvas.position;

@@ -7,27 +7,26 @@ public class EnergyCooldownHandler
     private ISaver _gameSaver;
     private GameSettingsConfig _gameSettingsConfig;
 
-    private DateTime _cooldownTime;
-    
     [Inject]
     private void Construct(ISaver gameSaver, GameSettingsConfig gameSettingsConfig)
     {
         _gameSaver = gameSaver;
         _gameSettingsConfig = gameSettingsConfig;
-        _cooldownTime = new DateTime();
     }
 
-    public void TryDecreaseScore()
+    public void DecreaseScore()
     {
         var saveData = _gameSaver.LoadData();
 
         if (saveData.ItemsData.Energy > 0)
         {
-            saveData.ItemsData.Energy--;
+            if (saveData.ItemsData.Energy >= _gameSettingsConfig.MaxEnergyValue)
+            {
+                saveData.ItemsData.EnergyCooldownTime = DateTime.Now
+                    .AddSeconds(_gameSettingsConfig.EnergyScoreCooldownInSeconds).ToString();
+            }
 
-            saveData.ItemsData.EnergyCooldownTime = DateTime.Now
-                .AddSeconds(_gameSettingsConfig.EnergyScoreCooldownInSeconds).ToString();
-            
+            saveData.ItemsData.Energy--;
             _gameSaver.SaveData(saveData);
         }
     }
@@ -35,11 +34,15 @@ public class EnergyCooldownHandler
     public void TryIncreaseScore()
     {
         var saveData = _gameSaver.LoadData();
+        var lastCooldownEnd = DateTime.Parse(saveData.ItemsData.EnergyCooldownTime);
 
-        if (DateTime.Parse(saveData.ItemsData.EnergyCooldownTime) <= DateTime.Now)
+        if (lastCooldownEnd <= DateTime.Now)
         {
             saveData.ItemsData.Energy++;
-
+            
+            saveData.ItemsData.EnergyCooldownTime = lastCooldownEnd
+                .AddSeconds(_gameSettingsConfig.EnergyScoreCooldownInSeconds).ToString();
+            
             _gameSaver.SaveData(saveData);
         }
     }

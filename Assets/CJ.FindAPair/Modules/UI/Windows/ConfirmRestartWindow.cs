@@ -37,7 +37,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void OnRestartButtonClick()
         {
             _levelCreator.RestartLevel();
-            _energyCooldownHandler.TryDecreaseScore();
+            _energyCooldownHandler.DecreaseScore();
         }
     }
 }

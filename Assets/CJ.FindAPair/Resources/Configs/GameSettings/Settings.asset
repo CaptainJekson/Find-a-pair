@@ -20,6 +20,6 @@ MonoBehaviour:
   _additionalTimeInSecond: 30
   _additionalLife: 5
   _cooldownAdsContinueGameInSecond: 600
-  _energyScoreCooldownInSeconds: 60
+  _energyScoreCooldownInSeconds: 1200
   _maxEnergyValue: 5
   _scoreCombo: 020000000400000006000000
