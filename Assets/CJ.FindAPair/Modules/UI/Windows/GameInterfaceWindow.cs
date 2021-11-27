@@ -19,14 +19,16 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
+        private EnergyCooldownHandler _energyCooldownHandler;
         
         public Vector3 GottenCoinsPosition => _gottenCoinsTransform.transform.position;
 
         [Inject]
-        public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator)
+        public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler)
         {
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
+            _energyCooldownHandler = energyCooldownHandler;
         }
 
         protected override void OnOpen()
@@ -50,7 +52,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ThereWasAVictory -= HideConfigAdsText;
             _gameWatcher.ThereWasADefeat -= HideConfigAdsText;
         }
-    
+
+        private void OnApplicationQuit()
+        {
+            _energyCooldownHandler.DecreaseScore();
+        }
+
         private void SetData()
         {
             SetLifeValue(_levelCreator.LevelConfig.Tries);
