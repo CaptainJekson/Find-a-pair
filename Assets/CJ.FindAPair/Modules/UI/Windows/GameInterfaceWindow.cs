@@ -40,7 +40,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             SetData();
             HideConfigAdsText();
             
-            _lockImage.gameObject.SetActive(!_gameWatcher.IsIncomeLevel());
+            SetIncomeLockImage();
         }
 
         protected override void OnClose()
@@ -51,6 +51,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ConfirmShowAds -= ShowConfigAdsText;
             _gameWatcher.ThereWasAVictory -= HideConfigAdsText;
             _gameWatcher.ThereWasADefeat -= HideConfigAdsText;
+        }
+        
+        public void SetIncomeLockImage()
+        {
+            _lockImage.gameObject.SetActive(!_gameWatcher.IsIncomeLevel());
         }
     
         private void SetData()

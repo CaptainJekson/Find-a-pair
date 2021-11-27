@@ -98,7 +98,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             for (var i = 0; i < _levelConfigCollection.Levels.Count; i++)
             {
                 levelButtons[i].SetData(_levelConfigCollection.Levels[i], _levelCreator, _uiRoot, _gameSaver);
-                levelButtons[i].SetStateButton();
             }
         }
 

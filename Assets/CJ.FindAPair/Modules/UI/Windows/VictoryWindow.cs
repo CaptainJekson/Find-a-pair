@@ -71,6 +71,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void OnRestartButtonClick()
         {
             _levelCreator.RestartLevel();
+            _uiRoot.GetWindow<GameInterfaceWindow>().SetIncomeLockImage();
             Close();
         }
         

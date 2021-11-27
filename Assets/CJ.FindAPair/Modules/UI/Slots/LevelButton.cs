@@ -112,7 +112,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
             {
                 if (completedLevel == _levelConfig.LevelNumber)
                 {
-                    _coinIcon.gameObject.SetActive(false);
+                    _coinIcon.gameObject.SetActive(false);    
                 }
             }
         }
