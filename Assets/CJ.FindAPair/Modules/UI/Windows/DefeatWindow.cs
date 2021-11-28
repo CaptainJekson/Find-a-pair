@@ -110,8 +110,15 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void OnRestartButtonClick()
         {
-            _levelCreator.RestartLevel();
-            Close();
+            if (_gameSaver.LoadData().ItemsData.Energy <= 0)
+            {
+                _uiRoot.OpenWindow<EnergyBoostOfferWindow>();
+            }
+            else
+            {
+                _levelCreator.RestartLevel();
+                Close();
+            }
         }
 
         private void OnExitButtonClick()
