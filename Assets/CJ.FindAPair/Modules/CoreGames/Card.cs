@@ -83,6 +83,18 @@ namespace CJ.FindAPair.Modules.CoreGames
             _collider.enabled = false;
         }
 
+        public void DisableInteractable()
+        {
+            if(IsEmpty == false)
+                _collider.enabled = false;
+        }
+        
+        public void EnableInteractable()
+        {
+            if(IsEmpty == false)
+                _collider.enabled = true;
+        }
+
         public void SetFace(Sprite face)
         {
             _faceSprite = face;

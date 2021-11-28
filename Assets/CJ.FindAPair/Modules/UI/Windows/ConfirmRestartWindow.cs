@@ -10,21 +10,29 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _restartButton;
 
         private LevelCreator _levelCreator;
+        private EnergyCooldownHandler _energyCooldownHandler;
 
         [Inject]
-        public void Construct(LevelCreator levelCreator)
+        public void Construct(LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler)
         {
             _levelCreator = levelCreator;
+            _energyCooldownHandler = energyCooldownHandler;
         }
 
-        protected override void Init()
+        protected override void OnOpen()
         {
             _restartButton.onClick.AddListener(OnRestartButtonClick);
+        }
+
+        protected override void OnClose()
+        {
+            _restartButton.onClick.RemoveListener(OnRestartButtonClick);
         }
 
         private void OnRestartButtonClick()
         {
             _levelCreator.RestartLevel();
+            _energyCooldownHandler.DecreaseScore();
         }
     }
 }

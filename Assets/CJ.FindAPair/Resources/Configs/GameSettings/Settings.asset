@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e868af9c8d0e8c4da5ebb1e30127913, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  _startTimeShow: 5
   _animationSpeedCard: 0.5
   _delayTimeHide: 0.7
   _pointsTwoCards: 1
@@ -21,4 +20,6 @@ MonoBehaviour:
   _additionalTimeInSecond: 30
   _additionalLife: 5
   _cooldownAdsContinueGameInSecond: 600
+  _energyScoreCooldownInSeconds: 1200
+  _maxEnergyValue: 5
   _scoreCombo: 020000000400000006000000

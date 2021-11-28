@@ -623,11 +623,12 @@ MonoBehaviour:
   - {fileID: -1483790678511949648}
   - {fileID: -2470069717319066396}
   - {fileID: -1334034050838912396}
+  - {fileID: 6541873973919356147}
   m_isSubGraph: 0
   m_version: 1
   m_description: 
   m_id: b9aac61b-67c3-4c22-99b1-ee85de879569
-  m_lastModified: 132814716242795498
+  m_lastModified: 132826009744230598
 --- !u!114 &1825851665624866009
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1247,6 +1248,108 @@ MonoBehaviour:
   - Category: LevelUI
     InstantAction: 0
     Name: Confirm Restart Window
+--- !u!114 &6541873973919356147
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840a439e06374673a9115ed02deb5a54, type: 3}
+  m_Name: UINode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: ba587fa1-5875-436e-ab62-9b9b3b737edb
+      m_inputNodeId: a949f636-03a5-4872-b8e1-9dc589b93eac
+      m_inputSocketId: 7b9a4216-67fb-4214-b08b-1b8462e8d177
+      m_outputNodeId: bacab9a3-cdf4-41d3-b13e-7825aeb398b0
+      m_outputSocketId: e74defea-e388-4db9-ba6d-c49d5c9e31eb
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 7b9a4216-67fb-4214-b08b-1b8462e8d177
+    m_nodeId: a949f636-03a5-4872-b8e1-9dc589b93eac
+    m_socketName: InputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: a2c5a352-57ac-43cb-9489-da8eadf6f94f
+      m_inputNodeId: bacab9a3-cdf4-41d3-b13e-7825aeb398b0
+      m_inputSocketId: d27d8927-bb08-4f65-a754-40bd4a50475a
+      m_outputNodeId: a949f636-03a5-4872-b8e1-9dc589b93eac
+      m_outputSocketId: c5cf9f2f-e0a2-4f22-b286-3af5afab73a6
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: c5cf9f2f-e0a2-4f22-b286-3af5afab73a6
+    m_nodeId: a949f636-03a5-4872-b8e1-9dc589b93eac
+    m_socketName: OutputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 128
+  m_width: 216
+  m_x: 696
+  m_y: 336
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: b9aac61b-67c3-4c22-99b1-ee85de879569
+  m_id: a949f636-03a5-4872-b8e1-9dc589b93eac
+  m_name: Energy Boost Offer
+  m_notes: 
+  m_onEnterShowViews:
+  - Category: Main menu
+    InstantAction: 0
+    Name: EnergyBoostOfferWindow
+  m_onEnterHideViews:
+  - Category: LevelUI
+    InstantAction: 0
+    Name: Pause Menu Screen
+  m_onExitShowViews:
+  - Category: LevelUI
+    InstantAction: 0
+    Name: Pause Menu Screen
+  m_onExitHideViews:
+  - Category: Main menu
+    InstantAction: 0
+    Name: EnergyBoostOfferWindow
 --- !u!114 &7941881221464781127
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1285,6 +1388,13 @@ MonoBehaviour:
       m_inputSocketId: d27d8927-bb08-4f65-a754-40bd4a50475a
       m_outputNodeId: 6c681539-7fe4-4964-8018-92619c2781b6
       m_outputSocketId: 67e22c47-25f3-4677-9813-08207cc896af
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: a2c5a352-57ac-43cb-9489-da8eadf6f94f
+      m_inputNodeId: bacab9a3-cdf4-41d3-b13e-7825aeb398b0
+      m_inputSocketId: d27d8927-bb08-4f65-a754-40bd4a50475a
+      m_outputNodeId: a949f636-03a5-4872-b8e1-9dc589b93eac
+      m_outputSocketId: c5cf9f2f-e0a2-4f22-b286-3af5afab73a6
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -1381,6 +1491,32 @@ MonoBehaviour:
     m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: ba587fa1-5875-436e-ab62-9b9b3b737edb
+      m_inputNodeId: a949f636-03a5-4872-b8e1-9dc589b93eac
+      m_inputSocketId: 7b9a4216-67fb-4214-b08b-1b8462e8d177
+      m_outputNodeId: bacab9a3-cdf4-41d3-b13e-7825aeb398b0
+      m_outputSocketId: e74defea-e388-4db9-ba6d-c49d5c9e31eb
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 134
+    m_id: e74defea-e388-4db9-ba6d-c49d5c9e31eb
+    m_nodeId: bacab9a3-cdf4-41d3-b13e-7825aeb398b0
+    m_socketName: OutputSocket_0
+    m_value: '{"ButtonCategory":"LevelUI","ButtonName":"Restart No Energy Button","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_nodeType: 4
   m_allowDuplicateNodeName: 0
   m_allowEmptyNodeName: 0
@@ -1389,7 +1525,7 @@ MonoBehaviour:
   m_useFixedUpdate: 0
   m_useLateUpdate: 0
   m_useUpdate: 0
-  m_height: 176
+  m_height: 200
   m_width: 216
   m_x: 384
   m_y: 132

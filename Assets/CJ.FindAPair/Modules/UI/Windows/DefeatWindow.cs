@@ -39,13 +39,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
+        private EnergyCooldownHandler _energyCooldownHandler;
 
         private DateTime _endCooldownForContinueGame = DateTime.Now;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameSettingsConfig gameSettingsConfig,
             GameWatcher gameWatcher, SpecialCardHandler specialCardHandler, ISaver gameSaver, IAdsDriver adsDriver, 
-            UnityAdsConfig unityAdsConfig)
+            UnityAdsConfig unityAdsConfig, EnergyCooldownHandler energyCooldownHandler)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
@@ -56,6 +57,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _unityAdsConfig = unityAdsConfig;
             _bombCard = specialCardHandler.GetComponentInChildren<BombCard>();
             _fortuneCard = specialCardHandler.GetComponentInChildren<FortuneCard>();
+            _energyCooldownHandler = energyCooldownHandler;
         }
 
         private void Update()
@@ -97,6 +99,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 _endCooldownForContinueGame = parseResult;
             }
+            
+            _energyCooldownHandler.DecreaseScore();
         }
 
         protected override void OnClose()
@@ -106,8 +110,15 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private void OnRestartButtonClick()
         {
-            _levelCreator.RestartLevel();
-            Close();
+            if (_gameSaver.LoadData().ItemsData.Energy <= 0)
+            {
+                _uiRoot.OpenWindow<EnergyBoostOfferWindow>();
+            }
+            else
+            {
+                _levelCreator.RestartLevel();
+                Close();
+            }
         }
 
         private void OnExitButtonClick()
@@ -149,8 +160,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             var timeInterval = _endCooldownForContinueGame - DateTime.Now;
             _timeText.text = timeInterval.ToString(@"mm\:ss");
         }
-
-
+        
         private void TimeIsOver()
         {
             _defeatNotificationText.SetText(_timeIsOverMessage);

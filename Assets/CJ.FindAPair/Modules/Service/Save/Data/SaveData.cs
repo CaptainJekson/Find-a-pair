@@ -56,9 +56,10 @@ public class ItemsData
     public int DetectorBooster;
     public int MagnetBooster;
     public int SapperBooster;
-    public int Energy;
     public int Coins;
     public int Diamond;
+    public int Energy = 5;
+    public string EnergyCooldownTime;
 }
 
 [Serializable]

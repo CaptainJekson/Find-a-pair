@@ -1,5 +1,6 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Utility;
 using TMPro;
 using UnityEngine;
@@ -19,14 +20,18 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
+        private EnergyCooldownHandler _energyCooldownHandler;
+        private UIRoot _uiRoot;
         
         public Vector3 GottenCoinsPosition => _gottenCoinsTransform.transform.position;
 
         [Inject]
-        public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator)
+        public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot)
         {
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
+            _energyCooldownHandler = energyCooldownHandler;
+            _uiRoot = uiRoot;
         }
 
         protected override void OnOpen()
@@ -52,12 +57,20 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ThereWasAVictory -= HideConfigAdsText;
             _gameWatcher.ThereWasADefeat -= HideConfigAdsText;
         }
-        
+
+        private void OnApplicationQuit()
+        {
+            if (_uiRoot.GetWindow<VictoryWindow>().gameObject.activeSelf == false)
+            {
+                _energyCooldownHandler.DecreaseScore();
+            }
+        }
+
         public void SetIncomeLockImage()
         {
             _lockImage.gameObject.SetActive(!_gameWatcher.IsIncomeLevel());
         }
-    
+        
         private void SetData()
         {
             SetLifeValue(_levelCreator.LevelConfig.Tries);
