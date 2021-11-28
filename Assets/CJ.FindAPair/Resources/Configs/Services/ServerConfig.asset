@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ServerConfig
   m_EditorClassIdentifier: 
   _registerPath: https://c91780.hostru10.fornex.host/orange-games777.ru/Find-a-pair/commander.php
-  _isConnected: 0
+  _isConnected: 1
