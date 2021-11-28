@@ -15,7 +15,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
     public class VictoryWindow : Window
     {
         [SerializeField] private Button _restartButton;
-        [SerializeField] private Button _exitButton;
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _coinsValueText;
@@ -30,7 +29,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
-        private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;
         private Transferer _transferer;
         private GameInterfaceWindow _gameInterfaceWindow;
@@ -38,13 +36,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private List<ItemToTransfer> _spawnedCoins;
 
         [Inject]
-        public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            LevelConfigCollection levelConfigCollection, ISaver gameSaver, Transferer transferer)
+        public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher,ISaver gameSaver, 
+            Transferer transferer)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
-            _levelConfigCollection = levelConfigCollection;
             _gameSaver = gameSaver;
             _transferer = transferer;
             _gameInterfaceWindow = _uiRoot.GetWindow<GameInterfaceWindow>();
@@ -54,7 +51,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _gameWatcher.ThereWasAVictory += Open;
             _restartButton.onClick.AddListener(OnRestartButtonClick);
-            _exitButton.onClick.AddListener(OnExitButtonClick);
             _nextLevelButton.onClick.AddListener(OnNextLevelButtonClick);
         }
     
@@ -75,35 +71,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void OnRestartButtonClick()
         {
             _levelCreator.RestartLevel();
+            _uiRoot.GetWindow<GameInterfaceWindow>().SetIncomeLockImage();
             Close();
         }
-
-        private void OnExitButtonClick()
-        {
-            _levelCreator.ClearLevel();
-            Close();
-        }
+        
 
         private void OnNextLevelButtonClick()
         {
-            LevelConfig nextLevel;
-            var currentLevelNumber = _levelCreator.LevelConfig.LevelNumber;
-
-            ++currentLevelNumber;
-        
-            try
-            {
-                nextLevel = _levelConfigCollection.Levels.First(item => item.LevelNumber == 
-                                                                        currentLevelNumber);
-            }
-            catch
-            {
-                nextLevel = _levelConfigCollection.Levels.First(item => item.LevelNumber == 1);
-            }
-
             _levelCreator.ClearLevel();
-            _levelCreator.CreateLevel(nextLevel);
-        
             Close();
         }
 

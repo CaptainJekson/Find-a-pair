@@ -7,6 +7,7 @@ namespace CJ.FindAPair.Modules.UI.Installer
         public override void InstallBindings()
         {
             Container.Bind<UIRoot>().FromComponentInNewPrefabResource("UI/UIRoot").AsSingle();
+            Container.Bind<LevelMarker>().FromComponentInNewPrefabResource("UI/LevelMarker").AsSingle();
         }
     }
 }
