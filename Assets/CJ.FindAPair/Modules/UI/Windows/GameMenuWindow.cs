@@ -7,7 +7,6 @@ using Zenject;
 public class GameMenuWindow : Window
 {
     [SerializeField] private TextMeshProUGUI _currentLevelText;
-    [SerializeField] private Button _continueButton;
     [SerializeField] private Button _restartNoEnergyButton;
 
     private LevelCreator _levelCreator;
@@ -19,12 +18,7 @@ public class GameMenuWindow : Window
         _levelCreator = levelCreator;
         _gameSaver = gameSaver;
     }
-
-    protected override void Init()
-    {
-        _continueButton.onClick.AddListener(OnContinueButtonClick);
-    }
-
+    
     protected override void OnOpen()
     {
         Time.timeScale = 0.0f;
@@ -32,7 +26,7 @@ public class GameMenuWindow : Window
         ChangeStateRestartNoEnergyButton();
     }
 
-    private void OnContinueButtonClick()
+    protected override void OnClose()
     {
         Time.timeScale = 1.0f;
     }
