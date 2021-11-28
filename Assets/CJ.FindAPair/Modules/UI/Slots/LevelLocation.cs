@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.UI.Slots
 {
-    public class LevelLocation : MonoBehaviour
+    class LevelLocation : MonoBehaviour
     {
         [SerializeField] private List<LevelButton> _levelButtons;
 

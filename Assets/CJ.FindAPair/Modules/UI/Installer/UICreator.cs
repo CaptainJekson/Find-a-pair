@@ -9,14 +9,12 @@ namespace CJ.FindAPair.Modules.UI.Installer
         [SerializeField] private Transform _uiCanvas;
 
         private UIRoot _uiRoot;
-        private LevelMarker _levelMarker;
 
         [Inject]
-        public void ConstructCoreGame(UIRoot uiRoot, LevelMarker levelMarker)
+        public void ConstructCoreGame(UIRoot uiRoot)
         {
             _uiRoot = uiRoot;
             SetCanvasPosition(_uiRoot.transform);
-            _levelMarker = levelMarker;
         }
         
         private void SetCanvasPosition(Transform transform)

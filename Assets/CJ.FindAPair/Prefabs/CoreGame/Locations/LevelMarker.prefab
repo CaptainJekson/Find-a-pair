@@ -14665,7 +14665,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8612972496215295610}
   - component: {fileID: 1577032408610001176}
-  - component: {fileID: 6273902141721168299}
   m_Layer: 0
   m_Name: LevelMarker
   m_TagString: Untagged
@@ -14722,31 +14721,15 @@ MonoBehaviour:
   - {fileID: 3329574801986816900}
   - {fileID: 2195272337909491683}
   - {fileID: 2430700673240339981}
-  _rotateSpeed: 1
+  _testTarget: {fileID: 0}
+  _testTarget1: {fileID: 0}
+  _testTarget2: {fileID: 0}
+  _testTarget3: {fileID: 0}
+  _testTarget4: {fileID: 0}
+  _speedSpeed: 0.1
   _flyDurationToCenter: 1
   _flyDurationToTarget: 1
   _flyDurationFromCenter: 1
---- !u!223 &6273902141721168299
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394432803883843680}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1000
-  m_TargetDisplay: 0
 --- !u!1 &8349497030513829656
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,9 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
-using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
+using UnityEngine;
+using UnityEngine.Events;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames
@@ -73,21 +74,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             _adsDriver.AdsIsComplete += AddCoolDownAdsTime;
         }
         
-        public bool IsIncomeLevel()
-        { 
-            var completedLevels = _gameSaver.LoadData().CompletedLevels;
-
-            foreach (var completedLevel in completedLevels)
-            {
-                if (completedLevel == _levelCreator.LevelConfig.LevelNumber)
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-        
         public void InitiateDefeat()
         {
             StopTimer();
@@ -125,16 +111,15 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void AddScore()
         {
-            if (IsIncomeLevel())
-            {
-                _accruedScore = AccrueScore();
-                AddComboScore();
-                ScoreСhanged?.Invoke(_score);
-                _comboCounter++;
-            }
-            
+            _accruedScore = AccrueScore();
             _quantityOfMatchedPairs++;
             
+            AddComboScore();
+            
+            ScoreСhanged?.Invoke(_score);
+            
+            _comboCounter++;
+
             if (_quantityOfMatchedPairs >= _quantityOfPairs)
             {
                 InitiateVictory();
@@ -143,7 +128,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void AddComboScore()
         {
-            if (_comboCounter < 1)
+            if (_comboCounter < 1) 
                 return;
             
             var scoreCombo = _gameSettingsConfig.ScoreCombo.Count > _comboCounter ? 
@@ -218,18 +203,9 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             var saveData = _gameSaver.LoadData();
             saveData.ItemsData.Coins += _score;
-
-            if (saveData.CompletedLevels.Contains(_levelCreator.LevelConfig.LevelNumber) == false)
-            {
-                saveData.CompletedLevels.Add(_levelCreator.LevelConfig.LevelNumber);
-            }
-
-            if (saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
-            {
+            
+            if(saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
                 saveData.CurrentLevel++;
-                
-                _uiRoot.GetWindow<LevelMapWindow>().StartCutSceneAtOpening = true;
-            }
             
             _gameSaver.SaveData(saveData);
         }
