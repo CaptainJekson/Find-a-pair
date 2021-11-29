@@ -285,6 +285,22 @@ MonoBehaviour:
       - language_russian
       Flags: 0000
       Languages_Touch: []
+    - Term: '@OutOfEnergy'
+      TermType: 0
+      Description: 
+      Languages:
+      - Out of energy
+      - "\u042D\u043D\u0435\u0440\u0433\u0438\u044F \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B\u0430\u0441\u044C"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@OpenStore'
+      TermType: 0
+      Description: 
+      Languages:
+      - OPEN STORE
+      - "\u041E\u0422\u041A\u0420\u042B\u0422\u042C \u041C\u0410\u0413\u0410\u0417\u0418\u041D"
+      Flags: 0000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
