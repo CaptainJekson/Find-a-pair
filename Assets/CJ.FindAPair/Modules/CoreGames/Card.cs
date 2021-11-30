@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
-    [RequireComponent(typeof(BoxCollider))]
+    [RequireComponent(typeof(BoxCollider)), RequireComponent(typeof(CardEffector))]
     public class Card : MonoBehaviour, IComparable
     {
         [SerializeField] private GameSettingsConfig _gameSettingsConfig;
@@ -18,10 +18,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         [SerializeField] private Ease _easeAnimationCard;
 
         private BoxCollider _collider;
+        private bool _isMatched;
+        private CardEffector _cardEffector;
 
         public bool IsEmpty { get; set; }
         public bool IsShow { get; set; }
-        public bool IsMatched { get; set; }
+        public bool IsMatched => _isMatched;
         public int NumberPair { get; set; }
         
         public event UnityAction СardOpens;
@@ -30,6 +32,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private void Awake()
         {
             _collider = GetComponent<BoxCollider>();
+            _cardEffector = GetComponent<CardEffector>();
             _collider.enabled = false;
             IsEmpty = false;
             IsShow = false;
@@ -43,6 +46,12 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
             
             PlayAnimation(false);
+        }
+
+        public void SetMatchedState()
+        {
+            _isMatched = true;
+            _cardEffector.PlayDissolve();
         }
 
         public void Show(bool isNotEventCall = false)
@@ -67,7 +76,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             PlayAnimation(false);
             
             IsShow = false;
-            IsMatched = false;
+            _isMatched = false;
             if (isNotEventCall) return;
             CardClosed?.Invoke();
         }

@@ -11,7 +11,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
                 .Where(card => card.NumberPair >= ConstantsCard.NUMBER_SPECIAL))
             {
                 card.Show(true);
-                card.IsMatched = true;
+                card.SetMatchedState();
                 card.GetComponent<CardEffector>().PlaySapper();
             }
         }

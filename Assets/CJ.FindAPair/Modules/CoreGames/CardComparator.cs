@@ -82,7 +82,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             CardsMatched?.Invoke();
 
             foreach (var card in _comparisonCards)
-                card.IsMatched = true;
+                card.SetMatchedState();
 
             _comparisonCards.Clear();
         }

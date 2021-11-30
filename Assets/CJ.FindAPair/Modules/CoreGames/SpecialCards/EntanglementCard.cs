@@ -10,11 +10,11 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
         [SerializeField] private float _cardsMoveSpeed;
         [SerializeField] private Ease _moveEase;
 
-        public override void OpenSpecialCard(Card specialCardOld)
+        public override void OpenSpecialCard(Card specialCard)
         {
             ShuffleCards();
-            
-            specialCardOld.IsMatched = true;
+
+            specialCard.SetMatchedState();
         }
 
         private void ShuffleCards()

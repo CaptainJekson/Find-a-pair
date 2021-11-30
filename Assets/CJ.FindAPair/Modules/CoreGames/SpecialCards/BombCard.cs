@@ -6,7 +6,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
     {
         public event UnityAction BombDetonate;
         
-        public override void OpenSpecialCard(Card specialCardOld)
+        public override void OpenSpecialCard(Card specialCard)
         {
             _gameWatcher.InitiateDefeat();
             BombDetonate?.Invoke();

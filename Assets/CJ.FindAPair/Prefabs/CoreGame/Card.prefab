@@ -4874,6 +4874,8 @@ MonoBehaviour:
   _electroshockEffect: {fileID: 9160032415009652059}
   _sapperEffect: {fileID: 3703043022686849395}
   _magicEyeEffect: {fileID: 6511982807795542951}
+  _renderer: {fileID: 5081686388729640764}
+  _dissolveDelay: 0.3
 --- !u!65 &8743230869140019518
 BoxCollider:
   m_ObjectHideFlags: 0

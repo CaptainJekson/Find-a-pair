@@ -9,7 +9,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
     {
         public event UnityAction CardRealised;
         
-        public override void OpenSpecialCard(Card specialCardOld)
+        public override void OpenSpecialCard(Card specialCard)
         {
             var randomChance = Random.Range(0, 2);
             var randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
@@ -19,7 +19,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             else
                 ClosingPairCards(randomCard);
 
-            specialCardOld.DelayHide();
+            specialCard.DelayHide();
         }
         
         private void OpeningPairCards(Card randomCardOld)
