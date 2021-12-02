@@ -5,6 +5,7 @@ using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
+using UnityEngine;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames
@@ -218,7 +219,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             var saveData = _gameSaver.LoadData();
             saveData.ItemsData.Coins += _score;
-
+            
+            if (_levelCreator.LevelConfig.IsHard)
+            {
+                SaveHardLevelRewardItems();
+            }
+            
             if (saveData.CompletedLevels.Contains(_levelCreator.LevelConfig.LevelNumber) == false)
             {
                 saveData.CompletedLevels.Add(_levelCreator.LevelConfig.LevelNumber);
@@ -311,6 +317,39 @@ namespace CJ.FindAPair.Modules.CoreGames
                 }
             });
             _timerSequence.SetLoops(-1, LoopType.Incremental);
+        }
+
+        private void SaveHardLevelRewardItems()
+        {
+            var saveData = _gameSaver.LoadData();
+            var itemsCollection = _levelCreator.LevelConfig.RewardItemsCollection.Items;
+
+            foreach (var item in itemsCollection)
+            {
+                switch (item.Type)
+                {
+                    case ItemTypes.Coin:
+                        saveData.ItemsData.Coins += item.Count;
+                        break;
+                    case ItemTypes.Diamond:
+                        saveData.ItemsData.Diamond += item.Count;
+                        break;
+                    case ItemTypes.Energy:
+                        saveData.ItemsData.Energy += item.Count;
+                        break;
+                    case ItemTypes.DetectorBooster:
+                        saveData.ItemsData.DetectorBooster += item.Count;
+                        break;
+                    case ItemTypes.MagnetBooster:
+                        saveData.ItemsData.MagnetBooster += item.Count;
+                        break;
+                    case ItemTypes.SapperBooster:
+                        saveData.ItemsData.SapperBooster += item.Count;
+                        break;
+                }
+                
+                _gameSaver.SaveData(saveData);
+            }
         }
     }
 }
