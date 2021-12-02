@@ -5,7 +5,6 @@ using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
-using UnityEngine;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames
@@ -218,18 +217,19 @@ namespace CJ.FindAPair.Modules.CoreGames
         private void SaveProgress()
         {
             var saveData = _gameSaver.LoadData();
-            saveData.ItemsData.Coins += _score;
-            
-            if (_levelCreator.LevelConfig.IsHard)
-            {
-                SaveHardLevelRewardItems();
-            }
             
             if (saveData.CompletedLevels.Contains(_levelCreator.LevelConfig.LevelNumber) == false)
             {
                 saveData.CompletedLevels.Add(_levelCreator.LevelConfig.LevelNumber);
+                
+                if (_levelCreator.LevelConfig.RewardItemsCollection)
+                {
+                    SaveHardLevelRewardItems();
+                }
             }
-
+            
+            saveData.ItemsData.Coins += _score;
+            
             if (saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
             {
                 saveData.CurrentLevel++;
@@ -329,7 +329,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 switch (item.Type)
                 {
                     case ItemTypes.Coin:
-                        saveData.ItemsData.Coins += item.Count;
+                        ScoreСhanged?.Invoke(_score += item.Count);
                         break;
                     case ItemTypes.Diamond:
                         saveData.ItemsData.Diamond += item.Count;
@@ -347,9 +347,9 @@ namespace CJ.FindAPair.Modules.CoreGames
                         saveData.ItemsData.SapperBooster += item.Count;
                         break;
                 }
-                
-                _gameSaver.SaveData(saveData);
             }
+            
+            _gameSaver.SaveData(saveData);
         }
     }
 }

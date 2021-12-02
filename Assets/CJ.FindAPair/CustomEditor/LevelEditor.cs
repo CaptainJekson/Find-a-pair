@@ -53,11 +53,10 @@ namespace CJ.FindAPair.CustomEditor
 
             _level = EditorGUILayout.IntField("Номер уровня", _level);
             _isHard = EditorGUILayout.Toggle("Сложный уровень", _isHard);
-            if (_isHard)
-            {
-                _rewardItemsCollection = EditorGUILayout.ObjectField(_rewardItemsCollection, typeof(RewardItemsCollectionConfig), true)
-                    as RewardItemsCollectionConfig;
-            }
+            
+            GUILayout.Label("Коллекция наградных айтемов", EditorStyles.boldLabel);
+            _rewardItemsCollection = EditorGUILayout.ObjectField(_rewardItemsCollection, typeof(RewardItemsCollectionConfig), true)
+                as RewardItemsCollectionConfig;
 
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Ширина", _width);
