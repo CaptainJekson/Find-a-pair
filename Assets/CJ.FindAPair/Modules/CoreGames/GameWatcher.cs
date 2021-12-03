@@ -210,26 +210,21 @@ namespace CJ.FindAPair.Modules.CoreGames
             _showAdsAction = null;
             
             SaveProgress();
-
-            ThereWasAVictory?.Invoke();
         }
 
         private void SaveProgress()
         {
             var saveData = _gameSaver.LoadData();
             
+            saveData.ItemsData.Coins += _score;
+            
+            ThereWasAVictory?.Invoke();
+            
             if (saveData.CompletedLevels.Contains(_levelCreator.LevelConfig.LevelNumber) == false)
             {
                 saveData.CompletedLevels.Add(_levelCreator.LevelConfig.LevelNumber);
-                
-                if (_levelCreator.LevelConfig.RewardItemsCollection)
-                {
-                    SaveHardLevelRewardItems();
-                }
             }
-            
-            saveData.ItemsData.Coins += _score;
-            
+
             if (saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
             {
                 saveData.CurrentLevel++;
@@ -317,39 +312,6 @@ namespace CJ.FindAPair.Modules.CoreGames
                 }
             });
             _timerSequence.SetLoops(-1, LoopType.Incremental);
-        }
-
-        private void SaveHardLevelRewardItems()
-        {
-            var saveData = _gameSaver.LoadData();
-            var itemsCollection = _levelCreator.LevelConfig.RewardItemsCollection.Items;
-
-            foreach (var item in itemsCollection)
-            {
-                switch (item.Type)
-                {
-                    case ItemTypes.Coin:
-                        ScoreСhanged?.Invoke(_score += item.Count);
-                        break;
-                    case ItemTypes.Diamond:
-                        saveData.ItemsData.Diamond += item.Count;
-                        break;
-                    case ItemTypes.Energy:
-                        saveData.ItemsData.Energy += item.Count;
-                        break;
-                    case ItemTypes.DetectorBooster:
-                        saveData.ItemsData.DetectorBooster += item.Count;
-                        break;
-                    case ItemTypes.MagnetBooster:
-                        saveData.ItemsData.MagnetBooster += item.Count;
-                        break;
-                    case ItemTypes.SapperBooster:
-                        saveData.ItemsData.SapperBooster += item.Count;
-                        break;
-                }
-            }
-            
-            _gameSaver.SaveData(saveData);
         }
     }
 }
