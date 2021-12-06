@@ -1200,6 +1200,8 @@ MonoBehaviour:
   _configAdsText: {fileID: 3359735343399831578}
   _lockImage: {fileID: 5166042916614339283}
   _gottenCoinsTransform: {fileID: 8820511760538886915}
+  _receiveCoinDuration: 0.5
+  _transferScoreEase: 0
 --- !u!114 &181578812969115696
 MonoBehaviour:
   m_ObjectHideFlags: 0

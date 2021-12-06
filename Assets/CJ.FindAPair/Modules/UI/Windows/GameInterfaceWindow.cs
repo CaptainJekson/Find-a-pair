@@ -19,20 +19,24 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private TextMeshProUGUI _configAdsText;
         [SerializeField] private Image _lockImage;
         [SerializeField] private Transform _gottenCoinsTransform;
-        [SerializeField] private ItemToTransfer _itemToTransfer;
+        [SerializeField] private float _receiveCoinDuration;
+        [SerializeField] private Ease _transferScoreEase;
 
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
         private EnergyCooldownHandler _energyCooldownHandler;
         private UIRoot _uiRoot;
         private CardComparator _cardComparator;
+        private ISaver _gameSaver;
         private Transferer _transferer;
-        
+        private Camera _camera;
+
         public Vector3 GottenCoinsPosition => _gottenCoinsTransform.transform.position;
 
         [Inject]
         public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, 
-            EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot, CardComparator cardComparator, Transferer transferer)
+            EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot, CardComparator cardComparator, 
+            Transferer transferer, ISaver gameSaver)
         {
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
@@ -40,11 +44,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _uiRoot = uiRoot;
             _cardComparator = cardComparator;
             _transferer = transferer;
+            _gameSaver = gameSaver;
+            _camera = Camera.main;
         }
 
         protected override void OnOpen()
         {
-            _cardComparator.CardsMatched += GetCoins;
+            _cardComparator.CardsMatched += TryPlayReceiveScoresCutScene;
             _gameWatcher.LifeСhanged += SetLifeValue;
             _gameWatcher.ScoreСhanged += SetScoreValue;
             _gameWatcher.TimeСhanged += SetTimeValue;
@@ -59,7 +65,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
-            _cardComparator.CardsMatched -= GetCoins;
+            _cardComparator.CardsMatched -= TryPlayReceiveScoresCutScene;
             _gameWatcher.LifeСhanged -= SetLifeValue;
             _gameWatcher.ScoreСhanged -= SetScoreValue;
             _gameWatcher.TimeСhanged -= SetTimeValue;
@@ -125,24 +131,21 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _scoreValueText.ChangeOfNumericValueForText(scoreValue, endScoreValue, decreaseDuration);
         }
 
-        private void GetCoins()
+        private void TryPlayReceiveScoresCutScene()
         {
-            Sequence sequence = DOTween.Sequence();
-            List<Transform> vectors = new List<Transform>();
-
-            for (int i = 0; i < _cardComparator.ComparisonCards.Count; i++)
+            if (_gameSaver.LoadData().CompletedLevels.Contains(_levelCreator.LevelConfig.LevelNumber) == false)
             {
-                vectors.Add(_cardComparator.ComparisonCards[i].transform);
-            }
-
-            for (int i = 0; i < _cardComparator.ComparisonCards.Count; i++)
-            {
-                int interaction = i;
-                var item = Instantiate(_itemToTransfer, transform);
-
-                sequence
+                Sequence receiveCoinsSequence = DOTween.Sequence();
+                
+                var lastOpenedCard = _cardComparator.ComparisonCards[_cardComparator.ComparisonCards.Count - 1];
+                var item = Instantiate(_gottenCoinsTransform.gameObject, _gottenCoinsTransform);
+                var itemStartPosition = _camera.WorldToScreenPoint(lastOpenedCard.transform.position);
+                
+                receiveCoinsSequence
                     .AppendCallback(() => _transferer.TransferItem(item.transform,
-                        vectors[interaction].position, _gottenCoinsTransform.position, 5f));
+                        itemStartPosition, _gottenCoinsTransform.position, _receiveCoinDuration, _transferScoreEase))
+                    .AppendInterval(_receiveCoinDuration)
+                    .AppendCallback(() => Destroy(item.gameObject));
             }
         }
     }
