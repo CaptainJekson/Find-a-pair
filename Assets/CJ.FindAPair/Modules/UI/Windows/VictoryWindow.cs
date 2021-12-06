@@ -29,18 +29,20 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private Transferer _transferer;
         private GameInterfaceWindow _gameInterfaceWindow;
+        private ProgressSaver _progressSaver;
         private Sequence _rewardCutSceneSequence;
         private List<ItemToTransfer> _spawnedCoins;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher,ISaver gameSaver, 
-            Transferer transferer)
+            Transferer transferer, ProgressSaver progressSaver)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _gameSaver = gameSaver;
             _transferer = transferer;
+            _progressSaver = progressSaver;
             _gameInterfaceWindow = _uiRoot.GetWindow<GameInterfaceWindow>();
         }
 
@@ -57,9 +59,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             PlayRewardCutScene();
-            
-            if (_gameSaver.LoadData().CompletedLevels.Contains(_levelCreator.LevelConfig.LevelNumber) == false)
-                TrySaveExtraRewardItems();
+            _progressSaver.SaveProgress();
         }
 
         protected override void OnClose()
@@ -87,7 +87,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _spawnedCoins = new List<ItemToTransfer>();
             
             int rewardCoins = _gameWatcher.Score;
-            int currentCoins = _gameSaver.LoadData().ItemsData.Coins - rewardCoins;
+            int currentCoins = _gameSaver.LoadData().ItemsData.Coins;
 
             for (int i = 0; i < rewardCoins; i++)
                 _spawnedCoins.Add(Instantiate(_itemToTransfer, _coinsParentTransform));
@@ -128,42 +128,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
             for (int i = 0; i < _spawnedCoins.Count; i++)
                 Destroy(_spawnedCoins[i].gameObject);
-        }
-        
-        private void TrySaveExtraRewardItems()
-        {
-            if (_levelCreator.LevelConfig.RewardItemsCollection)
-            {
-                var saveData = _gameSaver.LoadData();
-                var itemsCollection = _levelCreator.LevelConfig.RewardItemsCollection.Items;
-
-                foreach (var item in itemsCollection)
-                {
-                    switch (item.Type)
-                    {
-                        case ItemTypes.Coin:
-                            saveData.ItemsData.Coins += item.Count;
-                            break;
-                        case ItemTypes.Diamond:
-                            saveData.ItemsData.Diamond += item.Count;
-                            break;
-                        case ItemTypes.Energy:
-                            saveData.ItemsData.Energy += item.Count;
-                            break;
-                        case ItemTypes.DetectorBooster:
-                            saveData.ItemsData.DetectorBooster += item.Count;
-                            break;
-                        case ItemTypes.MagnetBooster:
-                            saveData.ItemsData.MagnetBooster += item.Count;
-                            break;
-                        case ItemTypes.SapperBooster:
-                            saveData.ItemsData.SapperBooster += item.Count;
-                            break;
-                    }
-                }
-
-                _gameSaver.SaveData(saveData);
-            }
         }
     }
 }
