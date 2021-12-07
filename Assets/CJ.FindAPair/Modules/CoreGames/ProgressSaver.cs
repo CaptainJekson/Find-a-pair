@@ -1,6 +1,5 @@
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
-using Zenject;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
@@ -11,15 +10,14 @@ namespace CJ.FindAPair.Modules.CoreGames
         private UIRoot _uiRoot;
         private ISaver _gameSaver;
 
-        [Inject]
-        private void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, UIRoot uiRoot, ISaver gameSaver)
+        public ProgressSaver(GameWatcher gameWatcher, LevelCreator levelCreator, UIRoot uiRoot, ISaver gameSaver)
         {
             _gameWatcher = gameWatcher;
             _levelCreator = levelCreator;
             _uiRoot = uiRoot;
             _gameSaver = gameSaver;
         }
-        
+
         public void SaveProgress()
         {
             var saveData = _gameSaver.LoadData();
