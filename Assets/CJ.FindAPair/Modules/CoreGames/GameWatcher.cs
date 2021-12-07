@@ -33,6 +33,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private UIRoot _uiRoot;
 
         public int Score => _score;
+        public int ComboCounter => _comboCounter;
         
         public event Action<int> ScoreСhanged;
         public event Action<int> LifeСhanged;

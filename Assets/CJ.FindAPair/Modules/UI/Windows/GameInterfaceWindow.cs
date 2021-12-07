@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Utility;
 using DG.Tweening;
@@ -19,6 +20,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private TextMeshProUGUI _configAdsText;
         [SerializeField] private Image _lockImage;
         [SerializeField] private Transform _gottenCoinsTransform;
+        [SerializeField] private TextMeshProUGUI _comboValueText;
         [SerializeField] private float _receiveCoinDuration;
         [SerializeField] private Ease _transferScoreEase;
 
@@ -27,6 +29,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private EnergyCooldownHandler _energyCooldownHandler;
         private UIRoot _uiRoot;
         private CardComparator _cardComparator;
+        private GameSettingsConfig _gameSettingsConfig;
         private ISaver _gameSaver;
         private Transferer _transferer;
         private Camera _camera;
@@ -36,13 +39,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [Inject]
         public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, 
             EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot, CardComparator cardComparator, 
-            Transferer transferer, ISaver gameSaver)
+            Transferer transferer, ISaver gameSaver, GameSettingsConfig gameSettingsConfig)
         {
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _energyCooldownHandler = energyCooldownHandler;
             _uiRoot = uiRoot;
             _cardComparator = cardComparator;
+            _gameSettingsConfig = gameSettingsConfig;
             _transferer = transferer;
             _gameSaver = gameSaver;
             _camera = Camera.main;
@@ -137,16 +141,44 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 Sequence receiveCoinsSequence = DOTween.Sequence();
                 
+                var scoreCombo = _gameSettingsConfig.ScoreCombo.Count > _gameWatcher.ComboCounter ? 
+                    _gameSettingsConfig.ScoreCombo[_gameWatcher.ComboCounter - 1] : 
+                    _gameSettingsConfig.ScoreCombo[_gameSettingsConfig.ScoreCombo.Count - 1];
+                
                 var lastOpenedCard = _cardComparator.ComparisonCards[_cardComparator.ComparisonCards.Count - 1];
                 var item = Instantiate(_gottenCoinsTransform.gameObject, _gottenCoinsTransform);
                 var itemStartPosition = _camera.WorldToScreenPoint(lastOpenedCard.transform.position);
                 
                 receiveCoinsSequence
                     .AppendCallback(() => _transferer.TransferItem(item.transform,
-                        itemStartPosition, _gottenCoinsTransform.position, _receiveCoinDuration, _transferScoreEase))
+                        itemStartPosition, _gottenCoinsTransform.position, _receiveCoinDuration, _transferScoreEase));
+
+                if (_gameWatcher.ComboCounter > 1)
+                {
+                    receiveCoinsSequence
+                        .AppendCallback(() => ShowComboValue(itemStartPosition, scoreCombo));
+                }
+                
+                receiveCoinsSequence
                     .AppendInterval(_receiveCoinDuration)
                     .AppendCallback(() => Destroy(item.gameObject));
             }
+        }
+
+        private void ShowComboValue(Vector3 itemStartPosition, int scoreCombo)
+        {
+            Sequence comboValueShowingSequence = DOTween.Sequence();
+
+            var comboValueEndPosition = new Vector3(itemStartPosition.x, itemStartPosition.y + 25, itemStartPosition.z);
+            
+            _comboValueText.SetText(scoreCombo.ToString());
+            _comboValueText.gameObject.SetActive(true);
+
+            comboValueShowingSequence
+                .AppendCallback(() => _transferer.TransferItem(_comboValueText.transform, itemStartPosition, 
+                    comboValueEndPosition, 2, _transferScoreEase))
+                .AppendInterval(_receiveCoinDuration)
+                .AppendCallback(() => _comboValueText.gameObject.SetActive(false));;
         }
     }
 }
