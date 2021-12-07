@@ -1,6 +1,5 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames;
-using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Utility;
 using DG.Tweening;
@@ -13,17 +12,15 @@ namespace CJ.FindAPair.Modules.UI.Windows
 {
     public class GameInterfaceWindow : Window
     {
-        [Header("Game indicators")] [SerializeField]
-        private TextMeshProUGUI _lifeValueText;
-
+        [Header("Game indicators")] 
+        [SerializeField] private TextMeshProUGUI _lifeValueText;
         [SerializeField] private TextMeshProUGUI _timeValueText;
         [SerializeField] private TextMeshProUGUI _scoreValueText;
         [SerializeField] private TextMeshProUGUI _configAdsText;
         [SerializeField] private Image _lockImage;
 
-        [Header("Score receiving cut scene settings")] [SerializeField]
-        private Transform _gottenCoinsTransform;
-
+        [Header("Score receiving cut scene settings")] 
+        [SerializeField] private Transform _gottenCoinsTransform;
         [SerializeField] private FlyCoin _coinToTransfer;
         [SerializeField] private float _receiveCoinDuration;
         [SerializeField] private Ease _transferScoreEase;
@@ -44,7 +41,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [Inject]
         public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator,
-            EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot, CardComparator cardComparator, Transferer transferer)
+            EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot, CardComparator cardComparator,
+            Transferer transferer)
         {
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
@@ -57,14 +55,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            _cardComparator.CardsMatched += PlayReceiveScoresCutScene;
             _gameWatcher.LifeСhanged += SetLifeValue;
             _gameWatcher.ScoreСhanged += SetScoreValue;
             _gameWatcher.TimeСhanged += SetTimeValue;
             _gameWatcher.ConfirmShowAds += ShowConfigAdsText;
             _gameWatcher.ThereWasAVictory += HideConfigAdsText;
             _gameWatcher.ThereWasADefeat += HideConfigAdsText;
-            
+
             SetData();
             HideConfigAdsText();
             SetIncomeLockImage();
@@ -72,7 +69,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
-            _cardComparator.CardsMatched -= PlayReceiveScoresCutScene;
             _gameWatcher.LifeСhanged -= SetLifeValue;
             _gameWatcher.ScoreСhanged -= SetScoreValue;
             _gameWatcher.TimeСhanged -= SetTimeValue;
@@ -138,14 +134,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _scoreValueText.ChangeOfNumericValueForText(scoreValue, endScoreValue, decreaseDuration);
         }
 
-        private void PlayReceiveScoresCutScene()
+        public void PlayReceiveScoresCutScene()
         {
             Sequence receiveCoinsSequence = DOTween.Sequence();
 
             var lastOpenedCard = _cardComparator.ComparisonCards[_cardComparator.ComparisonCards.Count - 1];
             var item = Instantiate(_coinToTransfer, _gottenCoinsTransform);
             var itemStartPosition = _camera.WorldToScreenPoint(lastOpenedCard.transform.position);
-            
+
             item.gameObject.SetActive(true);
 
             receiveCoinsSequence

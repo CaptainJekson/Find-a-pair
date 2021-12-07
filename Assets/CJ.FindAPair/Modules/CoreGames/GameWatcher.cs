@@ -3,6 +3,7 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 using Zenject;
 
@@ -133,6 +134,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 AddComboScore();
                 ScoreСhanged?.Invoke(_score);
                 _comboCounter++;
+                _uiRoot.GetWindow<GameInterfaceWindow>().PlayReceiveScoresCutScene();
             }
             
             _quantityOfMatchedPairs++;
