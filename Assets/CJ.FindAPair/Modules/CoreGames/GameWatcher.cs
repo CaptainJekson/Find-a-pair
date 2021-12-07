@@ -23,6 +23,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private int _time;
         private int _score;
         private int _comboCounter;
+        private int _scoreCombo;
         private int _accruedScore;
 
         private int _quantityOfPairs;
@@ -33,6 +34,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private UIRoot _uiRoot;
 
         public int Score => _score;
+        public int ScoreCombo => _scoreCombo;
         public int ComboCounter => _comboCounter;
         
         public event Action<int> ScoreСhanged;
@@ -151,6 +153,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 _gameSettingsConfig.ScoreCombo[_comboCounter - 1] : 
                 _gameSettingsConfig.ScoreCombo[_gameSettingsConfig.ScoreCombo.Count - 1];
 
+            _scoreCombo = scoreCombo;
             _score += scoreCombo;
 
             foreach (var card in _cardComparator.ComparisonCards)
