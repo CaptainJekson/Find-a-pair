@@ -3,7 +3,6 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
-using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 using Zenject;
 
@@ -208,30 +207,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             StopTimer();
             _showAdsAction?.Invoke();
             _showAdsAction = null;
-            
-            SaveProgress();
 
             ThereWasAVictory?.Invoke();
-        }
-
-        private void SaveProgress()
-        {
-            var saveData = _gameSaver.LoadData();
-            saveData.ItemsData.Coins += _score;
-
-            if (saveData.CompletedLevels.Contains(_levelCreator.LevelConfig.LevelNumber) == false)
-            {
-                saveData.CompletedLevels.Add(_levelCreator.LevelConfig.LevelNumber);
-            }
-
-            if (saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
-            {
-                saveData.CurrentLevel++;
-                
-                _uiRoot.GetWindow<LevelMapWindow>().StartCutSceneAtOpening = true;
-            }
-            
-            _gameSaver.SaveData(saveData);
         }
 
         private void InitiateDefeatAtSkipAds(string placementId)

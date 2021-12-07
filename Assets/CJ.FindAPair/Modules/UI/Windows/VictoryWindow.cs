@@ -1,9 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using CJ.FindAPair.Modules.CoreGames;
-using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
-using CJ.FindAPair.Utility;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -33,18 +30,20 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private Transferer _transferer;
         private GameInterfaceWindow _gameInterfaceWindow;
+        private ProgressSaver _progressSaver;
         private Sequence _rewardCutSceneSequence;
         private List<FlyCoin> _spawnedCoins;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher,ISaver gameSaver, 
-            Transferer transferer)
+            Transferer transferer, ProgressSaver progressSaver)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _gameSaver = gameSaver;
             _transferer = transferer;
+            _progressSaver = progressSaver;
             _gameInterfaceWindow = _uiRoot.GetWindow<GameInterfaceWindow>();
         }
 
@@ -61,6 +60,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             PlayRewardCutScene();
+            _progressSaver.SaveProgress();
         }
 
         protected override void OnClose()
@@ -76,7 +76,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             Close();
         }
         
-
         private void OnNextLevelButtonClick()
         {
             _levelCreator.ClearLevel();
@@ -89,7 +88,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _spawnedCoins = new List<FlyCoin>();
             
             int rewardCoins = _gameWatcher.Score;
-            int currentCoins = _gameSaver.LoadData().ItemsData.Coins - rewardCoins;
+            int currentCoins = _gameSaver.LoadData().ItemsData.Coins;
 
             for (int i = 0; i < rewardCoins; i++)
                 _spawnedCoins.Add(Instantiate(_flyCoin, _coinsParentTransform));

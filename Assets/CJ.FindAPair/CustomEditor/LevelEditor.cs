@@ -19,6 +19,7 @@ namespace CJ.FindAPair.CustomEditor
         private float _heightOffset = 0.0f;
 
         private QuantityOfCardOfPair _quantityOfCardOfPair;
+        private RewardItemsCollectionConfig _rewardItemsCollection;
         private int _tries = 0;
         private int _time = 0;
         private bool _isFortune = false;
@@ -52,6 +53,10 @@ namespace CJ.FindAPair.CustomEditor
 
             _level = EditorGUILayout.IntField("Номер уровня", _level);
             _isHard = EditorGUILayout.Toggle("Сложный уровень", _isHard);
+            
+            GUILayout.Label("Коллекция наградных айтемов", EditorStyles.boldLabel);
+            _rewardItemsCollection = EditorGUILayout.ObjectField(_rewardItemsCollection, typeof(RewardItemsCollectionConfig), true)
+                as RewardItemsCollectionConfig;
 
             GUILayout.Label("Игровое поле - ширина/длина", EditorStyles.boldLabel);
             _width = EditorGUILayout.IntField("Ширина", _width);
@@ -142,6 +147,7 @@ namespace CJ.FindAPair.CustomEditor
             _quantityPairOfReset = _levelConfig.QuantityPairOfReset;
             _isBomb = _levelConfig.QuantityPairOfBombs > 0;
             _quantityPairOfBombs = _levelConfig.QuantityPairOfBombs;
+            _rewardItemsCollection = _levelConfig.RewardItemsCollection;
 
             _width = _levelConfig.Width;
             _height = _levelConfig.Height;
@@ -170,7 +176,7 @@ namespace CJ.FindAPair.CustomEditor
             var asset = CreateInstance<LevelConfig>();
             asset.SetSizeLevel(_levelMatrix, _level, _heightOffset);
             asset.SetConditionsLevel(_quantityOfCardOfPair, _isHard, _tries, _time, _quantityPairOfFortune,
-                _quantityPairOfEntanglement, _quantityPairOfReset, _quantityPairOfBombs);
+                _quantityPairOfEntanglement, _quantityPairOfReset, _quantityPairOfBombs, _rewardItemsCollection);
             
             AssetDatabase.CreateAsset(asset,$"Assets/CJ.FindAPair/Resources/Configs/Levels/Level {_level}.asset");
             AssetDatabase.SaveAssets();
@@ -248,8 +254,7 @@ namespace CJ.FindAPair.CustomEditor
                 }
                     break;
             }
-
-
+            
             if (quantitySpecialCard >= quantityCard)
             {
                 isValid = false;

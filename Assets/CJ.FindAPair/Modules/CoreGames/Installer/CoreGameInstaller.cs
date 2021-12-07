@@ -27,6 +27,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
                 .AsSingle();
             Container.Bind<Transferer>().AsSingle();
             Container.Bind<EnergyCooldownHandler>().AsSingle();
+            Container.Bind<ProgressSaver>().AsSingle();
         }
     }
 }

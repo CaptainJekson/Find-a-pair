@@ -24,8 +24,10 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         [SerializeField] private int _quantityPairOfBombs = 0;
 
         [SerializeField] private List<bool> _levelField = new List<bool>();
+        [SerializeField] private RewardItemsCollectionConfig _rewardItemsCollection;
 
         public List<bool> LevelField => _levelField;
+        public RewardItemsCollectionConfig RewardItemsCollection => _rewardItemsCollection;
         public int LevelNumber => _level;
         public bool IsHard => _isHard;
         public int Width => _width;
@@ -61,7 +63,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
         
         public void SetConditionsLevel(QuantityOfCardOfPair quantityOfCardOfPair, bool isHard, int tries, int time, 
             int quantityPairOfFortune, int quantityPairOfEntanglement, int quantityPairOfReset,
-            int quantityPairOfBombs)
+            int quantityPairOfBombs, RewardItemsCollectionConfig rewardItemsCollection)
         {
             _quantityOfCardOfPair = quantityOfCardOfPair;
             _isHard = isHard;
@@ -71,7 +73,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
             _quantityPairOfEntanglement = quantityPairOfEntanglement;
             _quantityPairOfReset = quantityPairOfReset;
             _quantityPairOfBombs = quantityPairOfBombs;
+            _rewardItemsCollection = rewardItemsCollection;
         }
     }
 }
-

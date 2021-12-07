@@ -30,7 +30,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnOpen()
         {
             TryDisableSapperButton();
-            
+            RefreshButtons();
             _specialCardHandler.SpecialCardOpened += TryDisableSapperButton;
         }
 
@@ -39,7 +39,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _specialCardHandler.SpecialCardOpened -= TryDisableSapperButton;
         }
 
-        public void RefreshButtons()
+        private void RefreshButtons()
         {
             foreach (var boosterButton in _boosterButtons)
             {
