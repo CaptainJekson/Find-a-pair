@@ -2,6 +2,7 @@
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
