@@ -11,12 +11,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         
         private LevelCreator _levelCreator;
         private EnergyCooldownHandler _energyCooldownHandler;
+        private GameWatcher _gameWatcher;
 
         [Inject]
-        public void Construct(LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler)
+        public void Construct(LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler, GameWatcher gameWatcher)
         {
             _levelCreator = levelCreator;
             _energyCooldownHandler = energyCooldownHandler;
+            _gameWatcher = gameWatcher;
         }
 
         protected override void OnOpen()
@@ -32,7 +34,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void OnExitButtonClick()
         {
             _levelCreator.ClearLevel();
-            _energyCooldownHandler.DecreaseScore();
+            
+            if (_gameWatcher.IsIncomeLevel())
+                _energyCooldownHandler.DecreaseScore();
         }
     }
 }
