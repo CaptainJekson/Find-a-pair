@@ -76,7 +76,14 @@ namespace CJ.FindAPair.Modules.CoreGames
             PlayAnimation(false);
             
             IsShow = false;
+
+            if (_isMatched)
+            {
+                _cardEffector.PlayRevertDissolve();
+            }
+
             _isMatched = false;
+            
             if (isNotEventCall) return;
             CardClosed?.Invoke();
         }
