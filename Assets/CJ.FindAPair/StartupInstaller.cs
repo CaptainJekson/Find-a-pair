@@ -14,6 +14,7 @@ namespace CJ.FindAPair
             UIInstaller.Install(Container);
             CoreGameInstaller.Install(Container);
             MetaGameInstaller.Install(Container);
+            CutScenesInstaller.Install(Container);
         }
     }
 }

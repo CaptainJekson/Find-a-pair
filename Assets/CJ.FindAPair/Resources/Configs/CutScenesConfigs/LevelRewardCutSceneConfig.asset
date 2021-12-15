@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e4c10b23d551e47923138a0df35dd1, type: 3}
+  m_Name: LevelRewardCutSceneConfig
+  m_EditorClassIdentifier: 
+  _itemsPoolHandler: {fileID: 6870422384542442176, guid: 13a57d8a4fbbca443bc2f4b7bec5a01e,
+    type: 3}
+  _coinPrefab: {fileID: 9001387802417860047, guid: 62d61c573cf472340a94a519f1b54ff0,
+    type: 3}
+  _maxCoinsOnScene: 10
+  _timeBetweenCoins: 0.15
+  _delayStartCutScene: 0.75
+  _coinTransferDuration: 0.5
+  _coinTransferEase: 0

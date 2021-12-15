@@ -18,6 +18,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private ISaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
+        private ScoreObtainCutScene _scoreObtainCutScene;
 
         private int _life;
         private int _time;
@@ -49,12 +50,13 @@ namespace CJ.FindAPair.Modules.CoreGames
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
             GameSettingsConfig gameSettingsConfig, ISaver gameSaver, IAdsDriver adsDriver,
-            UnityAdsConfig unityAdsConfig, UIRoot uiRoot, CardsPlacer cardsPlacer)
+            UnityAdsConfig unityAdsConfig, UIRoot uiRoot, CardsPlacer cardsPlacer, ScoreObtainCutScene scoreObtainCutScene)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
             _gameSettingsConfig = gameSettingsConfig;
             _cardsPlacer = cardsPlacer;
+            _scoreObtainCutScene = scoreObtainCutScene;
             _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
@@ -134,7 +136,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 AddComboScore();
                 ScoreСhanged?.Invoke(_score);
                 _comboCounter++;
-                _uiRoot.GetWindow<GameInterfaceWindow>().PlayReceiveScoresCutScene();
+                _scoreObtainCutScene.Play();
             }
             
             _quantityOfMatchedPairs++;
