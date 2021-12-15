@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2640129250285070528}
   - component: {fileID: 2640129250285070529}
   - component: {fileID: 2640129250285070542}
-  - component: {fileID: 2640129250285070543}
+  - component: {fileID: 596843088053323240}
   m_Layer: 5
   m_Name: ShineFX
   m_TagString: Untagged
@@ -29,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 2640129250285070541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -753,7 +753,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.8
+      value: 9.01
       mode: 0
       spread: 0
       speed:
@@ -4840,7 +4840,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2640129250285070541}
   m_CullTransparentMesh: 0
---- !u!114 &2640129250285070543
+--- !u!114 &596843088053323240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4849,10 +4849,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2640129250285070541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022f88edfdfa44b65afcefde3c9d854e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a53b2c77c3ee42c996af863e49168f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 7078effbdd6b9824b9a21ff9ff575968, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -4860,5 +4860,5 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  fixedTime: 1
-  use3dRotation: 0
+  _material: {fileID: 2100000, guid: 7078effbdd6b9824b9a21ff9ff575968, type: 2}
+  _trailsMaterial: {fileID: 0}

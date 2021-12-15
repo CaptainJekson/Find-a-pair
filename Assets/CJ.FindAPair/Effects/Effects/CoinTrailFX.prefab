@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6311566563881619875}
   - component: {fileID: 1236521609891901539}
   - component: {fileID: 9154818387815633637}
-  - component: {fileID: 1475712928933716071}
+  - component: {fileID: 2226335337446514072}
   m_Layer: 0
   m_Name: CoinTrailFX
   m_TagString: Untagged
@@ -291,7 +291,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 60
+      scalar: 150
       minScalar: 20
       maxCurve:
         serializedVersion: 2
@@ -1310,8 +1310,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.001004219, g: 0, b: 1, a: 0}
-        key1: {r: 0.30847597, g: 1, b: 0, a: 1}
+        key0: {r: 1, g: 0.875397, b: 0, a: 0}
+        key1: {r: 1, g: 0.31514105, b: 0, a: 1}
         key2: {r: 0.19215703, g: 1, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -3237,21 +3237,21 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 0
+          inSlope: 1
           outSlope: 1
-          tangentMode: 0
+          tangentMode: 34
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 0
-          tangentMode: 0
+          outSlope: 1
+          tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -4765,7 +4765,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21b9f225fc9fcf840971ac72530bb398, type: 2}
+  - {fileID: 2100000, guid: 7078effbdd6b9824b9a21ff9ff575968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4819,7 +4819,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3606603659670423623}
   m_CullTransparentMesh: 0
---- !u!114 &1475712928933716071
+--- !u!114 &2226335337446514072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4828,16 +4828,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3606603659670423623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022f88edfdfa44b65afcefde3c9d854e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a53b2c77c3ee42c996af863e49168f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 7078effbdd6b9824b9a21ff9ff575968, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  fixedTime: 1
-  use3dRotation: 0
+  _material: {fileID: 2100000, guid: 7078effbdd6b9824b9a21ff9ff575968, type: 2}
+  _trailsMaterial: {fileID: 0}
