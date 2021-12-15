@@ -25,3 +25,5 @@ MonoBehaviour:
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
   _levelField: 01010101010101010101000001010101000001010101010101010101
+  _rewardItemsCollection: {fileID: 11400000, guid: a4829d328bf18ff49a250b1c2a650fe6,
+    type: 2}
