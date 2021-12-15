@@ -122,6 +122,14 @@ namespace CJ.FindAPair.Modules.CoreGames
             _specialCardSprite.sprite = specialIcon;
         }
 
+        public void PlayDestroySpecialCard()
+        {
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(_gameSettingsConfig.AnimationSpeedCard);
+            sequence.Append(_specialCardSprite.transform.DOScale(Vector3.zero, 1.0f).SetEase(Ease.InBack));
+            sequence.AppendCallback(_cardEffector.PlaySapper);
+        }
+
         public void SetShirt(Sprite shirt)
         {
             _shirtSprite = shirt;
