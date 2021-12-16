@@ -66,10 +66,13 @@ public class LevelRewardCutScene : CutScene
 
     public override void Stop()
     {
-        _levelRewardSequence.Kill();
-        _gameWatcher.ResetScore();
-        _cutSceneConfig.ItemsPoolHandler.DestroyItemsPool(ItemsPool);
-        _rewardCoins.Clear();
+        if (_victoryWindow.gameObject.activeSelf)
+        {
+            _levelRewardSequence.Kill();
+            _gameWatcher.ResetScore();
+            _cutSceneConfig.ItemsPoolHandler.DestroyItemsPool(ItemsPool);
+            _rewardCoins.Clear();
+        }
     }
 
     protected override void InitializeItemsPool(ItemsPoolHandler itemsPoolHandler, GameObject item, 
