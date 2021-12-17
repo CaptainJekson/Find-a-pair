@@ -7,11 +7,11 @@ namespace CJ.FindAPair.Modules.CoreGames.Configs
     public class ItemConfig : ScriptableObject
     {
         [SerializeField] private ItemTypes _type;
-        [SerializeField] private Image _icon;
+        [SerializeField] private Sprite _icon;
         [SerializeField] private int _count;
 
         public ItemTypes Type => _type;
-        public Image Icon => _icon;
+        public Sprite Icon => _icon;
         public int Count => _count;
     }
 }

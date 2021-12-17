@@ -22,24 +22,24 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             specialCard.DelayHide();
         }
         
-        private void OpeningPairCards(Card randomCardOld)
+        private void OpeningPairCards(Card randomCard)
         {
-            randomCardOld = GetRandomCard(randomCardOld, true);
+            randomCard = GetRandomCard(randomCard, true);
 
-            foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCardOld.NumberPair))
+            foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
                 card.Show();
         }
 
-        private void ClosingPairCards(Card randomCardOld)
+        private void ClosingPairCards(Card randomCard)
         {
             var quantityMatchedCards = _levelCreator.Cards.Count(card => card.IsMatched);
             _gameWatcher.RemoveQuantityOfMatchedPairs();
 
             if (quantityMatchedCards > 0)
             {
-                randomCardOld = GetRandomCard(randomCardOld, false);
+                randomCard = GetRandomCard(randomCard, false);
 
-                foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCardOld.NumberPair))
+                foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
                     card.Hide();
             }
             else
@@ -49,7 +49,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             }
         }
         
-        private Card GetRandomCard(Card randomCardOld, bool isMatched) //TODO Repeting MagicEyeBooster
+        private Card GetRandomCard(Card randomCardOld, bool isMatched)
         {
             while (!(isMatched ^ randomCardOld.IsMatched) || randomCardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {

@@ -12,7 +12,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             {
                 card.Show(true);
                 card.SetMatchedState();
-                card.GetComponent<CardEffector>().PlaySapper();
+                card.PlayDestroySpecialCard();
             }
         }
     }

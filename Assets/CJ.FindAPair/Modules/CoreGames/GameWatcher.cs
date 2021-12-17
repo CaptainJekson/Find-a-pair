@@ -104,6 +104,8 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         public void RemoveQuantityOfMatchedPairs()
         {
+            _quantityOfMatchedPairs--;
+            
             RemoveLife();
             RemoveScore();
         }
@@ -170,7 +172,6 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             if (_score > 0)
             {
-                _quantityOfMatchedPairs--;
                 _score -= _accruedScore;
             }
             

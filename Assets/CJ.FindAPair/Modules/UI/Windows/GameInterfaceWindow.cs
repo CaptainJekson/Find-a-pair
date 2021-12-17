@@ -22,7 +22,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelCreator _levelCreator;
         private EnergyCooldownHandler _energyCooldownHandler;
         private UIRoot _uiRoot;
-
+        
         public Transform ScoresIconTransform => _scoresIconTransform;
 
         [Inject]
@@ -59,11 +59,26 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ThereWasADefeat -= HideConfigAdsText;
         }
 
+#if UNITY_EDITOR
+                
         private void OnApplicationQuit()
         {
             if (_uiRoot.GetWindow<VictoryWindow>().gameObject.activeSelf == false)
                 _energyCooldownHandler.DecreaseScore();
         }
+#else
+        private void OnApplicationPause(bool pauseStatus)
+        {
+            if (pauseStatus && (Application.platform == RuntimePlatform.Android ||
+                                Application.platform == RuntimePlatform.IPhonePlayer))
+            {
+                if (_uiRoot.GetWindow<VictoryWindow>().gameObject.activeSelf == false)
+                {
+                    _energyCooldownHandler.DecreaseScore();
+                }
+            }
+        }
+#endif
 
         public void SetIncomeLockImage()
         {

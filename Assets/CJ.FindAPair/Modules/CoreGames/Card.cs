@@ -76,7 +76,14 @@ namespace CJ.FindAPair.Modules.CoreGames
             PlayAnimation(false);
             
             IsShow = false;
+
+            if (_isMatched)
+            {
+                _cardEffector.PlayRevertDissolve();
+            }
+
             _isMatched = false;
+            
             if (isNotEventCall) return;
             CardClosed?.Invoke();
         }
@@ -113,6 +120,14 @@ namespace CJ.FindAPair.Modules.CoreGames
         public void SetSpecialIcon(Sprite specialIcon)
         {
             _specialCardSprite.sprite = specialIcon;
+        }
+
+        public void PlayDestroySpecialCard()
+        {
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(_gameSettingsConfig.AnimationSpeedCard);
+            sequence.Append(_specialCardSprite.transform.DOScale(Vector3.zero, 1.0f).SetEase(Ease.InBack));
+            sequence.AppendCallback(_cardEffector.PlaySapper);
         }
 
         public void SetShirt(Sprite shirt)

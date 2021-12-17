@@ -30,6 +30,11 @@ namespace CJ.FindAPair.Modules.CoreGames
             StartCoroutine(MakeDissolve());
         }
 
+        public void PlayRevertDissolve()
+        {
+            StartCoroutine(MakeRevertDissolve());
+        }
+
         public void PlayMagicEye()
         {
             _magicEyeEffect.Play();
@@ -54,6 +59,24 @@ namespace CJ.FindAPair.Modules.CoreGames
             DOTween.To(()=> currentDissolve, x=> currentDissolve = x, 0.0f, 1);
             
             while (currentDissolve > 0.0f)
+            {
+                yield return null;
+                
+                _renderer.GetPropertyBlock(_propBlock);
+                _propBlock.SetFloat(_SHADER_PROPERTY_NAME, currentDissolve);
+                _renderer.SetPropertyBlock(_propBlock);
+            }
+        }
+        
+        private IEnumerator MakeRevertDissolve()
+        {
+            yield return new WaitForSeconds(_dissolveDelay);
+            
+            var currentDissolve = 0.0f;
+                
+            DOTween.To(()=> currentDissolve, x=> currentDissolve = x, 1.0f, 1);
+            
+            while (currentDissolve < 1.0f)
             {
                 yield return null;
                 
