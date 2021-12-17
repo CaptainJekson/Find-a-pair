@@ -95,6 +95,15 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             var pairCounter = 0;
             var index = 0;
             
+            for (var i = _selectedThemeConfig.FacesSprites.Count - 1; i > 0; i--)
+            {
+                var j = Random.Range(0, i);
+                
+                var temp = _selectedThemeConfig.FacesSprites[i];
+                _selectedThemeConfig.FacesSprites[i] = _selectedThemeConfig.FacesSprites[j];
+                _selectedThemeConfig.FacesSprites[j] = temp;
+            }
+            
             foreach (var card in _sortedCards)
             {
                 if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
