@@ -16,8 +16,12 @@ MonoBehaviour:
   _name: '@AnimalsName'
   _description: '@AnimalsDescription'
   _currencyType: 0
+  _isOpensLevel: 0
   _price: 100
+  _requiredLevel: 0
   _shirtSprite: {fileID: -3662938303249473930, guid: 9941e92c2722951489d67bc96887578f,
+    type: 3}
+  _specialCardFaceSprite: {fileID: 8229771063541479131, guid: 9941e92c2722951489d67bc96887578f,
     type: 3}
   _facesSprites:
   - {fileID: -3005351021388095532, guid: 9941e92c2722951489d67bc96887578f, type: 3}
@@ -34,6 +38,5 @@ MonoBehaviour:
   - {fileID: 6585687952386758217, guid: 9941e92c2722951489d67bc96887578f, type: 3}
   - {fileID: 8840498473539125920, guid: 9941e92c2722951489d67bc96887578f, type: 3}
   - {fileID: 5040206738847831279, guid: 9941e92c2722951489d67bc96887578f, type: 3}
-  - {fileID: 8229771063541479131, guid: 9941e92c2722951489d67bc96887578f, type: 3}
   _backGroundSprite: {fileID: 21300000, guid: 8b26755b382a12048962f43b96ebaf77, type: 3}
   _music: {fileID: 8300000, guid: 4e2fe3af2af7140449e656c975026220, type: 3}

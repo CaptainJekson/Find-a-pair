@@ -103,7 +103,7 @@ namespace CJ.FindAPair.Modules.Meta.Themes
                 _selectedThemeConfig.FacesSprites[i] = _selectedThemeConfig.FacesSprites[j];
                 _selectedThemeConfig.FacesSprites[j] = temp;
             }
-            
+
             foreach (var card in _sortedCards)
             {
                 if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
@@ -112,7 +112,7 @@ namespace CJ.FindAPair.Modules.Meta.Themes
                 }
                 else
                 {
-                    card.SetFace(_selectedThemeConfig.FacesSprites[_selectedThemeConfig.FacesSprites.Count - 1]);
+                    card.SetFace(_selectedThemeConfig.SpecialCardFaceSprite);
                     card.SetSpecialIcon(GetFaceSpecialCard(card.NumberPair));
                 }
 
