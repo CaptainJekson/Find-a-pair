@@ -52,5 +52,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464492c455641554f82028de6b7fa01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 3292305092561980454, guid: 6045dccc39411eb44a3d7f1721752a85, type: 3}
-  _cardsDeckStartPosition: {x: 0, y: -7}
+  _card: {fileID: 3292305092561980454, guid: 6045dccc39411eb44a3d7f1721752a85, type: 3}
+  _rewardCoinsPool: {fileID: 0}

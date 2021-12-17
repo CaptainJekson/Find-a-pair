@@ -3428,14 +3428,7 @@ MonoBehaviour:
   _nextLevelButton: {fileID: 2490897490454060465}
   _currentLevelText: {fileID: 3335165958134467398}
   _coinsValueText: {fileID: 8926446433802266571}
-  _itemToTransfer: {fileID: 4302059407066453273}
-  _flyCoin: {fileID: 9001387802417860047, guid: 62d61c573cf472340a94a519f1b54ff0,
-    type: 3}
-  _coinsParentTransform: {fileID: 5178702060838365861}
-  _coinMoveDuration: 0.5
-  _distanceBetweenCoins: 0.15
-  _delayStartCutScene: 0.75
-  _transferCoinEase: 12
+  _coinsParentTransform: {fileID: 2927482063716996141}
 --- !u!1 &2490897490139544935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6037,7 +6030,6 @@ GameObject:
   - component: {fileID: 2927482063716996141}
   - component: {fileID: 5217792576840220265}
   - component: {fileID: 3655936817803315692}
-  - component: {fileID: 4302059407066453273}
   m_Layer: 0
   m_Name: Icon
   m_TagString: Untagged
@@ -6104,18 +6096,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4302059407066453273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2948108972907690273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8850bc2d96a7b0a409d643b17493fa35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5085643882450345492
 GameObject:
   m_ObjectHideFlags: 0

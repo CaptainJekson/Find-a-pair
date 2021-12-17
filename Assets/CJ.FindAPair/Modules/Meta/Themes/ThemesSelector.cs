@@ -95,6 +95,15 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             var pairCounter = 0;
             var index = 0;
             
+            for (var i = _selectedThemeConfig.FacesSprites.Count - 1; i > 0; i--)
+            {
+                var j = Random.Range(0, i);
+                
+                var temp = _selectedThemeConfig.FacesSprites[i];
+                _selectedThemeConfig.FacesSprites[i] = _selectedThemeConfig.FacesSprites[j];
+                _selectedThemeConfig.FacesSprites[j] = temp;
+            }
+
             foreach (var card in _sortedCards)
             {
                 if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
@@ -103,7 +112,7 @@ namespace CJ.FindAPair.Modules.Meta.Themes
                 }
                 else
                 {
-                    card.SetFace(_selectedThemeConfig.FacesSprites[_selectedThemeConfig.FacesSprites.Count - 1]);
+                    card.SetFace(_selectedThemeConfig.SpecialCardFaceSprite);
                     card.SetSpecialIcon(GetFaceSpecialCard(card.NumberPair));
                 }
 

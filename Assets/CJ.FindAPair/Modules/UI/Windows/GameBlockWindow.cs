@@ -6,7 +6,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
     public class GameBlockWindow : Window
     {
         private LevelCreator _levelCreator;
-        
+
         [Inject]
         public void Construct(LevelCreator levelCreator)
         {
@@ -18,14 +18,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             foreach (var card in _levelCreator.Cards)
             {
                 card.DisableInteractable();
-            }
-        }
-
-        protected override void OnClose()
-        {
-            foreach (var card in _levelCreator.Cards)
-            {
-                card.EnableInteractable();
             }
         }
     }

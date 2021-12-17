@@ -16,6 +16,7 @@ namespace CJ.FindAPair.Modules.Meta.Configs
         [SerializeField] private int _price;
         [SerializeField] private int _requiredLevel;
         [SerializeField] private Sprite _shirtSprite;
+        [SerializeField] private Sprite _specialCardFaceSprite;
         [SerializeField] private List<Sprite> _facesSprites;
         [SerializeField] private Sprite _backGroundSprite;
         [SerializeField] private AudioClip _music;
@@ -28,6 +29,7 @@ namespace CJ.FindAPair.Modules.Meta.Configs
         public int Price => _price;
         public int RequiredLevel => _requiredLevel;
         public Sprite ShirtSprite => _shirtSprite;
+        public Sprite SpecialCardFaceSprite => _specialCardFaceSprite;
         public List<Sprite> FacesSprites => _facesSprites;
         public Sprite BackGroundSprite => _backGroundSprite;
         public AudioClip Music => _music;
@@ -47,9 +49,10 @@ namespace CJ.FindAPair.Modules.Meta.Configs
             _price = price;
         }
 
-        public void SetSprites(Sprite shirtSprite, Sprite[] facesSprites, Sprite backGroundSprite)
+        public void SetSprites(Sprite shirtSprite, Sprite specialCardFace, Sprite[] facesSprites, Sprite backGroundSprite)
         {
             _shirtSprite = shirtSprite;
+            _specialCardFaceSprite = specialCardFace;
             _facesSprites = facesSprites.ToList();
             _backGroundSprite = backGroundSprite;
         }

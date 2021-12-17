@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
@@ -25,9 +24,9 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             Container.Bind<BoosterHandler>().FromComponentInNewPrefabResource("CoreGames/BoosterHandler").AsSingle();
             Container.Bind<SpecialCardHandler>().FromComponentInNewPrefabResource("CoreGames/SpecialCardHandler")
                 .AsSingle();
-            Container.Bind<Transferer>().AsSingle();
             Container.Bind<EnergyCooldownHandler>().AsSingle();
             Container.Bind<ProgressSaver>().AsSingle();
+            Container.Bind<ItemsTransferer>().AsSingle();
         }
     }
 }

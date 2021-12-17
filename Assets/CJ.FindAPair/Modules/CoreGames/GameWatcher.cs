@@ -1,8 +1,10 @@
 ﻿using System;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.CutScene.CutScenes;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 using Zenject;
 
@@ -17,11 +19,13 @@ namespace CJ.FindAPair.Modules.CoreGames
         private ISaver _gameSaver;
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
+        private ScoreObtainCutScene _scoreObtainCutScene;
 
         private int _life;
         private int _time;
         private int _score;
         private int _comboCounter;
+        private int _scoreCombo;
         private int _accruedScore;
 
         private int _quantityOfPairs;
@@ -32,6 +36,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         private UIRoot _uiRoot;
 
         public int Score => _score;
+        public int ScoreCombo => _scoreCombo;
+        public int ComboCounter => _comboCounter;
         
         public event Action<int> ScoreСhanged;
         public event Action<int> LifeСhanged;
@@ -45,12 +51,13 @@ namespace CJ.FindAPair.Modules.CoreGames
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
             GameSettingsConfig gameSettingsConfig, ISaver gameSaver, IAdsDriver adsDriver,
-            UnityAdsConfig unityAdsConfig, UIRoot uiRoot, CardsPlacer cardsPlacer)
+            UnityAdsConfig unityAdsConfig, UIRoot uiRoot, CardsPlacer cardsPlacer, ScoreObtainCutScene scoreObtainCutScene)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
             _gameSettingsConfig = gameSettingsConfig;
             _cardsPlacer = cardsPlacer;
+            _scoreObtainCutScene = scoreObtainCutScene;
             _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
@@ -132,6 +139,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 AddComboScore();
                 ScoreСhanged?.Invoke(_score);
                 _comboCounter++;
+                _scoreObtainCutScene.Play();
             }
             
             _quantityOfMatchedPairs++;
@@ -151,6 +159,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 _gameSettingsConfig.ScoreCombo[_comboCounter - 1] : 
                 _gameSettingsConfig.ScoreCombo[_gameSettingsConfig.ScoreCombo.Count - 1];
 
+            _scoreCombo = scoreCombo;
             _score += scoreCombo;
 
             foreach (var card in _cardComparator.ComparisonCards)

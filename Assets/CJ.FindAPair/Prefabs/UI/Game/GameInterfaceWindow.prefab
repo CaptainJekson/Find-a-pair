@@ -96,7 +96,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8820511760976503501}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -208,8 +208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u043C \u0440\u0435\u043A\u043B\u0430\u043C\u0443
-    \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F"
+  m_text: Let's see the advertising after passing
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed54c6ded797a4b4a857153ba95b9e30, type: 2}
   m_sharedMaterial: {fileID: -6635393379152445730, guid: ed54c6ded797a4b4a857153ba95b9e30,
@@ -237,7 +236,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.7
+  m_fontSize: 53.5
   m_fontSizeBase: 52.39
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -424,7 +423,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6599228662141156141}
   m_Father: {fileID: 8820511760976503501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1199,7 +1199,7 @@ MonoBehaviour:
   _scoreValueText: {fileID: 8820511761492961771}
   _configAdsText: {fileID: 3359735343399831578}
   _lockImage: {fileID: 5166042916614339283}
-  _gottenCoinsTransform: {fileID: 8820511760538886915}
+  _scoresIconTransform: {fileID: 8820511760538886915}
 --- !u!114 &181578812969115696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3655,7 +3655,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8820511760538886915}
-  - {fileID: 6599228662141156141}
   - {fileID: 8820511761492961770}
   - {fileID: 3068605062346225443}
   m_Father: {fileID: 1747033971436205572}
@@ -4024,7 +4023,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8820511760976503501}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -4209,7 +4208,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 8820511760976503501}
+    m_TransformParent: {fileID: 8820511760538886915}
     m_Modifications:
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
@@ -4224,7 +4223,7 @@ PrefabInstance:
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
@@ -4279,27 +4278,27 @@ PrefabInstance:
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -106
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.45
+      value: 5.45
       objectReference: {fileID: 0}
     - target: {fileID: 2640129250285070540, guid: 061a449205e23964a9034ee8b0cc9da7,
         type: 3}

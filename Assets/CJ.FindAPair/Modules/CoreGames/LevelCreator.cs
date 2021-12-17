@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.CutScene.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
-using DG.Tweening;
+using CJ.FindAPair.Modules.UI.Windows;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -12,11 +13,13 @@ namespace CJ.FindAPair.Modules.CoreGames
 {
     public class LevelCreator : MonoBehaviour
     {
-        [SerializeField] private Card card;
+        [SerializeField] private Card _card;
 
         private CardsPlacer _cardsPlacer;
         private LevelConfig _level;
         private UIRoot _uiRoot;
+        private LevelRewardCutScene _levelRewardCutScene;
+        private ScoreObtainCutScene _scoreObtainCutScene;
         private List<Card> _cards;
         private List<Card> _disableCards;
 
@@ -28,10 +31,13 @@ namespace CJ.FindAPair.Modules.CoreGames
         public event UnityAction OnLevelDeleted;
 
         [Inject]
-        public void Construct(CardsPlacer cardsPlacer, UIRoot uiRoot)
+        public void Construct(CardsPlacer cardsPlacer, UIRoot uiRoot, LevelRewardCutScene levelRewardCutScene, 
+            ScoreObtainCutScene scoreObtainCutScene)
         {
             _cardsPlacer = cardsPlacer;
             _uiRoot = uiRoot;
+            _levelRewardCutScene = levelRewardCutScene;
+            _scoreObtainCutScene = scoreObtainCutScene;
             _cards = new List<Card>();
             _disableCards = new List<Card>();
         }
@@ -46,6 +52,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             AddAllSpecialCards();
             ShuffleNumberCard();
             _cardsPlacer.DealCards(_cards);
+            _scoreObtainCutScene.PrepareCutScene();
 
             OnLevelCreated?.Invoke();
         }
@@ -64,6 +71,8 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             _cards.Clear();
             _disableCards.Clear();
+            _levelRewardCutScene.Stop();
+            _scoreObtainCutScene.Stop();
 
             OnLevelDeleted?.Invoke();
         }
@@ -76,7 +85,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private void PlaceCards()
         {
-            var cards = _cardsPlacer.PlaceCards(_level, card, transform);
+            var cards = _cardsPlacer.PlaceCards(_level, _card, transform);
 
             foreach (var card in cards)
             {

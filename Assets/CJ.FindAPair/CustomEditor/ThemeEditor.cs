@@ -8,7 +8,7 @@ namespace CJ.FindAPair.CustomEditor
 {
     public class ThemeEditor : EditorWindow
     {
-        private const int COUNT_FACES = 15;
+        private const int COUNT_FACES = 14;
         
         private ThemeConfig _themeConfig;
         
@@ -22,6 +22,7 @@ namespace CJ.FindAPair.CustomEditor
         private int _requiredLevel;
 
         private Sprite _shirtSprite;
+        private Sprite _specialCardFaceSprite;
         private Sprite[] _facesSprites = new Sprite[COUNT_FACES];
         private Sprite _backGroundSprite;
         private AudioClip _music;
@@ -61,6 +62,9 @@ namespace CJ.FindAPair.CustomEditor
             
             _shirtSprite = EditorGUILayout.ObjectField("Рубашка карты:",_shirtSprite, typeof(Sprite),
                 true) as Sprite;
+            
+            _specialCardFaceSprite = EditorGUILayout.ObjectField("Лицевая сторона специальной карты:",
+                _specialCardFaceSprite, typeof(Sprite), true) as Sprite;
 
             GUILayout.Label("Лицевые стороны карт:", EditorStyles.boldLabel);
             var index = 0;
@@ -95,7 +99,7 @@ namespace CJ.FindAPair.CustomEditor
             var asset = CreateInstance<ThemeConfig>();
             asset.SetData(_id, _name, _description);
             asset.SetPrice(_isOpensLevel, _requiredLevel, _currencyType, _price);
-            asset.SetSprites(_shirtSprite, _facesSprites, _backGroundSprite);
+            asset.SetSprites(_shirtSprite, _specialCardFaceSprite, _facesSprites, _backGroundSprite);
             asset.SetAudio(_music);
             
             AssetDatabase.CreateAsset(asset,$"Assets/CJ.FindAPair/Resources/Configs/Themes/Theme {_id}.asset");
@@ -122,6 +126,7 @@ namespace CJ.FindAPair.CustomEditor
             _requiredLevel = _themeConfig.RequiredLevel;
 
             _shirtSprite = _themeConfig.ShirtSprite;
+            _specialCardFaceSprite = _themeConfig.SpecialCardFaceSprite;
             _facesSprites = _themeConfig.FacesSprites.ToArray();
             _backGroundSprite = _themeConfig.BackGroundSprite;
             _music = _themeConfig.Music;

@@ -16,17 +16,18 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private TextMeshProUGUI _scoreValueText;
         [SerializeField] private TextMeshProUGUI _configAdsText;
         [SerializeField] private Image _lockImage;
-        [SerializeField] private Transform _gottenCoinsTransform;
+        [SerializeField] private Transform _scoresIconTransform;
 
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
         private EnergyCooldownHandler _energyCooldownHandler;
         private UIRoot _uiRoot;
-
-        public Vector3 GottenCoinsPosition => _gottenCoinsTransform.transform.position;
+        
+        public Transform ScoresIconTransform => _scoresIconTransform;
 
         [Inject]
-        public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot)
+        public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, 
+            EnergyCooldownHandler energyCooldownHandler, UIRoot uiRoot)
         {
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
@@ -42,9 +43,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ConfirmShowAds += ShowConfigAdsText;
             _gameWatcher.ThereWasAVictory += HideConfigAdsText;
             _gameWatcher.ThereWasADefeat += HideConfigAdsText;
+
             SetData();
             HideConfigAdsText();
-            
             SetIncomeLockImage();
         }
 
@@ -63,9 +64,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void OnApplicationQuit()
         {
             if (_uiRoot.GetWindow<VictoryWindow>().gameObject.activeSelf == false)
-            {
                 _energyCooldownHandler.DecreaseScore();
-            }
         }
 #else
         private void OnApplicationPause(bool pauseStatus)
@@ -85,24 +84,24 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _lockImage.gameObject.SetActive(!_gameWatcher.IsIncomeLevel());
         }
-        
+
         private void SetData()
         {
             SetLifeValue(_levelCreator.LevelConfig.Tries);
             SetScoreValue(0);
             SetTimeValue(_levelCreator.LevelConfig.Time);
         }
-    
+
         private void SetLifeValue(int value)
         {
             _lifeValueText.SetText(value.ToString());
         }
-    
+
         private void SetScoreValue(int value)
         {
             _scoreValueText.SetText(value.ToString());
         }
-    
+
         private void SetTimeValue(int value)
         {
             _timeValueText.SetText(TimeConvert(value));
@@ -119,7 +118,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _configAdsText.gameObject.SetActive(true);
         }
-        
+
         private void HideConfigAdsText()
         {
             _configAdsText.gameObject.SetActive(false);

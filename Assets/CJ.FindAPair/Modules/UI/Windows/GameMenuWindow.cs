@@ -29,6 +29,11 @@ public class GameMenuWindow : Window
     protected override void OnClose()
     {
         Time.timeScale = 1.0f;
+        
+        foreach (var card in _levelCreator.Cards)
+        {
+            card.EnableInteractable();
+        }
     }
 
     private void ChangeStateRestartNoEnergyButton()
