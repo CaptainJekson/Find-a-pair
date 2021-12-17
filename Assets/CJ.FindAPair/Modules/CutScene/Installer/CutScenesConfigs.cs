@@ -1,19 +1,23 @@
 using System.Collections.Generic;
+using CJ.FindAPair.Modules.CutScene.Configs.Base;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CutScenesConfigs", menuName = "Find a pair/CutScenesConfigsCollection")]
-public class CutScenesConfigs : ScriptableObject
+namespace CJ.FindAPair.Modules.CutScene.Installer
 {
-    [SerializeField] private List<CutSceneConfig> _configs;
-
-    public T GetConfig<T>() where T : CutSceneConfig
+    [CreateAssetMenu(fileName = "CutScenesConfigs", menuName = "Find a pair/CutScenesConfigsCollection")]
+    public class CutScenesConfigs : ScriptableObject
     {
-        foreach (var config in _configs)
+        [SerializeField] private List<CutSceneConfig> _configs;
+
+        public T GetConfig<T>() where T : CutSceneConfig
         {
-            if (config.GetType() == typeof(T))
-                return config as T;
-        }
+            foreach (var config in _configs)
+            {
+                if (config.GetType() == typeof(T))
+                    return config as T;
+            }
         
-        return null;
+            return null;
+        }
     }
 }

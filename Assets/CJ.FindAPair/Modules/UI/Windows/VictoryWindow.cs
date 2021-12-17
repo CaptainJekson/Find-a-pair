@@ -1,4 +1,5 @@
 using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CutScene.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
 using TMPro;
 using UnityEngine;

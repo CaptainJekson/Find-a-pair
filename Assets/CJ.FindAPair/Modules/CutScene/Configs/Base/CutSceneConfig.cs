@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public abstract class CutSceneConfig : ScriptableObject
+namespace CJ.FindAPair.Modules.CutScene.Configs.Base
 {
+    public abstract class CutSceneConfig : ScriptableObject
+    {
+    }
 }

@@ -1,20 +1,24 @@
+using CJ.FindAPair.Modules.CutScene.Configs.Base;
 using CJ.FindAPair.Modules.UI;
 using DG.Tweening;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ScoreObtainCutSceneConfig", 
-    menuName = "Find a pair/CutScenesConfigs/ScoreObtainCutSceneConfig")]
-public class ScoreObtainCutSceneConfig : CutSceneConfig
+namespace CJ.FindAPair.Modules.CutScene.Configs
 {
-    [SerializeField] private ItemsPoolHandler _itemsPoolHandler;
-    [SerializeField] private AwardCoin _coinPrefab;
-    [SerializeField] private int _temporaryCoinsCount;
-    [SerializeField] private float _coinTransferDuration;
-    [SerializeField] private Ease _coinTransferEase;
+    [CreateAssetMenu(fileName = "ScoreObtainCutSceneConfig", 
+        menuName = "Find a pair/CutScenesConfigs/ScoreObtainCutSceneConfig")]
+    public class ScoreObtainCutSceneConfig : CutSceneConfig
+    {
+        [SerializeField] private ItemsPoolHandler _itemsPoolHandler;
+        [SerializeField] private AwardCoin _coinPrefab;
+        [SerializeField] private int _temporaryCoinsCount;
+        [SerializeField] private float _coinTransferDuration;
+        [SerializeField] private Ease _coinTransferEase;
 
-    public ItemsPoolHandler ItemsPoolHandler => _itemsPoolHandler;
-    public AwardCoin CoinPrefab => _coinPrefab;
-    public int TemporaryCoinsCount => _temporaryCoinsCount; 
-    public float CoinTransferDuration => _coinTransferDuration;
-    public Ease CoinTransferEase => _coinTransferEase;
+        public ItemsPoolHandler ItemsPoolHandler => _itemsPoolHandler;
+        public AwardCoin CoinPrefab => _coinPrefab;
+        public int TemporaryCoinsCount => _temporaryCoinsCount; 
+        public float CoinTransferDuration => _coinTransferDuration;
+        public Ease CoinTransferEase => _coinTransferEase;
+    }
 }

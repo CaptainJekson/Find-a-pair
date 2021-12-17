@@ -1,14 +1,18 @@
+using CJ.FindAPair.Modules.CutScene.CutScenes;
 using Zenject;
 
-public class CutScenesInstaller : Installer<CutScenesInstaller>
+namespace CJ.FindAPair.Modules.CutScene.Installer
 {
-    public override void InstallBindings()
+    public class CutScenesInstaller : Installer<CutScenesInstaller>
     {
-        Container.Bind<CutScenesConfigs>()
-            .FromScriptableObjectResource("Configs/Collections/CutScenesConfigs").AsSingle();
-        Container.Bind<ScoreObtainCutScene>().AsSingle();
-        Container.Bind<ComboValueCutScene>().AsSingle();
-        Container.Bind<LevelRewardCutScene>().AsSingle();
-        Container.Bind<NextLevelCutScene>().AsSingle();
+        public override void InstallBindings()
+        {
+            Container.Bind<CutScenesConfigs>()
+                .FromScriptableObjectResource("Configs/Collections/CutScenesConfigs").AsSingle();
+            Container.Bind<ScoreObtainCutScene>().AsSingle();
+            Container.Bind<ComboValueCutScene>().AsSingle();
+            Container.Bind<LevelRewardCutScene>().AsSingle();
+            Container.Bind<NextLevelCutScene>().AsSingle();
+        }
     }
 }
