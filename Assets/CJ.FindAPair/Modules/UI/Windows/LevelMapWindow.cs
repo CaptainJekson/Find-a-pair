@@ -63,7 +63,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
-            _levelBackground.gameObject.SetActive(true);
+            if (_levelBackground != null)
+            {
+                _levelBackground.gameObject.SetActive(true);
+            }
         }
         
         public KeyValuePair<LevelLocation, LevelButton> GetCurrentLocationAndButton()

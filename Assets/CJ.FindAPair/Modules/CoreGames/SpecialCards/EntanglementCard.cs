@@ -15,6 +15,7 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             ShuffleCards();
 
             specialCard.SetMatchedState();
+            specialCard.PlayDestroySpecialCard();
         }
 
         private void ShuffleCards()

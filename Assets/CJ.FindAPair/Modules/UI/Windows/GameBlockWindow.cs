@@ -20,5 +20,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 card.DisableInteractable();
             }
         }
+
+        protected override void OnClose()
+        {
+            foreach (var card in _levelCreator.Cards)
+            {
+                card.EnableInteractable();
+            }
+        }
     }
 }
