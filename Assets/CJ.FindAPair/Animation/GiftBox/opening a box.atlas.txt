@@ -1,0 +1,286 @@
+
+opening a box.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+back bow
+  rotate: false
+  xy: 683, 1285
+  size: 139, 165
+  orig: 139, 165
+  offset: 0, 0
+  index: -1
+blue back bow
+  rotate: false
+  xy: 1906, 1525
+  size: 139, 163
+  orig: 139, 163
+  offset: 0, 0
+  index: -1
+blue bow front
+  rotate: false
+  xy: 1711, 618
+  size: 157, 131
+  orig: 157, 131
+  offset: 0, 0
+  index: -1
+blue bow middle
+  rotate: false
+  xy: 1569, 619
+  size: 150, 66
+  orig: 150, 66
+  offset: 0, 0
+  index: -1
+blue box walls
+  rotate: false
+  xy: 1495, 1519
+  size: 401, 318
+  orig: 401, 318
+  offset: 0, 0
+  index: -1
+blue box walls big
+  rotate: 180
+  xy: 1641, 1120
+  size: 404, 242
+  orig: 404, 242
+  offset: 0, 0
+  index: -1
+blue_top cover
+  rotate: 180
+  xy: 1350, 766
+  size: 431, 200
+  orig: 431, 200
+  offset: 0, 0
+  index: -1
+blue_top edge
+  rotate: 180
+  xy: 1004, 650
+  size: 433, 176
+  orig: 433, 176
+  offset: 0, 0
+  index: -1
+bottom of the box
+  rotate: false
+  xy: 1061, 745
+  size: 373, 174
+  orig: 373, 174
+  offset: 0, 0
+  index: -1
+bow front
+  rotate: false
+  xy: 618, 1914
+  size: 157, 132
+  orig: 157, 132
+  offset: 0, 0
+  index: -1
+bow middle
+  rotate: false
+  xy: 1367, 651
+  size: 151, 66
+  orig: 151, 66
+  offset: 0, 0
+  index: -1
+box walls
+  rotate: 180
+  xy: 1644, 1265
+  size: 401, 318
+  orig: 401, 318
+  offset: 0, 0
+  index: -1
+box walls big
+  rotate: false
+  xy: 1356, 1018
+  size: 404, 242
+  orig: 404, 242
+  offset: 0, 0
+  index: -1
+congrats copy
+  rotate: false
+  xy: 824, 1236
+  size: 728, 136
+  orig: 728, 136
+  offset: 0, 0
+  index: -1
+dust_1
+  rotate: false
+  xy: 1820, 1678
+  size: 193, 159
+  orig: 193, 159
+  offset: 0, 0
+  index: -1
+dust_2
+  rotate: false
+  xy: 2, 1869
+  size: 246, 178
+  orig: 246, 178
+  offset: 0, 0
+  index: -1
+flash
+  rotate: false
+  xy: 2, 1417
+  size: 930, 629
+  orig: 930, 629
+  offset: 0, 0
+  index: -1
+green back bow
+  rotate: true
+  xy: 517, 1291
+  size: 137, 164
+  orig: 137, 164
+  offset: 0, 0
+  index: -1
+green bow front
+  rotate: false
+  xy: 142, 613
+  size: 156, 130
+  orig: 156, 130
+  offset: 0, 0
+  index: -1
+green box walls
+  rotate: false
+  xy: 2, 1158
+  size: 401, 318
+  orig: 401, 318
+  offset: 0, 0
+  index: -1
+green box walls big
+  rotate: false
+  xy: 1360, 875
+  size: 401, 240
+  orig: 401, 240
+  offset: 0, 0
+  index: -1
+green_top cover
+  rotate: false
+  xy: 332, 759
+  size: 430, 198
+  orig: 430, 198
+  offset: 0, 0
+  index: -1
+green_top edge
+  rotate: false
+  xy: 553, 604
+  size: 433, 176
+  orig: 433, 176
+  offset: 0, 0
+  index: -1
+ribbon flare
+  rotate: false
+  xy: 1400, 1713
+  size: 108, 124
+  orig: 108, 124
+  offset: 0, 0
+  index: -1
+spark
+  rotate: false
+  xy: 1942, 1965
+  size: 81, 81
+  orig: 81, 81
+  offset: 0, 0
+  index: -1
+spotlight 1
+  rotate: false
+  xy: 832, 1346
+  size: 764, 491
+  orig: 764, 491
+  offset: 0, 0
+  index: -1
+spotlight 2
+  rotate: true
+  xy: 455, 912
+  size: 197, 519
+  orig: 197, 519
+  offset: 0, 0
+  index: -1
+spotlight 3
+  rotate: true
+  xy: 819, 1025
+  size: 203, 556
+  orig: 203, 556
+  offset: 0, 0
+  index: -1
+spotlight 4
+  rotate: 270
+  xy: 904, 797
+  size: 270, 450
+  orig: 270, 453
+  offset: 0, 3
+  index: -1
+spotlight 5
+  rotate: 270
+  xy: 2, 637
+  size: 288, 445
+  orig: 288, 445
+  offset: 0, 0
+  index: -1
+spotlight 6
+  rotate: true
+  xy: 405, 1100
+  size: 203, 660
+  orig: 203, 660
+  offset: 0, 0
+  index: -1
+stains_back bow
+  rotate: false
+  xy: 2, 648
+  size: 139, 165
+  orig: 139, 165
+  offset: 0, 0
+  index: -1
+stains_bow front
+  rotate: false
+  xy: 833, 1705
+  size: 157, 132
+  orig: 157, 132
+  offset: 0, 0
+  index: -1
+stains_bow middle
+  rotate: false
+  xy: 991, 620
+  size: 151, 65
+  orig: 151, 65
+  offset: 0, 0
+  index: -1
+stains_box walls big
+  rotate: false
+  xy: 43, 936
+  size: 404, 240
+  orig: 404, 240
+  offset: 0, 0
+  index: -1
+stains_top cover
+  rotate: true
+  xy: 1847, 740
+  size: 430, 198
+  orig: 430, 198
+  offset: 0, 0
+  index: -1
+stains_top edge
+  rotate: false
+  xy: 1520, 664
+  size: 432, 177
+  orig: 432, 177
+  offset: 0, 0
+  index: -1
+tape
+  rotate: false
+  xy: 783, 1839
+  size: 1157, 207
+  orig: 1157, 207
+  offset: 0, 0
+  index: -1
+top cover
+  rotate: false
+  xy: 34, 827
+  size: 433, 200
+  orig: 433, 200
+  offset: 0, 0
+  index: -1
+top edge
+  rotate: false
+  xy: 556, 682
+  size: 433, 177
+  orig: 433, 177
+  offset: 0, 0
+  index: -1
