@@ -59,6 +59,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             
             _levelBackground.gameObject.SetActive(false);
             SetStartScrollPosition();
+            
+            _uiRoot.OpenWindow<GiftBoxWindow>();
         }
 
         protected override void OnClose()
