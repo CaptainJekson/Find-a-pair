@@ -28,6 +28,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
         
         public bool StartCutSceneAtOpening { get; set; }
+        public bool IsScrollMove => Mathf.Abs(_scrollRect.velocity.y) > 100;
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,

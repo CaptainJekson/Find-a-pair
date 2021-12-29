@@ -67,19 +67,10 @@ namespace CJ.FindAPair.CustomEditor
                 _specialCardFaceSprite, typeof(Sprite), true) as Sprite;
 
             GUILayout.Label("Лицевые стороны карт:", EditorStyles.boldLabel);
-            var index = 0;
-            for (var i = 0; i < COUNT_FACES / 3; i++)
-            {
-                EditorGUILayout.BeginHorizontal();
-                
-                for (var j = 0; j < 3; j++)
-                {
-                    _facesSprites[index] = EditorGUILayout.ObjectField($"Лицо пары {index + 1}:",
-                        _facesSprites[index], typeof(Sprite), true) as Sprite;
-                    index++;
-                }
-                EditorGUILayout.EndHorizontal();
-            }
+        
+            ShowFaceCardFields(0,5);
+            ShowFaceCardFields(5,10);
+            ShowFaceCardFields(10,14);
             
             GUILayout.Label("Фон на уровне:", EditorStyles.boldLabel);
             _backGroundSprite = EditorGUILayout.ObjectField("Фон:",_backGroundSprite, typeof(Sprite),
@@ -92,6 +83,17 @@ namespace CJ.FindAPair.CustomEditor
             {
                 CreateTheme();
             }
+        }
+
+        private void ShowFaceCardFields(int startIndex, int endIndex)
+        {
+            EditorGUILayout.BeginHorizontal();
+            for (var j = startIndex; j < endIndex; j++)
+            {
+                _facesSprites[j] = EditorGUILayout.ObjectField($"Лицо пары {j + 1}:",
+                    _facesSprites[j], typeof(Sprite), true) as Sprite;
+            }
+            EditorGUILayout.EndHorizontal();
         }
 
         private void CreateTheme()
