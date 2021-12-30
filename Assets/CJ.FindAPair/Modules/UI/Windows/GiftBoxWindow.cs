@@ -1,61 +1,57 @@
-using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.CutScene.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
-using CJ.FindAPair.Modules.UI.Windows;
-using DG.Tweening;
 using Spine.Unity;
+using TMPro;
 using UnityEngine;
 using Zenject;
 
-public class GiftBoxWindow : Window
+namespace CJ.FindAPair.Modules.UI.Windows
 {
-    [SerializeField] private SkeletonGraphic _skeletonAnimation;
-    [SerializeField, SpineAnimation] private string _nameAnimationOpen;
-    
-    [SerializeField] private Transform _topItemsPanelTransform;
-    [SerializeField] private Transform _bottomItemsPanelTransform;
-    [SerializeField] private float _xAxisPanelStartPosition;
-    
-    private BlockWindow _blockWindow;
-    private PlayerResourcesWindow _playerResourcesWindow;
-    private ItemsTransferer _itemsTransferer;
-    
-    [Inject]
-    public void Construct(UIRoot uiRoot, ItemsTransferer itemsTransferer)
+    public class GiftBoxWindow : Window
     {
-        _blockWindow = uiRoot.GetWindow<BlockWindow>();
-        _playerResourcesWindow = uiRoot.GetWindow<PlayerResourcesWindow>();
-        _itemsTransferer = itemsTransferer;
-    }
-    
-    protected override void OnOpen()
-    {
-        _blockWindow.SetOpenWindow(this);
-        
-        StartGiftBoxCutScene();
-    }
+        [SerializeField] private SkeletonGraphic _skeletonAnimation;
+        [SerializeField] private Transform _topItemsPanelTransform;
+        [SerializeField] private Transform _bottomItemsPanelTransform;
+        [SerializeField] private Transform _itemsPointerTransform;
 
-    private void StartGiftBoxCutScene()
-    {
-        Sequence sequence = DOTween.Sequence();
+        [SerializeField] private TextMeshProUGUI _energyValueText;
+        [SerializeField] private TextMeshProUGUI _diamondValueText;
+        [SerializeField] private TextMeshProUGUI _coinValueText;
+        [SerializeField] private TextMeshProUGUI _detectorValueText;
+        [SerializeField] private TextMeshProUGUI _magnetValueText;
+        [SerializeField] private TextMeshProUGUI _sapperValueText;
 
-        var topPanelStartPosition = new Vector3(_xAxisPanelStartPosition, 
-            _topItemsPanelTransform.position.y, _topItemsPanelTransform.position.z);
-        var bottomPanelStartPosition = new Vector3(-_xAxisPanelStartPosition, 
-            _bottomItemsPanelTransform.position.y, _bottomItemsPanelTransform.position.z);
-        
-        sequence
-            .AppendCallback(_playerResourcesWindow.Close)
-            .AppendInterval(0.25f)
-            .AppendCallback(() =>
-            {
-                _blockWindow.Open();
-                _itemsTransferer.TransferItem(_topItemsPanelTransform, topPanelStartPosition,
-                    _topItemsPanelTransform.transform.position, 1.25f);
-                _itemsTransferer.TransferItem(_bottomItemsPanelTransform, bottomPanelStartPosition,
-                    _bottomItemsPanelTransform.transform.position, 1.25f);
-                _skeletonAnimation.gameObject.SetActive(true);
-                _skeletonAnimation.AnimationState.SetAnimation(0, _nameAnimationOpen, false).MixDuration = 0;
-                _skeletonAnimation.Update(0f);
-            });
+        private BlockWindow _blockWindow;
+        private GiftBoxCutScene _giftBoxCutScene;
+
+        public SkeletonGraphic SkeletonAnimation => _skeletonAnimation;
+        public Transform TopItemsPanelTransform => _topItemsPanelTransform;
+        public Transform BottomItemsPanelTransform => _bottomItemsPanelTransform;
+        public Transform ItemsPointerTransform => _itemsPointerTransform;
+    
+        public TextMeshProUGUI EnergyValueText => _energyValueText;
+        public TextMeshProUGUI DiamondValueText => _diamondValueText;
+        public TextMeshProUGUI CoinValueText => _coinValueText;
+        public TextMeshProUGUI DetectorValueText => _detectorValueText;
+        public TextMeshProUGUI MagnetValueText => _magnetValueText;
+        public TextMeshProUGUI SapperValueText => _sapperValueText;
+
+        [Inject]
+        public void Construct(UIRoot uiRoot, GiftBoxCutScene giftBoxCutScene)
+        {
+            _blockWindow = uiRoot.GetWindow<BlockWindow>();
+            _giftBoxCutScene = giftBoxCutScene;
+        }
+    
+        protected override void OnOpen()
+        {
+            _blockWindow.SetOpenWindow(this);
+            _giftBoxCutScene.Play();
+        }
+
+        protected override void OnClose()
+        {
+            _giftBoxCutScene.Stop();
+        }
     }
 }
