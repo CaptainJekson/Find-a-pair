@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using CJ.FindAPair.Modules.CutScene.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Windows
@@ -13,14 +15,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Transform _topItemsPanelTransform;
         [SerializeField] private Transform _bottomItemsPanelTransform;
         [SerializeField] private Transform _itemsPointerTransform;
+        [SerializeField] private List<GameResourceItem> _gameResourceItems;
+        [SerializeField] private Button _resumeButton;
 
-        [SerializeField] private TextMeshProUGUI _energyValueText;
-        [SerializeField] private TextMeshProUGUI _diamondValueText;
-        [SerializeField] private TextMeshProUGUI _coinValueText;
-        [SerializeField] private TextMeshProUGUI _detectorValueText;
-        [SerializeField] private TextMeshProUGUI _magnetValueText;
-        [SerializeField] private TextMeshProUGUI _sapperValueText;
-
+        private UIRoot _uiRoot;
         private BlockWindow _blockWindow;
         private GiftBoxCutScene _giftBoxCutScene;
 
@@ -28,17 +26,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
         public Transform TopItemsPanelTransform => _topItemsPanelTransform;
         public Transform BottomItemsPanelTransform => _bottomItemsPanelTransform;
         public Transform ItemsPointerTransform => _itemsPointerTransform;
-    
-        public TextMeshProUGUI EnergyValueText => _energyValueText;
-        public TextMeshProUGUI DiamondValueText => _diamondValueText;
-        public TextMeshProUGUI CoinValueText => _coinValueText;
-        public TextMeshProUGUI DetectorValueText => _detectorValueText;
-        public TextMeshProUGUI MagnetValueText => _magnetValueText;
-        public TextMeshProUGUI SapperValueText => _sapperValueText;
+        public List<GameResourceItem> GameResourceItems => _gameResourceItems;
+        public Button ResumeButton => _resumeButton;
 
         [Inject]
         public void Construct(UIRoot uiRoot, GiftBoxCutScene giftBoxCutScene)
         {
+            _uiRoot = uiRoot;
             _blockWindow = uiRoot.GetWindow<BlockWindow>();
             _giftBoxCutScene = giftBoxCutScene;
         }
@@ -51,7 +45,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
+            _blockWindow.Close();
             _giftBoxCutScene.Stop();
+            _resumeButton.gameObject.SetActive(false);
+            _uiRoot.OpenWindow<MenuButtonsWindow>();
         }
     }
 }

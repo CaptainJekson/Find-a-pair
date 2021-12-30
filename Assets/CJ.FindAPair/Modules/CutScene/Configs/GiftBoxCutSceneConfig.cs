@@ -27,6 +27,8 @@ namespace CJ.FindAPair.Modules.CutScene.Configs
         
         [SerializeField] private float _obtainTransferDuration;
         [SerializeField] private Ease _obtainTransferEase;
+        [SerializeField] private float _valueChangeDuration;
+        [SerializeField] private Ease _valueChangeEase;
         
         public ItemsPoolHandler ItemsPoolHandler => _itemsPoolHandler;
         public GiftItem GiftItemPrefab => _giftItemPrefab;
@@ -47,5 +49,7 @@ namespace CJ.FindAPair.Modules.CutScene.Configs
         
         public float ObtainTransferDuration => _obtainTransferDuration;
         public Ease ObtainTransferEase => _obtainTransferEase;
+        public float ValueChangeDuration => _valueChangeDuration;
+        public Ease ValueChangeEase => _valueChangeEase;
     }
 }

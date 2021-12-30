@@ -54,6 +54,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
+            _uiRoot.OpenWindow<MenuButtonsWindow>();
+            
             RefreshLevelButtons();
 
             if (StartCutSceneAtOpening)
@@ -75,6 +77,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
+            _uiRoot.CloseWindow<MenuButtonsWindow>();
+            
             if (_levelBackground != null)
             {
                 _levelBackground.gameObject.SetActive(true);

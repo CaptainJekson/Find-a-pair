@@ -18,6 +18,7 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
         private GiftBoxCutSceneConfig _cutSceneConfig;
         private ItemsTransferer _itemsTransferer;
         private LevelConfig _levelConfig;
+        private UIRoot _uiRoot;
         private ISaver _gameSaver;
 
         private Sequence _giftBoxOpenSequence;
@@ -32,17 +33,17 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
             _cutSceneConfig = cutScenesConfigs.GetConfig<GiftBoxCutSceneConfig>();
             _itemsTransferer = itemsTransferer;
             _levelConfig = levelConfigCollection.Levels[gameSaver.LoadData().CurrentLevel - 1];
+            _uiRoot = uiRoot;
             _gameSaver = gameSaver;
         }
     
         public override void Play()
         {
             _giftBoxOpenSequence = DOTween.Sequence();
-            
+
+            var itemsData = _gameSaver.LoadData().ItemsData;
             var rewardItems = _levelConfig.RewardItemsCollection.Items;
-            
-            LoadGameResources();
-            
+
             InitializeItemsPool(_cutSceneConfig.ItemsPoolHandler, _cutSceneConfig.GiftItemPrefab.gameObject, 
                 _giftBoxWindow.ItemsPointerTransform, rewardItems.Count);
             
@@ -53,6 +54,7 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
             
             _giftBoxOpenSequence
                 .AppendCallback(_playerResourcesWindow.Close)
+                .AppendCallback(_uiRoot.CloseWindow<MenuButtonsWindow>)
                 .AppendInterval(_cutSceneConfig.DelayCutSceneStart)
                 .AppendCallback(() =>
                 {
@@ -75,31 +77,33 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
                         switch (rewardItems[i].Type)
                         {
                             case ItemTypes.Energy:
-                                TransferItemToPanel(_giftItems[i], 
-                                    _giftBoxWindow.EnergyValueText.gameObject.transform.position);
+                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Energy), itemsData.Energy);
                                 break;
                             case ItemTypes.Diamond:
-                                TransferItemToPanel(_giftItems[i], 
-                                    _giftBoxWindow.DiamondValueText.gameObject.transform.position);
+                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Diamond), itemsData.Diamond);
                                 break;
                             case ItemTypes.Coin:
-                                TransferItemToPanel(_giftItems[i], 
-                                    _giftBoxWindow.CoinValueText.gameObject.transform.position);
+                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Coin), itemsData.Coins);
                                 break;
                             case ItemTypes.DetectorBooster:
-                                TransferItemToPanel(_giftItems[i], 
-                                    _giftBoxWindow.DetectorValueText.gameObject.transform.position);
+                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.DetectorBooster), itemsData.DetectorBooster);
                                 break;
                             case ItemTypes.MagnetBooster:
-                                TransferItemToPanel(_giftItems[i], 
-                                    _giftBoxWindow.MagnetValueText.gameObject.transform.position);
+                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.MagnetBooster), itemsData.MagnetBooster);
                                 break;
                             case ItemTypes.SapperBooster:
-                                TransferItemToPanel(_giftItems[i], 
-                                    _giftBoxWindow.SapperValueText.gameObject.transform.position);
+                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.SapperBooster), itemsData.SapperBooster);
                                 break;
                         }
                     }
+                })
+                .AppendInterval(_cutSceneConfig.ObtainTransferDuration)
+                .AppendCallback(() =>
+                {
+                    foreach (var item in _giftItems)
+                        item.gameObject.SetActive(false);
+                    
+                    _giftBoxWindow.ResumeButton.gameObject.SetActive(true);
                 });
         }
 
@@ -110,8 +114,8 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
             _giftBoxWindow.TopItemsPanelTransform.gameObject.SetActive(false);
             _giftBoxWindow.BottomItemsPanelTransform.gameObject.SetActive(false);
             _giftBoxWindow.SkeletonAnimation.gameObject.SetActive(false);
-            _cutSceneConfig.ItemsPoolHandler.DestroyItemsPool(ItemsPool);
             _giftItems.Clear();
+            _cutSceneConfig.ItemsPoolHandler.DestroyItemsPool(ItemsPool);
         }
 
         protected override void InitializeItemsPool(ItemsPoolHandler itemsPoolHandler, GameObject item, 
@@ -179,41 +183,30 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
             }
         }
         
-        private void TransferItemToPanel(GiftItem item, Vector3 endPosition)
+        private void ObtainItem(GiftItem giftItem, GameResourceItem gameResourceItem, int endValue)
         {
-            _itemsTransferer.TransferItem(item.gameObject.transform, item.transform.position, endPosition, 
-                _cutSceneConfig.ObtainTransferDuration, _cutSceneConfig.ObtainTransferEase);
+            Sequence obtainItemSequence = DOTween.Sequence();
+
+            obtainItemSequence
+                .AppendCallback(() =>
+                {
+                    _itemsTransferer.TransferItem(giftItem.gameObject.transform, giftItem.transform.position,
+                        gameResourceItem.transform.position, _cutSceneConfig.ObtainTransferDuration,
+                        _cutSceneConfig.ObtainTransferEase);
+                    gameResourceItem.SmoothChangeValue(endValue, _cutSceneConfig.ValueChangeDuration,
+                        _cutSceneConfig.ValueChangeEase);
+                });
         }
 
-        private void LoadGameResources()
+        private GameResourceItem GetResourceItem(ItemTypes itemType)
         {
-            var saveData = _gameSaver.LoadData().ItemsData;
-            var itemsCollection = _levelConfig.RewardItemsCollection.Items;
-            
-            foreach (var item in itemsCollection)
+            foreach (var item in _giftBoxWindow.GameResourceItems)
             {
-                switch (item.Type)
-                {
-                    case ItemTypes.Coin:
-                        _giftBoxWindow.CoinValueText.SetText((saveData.Coins - item.Count).ToString());
-                        break;
-                    case ItemTypes.Diamond:
-                        _giftBoxWindow.DiamondValueText.SetText((saveData.Diamond - item.Count).ToString());
-                        break;
-                    case ItemTypes.Energy:
-                        _giftBoxWindow.EnergyValueText.SetText((saveData.Energy - item.Count).ToString());
-                        break;
-                    case ItemTypes.DetectorBooster:
-                        _giftBoxWindow.DetectorValueText.SetText((saveData.DetectorBooster - item.Count).ToString());
-                        break;
-                    case ItemTypes.MagnetBooster:
-                        _giftBoxWindow.MagnetValueText.SetText((saveData.MagnetBooster - item.Count).ToString());
-                        break;
-                    case ItemTypes.SapperBooster:
-                        _giftBoxWindow.SapperValueText.SetText((saveData.SapperBooster - item.Count).ToString());
-                        break;
-                }
+                if (item.Type == itemType)
+                    return item;
             }
+
+            return null;
         }
     }
 }

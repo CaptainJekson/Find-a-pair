@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   _giftItemPrefab: {fileID: -3607114115023670204, guid: a1bb9a72e9f29834a976f867f435aaab,
     type: 3}
-  _delayCutSceneStart: 0.25
+  _delayCutSceneStart: 0.125
   _xAxisPanelIndent: 1000
   _panelsTransferDuration: 1
   _nameAnimationOpen: open_1
@@ -24,8 +24,10 @@ MonoBehaviour:
   _openAnimationDuration: 3.8
   _paddingModifier: 78
   _intervalBetweenGiftsTransfers: 0.125
-  _showingDuration: 2
+  _showingDuration: 0.5
   _showingPointTransferDuration: 0.5
   _showingPointTransferEase: 0
-  _obtainTransferDuration: 0.5
+  _obtainTransferDuration: 0.75
   _obtainTransferEase: 0
+  _valueChangeDuration: 1.5
+  _valueChangeEase: 0
