@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
-using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScene.Configs;
 using CJ.FindAPair.Modules.CutScene.Installer;
 using CJ.FindAPair.Modules.UI.Installer;
@@ -12,29 +11,29 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
 {
     public class GiftBoxCutScene : Base.CutScene
     {
+        private UIRoot _uiRoot;
+        private ISaver _gameSaver;
+        private GiftBoxCutSceneConfig _cutSceneConfig;
         private PlayerResourcesWindow _playerResourcesWindow;
         private BlockWindow _blockWindow;
         private GiftBoxWindow _giftBoxWindow;
-        private GiftBoxCutSceneConfig _cutSceneConfig;
         private ItemsTransferer _itemsTransferer;
-        private LevelConfig _levelConfig;
-        private UIRoot _uiRoot;
-        private ISaver _gameSaver;
-
+        private LevelCreator _levelCreator;
+        
         private Sequence _giftBoxOpenSequence;
         private List<GiftItem> _giftItems;
 
-        public GiftBoxCutScene(UIRoot uiRoot, CutScenesConfigs cutScenesConfigs, ItemsTransferer itemsTransferer,
-            LevelConfigCollection levelConfigCollection, ISaver gameSaver)
+        public GiftBoxCutScene(UIRoot uiRoot, ISaver gameSaver, LevelCreator levelCreator,
+            CutScenesConfigs cutScenesConfigs, ItemsTransferer itemsTransferer)
         {
+            _uiRoot = uiRoot;
+            _gameSaver = gameSaver;
+            _cutSceneConfig = cutScenesConfigs.GetConfig<GiftBoxCutSceneConfig>();
             _playerResourcesWindow = uiRoot.GetWindow<PlayerResourcesWindow>();
             _blockWindow = uiRoot.GetWindow<BlockWindow>();
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
-            _cutSceneConfig = cutScenesConfigs.GetConfig<GiftBoxCutSceneConfig>();
             _itemsTransferer = itemsTransferer;
-            _levelConfig = levelConfigCollection.Levels[gameSaver.LoadData().CurrentLevel - 1];
-            _uiRoot = uiRoot;
-            _gameSaver = gameSaver;
+            _levelCreator = levelCreator;
         }
     
         public override void Play()
@@ -42,7 +41,7 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
             _giftBoxOpenSequence = DOTween.Sequence();
 
             var itemsData = _gameSaver.LoadData().ItemsData;
-            var rewardItems = _levelConfig.RewardItemsCollection.Items;
+            var rewardItems = _levelCreator.LevelConfig.RewardItemsCollection.Items;
 
             InitializeItemsPool(_cutSceneConfig.ItemsPoolHandler, _cutSceneConfig.GiftItemPrefab.gameObject, 
                 _giftBoxWindow.ItemsPointerTransform, rewardItems.Count);
@@ -111,6 +110,7 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
         {
             _giftBoxOpenSequence.Kill();
             _playerResourcesWindow.Open();
+            _giftBoxWindow.SkeletonAnimation.AnimationState.ClearTracks();
             _giftBoxWindow.TopItemsPanelTransform.gameObject.SetActive(false);
             _giftBoxWindow.BottomItemsPanelTransform.gameObject.SetActive(false);
             _giftBoxWindow.SkeletonAnimation.gameObject.SetActive(false);

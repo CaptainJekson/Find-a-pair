@@ -42,7 +42,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameSaver = gameSaver;
             _nextLevelCutScene = nextLevelCutScene;
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
-
+            
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
 
@@ -60,7 +60,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
             if (StartCutSceneAtOpening)
             {
-                if (_levelConfigCollection.Levels[_gameSaver.LoadData().CurrentLevel - 2].RewardItemsCollection)
+                if (_levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
                 {
                     _giftBoxWindow.Open();
                     StartCoroutine(WaitForNextLevelCutScene());
@@ -70,7 +70,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
                     _nextLevelCutScene.Play();
                 }
             }
-
+            
             _levelBackground.gameObject.SetActive(false);
             SetStartScrollPosition();
         }

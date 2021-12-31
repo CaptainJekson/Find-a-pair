@@ -12,15 +12,15 @@ public class GameResourceItem : MonoBehaviour
     [SerializeField] private ItemTypes _type;
 
     private ISaver _gameSaver;
-    private LevelConfig _levelConfig;
+    private LevelCreator _levelCreator;
     
     public ItemTypes Type => _type;
 
     [Inject]
-    public void Construct(ISaver gameSaver, LevelConfigCollection levelConfigCollection)
+    public void Construct(ISaver gameSaver, LevelCreator levelCreator)
     {
         _gameSaver = gameSaver;
-        _levelConfig = levelConfigCollection.Levels[gameSaver.LoadData().CurrentLevel - 1];
+        _levelCreator = levelCreator;
     }
 
     private void OnEnable()
@@ -36,7 +36,7 @@ public class GameResourceItem : MonoBehaviour
     private void SetItemValue()
     {
         var saveData = _gameSaver.LoadData().ItemsData;
-        var itemsCollection = _levelConfig.RewardItemsCollection.Items;
+        var itemsCollection = _levelCreator.LevelConfig.RewardItemsCollection.Items;
         
         switch (_type)
         {
