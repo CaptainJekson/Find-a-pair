@@ -24,6 +24,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private LevelBackground _levelBackground;
         private ISaver _gameSaver;
+        private GameWatcher _gameWatcher;
         private NextLevelCutScene _nextLevelCutScene;
         private GiftBoxWindow _giftBoxWindow;
 
@@ -33,13 +34,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
-            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene)
+            LevelBackground levelBackground, ISaver gameSaver, GameWatcher gameWatcher, NextLevelCutScene nextLevelCutScene)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
             _uiRoot = uiRoot;
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
+            _gameWatcher = gameWatcher;
             _nextLevelCutScene = nextLevelCutScene;
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
             
@@ -60,7 +62,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
             if (StartCutSceneAtOpening)
             {
-                if (_levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
+                if (CheckCompletedLevels() && 
+                    _levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
                 {
                     _giftBoxWindow.Open();
                     StartCoroutine(WaitForNextLevelCutScene());
@@ -173,6 +176,21 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             yield return new WaitWhile(() => _giftBoxWindow.gameObject.activeSelf);
             _nextLevelCutScene.Play();
+        }
+
+        private bool CheckCompletedLevels()
+        {
+            var completedLevels = _gameSaver.LoadData().CompletedLevels;
+
+            foreach (var completedLevel in completedLevels)
+            {
+                if (completedLevel == _levelCreator.LevelConfig.LevelNumber - 1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }

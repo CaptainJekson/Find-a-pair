@@ -40,11 +40,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnOpen()
         {
             _blockWindow.SetOpenWindow(this);
+            _blockWindow.CloseButtonInteractable(false);
             _giftBoxCutScene.Play();
         }
 
         protected override void OnClose()
         {
+            _blockWindow.CloseButtonInteractable(true);
             _blockWindow.Close();
             _giftBoxCutScene.Stop();
             _resumeButton.gameObject.SetActive(false);

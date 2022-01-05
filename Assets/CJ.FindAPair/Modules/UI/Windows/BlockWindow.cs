@@ -1,3 +1,5 @@
+using UnityEngine.UI;
+
 namespace CJ.FindAPair.Modules.UI.Windows
 {
     public class BlockWindow : Window
@@ -7,6 +9,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
         public void SetOpenWindow(Window window)
         {
             _openWindow = window;
+        }
+        
+        public void CloseButtonInteractable(bool condition)
+        {
+            GetComponent<Button>().interactable = condition;
         }
         
         protected override void OnCloseButtonClick()

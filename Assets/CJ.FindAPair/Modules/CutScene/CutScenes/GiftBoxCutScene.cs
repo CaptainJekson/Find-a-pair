@@ -67,7 +67,11 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
                         .AddAnimation(1, _cutSceneConfig.NameAnimationIdle, true, _cutSceneConfig.OpenAnimationDuration);
                 })
                 .AppendInterval(_cutSceneConfig.OpenAnimationDuration)
-                .AppendCallback(ShowGifts)
+                .AppendCallback(() =>
+                {
+                    ShowGifts();
+                    _giftBoxWindow.ResumeButton.gameObject.SetActive(true);
+                })
                 .AppendInterval(_cutSceneConfig.ObtainTransferDuration * _giftItems.Count + _cutSceneConfig.ShowingDuration)
                 .AppendCallback(() =>
                 {
@@ -101,8 +105,6 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
                 {
                     foreach (var item in _giftItems)
                         item.gameObject.SetActive(false);
-                    
-                    _giftBoxWindow.ResumeButton.gameObject.SetActive(true);
                 });
         }
 
