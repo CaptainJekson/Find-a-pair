@@ -24,24 +24,23 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private LevelBackground _levelBackground;
         private ISaver _gameSaver;
-        private GameWatcher _gameWatcher;
         private NextLevelCutScene _nextLevelCutScene;
         private GiftBoxWindow _giftBoxWindow;
 
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
         
         public bool StartCutSceneAtOpening { get; set; }
+        public bool AbleGiftObtainAtOpen { get; set; }
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
-            LevelBackground levelBackground, ISaver gameSaver, GameWatcher gameWatcher, NextLevelCutScene nextLevelCutScene)
+            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
             _uiRoot = uiRoot;
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
-            _gameWatcher = gameWatcher;
             _nextLevelCutScene = nextLevelCutScene;
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
             
@@ -59,21 +58,22 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             
             RefreshLevelButtons();
+            
+            if (AbleGiftObtainAtOpen && 
+                _levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
+            {
+                _giftBoxWindow.Open();
+            }
 
             if (StartCutSceneAtOpening)
             {
-                if (CheckCompletedLevels() && 
-                    _levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
-                {
-                    _giftBoxWindow.Open();
+                if (_giftBoxWindow.gameObject.activeSelf)
                     StartCoroutine(WaitForNextLevelCutScene());
-                }
                 else
-                {
                     _nextLevelCutScene.Play();
-                }
             }
             
+            AbleGiftObtainAtOpen = false;
             _levelBackground.gameObject.SetActive(false);
             SetStartScrollPosition();
         }
@@ -176,21 +176,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             yield return new WaitWhile(() => _giftBoxWindow.gameObject.activeSelf);
             _nextLevelCutScene.Play();
-        }
-
-        private bool CheckCompletedLevels()
-        {
-            var completedLevels = _gameSaver.LoadData().CompletedLevels;
-
-            foreach (var completedLevel in completedLevels)
-            {
-                if (completedLevel == _levelCreator.LevelConfig.LevelNumber - 1)
-                {
-                    return false;
-                }
-            }
-
-            return true;
         }
     }
 }

@@ -67,12 +67,10 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
                         .AddAnimation(1, _cutSceneConfig.NameAnimationIdle, true, _cutSceneConfig.OpenAnimationDuration);
                 })
                 .AppendInterval(_cutSceneConfig.OpenAnimationDuration)
-                .AppendCallback(() =>
-                {
-                    ShowGifts();
-                    _giftBoxWindow.ResumeButton.gameObject.SetActive(true);
-                })
-                .AppendInterval(_cutSceneConfig.ObtainTransferDuration * _giftItems.Count + _cutSceneConfig.ShowingDuration)
+                .AppendCallback(ShowGifts)
+                .AppendInterval(_cutSceneConfig.ObtainTransferDuration * _giftItems.Count)
+                .AppendCallback(() => _giftBoxWindow.ResumeButton.gameObject.SetActive(true))
+                .AppendInterval(_cutSceneConfig.ShowingDuration)
                 .AppendCallback(() =>
                 {
                     for (int i = 0; i < _giftItems.Count; i++)
