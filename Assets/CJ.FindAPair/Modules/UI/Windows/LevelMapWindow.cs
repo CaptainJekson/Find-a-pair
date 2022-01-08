@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
-using CJ.FindAPair.Modules.CutScene.CutScenes;
+using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
 using DG.Tweening;
@@ -24,16 +24,19 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelBackground _levelBackground;
         private ISaver _gameSaver;
         private NextLevelCutScene _nextLevelCutScene;
-        
+        private GiftBoxWindow _giftBoxWindow;
+
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
         
         public bool StartCutSceneAtOpening { get; set; }
+
+        public bool AbleGiftObtainAtOpen { get; set; }
+
         public bool IsScrollMove => Mathf.Abs(_scrollRect.velocity.y) > 100;
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
-            LevelBackground levelBackground, ISaver gameSaver, GameWatcher gameWatcher, 
-            NextLevelCutScene nextLevelCutScene)
+            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
@@ -41,6 +44,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
             _nextLevelCutScene = nextLevelCutScene;
+            _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
             
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
@@ -53,10 +57,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
+            _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
+            _uiRoot.OpenWindow<MenuButtonsWindow>();
+            
             RefreshLevelButtons();
             
-            if(StartCutSceneAtOpening)
-                _nextLevelCutScene.Play();
+            TryStartCutScenes();
+            AbleGiftObtainAtOpen = false;
             
             _levelBackground.gameObject.SetActive(false);
             SetStartScrollPosition();
@@ -64,6 +71,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
+            _giftBoxWindow.WindowClosed -= TryStartNextLevelCutScene;
+            _uiRoot.CloseWindow<MenuButtonsWindow>();
+            
             if (_levelBackground != null)
             {
                 _levelBackground.gameObject.SetActive(true);
@@ -152,6 +162,25 @@ namespace CJ.FindAPair.Modules.UI.Windows
             }
 
             return levelButtons;
+        }
+
+        private void TryStartCutScenes()
+        {
+            if (AbleGiftObtainAtOpen && 
+                _levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
+            {
+                _giftBoxWindow.Open();
+            }
+            else
+            {
+                TryStartNextLevelCutScene();
+            }
+        }
+
+        private void TryStartNextLevelCutScene()
+        {
+            if (StartCutSceneAtOpening)
+                _nextLevelCutScene.Play();
         }
     }
 }

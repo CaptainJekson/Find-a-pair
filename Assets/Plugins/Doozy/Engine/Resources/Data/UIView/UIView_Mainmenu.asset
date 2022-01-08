@@ -15,10 +15,12 @@ MonoBehaviour:
   CategoryName: Main menu
   DatabaseType: 2
   Names:
+  - EnergyBoostOfferWindow
   - Levels Selected Screen
   - Main start Screen
   - Player resources Window
   - Preview level screen
-  - ThemeWindow
   - SettingsWindow
-  - EnergyBoostOfferWindow
+  - ThemeWindow
+  - GiftBoxWindow
+  - MenuButtonsWindow
