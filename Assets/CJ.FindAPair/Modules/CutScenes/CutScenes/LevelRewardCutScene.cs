@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 {
-    public class LevelRewardCutScene : CutScene
+    public class LevelRewardCutScene : AbstractCutScene
     {
         private GameWatcher _gameWatcher;
         private ISaver _gameSaver;

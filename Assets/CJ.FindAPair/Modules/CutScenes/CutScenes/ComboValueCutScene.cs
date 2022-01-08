@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 {
-    public class ComboValueCutScene : CutScene
+    public class ComboValueCutScene : AbstractCutScene
     {
         private GameWatcher _gameWatcher;
         private CardComparator _cardComparator;

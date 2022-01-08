@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 {
-    public class GiftBoxCutScene : CutScene
+    public class GiftBoxCutScene : AbstractCutScene
     {
         private UIRoot _uiRoot;
         private ISaver _gameSaver;

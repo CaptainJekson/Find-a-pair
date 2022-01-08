@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CutScenes.Configs;
-using CJ.FindAPair.Modules.CutScenes.Installer;
 using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
+using CJ.FindAPair.Modules.CutScenes.Installer;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 {
-    public class ScoreObtainCutScene : CutScene
+    public class ScoreObtainCutScene : AbstractCutScene
     {
         private GameWatcher _gameWatcher;
         private ItemsTransferer _itemsTransferer;

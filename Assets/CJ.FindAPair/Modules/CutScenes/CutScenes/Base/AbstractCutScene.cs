@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Base
 {
-    public abstract class CutScene
+    public abstract class AbstractCutScene
     {
         protected List<GameObject> ItemsPool;
 

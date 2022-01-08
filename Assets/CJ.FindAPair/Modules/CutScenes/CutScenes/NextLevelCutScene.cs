@@ -7,7 +7,7 @@ using DG.Tweening;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 {
-    public class NextLevelCutScene : CutScene
+    public class NextLevelCutScene : AbstractCutScene
     {
         private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;
