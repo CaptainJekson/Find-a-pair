@@ -146,6 +146,8 @@ MonoBehaviour:
   _steps:
   - {fileID: 7521029631831623092}
   - {fileID: 8424136435581032695}
+  _tapZoneViewOneCard: {fileID: 365726667983566911}
+  _tapZoneOneCard: {fileID: 365726668592138989}
 --- !u!1001 &2302745159337213457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283,6 +285,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490f51a53e8baeb4a8b68a31c87636a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &365726667983566911 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1938708320466978350, guid: c64e49d2f11ccae408745aa7b8f91c70,
+    type: 3}
+  m_PrefabInstance: {fileID: 2302745159337213457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &365726668592138989 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1938708320942109948, guid: c64e49d2f11ccae408745aa7b8f91c70,
+    type: 3}
+  m_PrefabInstance: {fileID: 2302745159337213457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5819957769918383659
 PrefabInstance:
   m_ObjectHideFlags: 0

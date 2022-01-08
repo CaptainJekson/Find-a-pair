@@ -1,4 +1,3 @@
-using CJ.FindAPair.Modules.CutScene.CutScenes;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using Zenject;
 
@@ -14,8 +13,8 @@ namespace CJ.FindAPair.Modules.CutScenes.Installer
             Container.Bind<ComboValueCutScene>().AsSingle();
             Container.Bind<LevelRewardCutScene>().AsSingle();
             Container.Bind<NextLevelCutScene>().AsSingle();
-            Container.Bind<TutorialDriver>().AsSingle();
             Container.Bind<GiftBoxCutScene>().AsSingle();
+            Container.Bind<TutorialDriver>().AsSingle();
         }
     }
 }

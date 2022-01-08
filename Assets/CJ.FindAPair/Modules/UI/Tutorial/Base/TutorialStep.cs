@@ -20,15 +20,19 @@ namespace CJ.FindAPair.Modules.UI.Tutorial.Base
         
         private void Awake()
         {
+            if (_isTimedStep == false)
+            {
+                _nextStepButton.onClick.AddListener(OnButtonClick);
+            }
+        }
+
+        private void OnEnable()
+        {
             if (_isTimedStep)
             {
                 var sequence = DOTween.Sequence();
                 sequence.AppendInterval(_timeNextStep);
                 sequence.AppendCallback(_tutorialScreen.ShowNextStep);
-            }
-            else
-            {
-                _nextStepButton.onClick.AddListener(OnButtonClick);
             }
         }
 

@@ -18,10 +18,6 @@ namespace CJ.FindAPair.Modules.UI.Installer
             {
                 screen.gameObject.SetActive(false);
             }
-
-            // var sequence = DOTween.Sequence();
-            // sequence.AppendInterval(0.0f);
-            // sequence.AppendCallback(ShowTutorial<FirstTutorialScreen>); //TODO test
         }
 
         public void ShowTutorial<T>(float delay = 0.0f) where T : TutorialScreen
@@ -36,6 +32,19 @@ namespace CJ.FindAPair.Modules.UI.Installer
                     break;
                 }
             });
+        }
+
+        public T GetScreen<T>() where T : TutorialScreen
+        {
+            foreach (var window in _tutorialScreens)
+            {
+                if (window.GetType() == typeof(T))
+                {
+                    return window as T;
+                }
+            }
+
+            return null;
         }
 
         public void SetActionForStep<T>(Action action, int stepIndex) where T : TutorialScreen
