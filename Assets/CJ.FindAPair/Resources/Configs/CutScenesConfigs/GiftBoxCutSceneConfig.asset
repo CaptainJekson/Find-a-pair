@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ab1ffccb9952b4cb2812e32dacb86a, type: 3}
+  m_Name: GiftBoxCutSceneConfig
+  m_EditorClassIdentifier: 
+  _itemsPoolHandler: {fileID: 6870422384542442176, guid: 13a57d8a4fbbca443bc2f4b7bec5a01e,
+    type: 3}
+  _giftItemPrefab: {fileID: -3607114115023670204, guid: a1bb9a72e9f29834a976f867f435aaab,
+    type: 3}
+  _delayCutSceneStart: 0.125
+  _xAxisPanelIndent: 1000
+  _panelsTransferDuration: 1
+  _nameAnimationOpen: open_1
+  _nameAnimationIdle: idle_1
+  _openAnimationDuration: 3.8
+  _paddingModifier: 78
+  _intervalBetweenGiftsTransfers: 0.125
+  _showingDuration: 0.5
+  _showingPointTransferDuration: 0.5
+  _showingPointTransferEase: 0
+  _obtainTransferDuration: 0.75
+  _obtainTransferEase: 0
+  _valueChangeDuration: 1.5
+  _valueChangeEase: 0

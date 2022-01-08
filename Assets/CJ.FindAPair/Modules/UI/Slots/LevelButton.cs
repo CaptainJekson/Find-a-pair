@@ -15,6 +15,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
         [SerializeField] private TextMeshProUGUI _levelNumberText;
         [SerializeField] private Image _lockIcon;
         [SerializeField] private Image _coinIcon;
+        [SerializeField] private Image _boxIcon;
         [SerializeField] private Sprite _levelStandardSprite;
         [SerializeField] private Sprite _levelHardSprite;
         [SerializeField] private Sprite _levelLockSprite;
@@ -68,7 +69,6 @@ namespace CJ.FindAPair.Modules.UI.Slots
             _levelNumberText.gameObject.SetActive(true);
             _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
             
-            
             var sequence = DOTween.Sequence();
             sequence.Append(_lockIcon.transform.DOMoveY(_lockIcon.transform.position.y - 100.0f, 0.5f))
                 .SetEase(Ease.InCirc);
@@ -92,6 +92,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
             var currentLevel = _gameSaver.LoadData().CurrentLevel;
 
             SetIncomeLevel();
+            TrySetGiftIcon();
 
             if (currentLevel >= _levelConfig.LevelNumber || _levelConfig.LevelNumber == 1)
             {
@@ -122,7 +123,20 @@ namespace CJ.FindAPair.Modules.UI.Slots
             {
                 if (completedLevel == _levelConfig.LevelNumber)
                 {
-                    _coinIcon.gameObject.SetActive(false);    
+                    _coinIcon.gameObject.SetActive(false);
+                }
+            }
+        }
+        
+        private void TrySetGiftIcon()
+        {
+            var completedLevels = _gameSaver.LoadData().CompletedLevels;
+
+            foreach (var completedLevel in completedLevels)
+            {
+                if (_levelConfig.IsHard == false || completedLevel == _levelConfig.LevelNumber)
+                {
+                    _boxIcon.gameObject.SetActive(false);
                 }
             }
         }

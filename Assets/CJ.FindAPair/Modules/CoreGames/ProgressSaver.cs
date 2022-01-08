@@ -9,6 +9,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private LevelCreator _levelCreator;
         private UIRoot _uiRoot;
         private ISaver _gameSaver;
+        private LevelMapWindow _levelMapWindow;
 
         public ProgressSaver(GameWatcher gameWatcher, LevelCreator levelCreator, UIRoot uiRoot, ISaver gameSaver)
         {
@@ -16,6 +17,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelCreator = levelCreator;
             _uiRoot = uiRoot;
             _gameSaver = gameSaver;
+            _levelMapWindow = _uiRoot.GetWindow<LevelMapWindow>();
         }
 
         public void SaveProgress()
@@ -33,13 +35,13 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
             {
                 saveData.CurrentLevel++;
-                _uiRoot.GetWindow<LevelMapWindow>().StartCutSceneAtOpening = true;
+                _levelMapWindow.StartCutSceneAtOpening = true;
             }
 
             _gameSaver.SaveData(saveData);
         }
         
-        public void TrySaveExtraRewardItems()
+        private void TrySaveExtraRewardItems()
         {
             if (_levelCreator.LevelConfig.RewardItemsCollection)
             {
@@ -73,6 +75,8 @@ namespace CJ.FindAPair.Modules.CoreGames
 
                 _gameSaver.SaveData(saveData);
             }
+
+            _levelMapWindow.AbleGiftObtainAtOpen = true;
         }
     }
 }

@@ -1,5 +1,5 @@
 using CJ.FindAPair.Modules.CoreGames.Installer;
-using CJ.FindAPair.Modules.CutScene.Installer;
+using CJ.FindAPair.Modules.CutScenes.Installer;
 using CJ.FindAPair.Modules.Meta.Installer;
 using CJ.FindAPair.Modules.Service.Installer;
 using CJ.FindAPair.Modules.UI.Installer;
