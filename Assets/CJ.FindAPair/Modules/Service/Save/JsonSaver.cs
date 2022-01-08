@@ -13,6 +13,8 @@ namespace CJ.FindAPair.Modules.Service.Save
         private string _path;
 
         private ServerConnector _serverConnector;
+
+        public event Action SaveCreated;
         
         public JsonSaver(ServerConnector serverConnector)
         {
@@ -77,6 +79,7 @@ namespace CJ.FindAPair.Modules.Service.Save
             _jsonSaveData = JsonUtility.ToJson(_saveData);
             File.WriteAllText(_path, _jsonSaveData);
             SaveData(_saveData);
+            SaveCreated?.Invoke();
         }
         
         private void OnCompleteLoadSave(string jsonSaveData)

@@ -113,7 +113,7 @@ ParticleSystem:
       m_PostInfinity: 2
       m_RotationOrder: 4
   moveWithTransform: 1
-  moveWithCustomTransform: {fileID: 0}
+  moveWithCustomTransform: {fileID: 4078555124891004468}
   scalingMode: 0
   randomSeed: 0
   InitialModule:
@@ -3992,7 +3992,7 @@ ParticleSystem:
     textureMode: 0
     ribbonCount: 1
     shadowBias: 0.5
-    worldSpace: 0
+    worldSpace: 1
     dieWithParticles: 1
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0
@@ -4998,7 +4998,7 @@ ParticleSystem:
       m_PostInfinity: 2
       m_RotationOrder: 4
   moveWithTransform: 1
-  moveWithCustomTransform: {fileID: 0}
+  moveWithCustomTransform: {fileID: 4078555124891004468}
   scalingMode: 0
   randomSeed: 0
   InitialModule:
@@ -9883,7 +9883,7 @@ ParticleSystem:
       m_PostInfinity: 2
       m_RotationOrder: 4
   moveWithTransform: 1
-  moveWithCustomTransform: {fileID: 0}
+  moveWithCustomTransform: {fileID: 4078555124891004468}
   scalingMode: 0
   randomSeed: 0
   InitialModule:
