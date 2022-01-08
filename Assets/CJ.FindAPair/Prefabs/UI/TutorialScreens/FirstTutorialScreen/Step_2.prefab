@@ -17,6 +17,31 @@ PrefabInstance:
       propertyPath: _fadeShowDuration
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 741176892971460898, guid: a8980955ebed09f4ca927cf27496f7ce,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 741176892971460898, guid: a8980955ebed09f4ca927cf27496f7ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 741176892971460898, guid: a8980955ebed09f4ca927cf27496f7ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 741176892971460898, guid: a8980955ebed09f4ca927cf27496f7ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 741176892971460898, guid: a8980955ebed09f4ca927cf27496f7ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2822850091083038650, guid: a8980955ebed09f4ca927cf27496f7ce,
         type: 3}
       propertyPath: m_Pivot.x
@@ -126,6 +151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Step_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119392798124559428, guid: a8980955ebed09f4ca927cf27496f7ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.683411
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8980955ebed09f4ca927cf27496f7ce, type: 3}

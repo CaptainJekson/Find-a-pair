@@ -7,6 +7,8 @@ namespace CJ.FindAPair.Modules.UI.Tutorial.Base
     {
         [SerializeField] private List<TutorialStep> _steps;
 
+        public List<TutorialStep> Steps => _steps;
+
         private void Awake()
         {
             foreach (var step in _steps)

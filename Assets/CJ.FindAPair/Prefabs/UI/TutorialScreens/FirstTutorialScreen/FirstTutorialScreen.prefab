@@ -70,7 +70,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 10000
+  m_SortingOrder: 10001
   m_TargetDisplay: 0
 --- !u!225 &9204391927927893871
 CanvasGroup:

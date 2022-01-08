@@ -62,6 +62,7 @@ namespace CJ.FindAPair.Modules.UI.Tutorial.Base
         {
             _tutorialScreen.ShowNextStep();
             _action?.Invoke();
+            _action = null;
         }
     }
 }

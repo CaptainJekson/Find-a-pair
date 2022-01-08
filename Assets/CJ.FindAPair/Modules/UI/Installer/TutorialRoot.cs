@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using CJ.FindAPair.Modules.UI.Tutorial;
@@ -35,6 +36,23 @@ namespace CJ.FindAPair.Modules.UI.Installer
                     break;
                 }
             });
+        }
+
+        public void SetActionForStep<T>(Action action, int stepIndex) where T : TutorialScreen
+        {
+            foreach (var screen in _tutorialScreens.Where(screen => screen.GetType() == typeof(T)))
+            {
+                for (var i = 0; i < screen.Steps.Count; i++)
+                {
+                    if (stepIndex == i)
+                    {
+                        screen.Steps[i].SetAction(action);
+                        break;
+                    }
+                }
+                
+                break;
+            }
         }
     }
 }
