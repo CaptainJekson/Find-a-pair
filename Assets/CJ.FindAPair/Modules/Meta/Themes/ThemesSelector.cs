@@ -27,7 +27,7 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
             _selectedThemeConfig = themeConfigCollection.GetThemeConfig(ReadSelectedTheme());
-            _levelCreator.OnLevelCreated += InitTheme;
+            _levelCreator.LevelCreated += InitTheme;
         }
 
         public void ChangeTheme(string themeId)

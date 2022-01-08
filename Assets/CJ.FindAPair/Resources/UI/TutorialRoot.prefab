@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tutorialScreens:
-  - {fileID: 6446652361939613354}
+  - {fileID: 8972170647006848699}
 --- !u!1001 &3683401477942617335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 9131669777052609487, guid: e93852291be8b9a4781f5e2457520179,
         type: 3}
       propertyPath: m_Name
-      value: TutorialLevel_1
+      value: FirstTutorialScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e93852291be8b9a4781f5e2457520179, type: 3}
@@ -185,15 +185,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3683401477942617335}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6446652361939613354 stripped
+--- !u!114 &8972170647006848699 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7667675277328962141, guid: e93852291be8b9a4781f5e2457520179,
+  m_CorrespondingSourceObject: {fileID: 5736916916584088140, guid: e93852291be8b9a4781f5e2457520179,
     type: 3}
   m_PrefabInstance: {fileID: 3683401477942617335}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 746046ba2625cc74d8eb29024181a6bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 8083269756c74cdfad942bfb5682be2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

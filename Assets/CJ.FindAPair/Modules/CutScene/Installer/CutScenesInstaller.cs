@@ -13,6 +13,7 @@ namespace CJ.FindAPair.Modules.CutScene.Installer
             Container.Bind<ComboValueCutScene>().AsSingle();
             Container.Bind<LevelRewardCutScene>().AsSingle();
             Container.Bind<NextLevelCutScene>().AsSingle();
+            Container.Bind<TutorialDriver>().AsSingle();
         }
     }
 }

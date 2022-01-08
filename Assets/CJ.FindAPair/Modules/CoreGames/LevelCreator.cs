@@ -27,8 +27,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         public LevelConfig LevelConfig => _level;
         public List<Card> Cards => _cards;
 
-        public event UnityAction OnLevelCreated;
-        public event UnityAction OnLevelDeleted;
+        public event UnityAction LevelCreated;
+        public event UnityAction LevelDeleted;
 
         [Inject]
         public void Construct(CardsPlacer cardsPlacer, UIRoot uiRoot, LevelRewardCutScene levelRewardCutScene, 
@@ -54,7 +54,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _cardsPlacer.DealCards(_cards);
             _scoreObtainCutScene.PrepareCutScene();
 
-            OnLevelCreated?.Invoke();
+            LevelCreated?.Invoke();
         }
 
         public void ClearLevel()
@@ -74,7 +74,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelRewardCutScene.Stop();
             _scoreObtainCutScene.Stop();
 
-            OnLevelDeleted?.Invoke();
+            LevelDeleted?.Invoke();
         }
 
         public void RestartLevel()

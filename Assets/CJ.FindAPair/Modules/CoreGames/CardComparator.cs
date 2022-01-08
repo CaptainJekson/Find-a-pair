@@ -19,8 +19,8 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             _levelCreator = levelCreator;
             _comparisonCards = new List<Card>();
-            _levelCreator.OnLevelCreated += SubscriptionCards;
-            _levelCreator.OnLevelDeleted += UnsubscriptionCards;
+            _levelCreator.LevelCreated += SubscriptionCards;
+            _levelCreator.LevelDeleted += UnsubscriptionCards;
         }
         
         private void SubscriptionCards()

@@ -20,6 +20,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
         private ScoreObtainCutScene _scoreObtainCutScene;
+        private TutorialDriver _tutorialDriver;
 
         private int _life;
         private int _time;
@@ -51,13 +52,15 @@ namespace CJ.FindAPair.Modules.CoreGames
         [Inject]
         public void Construct(LevelCreator levelCreator, CardComparator cardComparator,
             GameSettingsConfig gameSettingsConfig, ISaver gameSaver, IAdsDriver adsDriver,
-            UnityAdsConfig unityAdsConfig, UIRoot uiRoot, CardsPlacer cardsPlacer, ScoreObtainCutScene scoreObtainCutScene)
+            UnityAdsConfig unityAdsConfig, UIRoot uiRoot, CardsPlacer cardsPlacer, ScoreObtainCutScene scoreObtainCutScene,
+            TutorialDriver tutorialDriver)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
             _gameSettingsConfig = gameSettingsConfig;
             _cardsPlacer = cardsPlacer;
             _scoreObtainCutScene = scoreObtainCutScene;
+            _tutorialDriver = tutorialDriver;
             _gameSaver = gameSaver;
             _adsDriver = adsDriver;
             _unityAdsConfig = unityAdsConfig;
@@ -72,8 +75,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             _cardComparator.CardsMatched += AddScore;
             _cardComparator.CardsNotMatched += RemoveLife;
             _cardsPlacer.CardsDealt += StartTheGame;
-            _levelCreator.OnLevelDeleted += ResetTimer;
-            _levelCreator.OnLevelDeleted += ResetCounts;
+            _levelCreator.LevelDeleted += ResetTimer;
+            _levelCreator.LevelDeleted += ResetCounts;
             _adsDriver.AdsIsSkipped += InitiateDefeatAtSkipAds;
             _adsDriver.AdsIsFailed += InitiateDefeatAtSkipAds;
             _adsDriver.AdsIsComplete += AddCoolDownAdsTime;

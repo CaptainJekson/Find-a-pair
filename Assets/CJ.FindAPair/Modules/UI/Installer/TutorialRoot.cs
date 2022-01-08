@@ -1,6 +1,8 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using CJ.FindAPair.Modules.UI.Tutorial;
+using CJ.FindAPair.Modules.UI.Tutorial.Base;
+using DG.Tweening;
 using UnityEngine;
 
 namespace CJ.FindAPair.Modules.UI.Installer
@@ -15,6 +17,24 @@ namespace CJ.FindAPair.Modules.UI.Installer
             {
                 screen.gameObject.SetActive(false);
             }
+
+            // var sequence = DOTween.Sequence();
+            // sequence.AppendInterval(0.0f);
+            // sequence.AppendCallback(ShowTutorial<FirstTutorialScreen>); //TODO test
+        }
+
+        public void ShowTutorial<T>(float delay = 0.0f) where T : TutorialScreen
+        {
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(delay);
+            sequence.AppendCallback(() =>
+            {
+                foreach (var screen in _tutorialScreens.Where(screen => screen.GetType() == typeof(T)))
+                {
+                    screen.Show();
+                    break;
+                }
+            });
         }
     }
 }
