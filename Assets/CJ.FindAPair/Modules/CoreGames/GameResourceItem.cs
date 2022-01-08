@@ -1,5 +1,4 @@
 using CJ.FindAPair.Modules.CoreGames;
-using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Utility;
 using DG.Tweening;
 using TMPro;
@@ -36,7 +35,6 @@ public class GameResourceItem : MonoBehaviour
     private void SetItemValue()
     {
         var saveData = _gameSaver.LoadData().ItemsData;
-        var itemsCollection = _levelCreator.LevelConfig.RewardItemsCollection.Items;
         
         switch (_type)
         {
@@ -59,6 +57,13 @@ public class GameResourceItem : MonoBehaviour
                 _itemValueText.SetText(saveData.SapperBooster.ToString());
                 break; 
         }
+        
+        TrySetStockValue(saveData);
+    }
+
+    private void TrySetStockValue(ItemsData saveData)
+    {
+        var itemsCollection = _levelCreator.LevelConfig.RewardItemsCollection.Items;
         
         for (int j = 0; j < itemsCollection.Count; j++)
         {

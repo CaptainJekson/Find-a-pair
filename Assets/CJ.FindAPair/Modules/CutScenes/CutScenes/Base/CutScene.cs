@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CJ.FindAPair.Modules.CutScene.CutScenes.Base
+namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Base
 {
     public abstract class CutScene
     {

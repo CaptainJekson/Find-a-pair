@@ -1,7 +1,7 @@
-using CJ.FindAPair.Modules.CutScene.CutScenes;
+using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using Zenject;
 
-namespace CJ.FindAPair.Modules.CutScene.Installer
+namespace CJ.FindAPair.Modules.CutScenes.Installer
 {
     public class CutScenesInstaller : Installer<CutScenesInstaller>
     {

@@ -1,15 +1,17 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
-using CJ.FindAPair.Modules.CutScene.Configs;
-using CJ.FindAPair.Modules.CutScene.Installer;
+using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.CutScenes.Configs;
+using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
+using CJ.FindAPair.Modules.CutScenes.Installer;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 using UnityEngine;
 
-namespace CJ.FindAPair.Modules.CutScene.CutScenes
+namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 {
-    public class GiftBoxCutScene : Base.CutScene
+    public class GiftBoxCutScene : CutScene
     {
         private UIRoot _uiRoot;
         private ISaver _gameSaver;
@@ -40,64 +42,35 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
         {
             _giftBoxOpenSequence = DOTween.Sequence();
 
-            var itemsData = _gameSaver.LoadData().ItemsData;
             var rewardItems = _levelCreator.LevelConfig.RewardItemsCollection.Items;
 
             InitializeItemsPool(_cutSceneConfig.ItemsPoolHandler, _cutSceneConfig.GiftItemPrefab.gameObject, 
                 _giftBoxWindow.ItemsPointerTransform, rewardItems.Count);
             
-            SetGiftsShowPoints();
+            SetGiftsShowPointers();
             
             for (int i = 0; i < _giftItems.Count; i++)
                 _giftItems[i].SetItem(rewardItems[i].Icon, rewardItems[i].Count);
             
             _giftBoxOpenSequence
-                .AppendCallback(_playerResourcesWindow.Close)
-                .AppendCallback(_uiRoot.CloseWindow<MenuButtonsWindow>)
+                .AppendCallback(() =>
+                {
+                    _playerResourcesWindow.Close();
+                    _uiRoot.CloseWindow<MenuButtonsWindow>();
+                })
                 .AppendInterval(_cutSceneConfig.DelayCutSceneStart)
                 .AppendCallback(() =>
                 {
                     _blockWindow.Open();
                     TransferItemsPanels();
-                    
-                    _giftBoxWindow.SkeletonAnimation.gameObject.SetActive(true);
-                    _giftBoxWindow.SkeletonAnimation.AnimationState
-                        .SetAnimation(0, _cutSceneConfig.NameAnimationOpen, false);
-                    _giftBoxWindow.SkeletonAnimation.AnimationState
-                        .AddAnimation(1, _cutSceneConfig.NameAnimationIdle, true, _cutSceneConfig.OpenAnimationDuration);
+                    SetBoxAnimations();
                 })
                 .AppendInterval(_cutSceneConfig.OpenAnimationDuration)
                 .AppendCallback(ShowGifts)
                 .AppendInterval(_cutSceneConfig.ObtainTransferDuration * _giftItems.Count)
                 .AppendCallback(() => _giftBoxWindow.ResumeButton.gameObject.SetActive(true))
                 .AppendInterval(_cutSceneConfig.ShowingDuration)
-                .AppendCallback(() =>
-                {
-                    for (int i = 0; i < _giftItems.Count; i++)
-                    {
-                        switch (rewardItems[i].Type)
-                        {
-                            case ItemTypes.Energy:
-                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Energy), itemsData.Energy);
-                                break;
-                            case ItemTypes.Diamond:
-                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Diamond), itemsData.Diamond);
-                                break;
-                            case ItemTypes.Coin:
-                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Coin), itemsData.Coins);
-                                break;
-                            case ItemTypes.DetectorBooster:
-                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.DetectorBooster), itemsData.DetectorBooster);
-                                break;
-                            case ItemTypes.MagnetBooster:
-                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.MagnetBooster), itemsData.MagnetBooster);
-                                break;
-                            case ItemTypes.SapperBooster:
-                                ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.SapperBooster), itemsData.SapperBooster);
-                                break;
-                        }
-                    }
-                })
+                .AppendCallback(() => ObtainGiftItems(rewardItems))
                 .AppendInterval(_cutSceneConfig.ObtainTransferDuration)
                 .AppendCallback(() =>
                 {
@@ -142,11 +115,22 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
                 _giftBoxWindow.BottomItemsPanelTransform.transform.position, _cutSceneConfig.PanelsTransferDuration);
         }
 
-        private void SetGiftsShowPoints()
+        private void SetBoxAnimations()
+        {
+            _giftBoxWindow.SkeletonAnimation.gameObject.SetActive(true);
+            _giftBoxWindow.SkeletonAnimation.AnimationState
+                .SetAnimation(0, _cutSceneConfig.NameAnimationOpen, false);
+            _giftBoxWindow.SkeletonAnimation.AnimationState
+                .AddAnimation(1, _cutSceneConfig.NameAnimationIdle, true, _cutSceneConfig.OpenAnimationDuration);
+        }
+
+        private void SetGiftsShowPointers()
         {
             var itemsCounter = 0;
-            
-            if (_giftItems.Count % 2 == 0)
+
+            bool isEven = _giftItems.Count % 2 == 0;
+
+            if (isEven)
             {
                 for (int i = 0; i < _giftItems.Count / 2; i++)
                 {
@@ -180,6 +164,36 @@ namespace CJ.FindAPair.Modules.CutScene.CutScenes
                             item.transform.position, _cutSceneConfig.ShowingPointTransferDuration, 
                             _cutSceneConfig.ShowingPointTransferEase))
                     .AppendInterval(_cutSceneConfig.IntervalBetweenGiftsTransfers);;
+            }
+        }
+
+        private void ObtainGiftItems(List<ItemConfig> rewardItems)
+        {
+            var itemsData = _gameSaver.LoadData().ItemsData;
+            
+            for (int i = 0; i < _giftItems.Count; i++)
+            {
+                switch (rewardItems[i].Type)
+                {
+                    case ItemTypes.Energy:
+                        ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Energy), itemsData.Energy);
+                        break;
+                    case ItemTypes.Diamond:
+                        ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Diamond), itemsData.Diamond);
+                        break;
+                    case ItemTypes.Coin:
+                        ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.Coin), itemsData.Coins);
+                        break;
+                    case ItemTypes.DetectorBooster:
+                        ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.DetectorBooster), itemsData.DetectorBooster);
+                        break;
+                    case ItemTypes.MagnetBooster:
+                        ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.MagnetBooster), itemsData.MagnetBooster);
+                        break;
+                    case ItemTypes.SapperBooster:
+                        ObtainItem(_giftItems[i], GetResourceItem(ItemTypes.SapperBooster), itemsData.SapperBooster);
+                        break;
+                }
             }
         }
         

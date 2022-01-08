@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
-using CJ.FindAPair.Modules.CutScene.CutScenes;
+using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
 using DG.Tweening;
@@ -55,31 +54,21 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
+            _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             
             RefreshLevelButtons();
             
-            if (AbleGiftObtainAtOpen && 
-                _levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
-            {
-                _giftBoxWindow.Open();
-            }
-
-            if (StartCutSceneAtOpening)
-            {
-                if (_giftBoxWindow.gameObject.activeSelf)
-                    StartCoroutine(WaitForNextLevelCutScene());
-                else
-                    _nextLevelCutScene.Play();
-            }
-            
+            TryStartCutScenes();
             AbleGiftObtainAtOpen = false;
+            
             _levelBackground.gameObject.SetActive(false);
             SetStartScrollPosition();
         }
 
         protected override void OnClose()
         {
+            _giftBoxWindow.WindowClosed -= TryStartNextLevelCutScene;
             _uiRoot.CloseWindow<MenuButtonsWindow>();
             
             if (_levelBackground != null)
@@ -172,10 +161,23 @@ namespace CJ.FindAPair.Modules.UI.Windows
             return levelButtons;
         }
 
-        private IEnumerator WaitForNextLevelCutScene()
+        private void TryStartCutScenes()
         {
-            yield return new WaitWhile(() => _giftBoxWindow.gameObject.activeSelf);
-            _nextLevelCutScene.Play();
+            if (AbleGiftObtainAtOpen && 
+                _levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
+            {
+                _giftBoxWindow.Open();
+            }
+            else
+            {
+                TryStartNextLevelCutScene();
+            }
+        }
+
+        private void TryStartNextLevelCutScene()
+        {
+            if (StartCutSceneAtOpening)
+                _nextLevelCutScene.Play();
         }
     }
 }

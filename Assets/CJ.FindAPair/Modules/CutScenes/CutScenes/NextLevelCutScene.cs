@@ -1,12 +1,13 @@
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
 using CJ.FindAPair.Modules.UI;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
 
-namespace CJ.FindAPair.Modules.CutScene.CutScenes
+namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 {
-    public class NextLevelCutScene : Base.CutScene
+    public class NextLevelCutScene : CutScene
     {
         private LevelConfigCollection _levelConfigCollection;
         private ISaver _gameSaver;

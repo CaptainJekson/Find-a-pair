@@ -1,9 +1,9 @@
-using CJ.FindAPair.Modules.CutScene.Configs.Base;
+using CJ.FindAPair.Modules.CutScenes.Configs.Base;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-namespace CJ.FindAPair.Modules.CutScene.Configs
+namespace CJ.FindAPair.Modules.CutScenes.Configs
 {
     [CreateAssetMenu(fileName = "ComboValueCutSceneConfig", 
         menuName = "Find a pair/CutScenesConfigs/ComboValueCutSceneConfig")]

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using CJ.FindAPair.Modules.CutScene.CutScenes;
+using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
 using Spine.Unity;
-using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Zenject;
 
@@ -29,6 +29,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
         public List<GameResourceItem> GameResourceItems => _gameResourceItems;
         public Button ResumeButton => _resumeButton;
 
+        public event UnityAction WindowClosed;
+
         [Inject]
         public void Construct(UIRoot uiRoot, GiftBoxCutScene giftBoxCutScene)
         {
@@ -40,17 +42,18 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnOpen()
         {
             _blockWindow.SetOpenWindow(this);
-            _blockWindow.CloseButtonInteractable(false);
+            _blockWindow.SetCloseButtonCondition(false);
             _giftBoxCutScene.Play();
         }
 
         protected override void OnClose()
         {
-            _blockWindow.CloseButtonInteractable(true);
+            _blockWindow.SetCloseButtonCondition(true);
             _blockWindow.Close();
             _giftBoxCutScene.Stop();
             _resumeButton.gameObject.SetActive(false);
             _uiRoot.OpenWindow<MenuButtonsWindow>();
+            WindowClosed?.Invoke();
         }
     }
 }

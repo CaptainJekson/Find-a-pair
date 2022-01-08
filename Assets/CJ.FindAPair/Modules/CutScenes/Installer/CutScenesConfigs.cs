@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using CJ.FindAPair.Modules.CutScene.Configs.Base;
+using CJ.FindAPair.Modules.CutScenes.Configs.Base;
 using UnityEngine;
 
-namespace CJ.FindAPair.Modules.CutScene.Installer
+namespace CJ.FindAPair.Modules.CutScenes.Installer
 {
     [CreateAssetMenu(fileName = "CutScenesConfigs", menuName = "Find a pair/CutScenesConfigsCollection")]
     public class CutScenesConfigs : ScriptableObject

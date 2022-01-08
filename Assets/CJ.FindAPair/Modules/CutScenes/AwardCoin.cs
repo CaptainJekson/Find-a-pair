@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CJ.FindAPair.Modules.UI
+namespace CJ.FindAPair.Modules.CutScenes
 {
     public class AwardCoin : MonoBehaviour
     {
