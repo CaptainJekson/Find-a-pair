@@ -22,6 +22,7 @@ namespace CJ.FindAPair.Modules.Service.Installer
             Container.Bind<ISaver>().To<JsonSaver>().AsSingle();
             Container.Bind<IAdsDriver>().To<UnityAdsDriver>().AsSingle();
             Container.Bind<IStoreDriver>().To<StoreDriver>().AsSingle();
+            Container.Bind<AudioController>().FromComponentInNewPrefabResource("Services/AudioController").AsSingle();
         }
     }
 }

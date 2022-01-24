@@ -9,12 +9,14 @@ namespace CJ.FindAPair.Modules.CoreGames
     public class CardsPlacer
     {
         private PlaceCardsConfig _placeCardsConfig;
+        private AudioController _audioController;
 
         public event UnityAction CardsDealt;
         
-        public CardsPlacer(PlaceCardsConfig placeCardsConfig)
+        public CardsPlacer(PlaceCardsConfig placeCardsConfig, AudioController audioController)
         {
             _placeCardsConfig = placeCardsConfig;
+            _audioController = audioController;
         }
 
         public Dictionary<Card, bool> PlaceCards(LevelConfig level, Card cardPrefab, Transform parentTransform) //TODO dev
@@ -71,7 +73,11 @@ namespace CJ.FindAPair.Modules.CoreGames
                 int i = interactionsCounter;
                 
                 sequence.AppendInterval(_placeCardsConfig.TimeBetweenDeals);
-                sequence.AppendCallback(() => card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase));
+                sequence.AppendCallback(() =>
+                {
+                    _audioController.ActivateAudio(_audioController.AudioClipConfig.DealCardSound);
+                    card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase);
+                });
                 
                 interactionsCounter++;
             }

@@ -54,6 +54,8 @@ MonoBehaviour:
   _visualSprite: {fileID: 5081686388729640764}
   _specialCardSprite: {fileID: 1433695958073882609}
   _easeAnimationCard: 0
+  _audioController: {fileID: 3882196945335277756, guid: e91b982dc670a9042b2698e40b5e66f0,
+    type: 3}
 --- !u!114 &8155145369748042194
 MonoBehaviour:
   m_ObjectHideFlags: 0
