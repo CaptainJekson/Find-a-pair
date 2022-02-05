@@ -61,7 +61,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            _audioController.ActivateAudio(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
+            _audioController.Play(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
                 .ThemesData.SelectedTheme).Music, true, true);
             
             _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
@@ -78,7 +78,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
-            _audioController.DisableMusic();
+            _audioController.StopMusic();
             
             _giftBoxWindow.WindowClosed -= TryStartNextLevelCutScene;
             _uiRoot.CloseWindow<MenuButtonsWindow>();

@@ -43,10 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1253e6b6c5f1ee74490dc416104887cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemsPoolHandler: {fileID: 6870422384542442176, guid: 13a57d8a4fbbca443bc2f4b7bec5a01e,
-    type: 3}
   _audioClipsCollection: {fileID: 11400000, guid: 5803a963990b7f2438df195d00bf1cdd,
     type: 2}
-  _audioItem: {fileID: 897222091469254746, guid: 3c62ee0a436bcdc448b644e17e986635,
+  _audioSourcePrefab: {fileID: 5825661959070365762, guid: 3c62ee0a436bcdc448b644e17e986635,
     type: 3}
   _audioSourcesCount: 10

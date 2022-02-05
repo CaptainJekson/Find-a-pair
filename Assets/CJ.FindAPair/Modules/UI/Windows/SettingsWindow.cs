@@ -45,17 +45,29 @@ namespace CJ.FindAPair.Modules.UI.Windows
         public void OnSoundToggleSwitch()
         {
             if (_soundsToggle.isOn == false)
+            {
                 PlayerPrefs.SetString(PlayerPrefsKeys.SoundsTogglePosition, "Off");
+                _audioController.SwitchAudiosCondition(false, true);
+            }
             else
+            {
                 PlayerPrefs.SetString(PlayerPrefsKeys.SoundsTogglePosition, "On");
+                _audioController.SwitchAudiosCondition(false, false);
+            }
         }
         
         public void OnMusicToggleSwitch()
         {
             if (_musicToggle.isOn == false)
+            {
                 PlayerPrefs.SetString(PlayerPrefsKeys.MusicTogglePosition, "Off");
+                _audioController.SwitchAudiosCondition(true, true);
+            }
             else
+            {
                 PlayerPrefs.SetString(PlayerPrefsKeys.MusicTogglePosition, "On");
+                _audioController.SwitchAudiosCondition(true, false);
+            }
         }
 
         private void CopyPlayerId()

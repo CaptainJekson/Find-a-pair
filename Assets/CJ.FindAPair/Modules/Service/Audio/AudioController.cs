@@ -1,66 +1,72 @@
 using System.Collections.Generic;
-using CJ.FindAPair.Modules.Meta.Configs;
 using UnityEngine;
-using Zenject;
 
 public class AudioController: MonoBehaviour
 {
-    [SerializeField] private ItemsPoolHandler _itemsPoolHandler;
     [SerializeField] private AudioClipsCollection _audioClipsCollection;
-    [SerializeField] private AudioItem _audioItem;
+    [SerializeField] private AudioSource _audioSourcePrefab;
     [SerializeField] private int _audioSourcesCount;
 
-    private AudioItem _musicItem;
-    private List<AudioItem> _audioItemsPool;
+    private AudioSource _musicSource;
+    private List<AudioSource> _audioSources;
 
     public AudioClipsCollection AudioClipsCollection => _audioClipsCollection;
 
     private void Awake()
     {
-        InitializeAudioItemsPool();
-        InitializeMusicItem();
+        InitializeAudioSources();
     }
 
-    public void ActivateAudio(AudioClip clip, bool isMusic, bool isLoop = false)
+    public void Play(AudioClip clip, bool isMusic, bool isLoop = false)
     {
-        var audioItem = _musicItem;
+        var audioItem = _musicSource;
         
         if (isMusic == false)
-            audioItem = TryGetAudio();
+            audioItem = TryGetAudioSource();
 
-        audioItem.SetAudio(clip, isLoop);
+        audioItem.clip = clip;
+        audioItem.loop = isLoop;
         audioItem.Play();
     }
-
-    public void DisableMusic()
+    
+    public void StopMusic()
     {
-        _musicItem.gameObject.SetActive(false);
+        _musicSource.Stop();
     }
-
-    private void InitializeAudioItemsPool()
+    
+    public void SwitchAudiosCondition(bool isMusic, bool isMute)
     {
-        _audioItemsPool = new List<AudioItem>();
-        
-        var audioSourcesPool = _itemsPoolHandler.GetItemsPool(_audioItem.gameObject, transform, 
-            _audioSourcesCount);
-
-        foreach (var source in audioSourcesPool)
+        if (isMusic)
         {
-            _audioItemsPool.Add(source.GetComponent<AudioItem>());
+            _musicSource.mute = isMute;
+            _musicSource.Play();
+        }
+        else
+        {
+            foreach (var source in _audioSources)
+            {
+                source.mute = isMute;
+            }
         }
     }
 
-    private void InitializeMusicItem()
+    private void InitializeAudioSources()
     {
-        _musicItem = Instantiate(_audioItem, transform);
-        _musicItem.gameObject.SetActive(false);
-    }
-    
-    private AudioItem TryGetAudio()
-    {
-        foreach (var item in _audioItemsPool)
+        _audioSources = new List<AudioSource>();
+
+        for (int i = 0; i < _audioSourcesCount; i++)
         {
-            if (item.gameObject.activeSelf == false)
+            _audioSources.Add(Instantiate(_audioSourcePrefab, transform));
+        }
+        
+        _musicSource = Instantiate(_audioSourcePrefab, transform);
+    }
+
+    private AudioSource TryGetAudioSource()
+    {
+        foreach (var item in _audioSources)
+        {
+            if (item.isPlaying == false)
             {
                 return item;
             }

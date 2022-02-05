@@ -76,7 +76,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 sequence.AppendCallback(() =>
                 {
                     card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase);
-                    _audioController.ActivateAudio(_audioController.AudioClipsCollection.CardDealSound, false);
+                    _audioController.Play(_audioController.AudioClipsCollection.CardDealSound, false);
                 });
                 
                 interactionsCounter++;
