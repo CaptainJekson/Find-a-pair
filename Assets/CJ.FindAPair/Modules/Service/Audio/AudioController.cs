@@ -1,39 +1,40 @@
 using System.Collections.Generic;
+using CJ.FindAPair.Modules.Meta.Configs;
 using UnityEngine;
+using Zenject;
 
 public class AudioController: MonoBehaviour
 {
     [SerializeField] private ItemsPoolHandler _itemsPoolHandler;
-    [SerializeField] private AudioClipConfig _audioClipConfig;
+    [SerializeField] private AudioClipsCollection _audioClipsCollection;
     [SerializeField] private AudioItem _audioItem;
     [SerializeField] private int _audioSourcesCount;
 
+    private AudioItem _musicItem;
     private List<AudioItem> _audioItemsPool;
 
-    public AudioClipConfig AudioClipConfig => _audioClipConfig;
+    public AudioClipsCollection AudioClipsCollection => _audioClipsCollection;
 
     private void Awake()
     {
         InitializeAudioItemsPool();
+        InitializeMusicItem();
     }
 
-    public void ActivateAudio(AudioClip clip, bool isLoop = false)
+    public void ActivateAudio(AudioClip clip, bool isMusic, bool isLoop = false)
     {
-        var audioItem = TryGetAudio();
+        var audioItem = _musicItem;
         
+        if (isMusic == false)
+            audioItem = TryGetAudio();
+
         audioItem.SetAudio(clip, isLoop);
         audioItem.Play();
     }
 
-    public void DisableLoopedAudios()
+    public void DisableMusic()
     {
-        foreach (var item in _audioItemsPool)
-        {
-            if (item.gameObject.activeSelf && item.AudioSourceIsLoop)
-            {
-                item.gameObject.SetActive(false);
-            }
-        }
+        _musicItem.gameObject.SetActive(false);
     }
 
     private void InitializeAudioItemsPool()
@@ -47,6 +48,12 @@ public class AudioController: MonoBehaviour
         {
             _audioItemsPool.Add(source.GetComponent<AudioItem>());
         }
+    }
+
+    private void InitializeMusicItem()
+    {
+        _musicItem = Instantiate(_audioItem, transform);
+        _musicItem.gameObject.SetActive(false);
     }
     
     private AudioItem TryGetAudio()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
+using CJ.FindAPair.Modules.Meta.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
 using DG.Tweening;
@@ -25,7 +26,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private NextLevelCutScene _nextLevelCutScene;
         private GiftBoxWindow _giftBoxWindow;
-
+        private AudioController _audioController;
+        private ThemeConfigCollection _themeConfigCollection;
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
         
         public bool StartCutSceneAtOpening { get; set; }
@@ -36,7 +38,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
-            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene)
+            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene, 
+            AudioController audioController, ThemeConfigCollection themeConfigCollection)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
@@ -45,7 +48,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameSaver = gameSaver;
             _nextLevelCutScene = nextLevelCutScene;
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
-            
+            _audioController = audioController;
+            _themeConfigCollection = themeConfigCollection;
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
 
@@ -57,6 +61,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
+            _audioController.ActivateAudio(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
+                .ThemesData.SelectedTheme).Music, true, true);
+            
             _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             
@@ -71,6 +78,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
+            _audioController.DisableMusic();
+            
             _giftBoxWindow.WindowClosed -= TryStartNextLevelCutScene;
             _uiRoot.CloseWindow<MenuButtonsWindow>();
             

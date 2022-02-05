@@ -35,8 +35,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             foreach (var isFilledCell in level.LevelField)
             {
                 var newCard = Object.Instantiate(cardPrefab, placePosition, Quaternion.identity, parentTransform);
-                newCard.transform.localScale = Vector3.one * scale;  
-                
+                newCard.transform.localScale = Vector3.one * scale;
+
                 placePosition += offsetPositionY;
                 heightBreakCounter++;
 
@@ -75,8 +75,8 @@ namespace CJ.FindAPair.Modules.CoreGames
                 sequence.AppendInterval(_placeCardsConfig.TimeBetweenDeals);
                 sequence.AppendCallback(() =>
                 {
-                    _audioController.ActivateAudio(_audioController.AudioClipConfig.DealCardSound);
                     card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase);
+                    _audioController.ActivateAudio(_audioController.AudioClipsCollection.CardDealSound, false);
                 });
                 
                 interactionsCounter++;
@@ -90,7 +90,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
             
             sequence.AppendInterval(_placeCardsConfig.CardsShowingTime);
-            
+
             foreach (var card in cards)
             {
                 sequence.AppendCallback(() => card.Hide());

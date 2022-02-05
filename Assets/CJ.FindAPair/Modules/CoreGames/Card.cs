@@ -25,7 +25,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         public bool IsShow { get; set; }
         public bool IsMatched => _isMatched;
         public int NumberPair { get; set; }
-        
+
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
 

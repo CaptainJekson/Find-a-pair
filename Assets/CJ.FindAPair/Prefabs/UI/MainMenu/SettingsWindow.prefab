@@ -590,6 +590,8 @@ MonoBehaviour:
   _closeButton: {fileID: 0}
   _copyPlayerIdButton: {fileID: 4833031166044935763}
   _playerIdText: {fileID: 7060262486058256559}
+  _soundsToggle: {fileID: 6812488770189156894}
+  _musicToggle: {fileID: 2981296453826535552}
 --- !u!1 &308655536752718706
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +864,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -8454168028624292960}
+        m_TargetAssemblyTypeName: CJ.FindAPair.Modules.UI.Windows.SettingsWindow,
+          Assembly-CSharp
+        m_MethodName: OnSoundToggleSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &525963272200617462
 GameObject:
@@ -957,7 +972,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.85
+  m_fontSize: 32.65
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3773,7 +3788,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.95
+  m_fontSize: 64.8
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5162,7 +5177,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 67.5
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5332,6 +5347,19 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -8454168028624292960}
+        m_TargetAssemblyTypeName: CJ.FindAPair.Modules.UI.Windows.SettingsWindow,
+          Assembly-CSharp
+        m_MethodName: OnMusicToggleSwitch
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6672,7 +6700,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.8
+  m_fontSize: 58.3
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1

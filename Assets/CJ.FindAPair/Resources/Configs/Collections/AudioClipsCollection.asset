@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc04e8c3d5a8924d8c0aae88ae71a0f, type: 3}
+  m_Name: AudioClipsCollection
+  m_EditorClassIdentifier: 
+  _mainMenuMusic: {fileID: 8300000, guid: effc9c886b21ddb4fb5b4a62a36955a1, type: 3}
+  _cardDealSound: {fileID: 8300000, guid: 443cdf14d323e194b82b270e8bd8737e, type: 3}
+  _cardFlipSound: {fileID: 8300000, guid: 1df24b862ae8e4a419b0febc34372104, type: 3}
+  _severalCardsFlipSound: {fileID: 8300000, guid: 1df24b862ae8e4a419b0febc34372104,
+    type: 3}
+  _cardDisolveSound: {fileID: 8300000, guid: b18cd5783bf806c49848d1fb3762d778, type: 3}

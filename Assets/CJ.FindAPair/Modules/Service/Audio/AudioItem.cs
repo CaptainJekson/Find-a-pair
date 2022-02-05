@@ -4,14 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class AudioItem : MonoBehaviour
 {
-    private AudioSource _audioSource;
-
-    public bool AudioSourceIsLoop => _audioSource.loop;
-
-    private void Awake()
-    {
-        _audioSource = GetComponent<AudioSource>();
-    }
+    [SerializeField] private AudioSource _audioSource;
 
     public void SetAudio(AudioClip clip, bool isLoop)
     {
@@ -22,13 +15,12 @@ public class AudioItem : MonoBehaviour
     public void Play()
     {
         gameObject.SetActive(true);
-        _audioSource.Play();
         
         if (_audioSource.loop == false)
-            DisableOnAudioComplete();
+            DisableOnClipComplete();
     }
 
-    private void DisableOnAudioComplete()
+    private void DisableOnClipComplete()
     {
         Sequence disableSequence = DOTween.Sequence();
         
