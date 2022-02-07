@@ -1,32 +1,38 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioController: MonoBehaviour
 {
     [SerializeField] private AudioClipsCollection _audioClipsCollection;
     [SerializeField] private AudioSource _audioSourcePrefab;
-    [SerializeField] private int _audioSourcesCount;
 
     private AudioSource _musicSource;
-    private List<AudioSource> _audioSources;
+    private AudioSource _soundSource;
 
     public AudioClipsCollection AudioClipsCollection => _audioClipsCollection;
 
     private void Awake()
     {
-        InitializeAudioSources();
+        _musicSource = Instantiate(_audioSourcePrefab, transform);
+        _soundSource = Instantiate(_audioSourcePrefab, transform);
     }
 
-    public void Play(AudioClip clip, bool isMusic, bool isLoop = false)
+    public void PlayMusic(AudioClip clip)
     {
-        var audioItem = _musicSource;
-        
-        if (isMusic == false)
-            audioItem = TryGetAudioSource();
-
-        audioItem.clip = clip;
-        audioItem.loop = isLoop;
-        audioItem.Play();
+        _musicSource.clip = clip;
+        _musicSource.Play();
+    }
+    
+    public void PlaySound(AudioClip clip, bool isSeveral = false)
+    {
+        if (isSeveral)
+        {
+            _soundSource.clip = clip;
+            _soundSource.Play();
+        }
+        else
+        {
+            _soundSource.PlayOneShot(clip);
+        }
     }
     
     public void StopMusic()
@@ -43,35 +49,7 @@ public class AudioController: MonoBehaviour
         }
         else
         {
-            foreach (var source in _audioSources)
-            {
-                source.mute = isMute;
-            }
+            _soundSource.mute = isMute;
         }
-    }
-
-    private void InitializeAudioSources()
-    {
-        _audioSources = new List<AudioSource>();
-
-        for (int i = 0; i < _audioSourcesCount; i++)
-        {
-            _audioSources.Add(Instantiate(_audioSourcePrefab, transform));
-        }
-        
-        _musicSource = Instantiate(_audioSourcePrefab, transform);
-    }
-
-    private AudioSource TryGetAudioSource()
-    {
-        foreach (var item in _audioSources)
-        {
-            if (item.isPlaying == false)
-            {
-                return item;
-            }
-        }
-
-        return null;
     }
 }

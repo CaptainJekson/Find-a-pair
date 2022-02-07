@@ -25,6 +25,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         public bool IsShow { get; set; }
         public bool IsMatched => _isMatched;
         public int NumberPair { get; set; }
+        public AudioController AudioDriver { get; set; }
 
         public event UnityAction СardOpens;
         public event UnityAction CardClosed;
@@ -61,7 +62,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             _collider.enabled = false;
             PlayAnimation(true);
-            
+            AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
             IsShow = true;
             if (isNotEventCall) return;
             СardOpens?.Invoke();
@@ -74,7 +75,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             _collider.enabled = true;
             PlayAnimation(false);
-            
+            AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
             IsShow = false;
 
             if (_isMatched)

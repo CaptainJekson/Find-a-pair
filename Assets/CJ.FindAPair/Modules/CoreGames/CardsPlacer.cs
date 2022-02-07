@@ -36,6 +36,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             {
                 var newCard = Object.Instantiate(cardPrefab, placePosition, Quaternion.identity, parentTransform);
                 newCard.transform.localScale = Vector3.one * scale;
+                newCard.AudioDriver = _audioController;
 
                 placePosition += offsetPositionY;
                 heightBreakCounter++;
@@ -76,7 +77,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 sequence.AppendCallback(() =>
                 {
                     card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase);
-                    _audioController.Play(_audioController.AudioClipsCollection.CardDealSound, false);
+                    _audioController.PlaySound(_audioController.AudioClipsCollection.CardDealSound);
                 });
                 
                 interactionsCounter++;

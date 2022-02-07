@@ -27,8 +27,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void Init()
         {
             _playerId = $"{_gameSaver.LoadData().UserId.ToString()}";
-            SetToggles();
             _gameSaver.SaveCreated += () => _playerId = $"{_gameSaver.LoadData().UserId.ToString()}";
+            
+            SetToggles();
         }
 
         protected override void OnOpen()

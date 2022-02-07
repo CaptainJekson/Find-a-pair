@@ -61,8 +61,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            _audioController.Play(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
-                .ThemesData.SelectedTheme).Music, true, true);
+            _audioController.PlayMusic(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
+                .ThemesData.SelectedTheme).Music);
             
             _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
             _uiRoot.OpenWindow<MenuButtonsWindow>();
