@@ -63,6 +63,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _collider.enabled = false;
             PlayAnimation(true);
             AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
+            
             IsShow = true;
             if (isNotEventCall) return;
             СardOpens?.Invoke();
@@ -76,6 +77,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             _collider.enabled = true;
             PlayAnimation(false);
             AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
+            
             IsShow = false;
 
             if (_isMatched)

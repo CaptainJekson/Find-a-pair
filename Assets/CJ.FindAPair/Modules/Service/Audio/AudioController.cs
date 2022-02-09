@@ -16,8 +16,9 @@ public class AudioController: MonoBehaviour
         _soundSource = Instantiate(_audioSourcePrefab, transform);
     }
 
-    public void PlayMusic(AudioClip clip)
+    public void PlayMusic(AudioClip clip, bool isLoop = true)
     {
+        _musicSource.loop = isLoop;
         _musicSource.clip = clip;
         _musicSource.Play();
     }
@@ -34,22 +35,20 @@ public class AudioController: MonoBehaviour
             _soundSource.PlayOneShot(clip);
         }
     }
+
+    public void SetMusicState(bool isMute)
+    {
+        _musicSource.mute = isMute;
+        _musicSource.Play();
+    }
     
+    public void SetSoundState(bool isMute)
+    {
+        _soundSource.mute = isMute;
+    }
+
     public void StopMusic()
     {
         _musicSource.Stop();
-    }
-    
-    public void SwitchAudiosCondition(bool isMusic, bool isMute)
-    {
-        if (isMusic)
-        {
-            _musicSource.mute = isMute;
-            _musicSource.Play();
-        }
-        else
-        {
-            _soundSource.mute = isMute;
-        }
     }
 }

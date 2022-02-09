@@ -21,18 +21,20 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private GameWatcher _gameWatcher;
         private ProgressSaver _progressSaver;
         private LevelRewardCutScene _levelRewardCutScene;
+        private AudioController _audioController;
 
         public Transform CoinsParentTransform => _coinsParentTransform;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            ProgressSaver progressSaver, LevelRewardCutScene levelRewardCutScene)
+            ProgressSaver progressSaver, LevelRewardCutScene levelRewardCutScene, AudioController audioController)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _progressSaver = progressSaver;
             _levelRewardCutScene = levelRewardCutScene;
+            _audioController = audioController;
         }
 
         protected override void Init()
@@ -44,6 +46,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
     
         protected override void OnOpen()
         {
+            _audioController.StopMusic();
+            _audioController.PlaySound(_audioController.AudioClipsCollection.VictorySound);
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             _levelRewardCutScene.Play();

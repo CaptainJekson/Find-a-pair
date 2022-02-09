@@ -91,12 +91,13 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
             
             sequence.AppendInterval(_placeCardsConfig.CardsShowingTime);
+            sequence.AppendCallback(() => _audioController.PlayMusic(_audioController.AudioClipsCollection.OnLevelMusic));
 
             foreach (var card in cards)
             {
                 sequence.AppendCallback(() => card.Hide());
             }
-
+            
             sequence.AppendCallback(() => CardsDealt?.Invoke());
         }
     }

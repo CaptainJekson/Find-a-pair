@@ -11,17 +11,20 @@ public class GameMenuWindow : Window
 
     private LevelCreator _levelCreator;
     private ISaver _gameSaver;
+    private AudioController _audioController;
 
     [Inject]
-    public void Construct(LevelCreator levelCreator, ISaver gameSaver)
+    public void Construct(LevelCreator levelCreator, ISaver gameSaver, AudioController audioController)
     {
         _levelCreator = levelCreator;
         _gameSaver = gameSaver;
+        _audioController = audioController;
     }
     
     protected override void OnOpen()
     {
         Time.timeScale = 0.0f;
+        _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
         _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
         ChangeStateRestartNoEnergyButton();
     }
@@ -29,6 +32,11 @@ public class GameMenuWindow : Window
     protected override void OnClose()
     {
         Time.timeScale = 1.0f;
+    }
+    
+    protected override void OnCloseButtonClick()
+    {
+        _audioController.PlaySound(_audioController.AudioClipsCollection.WindowCloseSound);
     }
 
     private void ChangeStateRestartNoEnergyButton()

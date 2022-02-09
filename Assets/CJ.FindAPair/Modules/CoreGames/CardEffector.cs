@@ -29,12 +29,13 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         public void PlayDissolve()
         {
-            _card.AudioDriver.PlaySound(_card.AudioDriver.AudioClipsCollection.CardDisolveSound, true);
+            _card.AudioDriver.PlaySound(_card.AudioDriver.AudioClipsCollection.CardDisolveSound);
             StartCoroutine(MakeDissolve());
         }
 
         public void PlayRevertDissolve()
         {
+            _card.AudioDriver.PlaySound(_card.AudioDriver.AudioClipsCollection.CardRevealSound);
             StartCoroutine(MakeRevertDissolve());
         }
 

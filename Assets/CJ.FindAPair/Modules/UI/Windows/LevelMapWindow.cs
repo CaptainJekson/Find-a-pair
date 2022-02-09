@@ -61,10 +61,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            _audioController.PlayMusic(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
-                .ThemesData.SelectedTheme).Music);
-            
             _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
+            _giftBoxWindow.WindowClosed += PlayMusic;
+            
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             
             RefreshLevelButtons();
@@ -81,6 +80,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _audioController.StopMusic();
             
             _giftBoxWindow.WindowClosed -= TryStartNextLevelCutScene;
+            _giftBoxWindow.WindowClosed -= PlayMusic;
+            
             _uiRoot.CloseWindow<MenuButtonsWindow>();
             
             if (_levelBackground != null)
@@ -182,6 +183,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             }
             else
             {
+                PlayMusic();
                 TryStartNextLevelCutScene();
             }
         }
@@ -190,6 +192,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             if (StartCutSceneAtOpening)
                 _nextLevelCutScene.Play();
+        }
+        
+        private void PlayMusic()
+        {
+            _audioController.PlayMusic(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
+                .ThemesData.SelectedTheme).Music);
         }
     }
 }

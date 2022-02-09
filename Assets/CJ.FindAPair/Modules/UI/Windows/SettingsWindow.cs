@@ -34,6 +34,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
             _copyPlayerIdButton.onClick.AddListener(CopyPlayerId);
             _playerIdText.SetText($"User Id: {_playerId}");
         }
@@ -43,17 +44,22 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _copyPlayerIdButton.onClick.RemoveListener(CopyPlayerId);
         }
         
+        protected override void OnCloseButtonClick()
+        {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowCloseSound);
+        }
+        
         public void OnSoundToggleSwitch()
         {
             if (_soundsToggle.isOn == false)
             {
                 PlayerPrefs.SetString(PlayerPrefsKeys.SoundsTogglePosition, "Off");
-                _audioController.SwitchAudiosCondition(false, true);
+                _audioController.SetSoundState(true);
             }
             else
             {
                 PlayerPrefs.SetString(PlayerPrefsKeys.SoundsTogglePosition, "On");
-                _audioController.SwitchAudiosCondition(false, false);
+                _audioController.SetSoundState(false);
             }
         }
         
@@ -62,12 +68,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
             if (_musicToggle.isOn == false)
             {
                 PlayerPrefs.SetString(PlayerPrefsKeys.MusicTogglePosition, "Off");
-                _audioController.SwitchAudiosCondition(true, true);
+                _audioController.SetMusicState(true);
             }
             else
             {
                 PlayerPrefs.SetString(PlayerPrefsKeys.MusicTogglePosition, "On");
-                _audioController.SwitchAudiosCondition(true, false);
+                _audioController.SetMusicState(false);
             }
         }
 

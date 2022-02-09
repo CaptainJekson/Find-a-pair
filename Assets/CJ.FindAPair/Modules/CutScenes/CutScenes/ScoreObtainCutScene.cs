@@ -19,12 +19,14 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         private ComboValueCutScene _comboValueCutScene;
         private GameInterfaceWindow _gameInterfaceWindow;
         private Camera _camera;
+        private AudioController _audioController;
 
         private Sequence _scoreObtainSequence;
         private List<AwardCoin> _temporaryCoins;
     
         public ScoreObtainCutScene(GameWatcher gameWatcher, ItemsTransferer itemsTransferer, UIRoot uiRoot, 
-            CardComparator cardComparator, CutScenesConfigs cutScenesConfigs, ComboValueCutScene comboValueCutScene)
+            CardComparator cardComparator, CutScenesConfigs cutScenesConfigs, ComboValueCutScene comboValueCutScene, 
+            AudioController audioController)
         {
             _gameWatcher = gameWatcher;
             _itemsTransferer = itemsTransferer;
@@ -33,6 +35,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _comboValueCutScene = comboValueCutScene;
             _gameInterfaceWindow = uiRoot.GetWindow<GameInterfaceWindow>();
             _camera = Camera.main;
+            _audioController = audioController;
         }
     
         public override void Play()
@@ -54,7 +57,11 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                             coinStartPosition, _gameInterfaceWindow.ScoresIconTransform.position, 
                             _cutSceneConfig.CoinTransferDuration, _cutSceneConfig.CoinTransferEase))
                         .AppendInterval(_cutSceneConfig.CoinTransferDuration)
-                        .AppendCallback(() => availableCoin.gameObject.SetActive(false));
+                        .AppendCallback(() =>
+                        {
+                            _audioController.PlaySound(_audioController.AudioClipsCollection.CoinObtainSound);
+                            availableCoin.gameObject.SetActive(false);
+                        });
 
                     break;
                 }

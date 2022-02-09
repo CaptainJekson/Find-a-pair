@@ -21,11 +21,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelCreator _levelCreator;
         private LevelConfig _levelConfig;
         private BlockWindow _blockWindow;
+        private AudioController _audioController;
 
         [Inject]
-        private void Construct(UIRoot uiRoot)
+        private void Construct(UIRoot uiRoot, AudioController audioController)
         {
             _blockWindow = uiRoot.GetWindow<BlockWindow>();
+            _audioController = audioController;
         }
         
         protected override void Init()
@@ -35,6 +37,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
             _blockWindow.SetOpenWindow(this);
         }
 
@@ -42,6 +45,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _blockWindow.Close();
             base.OnCloseButtonClick();
+            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowCloseSound);
         }
 
         public void SetData(LevelConfig levelConfig, LevelCreator levelCreator)

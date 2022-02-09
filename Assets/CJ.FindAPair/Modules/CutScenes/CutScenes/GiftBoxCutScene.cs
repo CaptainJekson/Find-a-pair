@@ -21,12 +21,13 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         private GiftBoxWindow _giftBoxWindow;
         private ItemsTransferer _itemsTransferer;
         private LevelCreator _levelCreator;
+        private AudioController _audioController;
         
         private Sequence _giftBoxOpenSequence;
         private List<GiftItem> _giftItems;
 
         public GiftBoxCutScene(UIRoot uiRoot, ISaver gameSaver, LevelCreator levelCreator,
-            CutScenesConfigs cutScenesConfigs, ItemsTransferer itemsTransferer)
+            CutScenesConfigs cutScenesConfigs, ItemsTransferer itemsTransferer, AudioController audioController)
         {
             _uiRoot = uiRoot;
             _gameSaver = gameSaver;
@@ -36,6 +37,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
             _itemsTransferer = itemsTransferer;
             _levelCreator = levelCreator;
+            _audioController = audioController;
         }
     
         public override void Play()
@@ -64,6 +66,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                     _blockWindow.Open();
                     TransferItemsPanels();
                     SetBoxAnimations();
+                    _audioController.PlaySound(_audioController.AudioClipsCollection.GiftBoxOpenSound);
                 })
                 .AppendInterval(_cutSceneConfig.OpenAnimationDuration)
                 .AppendCallback(ShowGifts)
@@ -75,7 +78,10 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                 .AppendCallback(() =>
                 {
                     foreach (var item in _giftItems)
+                    {
+                        _audioController.PlaySound(_audioController.AudioClipsCollection.GiftItemObtainSound, true);
                         item.gameObject.SetActive(false);
+                    }
                 });
         }
 

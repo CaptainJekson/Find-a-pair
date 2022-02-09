@@ -23,12 +23,14 @@ namespace CJ.FindAPair.Modules.UI
 
         private bool _isRotate;
         private LevelMapWindow _levelMapWindow;
+        private AudioController _audioController;
 
         [Inject]
-        public void Construct(UIRoot uiRoot)
+        public void Construct(UIRoot uiRoot, AudioController audioController)
         {
             _isRotate = true;
             _levelMapWindow = uiRoot.GetWindow<LevelMapWindow>();
+            _audioController = audioController;
             
             var sequence = DOTween.Sequence();
             sequence.AppendInterval(1.0f);
@@ -68,6 +70,8 @@ namespace CJ.FindAPair.Modules.UI
             var sequence = DOTween.Sequence();
             sequence.AppendCallback(() =>
             {
+                _audioController.PlaySound(_audioController.AudioClipsCollection.LevelMarkerCenteringSound);
+                
                 foreach (var trail in _trailEffects)
                 {
                     trail.transform.DOMove(_centerPosition.position, _flyDurationToCenter);
@@ -78,6 +82,7 @@ namespace CJ.FindAPair.Modules.UI
             sequence.AppendCallback(() =>
             {
                 _explosionEffect.Play();
+                _audioController.PlaySound(_audioController.AudioClipsCollection.LevelMarkerExplosionSound);
                 explosionOccurred?.Invoke();
                 
                 for (var i = 0; i < _trailEffects.Count; i++)

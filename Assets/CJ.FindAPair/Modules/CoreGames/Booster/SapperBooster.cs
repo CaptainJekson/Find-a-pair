@@ -7,6 +7,8 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
     {
         public override void ActivateBooster()
         {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.SapperBoosterSound);
+            
             foreach (var card in _levelCreator.Cards
                 .Where(card => card.NumberPair >= ConstantsCard.NUMBER_SPECIAL))
             {

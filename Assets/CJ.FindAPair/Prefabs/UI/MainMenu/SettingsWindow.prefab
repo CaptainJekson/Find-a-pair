@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242a84722d0a90e47a74acfca3696241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _closeButton: {fileID: 0}
+  _closeButton: {fileID: 959092387733742366}
   _copyPlayerIdButton: {fileID: 4833031166044935763}
   _playerIdText: {fileID: 7060262486058256559}
   _soundsToggle: {fileID: 6812488770189156894}

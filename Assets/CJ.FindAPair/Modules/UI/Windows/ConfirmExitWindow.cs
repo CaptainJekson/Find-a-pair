@@ -12,17 +12,21 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelCreator _levelCreator;
         private EnergyCooldownHandler _energyCooldownHandler;
         private GameWatcher _gameWatcher;
+        private AudioController _audioController;
 
         [Inject]
-        public void Construct(LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler, GameWatcher gameWatcher)
+        public void Construct(LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler, 
+            GameWatcher gameWatcher, AudioController audioController)
         {
             _levelCreator = levelCreator;
             _energyCooldownHandler = energyCooldownHandler;
             _gameWatcher = gameWatcher;
+            _audioController = audioController;
         }
 
         protected override void OnOpen()
         {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
             _exitButton.onClick.AddListener(OnExitButtonClick);
         }
 
