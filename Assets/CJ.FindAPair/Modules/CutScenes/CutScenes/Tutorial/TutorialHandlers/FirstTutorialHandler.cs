@@ -8,18 +8,15 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
     public class FirstTutorialHandler
     {
         private readonly TutorialRoot _tutorialRoot;
-        private readonly UIRoot _uiRoot;
         private readonly LevelCreator _levelCreator;
         private readonly CardsPlacer _cardsPlacer;
 
         private FirstTutorialScreen _tutorialScreen;
         private List<Card> _cardsPair;
         
-        public FirstTutorialHandler(TutorialRoot tutorialRoot, UIRoot uiRoot, LevelCreator levelCreator, 
-            CardsPlacer cardsPlacer)
+        public FirstTutorialHandler(TutorialRoot tutorialRoot, LevelCreator levelCreator, CardsPlacer cardsPlacer)
         {
             _tutorialRoot = tutorialRoot;
-            _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _cardsPlacer = cardsPlacer;
         }

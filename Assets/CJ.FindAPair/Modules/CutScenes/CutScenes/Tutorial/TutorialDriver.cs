@@ -27,7 +27,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
 
         private void CreateTutorialHandlers()
         {
-            _firstTutorialHandler = new FirstTutorialHandler(_tutorialRoot, _uiRoot, _levelCreator, _cardsPlacer);
+            _firstTutorialHandler = new FirstTutorialHandler(_tutorialRoot, _levelCreator, _cardsPlacer);
         }
 
         private void CheckTutorialLevels()
