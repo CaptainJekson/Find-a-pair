@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2171200064702501009}
   - component: {fileID: 2171200064702501008}
   m_Layer: 6
-  m_Name: TapZoneView
+  m_Name: PointerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 226.87311, y: 874.0867}
+  m_SizeDelta: {x: 328.9576, y: 141.8267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2171200064702501009
 CanvasRenderer:
@@ -87,9 +87,8 @@ GameObject:
   - component: {fileID: 2171200065303716429}
   - component: {fileID: 2171200065303716416}
   - component: {fileID: 2171200065303716431}
-  - component: {fileID: 2171200065303716430}
   m_Layer: 0
-  m_Name: TapZone
+  m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,8 +111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 226.87311, y: 874.0867}
+  m_SizeDelta: {x: 328.9576, y: 141.8267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2171200065303716416
 CanvasRenderer:
@@ -153,50 +152,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2171200065303716430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171200065303716428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2171200065303716431}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2171200065358322240
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +163,6 @@ GameObject:
   - component: {fileID: 2171200065358322241}
   - component: {fileID: 2171200065358322243}
   - component: {fileID: 2171200065358322242}
-  - component: {fileID: 2171200065243238661}
   m_Layer: 6
   m_Name: TapZoneViewBack
   m_TagString: Untagged
@@ -273,50 +227,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2171200065243238661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171200065358322240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2171200065358322242}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2171200065681095914
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,13 +364,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490f51a53e8baeb4a8b68a31c87636a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextStepButton: {fileID: 2171200065303716430}
+  _nextStepButton: {fileID: 0}
   _canvasGroup: {fileID: 7454183746548071180}
-  _isTimedStep: 0
-  _timeNextStep: 0
+  _isTimedStep: 1
+  _timeNextStep: 5
   _delayShow: 0
-  _fadeShowDuration: 0
-  _fadeHideDuration: 0
+  _fadeShowDuration: 0.3
+  _fadeHideDuration: 0.3
 --- !u!225 &7454183746548071180
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -484,7 +394,6 @@ GameObject:
   - component: {fileID: 2330514881405038449}
   - component: {fileID: 2025141966617959045}
   - component: {fileID: 1045528678470374221}
-  - component: {fileID: 1744541518149779511}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -508,7 +417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -261.1894}
+  m_AnchoredPosition: {x: -0.3, y: -131.2}
   m_SizeDelta: {x: 122.3788, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2025141966617959045
@@ -550,25 +459,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &1744541518149779511
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5374732984593765497}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5620535790510398623
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +470,7 @@ GameObject:
   - component: {fileID: 5119392798124559428}
   - component: {fileID: 187874046378249115}
   - component: {fileID: 4472176801356299505}
+  - component: {fileID: 3513857904551409078}
   m_Layer: 0
   m_Name: HintText
   m_TagString: Untagged
@@ -601,10 +492,10 @@ RectTransform:
   m_Father: {fileID: 741176892971460898}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0001, y: 10.6834}
-  m_SizeDelta: {x: 898.9985, y: 245.3534}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00012207031, y: 10.683411}
+  m_SizeDelta: {x: -69.001526, y: -94.64661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &187874046378249115
 CanvasRenderer:
@@ -634,7 +525,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043A\u0430\u0440\u0442\u0443"
+  m_text: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043F\u0435\u0440\u0432\u0443\u044E
+    \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0443."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75b7663ccf91cca49a18d5416e755c43, type: 2}
   m_sharedMaterial: {fileID: -6635393379152445730, guid: 75b7663ccf91cca49a18d5416e755c43,
@@ -662,7 +554,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 66.15
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -704,6 +596,45 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3513857904551409078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620535790510398623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344445a89b4f74a0e9a0a766903df87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mTerm: '@TutorialFirst-Step2'
+  mTermSecondary: 
+  PrimaryTermModifier: 0
+  SecondaryTermModifier: 0
+  TermPrefix: 
+  TermSuffix: 
+  LocalizeOnAwake: 1
+  IgnoreRTL: 0
+  MaxCharactersInRTL: 0
+  IgnoreNumbersInRTL: 1
+  CorrectAlignmentForRTL: 1
+  AddSpacesToJoinedLanguages: 0
+  AllowLocalizedParameters: 1
+  AllowParameters: 1
+  TranslatedObjects: []
+  LocalizeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  AlwaysForceLocalize: 0
+  LocalizeCallBack:
+    Target: {fileID: 0}
+    MethodName: 
+  mGUI_ShowReferences: 0
+  mGUI_ShowTems: 1
+  mGUI_ShowCallback: 0
+  mLocalizeTarget: {fileID: 0}
+  mLocalizeTargetName: I2.Loc.LocalizeTarget_TextMeshPro_UGUI
 --- !u!1 &8536840977785036222
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,11 +668,11 @@ RectTransform:
   m_Father: {fileID: 2822850091083038650}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.1937256, y: -852.0661}
-  m_SizeDelta: {x: 968.7643, y: 340.6089}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 968.7643, y: 236.9178}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4332083248507343123
 CanvasRenderer:
   m_ObjectHideFlags: 0

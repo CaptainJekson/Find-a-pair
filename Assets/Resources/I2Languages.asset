@@ -309,6 +309,65 @@ MonoBehaviour:
       - "\u043D\u0430\u0436\u0430\u0442\u044C \u0434\u043B\u044F \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u044F"
       Flags: 0000
       Languages_Touch: []
+    - Term: '@TutorialFirst-Step1'
+      TermType: 0
+      Description: 
+      Languages:
+      - Memorize the pictures on the cards.
+      - "\u0417\u0430\u043F\u043E\u043C\u043D\u0438\u0442\u0435 \u043A\u0430\u0440\u0442\u0438\u043D\u043A\u0438
+        \u043D\u0430 \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0430\u0445."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@TutorialFirst-Step2'
+      TermType: 0
+      Description: 
+      Languages:
+      - Open first card.
+      - "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043F\u0435\u0440\u0432\u0443\u044E
+        \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0443."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@TutorialFirst-Step3'
+      TermType: 0
+      Description: 
+      Languages:
+      - Open  second card.
+      - "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u0432\u0442\u043E\u0440\u0443\u044E
+        \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0443."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@TutorialFirst-Step4'
+      TermType: 0
+      Description: 
+      Languages:
+      - "\rWonderful! The guessed pair disappears and we get coins for it."
+      - "\u0417\u0430\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E!
+        \u0423\u0433\u0430\u0434\u0430\u043D\u043D\u0430\u044F \u043F\u0430\u0440\u0430
+        \u043F\u0440\u043E\u043F\u0430\u0434\u0430\u0435\u0442 \u0438 \u043C\u044B
+        \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u043C \u0437\u0430 \u044D\u0442\u043E
+        \u043C\u043E\u043D\u0435\u0442\u043A\u0438."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@TutorialFirst-Step5'
+      TermType: 0
+      Description: 
+      Languages:
+      - "\rAll pairs of cards must be found in time."
+      - "\u0412\u0441\u0435 \u043F\u0430\u0440\u044B \u043A\u0430\u0440\u0442\u043E\u0447\u0435\u043A
+        \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438 \u0437\u0430
+        \u0432\u0440\u0435\u043C\u044F."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: '@TutorialFirst-Step6'
+      TermType: 0
+      Description: 
+      Languages:
+      - If the pair was not guessed, then a life will be spent.
+      - "\u0415\u0441\u043B\u0438 \u043F\u0430\u0440\u0430 \u043D\u0435 \u0431\u044B\u043B\u0430
+        \u0443\u0433\u0430\u0434\u0430\u043D\u0430, \u0442\u043E \u0431\u0443\u0434\u0435\u0442
+        \u043F\u043E\u0442\u0440\u0430\u0447\u0435\u043D\u0430 \u0436\u0438\u0437\u043D\u044C."
+      Flags: 0000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 

@@ -32,7 +32,12 @@ namespace CJ.FindAPair.Modules.UI.Tutorial.Base
             {
                 var sequence = DOTween.Sequence();
                 sequence.AppendInterval(_timeNextStep);
-                sequence.AppendCallback(_tutorialScreen.ShowNextStep);
+                sequence.AppendCallback(()=>
+                {
+                    _tutorialScreen.ShowNextStep();
+                    _action?.Invoke();
+                    _action = null;
+                });
             }
         }
 

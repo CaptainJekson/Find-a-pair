@@ -1,6 +1,7 @@
 ﻿using System;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
+using CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;

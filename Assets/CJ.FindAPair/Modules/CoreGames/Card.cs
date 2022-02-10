@@ -19,6 +19,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
         private BoxCollider _collider;
         private bool _isMatched;
+        private bool _isDisableTutorial;
         private CardEffector _cardEffector;
 
         public bool IsEmpty { get; set; }
@@ -72,7 +73,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (IsEmpty)
                 return;
 
-            _collider.enabled = true;
+            if(_isDisableTutorial == false)
+                _collider.enabled = true;
+            
             PlayAnimation(false);
             
             IsShow = false;
@@ -107,8 +110,21 @@ namespace CJ.FindAPair.Modules.CoreGames
         
         public void EnableInteractable()
         {
-            if(IsEmpty == false)
+            if (IsEmpty == false && _isDisableTutorial == false)
+            {
                 _collider.enabled = true;
+            }
+        }
+
+        public void DisableForTutorial()
+        {
+            _isDisableTutorial = true;
+        }
+
+        public void EnableForTutorial()
+        {
+            _isDisableTutorial = false;
+            EnableInteractable();
         }
 
         public void SetFace(Sprite face)

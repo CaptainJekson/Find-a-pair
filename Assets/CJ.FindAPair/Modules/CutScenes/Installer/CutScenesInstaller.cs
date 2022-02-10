@@ -1,4 +1,5 @@
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
+using CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.CutScenes.Installer

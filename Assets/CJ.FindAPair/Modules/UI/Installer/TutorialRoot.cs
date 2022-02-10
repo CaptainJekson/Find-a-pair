@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CJ.FindAPair.Modules.UI.Tutorial;
 using CJ.FindAPair.Modules.UI.Tutorial.Base;
 using DG.Tweening;
 using UnityEngine;
