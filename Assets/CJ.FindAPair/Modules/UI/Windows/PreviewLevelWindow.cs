@@ -2,6 +2,7 @@
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,13 +22,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelCreator _levelCreator;
         private LevelConfig _levelConfig;
         private BlockWindow _blockWindow;
-        private AudioController _audioController;
 
         [Inject]
-        private void Construct(UIRoot uiRoot, AudioController audioController)
+        private void Construct(UIRoot uiRoot)
         {
             _blockWindow = uiRoot.GetWindow<BlockWindow>();
-            _audioController = audioController;
         }
         
         protected override void Init()
@@ -37,7 +36,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
+            base.OnOpen();
             _blockWindow.SetOpenWindow(this);
         }
 
@@ -45,7 +44,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _blockWindow.Close();
             base.OnCloseButtonClick();
-            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowCloseSound);
         }
 
         public void SetData(LevelConfig levelConfig, LevelCreator levelCreator)

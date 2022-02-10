@@ -4,7 +4,7 @@
     {
         public static string IsSaveLocalMode = "IsSaveNotLoaded";
         public static string IsRandomChangeTheme = "IsRandomChangeTheme";
-        public static string SoundsTogglePosition = "SoundsTogglePosition";
-        public static string MusicTogglePosition = "MusicTogglePosition";
+        public static string SoundsState = "SoundsState";
+        public static string MusicState = "MusicState";
     }
 }

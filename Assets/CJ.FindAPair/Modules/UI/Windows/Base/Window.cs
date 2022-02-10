@@ -1,72 +1,96 @@
+using CJ.FindAPair.Modules.Service.Audio;
 using Doozy.Engine.UI;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
-[RequireComponent(typeof(UIView))]
-public abstract class Window : MonoBehaviour
+namespace CJ.FindAPair.Modules.UI.Windows.Base
 {
-    [SerializeField] [CanBeNull] [Tooltip("Can be null")] protected Button _closeButton;
-
-    private UIView _uiView;
-    private bool _isOpen;
-    private bool _isClose;
-
-    private void Awake()
+    [RequireComponent(typeof(UIView))]
+    public abstract class Window : MonoBehaviour
     {
-        if (_closeButton != null)
-            _closeButton.onClick.AddListener(OnCloseButtonClick);
+        [SerializeField] [CanBeNull] [Tooltip("Can be null")] protected Button _closeButton;
 
-        _uiView = GetComponent<UIView>();
-        Init();
-    }
-
-    private void OnEnable()
-    {
-        if (!_isOpen)
+        private UIView _uiView;
+        private bool _isOpen;
+        private bool _isClose;
+        protected AudioController _audioController;
+        
+        [Inject]
+        public void Construct(AudioController audioController)
         {
-            _isOpen = true;
-            return;
+            _audioController = audioController;
         }
 
-        OnOpen();
-    }
-
-    private void OnDisable()
-    {
-        if (!_isClose)
+        private void Awake()
         {
-            _isClose = true;
-            return;
+            if (_closeButton != null)
+                _closeButton.onClick.AddListener(OnCloseButtonClick);
+
+            _uiView = GetComponent<UIView>();
+            Init();
         }
 
-        OnClose();
-    }
+        private void OnEnable()
+        {
+            if (!_isOpen)
+            {
+                _isOpen = true;
+                return;
+            }
+            
+            OnOpen();
+        }
 
-    public void Open()
-    {
-        UIView.ShowView(_uiView.ViewCategory, _uiView.ViewName);
-    }
+        private void OnDisable()
+        {
+            if (!_isClose)
+            {
+                _isClose = true;
+                return;
+            }
 
-    public void Close()
-    {
-        UIView.HideView(_uiView.ViewCategory, _uiView.ViewName);
-    }
+            OnClose();
+        }
 
-    protected virtual void Init()
-    {
-    }
+        public void Open()
+        {
+            UIView.ShowView(_uiView.ViewCategory, _uiView.ViewName);
+        }
 
-    protected virtual void OnOpen()
-    {
-    }
+        public void Close()
+        {
+            UIView.HideView(_uiView.ViewCategory, _uiView.ViewName);
+        }
 
-    protected virtual void OnClose()
-    {
-    }
+        protected virtual void Init()
+        {
+        }
 
-    protected virtual void OnCloseButtonClick()
-    {
-        Close();
+        protected virtual void OnOpen()
+        {
+            PlayOpenSound();
+        }
+
+        protected virtual void OnClose()
+        {
+        }
+
+        protected virtual void OnCloseButtonClick()
+        {
+            PlayCloseSound();
+            Close();
+        }
+
+        protected virtual void PlayOpenSound()
+        {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
+        }
+        
+        protected virtual void PlayCloseSound()
+        {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowCloseSound);
+        }
     }
 }

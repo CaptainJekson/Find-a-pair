@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.Events;

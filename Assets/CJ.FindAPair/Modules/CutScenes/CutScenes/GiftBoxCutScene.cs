@@ -4,6 +4,7 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
 using CJ.FindAPair.Modules.CutScenes.Installer;
+using CJ.FindAPair.Modules.Service.Audio;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;

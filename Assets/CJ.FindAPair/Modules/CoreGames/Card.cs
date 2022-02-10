@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.Service.Audio;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -62,8 +63,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             _collider.enabled = false;
             PlayAnimation(true);
-            AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
-            
+
             IsShow = true;
             if (isNotEventCall) return;
             СardOpens?.Invoke();
@@ -76,8 +76,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             _collider.enabled = true;
             PlayAnimation(false);
-            AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
-            
+
             IsShow = false;
 
             if (_isMatched)
@@ -162,6 +161,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             sequence.AppendCallback(() =>
             {
+                AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
                 _specialCardSprite.enabled = isShow;
                 _visualSprite.sprite = isShow ? _faceSprite : _shirtSprite;
             });

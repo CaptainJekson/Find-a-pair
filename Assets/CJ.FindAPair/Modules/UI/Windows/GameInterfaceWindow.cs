@@ -1,6 +1,7 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using CJ.FindAPair.Utility;
 using TMPro;
 using UnityEngine;

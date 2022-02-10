@@ -1,6 +1,7 @@
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,20 +22,18 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private GameWatcher _gameWatcher;
         private ProgressSaver _progressSaver;
         private LevelRewardCutScene _levelRewardCutScene;
-        private AudioController _audioController;
 
         public Transform CoinsParentTransform => _coinsParentTransform;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            ProgressSaver progressSaver, LevelRewardCutScene levelRewardCutScene, AudioController audioController)
+            ProgressSaver progressSaver, LevelRewardCutScene levelRewardCutScene)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
             _progressSaver = progressSaver;
             _levelRewardCutScene = levelRewardCutScene;
-            _audioController = audioController;
         }
 
         protected override void Init()
@@ -46,8 +45,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
     
         protected override void OnOpen()
         {
-            _audioController.StopMusic();
-            _audioController.PlaySound(_audioController.AudioClipsCollection.VictorySound);
+            base.OnOpen();
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             _levelRewardCutScene.Play();
@@ -58,7 +56,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _uiRoot.CloseWindow<GameBlockWindow>();
         }
-        
+
+        protected override void PlayOpenSound()
+        {
+            _audioController.StopMusic();
+            _audioController.PlaySound(_audioController.AudioClipsCollection.VictorySound);
+        }
+
         private void OnRestartButtonClick()
         {
             _levelCreator.RestartLevel();

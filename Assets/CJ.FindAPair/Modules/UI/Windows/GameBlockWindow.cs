@@ -1,4 +1,5 @@
 ﻿using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Windows

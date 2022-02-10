@@ -1,54 +1,68 @@
+using CJ.FindAPair.Modules.Service.Audio.Configs;
+using CJ.FindAPair.Utility;
 using UnityEngine;
 
-public class AudioController: MonoBehaviour
+namespace CJ.FindAPair.Modules.Service.Audio
 {
-    [SerializeField] private AudioClipsCollection _audioClipsCollection;
-    [SerializeField] private AudioSource _audioSourcePrefab;
-
-    private AudioSource _musicSource;
-    private AudioSource _soundSource;
-
-    public AudioClipsCollection AudioClipsCollection => _audioClipsCollection;
-
-    private void Awake()
+    public class AudioController: MonoBehaviour
     {
-        _musicSource = Instantiate(_audioSourcePrefab, transform);
-        _soundSource = Instantiate(_audioSourcePrefab, transform);
-    }
+        [SerializeField] private AudioClipsCollection _audioClipsCollection;
+        [SerializeField] private AudioSource _audioSourcePrefab;
 
-    public void PlayMusic(AudioClip clip, bool isLoop = true)
-    {
-        _musicSource.loop = isLoop;
-        _musicSource.clip = clip;
-        _musicSource.Play();
-    }
-    
-    public void PlaySound(AudioClip clip, bool isSeveral = false)
-    {
-        if (isSeveral)
+        private AudioSource _musicSource;
+        private AudioSource _soundSource;
+
+        public AudioClipsCollection AudioClipsCollection => _audioClipsCollection;
+        public bool IsMusicMute => _musicSource.mute;
+        public bool IsSoundsMute => _soundSource.mute;
+
+        private void Awake()
         {
-            _soundSource.clip = clip;
-            _soundSource.Play();
+            _musicSource = Instantiate(_audioSourcePrefab, transform);
+            _soundSource = Instantiate(_audioSourcePrefab, transform);
+        
+            _soundSource.mute = PlayerPrefs.GetString(PlayerPrefsKeys.SoundsState) == "Off";
+            _musicSource.mute = PlayerPrefs.GetString(PlayerPrefsKeys.MusicState) == "Off";
         }
-        else
+
+        public void PlayMusic(AudioClip clip, bool isLoop = true)
         {
-            _soundSource.PlayOneShot(clip);
+            _musicSource.loop = isLoop;
+            _musicSource.clip = clip;
+            _musicSource.Play();
         }
-    }
-
-    public void SetMusicState(bool isMute)
-    {
-        _musicSource.mute = isMute;
-        _musicSource.Play();
-    }
     
-    public void SetSoundState(bool isMute)
-    {
-        _soundSource.mute = isMute;
-    }
+        public void PlaySound(AudioClip clip, bool isSeveral = false)
+        {
+            if (isSeveral)
+            {
+                _soundSource.clip = clip;
+                _soundSource.Play();
+            }
+            else
+            {
+                _soundSource.PlayOneShot(clip);
+            }
+        }
 
-    public void StopMusic()
-    {
-        _musicSource.Stop();
+        public void SetMusicState(bool isMute)
+        {
+            PlayerPrefs.SetString(PlayerPrefsKeys.MusicState, isMute ? "Off" : "On");
+        
+            _musicSource.mute = isMute;
+            _musicSource.Play();
+        }
+    
+        public void SetSoundsState(bool isMute)
+        {
+            PlayerPrefs.SetString(PlayerPrefsKeys.SoundsState, isMute ? "Off" : "On");
+        
+            _soundSource.mute = isMute;
+        }
+
+        public void StopMusic()
+        {
+            _musicSource.Stop();
+        }
     }
 }

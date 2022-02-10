@@ -6,6 +6,7 @@ using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.Meta.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,12 +27,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private NextLevelCutScene _nextLevelCutScene;
         private GiftBoxWindow _giftBoxWindow;
-        private AudioController _audioController;
         private ThemeConfigCollection _themeConfigCollection;
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
         
         public bool StartCutSceneAtOpening { get; set; }
-
         public bool AbleGiftObtainAtOpen { get; set; }
 
         public bool IsScrollMove => Mathf.Abs(_scrollRect.velocity.y) > 100;
@@ -39,7 +38,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
             LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene, 
-            AudioController audioController, ThemeConfigCollection themeConfigCollection)
+            ThemeConfigCollection themeConfigCollection)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
@@ -48,7 +47,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameSaver = gameSaver;
             _nextLevelCutScene = nextLevelCutScene;
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
-            _audioController = audioController;
             _themeConfigCollection = themeConfigCollection;
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
@@ -89,7 +87,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 _levelBackground.gameObject.SetActive(true);
             }
         }
-        
+
         public KeyValuePair<LevelLocation, LevelButton> GetCurrentLocationAndButton()
         {
             var currentLevel = _gameSaver.LoadData().CurrentLevel;

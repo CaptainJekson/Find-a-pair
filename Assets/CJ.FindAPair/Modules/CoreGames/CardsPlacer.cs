@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.Service.Audio;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;

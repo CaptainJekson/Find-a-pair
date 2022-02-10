@@ -1,5 +1,5 @@
 using CJ.FindAPair.Modules.CoreGames;
-using UnityEngine;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using Zenject;
 
 namespace CJ.FindAPair.Modules.UI.Windows

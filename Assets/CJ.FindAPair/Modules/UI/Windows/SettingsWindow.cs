@@ -1,4 +1,4 @@
-using CJ.FindAPair.Utility;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,26 +15,26 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         private string _playerId;
         private ISaver _gameSaver;
-        private AudioController _audioController;
 
         [Inject]
-        public void Construct(ISaver gameSaver, AudioController audioController)
+        public void Construct(ISaver gameSaver)
         {
             _gameSaver = gameSaver;
-            _audioController = audioController;
         }
 
         protected override void Init()
         {
             _playerId = $"{_gameSaver.LoadData().UserId.ToString()}";
             _gameSaver.SaveCreated += () => _playerId = $"{_gameSaver.LoadData().UserId.ToString()}";
-            
-            SetToggles();
         }
 
         protected override void OnOpen()
         {
-            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
+            _soundsToggle.isOn = !_audioController.IsSoundsMute;
+            _musicToggle.isOn = !_audioController.IsMusicMute;
+
+            base.OnOpen();
+            
             _copyPlayerIdButton.onClick.AddListener(CopyPlayerId);
             _playerIdText.SetText($"User Id: {_playerId}");
         }
@@ -43,56 +43,20 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _copyPlayerIdButton.onClick.RemoveListener(CopyPlayerId);
         }
-        
-        protected override void OnCloseButtonClick()
-        {
-            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowCloseSound);
-        }
-        
+
         public void OnSoundToggleSwitch()
         {
-            if (_soundsToggle.isOn == false)
-            {
-                PlayerPrefs.SetString(PlayerPrefsKeys.SoundsTogglePosition, "Off");
-                _audioController.SetSoundState(true);
-            }
-            else
-            {
-                PlayerPrefs.SetString(PlayerPrefsKeys.SoundsTogglePosition, "On");
-                _audioController.SetSoundState(false);
-            }
+            _audioController.SetSoundsState(!_soundsToggle.isOn);
         }
         
         public void OnMusicToggleSwitch()
         {
-            if (_musicToggle.isOn == false)
-            {
-                PlayerPrefs.SetString(PlayerPrefsKeys.MusicTogglePosition, "Off");
-                _audioController.SetMusicState(true);
-            }
-            else
-            {
-                PlayerPrefs.SetString(PlayerPrefsKeys.MusicTogglePosition, "On");
-                _audioController.SetMusicState(false);
-            }
+            _audioController.SetMusicState(!_musicToggle.isOn);
         }
 
         private void CopyPlayerId()
         {
             GUIUtility.systemCopyBuffer = _playerId;
-        }
-
-        private void SetToggles()
-        {
-            if (PlayerPrefs.GetString(PlayerPrefsKeys.SoundsTogglePosition) != "Off")
-                _soundsToggle.isOn = true;
-            else
-                _soundsToggle.isOn = false;
-
-            if (PlayerPrefs.GetString(PlayerPrefsKeys.MusicTogglePosition) != "Off")
-                _musicToggle.isOn = true;
-            else
-                _musicToggle.isOn = false;
         }
     }
 }

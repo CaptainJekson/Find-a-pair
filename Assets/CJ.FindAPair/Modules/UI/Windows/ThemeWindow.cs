@@ -4,6 +4,7 @@ using CJ.FindAPair.Modules.Meta.Themes;
 using CJ.FindAPair.Modules.Service.Store;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using CJ.FindAPair.Utility;
 using UnityEngine;
 using Zenject;
@@ -22,14 +23,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private IStoreDriver _storeDriver;
         private ISaver _gameSaver;
-        private AudioController _audioController;
-
         private ThemeSlot _selectedThemeSlot;
         private List<ThemeSlot> _themeSlots;
 
         [Inject]
         private void Construct(UIRoot uiRoot, ThemesSelector themesSelector,
-            ThemeConfigCollection themeConfigCollection, ISaver gameSaver, IStoreDriver storeDriver, AudioController audioController)
+            ThemeConfigCollection themeConfigCollection, ISaver gameSaver, IStoreDriver storeDriver)
         {
             _blockWindow = uiRoot.GetWindow<BlockWindow>();
             _themesSelector = themesSelector;
@@ -38,7 +37,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameSaver = gameSaver;
             _storeDriver = storeDriver;
             _themeSlots = new List<ThemeSlot>();
-            _audioController = audioController;
         }
 
         protected override void Init()
@@ -48,7 +46,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
+            base.OnOpen();
             RefreshSlotData();
         }
 
@@ -56,7 +54,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _blockWindow.Close();
             base.OnCloseButtonClick();
-            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowCloseSound);
         }
 
         private void CreateThemeSlots()

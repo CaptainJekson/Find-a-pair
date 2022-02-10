@@ -1,4 +1,5 @@
 using CJ.FindAPair.Modules.CoreGames;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -12,21 +13,19 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private LevelCreator _levelCreator;
         private EnergyCooldownHandler _energyCooldownHandler;
         private GameWatcher _gameWatcher;
-        private AudioController _audioController;
 
         [Inject]
         public void Construct(LevelCreator levelCreator, EnergyCooldownHandler energyCooldownHandler, 
-            GameWatcher gameWatcher, AudioController audioController)
+            GameWatcher gameWatcher)
         {
             _levelCreator = levelCreator;
             _energyCooldownHandler = energyCooldownHandler;
             _gameWatcher = gameWatcher;
-            _audioController = audioController;
         }
 
         protected override void OnOpen()
         {
-            _audioController.PlaySound(_audioController.AudioClipsCollection.WindowOpenSound);
+            base.OnOpen();
             _exitButton.onClick.AddListener(OnExitButtonClick);
         }
 
@@ -34,7 +33,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _exitButton.onClick.RemoveListener(OnExitButtonClick);
         }
-        
+
         private void OnExitButtonClick()
         {
             _levelCreator.ClearLevel();
