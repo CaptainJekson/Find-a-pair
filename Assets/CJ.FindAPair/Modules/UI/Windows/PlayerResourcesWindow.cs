@@ -46,6 +46,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _storeDriver.PurchaseCompleted -= SmoothRefreshValues;
         }
 
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
+
         private void Update()
         {
             CheckEnergyValue();

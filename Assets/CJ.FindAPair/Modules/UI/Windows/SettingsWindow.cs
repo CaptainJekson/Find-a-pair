@@ -30,11 +30,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            _soundsToggle.isOn = !_audioController.IsSoundsMute;
-            _musicToggle.isOn = !_audioController.IsMusicMute;
+            _soundsToggle.isOn = _audioController.IsSoundsMute;
+            _musicToggle.isOn = _audioController.IsMusicMute;
 
-            base.OnOpen();
-            
             _copyPlayerIdButton.onClick.AddListener(CopyPlayerId);
             _playerIdText.SetText($"User Id: {_playerId}");
         }
@@ -46,12 +44,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         public void OnSoundToggleSwitch()
         {
-            _audioController.SetSoundsState(!_soundsToggle.isOn);
+            _audioController.SetSoundsState(_soundsToggle.isOn);
         }
         
         public void OnMusicToggleSwitch()
         {
-            _audioController.SetMusicState(!_musicToggle.isOn);
+            _audioController.SetMusicState(_musicToggle.isOn);
         }
 
         private void CopyPlayerId()

@@ -28,10 +28,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             Time.timeScale = 0.0f;
         
-            _soundsToggle.isOn = !_audioController.IsSoundsMute;
-            _musicToggle.isOn = !_audioController.IsMusicMute;
-            
-            base.OnOpen();
+            _soundsToggle.isOn = _audioController.IsSoundsMute;
+            _musicToggle.isOn = _audioController.IsMusicMute;
 
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             ChangeStateRestartNoEnergyButton();
@@ -44,12 +42,12 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         public void OnSoundToggleSwitch()
         {
-            _audioController.SetSoundsState(!_soundsToggle.isOn);
+            _audioController.SetSoundsState(_soundsToggle.isOn);
         }
         
         public void OnMusicToggleSwitch()
         {
-            _audioController.SetMusicState(!_musicToggle.isOn);
+            _audioController.SetMusicState(_musicToggle.isOn);
         }
 
         private void ChangeStateRestartNoEnergyButton()

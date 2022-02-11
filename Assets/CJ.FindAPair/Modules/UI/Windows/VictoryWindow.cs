@@ -45,7 +45,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
     
         protected override void OnOpen()
         {
-            base.OnOpen();
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             _levelRewardCutScene.Play();
@@ -61,6 +60,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _audioController.StopMusic();
             _audioController.PlaySound(_audioController.AudioClipsCollection.VictorySound);
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         private void OnRestartButtonClick()

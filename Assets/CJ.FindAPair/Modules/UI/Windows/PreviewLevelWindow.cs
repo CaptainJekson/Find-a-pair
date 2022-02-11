@@ -36,7 +36,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            base.OnOpen();
             _blockWindow.SetOpenWindow(this);
         }
 

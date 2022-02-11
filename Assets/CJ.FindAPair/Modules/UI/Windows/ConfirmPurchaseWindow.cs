@@ -26,8 +26,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            base.OnOpen();
-            
             _priceText.text = _price.ToString();
 
             _currencyIcon.sprite = _currencyType switch
@@ -36,6 +34,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 CurrencyType.Diamonds => _diamondIcon,
                 _ => throw new ArgumentOutOfRangeException()
             };
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         public void SetData(CurrencyType currencyType, int price, Action purchaseAction)

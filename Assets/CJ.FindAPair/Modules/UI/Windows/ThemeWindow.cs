@@ -46,7 +46,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            base.OnOpen();
             RefreshSlotData();
         }
 

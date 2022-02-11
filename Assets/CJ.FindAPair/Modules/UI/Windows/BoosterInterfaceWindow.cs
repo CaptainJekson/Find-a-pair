@@ -41,6 +41,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _specialCardHandler.SpecialCardOpened -= TryDisableSapperButton;
         }
 
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
+
         private void RefreshButtons()
         {
             foreach (var boosterButton in _boosterButtons)

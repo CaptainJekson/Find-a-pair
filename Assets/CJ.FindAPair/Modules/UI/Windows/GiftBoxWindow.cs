@@ -56,5 +56,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             WindowClosed?.Invoke();
         }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
     }
 }

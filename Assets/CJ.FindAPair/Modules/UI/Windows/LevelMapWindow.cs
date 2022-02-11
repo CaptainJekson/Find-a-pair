@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
-using CJ.FindAPair.Modules.Meta.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
 using CJ.FindAPair.Modules.UI.Windows.Base;
@@ -27,7 +26,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private NextLevelCutScene _nextLevelCutScene;
         private GiftBoxWindow _giftBoxWindow;
-        private ThemeConfigCollection _themeConfigCollection;
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
         
         public bool StartCutSceneAtOpening { get; set; }
@@ -37,8 +35,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
-            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene, 
-            ThemeConfigCollection themeConfigCollection)
+            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
@@ -47,7 +44,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameSaver = gameSaver;
             _nextLevelCutScene = nextLevelCutScene;
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
-            _themeConfigCollection = themeConfigCollection;
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
 
@@ -86,6 +82,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 _levelBackground.gameObject.SetActive(true);
             }
+        }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         public KeyValuePair<LevelLocation, LevelButton> GetCurrentLocationAndButton()
@@ -194,8 +198,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         
         private void PlayMusic()
         {
-            _audioController.PlayMusic(_themeConfigCollection.GetThemeConfig(_gameSaver.LoadData()
-                .ThemesData.SelectedTheme).Music);
+            _audioController.PlayMusic(_audioController.AudioClipsCollection.OnLevelMapMusic);
         }
     }
 }

@@ -40,6 +40,7 @@ namespace CJ.FindAPair.Modules.UI.Windows.Base
                 return;
             }
             
+            PlayOpenSound();
             OnOpen();
         }
 
@@ -70,7 +71,6 @@ namespace CJ.FindAPair.Modules.UI.Windows.Base
 
         protected virtual void OnOpen()
         {
-            PlayOpenSound();
         }
 
         protected virtual void OnClose()

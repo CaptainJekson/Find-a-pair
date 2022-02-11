@@ -26,6 +26,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
             }
         }
 
+        protected override void PlayOpenSound()
+        {
+        }
+
         protected override void PlayCloseSound()
         {
         }

@@ -25,7 +25,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            base.OnOpen();
             _exitButton.onClick.AddListener(OnExitButtonClick);
         }
 
@@ -34,8 +33,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _exitButton.onClick.RemoveListener(OnExitButtonClick);
         }
 
+        protected override void PlayCloseSound()
+        {
+        }
+
         private void OnExitButtonClick()
         {
+            _audioController.StopMusic();
             _levelCreator.ClearLevel();
             
             if (_gameWatcher.IsIncomeLevel())

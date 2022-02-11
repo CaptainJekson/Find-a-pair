@@ -5,7 +5,7 @@ namespace CJ.FindAPair.Modules.Service.Audio.Configs
     [CreateAssetMenu(fileName = "AudioClipsCollection", menuName = "Find a pair/AudioClipsCollection")]
     public class AudioClipsCollection : ScriptableObject
     {
-        [SerializeField] private AudioClip _onLevelMusic;
+        [SerializeField] private AudioClip onLevelMapMusic;
         [SerializeField] private AudioClip _cardDealSound;
         [SerializeField] private AudioClip _cardFlipSound;
         [SerializeField] private AudioClip _cardDisolveSound;
@@ -23,7 +23,7 @@ namespace CJ.FindAPair.Modules.Service.Audio.Configs
         [SerializeField] private AudioClip _magnetBoosterSound;
         [SerializeField] private AudioClip _sapperBoosterSound;
 
-        public AudioClip OnLevelMusic => _onLevelMusic;
+        public AudioClip OnLevelMapMusic => onLevelMapMusic;
         public AudioClip CardDealSound => _cardDealSound;
         public AudioClip CardFlipSound => _cardFlipSound;
         public AudioClip CardDisolveSound => _cardDisolveSound;

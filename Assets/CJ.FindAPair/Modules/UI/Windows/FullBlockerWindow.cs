@@ -29,5 +29,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 card.EnableInteractable();
             }
         }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
     }
 }

@@ -60,6 +60,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ThereWasADefeat -= HideConfigAdsText;
         }
 
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
+
 #if UNITY_EDITOR
                 
         private void OnApplicationQuit()

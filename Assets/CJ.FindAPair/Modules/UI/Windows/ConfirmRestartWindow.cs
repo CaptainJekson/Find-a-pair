@@ -25,13 +25,16 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnOpen()
         {
-            base.OnOpen();
             _restartButton.onClick.AddListener(OnRestartButtonClick);
         }
 
         protected override void OnClose()
         {
             _restartButton.onClick.RemoveListener(OnRestartButtonClick);
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         private void OnRestartButtonClick()

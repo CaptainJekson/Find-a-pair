@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc04e8c3d5a8924d8c0aae88ae71a0f, type: 3}
   m_Name: AudioClipsCollection
   m_EditorClassIdentifier: 
-  _onLevelMusic: {fileID: 8300000, guid: 244f5976f57360e4b883a9a928f59913, type: 3}
+  onLevelMapMusic: {fileID: 8300000, guid: 244f5976f57360e4b883a9a928f59913, type: 3}
   _cardDealSound: {fileID: 8300000, guid: 443cdf14d323e194b82b270e8bd8737e, type: 3}
   _cardFlipSound: {fileID: 8300000, guid: 1df24b862ae8e4a419b0febc34372104, type: 3}
   _cardDisolveSound: {fileID: 8300000, guid: b18cd5783bf806c49848d1fb3762d778, type: 3}

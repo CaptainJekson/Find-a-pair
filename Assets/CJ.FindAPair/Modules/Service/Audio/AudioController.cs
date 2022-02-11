@@ -13,8 +13,8 @@ namespace CJ.FindAPair.Modules.Service.Audio
         private AudioSource _soundSource;
 
         public AudioClipsCollection AudioClipsCollection => _audioClipsCollection;
-        public bool IsMusicMute => _musicSource.mute;
-        public bool IsSoundsMute => _soundSource.mute;
+        public bool IsMusicMute => !_musicSource.mute;
+        public bool IsSoundsMute => !_soundSource.mute;
 
         private void Awake()
         {
@@ -47,17 +47,17 @@ namespace CJ.FindAPair.Modules.Service.Audio
 
         public void SetMusicState(bool isMute)
         {
-            PlayerPrefs.SetString(PlayerPrefsKeys.MusicState, isMute ? "Off" : "On");
+            PlayerPrefs.SetString(PlayerPrefsKeys.MusicState, isMute ? "On" : "Off");
         
-            _musicSource.mute = isMute;
+            _musicSource.mute = !isMute;
             _musicSource.Play();
         }
     
         public void SetSoundsState(bool isMute)
         {
-            PlayerPrefs.SetString(PlayerPrefsKeys.SoundsState, isMute ? "Off" : "On");
+            PlayerPrefs.SetString(PlayerPrefsKeys.SoundsState, isMute ? "On" : "Off");
         
-            _soundSource.mute = isMute;
+            _soundSource.mute = !isMute;
         }
 
         public void StopMusic()

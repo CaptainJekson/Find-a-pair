@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.Meta.Configs;
 using CJ.FindAPair.Modules.Service.Audio;
 using DG.Tweening;
 using UnityEngine;
@@ -11,13 +12,18 @@ namespace CJ.FindAPair.Modules.CoreGames
     {
         private PlaceCardsConfig _placeCardsConfig;
         private AudioController _audioController;
+        private ISaver _gameSaver;
+        private ThemeConfigCollection _themeConfigCollection;
 
         public event UnityAction CardsDealt;
         
-        public CardsPlacer(PlaceCardsConfig placeCardsConfig, AudioController audioController)
+        public CardsPlacer(PlaceCardsConfig placeCardsConfig, AudioController audioController, ISaver gameSaver,
+            ThemeConfigCollection themeConfigCollection)
         {
             _placeCardsConfig = placeCardsConfig;
             _audioController = audioController;
+            _gameSaver = gameSaver;
+            _themeConfigCollection = themeConfigCollection;
         }
 
         public Dictionary<Card, bool> PlaceCards(LevelConfig level, Card cardPrefab, Transform parentTransform) //TODO dev
@@ -92,7 +98,8 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
             
             sequence.AppendInterval(_placeCardsConfig.CardsShowingTime);
-            sequence.AppendCallback(() => _audioController.PlayMusic(_audioController.AudioClipsCollection.OnLevelMusic));
+            sequence.AppendCallback(() => _audioController.PlayMusic(_themeConfigCollection
+                .GetThemeConfig(_gameSaver.LoadData().ThemesData.SelectedTheme).Music));
 
             foreach (var card in cards)
             {
