@@ -45,7 +45,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
                 _firstTutorialHandler.Activate();
             }
 
-            if (_levelCreator.LevelConfig.LevelNumber == 10) //if (_gameSaver.LoadData().CurrentLevel == 10)
+            if (_gameSaver.LoadData().CurrentLevel == 10)
             {
                 _detectorTutorialHandler.Activate();
             }
