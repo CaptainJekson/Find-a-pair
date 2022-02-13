@@ -41,7 +41,6 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             if (_booster == null) return;
             _booster.Init(_levelCreator);
             _booster.ActivateBooster();
-            //_booster.DecreaseCount(boosterType);
         }
         
         private Booster GetBooster<T>() where T : Booster

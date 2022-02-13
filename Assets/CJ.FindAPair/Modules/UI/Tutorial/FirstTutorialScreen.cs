@@ -10,7 +10,10 @@ namespace CJ.FindAPair.Modules.UI.Tutorial
         
         [SerializeField] private RectTransform _tapZoneViewTwoCard;
         [SerializeField] private RectTransform _tapZoneTwoCard;
-        
+
+        [SerializeField] private RectTransform _tapZoneViewCoins;
+        [SerializeField] private RectTransform _tapZoneViewTime;
+        [SerializeField] private RectTransform _tapZoneViewLife;
 
         public void SetPositionTapForOneCard(Vector3 position)
         {
@@ -26,17 +29,17 @@ namespace CJ.FindAPair.Modules.UI.Tutorial
 
         public void SetPositionPointerOnCoins(Vector3 position)
         {
-            
+            _tapZoneViewCoins.position = position;
         }
         
         public void SetPositionPointerOnTimer(Vector3 position)
         {
-            
+            _tapZoneViewTime.position = position;
         }
         
         public void SetPositionPointerOnLives(Vector3 position)
         {
-            
+            _tapZoneViewLife.position = position;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
         [SerializeField] private CooldownBar _cooldownBar;
 
         private Button _button;
-        private BoosterHandler _boosterHandler;
+        private CoreGames.Booster.BoosterHandler _boosterHandler;
         private ISaver _gameSaver;
 
         public bool CanCooldown => _canCooldown;
@@ -29,7 +29,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
             SetCounter();
         }
 
-        public void Init(BoosterHandler boosterHandler, ISaver gameSaver)
+        public void Init(CoreGames.Booster.BoosterHandler boosterHandler, ISaver gameSaver)
         {
             _button = GetComponent<Button>();
 

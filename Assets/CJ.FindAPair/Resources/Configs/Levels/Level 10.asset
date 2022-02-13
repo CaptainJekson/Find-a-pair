@@ -24,6 +24,6 @@ MonoBehaviour:
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 000101010001000000010001010100
+  _levelField: 010101000001010000000101010000
   _rewardItemsCollection: {fileID: 11400000, guid: 94a3f9506eaf4654d9c41ae274ab1e5a,
     type: 2}

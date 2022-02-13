@@ -105,6 +105,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430349230970057674}
+  - {fileID: 4291622870049703674}
   m_Father: {fileID: 4392568329232389681}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,8 +255,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4291622870049703674}
+  m_Children: []
   m_Father: {fileID: 4392568329232389681}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 8359579601625389532}
   - component: {fileID: 8983513795805909639}
   m_Layer: 0
-  m_Name: Step_4
+  m_Name: StepTimerPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,6 +394,8 @@ GameObject:
   - component: {fileID: 4291622870049703674}
   - component: {fileID: 559556101760496398}
   - component: {fileID: 1538885716671216326}
+  - component: {fileID: 5998752977122527645}
+  - component: {fileID: 9165785809201516240}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -412,8 +414,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 430349230982450118}
-  m_RootOrder: 0
+  m_Father: {fileID: 430349230516484372}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -459,6 +461,40 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5998752977122527645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859092407712267762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619294315d9e4031b5c1514cc14fb494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _endPositionY: 25
+--- !u!223 &9165785809201516240
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859092407712267762}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 10002
+  m_TargetDisplay: 0
 --- !u!1 &6186091188220867860
 GameObject:
   m_ObjectHideFlags: 0

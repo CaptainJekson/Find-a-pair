@@ -13,13 +13,22 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private List<BoosterButton> _boosterButtons;
         [SerializeField] private float _boosterCooldownTime;
 
-        private BoosterHandler _boosterHandler;
+        private CoreGames.Booster.BoosterHandler _boosterHandler;
         private LevelCreator _levelCreator;
         private SpecialCardHandler _specialCardHandler;
         private ISaver _gameSaver;
 
+        [Header("Positions for tutorial")] 
+        [SerializeField] private RectTransform _detectorTransform;
+        [SerializeField] private RectTransform _magnetTransform;
+        [SerializeField] private RectTransform _sapperTransform;
+        
+        public RectTransform DetectorTransform => _detectorTransform;
+        public RectTransform MagnetTransform => _magnetTransform;
+        public RectTransform SapperTransform => _sapperTransform;
+
         [Inject]
-        public void Construct(BoosterHandler boosterHandler, ISaver gameSaver, LevelCreator levelCreator, SpecialCardHandler specialCardHandler)
+        public void Construct(CoreGames.Booster.BoosterHandler boosterHandler, ISaver gameSaver, LevelCreator levelCreator, SpecialCardHandler specialCardHandler)
         {
             _boosterHandler = boosterHandler;
             _gameSaver = gameSaver;

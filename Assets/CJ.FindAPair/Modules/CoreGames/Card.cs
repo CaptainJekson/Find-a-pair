@@ -23,7 +23,6 @@ namespace CJ.FindAPair.Modules.CoreGames
         private CardEffector _cardEffector;
 
         public bool IsEmpty { get; set; }
-        public bool IsShow { get; set; }
         public bool IsMatched => _isMatched;
         public int NumberPair { get; set; }
         
@@ -36,7 +35,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             _cardEffector = GetComponent<CardEffector>();
             _collider.enabled = false;
             IsEmpty = false;
-            IsShow = false;
         }
 
         private void Start()
@@ -62,8 +60,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             _collider.enabled = false;
             PlayAnimation(true);
-            
-            IsShow = true;
+
             if (isNotEventCall) return;
             СardOpens?.Invoke();
         }
@@ -77,8 +74,6 @@ namespace CJ.FindAPair.Modules.CoreGames
                 _collider.enabled = true;
             
             PlayAnimation(false);
-            
-            IsShow = false;
 
             if (_isMatched)
             {

@@ -12,7 +12,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
         private LevelCreator _levelCreator;
         private RayCaster _rayCaster;
         private CardComparator _cardComparator;
-        private BoosterHandler _boosterHandler;
+        private Booster.BoosterHandler _boosterHandler;
         private SpecialCardHandler _specialCardHandler;
         private LevelBackground _levelBackground;
         private UIRoot _uiRoot;
@@ -20,7 +20,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
 
         [Inject]
         public void ConstructCoreGame(LevelCreator levelCreator, RayCaster rayCaster, CardComparator cardComparator, 
-            BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,LevelBackground levelBackground, 
+            Booster.BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,LevelBackground levelBackground, 
             UIRoot uiRoot, EnergyCooldownHandler energyCooldownHandler)
         {
             _levelBackground = levelBackground;

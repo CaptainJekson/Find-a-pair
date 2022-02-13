@@ -18,12 +18,20 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Image _lockImage;
         [SerializeField] private Transform _scoresIconTransform;
 
+        [Header("Panel positions")]
+        [SerializeField] private RectTransform _scorePanelForTutorial;
+        [SerializeField] private RectTransform _timePanelForTutorial;
+        [SerializeField] private RectTransform _lifePanelForTutorial;
+
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
         private EnergyCooldownHandler _energyCooldownHandler;
         private UIRoot _uiRoot;
         
         public Transform ScoresIconTransform => _scoresIconTransform;
+        public RectTransform ScorePanelForTutorial => _scorePanelForTutorial;
+        public RectTransform TimePanelForTutorial => _timePanelForTutorial;
+        public RectTransform LifePanelForTutorial => _lifePanelForTutorial;
 
         [Inject]
         public void Construct(GameWatcher gameWatcher, LevelCreator levelCreator, 
