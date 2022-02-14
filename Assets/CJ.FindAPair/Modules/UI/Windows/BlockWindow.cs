@@ -1,3 +1,5 @@
+using CJ.FindAPair.Modules.UI.Windows.Base;
+
 namespace CJ.FindAPair.Modules.UI.Windows
 {
     public class BlockWindow : Window
@@ -22,6 +24,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 _openWindow.Close();
                 base.OnCloseButtonClick();
             }
+        }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
     }
 }

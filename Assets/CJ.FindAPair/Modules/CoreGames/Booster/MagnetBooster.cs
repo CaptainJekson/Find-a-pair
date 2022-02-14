@@ -10,6 +10,8 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
         
         public override void ActivateBooster()
         {
+            _audioController.PlaySound(_audioController.AudioClipsCollection.MagnetBoosterSound);
+            
             foreach (var card in _levelCreator.Cards.Where(card => !card.IsMatched))
             {
                 card.Show(true);

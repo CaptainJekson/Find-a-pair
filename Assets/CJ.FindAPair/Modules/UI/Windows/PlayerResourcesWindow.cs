@@ -1,5 +1,6 @@
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.Service.Store;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using CJ.FindAPair.Utility;
 using TMPro;
 using UnityEngine;
@@ -37,13 +38,20 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnOpen()
         {
             _storeDriver.PurchaseCompleted += SmoothRefreshValues;
-
             SetValues();
         }
         
         protected override void OnClose()
         {
             _storeDriver.PurchaseCompleted -= SmoothRefreshValues;
+        }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         private void Update()

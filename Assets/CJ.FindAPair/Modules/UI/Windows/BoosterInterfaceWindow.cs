@@ -3,6 +3,7 @@ using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using UnityEngine;
 using Zenject;
 
@@ -13,7 +14,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private List<BoosterButton> _boosterButtons;
         [SerializeField] private float _boosterCooldownTime;
 
-        private CoreGames.Booster.BoosterHandler _boosterHandler;
+        private BoosterHandler _boosterHandler;
         private LevelCreator _levelCreator;
         private SpecialCardHandler _specialCardHandler;
         private ISaver _gameSaver;
@@ -28,7 +29,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
         public RectTransform SapperTransform => _sapperTransform;
 
         [Inject]
-        public void Construct(CoreGames.Booster.BoosterHandler boosterHandler, ISaver gameSaver, LevelCreator levelCreator, SpecialCardHandler specialCardHandler)
+
+        public void Construct(BoosterHandler boosterHandler, ISaver gameSaver, LevelCreator levelCreator, 
+            SpecialCardHandler specialCardHandler)
         {
             _boosterHandler = boosterHandler;
             _gameSaver = gameSaver;
@@ -46,6 +49,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnClose()
         {
             _specialCardHandler.SpecialCardOpened -= TryDisableSapperButton;
+        }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         private void RefreshButtons()

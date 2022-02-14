@@ -1,6 +1,7 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using CJ.FindAPair.Utility;
 using TMPro;
 using UnityEngine;
@@ -65,6 +66,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameWatcher.ConfirmShowAds -= ShowConfigAdsText;
             _gameWatcher.ThereWasAVictory -= HideConfigAdsText;
             _gameWatcher.ThereWasADefeat -= HideConfigAdsText;
+        }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
 #if UNITY_EDITOR

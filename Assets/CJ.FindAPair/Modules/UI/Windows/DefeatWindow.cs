@@ -2,9 +2,11 @@ using System;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
+using CJ.FindAPair.Modules.Meta.Configs;
 using CJ.FindAPair.Modules.Service.Ads;
 using CJ.FindAPair.Modules.Service.Ads.Configs;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using I2.Loc;
 using TMPro;
 using UnityEngine;
@@ -40,13 +42,13 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private IAdsDriver _adsDriver;
         private UnityAdsConfig _unityAdsConfig;
         private EnergyCooldownHandler _energyCooldownHandler;
-
         private DateTime _endCooldownForContinueGame = DateTime.Now;
+        private ThemeConfigCollection _themeConfigCollection;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameSettingsConfig gameSettingsConfig,
             GameWatcher gameWatcher, SpecialCardHandler specialCardHandler, ISaver gameSaver, IAdsDriver adsDriver, 
-            UnityAdsConfig unityAdsConfig, EnergyCooldownHandler energyCooldownHandler)
+            UnityAdsConfig unityAdsConfig, EnergyCooldownHandler energyCooldownHandler, ThemeConfigCollection themeConfigCollection)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
@@ -58,6 +60,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _bombCard = specialCardHandler.GetComponentInChildren<BombCard>();
             _fortuneCard = specialCardHandler.GetComponentInChildren<FortuneCard>();
             _energyCooldownHandler = energyCooldownHandler;
+            _themeConfigCollection = themeConfigCollection;
         }
 
         private void Update()
@@ -92,7 +95,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
-            
+
             var gameData = _gameSaver.LoadData();
 
             if (DateTime.TryParse(gameData.AdsData.EndCooldownForContinueGame, out var parseResult))
@@ -106,6 +109,16 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnClose()
         {
             _uiRoot.CloseWindow<GameBlockWindow>();
+        }
+        
+        protected override void PlayOpenSound()
+        {
+            _audioController.StopMusic();
+            _audioController.PlaySound(_audioController.AudioClipsCollection.DefeatSound);
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         private void OnRestartButtonClick()
@@ -130,6 +143,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private void OnAdsButtonClick()
         {
             _gameWatcher.ContinueGameWithAdsInEnd();
+            _audioController.PlayMusic(_themeConfigCollection
+                .GetThemeConfig(_gameSaver.LoadData().ThemesData.SelectedTheme).Music);
             _loadingAdsBlocker.gameObject.SetActive(true);
             Close();
         }

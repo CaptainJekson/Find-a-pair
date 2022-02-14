@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CJ.FindAPair.Modules.Service.Audio;
 using UnityEngine;
 using Zenject;
 
@@ -13,12 +14,14 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
         private CardComparator _cardComparator;
         private LevelCreator _levelCreator;
         private Booster _booster;
+        private AudioController _audioController;
 
         [Inject]
-        public void Construct(LevelCreator levelCreator, CardComparator cardComparator)
+        public void Construct(LevelCreator levelCreator, CardComparator cardComparator, AudioController audioController)
         {
             _levelCreator = levelCreator;
             _cardComparator = cardComparator;
+            _audioController = audioController;
         }
         
         public void BoosterActivationHandler(BoosterType boosterType)
@@ -39,7 +42,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             }
             
             if (_booster == null) return;
-            _booster.Init(_levelCreator);
+            _booster.Init(_levelCreator, _audioController);
             _booster.ActivateBooster();
         }
         

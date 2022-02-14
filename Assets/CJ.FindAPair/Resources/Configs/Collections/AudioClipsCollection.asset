@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc04e8c3d5a8924d8c0aae88ae71a0f, type: 3}
+  m_Name: AudioClipsCollection
+  m_EditorClassIdentifier: 
+  onLevelMapMusic: {fileID: 8300000, guid: 244f5976f57360e4b883a9a928f59913, type: 3}
+  _cardDealSound: {fileID: 8300000, guid: 443cdf14d323e194b82b270e8bd8737e, type: 3}
+  _cardFlipSound: {fileID: 8300000, guid: 1df24b862ae8e4a419b0febc34372104, type: 3}
+  _cardDisolveSound: {fileID: 8300000, guid: b18cd5783bf806c49848d1fb3762d778, type: 3}
+  _cardRevealSound: {fileID: 8300000, guid: b3b476c098c03b54fa0a6fd07a14828b, type: 3}
+  _windowOpenSound: {fileID: 8300000, guid: 4d28d1876059e0242931b97c03e94884, type: 3}
+  _windowCloseSound: {fileID: 8300000, guid: a28ddec0568b0a34ea56b4f22da1251e, type: 3}
+  _coinObtainSound: {fileID: 8300000, guid: fd5f452f6733765479ec344818614ba0, type: 3}
+  _victorySound: {fileID: 8300000, guid: 01f4f111b63f25e43a8888c5db6eaccd, type: 3}
+  _defeatSound: {fileID: 8300000, guid: ffa00536cbb3a6c4590c60aace720157, type: 3}
+  _giftBoxOpenSound: {fileID: 8300000, guid: 8e127662204df1f4db0090674af17e50, type: 3}
+  _giftItemObtainSound: {fileID: 8300000, guid: 832fd0a77d515d84e887ed856ab7561c,
+    type: 3}
+  _levelMarkerCenteringSound: {fileID: 8300000, guid: 0875140c3f2f5b841bfa818a3db8394d,
+    type: 3}
+  _levelMarkerExplosionSound: {fileID: 8300000, guid: 408d4d77a7213f241afeeabc9b6c172e,
+    type: 3}
+  _detectorBoosterSound: {fileID: 8300000, guid: 4303b04a704f095419a3c85269680c50,
+    type: 3}
+  _magnetBoosterSound: {fileID: 8300000, guid: 44830f3aff0fa6b4fb4c853ff9b82f24, type: 3}
+  _sapperBoosterSound: {fileID: 8300000, guid: 0d4236b322552e544966156e45730721, type: 3}
