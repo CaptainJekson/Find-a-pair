@@ -19,19 +19,23 @@ namespace CJ.FindAPair.Modules.CoreGames
         [SerializeField] private float _dissolveDelay; 
         
         private MaterialPropertyBlock _propBlock;
+        private Card _card;
 
         private void Awake()
         {
             _propBlock = new MaterialPropertyBlock();
+            _card = GetComponent<Card>();
         }
 
         public void PlayDissolve()
         {
+            _card.AudioDriver.PlaySound(_card.AudioDriver.AudioClipsCollection.CardDisolveSound);
             StartCoroutine(MakeDissolve());
         }
 
         public void PlayRevertDissolve()
         {
+            _card.AudioDriver.PlaySound(_card.AudioDriver.AudioClipsCollection.CardRevealSound);
             StartCoroutine(MakeRevertDissolve());
         }
 

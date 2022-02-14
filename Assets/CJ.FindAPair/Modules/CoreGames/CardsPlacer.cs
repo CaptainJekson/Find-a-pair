@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames.Configs;
+using CJ.FindAPair.Modules.Meta.Configs;
+using CJ.FindAPair.Modules.Service.Audio;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,12 +11,19 @@ namespace CJ.FindAPair.Modules.CoreGames
     public class CardsPlacer
     {
         private PlaceCardsConfig _placeCardsConfig;
+        private AudioController _audioController;
+        private ISaver _gameSaver;
+        private ThemeConfigCollection _themeConfigCollection;
 
         public event UnityAction CardsDealt;
         
-        public CardsPlacer(PlaceCardsConfig placeCardsConfig)
+        public CardsPlacer(PlaceCardsConfig placeCardsConfig, AudioController audioController, ISaver gameSaver,
+            ThemeConfigCollection themeConfigCollection)
         {
             _placeCardsConfig = placeCardsConfig;
+            _audioController = audioController;
+            _gameSaver = gameSaver;
+            _themeConfigCollection = themeConfigCollection;
         }
 
         public Dictionary<Card, bool> PlaceCards(LevelConfig level, Card cardPrefab, Transform parentTransform) //TODO dev
@@ -33,8 +42,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             foreach (var isFilledCell in level.LevelField)
             {
                 var newCard = Object.Instantiate(cardPrefab, placePosition, Quaternion.identity, parentTransform);
-                newCard.transform.localScale = Vector3.one * scale;  
-                
+                newCard.transform.localScale = Vector3.one * scale;
+                newCard.AudioDriver = _audioController;
+
                 placePosition += offsetPositionY;
                 heightBreakCounter++;
 
@@ -71,7 +81,11 @@ namespace CJ.FindAPair.Modules.CoreGames
                 int i = interactionsCounter;
                 
                 sequence.AppendInterval(_placeCardsConfig.TimeBetweenDeals);
-                sequence.AppendCallback(() => card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase));
+                sequence.AppendCallback(() =>
+                {
+                    card.Move(cardsPositions[i], _placeCardsConfig.CardDealSpeed, _placeCardsConfig.CardDealEase);
+                    _audioController.PlaySound(_audioController.AudioClipsCollection.CardDealSound);
+                });
                 
                 interactionsCounter++;
             }
@@ -84,12 +98,14 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
             
             sequence.AppendInterval(_placeCardsConfig.CardsShowingTime);
-            
+            sequence.AppendCallback(() => _audioController.PlayMusic(_themeConfigCollection
+                .GetThemeConfig(_gameSaver.LoadData().ThemesData.SelectedTheme).Music));
+
             foreach (var card in cards)
             {
                 sequence.AppendCallback(() => card.Hide());
             }
-
+            
             sequence.AppendCallback(() => CardsDealt?.Invoke());
         }
     }

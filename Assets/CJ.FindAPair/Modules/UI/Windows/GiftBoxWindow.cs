@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.Events;
@@ -54,6 +55,14 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _resumeButton.gameObject.SetActive(false);
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             WindowClosed?.Invoke();
+        }
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
     }
 }

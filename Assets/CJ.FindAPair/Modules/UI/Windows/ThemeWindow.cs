@@ -4,6 +4,7 @@ using CJ.FindAPair.Modules.Meta.Themes;
 using CJ.FindAPair.Modules.Service.Store;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using CJ.FindAPair.Utility;
 using UnityEngine;
 using Zenject;
@@ -22,7 +23,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private IStoreDriver _storeDriver;
         private ISaver _gameSaver;
-
         private ThemeSlot _selectedThemeSlot;
         private List<ThemeSlot> _themeSlots;
 

@@ -1,5 +1,6 @@
 using System;
 using CJ.FindAPair.Modules.Service;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         [SerializeField] private Button _buyButton;
         [SerializeField] private TextMeshProUGUI _priceText;
         [SerializeField] private Image _currencyIcon;
-
         [SerializeField] private Sprite _coinIcon;
         [SerializeField] private Sprite _diamondIcon;
 
@@ -34,6 +34,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 CurrencyType.Diamonds => _diamondIcon,
                 _ => throw new ArgumentOutOfRangeException()
             };
+        }
+
+        protected override void PlayCloseSound()
+        {
         }
 
         public void SetData(CurrencyType currencyType, int price, Action purchaseAction)

@@ -1,6 +1,7 @@
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,7 +55,17 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _uiRoot.CloseWindow<GameBlockWindow>();
         }
-        
+
+        protected override void PlayOpenSound()
+        {
+            _audioController.StopMusic();
+            _audioController.PlaySound(_audioController.AudioClipsCollection.VictorySound);
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
+
         private void OnRestartButtonClick()
         {
             _levelCreator.RestartLevel();

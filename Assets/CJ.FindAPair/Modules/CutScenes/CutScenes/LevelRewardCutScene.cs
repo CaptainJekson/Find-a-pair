@@ -3,6 +3,7 @@ using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CutScenes.Configs;
 using CJ.FindAPair.Modules.CutScenes.Installer;
 using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
+using CJ.FindAPair.Modules.Service.Audio;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
 using DG.Tweening;
@@ -18,6 +19,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         private LevelRewardCutSceneConfig _cutSceneConfig;
         private GameInterfaceWindow _gameInterfaceWindow;
         private VictoryWindow _victoryWindow;
+        private AudioController _audioController;
 
         private int _rewardCoinsCount;
         private int _currentCoinsCount;
@@ -27,7 +29,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         private List<AwardCoin> _rewardCoins;
 
         public LevelRewardCutScene(GameWatcher gameWatcher, ISaver gameSaver, CutScenesConfigs cutScenesConfigs, 
-            ItemsTransferer itemsTransferer, UIRoot uiRoot)
+            ItemsTransferer itemsTransferer, UIRoot uiRoot, AudioController audioController)
         {
             _gameWatcher = gameWatcher;
             _gameSaver = gameSaver;
@@ -35,6 +37,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _cutSceneConfig = cutScenesConfigs.GetConfig<LevelRewardCutSceneConfig>();
             _gameInterfaceWindow = uiRoot.GetWindow<GameInterfaceWindow>();
             _victoryWindow = uiRoot.GetWindow<VictoryWindow>();
+            _audioController = audioController;
         }
 
         public override void Play()
@@ -111,6 +114,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                 .AppendInterval(_cutSceneConfig.CoinTransferDuration)
                 .AppendCallback(() =>
                 {
+                    _audioController.PlaySound(_audioController.AudioClipsCollection.CoinObtainSound);
                     _rewardCoins[coinNumber].gameObject.SetActive(false);
                     _victoryWindow.SetCoinsValue(coinsValue);
                 });

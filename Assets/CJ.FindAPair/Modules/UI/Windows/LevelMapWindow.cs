@@ -5,6 +5,7 @@ using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,11 +26,9 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private ISaver _gameSaver;
         private NextLevelCutScene _nextLevelCutScene;
         private GiftBoxWindow _giftBoxWindow;
-
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
         
         public bool StartCutSceneAtOpening { get; set; }
-
         public bool AbleGiftObtainAtOpen { get; set; }
 
         public bool IsScrollMove => Mathf.Abs(_scrollRect.velocity.y) > 100;
@@ -45,7 +44,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _gameSaver = gameSaver;
             _nextLevelCutScene = nextLevelCutScene;
             _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
-            
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
 
@@ -58,6 +56,8 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnOpen()
         {
             _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
+            _giftBoxWindow.WindowClosed += PlayMusic;
+            
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             
             RefreshLevelButtons();
@@ -71,7 +71,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
 
         protected override void OnClose()
         {
+            _audioController.StopMusic();
+            
             _giftBoxWindow.WindowClosed -= TryStartNextLevelCutScene;
+            _giftBoxWindow.WindowClosed -= PlayMusic;
+            
             _uiRoot.CloseWindow<MenuButtonsWindow>();
             
             if (_levelBackground != null)
@@ -79,7 +83,15 @@ namespace CJ.FindAPair.Modules.UI.Windows
                 _levelBackground.gameObject.SetActive(true);
             }
         }
-        
+
+        protected override void PlayOpenSound()
+        {
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
+
         public KeyValuePair<LevelLocation, LevelButton> GetCurrentLocationAndButton()
         {
             var currentLevel = _gameSaver.LoadData().CurrentLevel;
@@ -173,6 +185,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             }
             else
             {
+                PlayMusic();
                 TryStartNextLevelCutScene();
             }
         }
@@ -181,6 +194,11 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             if (StartCutSceneAtOpening)
                 _nextLevelCutScene.Play();
+        }
+        
+        private void PlayMusic()
+        {
+            _audioController.PlayMusic(_audioController.AudioClipsCollection.OnLevelMapMusic);
         }
     }
 }

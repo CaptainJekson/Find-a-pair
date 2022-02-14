@@ -12,6 +12,8 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             var randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
 
             randomCard = GetRandomCard(randomCard, true);
+            
+            _audioController.PlaySound(_audioController.AudioClipsCollection.DetectorBoosterSound);
 
             foreach (var card in _levelCreator.Cards.Where(card => card.NumberPair == randomCard.NumberPair))
                 card.GetComponent<CardEffector>().PlayMagicEye();

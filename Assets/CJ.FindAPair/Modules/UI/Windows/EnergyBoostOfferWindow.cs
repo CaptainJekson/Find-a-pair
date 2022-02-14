@@ -1,25 +1,32 @@
 using CJ.FindAPair.Modules.UI.Installer;
-using CJ.FindAPair.Modules.UI.Windows;
+using CJ.FindAPair.Modules.UI.Windows.Base;
 using Zenject;
 
-public class EnergyBoostOfferWindow : Window
+namespace CJ.FindAPair.Modules.UI.Windows
 {
-    private BlockWindow _blockWindow;
-    
-    [Inject]
-    private void Construct(UIRoot uiRoot)
+    public class EnergyBoostOfferWindow : Window
     {
-        _blockWindow = uiRoot.GetWindow<BlockWindow>();
-    }
+        private BlockWindow _blockWindow;
+
+        [Inject]
+        private void Construct(UIRoot uiRoot)
+        {
+            _blockWindow = uiRoot.GetWindow<BlockWindow>();
+        }
     
-    protected override void OnOpen()
-    {
-        _blockWindow.SetOpenWindow(this);
-    }
+        protected override void OnOpen()
+        {
+            _blockWindow.SetOpenWindow(this);
+        }
     
-    protected override void OnCloseButtonClick()
-    {
-        _blockWindow.Close();
-        base.OnCloseButtonClick();
+        protected override void OnCloseButtonClick()
+        {
+            _blockWindow.Close();
+            base.OnCloseButtonClick();
+        }
+
+        protected override void PlayCloseSound()
+        {
+        }
     }
 }
