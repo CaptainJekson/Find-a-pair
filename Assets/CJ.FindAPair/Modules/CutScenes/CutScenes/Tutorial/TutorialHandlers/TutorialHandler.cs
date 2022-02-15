@@ -1,4 +1,5 @@
 using CJ.FindAPair.Modules.CoreGames;
+using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
 {

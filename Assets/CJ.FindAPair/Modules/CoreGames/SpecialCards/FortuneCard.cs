@@ -7,11 +7,19 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 {
     public class FortuneCard : SpecialCard
     {
+        private bool _isHundredPercentOpening;
+        
         public event UnityAction CardRealised;
+
+        public void MakeOneHundredPercentOpening()
+        {
+            _isHundredPercentOpening = true;
+        }
         
         public override void OpenSpecialCard(Card specialCard)
         {
-            var randomChance = Random.Range(0, 2);
+            Debug.LogError(_isHundredPercentOpening + " ---  " + GetHashCode());
+            var randomChance = _isHundredPercentOpening ? 1 : Random.Range(0, 2);
             var randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
 
             if (randomChance > 0)
@@ -20,8 +28,15 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
                 ClosingPairCards(randomCard);
 
             specialCard.DelayHide();
+            MakeChanceInDefaultState();
         }
-        
+
+        private void MakeChanceInDefaultState()
+        {
+            if(_isHundredPercentOpening)
+                _isHundredPercentOpening = false;
+        }
+
         private void OpeningPairCards(Card randomCard)
         {
             randomCard = GetRandomCard(randomCard, true);

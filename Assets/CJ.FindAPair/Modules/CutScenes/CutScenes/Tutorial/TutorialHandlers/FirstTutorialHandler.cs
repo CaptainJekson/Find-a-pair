@@ -29,7 +29,6 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
         public override void Activate()
         {
             AllDisableCard();
-                
             _tutorialScreen = _tutorialRoot.GetScreen<FirstTutorialScreen>();
             _cardsPair = GetFindPairCards();
 

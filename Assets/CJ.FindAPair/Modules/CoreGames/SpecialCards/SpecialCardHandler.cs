@@ -26,6 +26,19 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             _cardComparator = cardComparator;
         }
 
+        public FortuneCard GetFortuneCardHandler()
+        {
+            foreach (var handler in _handlers)
+            {
+                if (handler.GetType() == typeof(FortuneCard))
+                {
+                    return handler as FortuneCard;
+                }
+            }
+
+            return null;
+        }
+
         private void OnEnable()
         {
             _cardComparator.SpecialCardOpened += SpecialCardOpeningHandler;
@@ -36,9 +49,9 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
             _cardComparator.SpecialCardOpened -= SpecialCardOpeningHandler;
         }
 
-        private void SpecialCardOpeningHandler(Card cardOld)
+        private void SpecialCardOpeningHandler(Card card)
         {
-            switch (cardOld.NumberPair)
+            switch (card.NumberPair)
             {
                 case ConstantsCard.NUMBER_FORTUNE:
                     _specialCard = GetSpecialCard<FortuneCard>();
@@ -56,7 +69,8 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
 
             if (_specialCard == null) return;
             _specialCard.Init(_gameWatcher, _levelCreator);
-            _specialCard.OpenSpecialCard(cardOld);
+            
+            _specialCard.OpenSpecialCard(card);
             
             SpecialCardOpened?.Invoke();
         }

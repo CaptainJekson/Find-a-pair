@@ -1,5 +1,6 @@
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Booster;
+using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers;
 using CJ.FindAPair.Modules.UI.Installer;
 
@@ -12,14 +13,17 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
         private readonly LevelCreator _levelCreator;
         private readonly CardsPlacer _cardsPlacer;
         private readonly BoosterHandler _boosterHandler;
+        private readonly SpecialCardHandler _specialCardHandler;
         private readonly ISaver _gameSaver;
         
         private FirstTutorialHandler _firstTutorialHandler;
         private DetectorTutorialHandler _detectorTutorialHandler;
         private MagnetTutorialHandler _magnetTutorialHandler;
+        private FortuneTutorialHandler _fortuneTutorialHandler;
 
         public TutorialDriver(TutorialRoot tutorialRoot, UIRoot uiRoot, LevelCreator levelCreator, 
-            CardsPlacer cardsPlacer, BoosterHandler boosterHandler, ISaver gameSaver)
+            CardsPlacer cardsPlacer, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,
+            ISaver gameSaver)
         {
             _tutorialRoot = tutorialRoot;
             _uiRoot = uiRoot;
@@ -27,6 +31,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
             _cardsPlacer = cardsPlacer;
             _gameSaver = gameSaver;
             _boosterHandler = boosterHandler;
+            _specialCardHandler = specialCardHandler;
             _levelCreator.LevelCreated += CheckTutorialLevels;
             
             CreateTutorialHandlers();
@@ -39,6 +44,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
                 _tutorialRoot, _uiRoot);
             _magnetTutorialHandler = new MagnetTutorialHandler(_levelCreator, _boosterHandler,
                 _tutorialRoot, _uiRoot);
+            _fortuneTutorialHandler = new FortuneTutorialHandler(_levelCreator, _tutorialRoot, _cardsPlacer,
+                _specialCardHandler);
         }
 
         private void CheckTutorialLevels()
@@ -56,6 +63,11 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
             if (_gameSaver.LoadData().CurrentLevel == 28)
             {
                 _magnetTutorialHandler.Activate();
+            }
+
+            if (_gameSaver.LoadData().CurrentLevel == 34)
+            {
+                _fortuneTutorialHandler.Activate();
             }
         }
     }

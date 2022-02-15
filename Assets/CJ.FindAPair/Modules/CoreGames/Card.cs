@@ -77,9 +77,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             
             PlayAnimation(false);
 
-            _collider.enabled = true;
-            PlayAnimation(false);
-
             if (_isMatched)
             {
                 _cardEffector.PlayRevertDissolve();
