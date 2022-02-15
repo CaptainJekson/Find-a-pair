@@ -16,6 +16,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
         
         private FirstTutorialHandler _firstTutorialHandler;
         private DetectorTutorialHandler _detectorTutorialHandler;
+        private MagnetTutorialHandler _magnetTutorialHandler;
 
         public TutorialDriver(TutorialRoot tutorialRoot, UIRoot uiRoot, LevelCreator levelCreator, 
             CardsPlacer cardsPlacer, BoosterHandler boosterHandler, ISaver gameSaver)
@@ -36,6 +37,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
             _firstTutorialHandler = new FirstTutorialHandler(_levelCreator, _tutorialRoot, _cardsPlacer, _uiRoot);
             _detectorTutorialHandler = new DetectorTutorialHandler(_levelCreator, _boosterHandler,
                 _tutorialRoot, _uiRoot);
+            _magnetTutorialHandler = new MagnetTutorialHandler(_levelCreator, _boosterHandler,
+                _tutorialRoot, _uiRoot);
         }
 
         private void CheckTutorialLevels()
@@ -48,6 +51,11 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
             if (_gameSaver.LoadData().CurrentLevel == 10)
             {
                 _detectorTutorialHandler.Activate();
+            }
+            
+            if (_levelCreator.LevelConfig.LevelNumber == 28) //_gameSaver.LoadData().CurrentLevel == 28
+            {
+                _magnetTutorialHandler.Activate();
             }
         }
     }
