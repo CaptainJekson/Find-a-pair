@@ -77,7 +77,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
                 _sapperTutorialHandler.Activate();
             }
             
-            if (_levelCreator.LevelConfig.LevelNumber == 97) //TODO TEST
+            if (_gameSaver.LoadData().CurrentLevel == 97)
             {
                 _entanglementTutorialHandler.Activate();
             }
