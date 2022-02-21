@@ -21,6 +21,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
         private MagnetTutorialHandler _magnetTutorialHandler;
         private FortuneTutorialHandler _fortuneTutorialHandler;
         private SapperTutorialHandler _sapperTutorialHandler;
+        private EntanglementTutorialHandler _entanglementTutorialHandler;
 
         public TutorialDriver(TutorialRoot tutorialRoot, UIRoot uiRoot, LevelCreator levelCreator, 
             CardsPlacer cardsPlacer, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,
@@ -41,14 +42,12 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
         private void CreateTutorialHandlers()
         {
             _firstTutorialHandler = new FirstTutorialHandler(_levelCreator, _tutorialRoot, _cardsPlacer, _uiRoot);
-            _detectorTutorialHandler = new DetectorTutorialHandler(_levelCreator, _boosterHandler,
-                _tutorialRoot, _uiRoot);
-            _magnetTutorialHandler = new MagnetTutorialHandler(_levelCreator, _boosterHandler,
-                _tutorialRoot, _uiRoot);
+            _detectorTutorialHandler = new DetectorTutorialHandler(_levelCreator, _boosterHandler,_tutorialRoot, _uiRoot);
+            _magnetTutorialHandler = new MagnetTutorialHandler(_levelCreator, _boosterHandler,_tutorialRoot, _uiRoot);
             _fortuneTutorialHandler = new FortuneTutorialHandler(_levelCreator, _tutorialRoot, _cardsPlacer,
                 _specialCardHandler);
-            _sapperTutorialHandler = new SapperTutorialHandler(_levelCreator, _boosterHandler,
-                _tutorialRoot, _uiRoot);
+            _sapperTutorialHandler = new SapperTutorialHandler(_levelCreator, _boosterHandler,_tutorialRoot, _uiRoot);
+            _entanglementTutorialHandler = new EntanglementTutorialHandler(_levelCreator, _tutorialRoot, _cardsPlacer);
         }
 
         private void CheckTutorialLevels()
@@ -73,9 +72,14 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
                 _fortuneTutorialHandler.Activate();
             }
 
-            if (_levelCreator.LevelConfig.LevelNumber == 42)
+            if (_gameSaver.LoadData().CurrentLevel == 42)
             {
                 _sapperTutorialHandler.Activate();
+            }
+            
+            if (_levelCreator.LevelConfig.LevelNumber == 97) //TODO TEST
+            {
+                _entanglementTutorialHandler.Activate();
             }
         }
     }

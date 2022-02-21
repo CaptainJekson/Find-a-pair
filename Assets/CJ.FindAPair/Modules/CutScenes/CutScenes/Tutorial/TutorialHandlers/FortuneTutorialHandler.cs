@@ -2,12 +2,10 @@
 using CJ.FindAPair.Constants;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
-using CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Tutorial;
-using UnityEngine;
 
-namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
+namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
 {
     public class FortuneTutorialHandler : TutorialHandler
     {

@@ -16,7 +16,7 @@ MonoBehaviour:
   _isHard: 0
   _width: 2
   _height: 3
-  _heightOffset: 0
+  _heightOffset: 1
   _quantityOfCardOfPair: 2
   _tries: 15
   _time: 120
@@ -25,3 +25,4 @@ MonoBehaviour:
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
   _levelField: 010101010101
+  _rewardItemsCollection: {fileID: 0}
