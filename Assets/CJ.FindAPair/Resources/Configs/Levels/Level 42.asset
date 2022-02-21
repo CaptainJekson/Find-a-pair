@@ -19,11 +19,11 @@ MonoBehaviour:
   _heightOffset: 0.9
   _quantityOfCardOfPair: 2
   _tries: 10
-  _time: 60
-  _quantityPairOfFortune: 0
+  _time: 180
+  _quantityPairOfFortune: 1
   _quantityPairOfEntanglement: 0
   _quantityPairOfReset: 0
   _quantityPairOfBombs: 0
-  _levelField: 00000101010000010101010101010101010101010100000101010000
+  _levelField: 01010101000000010101010000000101010100000001010101000000
   _rewardItemsCollection: {fileID: 11400000, guid: dcb2941605093da4a8eb3d40b4020957,
     type: 2}

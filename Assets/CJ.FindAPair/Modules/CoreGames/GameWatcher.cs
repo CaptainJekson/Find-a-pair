@@ -80,7 +80,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             _levelCreator.LevelDeleted += ResetCounts;
             _adsDriver.AdsIsSkipped += InitiateDefeatAtSkipAds;
             _adsDriver.AdsIsFailed += InitiateDefeatAtSkipAds;
-            _adsDriver.AdsIsComplete += AddCoolDownAdsTime;
         }
         
         public bool IsIncomeLevel()
@@ -165,11 +164,6 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             _scoreCombo = scoreCombo;
             _score += scoreCombo;
-
-            foreach (var card in _cardComparator.ComparisonCards)
-            {
-                //card.GetComponent<AnimationCardOld>().PlayCombo(scoreCombo);
-            }
         }
 
         private void RemoveScore()
@@ -232,15 +226,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 InitiateDefeat();
             }
         }
-        
-        private void AddCoolDownAdsTime(string placementId)
-        {
-            if (placementId == _unityAdsConfig.PlacementRewardedVideoId)
-            {
-                
-            }
-        }
-        
+
         private void StartTheGame()
         {
             _quantityOfPairs = (_levelCreator.Cards.Count / (int)_levelCreator.LevelConfig.QuantityOfCardOfPair)

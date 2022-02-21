@@ -50,12 +50,12 @@ namespace CJ.FindAPair.Modules.Service.Ads
         {
             AdsIsReady?.Invoke(placementId);
         }
-
+        
         public void OnUnityAdsDidError(string message) 
         {
             AdsError?.Invoke(message);
         }
-
+        
         public void OnUnityAdsDidStart(string placementId)
         {
             AdsIsStarted?.Invoke(placementId);

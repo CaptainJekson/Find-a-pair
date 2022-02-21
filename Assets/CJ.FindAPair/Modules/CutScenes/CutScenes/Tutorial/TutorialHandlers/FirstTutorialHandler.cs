@@ -3,7 +3,6 @@ using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Tutorial;
 using CJ.FindAPair.Modules.UI.Windows;
-using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
 {

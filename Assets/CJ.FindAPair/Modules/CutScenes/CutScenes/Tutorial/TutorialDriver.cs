@@ -20,6 +20,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
         private DetectorTutorialHandler _detectorTutorialHandler;
         private MagnetTutorialHandler _magnetTutorialHandler;
         private FortuneTutorialHandler _fortuneTutorialHandler;
+        private SapperTutorialHandler _sapperTutorialHandler;
 
         public TutorialDriver(TutorialRoot tutorialRoot, UIRoot uiRoot, LevelCreator levelCreator, 
             CardsPlacer cardsPlacer, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,
@@ -46,6 +47,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
                 _tutorialRoot, _uiRoot);
             _fortuneTutorialHandler = new FortuneTutorialHandler(_levelCreator, _tutorialRoot, _cardsPlacer,
                 _specialCardHandler);
+            _sapperTutorialHandler = new SapperTutorialHandler(_levelCreator, _boosterHandler,
+                _tutorialRoot, _uiRoot);
         }
 
         private void CheckTutorialLevels()
@@ -68,6 +71,11 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
             if (_gameSaver.LoadData().CurrentLevel == 34)
             {
                 _fortuneTutorialHandler.Activate();
+            }
+
+            if (_levelCreator.LevelConfig.LevelNumber == 42)
+            {
+                _sapperTutorialHandler.Activate();
             }
         }
     }
