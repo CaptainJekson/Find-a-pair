@@ -26,9 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Configs/Levels/Level 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Resources/Configs/Levels/Level 0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Themes/Animals/atlas_animals.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Themes/Animals/atlas_animals.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Themes/Animals/atlas_animals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Sprites/Themes/Animals/atlas_animals.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_black.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_black.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_brown_orange 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_brown_orange 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_green.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,119 +48,126 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BlockWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GameMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/SafeAreaController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PlayerResourcesWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelSelectWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Integrations/Playmaker/Scripts/PlaymakerEventDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/VictoryWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ConfirmRestartWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/Base/Window.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIRoot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/PivotFixedRectTransform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/RectTransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Themes/Targets/SpriteTargetSpriteRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/SaveKeys.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Configs/ThemeConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/GameSaver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCardOld.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ThemeWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/RayCaster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/ThemeEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/SaveOpener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/QuantityOfCardOfPair.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/UIFlexibleGridController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelBackground.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagnetBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Configs/ThemeConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/MagnetTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Server/ServerConnector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A92AD44-406B-4318-9677-3A464E9EC96E/f5/153e820b/IComparable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameBlockWindow.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/UIButton/UIButtonListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/DetectorBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/SapperTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/SaveOpener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/MagnetBoosterTutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/JsonSaver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/FortuneTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/ThemeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GiftBoxWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/DetectorBoosterTutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/Booster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/TestBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/CurrencyType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Scripts/GameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardEffector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Scripts/Coroutiner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/NodeGUI/BaseNodeGUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardsConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/SceneManagement/ActiveSceneChangedEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/TutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/FirstTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/DetectorTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/VictoryWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ConfirmExitWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/SapperBoosterTutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ConfirmPurchaseWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BlockWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaGameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PlayerResourcesWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Nody/NodeGUI/BaseNodeGUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ThemeWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ConfirmRestartWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/SceneManagement/ActiveSceneChangedEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/Booster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/EnergyBoostOfferWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/DefeatWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/LevelMarker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelMapWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardEffector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GameInterfaceWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Themes/ThemesSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Installer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/FortuneCardTutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Configs/ThemeConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/MonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Configs/ThemeConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaGameCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/TutorialRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/SafeAreaController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/RectTransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/FirstTutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/CurrencyType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/Base/TutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/Base/TutorialStep.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Ads/IAdsDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Ads/UnityAdsDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Soundy/SoundyAudioPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/GiftItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Integrations/Playmaker/Scripts/PlaymakerEventDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/EntanglementTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/FullBlockerWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/GiftBoxCutScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/LevelRewardCutScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/NextLevelCutScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Themes/Targets/SpriteTargetSpriteRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/Base/Window.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/Installer/CutScenesInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/Data/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Base/AbstractCutScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/RayCaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCardOld.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/EntanglementCardTutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelBackground.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/EntanglementCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/QuantityOfCardOfPair.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/23/4f22fcc0/Sequence.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagnetBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/DetectorBooster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/51/9133bdfb/Tween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Scripts/GameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/Scripts/Coroutiner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardsConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Audio/AudioController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GameMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/BombCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/ISaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/UIPopup/UIPopupContentReferences.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaGameCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/ResetCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/EntanglementCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SaveData.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGameCreator.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Installer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/MonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelSlot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/UIButton/UIButtonListener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelPagePanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GameInterfaceWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/TigerForge/EasyFileSave/EasyFileSave.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/DefeatWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Themes/ThemesSelector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PreviewLevelWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/TigerForge/EasyFileSave/EasyFileSaveExtension.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameBlockWindow.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ConfirmExitWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Soundy/SoundyAudioPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIRoot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/TestBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/PlayerResourcesWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Raycaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/AnimationCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardOld.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/AnimationCardOld.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/BombCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/ResetCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/RayCaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/ArrayMatrixExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/GameSettingsConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/LevelConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Configs/PlaceCardsConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/BoosterHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/Booster.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardEffector.cs" />
@@ -174,17 +185,40 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Configs/ThemeConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/ThemeEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaGameCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaGameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelBackground.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/EntanglementCard.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/SaveKeys.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Configs/ThemeConfigCollection.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Save/GameSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Themes/ThemesSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ThemeWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/MagnetBoosterTutorialScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/MagnetTutorialHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/FortuneCardTutorialScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/TutorialHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/TutorialRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/SpecialCardHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/FortuneCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/FortuneTutorialHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/FirstTutorialHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Ads/UnityAdsDriver.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/TEst/IPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/TEst/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/TEst/Creator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/GameWatcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/SapperBoosterTutorialScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/SapperTutorialHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/FortuneTutorialHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/EntanglementCardTutorialScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/EntanglementTutorialHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialDriver.cs" />
       </list>
     </option>
   </component>
@@ -195,12 +229,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.468039" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.37427577" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -273,6 +308,11 @@
       <workItem from="1631568276163" duration="1456000" />
       <workItem from="1631819285096" duration="8979000" />
       <workItem from="1632159018926" duration="13125000" />
+      <workItem from="1644950938024" duration="8836000" />
+      <workItem from="1645468981437" duration="493000" />
+      <workItem from="1645469757639" duration="2341000" />
+      <workItem from="1645473443136" duration="4903000" />
+      <workItem from="1645818065180" duration="470000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -343,23 +383,81 @@
     <option name="LAST_COMMIT_MESSAGE" value="Install zenject" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="686" y="53" key="RiderGenerateDialog" timestamp="1631827117359">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1644961358251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="488" y="37" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1631223218870" />
-    <state x="686" y="53" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631827117359" />
-    <state x="589" y="199" key="SettingsEditor" timestamp="1631473318224">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1644961358251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="589" y="199" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1631473318224" />
-    <state x="153" y="18" width="1610" height="968" key="find.popup" timestamp="1632174550396">
+    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1644961358251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="153" y="18" width="1610" height="968" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632174550396" />
-    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1632341354811">
+    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1644961358251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1631261275506" />
-    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632341354811" />
+    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.3.bottom" timestamp="1644961358252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358252" />
+    <state width="1877" height="345" key="GridCell.Tab.3.center" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.3.left" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state width="1877" height="345" key="GridCell.Tab.3.right" timestamp="1644961358251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="345" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644961358251" />
+    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1645477211029">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1645477211029" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1645471446730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1645471446730" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1645478301905">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1645478301905" />
   </component>
 </project>
