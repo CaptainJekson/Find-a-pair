@@ -8,7 +8,6 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
 {
     public class EntanglementTutorialHandler : TutorialHandler
     {
-        private readonly TutorialRoot _tutorialRoot;
         private readonly LevelCreator _levelCreator;
         private readonly CardsPlacer _cardsPlacer;
 
@@ -16,10 +15,9 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
         private Card _fortuneCard;
         
         public EntanglementTutorialHandler( LevelCreator levelCreator, TutorialRoot tutorialRoot, CardsPlacer cardsPlacer) 
-            : base(levelCreator)
+            : base(levelCreator, tutorialRoot)
         {
             _levelCreator = levelCreator;
-            _tutorialRoot = tutorialRoot;
             _cardsPlacer = cardsPlacer;
         }
 

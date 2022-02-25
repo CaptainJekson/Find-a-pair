@@ -18,7 +18,6 @@ namespace CJ.FindAPair.Modules.CoreGames.SpecialCards
         
         public override void OpenSpecialCard(Card specialCard)
         {
-            Debug.LogError(_isHundredPercentOpening + " ---  " + GetHashCode());
             var randomChance = _isHundredPercentOpening ? 1 : Random.Range(0, 2);
             var randomCard = _levelCreator.Cards[Random.Range(0, _levelCreator.Cards.Count)];
 

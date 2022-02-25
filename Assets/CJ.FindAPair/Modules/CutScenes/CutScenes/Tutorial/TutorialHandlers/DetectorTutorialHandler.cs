@@ -9,7 +9,6 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
 {
     public class DetectorTutorialHandler : TutorialHandler
     {
-        private readonly TutorialRoot _tutorialRoot;
         private readonly UIRoot _uiRoot;
         private readonly BoosterHandler _boosterHandler;
 
@@ -17,9 +16,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
         private BoosterInterfaceWindow _boosterInterfaceWindow;
 
         public DetectorTutorialHandler(LevelCreator levelCreator, BoosterHandler boosterHandler,
-            TutorialRoot tutorialRoot, UIRoot uiRoot) : base(levelCreator)
+            TutorialRoot tutorialRoot, UIRoot uiRoot) : base(levelCreator, tutorialRoot)
         {
-            _tutorialRoot = tutorialRoot;
             _uiRoot = uiRoot;
             _boosterHandler = boosterHandler;
             _boosterInterfaceWindow = _uiRoot.GetWindow<BoosterInterfaceWindow>();

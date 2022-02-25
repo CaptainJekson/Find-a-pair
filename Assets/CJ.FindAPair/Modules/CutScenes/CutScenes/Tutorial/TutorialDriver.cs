@@ -3,6 +3,7 @@ using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
 using CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers;
 using CJ.FindAPair.Modules.UI.Installer;
+using UnityEngine;
 
 namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
 {
@@ -14,6 +15,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
         private readonly CardsPlacer _cardsPlacer;
         private readonly BoosterHandler _boosterHandler;
         private readonly SpecialCardHandler _specialCardHandler;
+        private readonly NextLevelCutScene _nextLevelCutScene;
         private readonly ISaver _gameSaver;
         
         private FirstTutorialHandler _firstTutorialHandler;
@@ -22,19 +24,22 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
         private FortuneTutorialHandler _fortuneTutorialHandler;
         private SapperTutorialHandler _sapperTutorialHandler;
         private EntanglementTutorialHandler _entanglementTutorialHandler;
+        private HardLevelTutorialHandler _hardLevelTutorialHandler;
 
         public TutorialDriver(TutorialRoot tutorialRoot, UIRoot uiRoot, LevelCreator levelCreator, 
             CardsPlacer cardsPlacer, BoosterHandler boosterHandler, SpecialCardHandler specialCardHandler,
-            ISaver gameSaver)
+            NextLevelCutScene nextLevelCutScene, ISaver gameSaver)
         {
             _tutorialRoot = tutorialRoot;
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _cardsPlacer = cardsPlacer;
+            _nextLevelCutScene = nextLevelCutScene;
             _gameSaver = gameSaver;
             _boosterHandler = boosterHandler;
             _specialCardHandler = specialCardHandler;
             _levelCreator.LevelCreated += CheckTutorialLevels;
+            _nextLevelCutScene.MoveMarkerComplete += CheckTutorialAfterNextLevelCutScene;
             
             CreateTutorialHandlers();
         }
@@ -48,6 +53,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
                 _specialCardHandler);
             _sapperTutorialHandler = new SapperTutorialHandler(_levelCreator, _boosterHandler,_tutorialRoot, _uiRoot);
             _entanglementTutorialHandler = new EntanglementTutorialHandler(_levelCreator, _tutorialRoot, _cardsPlacer);
+            _hardLevelTutorialHandler = new HardLevelTutorialHandler(_levelCreator, _tutorialRoot);
         }
 
         private void CheckTutorialLevels()
@@ -80,6 +86,15 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
             if (_gameSaver.LoadData().CurrentLevel == 97)
             {
                 _entanglementTutorialHandler.Activate();
+            }
+        }
+
+        private void CheckTutorialAfterNextLevelCutScene()
+        {
+            if (_gameSaver.LoadData().CurrentLevel == 14)
+            {
+                _nextLevelCutScene.NotOpenPreviewWindowNextTime();
+                _hardLevelTutorialHandler.Activate();
             }
         }
     }

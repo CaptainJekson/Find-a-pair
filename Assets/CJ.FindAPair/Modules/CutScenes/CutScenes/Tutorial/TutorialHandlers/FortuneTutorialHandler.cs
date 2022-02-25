@@ -9,7 +9,6 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
 {
     public class FortuneTutorialHandler : TutorialHandler
     {
-        private readonly TutorialRoot _tutorialRoot;
         private readonly LevelCreator _levelCreator;
         private readonly CardsPlacer _cardsPlacer;
         private readonly SpecialCardHandler _specialCardHandler;
@@ -18,11 +17,9 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
         private Card _fortuneCard;
         
         public FortuneTutorialHandler( LevelCreator levelCreator, TutorialRoot tutorialRoot, CardsPlacer cardsPlacer,
-            SpecialCardHandler specialCardHandler) 
-            : base(levelCreator)
+            SpecialCardHandler specialCardHandler) : base(levelCreator, tutorialRoot)
         {
             _levelCreator = levelCreator;
-            _tutorialRoot = tutorialRoot;
             _cardsPlacer = cardsPlacer;
             _specialCardHandler = specialCardHandler;
         }
@@ -33,7 +30,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
                 
             _tutorialScreen = _tutorialRoot.GetScreen<FortuneCardTutorialScreen>();
             _fortuneCard = GetFortuneCard();
-            _tutorialRoot.SetActionForStep<FortuneCardTutorialScreen>(AllEnableCard,1);
+            _tutorialRoot.SetActionForStep<FortuneCardTutorialScreen>(AllEnableCard, 1);
 
             _cardsPlacer.CardsDealt += OnCardDealt;
         }

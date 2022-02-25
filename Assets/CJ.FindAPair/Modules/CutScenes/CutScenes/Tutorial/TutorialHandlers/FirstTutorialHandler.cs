@@ -8,7 +8,6 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
 {
     public class FirstTutorialHandler : TutorialHandler
     {
-        private readonly TutorialRoot _tutorialRoot;
         private readonly LevelCreator _levelCreator;
         private readonly CardsPlacer _cardsPlacer;
 
@@ -17,9 +16,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial.TutorialHandlers
         private GameInterfaceWindow _gameInterfaceWindow;
 
         public FirstTutorialHandler( LevelCreator levelCreator, TutorialRoot tutorialRoot, CardsPlacer cardsPlacer,
-            UIRoot gameInterfaceWindow) : base(levelCreator)
+            UIRoot gameInterfaceWindow) : base(levelCreator, tutorialRoot)
         {
-            _tutorialRoot = tutorialRoot;
             _levelCreator = levelCreator;
             _cardsPlacer = cardsPlacer;
             _gameInterfaceWindow = gameInterfaceWindow.GetWindow<GameInterfaceWindow>();

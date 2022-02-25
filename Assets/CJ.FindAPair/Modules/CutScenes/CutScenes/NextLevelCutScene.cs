@@ -1,3 +1,4 @@
+using System;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
 using CJ.FindAPair.Modules.UI;
@@ -14,6 +15,9 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         private UIRoot _uiRoot;
         private LevelMapWindow _levelMapWindow;
         private LevelMarker _levelMarker;
+        private bool _isNotOpenPreviewWindowNextTime;
+            
+        public event Action MoveMarkerComplete;
     
         public NextLevelCutScene(ISaver gameSaver, LevelConfigCollection levelConfigCollection, UIRoot uiRoot, 
             LevelMarker levelMarker)
@@ -23,6 +27,11 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _uiRoot = uiRoot;
             _levelMapWindow = uiRoot.GetWindow<LevelMapWindow>();
             _levelMarker = levelMarker;
+        }
+
+        public void NotOpenPreviewWindowNextTime()
+        {
+            _isNotOpenPreviewWindowNextTime = true;
         }
     
         public override void Play()
@@ -47,8 +56,18 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             
             void OnMoveComplete()
             {
+                MoveMarkerComplete?.Invoke();
+                
                 _uiRoot.CloseWindow<FullBlockerWindow>();
-                nextButton.OpenPreviewWindow();
+
+                if (_isNotOpenPreviewWindowNextTime == false)
+                {
+                    nextButton.OpenPreviewWindow();
+                }
+                else
+                {
+                    _isNotOpenPreviewWindowNextTime = false;
+                }
             }
         }
 

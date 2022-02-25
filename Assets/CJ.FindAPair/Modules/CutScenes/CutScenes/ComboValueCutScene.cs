@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CutScenes.Configs;
