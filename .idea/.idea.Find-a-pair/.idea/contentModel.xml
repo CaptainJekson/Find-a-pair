@@ -53,8 +53,8 @@
               <e p="GameResourceItem.cs" t="Include" />
               <e p="GameWatcher.cs" t="Include" />
               <e p="Installer" t="Include">
-                <e p="CoreGameCreator.cs" t="Include" />
                 <e p="CoreGameInstaller.cs" t="Include" />
+                <e p="CoreGamePlacer.cs" t="Include" />
               </e>
               <e p="ItemsTransferer.cs" t="Include" />
               <e p="ItemTypes.cs" t="Include" />
@@ -99,6 +99,7 @@
                     <e p="EntanglementTutorialHandler.cs" t="Include" />
                     <e p="FirstTutorialHandler.cs" t="Include" />
                     <e p="FortuneTutorialHandler.cs" t="Include" />
+                    <e p="HardLevelTutorialHandler.cs" t="Include" />
                     <e p="MagnetTutorialHandler.cs" t="Include" />
                     <e p="SapperTutorialHandler.cs" t="Include" />
                     <e p="TutorialHandler.cs" t="Include" />
@@ -164,8 +165,8 @@
             <e p="UI" t="Include">
               <e p="Installer" t="Include">
                 <e p="TutorialRoot.cs" t="Include" />
-                <e p="UICreator.cs" t="Include" />
                 <e p="UIInstaller.cs" t="Include" />
+                <e p="UIPlacer.cs" t="Include" />
                 <e p="UIRoot.cs" t="Include" />
               </e>
               <e p="LevelMarker.cs" t="Include" />
@@ -185,6 +186,7 @@
                 <e p="EntanglementCardTutorialScreen.cs" t="Include" />
                 <e p="FirstTutorialScreen.cs" t="Include" />
                 <e p="FortuneCardTutorialScreen.cs" t="Include" />
+                <e p="HardLevelTutorialScreen.cs" t="Include" />
                 <e p="MagnetBoosterTutorialScreen.cs" t="Include" />
                 <e p="SapperBoosterTutorialScreen.cs" t="Include" />
               </e>

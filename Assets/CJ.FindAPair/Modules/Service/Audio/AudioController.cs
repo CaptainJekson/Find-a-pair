@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CJ.FindAPair.Modules.Service.Audio
 {
-    public class AudioController: MonoBehaviour
+    public class AudioController : MonoBehaviour
     {
         [SerializeField] private AudioClipsCollection _audioClipsCollection;
         [SerializeField] private AudioSource _audioSourcePrefab;

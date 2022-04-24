@@ -19,7 +19,7 @@ namespace CJ.FindAPair.Modules.Service.Installer
             Container.Bind<ServerConfig>().FromScriptableObjectResource("Configs/Services/ServerConfig")
                 .AsSingle();
      
-            Container.Bind<ServerConnector>().FromComponentInNewPrefabResource("Services/ServerConnector").AsSingle();
+            Container.Bind<ServerConnector>().AsSingle();
             Container.Bind<ISaver>().To<JsonSaver>().AsSingle();
             Container.Bind<IAdsDriver>().To<UnityAdsDriver>().AsSingle();
             Container.Bind<IStoreDriver>().To<StoreDriver>().AsSingle();

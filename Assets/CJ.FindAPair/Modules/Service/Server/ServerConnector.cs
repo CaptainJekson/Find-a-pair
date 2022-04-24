@@ -1,19 +1,18 @@
 using System;
-using System.Collections;
+using System.Threading.Tasks;
 using CJ.FindAPair.Modules.Service.Server.Configs;
 using UnityEngine;
-using Zenject;
+using UnityEngine.Networking;
 
 namespace CJ.FindAPair.Modules.Service.Server
 {
-    public class ServerConnector : MonoBehaviour
+    public class ServerConnector
     {
         private ServerConfig _serverConfig;
         private Action<string> _completeAction;
         private Action<string> _errorAction;
 
-        [Inject]
-        public void Construct(ServerConfig serverConfig)
+        public ServerConnector(ServerConfig serverConfig)
         {
             _serverConfig = serverConfig;
         }
@@ -26,7 +25,7 @@ namespace CJ.FindAPair.Modules.Service.Server
             form.AddField("Command", "CreateSave");
             form.AddField("SetSaveDataJson", jsonSaveFile);
 
-            StartCoroutine(Connect(form));
+            Connect(form);
         }
 
         public void UpdateSave(string jsonSaveFile, Action<string> completeAction = null)
@@ -36,7 +35,8 @@ namespace CJ.FindAPair.Modules.Service.Server
             var form = new WWWForm();
             form.AddField("Command", "UpdateSave");
             form.AddField("SetSaveDataJson", jsonSaveFile);
-            StartCoroutine(Connect(form));
+            
+            Connect(form);
         }
 
         public void LoadSave(int userId, Action<string> completeAction = null, Action<string> errorAction = null)
@@ -47,27 +47,36 @@ namespace CJ.FindAPair.Modules.Service.Server
             var form = new WWWForm();
             form.AddField("Command", "LoadSave");
             form.AddField("SetUserId", userId);
-            StartCoroutine(Connect(form));
+            
+            Connect(form);
         }
 
-        private IEnumerator Connect(WWWForm form)
+        private async void Connect(WWWForm form)
         {
             if (_serverConfig.IsConnected == false)
-                yield break;
+                return;
+            
+            using var request = UnityWebRequest.Post(_serverConfig.RegisterPath, form);
+            
+            var operation = request.SendWebRequest();
 
-            var www = new WWW(_serverConfig.RegisterPath, form);
-            yield return www;
-            if (www.error != null)
+            while (operation.isDone == false)
             {
-                _errorAction?.Invoke(www.error);
-                _errorAction = null;
-                Debug.LogError("Error: " + www.error);
-                yield break;
+                await Task.Yield();
             }
 
-            _completeAction?.Invoke(www.text);
-            _completeAction = null;
-            Debug.Log("Server response: " + www.text);
+            if (request.error == null)
+            {
+                _completeAction?.Invoke(request.downloadHandler.text);
+                _completeAction = null;
+                Debug.Log("Server response: " + request.downloadHandler.text);
+            }
+            else
+            {
+                _errorAction?.Invoke(request.error);
+                _errorAction = null;
+                Debug.LogError("Error: " + request.error);
+            }
         }
     }
 }
