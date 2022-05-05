@@ -26,21 +26,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGamePlacer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameCreator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGamePlacer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Audio/AudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Server/ServerConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Server/ServerConnector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIPlacer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UICreator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIPlacer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGameCreator.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGameCreator.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UICreator.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UICreator.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LevelButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LevelButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationFirst.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationFirst.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationForest.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationForest.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationMountains.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationMountains.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelMapWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelMapWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Drop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Drop.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Fade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Flip.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Organic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Rotate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Scale.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Slide.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Slide.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Uncategorized.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Elastic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Elastic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Fade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Flip.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Move.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Move.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Organic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Rotate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Scale.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncategorized.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncommon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncommon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Flip.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Jump.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Jump.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Organic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Rotate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Scale.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Slide.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Slide.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Stretch.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Stretch.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Uncategorized.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Basic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Drop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Drop.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Fade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Flip.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Organic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Rotate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Scale.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Slide.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Slide.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Uncategorized.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Basic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Drop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Drop.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Elastic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Elastic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Fade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Flip.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Move.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Move.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Organic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncategorized.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncommon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncommon.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +122,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/MonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/DetectorTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelLocation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialHandlers/EntanglementTutorialHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/UIPopup/UIPopupContentReferences.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/SpecialCards/BombCard.cs" root0="FORCE_HIGHLIGHTING" />
@@ -121,6 +162,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/GiftBoxCutScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Internal/PreserveAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Base/AbstractCutScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Store/IStoreDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Store/StoreDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GiftBoxWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Integrations/Playmaker/Scripts/PlaymakerEventDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Tutorial/SapperBoosterTutorialScreen.cs" root0="FORCE_HIGHLIGHTING" />
@@ -170,7 +213,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Editor/Soundy/SoundyAudioPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/Game/GameBlockWindow.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/Installer/ServiceInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SaveData.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/NextLevelCutScene.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
