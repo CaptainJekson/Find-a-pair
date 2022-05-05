@@ -16,10 +16,10 @@ namespace CJ.FindAPair.Modules.UI.Slots
         [SerializeField] private Image _lockIcon;
         [SerializeField] private Image _coinIcon;
         [SerializeField] private Image _boxIcon;
-        [SerializeField] private Sprite _levelStandardSprite;
         [SerializeField] private Sprite _levelHardSprite;
         [SerializeField] private Sprite _levelLockSprite;
-
+        
+        private Sprite _levelStandardSprite;
         private LevelConfig _levelConfig;
         private LevelCreator _levelCreator;
         private PreviewLevelWindow _previewLevelWindow;
@@ -31,7 +31,6 @@ namespace CJ.FindAPair.Modules.UI.Slots
         private int _levelNumber;
 
         public int LevelNumber => _levelConfig.LevelNumber;
-        public Button Button => _button;
 
         private void Awake()
         {
@@ -61,18 +60,23 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             _lockIcon.gameObject.SetActive(true);
             _levelNumberText.gameObject.SetActive(false);
-            _mainImage.sprite = _levelLockSprite;
+            _mainImage.sprite = /*_levelLockSprite*/ _levelStandardSprite; //TODO тут надо как то по другому
         }
 
         public void SetUnlockState()
         {
             _levelNumberText.gameObject.SetActive(true);
-            _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
+            _mainImage.sprite = /*_levelConfig.IsHard ? _levelHardSprite :*/ _levelStandardSprite; //TODO тут надо как то по другому
             
             var sequence = DOTween.Sequence();
             sequence.Append(_lockIcon.transform.DOMoveY(_lockIcon.transform.position.y - 100.0f, 0.5f))
                 .SetEase(Ease.InCirc);
             sequence.AppendCallback(() =>_lockIcon.gameObject.SetActive(false));
+        }
+
+        public void SetStandardSprite(Sprite sprite)
+        {
+            _levelStandardSprite = sprite;
         }
 
         public void SetData(LevelConfig levelConfig, LevelCreator levelCreator, UIRoot uiRoot, ISaver gameSaver)
@@ -97,13 +101,13 @@ namespace CJ.FindAPair.Modules.UI.Slots
             if (currentLevel >= _levelConfig.LevelNumber || _levelConfig.LevelNumber == 1)
             {
                 _levelNumberText.text = _levelConfig.LevelNumber.ToString();
-                _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
+                _mainImage.sprite = /*_levelConfig.IsHard ? _levelHardSprite :*/ _levelStandardSprite; //TODO тут надо как то по другому
                 
                 SetOpenLevel(true);
             }
             else
             {
-                _mainImage.sprite = _levelLockSprite;
+                _mainImage.sprite = /*_levelLockSprite*/ _levelStandardSprite; //TODO тут надо как то по другому
                 SetOpenLevel(false);
             }
         }

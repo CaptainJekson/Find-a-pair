@@ -6,6 +6,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
 {
     public class LevelLocation : MonoBehaviour
     {
+        [SerializeField] private Sprite _levelButtonSprite;
         [SerializeField] private List<LevelButton> _levelButtons;
 
         private void Awake()
@@ -13,6 +14,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
             foreach (var button in _levelButtons)
             {
                 button.gameObject.SetActive(false);
+                button.SetStandardSprite(_levelButtonSprite);
             }
         }
 

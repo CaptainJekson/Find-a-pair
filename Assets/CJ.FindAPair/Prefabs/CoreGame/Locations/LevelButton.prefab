@@ -142,8 +142,6 @@ MonoBehaviour:
   _lockIcon: {fileID: 4888163362481776464}
   _coinIcon: {fileID: 7051763261724792337}
   _boxIcon: {fileID: 875027554473496140}
-  _levelStandardSprite: {fileID: 21300000, guid: f552d4a0738582c49944f29be39498c7,
-    type: 3}
   _levelHardSprite: {fileID: 21300000, guid: 81fc4ce39f01c1344b038842c5984a09, type: 3}
   _levelLockSprite: {fileID: 21300000, guid: f05fab54eb5375c4d9ac16e04f30a925, type: 3}
 --- !u!1 &6004589378433441947
@@ -390,8 +388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.6, y: -25.829}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 38.6012, y: -17.0584}
+  m_SizeDelta: {x: 33.9976, y: 32.4589}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1476955717756611912
 CanvasRenderer:
@@ -466,8 +464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000019073, y: 5.5}
-  m_SizeDelta: {x: 61.601, y: 87.043}
+  m_AnchoredPosition: {x: 0.77482, y: 0.0000023842}
+  m_SizeDelta: {x: 127.0577, y: 152.8253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8583324770356105737
 CanvasRenderer:
@@ -497,8 +495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4880056312673985579, guid: a91b6fe9c9585de47b8ce70184a158b6,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e1d2ff5eca628b438702a8fb35281a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -542,8 +539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40.3, y: -25}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -51.9, y: -16.644}
+  m_SizeDelta: {x: 31.7386, y: 33.288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1446598272674643576
 CanvasRenderer:
