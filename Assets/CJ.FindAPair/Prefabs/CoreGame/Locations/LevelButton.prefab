@@ -142,7 +142,7 @@ MonoBehaviour:
   _lockIcon: {fileID: 4888163362481776464}
   _coinIcon: {fileID: 7051763261724792337}
   _boxIcon: {fileID: 875027554473496140}
-  _levelHardSprite: {fileID: 21300000, guid: 81fc4ce39f01c1344b038842c5984a09, type: 3}
+  _levelHardSprite: {fileID: 21300000, guid: 326e74908fa8ec44982d8f800cc58974, type: 3}
   _levelLockSprite: {fileID: 21300000, guid: f05fab54eb5375c4d9ac16e04f30a925, type: 3}
 --- !u!1 &6004589378433441947
 GameObject:
@@ -447,7 +447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6925303434615135891
 RectTransform:
   m_ObjectHideFlags: 0
@@ -464,8 +464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.77482, y: 0.0000023842}
-  m_SizeDelta: {x: 127.0577, y: 152.8253}
+  m_AnchoredPosition: {x: 3.5, y: 4.1}
+  m_SizeDelta: {x: 177.7285, y: 224.5012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8583324770356105737
 CanvasRenderer:

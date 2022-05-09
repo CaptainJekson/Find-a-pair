@@ -27,60 +27,645 @@
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_black.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Fonts/TMP/Play-Bold_White_black.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LevelButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LevelButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationFirst.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationFirst.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationForest.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationForest.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationMountains.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationMountains.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelMapWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/MainMenu/LevelMapWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Drop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Drop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Fade.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Flip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Organic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Rotate.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Scale.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Slide.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Slide.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Uncategorized.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Elastic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Elastic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Fade.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Flip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Move.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Move.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Organic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Rotate.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Scale.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncategorized.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncommon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Loop/Uncommon.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Flip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Jump.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Jump.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Organic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Rotate.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Scale.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Slide.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Slide.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Stretch.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Stretch.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Punch/Uncategorized.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Drop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Drop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Fade.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Flip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Organic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Rotate.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Scale.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Scale.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Slide.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Slide.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Show/Uncategorized.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Drop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Drop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Elastic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Elastic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Fade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Fade.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Flip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Flip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Move.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Move.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Organic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Organic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncategorized.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncategorized.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncommon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/State/Uncommon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationBambooFores.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationBambooFores.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationConiferousForest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationConiferousForest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationCrystal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationCrystal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationGreenForest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationGreenForest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationJungle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationJungle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationSwamp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationSwamp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationTundra.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationTundra.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/AvatarGroup.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/AvatarGroup.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonBambooForest.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonBambooForest.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonConiferous.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonConiferous.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonCrystal.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonCrystal.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonDesert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonDesert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonGreenForest.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonGreenForest.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonJungle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonJungle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonSwamp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonSwamp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonTundra.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/LevelButtons/LevelButtonTundra.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/BambooForestVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/BambooForestVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/ConiferousVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/ConiferousVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/CrystalVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/CrystalVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/DesertVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/DesertVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/GreenForestVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/GreenForestVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/JungleVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/JungleVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/SwampVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/SwampVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/TundraVert-GreenForestVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/TundraVert-GreenForestVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/TundraVert.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Prefab/Vertical/TundraVert.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bamboo 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 120d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 120d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Bush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Chrysanthemum 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Chrysanthemum 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Chrysanthemum 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Chrysanthemum 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Lily 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Lily 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Lily 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Lily 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Pion 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Pion 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Pion 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Pion 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/Bambooforest Wood 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/PSD.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/PSD/Items BambooForest.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/BambooForest/PSD/Items BambooForest.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 120d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 120d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Bush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Flower 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Flower 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Flower 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Flower 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Mushroom 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Pine 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Pine 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Pine 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Pine 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Spruce 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Spruce 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Spruce 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Spruce 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Coniferous/Coniferous Wood 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 120d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 120d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Brush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Crystal 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Small Crystal 6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Crystal/Crystal Wood 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Acacia 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Acacia 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Acacia 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Acacia 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 120d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 120d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Bush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Cactus 8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Dry Tree 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Dry Tree 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Dry Tree 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Dry Tree 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Desert/Desert Wood 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Birch 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Birch 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Birch 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Birch 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 120d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 120d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Bush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Flower 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Grass 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Grass 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Grass 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Grass 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Grass 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Grass 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Oak 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Oak 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Oak 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Oak 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/GreenForest/Greenforest Wood 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle  Bush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle  Bush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle  Bush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle  Bush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 270d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 270d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Bush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Grass 6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Palm 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Jungle/Jungle Wood 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Boy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Boy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Empty.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Girl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Girl.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Map Avatar Pointer Mask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal BambooForest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal BambooForest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Coniferous.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Coniferous.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Desert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Desert.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal GreenForest-Tundra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal GreenForest-Tundra.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Greenforest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Greenforest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Jungle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Jungle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Swamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Swamp.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Tundra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontal Tundra.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontall Crystal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Maps/PNG/Horizontal/Map Horizontall Crystal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 120d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 120d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Bush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Cranberry 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Cranberry 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Cranberry 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Cranberry 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Lily 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Lily 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Lily 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Lily 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Mangrove 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Mangrove 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Mangrove 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Mangrove 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Sphagnum 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Sphagnum 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Sphagnum 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Sphagnum 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Willow Tree 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Willow Tree 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Willow Tree 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Willow Tree 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Swamp/Swamp Wood 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Blueberry 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Blueberry 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Blueberry 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Blueberry 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 120d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 120d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 150d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 150d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 180d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 180d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 30d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 30d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 60d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 60d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 90d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bridge 90d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Bush 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Birch 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Birch 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Birch 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Birch 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Willow 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Willow 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Willow 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Dwarf Willow 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Fence 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Fence 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Fence 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Fence 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra House 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra House 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra House 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Leafs 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Leafs 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Leafs 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Leafs 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Stone 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Strawberry 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Strawberry 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Strawberry 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Strawberry 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForestLevelMapMaker/Sprites/Tundra/Tundra Wood 5.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +741,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelMapWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Configs/ThemeConfigCollection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaGameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaGameCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Doozy/Engine/UI/Resources/UIAnimations/Hide/Basic.asset" root0="FORCE_HIGHLIGHTING" />
@@ -218,8 +804,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/DetectorBooster.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Utility/SafeAreaController.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Installer/MetaInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/StartupInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Service/CurrencyType.cs" />
@@ -269,6 +853,8 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/Placer.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGamePlacer.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Installer/UIPlacer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelLocation.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelButton.cs" />
       </list>
     </option>
   </component>
@@ -365,6 +951,8 @@
       <workItem from="1645818065180" duration="470000" />
       <workItem from="1650668484685" duration="1060000" />
       <workItem from="1650824123893" duration="7894000" />
+      <workItem from="1651848526093" duration="66000" />
+      <workItem from="1652124100947" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -503,13 +1091,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1645477211029" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1650825359309">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1651786061974">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650825359309" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1650831458562">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1651786061974" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1652124308803">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650831458562" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1652124308803" />
   </component>
 </project>

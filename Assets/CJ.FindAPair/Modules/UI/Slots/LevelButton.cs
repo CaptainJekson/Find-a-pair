@@ -60,13 +60,13 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             _lockIcon.gameObject.SetActive(true);
             _levelNumberText.gameObject.SetActive(false);
-            _mainImage.sprite = /*_levelLockSprite*/ _levelStandardSprite; //TODO тут надо как то по другому
+            _mainImage.sprite = _levelStandardSprite;
         }
 
         public void SetUnlockState()
         {
             _levelNumberText.gameObject.SetActive(true);
-            _mainImage.sprite = /*_levelConfig.IsHard ? _levelHardSprite :*/ _levelStandardSprite; //TODO тут надо как то по другому
+            _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
             
             var sequence = DOTween.Sequence();
             sequence.Append(_lockIcon.transform.DOMoveY(_lockIcon.transform.position.y - 100.0f, 0.5f))
@@ -101,13 +101,13 @@ namespace CJ.FindAPair.Modules.UI.Slots
             if (currentLevel >= _levelConfig.LevelNumber || _levelConfig.LevelNumber == 1)
             {
                 _levelNumberText.text = _levelConfig.LevelNumber.ToString();
-                _mainImage.sprite = /*_levelConfig.IsHard ? _levelHardSprite :*/ _levelStandardSprite; //TODO тут надо как то по другому
+                _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
                 
                 SetOpenLevel(true);
             }
             else
             {
-                _mainImage.sprite = /*_levelLockSprite*/ _levelStandardSprite; //TODO тут надо как то по другому
+                _mainImage.sprite = _levelStandardSprite;
                 SetOpenLevel(false);
             }
         }
