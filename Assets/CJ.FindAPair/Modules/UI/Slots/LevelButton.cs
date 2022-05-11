@@ -19,6 +19,11 @@ namespace CJ.FindAPair.Modules.UI.Slots
         [SerializeField] private Sprite _levelHardSprite;
         [SerializeField] private Sprite _levelLockSprite;
         
+        [Header("Bezier settings")]
+        [SerializeField] private BezierPoint _bezierPoint;
+        [SerializeField] private BezierPoint _bezierEndPoint;
+        [SerializeField] private bool _isLastButton;
+        
         private Sprite _levelStandardSprite;
         private LevelConfig _levelConfig;
         private LevelCreator _levelCreator;
@@ -31,6 +36,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
         private int _levelNumber;
 
         public int LevelNumber => _levelConfig.LevelNumber;
+        public BezierPoint BezierPoint => _bezierPoint;
 
         private void Awake()
         {

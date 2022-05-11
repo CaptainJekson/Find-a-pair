@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CJ.FindAPair.Modules.Service.Audio;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
+using CJ.FindAPair.Utility;
 using DG.Tweening;
 using UnityEngine;
 using Zenject;
@@ -25,6 +26,7 @@ namespace CJ.FindAPair.Modules.UI
         private bool _isRotate;
         private LevelMapWindow _levelMapWindow;
         private AudioController _audioController;
+        private BezierPoint _currentBezierPoint;
 
         [Inject]
         public void Construct(UIRoot uiRoot, AudioController audioController)
@@ -42,7 +44,8 @@ namespace CJ.FindAPair.Modules.UI
         {
             var currentLocationAndButton = _levelMapWindow.GetCurrentLocationAndButton();
             transform.SetParent(currentLocationAndButton.Key.transform, false);
-            transform.position = currentLocationAndButton.Value.transform.position;
+            _currentBezierPoint = currentLocationAndButton.Value.BezierPoint;
+            transform.position = _currentBezierPoint.transform.position;
         }
             
         private void Update()
@@ -66,7 +69,7 @@ namespace CJ.FindAPair.Modules.UI
             _isRotate = false;
             
             var currentLevelLocationAndButton = _levelMapWindow.GetCurrentLocationAndButton();
-            var target = currentLevelLocationAndButton.Value.transform;
+            var targetPoint = currentLevelLocationAndButton.Value.BezierPoint;
             
             var sequence = DOTween.Sequence();
             sequence.AppendCallback(() =>
@@ -79,7 +82,12 @@ namespace CJ.FindAPair.Modules.UI
                 }
             });
             sequence.AppendInterval(_flyDurationToCenter);
-            sequence.Append(transform.DOMove(target.position, _flyDurationToTarget));
+            sequence.AppendCallback(() =>
+            {
+                transform.MoveAlongCurve(_currentBezierPoint, targetPoint, _flyDurationToTarget, Ease.InOutSine);
+                _currentBezierPoint = targetPoint;
+            });
+            sequence.AppendInterval(_flyDurationToTarget); 
             sequence.AppendCallback(() =>
             {
                 _explosionEffect.Play();
