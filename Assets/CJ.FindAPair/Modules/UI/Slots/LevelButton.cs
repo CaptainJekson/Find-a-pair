@@ -21,8 +21,6 @@ namespace CJ.FindAPair.Modules.UI.Slots
         
         [Header("Bezier settings")]
         [SerializeField] private BezierPoint _bezierPoint;
-        [SerializeField] private BezierPoint _bezierEndPoint;
-        [SerializeField] private bool _isLastButton;
         
         private Sprite _levelStandardSprite;
         private LevelConfig _levelConfig;
