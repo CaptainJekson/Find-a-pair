@@ -8,6 +8,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Base
     {
         protected List<GameObject> ItemsPool;
 
+        public abstract event Action CutSceneComplete;
+
         public abstract void Play();
 
         public abstract void Stop();

@@ -25,7 +25,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Installer
             Container.Bind<SpecialCardHandler>().FromComponentInNewPrefabResource("CoreGames/SpecialCardHandler")
                 .AsSingle();
             Container.Bind<EnergyCooldownHandler>().AsSingle();
-            Container.Bind<ProgressSaver>().AsSingle();
+            Container.Bind<ProgressGiftBoxSaver>().AsSingle();
             Container.Bind<ItemsTransferer>().AsSingle();
         }
     }

@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CJ.FindAPair.Modules.UI.Slots
+namespace CJ.FindAPair.Modules.UI.View
 {
     [RequireComponent(typeof(Button),typeof(Image))]
     public class LevelButton : MonoBehaviour
@@ -64,7 +64,7 @@ namespace CJ.FindAPair.Modules.UI.Slots
         {
             _lockIcon.gameObject.SetActive(true);
             _levelNumberText.gameObject.SetActive(false);
-            _mainImage.sprite = _levelStandardSprite;
+            _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
         }
 
         public void SetUnlockState()
@@ -105,15 +105,14 @@ namespace CJ.FindAPair.Modules.UI.Slots
             if (currentLevel >= _levelConfig.LevelNumber || _levelConfig.LevelNumber == 1)
             {
                 _levelNumberText.text = _levelConfig.LevelNumber.ToString();
-                _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
-                
                 SetOpenLevel(true);
             }
             else
             {
-                _mainImage.sprite = _levelStandardSprite;
                 SetOpenLevel(false);
             }
+            
+            _mainImage.sprite = _levelConfig.IsHard ? _levelHardSprite : _levelStandardSprite;
         }
 
         private void SetOpenLevel(bool isOpen)

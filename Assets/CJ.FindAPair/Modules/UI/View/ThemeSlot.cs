@@ -9,7 +9,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CJ.FindAPair.Modules.UI.Slots
+namespace CJ.FindAPair.Modules.UI.View
 {
     public class ThemeSlot : MonoBehaviour
     {

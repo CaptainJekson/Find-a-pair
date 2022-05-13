@@ -2,7 +2,7 @@
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.CoreGames.SpecialCards;
-using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.View;
 using CJ.FindAPair.Modules.UI.Windows.Base;
 using UnityEngine;
 using Zenject;

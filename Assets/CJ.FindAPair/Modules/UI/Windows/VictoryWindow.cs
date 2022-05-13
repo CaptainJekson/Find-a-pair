@@ -20,19 +20,19 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private LevelCreator _levelCreator;
         private GameWatcher _gameWatcher;
-        private ProgressSaver _progressSaver;
+        private ProgressGiftBoxSaver _progressGiftBoxSaver;
         private LevelRewardCutScene _levelRewardCutScene;
 
         public Transform CoinsParentTransform => _coinsParentTransform;
 
         [Inject]
         public void Construct(UIRoot uiRoot, LevelCreator levelCreator, GameWatcher gameWatcher, 
-            ProgressSaver progressSaver, LevelRewardCutScene levelRewardCutScene)
+            ProgressGiftBoxSaver progressGiftBoxSaver, LevelRewardCutScene levelRewardCutScene)
         {
             _uiRoot = uiRoot;
             _levelCreator = levelCreator;
             _gameWatcher = gameWatcher;
-            _progressSaver = progressSaver;
+            _progressGiftBoxSaver = progressGiftBoxSaver;
             _levelRewardCutScene = levelRewardCutScene;
         }
 
@@ -48,7 +48,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _uiRoot.OpenWindow<GameBlockWindow>();
             _currentLevelText.SetText(_levelCreator.LevelConfig.LevelNumber.ToString());
             _levelRewardCutScene.Play();
-            _progressSaver.SaveProgress();
+            _progressGiftBoxSaver.SaveProgress();
         }
 
         protected override void OnClose()

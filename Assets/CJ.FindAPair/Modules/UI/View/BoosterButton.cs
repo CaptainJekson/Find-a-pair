@@ -1,11 +1,10 @@
-﻿using System.Diagnostics;
-using CJ.FindAPair.Modules.CoreGames.Booster;
+﻿using CJ.FindAPair.Modules.CoreGames.Booster;
 using CJ.FindAPair.Modules.UI.Windows;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CJ.FindAPair.Modules.UI.Slots
+namespace CJ.FindAPair.Modules.UI.View
 {
     [RequireComponent(typeof(Button))]
     public class BoosterButton : MonoBehaviour

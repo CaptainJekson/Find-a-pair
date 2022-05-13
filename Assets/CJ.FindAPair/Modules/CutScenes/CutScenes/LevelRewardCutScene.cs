@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CutScenes.Configs;
@@ -27,6 +28,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 
         private Sequence _levelRewardSequence;
         private List<AwardCoin> _rewardCoins;
+        
+        public override event Action CutSceneComplete;
 
         public LevelRewardCutScene(GameWatcher gameWatcher, ISaver gameSaver, CutScenesConfigs cutScenesConfigs, 
             ItemsTransferer itemsTransferer, UIRoot uiRoot, AudioController audioController)
@@ -69,6 +72,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                     .AppendCallback(() => TransferCoin(coinNumber, coinsValue))
                     .AppendInterval(_cutSceneConfig.TimeBetweenCoins);
             }
+
+            _levelRewardSequence.AppendCallback(() => CutSceneComplete?.Invoke());
         }
 
         public override void Stop()
@@ -79,6 +84,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                 _gameWatcher.ResetScore();
                 _cutSceneConfig.ItemsPoolHandler.DestroyItemsPool(ItemsPool);
                 _rewardCoins.Clear();
+                CutSceneComplete?.Invoke();
             }
         }
 

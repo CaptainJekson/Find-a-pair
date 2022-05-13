@@ -3,21 +3,19 @@ using CJ.FindAPair.Modules.UI.Windows;
 
 namespace CJ.FindAPair.Modules.CoreGames
 {
-    public class ProgressSaver
+    public class ProgressGiftBoxSaver
     {
         private GameWatcher _gameWatcher;
         private LevelCreator _levelCreator;
-        private UIRoot _uiRoot;
         private ISaver _gameSaver;
-        private LevelMapWindow _levelMapWindow;
 
-        public ProgressSaver(GameWatcher gameWatcher, LevelCreator levelCreator, UIRoot uiRoot, ISaver gameSaver)
+        public bool IsSaveProgress { get; set; }
+
+        public ProgressGiftBoxSaver(GameWatcher gameWatcher, LevelCreator levelCreator, UIRoot uiRoot, ISaver gameSaver)
         {
             _gameWatcher = gameWatcher;
             _levelCreator = levelCreator;
-            _uiRoot = uiRoot;
             _gameSaver = gameSaver;
-            _levelMapWindow = _uiRoot.GetWindow<LevelMapWindow>();
         }
 
         public void SaveProgress()
@@ -35,7 +33,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             if (saveData.CurrentLevel == _levelCreator.LevelConfig.LevelNumber)
             {
                 saveData.CurrentLevel++;
-                _levelMapWindow.StartCutSceneAtOpening = true;
             }
 
             _gameSaver.SaveData(saveData);
@@ -74,9 +71,8 @@ namespace CJ.FindAPair.Modules.CoreGames
                 }
 
                 _gameSaver.SaveData(saveData);
+                IsSaveProgress = true;
             }
-
-            _levelMapWindow.AbleGiftObtainAtOpen = true;
         }
     }
 }

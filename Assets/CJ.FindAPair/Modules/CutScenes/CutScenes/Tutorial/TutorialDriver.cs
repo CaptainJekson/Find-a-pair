@@ -39,7 +39,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes.Tutorial
             _boosterHandler = boosterHandler;
             _specialCardHandler = specialCardHandler;
             _levelCreator.LevelCreated += CheckTutorialLevels;
-            _nextLevelCutScene.MoveMarkerComplete += CheckTutorialAfterNextLevelCutScene;
+            _nextLevelCutScene.CutSceneComplete += CheckTutorialAfterNextLevelCutScene;
             
             CreateTutorialHandlers();
         }

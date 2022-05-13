@@ -1,6 +1,7 @@
 using System;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
+using CJ.FindAPair.Modules.Service.Audio;
 using CJ.FindAPair.Modules.UI;
 using CJ.FindAPair.Modules.UI.Installer;
 using CJ.FindAPair.Modules.UI.Windows;
@@ -16,30 +17,32 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         private LevelMapWindow _levelMapWindow;
         private LevelMarker _levelMarker;
         private bool _isNotOpenPreviewWindowNextTime;
-            
-        public event Action MoveMarkerComplete;
+        private AudioController _audioController;
+        
+        public override event Action CutSceneComplete;
     
         public NextLevelCutScene(ISaver gameSaver, LevelConfigCollection levelConfigCollection, UIRoot uiRoot, 
-            LevelMarker levelMarker)
+            LevelMarker levelMarker, AudioController audioController)
         {
             _levelConfigCollection = levelConfigCollection;
             _gameSaver = gameSaver;
             _uiRoot = uiRoot;
             _levelMapWindow = uiRoot.GetWindow<LevelMapWindow>();
             _levelMarker = levelMarker;
+            _audioController = audioController;
         }
 
         public void NotOpenPreviewWindowNextTime()
         {
             _isNotOpenPreviewWindowNextTime = true;
         }
-    
+        
         public override void Play()
         {
-            _levelMapWindow.StartCutSceneAtOpening = false;
-            
             if(_gameSaver.LoadData().CurrentLevel >= _levelConfigCollection.Levels.Count + 1)
                 return;
+            
+            _audioController.PlayMusic(_audioController.AudioClipsCollection.OnLevelMapMusic);
             
             var nextButton = _levelMapWindow.GetCurrentLocationAndButton().Value;
             nextButton.SetLockState();
@@ -56,7 +59,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             
             void OnMoveComplete()
             {
-                MoveMarkerComplete?.Invoke();
+                CutSceneComplete?.Invoke();
                 
                 _uiRoot.CloseWindow<FullBlockerWindow>();
 

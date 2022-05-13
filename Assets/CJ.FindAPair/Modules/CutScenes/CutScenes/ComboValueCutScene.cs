@@ -23,6 +23,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 
         private Sequence _comboTextShowSequence;
         private List<TextMeshProUGUI> _temporaryTextFrames;
+        
+        public override event Action CutSceneComplete;
     
         public ComboValueCutScene(GameWatcher gameWatcher, CardComparator cardComparator, UIRoot uiRoot, 
             ItemsTransferer itemsTransferer, CutScenesConfigs cutScenesConfigs)
@@ -34,7 +36,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _cutSceneConfig = cutScenesConfigs.GetConfig<ComboValueCutSceneConfig>();
             _camera = Camera.main;
         }
-    
+
         public override void Play()
         {
             _comboTextShowSequence = DOTween.Sequence();
@@ -61,6 +63,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                     break;
                 }
             }
+
+            _comboTextShowSequence.AppendCallback(() => CutSceneComplete?.Invoke());
         }
 
         public override void Stop()
@@ -68,6 +72,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _comboTextShowSequence.Kill();
             _cutSceneConfig.ItemsPoolHandler.DestroyItemsPool(ItemsPool);
             _temporaryTextFrames.Clear();
+            CutSceneComplete?.Invoke();
         }
 
         protected override void InitializeItemsPool(ItemsPoolHandler itemsPoolHandler, GameObject item, 

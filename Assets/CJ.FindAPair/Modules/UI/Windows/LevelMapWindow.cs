@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
+using CJ.FindAPair.Modules.CutScenes.CutScenes.Base;
 using CJ.FindAPair.Modules.UI.Installer;
-using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.View;
 using CJ.FindAPair.Modules.UI.Windows.Base;
 using DG.Tweening;
 using UnityEngine;
@@ -24,26 +25,32 @@ namespace CJ.FindAPair.Modules.UI.Windows
         private UIRoot _uiRoot;
         private LevelBackground _levelBackground;
         private ISaver _gameSaver;
+        private UnlockLocationCutScene _unlockLocationCutScene;
+        private ProgressGiftBoxSaver _progressGiftBoxSaver;
+        private GiftBoxCutScene _giftBoxCutScene;
         private NextLevelCutScene _nextLevelCutScene;
-        private GiftBoxWindow _giftBoxWindow;
+        private QueueCutScenes _queueCutScenes;
         private Dictionary<LevelLocation, List<LevelButton>> _levelLocationsWithLevelButtons;
-        
-        public bool StartCutSceneAtOpening { get; set; }
-        public bool AbleGiftObtainAtOpen { get; set; }
+        private int _currentLevel;
 
         public bool IsScrollMove => Mathf.Abs(_scrollRect.velocity.y) > 100;
 
         [Inject]
         private void Construct(LevelConfigCollection levelConfigCollection, LevelCreator levelCreator, UIRoot uiRoot,
-            LevelBackground levelBackground, ISaver gameSaver, NextLevelCutScene nextLevelCutScene)
+            LevelBackground levelBackground, ISaver gameSaver, UnlockLocationCutScene unlockLocationCutScene,
+            ProgressGiftBoxSaver progressGiftBoxSaver, GiftBoxCutScene giftBoxCutScene, 
+            NextLevelCutScene nextLevelCutScene, QueueCutScenes queueCutScenes)
         {
             _levelConfigCollection = levelConfigCollection;
             _levelCreator = levelCreator;
             _uiRoot = uiRoot;
             _levelBackground = levelBackground;
             _gameSaver = gameSaver;
+            _unlockLocationCutScene = unlockLocationCutScene;
+            _giftBoxCutScene = giftBoxCutScene;
             _nextLevelCutScene = nextLevelCutScene;
-            _giftBoxWindow = uiRoot.GetWindow<GiftBoxWindow>();
+            _queueCutScenes = queueCutScenes;
+            _progressGiftBoxSaver = progressGiftBoxSaver;
             _levelLocationsWithLevelButtons = new Dictionary<LevelLocation, List<LevelButton>>();
         }
 
@@ -51,19 +58,16 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             CreateLocations();
             SetLevelData();
+            UnlockCompletedLocation();
+            _currentLevel = _gameSaver.LoadData().CurrentLevel;
         }
 
         protected override void OnOpen()
         {
-            _giftBoxWindow.WindowClosed += TryStartNextLevelCutScene;
-            _giftBoxWindow.WindowClosed += PlayMusic;
-            
             _uiRoot.OpenWindow<MenuButtonsWindow>();
             
             RefreshLevelButtons();
-            
-            TryStartCutScenes();
-            AbleGiftObtainAtOpen = false;
+            PlayCutScenesIfNeed();
             
             _levelBackground.gameObject.SetActive(false);
             SetStartScrollPosition();
@@ -72,10 +76,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         protected override void OnClose()
         {
             _audioController.StopMusic();
-            
-            _giftBoxWindow.WindowClosed -= TryStartNextLevelCutScene;
-            _giftBoxWindow.WindowClosed -= PlayMusic;
-            
             _uiRoot.CloseWindow<MenuButtonsWindow>();
             
             if (_levelBackground != null)
@@ -100,8 +100,10 @@ namespace CJ.FindAPair.Modules.UI.Windows
             {
                 foreach (var levelButton in levelLocation.Value)
                 {
-                    if(levelButton.LevelNumber == currentLevel)
+                    if (levelButton.LevelNumber == currentLevel)
+                    {
                         return new KeyValuePair<LevelLocation, LevelButton>(levelLocation.Key, levelButton);
+                    }
                 }
             }
             
@@ -126,6 +128,24 @@ namespace CJ.FindAPair.Modules.UI.Windows
             for (var i = 0; i < _levelConfigCollection.Levels.Count; i++)
             {
                 levelButtons[i].SetData(_levelConfigCollection.Levels[i], _levelCreator, _uiRoot, _gameSaver);
+            }
+        }
+
+        private void UnlockCompletedLocation()
+        {
+            var currentLevel = _gameSaver.LoadData().CurrentLevel;
+
+            foreach (var levelLocation in _levelLocationsWithLevelButtons)
+            {
+                levelLocation.Key.UnlockFast();
+                
+                foreach (var levelButton in levelLocation.Value)
+                {
+                    if (levelButton.LevelNumber == currentLevel)
+                    {
+                        return;
+                    }
+                }
             }
         }
 
@@ -176,29 +196,29 @@ namespace CJ.FindAPair.Modules.UI.Windows
             return levelButtons;
         }
 
-        private void TryStartCutScenes()
+        private void PlayCutScenesIfNeed()
         {
-            if (AbleGiftObtainAtOpen && 
+            var currentLocation = GetCurrentLocationAndButton().Key;
+            if (currentLocation.IsUnlock == false)
+            {
+                _unlockLocationCutScene.SetLocation(currentLocation);
+                _queueCutScenes.AddQueue(_unlockLocationCutScene);
+            }
+            
+            if (_progressGiftBoxSaver.IsSaveProgress && 
                 _levelConfigCollection.Levels[_levelCreator.LevelConfig.LevelNumber - 1].RewardItemsCollection)
             {
-                _giftBoxWindow.Open();
+                _queueCutScenes.AddQueue(_giftBoxCutScene);
+                _progressGiftBoxSaver.IsSaveProgress = false;
             }
-            else
+            
+            if (_gameSaver.LoadData().CurrentLevel > _currentLevel)
             {
-                PlayMusic();
-                TryStartNextLevelCutScene();
+                _queueCutScenes.AddQueue(_nextLevelCutScene);
+                _currentLevel++;
             }
-        }
 
-        private void TryStartNextLevelCutScene()
-        {
-            if (StartCutSceneAtOpening)
-                _nextLevelCutScene.Play();
-        }
-        
-        private void PlayMusic()
-        {
-            _audioController.PlayMusic(_audioController.AudioClipsCollection.OnLevelMapMusic);
+            _queueCutScenes.ExecuteQueue();
         }
     }
 }

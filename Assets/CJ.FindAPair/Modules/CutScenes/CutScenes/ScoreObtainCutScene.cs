@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CutScenes.Configs;
@@ -24,6 +25,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
 
         private Sequence _scoreObtainSequence;
         private List<AwardCoin> _temporaryCoins;
+        
+        public override event Action CutSceneComplete;
     
         public ScoreObtainCutScene(GameWatcher gameWatcher, ItemsTransferer itemsTransferer, UIRoot uiRoot, 
             CardComparator cardComparator, CutScenesConfigs cutScenesConfigs, ComboValueCutScene comboValueCutScene, 
@@ -38,7 +41,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _camera = Camera.main;
             _audioController = audioController;
         }
-    
+
         public override void Play()
         {
             _scoreObtainSequence = DOTween.Sequence();
@@ -67,6 +70,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                     break;
                 }
             }
+
+            _scoreObtainSequence.AppendCallback(() => CutSceneComplete?.Invoke());
         }
 
         public override void Stop()
@@ -74,7 +79,7 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _scoreObtainSequence.Kill();
             _cutSceneConfig.ItemsPoolHandler.DestroyItemsPool(ItemsPool);
             _temporaryCoins.Clear();
-        
+            CutSceneComplete?.Invoke();
             _comboValueCutScene.Stop();
         }
 

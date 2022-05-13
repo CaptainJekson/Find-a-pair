@@ -27,6 +27,8 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         
         private Sequence _giftBoxOpenSequence;
         private List<GiftItem> _giftItems;
+        
+        public override event Action CutSceneComplete;
 
         public GiftBoxCutScene(UIRoot uiRoot, ISaver gameSaver, LevelCreator levelCreator,
             CutScenesConfigs cutScenesConfigs, ItemsTransferer itemsTransferer, AudioController audioController)
@@ -41,9 +43,12 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
             _levelCreator = levelCreator;
             _audioController = audioController;
         }
-    
+
         public override void Play()
         {
+            _giftBoxWindow.Open();
+            _giftBoxWindow.Closed += OnGiftWindowClosed;
+            
             _giftBoxOpenSequence = DOTween.Sequence();
 
             var rewardItems = _levelCreator.LevelConfig.RewardItemsCollection.Items;
@@ -108,6 +113,12 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
         
             foreach (var giftItemClone in ItemsPool)
                 _giftItems.Add(giftItemClone.GetComponent<GiftItem>());
+        }
+
+        private void OnGiftWindowClosed()
+        {
+            _giftBoxWindow.Closed -= OnGiftWindowClosed;
+            CutSceneComplete?.Invoke();
         }
         
         private void TransferItemsPanels()

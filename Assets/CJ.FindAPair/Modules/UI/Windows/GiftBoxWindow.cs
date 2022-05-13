@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CJ.FindAPair.Modules.CutScenes.CutScenes;
 using CJ.FindAPair.Modules.UI.Installer;
@@ -30,7 +31,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
         public List<GameResourceItem> GameResourceItems => _gameResourceItems;
         public Button ResumeButton => _resumeButton;
 
-        public event UnityAction WindowClosed;
+        public event Action Closed;
 
         [Inject]
         public void Construct(UIRoot uiRoot, GiftBoxCutScene giftBoxCutScene)
@@ -44,7 +45,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
         {
             _blockWindow.SetOpenWindow(this);
             _blockWindow.SetCloseButtonCondition(false);
-            _giftBoxCutScene.Play();
         }
 
         protected override void OnClose()
@@ -54,7 +54,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             _giftBoxCutScene.Stop();
             _resumeButton.gameObject.SetActive(false);
             _uiRoot.OpenWindow<MenuButtonsWindow>();
-            WindowClosed?.Invoke();
+            Closed?.Invoke();
         }
 
         protected override void PlayOpenSound()

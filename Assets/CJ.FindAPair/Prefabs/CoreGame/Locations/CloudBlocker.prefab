@@ -761,6 +761,8 @@ GameObject:
   - component: {fileID: 6144616610340902170}
   - component: {fileID: 7339730382389960979}
   - component: {fileID: 9148194258673311781}
+  - component: {fileID: 774081595692725298}
+  - component: {fileID: 6544049980580032654}
   m_Layer: 5
   m_Name: CloudBlocker
   m_TagString: Untagged
@@ -858,6 +860,39 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &774081595692725298
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320167482416252618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7db7063f889d9ef4da187079d06686a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6544049980580032654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320167482416252618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ec17f9c29146469537956ea02faaa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 774081595692725298}
+  _animationCloudDuration: 0.7
 --- !u!1 &2469392884155273701
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,7 +2480,7 @@ GameObject:
   - component: {fileID: 967811230707963998}
   - component: {fileID: 2694906956178775130}
   m_Layer: 5
-  m_Name: Cloud 7
+  m_Name: Cloud 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

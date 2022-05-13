@@ -60,7 +60,7 @@
               <e p="ItemTypes.cs" t="Include" />
               <e p="LevelBackground.cs" t="Include" />
               <e p="LevelCreator.cs" t="Include" />
-              <e p="ProgressSaver.cs" t="Include" />
+              <e p="ProgressGiftBoxSaver.cs" t="Include" />
               <e p="QuantityOfCardOfPair.cs" t="Include" />
               <e p="Raycaster.cs" t="Include" />
               <e p="SpecialCards" t="Include">
@@ -86,6 +86,7 @@
               <e p="CutScenes" t="Include">
                 <e p="Base" t="Include">
                   <e p="AbstractCutScene.cs" t="Include" />
+                  <e p="QueueCutScenes.cs" t="Include" />
                 </e>
                 <e p="ComboValueCutScene.cs" t="Include" />
                 <e p="GiftBoxCutScene.cs" t="Include" />
@@ -105,6 +106,7 @@
                     <e p="TutorialHandler.cs" t="Include" />
                   </e>
                 </e>
+                <e p="UnlockLocationCutScene.cs" t="Include" />
               </e>
               <e p="GiftItem.cs" t="Include" />
               <e p="Installer" t="Include">
@@ -170,13 +172,6 @@
                 <e p="UIRoot.cs" t="Include" />
               </e>
               <e p="LevelMarker.cs" t="Include" />
-              <e p="Slots" t="Include">
-                <e p="BoosterButton.cs" t="Include" />
-                <e p="CooldownBar.cs" t="Include" />
-                <e p="LevelButton.cs" t="Include" />
-                <e p="LevelLocation.cs" t="Include" />
-                <e p="ThemeSlot.cs" t="Include" />
-              </e>
               <e p="Tutorial" t="Include">
                 <e p="Base" t="Include">
                   <e p="TutorialScreen.cs" t="Include" />
@@ -189,6 +184,14 @@
                 <e p="HardLevelTutorialScreen.cs" t="Include" />
                 <e p="MagnetBoosterTutorialScreen.cs" t="Include" />
                 <e p="SapperBoosterTutorialScreen.cs" t="Include" />
+              </e>
+              <e p="View" t="Include">
+                <e p="BoosterButton.cs" t="Include" />
+                <e p="CloudBlockerForLocation.cs" t="Include" />
+                <e p="CooldownBar.cs" t="Include" />
+                <e p="LevelButton.cs" t="Include" />
+                <e p="LevelLocation.cs" t="Include" />
+                <e p="ThemeSlot.cs" t="Include" />
               </e>
               <e p="Windows" t="Include">
                 <e p="Base" t="Include">
@@ -219,6 +222,7 @@
           <e p="StartupInstaller.cs" t="Include" />
           <e p="Utility" t="Include">
             <e p="ArrowAnimator.cs" t="Include" />
+            <e p="BezierMover.cs" t="Include" />
             <e p="DOTweenExtension.cs" t="Include" />
             <e p="ItemsPoolHandler.cs" t="Include" />
             <e p="PlayerPrefsKeys.cs" t="Include" />
@@ -382,6 +386,16 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="BezierCurves" t="Include">
+            <e p="Editor" t="Include">
+              <e p="BezierCurveEditor.cs" t="Include" />
+              <e p="BezierPointEditor.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="BezierCurve.cs" t="Include" />
+              <e p="BezierPoint.cs" t="Include" />
+            </e>
+          </e>
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
               <e p="Modules" t="Include">

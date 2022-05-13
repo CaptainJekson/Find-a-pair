@@ -3,7 +3,7 @@ using CJ.FindAPair.Modules.Meta.Configs;
 using CJ.FindAPair.Modules.Meta.Themes;
 using CJ.FindAPair.Modules.Service.Store;
 using CJ.FindAPair.Modules.UI.Installer;
-using CJ.FindAPair.Modules.UI.Slots;
+using CJ.FindAPair.Modules.UI.View;
 using CJ.FindAPair.Modules.UI.Windows.Base;
 using CJ.FindAPair.Utility;
 using UnityEngine;
