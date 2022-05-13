@@ -57,7 +57,8 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: 8c908c060de87fd44b1603bd98e146f5, type: 3}
     - {fileID: 102900000, guid: e9c7722a893c9bc4fb6a8c0902877b99, type: 3}
-    totalSpriteSurfaceArea: 26850924
+    - {fileID: 102900000, guid: 4af7112e126b22248b093b97fe1051ed, type: 3}
+    totalSpriteSurfaceArea: 28149677
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -73,6 +74,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 81fc4ce39f01c1344b038842c5984a09, type: 3}
   - {fileID: 21300000, guid: f05fab54eb5375c4d9ac16e04f30a925, type: 3}
   - {fileID: 21300000, guid: 9568eb356fd038c4daaffd80baf6ba19, type: 3}
+  - {fileID: 21300000, guid: 23607345e10eba94ea16e58fc942d6ec, type: 3}
   - {fileID: 21300000, guid: 1b55566504f994440ac03625524a8a2c, type: 3}
   - {fileID: 21300000, guid: 95b524b56d70eed498471e8444fa93a3, type: 3}
   - {fileID: 21300000, guid: 6f91bfe58bc2173419b9a88c34e94c17, type: 3}
@@ -85,8 +87,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a2c6e5b73361e8341aa6eddd24ab6297, type: 3}
   - {fileID: 21300000, guid: b9d651f9a33cd8d4ca57156d55d32e51, type: 3}
   - {fileID: 21300000, guid: 4e0815eb57b970f448830a01896245c3, type: 3}
+  - {fileID: 21300000, guid: 64f0391d8313cb24ba69d22ba5d0867f, type: 3}
   - {fileID: 21300000, guid: 80ef162e4dcce7c4ba0707f4a0fa99f0, type: 3}
   - {fileID: 21300000, guid: dff0ea5efd6616846b94bc83d2575939, type: 3}
+  - {fileID: 21300000, guid: cae277df78044504aa8be071a1e9df1b, type: 3}
   m_PackedSpriteNamesToIndex:
   - Level Jungle Base
   - Level Hard
@@ -98,6 +102,7 @@ SpriteAtlas:
   - Level Coniferous Base
   - Level Tundra Base
   - Map Vertical Crystal
+  - cloud3
   - Level Desert Base
   - Map Vertical Bambooforest
   - Level Star Middle
@@ -110,8 +115,10 @@ SpriteAtlas:
   - Level Up Hover
   - Map Vertical Swamp
   - Map Vertical Jungle
+  - cloud1
   - Map Vertical GreenForest-Tundra
   - Level BambooForest Base
+  - cloud2
   m_RenderDataMap: {}
   m_Tag: LocationAtlas
   m_IsVariant: 0
