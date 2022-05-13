@@ -9,6 +9,7 @@ namespace CJ.FindAPair.Modules.UI.View
         [SerializeField] private CloudBlockerForLocation _blocker;
         [SerializeField] private List<LevelButton> _levelButtons;
 
+        public List<LevelButton> LevelButtons => _levelButtons;
         public bool IsUnlock { get; private set; }
 
         private void Awake()
@@ -31,7 +32,5 @@ namespace CJ.FindAPair.Modules.UI.View
             _blocker.UnlockFast();
             IsUnlock = true;
         }
-
-        public List<LevelButton> LevelButtons => _levelButtons;
     }
 }

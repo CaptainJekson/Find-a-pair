@@ -26,52 +26,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Base/QueueCutScenes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Base/QueueCutScenes.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/UnlockLocationCutScene.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/UnlockLocationCutScene.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/CloudBlockerForLocation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/CloudBlockerForLocation.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Installer/CoreGameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/ProgressSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/ProgressGiftBoxSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/ProgressSaver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/ProgressGiftBoxSaver.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Base/AbstractCutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Base/AbstractCutScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/ComboValueCutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/ComboValueCutScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/GiftBoxCutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/GiftBoxCutScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/LevelRewardCutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/LevelRewardCutScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/NextLevelCutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/NextLevelCutScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/ScoreObtainCutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/ScoreObtainCutScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/Tutorial/TutorialDriver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/Installer/CutScenesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/Installer/CutScenesInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/BoosterButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/BoosterButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/BoosterButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/CooldownBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/CooldownBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/CooldownBar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/CooldownBar.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/LevelButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/LevelButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/LevelLocation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/LevelLocation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/LevelLocation.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/ThemeSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/ThemeSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Slots/ThemeSlot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/ThemeSlot.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/BoosterInterfaceWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GiftBoxWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GiftBoxWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/LocationCloudBloker/CloudBlocker.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/LocationCloudBloker/CloudBlocker.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/LocationCloudBloker/Open.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Animation/LocationCloudBloker/Open.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/UnlockLocationCutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/UnlockLocationCutScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/LevelLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/LevelLocation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelMapWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelMapWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ThemeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/ThemeWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/VictoryWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/VictoryWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/CloudBlocker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/CloudBlocker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationBambooFores.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationBambooFores.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationConiferousForest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationConiferousForest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationCrystal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationCrystal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationDesert.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationGreenForest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationGreenForest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationJungle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationJungle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationSwamp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationSwamp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationTundra.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Locations/LocationTundra.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData.json.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,9 +239,9 @@
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/GiftBoxWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/GiftBoxCutScene.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/Installer/CutScenesInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/UnlockLocationCutScene.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/View/LevelLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/UI/Windows/LevelMapWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CutScenes/CutScenes/UnlockLocationCutScene.cs" />
       </list>
     </option>
   </component>
@@ -379,7 +342,7 @@
       <workItem from="1652124100947" duration="1772000" />
       <workItem from="1652298101514" duration="7397000" />
       <workItem from="1652452512141" duration="757000" />
-      <workItem from="1652470061726" duration="9377000" />
+      <workItem from="1652470061726" duration="11013000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -522,9 +485,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" maximized="true" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1652477377653" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1652478670192">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1652480143620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1652478670192" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1652480143620" />
   </component>
 </project>

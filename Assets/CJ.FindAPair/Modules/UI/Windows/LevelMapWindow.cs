@@ -110,6 +110,31 @@ namespace CJ.FindAPair.Modules.UI.Windows
             throw new Exception("[There is no button with this current level]");
         }
 
+        public void MoveToCurrentLocation(float duration = 0)
+        {
+            var currentLocation = GetCurrentLocationAndButton().Key;
+            
+            Canvas.ForceUpdateCanvases();
+
+            var targetPosition = (Vector2) _scrollRect.transform.InverseTransformPoint(_contentPosition.position)
+                                 - (Vector2) _scrollRect.transform.InverseTransformPoint(currentLocation.transform.position);
+            _contentPosition.DOAnchorPos(targetPosition, duration);
+        }
+        
+        public void MoveToCurrentLevel(float duration = 0)
+        {
+            var currentLevel = _gameSaver.LoadData().CurrentLevel;
+            var levelIndex = currentLevel - 1;
+            var levelButtons = GetAllButtons();
+            var targetButton = levelButtons[levelIndex].GetComponent<RectTransform>();
+            
+            Canvas.ForceUpdateCanvases();
+
+            var targetPosition = (Vector2) _scrollRect.transform.InverseTransformPoint(_contentPosition.position)
+                                 - (Vector2) _scrollRect.transform.InverseTransformPoint(targetButton.position);
+            _contentPosition.DOAnchorPos(targetPosition, duration);
+        }
+
         private void CreateLocations()
         {
             foreach (var location in _levelLocations)
@@ -170,20 +195,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             });
         }
 
-        private void MoveToCurrentLevel(float duration = 0)
-        {
-            var currentLevel = _gameSaver.LoadData().CurrentLevel;
-            var levelIndex = currentLevel - 1;
-            var levelButtons = GetAllButtons();
-            var targetButton = levelButtons[levelIndex].GetComponent<RectTransform>();
-            
-            Canvas.ForceUpdateCanvases();
-
-            var targetPosition = (Vector2) _scrollRect.transform.InverseTransformPoint(_contentPosition.position)
-                                 - (Vector2) _scrollRect.transform.InverseTransformPoint(targetButton.position);
-            _contentPosition.DOAnchorPos(targetPosition, duration);
-        }
-        
         private List<LevelButton> GetAllButtons()
         {
             var levelButtons = new List<LevelButton>();
@@ -201,7 +212,6 @@ namespace CJ.FindAPair.Modules.UI.Windows
             var currentLocation = GetCurrentLocationAndButton().Key;
             if (currentLocation.IsUnlock == false)
             {
-                _unlockLocationCutScene.SetLocation(currentLocation);
                 _queueCutScenes.AddQueue(_unlockLocationCutScene);
             }
             
