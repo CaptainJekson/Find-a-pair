@@ -58,7 +58,8 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 8c908c060de87fd44b1603bd98e146f5, type: 3}
     - {fileID: 102900000, guid: e9c7722a893c9bc4fb6a8c0902877b99, type: 3}
     - {fileID: 102900000, guid: 4af7112e126b22248b093b97fe1051ed, type: 3}
-    totalSpriteSurfaceArea: 28149677
+    - {fileID: 102900000, guid: dd01952c0f910354e90c33995fa3f8ad, type: 3}
+    totalSpriteSurfaceArea: 29573087
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -68,6 +69,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 326e74908fa8ec44982d8f800cc58974, type: 3}
   - {fileID: 21300000, guid: f552d4a0738582c49944f29be39498c7, type: 3}
   - {fileID: 21300000, guid: 218edac0459c9a54680ed7325a09ef0e, type: 3}
+  - {fileID: 21300000, guid: 3815eb12abad0134e971ea378fe3200e, type: 3}
   - {fileID: 21300000, guid: 1797f492b50e8704aabc33a451bd2fa4, type: 3}
   - {fileID: 21300000, guid: 801ac033ea4e4d3498392af058cd20e2, type: 3}
   - {fileID: 21300000, guid: 41c5cdd3f89d0cc409fdf16699053537, type: 3}
@@ -90,12 +92,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 64f0391d8313cb24ba69d22ba5d0867f, type: 3}
   - {fileID: 21300000, guid: 80ef162e4dcce7c4ba0707f4a0fa99f0, type: 3}
   - {fileID: 21300000, guid: dff0ea5efd6616846b94bc83d2575939, type: 3}
+  - {fileID: 21300000, guid: a9782d4fc971a284ca59674ee8156e08, type: 3}
   - {fileID: 21300000, guid: cae277df78044504aa8be071a1e9df1b, type: 3}
   m_PackedSpriteNamesToIndex:
   - Level Jungle Base
   - Level Hard
   - Level Greenforest Base
   - Level Star Left
+  - fenceRight
   - Level Star Right
   - Map Vertical Tundra
   - Level Up Normal
@@ -118,6 +122,7 @@ SpriteAtlas:
   - cloud1
   - Map Vertical GreenForest-Tundra
   - Level BambooForest Base
+  - fenceLeft
   - cloud2
   m_RenderDataMap: {}
   m_Tag: LocationAtlas

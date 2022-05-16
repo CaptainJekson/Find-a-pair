@@ -21,9 +21,14 @@ namespace CJ.FindAPair.Modules.UI.View
             }
         }
 
-        public void Unlock()
+        public void OpenFence()
         {
-            _blocker.Unlock();
+            _blocker.OpenFence();
+        }
+
+        public void OpenCloud()
+        {
+            _blocker.OpenCloud();
             IsUnlock = true;
         }
 

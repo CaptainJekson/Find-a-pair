@@ -28,11 +28,17 @@ namespace CJ.FindAPair.Modules.CutScenes.CutScenes
                 levelButton.gameObject.SetActive(false);
             }
             
+            var nextButton = _levelMapWindow.GetCurrentLocationAndButton().Value;
+            nextButton.SetLockState();
+            _levelMapWindow.MoveToCurrentLevel();
+            
             var sequence = DOTween.Sequence();
+            sequence.AppendCallback(() => currentLocation.OpenFence());
+            sequence.AppendInterval(1.3f); //duration OpenFence
             sequence.AppendCallback(() => _levelMapWindow.MoveToCurrentLocation(1.0f));
-            sequence.AppendInterval(1.0f);
-            sequence.AppendCallback(() => currentLocation.Unlock());
-            sequence.AppendInterval(1.0f);
+            sequence.AppendInterval(1.0f); //duration MoveToCurrentLocation
+            sequence.AppendCallback(() => currentLocation.OpenCloud());
+            sequence.AppendInterval(1.0f); //duration OpenCloud
 
             foreach (var levelButton in levelButtons)
             {

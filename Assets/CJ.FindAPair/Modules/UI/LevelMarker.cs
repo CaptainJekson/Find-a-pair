@@ -54,14 +54,6 @@ namespace CJ.FindAPair.Modules.UI
             {
                 transform.Rotate(0,0, _rotateSpeed);
             }
-
-            foreach (var trailEffect in _trailEffects)
-            {
-                var trailEffectMain = trailEffect.main;
-                trailEffectMain.simulationSpace = _levelMapWindow.IsScrollMove
-                    ? ParticleSystemSimulationSpace.Local
-                    : ParticleSystemSimulationSpace.World;
-            }
         }
 
         public void MoveToNextLevelButton(Action explosionOccurred = null, Action moveComplete = null)

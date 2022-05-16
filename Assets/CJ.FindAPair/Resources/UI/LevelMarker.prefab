@@ -112,7 +112,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 4078555124891004468}
   scalingMode: 0
   randomSeed: 0
@@ -4997,7 +4997,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 4078555124891004468}
   scalingMode: 0
   randomSeed: 0
@@ -9882,7 +9882,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 4078555124891004468}
   scalingMode: 0
   randomSeed: 0
@@ -14745,7 +14745,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &8349497030513829656
 GameObject:

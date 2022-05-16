@@ -8,11 +8,23 @@ namespace CJ.FindAPair.Modules.UI.View
         [SerializeField] private Animator _animator;
         [SerializeField] private float _animationCloudDuration;
 
-        private string _animatorParametrName = "IsOpen";
-
-        public void Unlock()
+        private string _animatorParametrName = "State";
+        
+        private enum AnimationState
         {
-            _animator.SetBool(_animatorParametrName, true);
+            Idle,
+            OpenFence,
+            OpenCloud,
+        }
+
+        public void OpenFence()
+        {
+            _animator.SetInteger(_animatorParametrName,(int)AnimationState.OpenFence);
+        }
+
+        public void OpenCloud()
+        {
+            _animator.SetInteger(_animatorParametrName,(int)AnimationState.OpenCloud);
             var sequence = DOTween.Sequence();
             sequence.AppendInterval(_animationCloudDuration);
             sequence.AppendCallback(() => gameObject.SetActive(false));

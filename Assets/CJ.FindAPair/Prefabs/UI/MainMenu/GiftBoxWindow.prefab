@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 7424723456999821808}
   - component: {fileID: 3264233086081567199}
   - component: {fileID: 6849017664869654727}
+  - component: {fileID: 8333071572761660844}
   m_Layer: 0
   m_Name: GiftBoxWindow
   m_TagString: Untagged
@@ -428,7 +429,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 0
       Fade:
         AnimationType: 2
         Enabled: 0
@@ -702,7 +703,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 0
       Fade:
         AnimationType: 1
         Enabled: 0
@@ -799,6 +800,18 @@ MonoBehaviour:
   - {fileID: 988855372850603320}
   - {fileID: 5927926054494111144}
   _resumeButton: {fileID: 836056649966122681}
+--- !u!114 &8333071572761660844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152805374744452482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbc6bc6bff7c0f449eb430f88dc49ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2593120011954945068
 GameObject:
   m_ObjectHideFlags: 0
