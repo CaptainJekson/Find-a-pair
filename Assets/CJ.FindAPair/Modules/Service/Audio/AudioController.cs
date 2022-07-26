@@ -62,7 +62,10 @@ namespace CJ.FindAPair.Modules.Service.Audio
 
         public void StopMusic()
         {
-            _musicSource.Stop();
+            if (_musicSource != null)
+            {
+                _musicSource.Stop();
+            }
         }
     }
 }

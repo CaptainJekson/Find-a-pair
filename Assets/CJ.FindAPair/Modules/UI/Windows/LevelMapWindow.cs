@@ -58,6 +58,7 @@ namespace CJ.FindAPair.Modules.UI.Windows
             SetLevelData();
             UnlockCompletedLocation();
             _currentLevel = _gameSaver.LoadData().CurrentLevel;
+            _audioController.PlayMusic(_audioController.AudioClipsCollection.OnLevelMapMusic);
         }
 
         protected override void OnOpen()

@@ -57,7 +57,7 @@ namespace CJ.FindAPair.Modules.Service.Server
                 return;
             
             using var request = UnityWebRequest.Post(_serverConfig.RegisterPath, form);
-            
+            request.certificateHandler = new CertificateIgnored();
             var operation = request.SendWebRequest();
 
             while (operation.isDone == false)
@@ -77,6 +77,14 @@ namespace CJ.FindAPair.Modules.Service.Server
                 _errorAction = null;
                 Debug.LogError("Error: " + request.error);
             }
+        }
+    }
+    
+    public class CertificateIgnored : CertificateHandler
+    {
+        protected override bool ValidateCertificate(byte[] certificateData)
+        {
+            return true;
         }
     }
 }
