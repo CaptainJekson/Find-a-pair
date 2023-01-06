@@ -153,7 +153,7 @@ TextureImporter:
       213: 6963040014356486207
     second: level_lock_button
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -174,6 +174,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -182,9 +183,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -212,6 +213,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -251,6 +253,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1330,7 +1344,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e38c35850aad5ede0800000000000000
-      internalID: -1304396134842382274
+      internalID: 1956863336705350749
       vertices: []
       indices: 
       edges: []
@@ -1351,7 +1365,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b034bbc76cb26b530800000000000000
-      internalID: 3870329061267686155
+      internalID: -3290159333234212075
       vertices: []
       indices: 
       edges: []
@@ -1366,6 +1380,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      red_title: -4554011191416669322
+      red_button: -2787114123076120459
+      darkblue_back_button: -1374994693497126367
+      white_back_button: -3319613803580146398
+      green_back_button: -5295083702988173411
+      level_title: -243302471136669803
+      gray_back_button: 415424013442168455
+      menu_button: 795612847325984952
+      bluegray_back_button: -7827313326684788800
+      level_lock_button: 6963040014356486207
+      lock_icon: 4880056312673985579
+      blue_button: 4867279510161363550
+      detecor_icon: 1862054974416179196
+      level_button: -2738565983754205523
+      green_title: -8618885251602509700
+      loading_icon: 7043131332627079262
+      background_substrate: -4458344327416777533
+      frame_window: -6622604961613908458
+      red_back_button: -3445834097451383426
+      prev_button: -622372571845993770
+      shop_icon: -1204904572586965048
+      sapper_icon: 4082670251224968337
+      setting_icon: 2651127236917439156
+      scroll_background: 8471556389680111574
+      theme_icon: 8556885369637325254
+      life_icon: 44380576602181391
+      level_disable_button: 7337409391002394472
+      window_background: -3031825299222972524
+      language_english: 1956863336705350749
+      coin_item: -562990675615157976
+      magnet_icon: -7906907746935474831
+      item_counter_background: -4818847665507049659
+      time_icon: -8151869705160971435
+      UIAtlas1_33: -3224640124830193917
+      blue_back_button: -2395938580465421326
+      close_button: 8413610138815727524
+      orange_back_button: -3307594800429379420
+      diamond_icon: 2558635691807485595
+      ad_icon: 5940932064952353230
+      slot_background: 6104795436871768523
+      purple_title: -8747347231971038211
+      next_button: -448612467495032114
+      energy_icon: -4070609506910601610
+      language_russian: -3290159333234212075
+      check_icon: 679555835893313791
+      exit_icon: -8588925273215358296
+      level_hard_button: -9033822325882794758
+      purple_back_button: -2428051108841450818
+      next_icon: -8582650549889329543
+      restart_icon: -3852785769450730293
+      yellow_back_button: -504023202286620100
+      setting_icon2: -8919740968320988737
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -51,7 +51,7 @@ TextureImporter:
       213: 5225171064637652687
     second: atlas_food_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -80,9 +81,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -110,6 +111,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -149,6 +151,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -508,6 +522,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      atlas_food_3: 8764666903157631187
+      atlas_food_10: 6731395929958223517
+      atlas_food_7: 440042845987837695
+      atlas_food_8: 2477797853656070402
+      atlas_food_6: -2800905226229312477
+      atlas_food_15: 5225171064637652687
+      atlas_food_5: -4848874477519419613
+      atlas_food_13: 5755510049117667242
+      atlas_food_9: 3365541431180373568
+      atlas_food_4: -415559437495880817
+      atlas_food_2: -4389878558776720963
+      atlas_food_11: -4104111667616515072
+      atlas_food_0: 8165587077686769274
+      atlas_food_1: 552051692666995298
+      atlas_food_14: 1376930778098939476
+      atlas_food_12: 4014218267244176204
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

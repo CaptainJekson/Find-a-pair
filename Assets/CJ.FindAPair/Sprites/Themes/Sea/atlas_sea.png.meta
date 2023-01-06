@@ -51,7 +51,7 @@ TextureImporter:
       213: -8132015433262106197
     second: atlas_sea_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -80,9 +81,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -110,6 +111,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -149,6 +151,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
@@ -508,6 +522,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      atlas_sea_12: -1814586566303611463
+      atlas_sea_4: -2931227505506435244
+      atlas_sea_10: -6662003940626311532
+      atlas_sea_6: 8074785401566224582
+      atlas_sea_3: -4790308748110433009
+      atlas_sea_9: -4214095904637985439
+      atlas_sea_13: 604943774958955252
+      atlas_sea_11: -7414967487514334148
+      atlas_sea_14: 9054350862480712379
+      atlas_sea_0: 7555673716858651755
+      atlas_sea_8: -1906332725909038756
+      atlas_sea_7: -3852151054510203821
+      atlas_sea_5: -7672331779434587528
+      atlas_sea_15: -8132015433262106197
+      atlas_sea_2: 6057129391044089912
+      atlas_sea_1: 2577136140242985382
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

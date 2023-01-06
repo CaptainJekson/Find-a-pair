@@ -51,7 +51,7 @@ TextureImporter:
       213: 8229771063541479131
     second: atlas_animals_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -80,9 +81,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -110,6 +111,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -149,6 +151,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -508,6 +522,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      atlas_animals_2: 2540624422456590237
+      atlas_animals_14: 5040206738847831279
+      atlas_animals_1: -3005351021388095532
+      atlas_animals_13: 8840498473539125920
+      atlas_animals_11: -5849717446282464011
+      atlas_animals_7: 2698523145142766546
+      atlas_animals_0: -3662938303249473930
+      atlas_animals_3: 4748947511428643575
+      atlas_animals_8: 5157208723547015565
+      atlas_animals_5: -9033677063329463170
+      atlas_animals_6: 4460568196281312965
+      atlas_animals_4: 2009652836192102221
+      atlas_animals_9: -6200604052774624753
+      atlas_animals_10: 5177341692733859391
+      atlas_animals_12: 6585687952386758217
+      atlas_animals_15: 8229771063541479131
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
