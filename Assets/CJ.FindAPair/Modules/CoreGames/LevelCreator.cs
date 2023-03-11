@@ -22,8 +22,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         private ScoreObtainCutScene _scoreObtainCutScene;
         private List<Card> _cards;
         private List<Card> _disableCards;
-
-        public float Scale => _level.HeightOffset;
+        
         public LevelConfig LevelConfig => _level;
         public List<Card> Cards => _cards;
 
@@ -61,12 +60,12 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             foreach (var card in _cards)
             {
-                Destroy(card.gameObject);
+                Object.Destroy(card.gameObject);
             }
 
             foreach (var card in _disableCards)
             {
-                Destroy(card.gameObject);
+                Object.Destroy(card.gameObject);
             }
 
             _cards.Clear();
@@ -132,9 +131,7 @@ namespace CJ.FindAPair.Modules.CoreGames
             for (var i = _cards.Count - 1; i > 0; i--)
             {
                 var j = Random.Range(0, i);
-                var temp = _cards[i].NumberPair;
-                _cards[i].NumberPair = _cards[j].NumberPair;
-                _cards[j].NumberPair = temp;
+                (_cards[i].NumberPair, _cards[j].NumberPair) = (_cards[j].NumberPair, _cards[i].NumberPair);
             }
         }
 
