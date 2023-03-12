@@ -29,8 +29,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         public AudioController AudioDriver { get; set; }
 
         public event UnityAction СardOpens;
-        public event UnityAction CardClosed;
-
+        
         private void Awake()
         {
             _collider = GetComponent<BoxCollider>();
@@ -67,11 +66,10 @@ namespace CJ.FindAPair.Modules.CoreGames
             СardOpens?.Invoke();
         }
 
-        public void Hide(bool isNotEventCall = false)
+        public void Hide()
         {
             if (IsEmpty)
                 return;
-
             if(_isDisableTutorial == false)
                 _collider.enabled = true;
             
@@ -83,9 +81,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
 
             _isMatched = false;
-            
-            if (isNotEventCall) return;
-            CardClosed?.Invoke();
         }
 
         public void DelayHide()

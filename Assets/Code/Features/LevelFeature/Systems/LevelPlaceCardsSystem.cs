@@ -3,6 +3,7 @@ using CJ.FindAPair.Modules.CoreGames;
 using CJ.FindAPair.Modules.CoreGames.Configs;
 using Code.Configs;
 using Code.Features.LevelFeature.Components;
+using Code.Features.LevelFeature.Interfaces;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace Code.Features.LevelFeature.Systems
         [Injectable] private PlaceCardsConfig _placeCardsConfig;
         [Injectable] private TemplatesConfig _templates;
         [Injectable] private Locator _locator;
+        
+        [Injectable] private ILevelStorage _levelStorage;
         
         public void OnUpdate(float deltaTime)
         {
@@ -52,6 +55,8 @@ namespace Code.Features.LevelFeature.Systems
                         level.enableCards.Add(card.Key);
                     }
                 }
+                
+                _levelStorage.SetCards(level.enableCards);
             }
         }
         

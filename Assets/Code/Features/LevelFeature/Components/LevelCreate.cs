@@ -5,6 +5,6 @@ namespace Code.Features.LevelFeature.Components
 {
     public struct LevelCreate : IComponent
     {
-        public LevelConfig value;
+        public LevelConfig levelConfig;
     }
 }

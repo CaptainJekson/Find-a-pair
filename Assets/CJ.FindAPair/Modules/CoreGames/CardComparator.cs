@@ -41,9 +41,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             }
         }
 
-        private UnityAction AddCardCompare(Card cardOld)
+        private UnityAction AddCardCompare(Card card)
         {
-            return () => ToCompare(cardOld);
+            return () => ToCompare(card);
         }
 
         private void ToCompare(Card cardOld)

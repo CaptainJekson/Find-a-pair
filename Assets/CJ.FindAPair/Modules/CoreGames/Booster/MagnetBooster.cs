@@ -26,7 +26,7 @@ namespace CJ.FindAPair.Modules.CoreGames.Booster
             yield return new WaitForSeconds(_timeShow);
 
             foreach (var card in _levelCreator.Cards.Where(card => !card.IsMatched))
-                card.Hide(true);
+                card.Hide();
         }
     }
 }

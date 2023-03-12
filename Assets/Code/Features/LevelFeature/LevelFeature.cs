@@ -1,4 +1,5 @@
 ﻿using Code.Features.LevelFeature.Components;
+using Code.Features.LevelFeature.Interfaces;
 using Code.Features.LevelFeature.Systems;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
@@ -7,6 +8,15 @@ namespace Code.Features.LevelFeature
 {
     public static class LevelCreateFeature
     {
+        public static void AddStorage(World world, ref int index, SimpleDImple container)
+        {
+            var systemsGroup = world.CreateSystemsGroup();
+
+            systemsGroup.AddInitializer(container.NewAndRegister<LevelStorageSystem, ILevelStorage>());
+            
+            world.AddSystemsGroup(index++, systemsGroup);
+        }
+        
         public static void Add(World world, ref int index, SimpleDImple container)
         {
             var systemsGroup = world.CreateSystemsGroup();
@@ -19,6 +29,7 @@ namespace Code.Features.LevelFeature
             systemsGroup.AddSystem(container.New<LevelShuffleNumberCardSystem>());
             systemsGroup.AddSystem(container.New<LevelDealCardsSystem>());
             systemsGroup.AddSystem(container.New<LevelInitThemeSystem>());
+            systemsGroup.AddSystem(container.New<LevelStartGameSystem>());
             systemsGroup.DeleteHere<LevelInitialize>();
 
             world.AddSystemsGroup(index++, systemsGroup);

@@ -21,7 +21,7 @@ namespace Code.Features.LevelFeature.Systems
             var newEntity = World.CreateEntity();
             _levelCreate.Set(newEntity, new LevelCreate
             {
-                value = level,
+                levelConfig = level,
             }); 
         }
 

@@ -15,6 +15,7 @@ namespace Code.Features.ThemesFeature.Systems
         
         [Injectable] private ThemeConfigCollection _themesConfig;
         [Injectable] private SpecialCardImageConfig _specialCardImageConfig;
+        [Injectable] private Locator _locator;
         
         private const int IndexTheme = 0; //TODO выбранная тема
         
@@ -31,7 +32,7 @@ namespace Code.Features.ThemesFeature.Systems
                 cards.Sort();
                 var sortedCards = cards;
                 
-                //_levelBackground.SetSprite(_selectedThemeConfig.BackGroundSprite);//TODO dev
+                _locator.levelBackground.SetSprite(selectedThemeConfig.BackGroundSprite);
                 
                 foreach (var card in sortedCards)
                 {
