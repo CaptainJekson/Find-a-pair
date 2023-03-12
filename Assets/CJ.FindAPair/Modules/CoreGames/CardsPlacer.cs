@@ -64,11 +64,11 @@ namespace CJ.FindAPair.Modules.CoreGames
         
         public void DealCards(List<Card> cards)
         {
-            List<Vector2> cardsPositions = new List<Vector2>();
+            var cardsPositions = new List<Vector2>();
             
-            Sequence sequence = DOTween.Sequence();
+            var sequence = DOTween.Sequence();
             
-            int interactionsCounter = 0;
+            var interactionsCounter = 0;
             
             foreach (var card in cards)
             {
@@ -78,7 +78,7 @@ namespace CJ.FindAPair.Modules.CoreGames
 
             foreach (var card in cards)
             {
-                int i = interactionsCounter;
+                var i = interactionsCounter;
                 
                 sequence.AppendInterval(_placeCardsConfig.TimeBetweenDeals);
                 sequence.AppendCallback(() =>

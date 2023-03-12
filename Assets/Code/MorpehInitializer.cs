@@ -1,6 +1,7 @@
 ﻿using Code.Features.CleanupDestroyFeature;
-using Code.Features.LevelCreateFeature;
+using Code.Features.LevelFeature;
 using Code.Features.SaveGameFeature;
+using Code.Features.ThemesFeature;
 using Scellecs.Morpeh;
 
 namespace Code
@@ -18,8 +19,11 @@ namespace Code
             //TODO Services
             SaveGameFeature.Add(world, ref groupIndex, container);
             
-            //TODO Core games
+            //TODO Core game
             LevelCreateFeature.Add(world, ref groupIndex, container);
+            
+            //TODO meta game
+            ThemesFeature.Add(world, ref groupIndex, container);
 
             //Cleanup
             CleanupDestroyFeature.Add(world, ref groupIndex, container);

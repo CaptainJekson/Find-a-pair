@@ -96,7 +96,9 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             if (isFilledCell == false)
             {
-                DisableCard(newCard);
+                newCard.IsEmpty = true;
+                newCard.MakeEmpty();
+                newCard.NumberPair = 0;
                 _disableCards.Add(newCard);
             }
             else
@@ -104,7 +106,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 _cards.Add(newCard);
             }
         }
-
+        
         private void CardNumbering()
         {
             var numberCard = 1;
@@ -151,13 +153,6 @@ namespace CJ.FindAPair.Modules.CoreGames
             {
                 _cards[_cards.Count - 1 - i].NumberPair = number;
             }
-        }
-
-        private void DisableCard(Card card)
-        {
-            card.IsEmpty = true;
-            card.MakeEmpty();
-            card.NumberPair = 0;
         }
 
         public bool IsSpecialCardsOnLevel()

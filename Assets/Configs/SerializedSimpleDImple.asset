@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f927a1e8dd2456eaf548b7edbe75eaf, type: 3}
   m_Name: SerializedSimpleDImple
   m_EditorClassIdentifier: 
-  _serializedRegistrations: []
+  _serializedRegistrations:
+  - {fileID: 11400000, guid: d3964deb75d08224b9b2f471c51861fd, type: 2}
+  - {fileID: 11400000, guid: 0964bd6f34957864996eff0eb2f44a94, type: 2}
+  - {fileID: 11400000, guid: 63b8f245f98d1fe4397b74c11f33d9c1, type: 2}
+  - {fileID: 11400000, guid: 695b6102075d3e64c972dd75ce447463, type: 2}
+  - {fileID: 11400000, guid: 337015a7993f1084b869e757b95bdce0, type: 2}

@@ -26,12 +26,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Components.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Components/LevelCreate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Components/LevelCreate.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Systems.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Systems/LevelCreateSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Systems/LevelCreateSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Configs/TemplatesConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Configs/TemplatesConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/Level.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/Level.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/LevelInitialize.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/LevelInitialize.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/LevelFeature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCardsNumberingSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCardsNumberingSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCreateSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCreateSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelDealCardsSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelDealCardsSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelInitThemeSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelInitThemeSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelPlaceCardsSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelPlaceCardsSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelShuffleNumberCardSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelShuffleNumberCardSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelTESTStartSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelTESTStartSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Components.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Components/ThemeLevelInit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Components/ThemeLevelInit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Systems.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Systems/ThemeInitSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Systems/ThemeInitSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/ThemesFeature.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GlobalUtils/Locator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GlobalUtils/Locator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/LevelCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Themes/ThemesSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/Meta/Themes/ThemesSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/CoreGame/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/TutorialScreens/Screens/EntanglementCardTutorialScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/TutorialScreens/Screens/EntanglementCardTutorialScreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/TutorialScreens/Screens/FortuneCardTutorialScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Prefabs/UI/TutorialScreens/Screens/FortuneCardTutorialScreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/CleanupDestroyFeature/Systems/EntityDestroySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/CleanupDestroyFeature/Systems/EntityDestroySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Components.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Components/LevelCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/LevelCreate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Components/LevelCreate.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/LevelCreate.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/LevelCreateFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/ThemesFeature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/LevelCreateFeature.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/LevelFeature.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Systems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Systems/LevelCreateSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelCreateFeature/Systems/LevelCreateSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/MainInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/MainInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/MorpehInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/MorpehInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/SerializedSimpleDImple.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/SerializedSimpleDImple.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +96,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Client-poker/Assets/Code/UiUtils/RootGui.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Constants/ConstantsCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/CustomEditor/SaveOpener.cs" root0="FORCE_HIGHLIGHTING" />
@@ -250,22 +300,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Evgeniy\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Evgeniy\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Unity.exe" />
@@ -376,7 +426,9 @@
       <workItem from="1673204383047" duration="126000" />
       <workItem from="1673204813548" duration="676000" />
       <workItem from="1673208870299" duration="12000" />
-      <workItem from="1678567995377" duration="3321000" />
+      <workItem from="1678567995377" duration="3354000" />
+      <workItem from="1678620694853" duration="1815000" />
+      <workItem from="1678622591205" duration="5090000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>
@@ -445,87 +497,5 @@
     <MESSAGE value="Adding levels 5" />
     <MESSAGE value="Install zenject" />
     <option name="LAST_COMMIT_MESSAGE" value="Install zenject" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1658865822920">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822920" />
-    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1658865822920">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822920" />
-    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1658865822920">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822920" />
-    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1658865822920">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822920" />
-    <state width="1877" height="260" key="GridCell.Tab.1.bottom" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.1.center" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.1.left" timestamp="1658865822920">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822920" />
-    <state width="1877" height="260" key="GridCell.Tab.1.right" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.2.bottom" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.2.center" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.2.left" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.2.right" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.3.bottom" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.3.center" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.3.left" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state width="1877" height="260" key="GridCell.Tab.3.right" timestamp="1658865822921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="260" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1658865822921" />
-    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1652472393398">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1652472393398" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1658866180403">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1658866180403" />
-    <state x="92" y="92" width="1736" height="856" maximized="true" key="VCS.FileHistoryDialog" timestamp="1652477377653">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" maximized="true" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1652477377653" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1658865837630">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1658865837630" />
   </component>
 </project>

@@ -14,8 +14,6 @@ namespace CJ.FindAPair.Modules.Meta.Themes
         private ThemeConfig _selectedThemeConfig;
         private LevelBackground _levelBackground;
         private LevelCreator _levelCreator;
-        private int _quantityOfCardOfPair;
-        private List<Card> _sortedCards;
         private ISaver _gameSaver;
 
         public ThemesSelector(ThemeConfigCollection themeConfigCollection, SpecialCardImageConfig specialCardImageConfig,
@@ -58,36 +56,15 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             if (isRandomChangeTheme == "On")
                 RandomChangeTheme();
             
-            _quantityOfCardOfPair = (int) _levelCreator.LevelConfig.QuantityOfCardOfPair;
+            var quantityOfCardOfPair = (int) _levelCreator.LevelConfig.QuantityOfCardOfPair;
             
-            SortCards();
-            SetBackground();
-            SetCards();
-        }
-        
-        private void RandomChangeTheme()
-        {
-            var saveData = _gameSaver.LoadData();
-            var openedThemes = saveData.ThemesData.OpenedThemes;
-            var randomThemeId = openedThemes[Random.Range(0, openedThemes.Count)];
-
-            ChangeTheme(randomThemeId);
-        }
-
-        private void SortCards()
-        {
             _levelCreator.Cards.Sort();
-            _sortedCards = _levelCreator.Cards;
-        }
-        
-        private void SetBackground()
-        {
+            var sortedCards = _levelCreator.Cards;
+            
             _levelBackground.SetSprite(_selectedThemeConfig.BackGroundSprite);
-        }
-
-        private void SetCards()
-        {
-            foreach (var card in _sortedCards)
+            
+            
+            foreach (var card in sortedCards)
             {
                 card.SetShirt(_selectedThemeConfig.ShirtSprite);
             }
@@ -99,12 +76,11 @@ namespace CJ.FindAPair.Modules.Meta.Themes
             {
                 var j = Random.Range(0, i);
                 
-                var temp = _selectedThemeConfig.FacesSprites[i];
-                _selectedThemeConfig.FacesSprites[i] = _selectedThemeConfig.FacesSprites[j];
-                _selectedThemeConfig.FacesSprites[j] = temp;
+                (_selectedThemeConfig.FacesSprites[i], _selectedThemeConfig.FacesSprites[j]) 
+                    = (_selectedThemeConfig.FacesSprites[j], _selectedThemeConfig.FacesSprites[i]);
             }
 
-            foreach (var card in _sortedCards)
+            foreach (var card in sortedCards)
             {
                 if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
                 {
@@ -118,12 +94,21 @@ namespace CJ.FindAPair.Modules.Meta.Themes
 
                 pairCounter++;
 
-                if (pairCounter >= _quantityOfCardOfPair)
+                if (pairCounter >= quantityOfCardOfPair)
                 {
                     index++;
                     pairCounter = 0;
                 }
             }
+        }
+        
+        private void RandomChangeTheme()
+        {
+            var saveData = _gameSaver.LoadData();
+            var openedThemes = saveData.ThemesData.OpenedThemes;
+            var randomThemeId = openedThemes[Random.Range(0, openedThemes.Count)];
+
+            ChangeTheme(randomThemeId);
         }
 
         private string ReadSelectedTheme()
