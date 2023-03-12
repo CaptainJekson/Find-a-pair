@@ -26,71 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairDefeat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairDefeat.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairLife.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairLife.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairLifeTake.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairLifeTake.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairQuantityPairs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairQuantityPairs.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairScore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairScore.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairScoreGive.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairScoreGive.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairScoreTake.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairScoreTake.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairStart.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairStart.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairTime.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairTime.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairVictory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairVictory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/FindPairFeature.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/FindPairFeature.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairDefeatSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairDefeatSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairLifeTakeSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairLifeTakeSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairQuantityPairsGiveSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairQuantityPairsGiveSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreGiveSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreGiveSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreTakeSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreTakeSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairStartGameSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairStartGameSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairTimerSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairTimerSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairVictorySystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairVictorySystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Interfaces/ILevelStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Interfaces/ILevelStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelStartGameSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelStartGameSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelStorageSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelStorageSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagnetBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagnetBooster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Scenes/CoreGames.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/LevelCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Components/LevelCreate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/LevelFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/LevelFeature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCreateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCreateSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelPlaceCardsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelPlaceCardsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelTESTStartSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelTESTStartSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Systems/ThemeInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/ThemesFeature/Systems/ThemeInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GlobalUtils/Locator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GlobalUtils/Locator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MorpehInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/MorpehInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/SerializedSimpleDImple.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/SerializedSimpleDImple.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoreGames.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoreGames.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,7 +375,7 @@
       <workItem from="1673208870299" duration="12000" />
       <workItem from="1678567995377" duration="3354000" />
       <workItem from="1678620694853" duration="1815000" />
-      <workItem from="1678622591205" duration="13231000" />
+      <workItem from="1678622591205" duration="13558000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>

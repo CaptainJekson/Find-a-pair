@@ -70,6 +70,7 @@ namespace CJ.FindAPair.Modules.CoreGames
         {
             if (IsEmpty)
                 return;
+            
             if(_isDisableTutorial == false)
                 _collider.enabled = true;
             
@@ -167,7 +168,7 @@ namespace CJ.FindAPair.Modules.CoreGames
                 _gameSettingsConfig.AnimationSpeedCard / 2)).SetEase(_easeAnimationCard);
             sequence.AppendCallback(() =>
             {
-                AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true);
+                //AudioDriver.PlaySound(AudioDriver.AudioClipsCollection.CardFlipSound, true); //TODO dev пришлось выключить т.к не работает с новой реализацией
                 _specialCardSprite.enabled = isShow;
                 _visualSprite.sprite = isShow ? _faceSprite : _shirtSprite;
             });
