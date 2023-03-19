@@ -6,7 +6,7 @@ using Scellecs.Morpeh;
 
 namespace Code.Features.LevelFeature
 {
-    public static class LevelCreateFeature
+    public static class LevelFeature
     {
         public static void AddStorage(World world, ref int index, SimpleDImple container)
         {
@@ -25,6 +25,7 @@ namespace Code.Features.LevelFeature
 
             systemsGroup.AddSystem(container.New<LevelCreateSystem>());
             systemsGroup.AddSystem(container.New<LevelPlaceCardsSystem>());
+            systemsGroup.AddSystem(container.New<LevelCardComparerInitializeSystem>());
             systemsGroup.AddSystem(container.New<LevelCardsNumberingSystem>());
             systemsGroup.AddSystem(container.New<LevelShuffleNumberCardSystem>());
             systemsGroup.AddSystem(container.New<LevelDealCardsSystem>());

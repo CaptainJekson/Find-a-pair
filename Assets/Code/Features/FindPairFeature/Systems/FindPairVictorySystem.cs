@@ -2,6 +2,7 @@
 using Code.Features.FindPairFeature.Components;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
+using UnityEngine;
 
 namespace Code.Features.FindPairFeature.Systems
 {
@@ -18,7 +19,7 @@ namespace Code.Features.FindPairFeature.Systems
                 var score = findPairScore.score;
                 
                 //TODO dev тут вся логика при выигрыше, начиление монет
-                
+                Debug.Log("ТЫ ВЫИГРАЛ!!!");
                 _destroy.Add(entity);
             }
         }

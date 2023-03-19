@@ -16,14 +16,14 @@ namespace Code
             container.AddResolver(type => world.GetReflectionStash(type.GenericTypeArguments[0]), typeof(Stash));
 
             //Storages
-            LevelCreateFeature.AddStorage(world, ref groupIndex, container);
+            LevelFeature.AddStorage(world, ref groupIndex, container);
 
             //Systems
             //TODO Services
             SaveGameFeature.Add(world, ref groupIndex, container);
             
             //TODO Core game
-            LevelCreateFeature.Add(world, ref groupIndex, container);
+            LevelFeature.Add(world, ref groupIndex, container);
             FindPairFeature.Add(world, ref groupIndex, container);
             
             //TODO meta game

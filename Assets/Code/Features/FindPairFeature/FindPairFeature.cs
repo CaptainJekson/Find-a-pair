@@ -22,6 +22,7 @@ namespace Code.Features.FindPairFeature
             systemsGroup.AddSystem(container.New<FindPairQuantityPairsGiveSystem>());
             systemsGroup.DeleteHere<FindPairScoreGive>();
 
+            systemsGroup.AddSystem(container.New<FindPairComparerSystem>());
             systemsGroup.AddSystem(container.New<FindPairVictorySystem>());
             systemsGroup.AddSystem(container.New<FindPairDefeatSystem>());
 

@@ -46,17 +46,17 @@ namespace CJ.FindAPair.Modules.CoreGames
             return () => ToCompare(card);
         }
 
-        private void ToCompare(Card cardOld)
+        private void ToCompare(Card card)
         {
-            if (cardOld.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
+            if (card.NumberPair >= ConstantsCard.NUMBER_SPECIAL)
             {
-                SpecialCardOpened?.Invoke(cardOld);
+                SpecialCardOpened?.Invoke(card);
             }
 
             var quantityOfCardOfPair = (int) _levelCreator.LevelConfig.QuantityOfCardOfPair;
 
-            if (cardOld.NumberPair < ConstantsCard.NUMBER_SPECIAL)
-                _comparisonCards.Add(cardOld);
+            if (card.NumberPair < ConstantsCard.NUMBER_SPECIAL)
+                _comparisonCards.Add(card);
 
             for (var i = 0; i < _comparisonCards.Count - 1; i++)
             {
@@ -82,7 +82,9 @@ namespace CJ.FindAPair.Modules.CoreGames
             CardsMatched?.Invoke();
 
             foreach (var card in _comparisonCards)
+            {
                 card.SetMatchedState();
+            }
 
             _comparisonCards.Clear();
         }

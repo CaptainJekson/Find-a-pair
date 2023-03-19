@@ -1,4 +1,6 @@
-﻿using Code.Features.FindPairFeature.Components;
+﻿using System.Collections.Generic;
+using CJ.FindAPair.Modules.CoreGames;
+using Code.Features.FindPairFeature.Components;
 using Code.Features.LevelFeature.Interfaces;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
@@ -12,6 +14,7 @@ namespace Code.Features.FindPairFeature.Systems
         [Injectable] private Stash<FindPairScore> _findPairScore;
         [Injectable] private Stash<FindPairTime> _findPairTime;
         [Injectable] private Stash<FindPairQuantityPairs> _findPairQuantityPairs;
+        [Injectable] private Stash<FindPairComparisonCards> _findPairComparisonCards;
         
         [Injectable] private ILevelStorage _levelStorage;
         
@@ -28,6 +31,7 @@ namespace Code.Features.FindPairFeature.Systems
 
                 _findPairQuantityPairs.Set(entity, new FindPairQuantityPairs
                 {
+                    quantityOfCardOfPair = (int)levelConfig.QuantityOfCardOfPair,
                     maxQuantityPairs = quantityOfPairs,
                 });
                 _findPairLife.Set(entity, new FindPairLife
@@ -41,6 +45,10 @@ namespace Code.Features.FindPairFeature.Systems
                 _findPairScore.Set(entity, new FindPairScore
                 {
                     score = 0,
+                });
+                _findPairComparisonCards.Set(entity, new FindPairComparisonCards
+                {
+                    cards = new List<Card>(),
                 });
             }
         }

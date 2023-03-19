@@ -46,8 +46,6 @@ namespace Code.Features.LevelFeature.Systems
                         card.Key.MakeEmpty();
                         card.Key.NumberPair = 0;
 
-                        
-
                         level.disableCards.Add(card.Key);
                     }
                     else

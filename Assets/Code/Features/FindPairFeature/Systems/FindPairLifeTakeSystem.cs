@@ -1,6 +1,7 @@
 ﻿using Code.Features.FindPairFeature.Components;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
+using UnityEngine;
 
 namespace Code.Features.FindPairFeature.Systems
 {
@@ -25,7 +26,8 @@ namespace Code.Features.FindPairFeature.Systems
                 {
                     _findPairDefeat.Add(entity);
                 }
-                
+
+                Debug.Log($"Отняли жизнь | жизней {findPairLife.value}");
                 _findPairLifeTake.Remove(entity);
             }
         }

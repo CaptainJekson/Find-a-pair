@@ -4,6 +4,7 @@ using Code.Features.FindPairFeature.Components;
 using Code.Features.LevelFeature.Interfaces;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
+using UnityEngine;
 
 namespace Code.Features.FindPairFeature.Systems
 {
@@ -52,6 +53,8 @@ namespace Code.Features.FindPairFeature.Systems
                     }
 
                     findPairScore.comboCounter++;
+
+                    Debug.Log($"Прибавили очки | очков = {findPairScore.score}");
                 }
             }
         }

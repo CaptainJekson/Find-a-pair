@@ -26,7 +26,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6680a5b1-a200-45e9-91d9-4ed42aaf3339" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairComparisonCards.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairComparisonCards.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/CardComparerEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/CardComparerEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairComparerSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairComparerSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCardComparerInitializeSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelCardComparerInitializeSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Find-a-pair/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardEffector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardEffector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairQuantityPairs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Components/FindPairQuantityPairs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/FindPairFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/FindPairFeature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairDefeatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairDefeatSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairLifeTakeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairLifeTakeSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreGiveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreGiveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreTakeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreTakeSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreTakeSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairScoreTakeSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairStartGameSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairStartGameSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairTimerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairTimerSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairVictorySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/FindPairFeature/Systems/FindPairVictorySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/LevelFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/LevelFeature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelPlaceCardsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Features/LevelFeature/Systems/LevelPlaceCardsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/MorpehInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/MorpehInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +79,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/MagnetBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Booster/SapperBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/Card.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityProjects/Find-a-pair/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardComparator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardEffector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CJ.FindAPair/Modules/CoreGames/CardsPlacer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -176,7 +201,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Internal/PreserveAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.scellecs.morpeh@e75b38d3db/Core/SystemsGroupExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.scellecs.morpeh@e75b38d3db/Unity/UnityRuntimeHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12aa18099bb3473e8a4f9bb2e9f744961a600/b1/710bf84f/ISystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746c126b0b54f3b834845974d1a9190159000/55/4b584087/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -240,29 +267,30 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="1h9cjnxgFYbxFWQzb1SOWEjW7eB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Evgeniy\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Evgeniy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Evgeniy\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Unity.exe" />
@@ -290,10 +318,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21820">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="21820" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -375,7 +403,8 @@
       <workItem from="1673208870299" duration="12000" />
       <workItem from="1678567995377" duration="3354000" />
       <workItem from="1678620694853" duration="1815000" />
-      <workItem from="1678622591205" duration="13558000" />
+      <workItem from="1678622591205" duration="13945000" />
+      <workItem from="1679258108666" duration="3496000" />
     </task>
     <task id="LOCAL-00001" summary="level info">
       <created>1618257547347</created>

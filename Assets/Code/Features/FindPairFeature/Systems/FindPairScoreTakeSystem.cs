@@ -1,6 +1,7 @@
 ﻿using Code.Features.FindPairFeature.Components;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
+using UnityEngine;
 
 namespace Code.Features.FindPairFeature.Systems
 {
@@ -16,6 +17,7 @@ namespace Code.Features.FindPairFeature.Systems
                 ref var findPairScore = ref _findPairScore.Get(entity);
                 findPairScore.score -= findPairScore.accruedScore;
                 
+                Debug.Log($"Отняли очки | очков = {findPairScore.score}");
                 _findPairScoreTake.Remove(entity);
             }
         }

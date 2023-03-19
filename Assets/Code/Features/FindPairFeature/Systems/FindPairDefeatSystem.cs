@@ -1,6 +1,7 @@
 ﻿using Code.Features.FindPairFeature.Components;
 using Code.GlobalUtils;
 using Scellecs.Morpeh;
+using UnityEngine;
 
 namespace Code.Features.FindPairFeature.Systems
 {
@@ -15,6 +16,7 @@ namespace Code.Features.FindPairFeature.Systems
                 //TODO тут вся логика когда проигрываем
                 
                 //TODO не удаляем потому что может быть реклама
+                Debug.LogError("ТЫ ПРОИГРАЛ!!!");
                 _findPairDefeat.Remove(entity);
             }
         }
